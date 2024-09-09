@@ -26,7 +26,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; dvp_relation -= 8; z_relation -= 8; ddp_relation -= 10; kpd_relation -= 8; coup_progress += 2; workers_spd -= 4; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; catholics_spd -= 5; unemployed_spd -= 5; coup_progress += 2 if nsdap_normalized >= 0.3; coup_progress += 2 if nsdap_normalized + dnvp_normalized >= 0.5
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; dvp_relation -= 8; z_relation -= 8; ddp_relation -= 10; kpd_relation -= 8; coup_progress += 2; workers_spd -= 4; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; catholics_spd -= 5; unemployed_spd -= 5; coup_progress += 2 if owp_normalized >= 0.3; coup_progress += 2 if owp_normalized + dnvp_normalized >= 0.5
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -69,10 +69,10 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // The largest party can only be the OWP or the SPD.
 Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
+if (Q.owp_r >= Q.spd_r && Q.owp_r >= Q.kpd_r) {
     Q.largest_party = 'OWP';
 }
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
+if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.owp_r) {
     Q.largest_party = 'KPD';
 }
 
@@ -82,15 +82,15 @@ Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
+Q.far_right_coalition = Q.dnvp_r + Q.owp_r;
 Q.left_coalition = Q.spd_r + Q.kpd_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
+Q.anti_democratic_coalition = Q.kpd_r + Q.owp_r + Q.dnvp_r;
 // aka everyone except nazi, kpd, dnvp
 Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
+Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.owp_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r;
 
@@ -148,7 +148,7 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
+on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and owp_r >= 15)
 on-display: {!
 data = [
     {
@@ -203,7 +203,7 @@ data = [
         "id": "owp",
         "legend": "OWP",
         "name": "OWP",
-        "seats": Math.round(Q.nsdap_r*5),
+        "seats": Math.round(Q.owp_r*5),
     },
 ];
 if (window && d3) {
@@ -247,7 +247,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ owp_r +]% {!</td><td>!} [+ str_change_owp +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
@@ -260,7 +260,7 @@ Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]%
 
 Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
 
-[? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
 [? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
@@ -356,15 +356,15 @@ The Center manages to diffuse some of the hostility from the Reichswehr and the 
 title: Far-right coalition
 subtitle: OWP + DNVP ([+ far_right_coalition +]%)
 view-if: far_right_coalition >= 50
-go-to: far_right_win if (year >= 1932 or nsdap_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and nsdap_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
+go-to: far_right_win if (year >= 1932 or owp_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and owp_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
 priority: 2
 
-There are enough votes for the Nazis and the DNVP to form a coalition. [+ nsdap_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
+There are enough votes for the Nazis and the DNVP to form a coalition. [+ owp_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
 
 @far_right_win
-on-arrival: chancellor = nsdap_leader; chancellor_party = "OWP"
+on-arrival: chancellor = owp_leader; chancellor_party = "OWP"
 
-[? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ nsdap_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" :  because it is what the constitution would stipulate. ?]
+[? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ owp_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" :  because it is what the constitution would stipulate. ?]
 
 - @hitler_takes_power: What do we do now?
 
@@ -631,7 +631,7 @@ We have supported a minority government led by the Center Party under Chancellor
 
 
 @no_majority_papen
-on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap += 6; unemployed_nsdap += 6; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_nsdap += 5; no_majority_papen_elections += 1; workers_spd -= 8 if pro_republic < 45; workers_spd *= 0.85 if pro_republic < 40; workers_nsdap += 5 if pro_republic < 40;
+on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_owp += 6; unemployed_owp += 6; old_middle_owp += 5; new_middle_owp += 5; rural_owp += 5; no_majority_papen_elections += 1; workers_spd -= 8 if pro_republic < 45; workers_spd *= 0.85 if pro_republic < 40; workers_owp += 5 if pro_republic < 40;
 
 After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Reichstag is dissolved once more.
 
@@ -639,7 +639,7 @@ New elections have been set for [+ next_election_month : month +] [+ next_electi
 
 
 @no_majority_papen_2
-on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap += 5; unemployed_nsdap += 10; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_nsdap += 10; workers_spd -= 8 if pro_republic < 45; workers_spd *= 0.85 if pro_republic < 40; workers_nsdap += 5 if pro_republic < 40; finance_minister_party = "I"; interior_minister_party = "I"; economy_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
+on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_owp += 5; unemployed_owp += 10; old_middle_owp += 5; new_middle_owp += 5; rural_owp += 10; workers_spd -= 8 if pro_republic < 45; workers_spd *= 0.85 if pro_republic < 40; workers_owp += 5 if pro_republic < 40; finance_minister_party = "I"; interior_minister_party = "I"; economy_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
 
 There is no path to a majority government. Hindenburg is displeased with Papen, and calls on him to resign. Now, former army general Kurt von Schleicher has been appointed chancellor, again as part of a presidential government.
 
@@ -778,7 +778,7 @@ Their numbers are bolstered by the many government workers who are against the p
 @emergency_no_confidence
 title: The Nazis immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
-on-arrival: z_no_confidence = 1 if z_relation < 45; kpd_no_confidence = 1 if kpd_relation < 45; others_no_confidence = 1 if (z_relation + dvp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = nsdap_r + dnvp_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += kpd_r if kpd_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
+on-arrival: z_no_confidence = 1 if z_relation < 45; kpd_no_confidence = 1 if kpd_relation < 45; others_no_confidence = 1 if (z_relation + dvp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = owp_r + dnvp_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += kpd_r if kpd_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
 The OWP and DNVP will vote against us, of course. The other parties vote their conscience.
 
@@ -805,11 +805,11 @@ Q.new_middle_spd -= 3;
 Q.old_middle_spd -= 3;
 Q.rural_spd -= 3;
 Q.catholics_spd -= 3;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 3;
-Q.new_middle_nsdap += 3;
-Q.rural_nsdap += 3;
-Q.unemployed_nsdap += 5;
+Q.workers_owp += 5;
+Q.old_middle_owp += 3;
+Q.new_middle_owp += 3;
+Q.rural_owp += 3;
+Q.unemployed_owp += 5;
 if (pro_republic < 45 && pro_republic >= 40) {
     Q.workers_spd -= 6;
 }
@@ -819,11 +819,11 @@ if (Q.pro_republic < 40) {
     Q.old_middle_spd -= 5;
     Q.rural_spd -= 5;
     Q.catholics_spd -= 3;
-    Q.workers_nsdap += 5;
-    Q.old_middle_nsdap += 5;
-    Q.new_middle_nsdap += 5;
-    Q.rural_nsdap += 5;
-    Q.unemployed_nsdap += 5;   
+    Q.workers_owp += 5;
+    Q.old_middle_owp += 5;
+    Q.new_middle_owp += 5;
+    Q.rural_owp += 5;
+    Q.unemployed_owp += 5;   
 }
 !}
 view-if: no_confidence_votes > 50
@@ -939,11 +939,11 @@ Q.old_middle_dvp -= 8;
 Q.new_middle_ddp -= 5;
 Q.old_middle_ddp -= 10;
 Q.rural_dnvp -= 5;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 6;
-Q.new_middle_nsdap += 6;
-Q.rural_nsdap += 6;
-Q.unemployed_nsdap += 5;
+Q.workers_owp += 5;
+Q.old_middle_owp += 6;
+Q.new_middle_owp += 6;
+Q.rural_owp += 6;
+Q.unemployed_owp += 5;
 if (Q.pro_republic < 45) {
     // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
     Q.z_relation -= 5;
@@ -954,11 +954,11 @@ if (Q.pro_republic < 45) {
     Q.old_middle_spd -= 5;
     Q.rural_spd -= 5;
     Q.catholics_spd -= 3;
-    Q.workers_nsdap += 10;
-    Q.old_middle_nsdap += 10;
-    Q.new_middle_nsdap += 10;
-    Q.rural_nsdap += 10;
-    Q.unemployed_nsdap += 10;   
+    Q.workers_owp += 10;
+    Q.old_middle_owp += 10;
+    Q.new_middle_owp += 10;
+    Q.rural_owp += 10;
+    Q.unemployed_owp += 10;   
 }
 !}
 
@@ -970,7 +970,7 @@ The people's faith in democracy is shaken by this ordeal. Of course, the Nazis a
 @toleration_bruning
 choose-if: neo_weimar_coalition >= 50
 unavailable-subtitle: The parties supporting Brüning do not have a majority.
-on-arrival: spd_in_government = 0; spd_toleration = 1; minority_government = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "DDP"; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; pro_republic -= 4; new_middle_dvp -= 5; new_middle_ddp -= 5; old_middle_dvp -= 5; old_middle_ddp -= 5; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_dnvp -= 5;
+on-arrival: spd_in_government = 0; spd_toleration = 1; minority_government = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "DDP"; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; pro_republic -= 4; new_middle_dvp -= 5; new_middle_ddp -= 5; old_middle_dvp -= 5; old_middle_ddp -= 5; old_middle_owp += 5; new_middle_owp += 5; rural_dnvp -= 5;
 
 We have decided to tolerate Brüning's government. This means that we will vote against no-confidence votes to make sure they fail, but also that we will not be directly participating as ministers in the government. Thus, we can prevent a new election and stop the far right from entering government.
 
