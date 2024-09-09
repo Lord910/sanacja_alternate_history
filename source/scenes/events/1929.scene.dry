@@ -6,7 +6,7 @@ Q.inflation -= 1;
 if (Q.old_demographics) {
     Q.catholics_z += 3;
 }
-// increase NSDAP vote share
+// increase OWP vote share
 Q.new_middle_nsdap += 10;
 Q.old_middle_nsdap += 10;
 Q.new_middle_ddp -= 5;

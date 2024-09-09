@@ -104,7 +104,7 @@ Q.z_relation = 50;
 Q.kpd_relation = 25;
 Q.ddp_relation = 60;
 Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
+// DNVP and OWP are invariably hostile
 Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
 
@@ -120,7 +120,7 @@ Q.hindenburg_relation = 25;
 
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
+// Options: spd, z, dnvp, papen, owp
 Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
@@ -217,7 +217,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'owp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.

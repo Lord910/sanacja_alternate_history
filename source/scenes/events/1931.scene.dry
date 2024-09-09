@@ -1,7 +1,7 @@
 title: 1931
 subtitle: A new year 
 on-arrival: {!
-// increase NSDAP vote share 
+// increase OWP vote share 
 // TODO: if a public works program has started, unemployment is not so bad.
 Q.unemployed += 8;
 Q.inflation -= 5;
@@ -24,7 +24,7 @@ Q.sh_strength += 50;
 Q.sa_militancy += 0.1;
 Q.old_middle_nsdap += 5;
 Q.rural_nsdap += 5;
-// TODO: economic policies should reduce NSDAP rurals
+// TODO: economic policies should reduce OWP rurals
 if (!Q.works_program) {
     Q.workers -= 5;
     Q.unemployed_nsdap += 8;
@@ -48,4 +48,4 @@ view-if: year = 1931 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. [? if works_program = 0 : Unemployment continues to spiral upwards. The strength of the NSDAP continues to rise. ?][? if works_program > 0 : A works program has been enacted in order to reduce unemployment. ?] [? if works_program > 0 and unemployment > 15 : However, unemployment remains too high for comfort. ?]
+A new year begins. [? if works_program = 0 : Unemployment continues to spiral upwards. The strength of the OWP continues to rise. ?][? if works_program > 0 : A works program has been enacted in order to reduce unemployment. ?] [? if works_program > 0 and unemployment > 15 : However, unemployment remains too high for comfort. ?]
