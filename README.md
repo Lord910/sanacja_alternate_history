@@ -1,4 +1,4 @@
-# Social Democracy: An Alternate History
+# Sanacja: An Alternate History
 
 ## Included Libraries
 
