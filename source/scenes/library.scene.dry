@@ -21,13 +21,17 @@ Herein contains relevant information about the government and politics of the Ge
 @government
 go-to: menu
 
-The German Republic, called by some of our detractors as the "Weimar Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Reichstag. The Reichstag is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
+The current political system of Poland, known as the Second Polish Republic, was created by the *March Constitution* of 1921. This constitution was designed to establish a parliamentary republic with a strong emphasis on democratic principles. The Sejm, Poland’s parliament, held significant power, while the President’s role was purposely limited in order to prevent any one person from dominating the government—particularly out of fear that Józef Piłsudski, the hero of Poland’s independence, might use the presidency to establish authoritarian rule.
 
-The Reichstag is elected based on a proportional representation system, giving parties seats roughly proportional to their vote share in each electoral district. The Reichstag then elects the Chancellor and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
+Following the March Constitution, the President's role was mostly ceremonial, with the Sejm and the Prime Minister holding real political power. However, political instability quickly set in. Gabriel Narutowicz, the first democratically elected President, was assassinated just five days into his presidency in December 1922 by a nationalist extremist, highlighting the deep political divisions in Poland. 
 
-The President is elected by a national direct vote, in two rounds. The second round is used if the first round does not result in a majority for one candidate; the candidate who receives a plurality in the second round becomes president (there is no obligation for weaker candidates to drop out). The role of the president is mostly to represent Germany, but he also has some crucial governing powers. The president and chancellor can together use emergency decrees to govern, bypassing the Reichstag. The president can also appoint or remove a chancellor when a parliamentary majority is unable to be established, and can thus influence the formation of a government.
+Between 1922 and 1926, parliamentary politics were characterized by instability, with fragmented political parties struggling to form cohesive governments. This led to constant changes in leadership and weakened the effectiveness of the state, contributing to rising social unrest and economic challenges.
 
-Germany is divided into a number of states, each of which have their own governments with some responsibilities. By far the largest and most important state is Prussia.
+In May 1926, Józef Piłsudski led a coup d'état, known as the *May Coup*, against the government. Piłsudski, disillusioned with the ineffectiveness of parliamentary democracy, sought to restore order. After several days of fighting in Warsaw, Piłsudski’s forces took control, leading to the resignation of President Stanisław Wojciechowski and Prime Minister Wincenty Witos. Though Piłsudski refused to take the presidency, he remained the most influential figure in the government.
+
+In 1926, the *August Amendment* was introduced, significantly strengthening the executive branch, particularly the powers of the President, who could now dissolve the Sejm and rule by decree in certain circumstances. This marked the beginning of the *Sanacja* regime, aimed at "healing" the political system. The Sejm's power was reduced in favor of a more centralized government under Piłsudski’s leadership.
+
+In November 1927, the *Nonpartisan Bloc for Cooperation with the Government* (BBWR) was established to consolidate political support for Piłsudski and prepare for the 1928 parliamentary elections. The BBWR, a political movement rather than a traditional party, rallied supporters of the *Sanacja* regime and aimed to ensure continued control over Polish politics.
 
 @demographics
 go-to: menu
@@ -114,8 +118,6 @@ Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]
 go-to: menu
 
 **BBWR** – *Bezpartyjny Blok Współpracy z Rządem* (Nonpartisan Bloc for Cooperation with the Government) – this is us. We are a political movement built around the leadership of Józef Piłsudski. Our mission is to rise above party politics and create a unified, stable Poland. We support strong executive power and believe in the necessity of Sanacja reforms to modernize the country and secure its future. We are committed to maintaining order and pushing back against the chaos of partisan politics that could weaken the Republic.
-
-
 
 **PSChD** – *Polskie Stronnictwo Chrześcijańskiej Demokracji* (Polish Christian Democratic Party) – a centrist to center-right party grounded in Catholic social teachings. They aim to integrate Christian ethics into public life, and while they support some welfare measures, they often lean toward more conservative, religious solutions to social problems. Their alignment with traditional Catholic values sometimes places them in opposition to the broader social reforms we envision.
 
