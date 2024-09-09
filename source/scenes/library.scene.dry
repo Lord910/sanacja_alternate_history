@@ -113,34 +113,35 @@ Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]
 @parties
 go-to: menu
 
-**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
+**BBWR** – *Bezpartyjny Blok Współpracy z Rządem* (Nonpartisan Bloc for Cooperation with the Government) – this is us. We are a political movement built around the leadership of Józef Piłsudski. Our mission is to rise above party politics and create a unified, stable Poland. We support strong executive power and believe in the necessity of Sanacja reforms to modernize the country and secure its future. We are committed to maintaining order and pushing back against the chaos of partisan politics that could weaken the Republic.
 
-**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+
+
+**PSChD** – *Polskie Stronnictwo Chrześcijańskiej Demokracji* (Polish Christian Democratic Party) – a centrist to center-right party grounded in Catholic social teachings. They aim to integrate Christian ethics into public life, and while they support some welfare measures, they often lean toward more conservative, religious solutions to social problems. Their alignment with traditional Catholic values sometimes places them in opposition to the broader social reforms we envision.
 
 Current relations: [+ z_relation : relationships +]
 
-# TODO: replace this with the german state party after 1930
-**DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently renamed themselves the German State Party. ?]
+**PSL-W** – *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") – a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in rural areas.
 
 Current relations: [+ ddp_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**PSL-P** – *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") – a more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining rural stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
 
 Current relations: [+ dvp_relation : relationships +]
 
-**SN** - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
+**SN** – *Stronnictwo Narodowe* (National Party) – a right-wing nationalist party that promotes a homogeneous Polish state. Their platform is rooted in antisemitism, extreme nationalism, and authoritarianism. While they claim to defend Polish identity, their agenda threatens the unity and progress of the Republic by fostering division and exclusion. We view their vision for Poland as dangerously regressive.
 
 Current relations: [+ sn_relation : relationships +]
 
-**KPD** - *Kommunistische Partei Deutschlands* (German Communist Party) - an offshoot of the SPD that emerged in the aftermath of the Revolution, they follow the path of Moscow.
+**PPS** – *Polska Partia Socjalistyczna* (Polish Socialist Party) – a socialist party that, despite its past association with Piłsudski, now positions itself as a critic of our government. They claim to stand for the working class and parliamentary democracy, but their socialist agenda often undermines the stability and unity we strive to maintain. While they were once allies in the fight for independence, their current opposition to our reforms shows their growing disconnect from the needs of modern Poland.
 
 Current relations: [+ kpd_relation : relationships +]
 
-**OWP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party.
+**OWP** – Obóz Wielkiej Polski (Camp of Great Poland) – an extremist, fascist-leaning group inspired by foreign movements. OWP seeks to dismantle the democratic institutions of Poland and replace them with a totalitarian regime. Their nationalist rhetoric and violent antisemitism make them a threat to the Republic’s security and the values we hold dear. Their rise represents a grave danger to Poland’s stability and unity.
 
 Current relations: [+ owp_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and SN. 
+**Minority Parties** – Various political movements represent the interests of Poland's national minorities, including Jews, Ukrainians, Belarusians, and Germans. These parties advocate for the cultural and political rights of their respective groups, often seeking autonomy or better representation within the Republic.
 
 @paramilitaries
 on-arrival: {!
