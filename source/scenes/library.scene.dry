@@ -206,41 +206,45 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
 
-**Internal factions of the SPD**
+**Internal factions of the Sanacja Movement**
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
+**Sanacja Left**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+The Sanacja Left is made up of two key groups: **Trade Unionists** and **Repairers (Naprawiacze)**.
 
-Strength: [+ left_strength : strength +]
-
-Dissent: [+ left_dissent : dissent +]
-
-**Centrists**
-
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
-
-Strength: [+ center_strength : strength +]
-
-Dissent: [+ center_dissent : dissent +]
-
-**Labor**
-
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+**Trade Unionists** consist mainly of former members of the PPS (Polska Partia Socjalistyczna), who prioritize loyalty to Piłsudski over their old party affiliation. Figures like Jędrzej Moraczewski symbolize their pragmatic approach to supporting the *Sanacja* regime while defending workers' rights and social reforms within the framework of the state. Their goal is to improve labor conditions while maintaining loyalty to Piłsudski's leadership.
 
 Strength: [+ labor_strength : strength +]
 
 Dissent: [+ labor_dissent : dissent +]
 
-**Reformists**
+**Repairers (Naprawiacze)** are associated with the Związek Naprawy Rzeczypospolitej (ZNR), a group founded in 1926 that advocates for radical constitutional reform to increase the powers of the presidency while minimizing parliamentary influence. They aim to centralize the state and solidify the role of the executive branch to ensure Poland’s stability and independence. The Repairers push for economic reforms and greater state involvement in industry, promoting a syndicalist vision where workers and employers cooperate under strong state supervision.
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+Strength: [+ left_strength : strength +]
+
+Dissent: [+ left_dissent : dissent +]
+
+**Liberals**
+
+The Liberals, represented by figures such as Kazimierz Bartel, advocate for moderate reforms within the framework of *Sanacja*. They seek to balance centralized state power with limited democratic governance. Bartel and his followers push for pragmatic, technocratic approaches to governance, aiming to modernize the state while keeping the authoritarian tendencies of *Sanacja* in check.
+
+Strength: [+ center_strength : strength +]
+
+Dissent: [+ center_dissent : dissent +]
+
+**Colonels (Grupa Pułkowników)**
+
+The Colonels are the core of the *Sanacja* movement, representing Piłsudski’s military loyalists. Led by Colonel Walery Sławek, they prioritize maintaining a strong, centralized state and upholding Piłsudski's vision of national leadership. They play a key role in internal security, defense policies, and ensuring that the state remains stable and authoritarian. Sławek, as the leader of the ruling party BBWR (Non-Partisan Bloc for Cooperation with the Government), represents their dominant influence within the government.
 
 Strength: [+ reformist_strength : strength +]
 
 Dissent: [+ reformist_dissent : dissent +]
+
+**Conservatives**
+
+The Conservative faction is represented by the landowning class and industrialists. Figures like Janusz Radziwiłł, a prominent landowner, and Andrzej Wierzbicki, head of the *Lewiatan* (Central Association of Polish Industry, Mining, Trade, and Finance), are key leaders. They focus on maintaining social and economic stability while protecting the interests of the upper classes. Their political agenda revolves around preserving traditional values, resisting socialist reforms, and defending the rights of property owners.
 
 @neorevisionists
 go-to: menu
