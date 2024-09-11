@@ -98,10 +98,10 @@ Z + BVP: [+ z_votes +]%
 kpp: [+ kpp_votes +]%
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_votes +]%
+PSL-W: [+ psl-w_votes +]%
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+PSL-P: [+ psl-p_votes +]%
 
 # 1928: 14, 1930: 7
 SN: [+ sn_votes +]%
@@ -114,17 +114,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, kpp: [+ workers_kpp_normalized +]%, DDP: [+ workers_ddp_normalized +]%, DVP: [+ workers_dvp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, kpp: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_psl-w_normalized +]%, PSL-P: [+ workers_psl-p_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, kpp: [+ new_middle_kpp_normalized +]%, DDP: [+ new_middle_ddp_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, kpp: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_psl-w_normalized +]%, PSL-P: [+ new_middle_psl-p_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, kpp: [+ old_middle_kpp_normalized +]%, DDP: [+ old_middle_ddp_normalized +]%, DVP: [+ old_middle_dvp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, kpp: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_psl-w_normalized +]%, PSL-P: [+ old_middle_psl-p_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, kpp: [+ rural_kpp_normalized +]%, DDP: [+ rural_ddp_normalized +]%, DVP: [+ rural_dvp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, kpp: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_psl-w_normalized +]%, PSL-P: [+ rural_psl-p_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_z_normalized +]%, kpp: [+ unemployed_kpp_normalized +]%, DDP: [+ unemployed_ddp_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_z_normalized +]%, kpp: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_psl-w_normalized +]%, PSL-P: [+ unemployed_psl-p_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]%, kpp: [+ catholics_kpp_normalized +]%, DDP: [+ catholics_ddp_normalized +]%, DVP: [+ catholics_dvp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]%, kpp: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_psl-w_normalized +]%, PSL-P: [+ catholics_psl-p_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
@@ -137,11 +137,11 @@ Current relations: [+ z_relation : relationships +]
 
 **PSL-W** – *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") – a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in rural areas.
 
-Current relations: [+ ddp_relation : relationships +]
+Current relations: [+ psl-w_relation : relationships +]
 
 **PSL-P** – *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") – a more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining rural stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ psl-p_relation : relationships +]
 
 **SN** – *Stronnictwo Narodowe* (National Party) – a right-wing nationalist party that promotes a homogeneous Polish state. Their platform is rooted in antisemitism, extreme nationalism, and authoritarianism. While they claim to defend Polish identity, their agenda threatens the unity and progress of the Republic by fostering division and exclusion. We view their vision for Poland as dangerously regressive.
 
@@ -167,7 +167,7 @@ go-to: menu
 
 **Paramilitary groups:**
 
-**Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the SPD, Z, and DDP, but primarily with the SPD. Historically, this has been an unarmed organization.
+**Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the SPD, Z, and PSL-W, but primarily with the SPD. Historically, this has been an unarmed organization.
 
 Strength: [+ rb_strength +] thousand
 
@@ -301,10 +301,10 @@ data = [
         "seats": Q.kpp_r*5,
     },
     {
-        "id": "ddp",
-        "legend": "DDP",
-        "name": "DDP",
-        "seats": Q.ddp_r*5,
+        "id": "psl-w",
+        "legend": "PSL-W",
+        "name": "PSL-W",
+        "seats": Q.psl-w_r*5,
     },
     {
         "id": "spd",
@@ -325,10 +325,10 @@ data = [
         "seats": 3*5,
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "id": "psl-p",
+        "legend": "PSL-P",
+        "name": "PSL-P",
+        "seats": Q.psl-p_r*5,
     },
     {
         "id": "other",
@@ -399,13 +399,13 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}kpp: {!</td><td>!} [+ kpp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} DDP: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#62DC4A'> </div></td><td>!} PSL-W: {!</td><td>!} [+ psl-w_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PSL-P: {!</td><td>!} [+ psl-p_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 

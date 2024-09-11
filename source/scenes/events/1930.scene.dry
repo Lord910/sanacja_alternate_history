@@ -11,10 +11,10 @@ if (Q.old_demographics) {
 }
 Q.rural_owp += 15; 
 Q.rural_sn -= 15;
-Q.new_middle_dvp -= 5;
-Q.old_middle_dvp -= 5;
-Q.new_middle_ddp -= 10;
-Q.old_middle_ddp -= 10;
+Q.new_middle_psl-p -= 5;
+Q.old_middle_psl-p -= 5;
+Q.new_middle_psl-w -= 10;
+Q.old_middle_psl-w -= 10;
 Q.new_middle_owp += 10; 
 Q.old_middle_owp += 15;
 Q.new_middle_other += 5;
