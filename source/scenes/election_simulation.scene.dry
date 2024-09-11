@@ -236,6 +236,7 @@ Q.bbwr_r = 75;
 Q.pps_r = 25;
 Q.kpp_r = 0;
 Q.pschd_r = 0;
+Q.npr_r = 0;
 Q.pslw_r = 0;
 Q.pslp_r = 0;
 Q.sn_r = 0;
@@ -251,6 +252,7 @@ on-arrival: {!
 Q.pps_r = Q.pps_votes;
 Q.bbwr_r = Q.bbwr_votes;
 Q.pschd_r = Q.pschd_votes;
+Q.npr_r = Q.npr_votes;
 Q.kpp_r = Q.kpp_votes;
 Q.pslw_r = Q.pslw_votes;
 Q.pslp_r = Q.pslp_votes;

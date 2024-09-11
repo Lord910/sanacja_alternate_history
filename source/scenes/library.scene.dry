@@ -115,6 +115,9 @@ Others: [+ other_votes +]%
 # 1928: 9, 1930: 10
 PPS: [+ pps_votes +]%
 
+# 1928: 9, 1930: 10
+NPR: [+ npr_votes +]%
+
 **Detailed results for each demographic**
 
 Workers: BBWR: [+ workers_bbwr_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
@@ -294,7 +297,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: pschd_minus_npr_r = pschd_r - 3;
+#on-arrival: pschd_r = pschd_r - 3;
 on-display: {!
 data = [
     {
@@ -415,9 +418,9 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#7a7a7a; outline: 2px; outline-style: solid;'> </div></td><td>!} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} PSCHD: {!</td><td>!} [+ pschd_minus_npr_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} NPR: {!</td><td>!} 3% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} NPR: {!</td><td>!} [+ npr_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td></tr>!}
 

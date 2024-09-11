@@ -140,7 +140,7 @@ Q.foreign_goal_completed = 0;
 Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
 
-Q.pschd_minus_npr_r = Q.pschd_r - 3;
+Q.pschd_r = Q.pschd_r - 3;
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -248,7 +248,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#7a7a7a; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} PSCHD: {!</td><td>!} [+ pschd_minus_npr_r +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} NPR: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
 
