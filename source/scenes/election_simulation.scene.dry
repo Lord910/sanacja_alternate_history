@@ -231,14 +231,17 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.spd_r = 25;
-Q.kpp_r = 10;
-Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
-Q.sn_r = 14;
-Q.owp_r = 10;
-Q.other_r = 5;
+Q.kpp_r = 3;
+Q.pps_r = 9;
+Q.sch_r = 8;
+Q.pslw_r = 6;
+Q.minorities_r = 19;
+Q.bbwr_r = 3;
+Q.npr_r = 4;
+Q.pschld_r = 9;
+Q.pslp_r = 12;
+Q.sn_r = 28;
+Q.owp_r = 0;
 !}
 go-to: election_algorithm
 set-jump: post_election

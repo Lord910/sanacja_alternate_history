@@ -282,24 +282,31 @@ Q.catholics_other = 12;
 // note: the Z figures also include the NPR (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpp_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.sn_r = 20;
-Q.owp_r = 3;
-Q.other_r = 9;
+Q.kpp_r = 3;
+Q.pps_r = 9;
+Q.sch_r = 8;
+Q.pslw_r = 6;
+Q.minorities_r = 19;
+Q.bbwr_r = 3;
+Q.npr_r = 4;
+Q.pschld_r = 9;
+Q.pslp_r = 12;
+Q.sn_r = 28;
+Q.owp_r = 0;
+
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_kpp_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_sn_r = 20;
-Q.old_owp_r = 3;
-Q.old_other_r = 9;
+Q.old_kpp_r = 3;
+Q.old_pps_r = 9;
+Q.old_sch_r = 8;
+Q.old_pslw_r = 6;
+Q.old_minorities_r = 19;
+Q.old_bbwr_r = 3;
+Q.old_npr_r = 4;
+Q.old_pschld_r = 9;
+Q.old_pslp_r = 12;
+Q.old_sn_r = 28;
+Q.old_owp_r = 0;
 
 // array of objects of the form {date: Date(), spd: 10, kpp: 12, ...} for each election
 Q.election_records = [];
@@ -313,7 +320,7 @@ Q.economic_records = [];
 Q.president = "Ignacy Mościcki";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
-Q.chancellor_party = 'Z';
+Q.chancellor_party = 'BBWR';
 Q.spd_in_government = 0;
 Q.z_in_government = 1;
 Q.ddp_in_government = 0;
