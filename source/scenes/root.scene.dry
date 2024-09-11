@@ -279,7 +279,7 @@ Q.catholics_other = 12;
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
 // source: wikipedia
-// note: the Z figures also include the NPR (Bavarian people's party)
+// note: the PSCHD figures also include the NPR (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.spd_r = 26;
@@ -322,12 +322,12 @@ Q.sn_in_government = 1;
 Q.kpp_in_government = 0;
 Q.owp_in_government = 0;
 
-// Weimar coalition = SPD + Z + PSL-W
+// Weimar coalition = SPD + PSCHD + PSL-W
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + NPR + PSL-W + PSL-P
-// also includes the "new grand coalition" of SPD + Z + NPR + PSL-W + PSL-P + Others
+// Grand coalition = SPD + PSCHD + NPR + PSL-W + PSL-P
+// also includes the "new grand coalition" of SPD + PSCHD + NPR + PSL-W + PSL-P + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPP + Z + PSL-W
+// Popular front = SPD + KPP + PSCHD + PSL-W
 Q.in_popular_front = 0;
 // left coalition = SPD + KPP + left-splinters
 Q.in_left_front = 0;
