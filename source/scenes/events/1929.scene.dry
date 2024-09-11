@@ -9,7 +9,7 @@ if (Q.old_demographics) {
 // increase OWP vote share
 Q.new_middle_owp += 10;
 Q.old_middle_owp += 10;
-Q.new_middle_psl-w -= 5;
+Q.new_middle_ddp -= 5;
 Q.new_middle_dvp -= 5;
 Q.workers_kpp += 5;
 Q.sa_strength += 50;
