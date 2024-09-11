@@ -313,9 +313,9 @@ data = [
         "seats": Q.bbwr_r*5,
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
+        "id": "pschd",
+        "legend": "PSCHD",
+        "name": "PSCHD",
         "seats": (Q.pschd_r - 3)*5,
     },
     {

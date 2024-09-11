@@ -171,8 +171,8 @@ data = [
     },
     {
         "id": "z",
-        "legend": "Center",
-        "name": "Center",
+        "legend": "PSCHD",
+        "name": "PSCHD",
         "seats": Math.round((Q.pschd_r - 3)*5),
     },
     {

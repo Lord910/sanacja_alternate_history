@@ -21,7 +21,7 @@ choose-if: advisor_action_timer <= 0 and (bbwr_prussia or in_weimar_coalition or
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not bbwr_prussia : The BBWR does not control the Prussian government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if bbwr_in_government = 1; pschd_relation += 6; pslw_relation += 6; pslp_relation += 2; pslp_relation += 3 if in_grand_coalition
 
-We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, PSL-W, and PSL-P, ?][? if not in_grand_coalition: Center (Zentrum) Party and PSL-W, ?] and reduced tensions with the coalition.
+We have improved our relations with the [? if in_grand_coalition : Christian Democrats (PSCHD), PSL-W, and PSL-P, ?][? if not in_grand_coalition: Christian Democrats (PSCHD) and PSL-W, ?] and reduced tensions with the coalition.
 
 @prussian_bulwark
 title: The Prussian Bulwark
