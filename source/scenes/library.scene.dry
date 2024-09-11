@@ -301,16 +301,16 @@ data = [
         "seats": Q.kpd_r*5,
     },
     {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Q.spd_r*5,
-    },
-    {
         "id": "ddp",
         "legend": "DDP",
         "name": "DDP",
         "seats": Q.ddp_r*5,
+    },
+    {
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Q.spd_r*5,
     },
     {
         "id": "z",
@@ -397,7 +397,7 @@ if (d3 && window) {
 {!<table>!}
 {!<tr><td><div class="box" style='background-color:#7a7a7a; outline: 2px; outline-style: solid;'> </div></td><td>!} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}KPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}KPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} DDP: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
 
