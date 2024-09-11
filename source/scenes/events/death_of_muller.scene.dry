@@ -18,26 +18,26 @@ Chancellor Hermann Müller has died while in office. He will be greatly missed. 
 - @bruning_chancellor: Let Heinrich Bruning of the Center Party become Chancellor.
 
 @braun_chancellor
-on-arrival: chancellor = "Braun"; chancellor_party = "SPD"; z_relation -= 5; psl-p_relation -= 5
+on-arrival: chancellor = "Braun"; chancellor_party = "SPD"; z_relation -= 5; dvp_relation -= 5
 subtitle: The Center Party is worried about having so much power in one man.
 
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
 
 
 @wels_chancellor
-on-arrival: chancellor = "Wels"; chancellor_party = "SPD"; z_relation -= 3; psl-p_relation -= 3
+on-arrival: chancellor = "Wels"; chancellor_party = "SPD"; z_relation -= 3; dvp_relation -= 3
 subtitle: He is a good organizer, but is he also a good chancellor?
 
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
 
 @breitscheid_chancellor
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"; z_relation -= 5; psl-p_relation -= 5; kpp_relation += 1
+on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"; z_relation -= 5; dvp_relation -= 5; kpp_relation += 1
 subtitle: The Center Party is worried about his left-leaning tendencies.
 
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
 
 @bruning_chancellor
-on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; z_relation += 5; psl-p_relation += 5
+on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; z_relation += 5; dvp_relation += 5
 subtitle: The Center Party claims it is their turn...
 
 The Center Party is grateful that we have supported Brüning for Chancellor..

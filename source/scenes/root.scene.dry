@@ -102,8 +102,8 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations
 Q.z_relation = 50;
 Q.kpp_relation = 25;
-Q.psl-w_relation = 60;
-Q.psl-p_relation = 35;
+Q.ddp_relation = 60;
+Q.dvp_relation = 35;
 // SN and OWP are invariably hostile
 Q.SN_relation = 10;
 Q.OWP_relation = 0;
@@ -217,15 +217,15 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpp', 'z', 'psl-w', 'psl-p', 'sn', 'owp', 'other'];
+Q.parties = ['spd', 'kpp', 'z', 'ddp', 'dvp', 'sn', 'owp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 60;
 Q.workers_kpp = 20;
 Q.workers_z = 5;
-Q.workers_psl-w = 0;
-Q.workers_psl-p = 0;
+Q.workers_ddp = 0;
+Q.workers_dvp = 0;
 Q.workers_sn = 5;
 Q.workers_owp = 0;
 Q.workers_other = 10;
@@ -233,8 +233,8 @@ Q.workers_other = 10;
 Q.old_middle_spd = 5;
 Q.old_middle_kpp = 0;
 Q.old_middle_z = 5;
-Q.old_middle_psl-w= 10;
-Q.old_middle_psl-p = 25;
+Q.old_middle_ddp= 10;
+Q.old_middle_dvp = 25;
 Q.old_middle_sn = 25;
 Q.old_middle_owp = 10;
 Q.old_middle_other = 10;
@@ -242,8 +242,8 @@ Q.old_middle_other = 10;
 Q.new_middle_spd = 5;
 Q.new_middle_kpp = 1;
 Q.new_middle_z = 10;
-Q.new_middle_psl-w= 25;
-Q.new_middle_psl-p = 25;
+Q.new_middle_ddp= 25;
+Q.new_middle_dvp = 25;
 Q.new_middle_sn = 10;
 Q.new_middle_owp = 5;
 Q.new_middle_other = 15;
@@ -251,8 +251,8 @@ Q.new_middle_other = 15;
 Q.rural_spd = 10;
 Q.rural_kpp = 0;
 Q.rural_z = 5;
-Q.rural_psl-w= 5;
-Q.rural_psl-p = 15;
+Q.rural_ddp= 5;
+Q.rural_dvp = 15;
 Q.rural_sn = 45;
 Q.rural_owp = 5;
 Q.rural_other = 10;
@@ -260,8 +260,8 @@ Q.rural_other = 10;
 Q.unemployed_spd = 25;
 Q.unemployed_kpp = 55;
 Q.unemployed_z = 1;
-Q.unemployed_psl-w = 0;
-Q.unemployed_psl-p = 0;
+Q.unemployed_ddp = 0;
+Q.unemployed_dvp = 0;
 Q.unemployed_sn = 5;
 Q.unemployed_owp = 15;
 Q.unemployed_other = 9;
@@ -269,8 +269,8 @@ Q.unemployed_other = 9;
 Q.catholics_spd = 15;
 Q.catholics_kpp = 2;
 Q.catholics_z = 50;
-Q.catholics_psl-w = 0;
-Q.catholics_psl-p = 5;
+Q.catholics_ddp = 0;
+Q.catholics_dvp = 5;
 Q.catholics_sn = 5;
 Q.catholics_owp = 0;
 Q.catholics_other = 12;
@@ -285,8 +285,8 @@ Q.catholics_other = 12;
 Q.spd_r = 26;
 Q.kpp_r = 9;
 Q.z_r = 17;
-Q.psl-w_r = 6;
-Q.psl-p_r = 10;
+Q.ddp_r = 6;
+Q.dvp_r = 10;
 Q.sn_r = 20;
 Q.owp_r = 3;
 Q.other_r = 9;
@@ -295,8 +295,8 @@ Q.other_r = 9;
 Q.old_spd_r = 26;
 Q.old_kpp_r = 9;
 Q.old_z_r = 17;
-Q.old_psl-w_r = 6;
-Q.old_psl-p_r = 10;
+Q.old_ddp_r = 6;
+Q.old_dvp_r = 10;
 Q.old_sn_r = 20;
 Q.old_owp_r = 3;
 Q.old_other_r = 9;
@@ -316,18 +316,18 @@ Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'Z';
 Q.spd_in_government = 0;
 Q.z_in_government = 1;
-Q.psl-w_in_government = 0;
-Q.psl-p_in_government = 1;
+Q.ddp_in_government = 0;
+Q.dvp_in_government = 1;
 Q.sn_in_government = 1;
 Q.kpp_in_government = 0;
 Q.owp_in_government = 0;
 
-// Weimar coalition = SPD + Z + PSL-W
+// Weimar coalition = SPD + Z + DDP
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + PSL-W + PSL-P
-// also includes the "new grand coalition" of SPD + Z + BVP + PSL-W + PSL-P + Others
+// Grand coalition = SPD + Z + BVP + DDP + DVP
+// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + kpp + Z + PSL-W
+// Popular front = SPD + kpp + Z + DDP
 Q.in_popular_front = 0;
 // left coalition = SPD + kpp + left-splinters
 Q.in_left_front = 0;
@@ -354,7 +354,7 @@ Q.minority_government = 0;
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'PSL-P';
+Q.foreign_minister_party = 'DVP';
 Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'SN';
 Q.justice_minister = 'Hergt';
@@ -364,7 +364,7 @@ Q.labor_minister_party = 'Z';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'PSL-P';
+Q.economic_minister_party = 'DVP';
 Q.finance_minister = 'Köhler';
 Q.finance_minister_party = 'Z';
 Q.agriculture_minister = 'Schiele';
@@ -558,11 +558,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpp_relation = 29; z_relation = 54; psl-p_relation = 49;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpp_relation = 29; z_relation = 54; dvp_relation = 49;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpp_relation = 16; psl-p_relation = 31;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpp_relation = 16; dvp_relation = 31;
 go-to: 1928_main
 
 @1928_historical
@@ -579,7 +579,7 @@ Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpp_relation = 16;
-Q.psl-p_relation = 31;
+Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}

@@ -54,7 +54,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
-on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpp_relation += 10; communist_coalition += 2; z_relation -= 15; psl-p_relation -= 15
+on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpp_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15
 
 Fine. We have thrown our support to Chairman Thälmann of the kpp.
 
@@ -144,21 +144,21 @@ The kpp now endorses Braun in the presidential election! We ask them to keep the
 
 @convince_liberals
 max-visits: 1
-go-to: convince_liberals_success if psl-p_relation >= 50; convince_liberals_fail if psl-p_relation < 50
+go-to: convince_liberals_success if dvp_relation >= 50; convince_liberals_fail if dvp_relation < 50
 
-The liberal vote (PSL-W and PSL-P) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the PSL-W is already willing to support Braun.
+The liberal vote (DDP and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the DDP is already willing to support Braun.
 
 @convince_liberals_success
-on-arrival: psl-p_support_braun = 1
+on-arrival: dvp_support_braun = 1
 go-to: braun_campaign
 
-Thanks to our good relations, the PSL-P has promised to support Braun in the election.
+Thanks to our good relations, the DVP has promised to support Braun in the election.
 
 @convince_liberals_fail
-on-arrival: psl-p_support_braun = 0
+on-arrival: dvp_support_braun = 0
 go-to: braun_campaign
 
-We failed to convince the PSL-P to support Braun.
+We failed to convince the DVP to support Braun.
 
 
 
@@ -182,7 +182,7 @@ Q.hindenburg_votes += Q.sn_votes;
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.spd_votes;
-    Q.braun_votes += Q.psl-w_votes;
+    Q.braun_votes += Q.ddp_votes;
     if (Q.z_support_braun && Q.z_support_braun == 1) {
         Q.braun_votes += Q.z_votes;
     } else {
@@ -193,22 +193,22 @@ if (Q.braun_campaign) {
     } else {
         Q.thalmann_votes += Q.kpp_votes;
     }
-    if (Q.psl-p_support_braun) {
-        Q.braun_votes += Q.psl-p_votes;
+    if (Q.dvp_support_braun) {
+        Q.braun_votes += Q.dvp_votes;
     } else {
-        Q.hindenburg_votes += Q.psl-p_votes;
+        Q.hindenburg_votes += Q.dvp_votes;
     }
 } else if (Q.spd_support_thalmann) {
     Q.thalmann_votes += Q.kpp_votes;
     Q.thalmann_votes += Q.spd_votes;
     Q.hindenburg_votes += Q.z_votes;
-    Q.hindenburg_votes += Q.psl-w_votes;
-    Q.hindenburg_votes += Q.psl-p_votes;
+    Q.hindenburg_votes += Q.ddp_votes;
+    Q.hindenburg_votes += Q.dvp_votes;
 } else {
     Q.hindenburg_votes += Q.spd_votes;
     Q.hindenburg_votes += Q.z_votes;
-    Q.hindenburg_votes += Q.psl-w_votes;
-    Q.hindenburg_votes += Q.psl-p_votes;
+    Q.hindenburg_votes += Q.ddp_votes;
+    Q.hindenburg_votes += Q.dvp_votes;
     Q.thalmann_votes += Q.kpp_votes;
 }
 if (Q.hitler_support_hindenburg) {
@@ -365,7 +365,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: braun_campaign = 0; spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpp_relation += 10; communist_coalition += 2; z_relation -= 15; psl-p_relation -= 15
+on-arrival: braun_campaign = 0; spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; kpp_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15
 on-departure: z_support_braun = 0; kpp_support_braun = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the kpp.
