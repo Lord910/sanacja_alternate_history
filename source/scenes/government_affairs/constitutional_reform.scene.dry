@@ -36,8 +36,8 @@ Q.reform_support = Q.spd_normalized;
 if (Q.z_relation > 30) {
     Q.reform_support += Q.z_normalized;
 }
-if (Q.kpd_relation > 50 && Q.kpd_normalized >= 0.1) {
-    Q.reform_support += Q.kpd_normalized;
+if (Q.kpp_relation > 50 && Q.kpp_normalized >= 0.1) {
+    Q.reform_support += Q.kpp_normalized;
 }
 if (Q.owp_normalized >= 0.2 ) {
     Q.reform_support += Q.owp_normalized;
@@ -48,7 +48,7 @@ if (Q.owp_normalized >= 0.2 ) {
 
 Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. 
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if owp_normalized >= 0.2 : The OWP supports this reform, as they believe they have something to gain. ?]
+The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform. ?] [? if kpp_relation > 50 and kpp_normalized >= 0.1 : Perhaps surprisingly, the kpp supports this reform. ?] [? if owp_normalized >= 0.2 : The OWP supports this reform, as they believe they have something to gain. ?]
 
 The SPD Left opposes this change, as they believe that it is anti-democratic.
 
@@ -80,7 +80,7 @@ if (!Q.stresemann_dead) {
 }
 !}
 
-[? if z_relation >= 30 : The Weimar Coalition parties, the DDP and Center Party, support this reform, which will greatly improve the stability of the government. ?] [? if z_relation < 30 : The DDP supports this reform, but the Center Party does not trust us enough to support the constitutional referendum. ?] The more conservative and radical right-wing parties and the KPD are in opposition, as they seem to relish in the republican system's instability.
+[? if z_relation >= 30 : The Weimar Coalition parties, the DDP and Center Party, support this reform, which will greatly improve the stability of the government. ?] [? if z_relation < 30 : The DDP supports this reform, but the Center Party does not trust us enough to support the constitutional referendum. ?] The more conservative and radical right-wing parties and the kpp are in opposition, as they seem to relish in the republican system's instability.
 
 - @constructive_vonc_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
@@ -96,7 +96,7 @@ We have successfully passed a constitutional amendment to ban votes of no confid
 @presidential_powers
 subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexecution* on state governments.
 on-arrival: {!
-Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.kpd_normalized;
+Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.kpp_normalized;
 if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
     Q.reform_support += Q.z_normalized;
 } else if (Q.president == "Braun") {
@@ -106,7 +106,7 @@ if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener
 
 The wide-ranging presidential powers promised by the constitution are a potential gateway to authoritarianism. Thus, we can support reforms that limit the powers of the president, ending his power to unilaterally terminate an elected government and to remove state governments.
 
-The KPD is in favor of this reform, having been victims of the *Reichsexecution* in the past (when KPD-supported state governments in Thuringia and Saxony were removed). The democrats of the DDP also support this. [? if president == "Hindenburg": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Hindenburg. ?] [? if z_relation <= 49 and president == "Hindenburg" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if z_relation > 49 and president == "Hindenburg" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
+The kpp is in favor of this reform, having been victims of the *Reichsexecution* in the past (when kpp-supported state governments in Thuringia and Saxony were removed). The democrats of the DDP also support this. [? if president == "Hindenburg": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Hindenburg. ?] [? if z_relation <= 49 and president == "Hindenburg" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if z_relation > 49 and president == "Hindenburg" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
 
 - @presidential_powers_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
