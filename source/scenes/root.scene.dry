@@ -295,7 +295,7 @@ Q.pschd_r = 0;
 Q.pslw_r = 0;
 Q.pslp_r = 0;
 Q.sn_r = 0;
-Q.owp_r = 10;
+Q.owp_r = 0;
 Q.other_r = 0;
 
 // diff from prev

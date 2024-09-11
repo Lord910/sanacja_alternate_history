@@ -143,6 +143,8 @@ OWP: [+ owp_votes +]%
 
 Others: [+ other_votes +]%
 
+PPS: [+ pps_votes +]%
+
 **Detailed results for each demographic**
 
 Workers: BBWR: [+ workers_bbwr_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
