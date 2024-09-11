@@ -18,7 +18,7 @@ Q.unemployed = 8.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -91,7 +91,7 @@ Q.unemployed = 20;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -149,14 +149,15 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 25;
-Q.kpp_r = 10;
-Q.pschd_r = 15;
-Q.pslw_r = 10;
-Q.pslp_r = 10;
-Q.sn_r = 14;
+Q.bbwr_r = 75;
+Q.pps_r = 25;
+Q.kpp_r = 0;
+Q.pschd_r = 0;
+Q.pslw_r = 0;
+Q.pslp_r = 0;
+Q.sn_r = 0;
 Q.owp_r = 10;
-Q.other_r = 5;
+Q.other_r = 0;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -173,7 +174,7 @@ Q.unemployed = 33;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -231,14 +232,15 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 25;
-Q.kpp_r = 10;
-Q.pschd_r = 15;
-Q.pslw_r = 10;
-Q.pslp_r = 10;
-Q.sn_r = 14;
+Q.bbwr_r = 75;
+Q.pps_r = 25;
+Q.kpp_r = 0;
+Q.pschd_r = 0;
+Q.pslw_r = 0;
+Q.pslp_r = 0;
+Q.sn_r = 0;
 Q.owp_r = 10;
-Q.other_r = 5;
+Q.other_r = 0;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -246,6 +248,7 @@ set-jump: post_election
 @post_election
 on-arrival: {!
 // set congress proportion to votes
+Q.pps_r = Q.pps_votes;
 Q.bbwr_r = Q.bbwr_votes;
 Q.pschd_r = Q.pschd_votes;
 Q.kpp_r = Q.kpp_votes;
@@ -254,6 +257,7 @@ Q.pslp_r = Q.pslp_votes;
 Q.sn_r = Q.sn_votes;
 Q.owp_r = Q.owp_votes;
 Q.other_r = Q.other_votes;
+
 
 // The largest party can only be the OWP or the BBWR.
 Q.largest_party = 'BBWR';
@@ -306,6 +310,9 @@ OWP: [+ owp_r +]
 
 # 1928: 9, 1930: 10
 Other: [+ other_r +]
+
+# 1927: TODO
+PPS: [+ pps_r +]
 
 **Potential coalitions:**
 

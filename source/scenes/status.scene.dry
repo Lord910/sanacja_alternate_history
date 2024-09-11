@@ -47,6 +47,9 @@ OWP: [+ owp_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
+# 1927: TODO
+PPS: [+ pps_r +]%
+
 [? if bbwr_in_government = 1 : Budget: [+ budget +] ?]
 
 Inflation: [+ inflation_2 +]%

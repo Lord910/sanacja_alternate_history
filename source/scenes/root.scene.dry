@@ -217,10 +217,11 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
+Q.workers_pps = 60;
 Q.workers_bbwr = 60;
 Q.workers_kpp = 20;
 Q.workers_pschd = 5;
@@ -230,6 +231,7 @@ Q.workers_sn = 5;
 Q.workers_owp = 0;
 Q.workers_other = 10;
 
+Q.old_middle_pps = 5;
 Q.old_middle_bbwr = 5;
 Q.old_middle_kpp = 0;
 Q.old_middle_pschd = 5;
@@ -239,6 +241,7 @@ Q.old_middle_sn = 25;
 Q.old_middle_owp = 10;
 Q.old_middle_other = 10;
 
+Q.new_middle_pps = 5;
 Q.new_middle_bbwr = 5;
 Q.new_middle_kpp = 1;
 Q.new_middle_pschd = 10;
@@ -248,6 +251,7 @@ Q.new_middle_sn = 10;
 Q.new_middle_owp = 5;
 Q.new_middle_other = 15;
 
+Q.rural_pps = 10;
 Q.rural_bbwr = 10;
 Q.rural_kpp = 0;
 Q.rural_pschd = 5;
@@ -257,6 +261,7 @@ Q.rural_sn = 45;
 Q.rural_owp = 5;
 Q.rural_other = 10;
 
+Q.unemployed_pps = 25;
 Q.unemployed_bbwr = 25;
 Q.unemployed_kpp = 55;
 Q.unemployed_pschd = 1;
@@ -266,6 +271,7 @@ Q.unemployed_sn = 5;
 Q.unemployed_owp = 15;
 Q.unemployed_other = 9;
 
+Q.catholics_pps = 15;
 Q.catholics_bbwr = 15;
 Q.catholics_kpp = 2;
 Q.catholics_pschd = 50;
@@ -282,24 +288,26 @@ Q.catholics_other = 12;
 // note: the PSCHD figures also include the NPR (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.bbwr_r = 26;
-Q.kpp_r = 9;
-Q.pschd_r = 17;
-Q.pslw_r = 6;
-Q.pslp_r = 10;
-Q.sn_r = 20;
-Q.owp_r = 3;
-Q.other_r = 9;
+Q.bbwr_r = 75;
+Q.pps_r = 25;
+Q.kpp_r = 0;
+Q.pschd_r = 0;
+Q.pslw_r = 0;
+Q.pslp_r = 0;
+Q.sn_r = 0;
+Q.owp_r = 10;
+Q.other_r = 0;
 
 // diff from prev
-Q.old_bbwr_r = 26;
-Q.old_kpp_r = 9;
-Q.old_pschd_r = 17;
-Q.old_pslw_r = 6;
-Q.old_pslp_r = 10;
-Q.old_sn_r = 20;
-Q.old_owp_r = 3;
-Q.old_other_r = 9;
+Q.old_bbwr_r = 75;
+Q.old_pps_r = 25;
+Q.old_kpp_r = 0;
+Q.old_pschd_r = 0;
+Q.old_pslw_r = 0;
+Q.old_pslp_r = 0;
+Q.old_sn_r = 0;
+Q.old_owp_r = 10;
+Q.old_other_r = 0;
 
 // array of objects of the form {date: Date(), bbwr: 10, kpp: 12, ...} for each election
 Q.election_records = [];

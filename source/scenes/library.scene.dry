@@ -112,6 +112,9 @@ OWP: [+ owp_votes +]%
 # 1928: 9, 1930: 10
 Others: [+ other_votes +]%
 
+# 1928: 9, 1930: 10
+PPS: [+ pps_votes +]%
+
 **Detailed results for each demographic**
 
 Workers: BBWR: [+ workers_bbwr_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
@@ -301,6 +304,12 @@ data = [
         "seats": Q.kpp_r*5,
     },
     {
+        "id": "pps",
+        "legend": "PPS",
+        "name": "PPS",
+        "seats": Q.pps_r*5,
+    },
+    {
         "id": "pslw",
         "legend": "PSL-W",
         "name": "PSL-W",
@@ -397,6 +406,8 @@ if (d3 && window) {
 {!<table>!}
 
 {!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}KPP: {!</td><td>!} [+ kpp_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}PPS: {!</td><td>!} [+ pps_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td></tr>!}
 
