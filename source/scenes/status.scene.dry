@@ -46,9 +46,10 @@ SN: [+ sn_r +]%
 OWP: [+ owp_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
-
 # 1927: TODO
 PPS: [+ pps_r +]%
+# 1927: TODO
+NPR: [+ npr_r +]%
 
 [? if bbwr_in_government = 1 : Budget: [+ budget +] ?]
 

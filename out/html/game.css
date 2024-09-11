@@ -520,13 +520,16 @@ table {
 .seat.pps {
   fill: #CF3535;
 }
+.seat.npr {
+  fill: #A500FF;
+}
 .seat.bbwr {
     fill: #7a7a7a;
     stroke: #000;
     stroke-width: 1.5px;
 }
 .seat.pslw {
-    fill: #DCCA4A;
+    fill: #00FF21;
 }
 .seat.z {
     fill: #000;
@@ -535,13 +538,13 @@ table {
     fill: #69A2BE;
 }
 .seat.pslp {
-    fill: #D5AC27;
+    fill: #0094FF;
 }
 .seat.other {
     fill: #909090;
 }
 .seat.sn {
-    fill: #3F7BC1;
+    fill: #0026FF;
 }
 .seat.owp {
     fill: #954B00;
