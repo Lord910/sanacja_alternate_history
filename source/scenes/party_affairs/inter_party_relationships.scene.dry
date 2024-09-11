@@ -26,12 +26,12 @@ on-arrival: resources -= 1; kpp_inter_party_seen += 1
 go-to: kpp_blutmai if blutmai = 1; kpp_1 if blutmai = 0 and kpp_coalition_success = 0; kpp_2 if kpp_coalition_success = 1
 
 @kpp_1
-on-arrival: kpp_relation += 6*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; dvp_relation -= 3
+on-arrival: kpp_relation += 6*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; npr_relation -= 3
 
 The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
 
 @kpp_2
-on-arrival: kpp_relation += 8*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; dvp_relation -= 3
+on-arrival: kpp_relation += 8*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; npr_relation -= 3
 
 After the success of the coalition government with the KPP, they are much more amenable to us.
 
@@ -67,28 +67,28 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; psl-w_relation += 5*(1 - dissent)
-go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and year <= 1930; dvp_moribound if year > 1930
+go-to: npr_stresemann if stresemann_dead = 0; npr_loss if stresemann_dead = 1 and year <= 1930; npr_moribound if year > 1930
 
 The PSL-W has been one of our closest allies through the course of the Republic.
 
-@dvp_stresemann
-on-arrival: dvp_relation += 8*(1 - dissent)
+@npr_stresemann
+on-arrival: npr_relation += 8*(1 - dissent)
 
-Gustav Stresemann, the leader of the DVP is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
+Gustav Stresemann, the leader of the NPR is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
 
-@dvp_loss
-on-arrival: dvp_relation += 5*(1 - dissent)
+@npr_loss
+on-arrival: npr_relation += 5*(1 - dissent)
 
-With the death of Gustav Stresemann, the DVP is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
+With the death of Gustav Stresemann, the NPR is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
 
-However, given the influence of the DVP among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+However, given the influence of the NPR among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
-@dvp_moribound
-on-arrival: dvp_relation += 5*(1 - dissent)
+@npr_moribound
+on-arrival: npr_relation += 5*(1 - dissent)
 
-The liberal parties (both the PSL-W and DVP) are electorally moribund, so perhaps our efforts are best spent elsewhere.
+The liberal parties (both the PSL-W and NPR) are electorally moribund, so perhaps our efforts are best spent elsewhere.
 
-However, given the influence of the DVP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+However, given the influence of the NPR among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
 @spd_alone
 
