@@ -92,7 +92,7 @@ go-to: menu
 SPD: [+ spd_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_votes +]%
+Z + NPR: [+ z_votes +]%
 
 # 1928: 10, 1930: 13
 KPP: [+ kpp_votes +]%
@@ -291,7 +291,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: z_minus_bvp_r = z_r - 3;
+on-arrival: z_minus_npr_r = z_r - 3;
 on-display: {!
 data = [
     {
@@ -319,9 +319,9 @@ data = [
         "seats": (Q.z_r - 3)*5,
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
+        "id": "npr",
+        "legend": "NPR",
+        "name": "NPR",
         "seats": 3*5,
     },
     {
@@ -401,9 +401,9 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} DDP: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_npr_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} NPR: {!</td><td>!} 3% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
 
