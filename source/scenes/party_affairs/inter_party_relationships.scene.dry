@@ -9,12 +9,12 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The SPD cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The BBWR cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the BBWR, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
 - @kpp: Work towards repairing relationships with the Communist Party.
-- @spd_alone: The SPD can stand alone for now.
+- @bbwr_alone: The BBWR can stand alone for now.
 - @easy_discard
 
 
@@ -45,7 +45,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; pschd_relation += 2 if pschd_party_leader == "Joos"
-go-to: center_op if pschd_in_government = 1 and spd_in_government = 0 and chancellor != "Brüning"; center_coalition if spd_in_government = 1 and pschd_in_government = 1; center_bruning if chancellor = "Brüning"
+go-to: center_op if pschd_in_government = 1 and bbwr_in_government = 0 and chancellor != "Brüning"; center_coalition if bbwr_in_government = 1 and pschd_in_government = 1; center_bruning if chancellor = "Brüning"
 
 @center_op
 on-arrival: pschd_relation += 5*(1 - dissent)
@@ -90,7 +90,7 @@ The liberal parties (both the PSL-W and PSL-P) are electorally moribund, so perh
 
 However, given the influence of the PSL-P among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
-@spd_alone
+@bbwr_alone
 
 Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
 

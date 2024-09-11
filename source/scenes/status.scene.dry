@@ -16,9 +16,9 @@ if (Q.inflation) {
 
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+BBWR position: [? if bbwr_toleration : toleration ?][? if bbwr_in_government : in government ?][? if bbwr_toleration == 0 and bbwr_in_government == 0 and bbwr_caretaker == 0 : opposition ?][? if bbwr_caretaker : caretaker government ?]
 
-[? if spd_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if bbwr_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -31,7 +31,7 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]%
+BBWR: [+ bbwr_r +]%
 # 1928: 15, 1930: 15, 1932: 
 PSCHD + NPR: [+ pschd_r +]%
 # 1928: 10, 1930: 13
@@ -47,7 +47,7 @@ OWP: [+ owp_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if bbwr_in_government = 1 : Budget: [+ budget +] ?]
 
 Inflation: [+ inflation_2 +]%
 
@@ -75,7 +75,7 @@ SN: [+ sn_relation : relationships +]
 
 OWP: [+ owp_relation : relationships +]
 
-= Internal Factions of the SPD
+= Internal Factions of the BBWR
 
 Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
@@ -124,7 +124,7 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+BBWR: [+ bbwr_votes +]%
 
 PSCHD + NPR: [+ pschd_votes +]%
 
@@ -142,16 +142,16 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: BBWR: [+ workers_bbwr_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, PSCHD: [+ new_middle_pschd_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: BBWR: [+ new_middle_bbwr_normalized +]%, PSCHD: [+ new_middle_pschd_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, PSCHD: [+ old_middle_pschd_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: BBWR: [+ old_middle_bbwr_normalized +]%, PSCHD: [+ old_middle_pschd_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_spd_normalized +]%, PSCHD: [+ rural_pschd_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: BBWR: [+ rural_bbwr_normalized +]%, PSCHD: [+ rural_pschd_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_spd_normalized +]%, PSCHD: [+ unemployed_pschd_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: BBWR: [+ unemployed_bbwr_normalized +]%, PSCHD: [+ unemployed_pschd_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_spd_normalized +]%, PSCHD: [+ catholics_pschd_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: BBWR: [+ catholics_bbwr_normalized +]%, PSCHD: [+ catholics_pschd_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 Support for the Republic: [+ pro_republic +]%

@@ -89,7 +89,7 @@ go-to: menu
 **Projected election results** (if the election were to be held now):
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_votes +]%
+BBWR: [+ bbwr_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
 PSCHD + NPR: [+ pschd_votes +]%
@@ -114,17 +114,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: BBWR: [+ workers_bbwr_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, PSCHD: [+ new_middle_pschd_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: BBWR: [+ new_middle_bbwr_normalized +]%, PSCHD: [+ new_middle_pschd_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, PSCHD: [+ old_middle_pschd_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: BBWR: [+ old_middle_bbwr_normalized +]%, PSCHD: [+ old_middle_pschd_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_spd_normalized +]%, PSCHD: [+ rural_pschd_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: BBWR: [+ rural_bbwr_normalized +]%, PSCHD: [+ rural_pschd_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_spd_normalized +]%, PSCHD: [+ unemployed_pschd_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: BBWR: [+ unemployed_bbwr_normalized +]%, PSCHD: [+ unemployed_pschd_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_spd_normalized +]%, PSCHD: [+ catholics_pschd_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: BBWR: [+ catholics_bbwr_normalized +]%, PSCHD: [+ catholics_pschd_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
@@ -167,7 +167,7 @@ go-to: menu
 
 **Paramilitary groups:**
 
-**Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the SPD, PSCHD, and PSL-W, but primarily with the SPD. Historically, this has been an unarmed organization.
+**Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the BBWR, PSCHD, and PSL-W, but primarily with the BBWR. Historically, this has been an unarmed organization.
 
 Strength: [+ rb_strength +] thousand
 
@@ -307,10 +307,10 @@ data = [
         "seats": Q.pslw_r*5,
     },
     {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Q.spd_r*5,
+        "id": "bbwr",
+        "legend": "BBWR",
+        "name": "BBWR",
+        "seats": Q.bbwr_r*5,
     },
     {
         "id": "z",
@@ -395,7 +395,7 @@ if (d3 && window) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#7a7a7a; outline: 2px; outline-style: solid;'> </div></td><td>!} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#7a7a7a; outline: 2px; outline-style: solid;'> </div></td><td>!} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}KPP: {!</td><td>!} [+ kpp_r +]% {!</td></tr>!}
 

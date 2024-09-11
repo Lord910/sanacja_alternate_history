@@ -67,17 +67,17 @@ Q.reformists_resigned = 0;
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
+// crisis_urgency indicates how seriously the BBWR is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
+// nazi_urgency indicates how seriously the BBWR takes the nazis - scale from 0 to 10.
 Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
+// radicalization indicates how radical the BBWR's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
+// Support for Pacifism within the BBWR relative to 1928
 Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
+// Support for democratic reform within the BBWR relative to 1928
 Q.democratization = 0;
 // Support for a communist coalition relative to 1928
 Q.communist_coalition = 0;
@@ -110,7 +110,7 @@ Q.OWP_relation = 0;
 
 Q.kpp_leader = "Thälmann";
 Q.pschd_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
+// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the BBWR.
 Q.pschd_party_leader = "Marx";
 Q.owp_leader = "Hitler";
 
@@ -118,10 +118,10 @@ Q.owp_leader = "Hitler";
 Q.hindenburg_relation = 25;
 
 
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, sn, papen, owp
-Q.prussian_government = "SPD";
+// Does the BBWR lead in Prussia?
+Q.bbwr_prussia = 1;
+// Options: bbwr, z, sn, papen, owp
+Q.prussian_government = "BBWR";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -206,7 +206,7 @@ Q.catholics = 30;
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
+// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BBBWRRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
@@ -217,11 +217,11 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
+Q.workers_bbwr = 60;
 Q.workers_kpp = 20;
 Q.workers_pschd = 5;
 Q.workers_pslw = 0;
@@ -230,7 +230,7 @@ Q.workers_sn = 5;
 Q.workers_owp = 0;
 Q.workers_other = 10;
 
-Q.old_middle_spd = 5;
+Q.old_middle_bbwr = 5;
 Q.old_middle_kpp = 0;
 Q.old_middle_pschd = 5;
 Q.old_middle_pslw= 10;
@@ -239,7 +239,7 @@ Q.old_middle_sn = 25;
 Q.old_middle_owp = 10;
 Q.old_middle_other = 10;
 
-Q.new_middle_spd = 5;
+Q.new_middle_bbwr = 5;
 Q.new_middle_kpp = 1;
 Q.new_middle_pschd = 10;
 Q.new_middle_pslw= 25;
@@ -248,7 +248,7 @@ Q.new_middle_sn = 10;
 Q.new_middle_owp = 5;
 Q.new_middle_other = 15;
 
-Q.rural_spd = 10;
+Q.rural_bbwr = 10;
 Q.rural_kpp = 0;
 Q.rural_pschd = 5;
 Q.rural_pslw= 5;
@@ -257,7 +257,7 @@ Q.rural_sn = 45;
 Q.rural_owp = 5;
 Q.rural_other = 10;
 
-Q.unemployed_spd = 25;
+Q.unemployed_bbwr = 25;
 Q.unemployed_kpp = 55;
 Q.unemployed_pschd = 1;
 Q.unemployed_pslw = 0;
@@ -266,7 +266,7 @@ Q.unemployed_sn = 5;
 Q.unemployed_owp = 15;
 Q.unemployed_other = 9;
 
-Q.catholics_spd = 15;
+Q.catholics_bbwr = 15;
 Q.catholics_kpp = 2;
 Q.catholics_pschd = 50;
 Q.catholics_pslw = 0;
@@ -282,7 +282,7 @@ Q.catholics_other = 12;
 // note: the PSCHD figures also include the NPR (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
+Q.bbwr_r = 26;
 Q.kpp_r = 9;
 Q.pschd_r = 17;
 Q.pslw_r = 6;
@@ -292,7 +292,7 @@ Q.owp_r = 3;
 Q.other_r = 9;
 
 // diff from prev
-Q.old_spd_r = 26;
+Q.old_bbwr_r = 26;
 Q.old_kpp_r = 9;
 Q.old_pschd_r = 17;
 Q.old_pslw_r = 6;
@@ -301,7 +301,7 @@ Q.old_sn_r = 20;
 Q.old_owp_r = 3;
 Q.old_other_r = 9;
 
-// array of objects of the form {date: Date(), spd: 10, kpp: 12, ...} for each election
+// array of objects of the form {date: Date(), bbwr: 10, kpp: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -314,7 +314,7 @@ Q.president = "Ignacy Mościcki";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'PSCHD';
-Q.spd_in_government = 0;
+Q.bbwr_in_government = 0;
 Q.pschd_in_government = 1;
 Q.pslw_in_government = 0;
 Q.pslp_in_government = 1;
@@ -322,20 +322,20 @@ Q.sn_in_government = 1;
 Q.kpp_in_government = 0;
 Q.owp_in_government = 0;
 
-// Weimar coalition = SPD + PSCHD + PSL-W
+// Weimar coalition = BBWR + PSCHD + PSL-W
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + PSCHD + NPR + PSL-W + PSL-P
-// also includes the "new grand coalition" of SPD + PSCHD + NPR + PSL-W + PSL-P + Others
+// Grand coalition = BBWR + PSCHD + NPR + PSL-W + PSL-P
+// also includes the "new grand coalition" of BBWR + PSCHD + NPR + PSL-W + PSL-P + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPP + PSCHD + PSL-W
+// Popular front = BBWR + KPP + PSCHD + PSL-W
 Q.in_popular_front = 0;
-// left coalition = SPD + KPP + left-splinters
+// left coalition = BBWR + KPP + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
+// emergency government containing the BBWR: only president Braun can do this.
 Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
+Q.in_bbwr_majority = 0;
 Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
+// if the BBWR is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
 
@@ -344,8 +344,8 @@ Q.coalition_dissent = 0;
 // dissent from the KPP, in a popular front or left front government
 Q.kpp_coalition_dissent = 0;
 
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
+// does the BBWR tolerate the government even if it is not a participant?
+Q.bbwr_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
@@ -418,10 +418,10 @@ Q.upper_tax_rates = 0;
 Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
-// did the SPD vote against the previous government in a vote of no confidence?
-Q.spd_no_confidence = 0;
-// was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_spd = 0;
+// did the BBWR vote against the previous government in a vote of no confidence?
+Q.bbwr_no_confidence = 0;
+// was the last BBWR government taken down in a vote of no confidence by right-wing coalition partners?
+Q.no_confidence_against_bbwr = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;

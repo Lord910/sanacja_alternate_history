@@ -6,9 +6,9 @@ on-arrival: kpp_policy_timer = 5
 #tags: event
 #max-choices: 1
 
-# disable this event for now - the KPP is abstentionist in government. This position is loosely based on Paul Levi's ideas during the Kapp Putsch. A KPP that is willing to support an SPD government would necessarily have some different policy ideas from the Thälmann Stalinist line, so I looked to the earlier Paul Levi KPP as well as the French popular front for ideas.
+# disable this event for now - the KPP is abstentionist in government. This position is loosely based on Paul Levi's ideas during the Kapp Putsch. A KPP that is willing to support an BBWR government would necessarily have some different policy ideas from the Thälmann Stalinist line, so I looked to the earlier Paul Levi KPP as well as the French popular front for ideas.
 
-# ironically the hypothetical KPP position towards the Popular Front is basically analogous to the SPD position towards the Brüning government (i.e. toleration).
+# ironically the hypothetical KPP position towards the Popular Front is basically analogous to the BBWR position towards the Brüning government (i.e. toleration).
 
 # Sources: Gaido, Daniel. “Paul Levi and the Origins of the United-Front Policy in the Communist International.” Historical Materialism 25, no. 1 (2017): 131–74. https://doi.org/10.1163/1569206x-12341515.
 # LaPorte, Norman H. “The German Communist Party in Saxony, 1924-1933 : Factionalism, Fratricide and Political Failure,” 1998. http://dspace.stir.ac.uk/handle/1893/3259.
@@ -39,12 +39,12 @@ Do we support their radical labor policy?
 - @labor_oppose: No, this is too radical.
 
 @labor_support
-on-arrival: capital_strike_progress += 2; workers_kpp += 5; workers_spd += 3*(1-dissent); kpp_labor_support += 1; coalition_dissent += 1; pschd_relation -= 6; unemployment += 2; kpp_influence += 2
+on-arrival: capital_strike_progress += 2; workers_kpp += 5; workers_bbwr += 3*(1-dissent); kpp_labor_support += 1; coalition_dissent += 1; pschd_relation -= 6; unemployment += 2; kpp_influence += 2
 
 The pro-labor policy is popular among workers and is bringing the KPP more support, but in response businesses are laying off more workers and reducing hours. This is setting the government up for a confrontation with the capitalists.
 
 @labor_oppose
-on-arrival: kpp_coalition_dissent += 1; workers_spd -= 5; workers_kpp += 5; kpp_relation -= 6
+on-arrival: kpp_coalition_dissent += 1; workers_bbwr -= 5; workers_kpp += 5; kpp_relation -= 6
 
 We oppose the KPP's policy, and prevent it from being enacted. The KPP is displeased, as are the workers who would have stood to benefit.
 
@@ -61,14 +61,14 @@ Do we support this policy?
 - @economy_oppose: No, this must be stopped.
 
 @economy_support
-on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_spd += 4*(1-dissent); workers_kpp += 8*(1-dissent); unemployed_kpp += 4*(1-dissent); coalition_dissent += 2; pslp_relation -= 6; pschd_relation -= 4; new_middle_spd -= 3; old_middle_spd -= 3; economy_goal_completed += 1; kpp_influence += 2
+on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_bbwr += 4*(1-dissent); workers_kpp += 8*(1-dissent); unemployed_kpp += 4*(1-dissent); coalition_dissent += 2; pslp_relation -= 6; pschd_relation -= 4; new_middle_bbwr -= 3; old_middle_bbwr -= 3; economy_goal_completed += 1; kpp_influence += 2
 
-The KPP has gained credit with the workers for enabling many to keep their jobs. Meanwhile, the bourgeois parties and middle-class voters blame the SPD for enabling the nationalizations.
+The KPP has gained credit with the workers for enabling many to keep their jobs. Meanwhile, the bourgeois parties and middle-class voters blame the BBWR for enabling the nationalizations.
 
 @economy_oppose
-on-arrival: kpp_coalition_dissent += 1; workers_spd -= 5; workers_kpp += 5; kpp_relation -= 6
+on-arrival: kpp_coalition_dissent += 1; workers_bbwr -= 5; workers_kpp += 5; kpp_relation -= 6
 
-After opposing the nationalization policy, the KPP has commenced a propaganda campaign against us, accusing the SPD of yet another perfidy.
+After opposing the nationalization policy, the KPP has commenced a propaganda campaign against us, accusing the BBWR of yet another perfidy.
 
 @finance
 title: Finance Ministry

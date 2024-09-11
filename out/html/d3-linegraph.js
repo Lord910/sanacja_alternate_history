@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['spd', 'kpp', 'pslw', 'pschd', 'pslp', 'sn', 'owp', 'other'];
+        parties = ['bbwr', 'kpp', 'pslw', 'pschd', 'pslp', 'sn', 'owp', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'spd': '#7a7a7a', 'kpp': '#CF3535', 'pslw': '#DCCA4A', 'pschd': '#000', 'pslp': '#D5AC27', 'sn': '#3f7bc1', 'owp': '#954B00', 'other': '#a0a0a0'};
+        partyColors = {'bbwr': '#7a7a7a', 'kpp': '#CF3535', 'pslw': '#DCCA4A', 'pschd': '#000', 'pslp': '#D5AC27', 'sn': '#3f7bc1', 'owp': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'spd': 'SPD', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'SN', 'owp': 'OWP', 'other': 'Others'};
+        partyNames = {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'SN', 'owp': 'OWP', 'other': 'Others'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
@@ -59,9 +59,9 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
 
       // Declare the y (vertical position) scale.
       if (!dataMax) {
-          const maxSPD = d3.max(data, d => d.spd);
+          const maxBBWR = d3.max(data, d => d.bbwr);
           const maxOWP = d3.max(data, d => d.owp);
-          dataMax = maxSPD >= maxOWP ? maxSPD + 10 : maxOWP + 10;
+          dataMax = maxBBWR >= maxOWP ? maxBBWR + 10 : maxOWP + 10;
           dataMin = 0;
       }
       const yScale = d3.scaleLinear([dataMin, dataMax], [height - marginBottom, marginTop]);
