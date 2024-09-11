@@ -4,7 +4,7 @@ on-arrival: {!
 Q.unemployed += 3;
 Q.inflation -= 1;
 if (Q.old_demographics) {
-    Q.catholics_z += 3;
+    Q.catholics_pschd += 3;
 }
 // increase OWP vote share
 Q.new_middle_owp += 10;

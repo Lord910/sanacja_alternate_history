@@ -2,7 +2,7 @@ title: Max Seydewitz
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 1
+view-if: seydewitpschd_advisor = 1
 new-page: true 
 
 = Max Seydewitz

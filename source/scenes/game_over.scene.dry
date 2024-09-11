@@ -297,7 +297,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of 1933 without a civil war on hard. ?]
 
-[? if game_achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of 1933 without a civil war on historical mode. ?]
+[? if game_achievement_schwarpschd_rot_gold : **Schwarz-Rot-Gold** - reach the end of 1933 without a civil war on historical mode. ?]
 
 [? if game_achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 
@@ -382,7 +382,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of 1933 without a civil war on hard. ?]
 
-[? if achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of 1933 without a civil war on historical mode. ?]
+[? if achievement_schwarpschd_rot_gold : **Schwarz-Rot-Gold** - reach the end of 1933 without a civil war on historical mode. ?]
 
 [? if achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 
@@ -465,7 +465,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of 1933 without a civil war on hard. ?]
 
-[? if not achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of 1933 without a civil war on historical mode. ?]
+[? if not achievement_schwarpschd_rot_gold : **Schwarz-Rot-Gold** - reach the end of 1933 without a civil war on historical mode. ?]
 
 [? if not achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 

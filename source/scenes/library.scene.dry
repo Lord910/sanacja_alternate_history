@@ -92,7 +92,7 @@ go-to: menu
 SPD: [+ spd_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
-Z + NPR: [+ z_votes +]%
+Z + NPR: [+ pschd_votes +]%
 
 # 1928: 10, 1930: 13
 KPP: [+ kpp_votes +]%
@@ -114,17 +114,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_pschd_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_pschd_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_pschd_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_pschd_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_pschd_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
@@ -133,7 +133,7 @@ go-to: menu
 
 **PSChD** – *Polskie Stronnictwo Chrześcijańskiej Demokracji* (Polish Christian Democratic Party) – a centrist to center-right party grounded in Catholic social teachings. They aim to integrate Christian ethics into public life, and while they support some welfare measures, they often lean toward more conservative, religious solutions to social problems. Their alignment with traditional Catholic values sometimes places them in opposition to the broader social reforms we envision.
 
-Current relations: [+ z_relation : relationships +]
+Current relations: [+ pschd_relation : relationships +]
 
 **PSL-W** – *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") – a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in rural areas.
 
@@ -291,7 +291,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: z_minus_npr_r = z_r - 3;
+on-arrival: pschd_minus_npr_r = pschd_r - 3;
 on-display: {!
 data = [
     {
@@ -316,7 +316,7 @@ data = [
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": (Q.z_r - 3)*5,
+        "seats": (Q.pschd_r - 3)*5,
     },
     {
         "id": "npr",
@@ -401,7 +401,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_npr_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ pschd_minus_npr_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} NPR: {!</td><td>!} 3% {!</td></tr>!}
 

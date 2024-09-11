@@ -14,12 +14,12 @@ Q.old_middle_owp += 6;
 Q.rural_owp += 4;
 Q.unemployed_owp += 4;
 if (Q.old_demographics) {
-    Q.catholics_z += 5;
+    Q.catholics_pschd += 5;
 }
 if (!Q.works_program) {
     Q.unemployed += 6; 
     Q.inflation -= 2;
-    Q.catholics_z += 4;
+    Q.catholics_pschd += 4;
     Q.workers -= 5;
     Q.rural_sn -= 6;
     Q.rural_owp += 8; 

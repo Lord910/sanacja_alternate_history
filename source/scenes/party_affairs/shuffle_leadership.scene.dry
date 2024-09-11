@@ -93,9 +93,9 @@ Braun has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_juchacz
 title: Remove Juchacz
-view-if: juchacz_advisor = 1
+view-if: juchacpschd_advisor = 1
 tags: remove_advisor
-on-arrival: juchacz_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: juchacpschd_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Juchacz has been removed as an advisor. The Reformist faction disapproves.
@@ -170,9 +170,9 @@ Rosenfeld has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_seydewitz
 title: Remove Seydewitz
-view-if: seydewitz_advisor = 1
+view-if: seydewitpschd_advisor = 1
 tags: remove_advisor
-on-arrival: seydewitz_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: seydewitpschd_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Seydewitz has been removed as an advisor. The Leftist faction disapproves.
@@ -389,8 +389,8 @@ title: Marie Juchacz
 subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization.
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 3
-on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: juchacpschd_advisor = 0 and n_advisors < 3
+on-arrival: juchacpschd_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 tags: reformist_advisor
 
@@ -453,8 +453,8 @@ title: Max Seydewitz
 subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle.
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and sapd_formed = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: seydewitpschd_advisor = 0 and n_advisors < 3 and sapd_formed = 0
+on-arrival: seydewitpschd_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 

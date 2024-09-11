@@ -100,7 +100,7 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
+Q.pschd_relation = 50;
 Q.kpp_relation = 25;
 Q.pslw_relation = 60;
 Q.pslp_relation = 35;
@@ -109,9 +109,9 @@ Q.SN_relation = 10;
 Q.OWP_relation = 0;
 
 Q.kpp_leader = "Thälmann";
-Q.z_leader = "Brüning";
+Q.pschd_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
+Q.pschd_party_leader = "Marx";
 Q.owp_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
@@ -217,13 +217,13 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpp', 'z', 'pslw', 'pslp', 'sn', 'owp', 'other'];
+Q.parties = ['spd', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 60;
 Q.workers_kpp = 20;
-Q.workers_z = 5;
+Q.workers_pschd = 5;
 Q.workers_pslw = 0;
 Q.workers_pslp = 0;
 Q.workers_sn = 5;
@@ -232,7 +232,7 @@ Q.workers_other = 10;
 
 Q.old_middle_spd = 5;
 Q.old_middle_kpp = 0;
-Q.old_middle_z = 5;
+Q.old_middle_pschd = 5;
 Q.old_middle_pslw= 10;
 Q.old_middle_pslp = 25;
 Q.old_middle_sn = 25;
@@ -241,7 +241,7 @@ Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
 Q.new_middle_kpp = 1;
-Q.new_middle_z = 10;
+Q.new_middle_pschd = 10;
 Q.new_middle_pslw= 25;
 Q.new_middle_pslp = 25;
 Q.new_middle_sn = 10;
@@ -250,7 +250,7 @@ Q.new_middle_other = 15;
 
 Q.rural_spd = 10;
 Q.rural_kpp = 0;
-Q.rural_z = 5;
+Q.rural_pschd = 5;
 Q.rural_pslw= 5;
 Q.rural_pslp = 15;
 Q.rural_sn = 45;
@@ -259,7 +259,7 @@ Q.rural_other = 10;
 
 Q.unemployed_spd = 25;
 Q.unemployed_kpp = 55;
-Q.unemployed_z = 1;
+Q.unemployed_pschd = 1;
 Q.unemployed_pslw = 0;
 Q.unemployed_pslp = 0;
 Q.unemployed_sn = 5;
@@ -268,7 +268,7 @@ Q.unemployed_other = 9;
 
 Q.catholics_spd = 15;
 Q.catholics_kpp = 2;
-Q.catholics_z = 50;
+Q.catholics_pschd = 50;
 Q.catholics_pslw = 0;
 Q.catholics_pslp = 5;
 Q.catholics_sn = 5;
@@ -284,7 +284,7 @@ Q.catholics_other = 12;
 // They did not have a CDU/CSU-style relationship.
 Q.spd_r = 26;
 Q.kpp_r = 9;
-Q.z_r = 17;
+Q.pschd_r = 17;
 Q.pslw_r = 6;
 Q.pslp_r = 10;
 Q.sn_r = 20;
@@ -294,7 +294,7 @@ Q.other_r = 9;
 // diff from prev
 Q.old_spd_r = 26;
 Q.old_kpp_r = 9;
-Q.old_z_r = 17;
+Q.old_pschd_r = 17;
 Q.old_pslw_r = 6;
 Q.old_pslp_r = 10;
 Q.old_sn_r = 20;
@@ -313,9 +313,9 @@ Q.economic_records = [];
 Q.president = "Ignacy Mościcki";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
-Q.chancellor_party = 'Z';
+Q.chancellor_party = 'PSCHD';
 Q.spd_in_government = 0;
-Q.z_in_government = 1;
+Q.pschd_in_government = 1;
 Q.pslw_in_government = 0;
 Q.pslp_in_government = 1;
 Q.sn_in_government = 1;
@@ -360,13 +360,13 @@ Q.interior_minister_party = 'SN';
 Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'SN';
 Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
+Q.labor_minister_party = 'PSCHD';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister = 'Curtius';
 Q.economic_minister_party = 'PSL-P';
 Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
+Q.finance_minister_party = 'PSCHD';
 Q.agriculture_minister = 'Schiele';
 Q.agriculture_minister_party = 'SN';
 
@@ -513,7 +513,7 @@ Q.sender_advisor = 0; // Toni Sender
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+Q.seydewitpschd_advisor = 0; // Max Seydewitz
 
 // centrist alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
@@ -522,7 +522,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 // Reformist advisors
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
+Q.juchacpschd_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
 // Labor advisors
@@ -558,11 +558,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpp_relation = 29; z_relation = 54; pslp_relation = 49;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpp_relation = 29; pschd_relation = 54; pslp_relation = 49;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpp_relation = 16; pslp_relation = 31;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; pschd_relation = 41; kpp_relation = 16; pslp_relation = 31;
 go-to: 1928_main
 
 @1928_historical
@@ -577,7 +577,7 @@ Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
-Q.z_relation = 41;
+Q.pschd_relation = 41;
 Q.kpp_relation = 16;
 Q.pslp_relation = 31;
 Q.budget = 2;
