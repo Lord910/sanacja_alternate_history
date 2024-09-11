@@ -155,7 +155,13 @@ data = [
         "id": "kpp",
         "legend": "KPP",
         "name": "KPP",
-        "seats": Math.round(Q.kpp_r*5),
+        "seats": Q.kpp_r*5,
+    },
+    {
+        "id": "pps",
+        "legend": "PPS",
+        "name": "PPS",
+        "seats": Q.pps_r*5,
     },
     {
         "id": "pslw",
@@ -232,7 +238,7 @@ go-to: coalition_menu
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#CF3535'> </div> !}KPP: {!</td><td>!} [+ kpp_r +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#7F0000'> </div> !}KPP: {!</td><td>!} [+ kpp_r +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#CF3535'> </div> !}PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 

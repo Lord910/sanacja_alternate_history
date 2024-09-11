@@ -515,7 +515,10 @@ table {
 
 /* Styles for parties */
 .seat.kpp {
-    fill: #CF3535;
+    fill: #7F0000;
+}
+.seat.pps {
+  fill: #CF3535;
 }
 .seat.bbwr {
     fill: #7a7a7a;

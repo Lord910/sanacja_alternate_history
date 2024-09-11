@@ -405,7 +405,7 @@ if (d3 && window) {
 
 {!<table>!}
 
-{!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}KPP: {!</td><td>!} [+ kpp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#7F0000'> </div></td> <td>!}KPP: {!</td><td>!} [+ kpp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}PPS: {!</td><td>!} [+ pps_r +]% {!</td></tr>!}
 
