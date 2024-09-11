@@ -39,7 +39,7 @@ KPP: [+ kpp_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 PSL-W: [+ pslw_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+PSL-P: [+ pslp_r +]%
 # 1928: 14, 1930: 7
 SN: [+ sn_r +]%
 # 1928: 3, 1930: 18
@@ -67,7 +67,7 @@ Z: [+ z_relation : relationships +]
 
 PSL-W: [+ pslw_relation : relationships +]
 
-DVP: [+ dvp_relation : relationships +]
+PSL-P: [+ pslp_relation : relationships +]
 
 KPP: [+ kpp_relation : relationships +]
 
@@ -132,7 +132,7 @@ KPP: [+ kpp_votes +]%
 
 PSL-W: [+ pslw_votes +]%
 
-DVP: [+ dvp_votes +]%
+PSL-P: [+ pslp_votes +]%
 
 SN: [+ sn_votes +]%
 
@@ -142,16 +142,16 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, DVP: [+ workers_dvp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, DVP: [+ old_middle_dvp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, DVP: [+ rural_dvp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, DVP: [+ catholics_dvp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 Support for the Republic: [+ pro_republic +]%
