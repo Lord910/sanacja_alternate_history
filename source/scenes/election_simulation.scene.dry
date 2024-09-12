@@ -155,17 +155,17 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 10;
-Q.pps_r = 10;
-Q.kpp_r = 10;
-Q.pschd_r = 10;
-Q.npr_r = 10;
-Q.pslw_r = 10;
-Q.sch_r = 10;
-Q.pslp_r = 10;
-Q.sn_r = 10;
+Q.kpp_r = 3;
+Q.pps_r = 9;
+Q.sch_r = 8;
+Q.pslw_r = 6;
+Q.other_r = 19;
+Q.bbwr_r = 3;
+Q.npr_r = 4;
+Q.pschd_r = 9;
+Q.pslp_r = 12;
+Q.sn_r = 28;
 Q.owp_r = 0;
-Q.other_r = 10;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -240,17 +240,17 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 10;
-Q.pps_r = 10;
-Q.kpp_r = 10;
-Q.pschd_r = 10;
-Q.npr_r = 10;
-Q.pslw_r = 10;
-Q.sch_r = 10;
-Q.pslp_r = 10;
-Q.sn_r = 10;
-Q.owp_r = 10;
-Q.other_r = 0;
+Q.kpp_r = 3;
+Q.pps_r = 9;
+Q.sch_r = 8;
+Q.pslw_r = 6;
+Q.other_r = 19;
+Q.bbwr_r = 3;
+Q.npr_r = 4;
+Q.pschd_r = 9;
+Q.pslp_r = 12;
+Q.sn_r = 28;
+Q.owp_r = 0;
 !}
 go-to: election_algorithm
 set-jump: post_election
