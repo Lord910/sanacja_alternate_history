@@ -46,10 +46,13 @@ SN: [+ sn_r +]%
 OWP: [+ owp_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
-# 1927: TODO
+# 1928: TODO
 PPS: [+ pps_r +]%
-# 1927: TODO
+# 1928: TODO
 NPR: [+ npr_r +]%
+
+# 1928: TODO
+SCh: [+ sch_r +]%
 
 [? if bbwr_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -147,6 +150,8 @@ Others: [+ other_votes +]%
 PPS: [+ pps_votes +]%
 
 NPR: [+ npr_votes +]%
+
+SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 

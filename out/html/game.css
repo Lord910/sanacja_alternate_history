@@ -531,6 +531,9 @@ table {
 .seat.pslw {
     fill: #00FF21;
 }
+.seat.sch {
+  fill: #BBFF00;
+}
 .seat.z {
     fill: #000;
 }

@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['bbwr', 'kpp', 'pslw', 'pschd', 'pslp', 'sn', 'owp', 'other', 'pps, npr'];
+        parties = ['bbwr', 'kpp', 'pslw', 'pschd', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
     }
     if (!partyColors) {
-        partyColors = {'bbwr': '#7a7a7a', 'kpp': '#7F0000', 'pslw': '#00FF21', 'pschd': '#000', 'pslp': '#0094FF', 'sn': '#0026ff', 'owp': '#954B00', 'other': '#a0a0a0', 'pps': '#CF3535', 'npr': 'A500FF'};
+        partyColors = {'bbwr': '#7a7a7a', 'kpp': '#7F0000', 'pslw': '#00FF21', 'pschd': '#000', 'pslp': '#0094FF', 'sn': '#0026ff', 'owp': '#954B00', 'other': '#a0a0a0', 'pps': '#CF3535', 'npr': '#A500FF', 'sch': '#BBFF00'};
     }
     if (!partyNames) {
-        partyNames = {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'SN', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR', };
+        partyNames = {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'SN', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR','sch': 'SCh' };
     }
     if (!additionalMonths) {
         additionalMonths = 10;

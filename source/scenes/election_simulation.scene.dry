@@ -18,7 +18,7 @@ Q.unemployed = 8.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -26,6 +26,7 @@ Q.workers_bbwr = 65;
 Q.workers_kpp = 20;
 Q.workers_pschd = 5;
 Q.workers_pslw = 0;
+Q.workers_sch = 0;
 Q.workers_pslp = 0;
 Q.workers_sn = 5;
 Q.workers_owp = 0;
@@ -35,6 +36,7 @@ Q.old_middle_bbwr = 5;
 Q.old_middle_kpp = 0;
 Q.old_middle_pschd = 5;
 Q.old_middle_pslw= 10;
+Q.old_middle_sch= 10;
 Q.old_middle_pslp = 25;
 Q.old_middle_sn = 25;
 Q.old_middle_owp = 10;
@@ -44,6 +46,7 @@ Q.new_middle_bbwr = 5;
 Q.new_middle_kpp = 0;
 Q.new_middle_pschd = 10;
 Q.new_middle_pslw= 25;
+Q.new_middle_sch= 25;
 Q.new_middle_pslp = 25;
 Q.new_middle_sn = 10;
 Q.new_middle_owp = 5;
@@ -53,6 +56,7 @@ Q.rural_bbwr = 10;
 Q.rural_kpp = 0;
 Q.rural_pschd = 5;
 Q.rural_pslw= 5;
+Q.rural_sch= 5;
 Q.rural_pslp = 15;
 Q.rural_sn = 45;
 Q.rural_owp = 5;
@@ -62,6 +66,7 @@ Q.unemployed_bbwr = 25;
 Q.unemployed_kpp = 55;
 Q.unemployed_pschd = 1;
 Q.unemployed_pslw = 0;
+Q.unemployed_sch = 0;
 Q.unemployed_pslp = 0;
 Q.unemployed_sn = 5;
 Q.unemployed_owp = 15;
@@ -71,6 +76,7 @@ Q.catholics_bbwr = 15;
 Q.catholics_kpp = 5;
 Q.catholics_pschd = 50;
 Q.catholics_pslw = 0;
+Q.catholics_sch = 0;
 Q.catholics_pslp = 5;
 Q.catholics_sn = 5;
 Q.catholics_owp = 0;
@@ -91,7 +97,7 @@ Q.unemployed = 20;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -155,6 +161,7 @@ Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
 Q.pslw_r = 0;
+Q.sch_r = 0;
 Q.pslp_r = 0;
 Q.sn_r = 0;
 Q.owp_r = 0;
@@ -175,7 +182,7 @@ Q.unemployed = 33;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -239,6 +246,7 @@ Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
 Q.pslw_r = 0;
+Q.sch_r = 0;
 Q.pslp_r = 0;
 Q.sn_r = 0;
 Q.owp_r = 0;
@@ -256,6 +264,7 @@ Q.pschd_r = Q.pschd_votes;
 Q.npr_r = Q.npr_votes;
 Q.kpp_r = Q.kpp_votes;
 Q.pslw_r = Q.pslw_votes;
+Q.sch_r = Q.pslw_votes;
 Q.pslp_r = Q.pslp_votes;
 Q.sn_r = Q.sn_votes;
 Q.owp_r = Q.owp_votes;
@@ -319,6 +328,9 @@ PPS: [+ pps_r +]
 
 # 1927: TODO
 NPR: [+ npr_r +]
+
+# 1927: TODO
+SCh: [+ sch_r +]
 
 **Potential coalitions:**
 
