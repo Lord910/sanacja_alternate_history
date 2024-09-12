@@ -20,16 +20,16 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
     }
     if (!partyColors) {
         partyColors = {
-            'kpp': '#8B0000', // dark red
-            'pps': '#FFC0CB', // pink
-            'sch': '#808000', // mix of red and green (olive)
-            'pslw': '#00FF00', // bright green
-            'other': '#D3D3D3', // light gray
-            'bbwr': '#6699CC', // blue gray
-            'npr': '#800080', // mix of red and blue (purple)
-            'pschd': '#0000FF', // bright blue
-            'pslp': '#006400', // dark green
-            'sn': '#00008B', // dark blue
+            'kpp': '#AF0000', // dark red
+            'pps': '#CC0000', // red
+            'sch': '#556B2F', // dark olive green
+            'pslw': '#179900', // bright green
+            'other': '#FFD700', // gold
+            'bbwr': '#808080', // gray
+            'npr': '#841839', // redish
+            'pschd': '#1E90FF', // dodger blue
+            'pslp': '#3A6538', // dark green
+            'sn': '#0000CD', // dark blue
             'owp': '#954B00' // brown
         };
     }

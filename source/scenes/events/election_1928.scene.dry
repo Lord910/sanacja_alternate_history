@@ -242,25 +242,25 @@ go-to: coalition_menu
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} KPP: {!</td><td>!} [+ kpp_r +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#AF0000'> </div> !}KPP: {!</td><td>!} [+ kpp_r +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFC0CB'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#CC0000'> </div> !}PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#808000'> </div> !} SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#556B2F'> </div> !} SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#00FF00'> </div> !} PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#179900'> </div> !} PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D3D3D3'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#6699CC; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#800080'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#841839'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0000FF'> </div> !} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1E90FF'> </div> !} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#006400'> </div> !} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#00008B'> </div> !} SN: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0000CD'> </div> !} SN: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ owp_r +]% {!</td><td>!} [+ str_change_owp +] {!</td></tr>!}
 {!</table>!}
