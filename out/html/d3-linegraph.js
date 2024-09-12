@@ -19,7 +19,19 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         parties = ['bbwr', 'kpp', 'pslw', 'pschd', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
     }
     if (!partyColors) {
-        partyColors = {'bbwr': '#7a7a7a', 'kpp': '#7F0000', 'pslw': '#00FF21', 'pschd': '#000', 'pslp': '#0094FF', 'sn': '#0026ff', 'owp': '#954B00', 'other': '#a0a0a0', 'pps': '#CF3535', 'npr': '#A500FF', 'sch': '#BBFF00'};
+        partyColors = {
+            'kpp': '#8B0000', // dark red
+            'pps': '#FFC0CB', // pink
+            'sch': '#808000', // mix of red and green (olive)
+            'pslw': '#00FF00', // bright green
+            'other': '#D3D3D3', // light gray
+            'bbwr': '#6699CC', // blue gray
+            'npr': '#800080', // mix of red and blue (purple)
+            'pschd': '#0000FF', // bright blue
+            'pslp': '#006400', // dark green
+            'sn': '#00008B', // dark blue
+            'owp': '#954B00' // brown
+        };
     }
     if (!partyNames) {
         partyNames = {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'SN', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR','sch': 'SCh' };

@@ -327,6 +327,12 @@ data = [
         "seats": Math.round(Q.pslw_r*5),
     },
     {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r*5),
+    },
+    {
         "id": "bbwr",
         "legend": "BBWR",
         "name": "BBWR",
@@ -349,12 +355,6 @@ data = [
         "legend": "PSL-P",
         "name": "PSL-P",
         "seats": Math.round(Q.pslp_r*5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
     },
     {
         "id": "sn",
@@ -416,27 +416,27 @@ if (d3 && window) {
 
 {!<table>!}
 
-{!<tr><td><div class="box" style='background-color:#7F0000'> </div></td> <td>!}KPP: {!</td><td>!} [+ kpp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPP: {!</td><td>!} [+ kpp_r +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#CF3535'> </div></td> <td>!}PPS: {!</td><td>!} [+ pps_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFC0CB'> </div> !}PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#BBFF00'> </div></td><td>!} SCh: {!</td><td>!} [+ sch_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#808000'> </div> !} SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#00FF21'> </div></td><td>!} PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#00FF00'> </div> !} PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D3D3D3'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#7a7a7a; outline: 2px; outline-style: solid;'> </div></td><td>!} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#6699CC; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#A500FF'> </div></td><td>!} NPR: {!</td><td>!} [+ npr_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#800080'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0000FF'> </div> !} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0094FF'> </div></td><td>!} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#006400'> </div> !} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0026ff'> </div></td><td>!} SN: {!</td><td>!} [+ sn_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#00008B'> </div> !} SN: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} OWP: {!</td><td>!} [+ owp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ owp_r +]% {!</td><td>!} [+ str_change_owp +] {!</td></tr>!}
 {!</table>!}
 
 = Election history

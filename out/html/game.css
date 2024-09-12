@@ -515,41 +515,38 @@ table {
 
 /* Styles for parties */
 .seat.kpp {
-    fill: #7F0000;
+  fill: #8B0000; /* dark red */
 }
 .seat.pps {
-  fill: #CF3535;
-}
-.seat.npr {
-  fill: #A500FF;
-}
-.seat.bbwr {
-    fill: #7a7a7a;
-    stroke: #000;
-    stroke-width: 1.5px;
-}
-.seat.pslw {
-    fill: #00FF21;
+  fill: #FFC0CB; /* pink */
 }
 .seat.sch {
-  fill: #BBFF00;
+  fill: #808000; /* mix of red and green (olive) */
 }
-.seat.z {
-    fill: #000;
-}
-.seat.npr {
-    fill: #69A2BE;
-}
-.seat.pslp {
-    fill: #0094FF;
+.seat.pslw {
+  fill: #00FF00; /* bright green */
 }
 .seat.other {
-    fill: #909090;
+  fill: #D3D3D3; /* light gray */
+}
+.seat.bbwr {
+  fill: #6699CC; /* blue gray */
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+.seat.npr {
+  fill: #800080; /* mix of red and blue (purple) */
+}
+.seat.pschd {
+  fill: #0000FF; /* bright blue */
+}
+.seat.pslp {
+  fill: #006400; /* dark green */
 }
 .seat.sn {
-    fill: #0026FF;
+  fill: #00008B; /* dark blue */
 }
 .seat.owp {
-    fill: #954B00;
+  fill: #954B00; /* pozostawiony bez zmian */
 }
 
