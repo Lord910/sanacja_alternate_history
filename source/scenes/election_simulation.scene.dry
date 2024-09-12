@@ -258,17 +258,17 @@ set-jump: post_election
 @post_election
 on-arrival: {!
 // set congress proportion to votes
-Q.pps_r = Q.pps_votes;
-Q.bbwr_r = Q.bbwr_votes;
-Q.pschd_r = Q.pschd_votes;
-Q.npr_r = Q.npr_votes;
 Q.kpp_r = Q.kpp_votes;
+Q.pps_r = Q.pps_votes;
+Q.sch_r = Q.sch_votes;
 Q.pslw_r = Q.pslw_votes;
-Q.sch_r = Q.pslw_votes;
+Q.other_r = Q.other_votes;
+Q.bbwr_r = Q.bbwr_votes;
+Q.npr_r = Q.npr_votes;
+Q.pschd_r = Q.pschd_votes;
 Q.pslp_r = Q.pslp_votes;
 Q.sn_r = Q.sn_votes;
 Q.owp_r = Q.owp_votes;
-Q.other_r = Q.other_votes;
 
 
 // The largest party can only be the OWP or the BBWR.
