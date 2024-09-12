@@ -188,10 +188,10 @@ Q.capital_strike_progress = 0;
 Q.budget = 5;
 
 // Proportion of different social groups based on updated demographics
-Q.robotnicy = 22; // 
-Q.klasa_wyzsza = 1.1; // 
-Q.klasa_srednia = 12.8; // 
-Q.chlopi = 44.4; // 
+Q.robotnicy = 22;
+Q.klasa_wyzsza = 1.1;
+Q.klasa_srednia = 12.8;
+Q.chlopi = 44.4; 
 Q.bezrobotni = 6.9; // unemployment rate 
 Q.mniejszosci = 20; // sum of all minorities 
 
@@ -200,78 +200,77 @@ Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.robotnicy_pps = 40;
-Q.robotnicy_bbwr = 50;
+Q.robotnicy_pps = 50;
+Q.robotnicy_bbwr = 35;
 Q.robotnicy_kpp = 10;
 Q.robotnicy_pschd = 5;
-Q.robotnicy_npr = 0;
+Q.robotnicy_npr = 5;
 Q.robotnicy_pslw = 0;
 Q.robotnicy_sch = 0;
 Q.robotnicy_pslp = 0;
 Q.robotnicy_sn = 5;
 Q.robotnicy_owp = 0;
-Q.robotnicy_other = 10;
+Q.robotnicy_other = 5;
 
-Q.klasa_wyzsza_pps = 5;
-Q.klasa_wyzsza_bbwr = 50;
+Q.klasa_wyzsza_pps = 0;
+Q.klasa_wyzsza_bbwr = 25; 
 Q.klasa_wyzsza_kpp = 0;
-Q.klasa_wyzsza_pschd = 10;
+Q.klasa_wyzsza_pschd = 35; 
 Q.klasa_wyzsza_npr = 5;
 Q.klasa_wyzsza_pslw = 0;
 Q.klasa_wyzsza_sch = 0;
 Q.klasa_wyzsza_pslp = 10;
-Q.klasa_wyzsza_sn = 10;
+Q.klasa_wyzsza_sn = 50;
 Q.klasa_wyzsza_owp = 0;
-Q.klasa_wyzsza_other = 10;
+Q.klasa_wyzsza_other = 0;
 
 Q.klasa_srednia_pps = 10;
-Q.klasa_srednia_bbwr = 50;
+Q.klasa_srednia_bbwr = 35;
 Q.klasa_srednia_kpp = 0;
 Q.klasa_srednia_pschd = 10;
 Q.klasa_srednia_npr = 5;
 Q.klasa_srednia_pslw = 0;
 Q.klasa_srednia_sch = 0;
 Q.klasa_srednia_pslp = 10;
-Q.klasa_srednia_sn = 10;
+Q.klasa_srednia_sn = 25;
 Q.klasa_srednia_owp = 0;
-Q.klasa_srednia_other = 15;
+Q.klasa_srednia_other = 0;
 
 Q.chlopi_pps = 5;
-Q.chlopi_bbwr = 50;
+Q.chlopi_bbwr = 35;
 Q.chlopi_kpp = 0;
 Q.chlopi_pschd = 5;
-Q.chlopi_npr = 5;
-Q.chlopi_pslw = 20;
-Q.chlopi_sch = 20;
-Q.chlopi_pslp = 10;
-Q.chlopi_sn = 0;
+Q.chlopi_npr = 0;
+Q.chlopi_pslw = 25;
+Q.chlopi_sch = 25;
+Q.chlopi_pslp = 15;
+Q.chlopi_sn = 10;
 Q.chlopi_owp = 0;
-Q.chlopi_other = 5;
+Q.chlopi_other = ;
 
-Q.bezrobotni_pps = 40;
-Q.bezrobotni_bbwr = 50;
-Q.bezrobotni_kpp = 10;
+Q.bezrobotni_pps = 35;
+Q.bezrobotni_bbwr = 35;
+Q.bezrobotni_kpp = 25;
 Q.bezrobotni_pschd = 5;
-Q.bezrobotni_npr = 0;
+Q.bezrobotni_npr = 25;
 Q.bezrobotni_pslw = 0;
 Q.bezrobotni_sch = 0;
 Q.bezrobotni_pslp = 0;
-Q.bezrobotni_sn = 5;
+Q.bezrobotni_sn = 10;
 Q.bezrobotni_owp = 0;
-Q.bezrobotni_other = 10;
+Q.bezrobotni_other = 0;
 
 Q.mniejszosci_pps = 5;
 Q.mniejszosci_bbwr = 5;
 Q.mniejszosci_kpp = 5;
-Q.mniejszosci_pschd = 5;
+Q.mniejszosci_pschd = 0;
 Q.mniejszosci_npr = 0;
 Q.mniejszosci_pslw = 0;
 Q.mniejszosci_sch = 0;
-Q.mniejszosci_pslp = 5;
+Q.mniejszosci_pslp = 0;
 Q.mniejszosci_sn = 0;
 Q.mniejszosci_owp = 0;
 Q.mniejszosci_other = 100;
-
 
 // Current Sejm composition
 // % of Sejm in Jan 1927
