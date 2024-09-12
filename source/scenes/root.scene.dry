@@ -246,7 +246,7 @@ Q.chlopi_sch = 25;
 Q.chlopi_pslp = 15;
 Q.chlopi_sn = 10;
 Q.chlopi_owp = 0;
-Q.chlopi_other = ;
+Q.chlopi_other = 0;
 
 Q.bezrobotni_pps = 35;
 Q.bezrobotni_bbwr = 35;
