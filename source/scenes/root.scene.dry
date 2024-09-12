@@ -221,76 +221,77 @@ Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.chlopi_bbwr = 15;
-Q.chlopi_kpp = 1;
-Q.chlopi_mniejszosci = 0;
-Q.chlopi_npr = 2;
-Q.chlopi_pps = 5;
-Q.chlopi_pschd = 5;
-Q.chlopi_pslp = 10;
-Q.chlopi_pslw = 30;
-Q.chlopi_sch = 20;
-Q.chlopi_zln = 2;
-
-// Poparcie dla partii wśród robotników
-Q.robotnicy_bbwr = 15;
-Q.robotnicy_kpp = 5;
-Q.robotnicy_mniejszosci = 0;
-Q.robotnicy_npr = 20;
-Q.robotnicy_pps = 30;
+Q.robotnicy_pps = 60;
+Q.robotnicy_bbwr = 60;
+Q.robotnicy_kpp = 20;
 Q.robotnicy_pschd = 5;
-Q.robotnicy_pslp = 0;
-Q.robotnicy_pslw = 5;
+Q.robotnicy_npr = 5;
+Q.robotnicy_pslw = 0;
 Q.robotnicy_sch = 0;
-Q.robotnicy_zln = 0;
+Q.robotnicy_pslp = 0;
+Q.robotnicy_sn = 5;
+Q.robotnicy_owp = 0;
+Q.robotnicy_other = 10;
 
-// Poparcie dla partii wśród klasy średniej
-Q.klasa_srednia_bbwr = 25;
-Q.klasa_srednia_kpp = 1;
-Q.klasa_srednia_mniejszosci = 0;
-Q.klasa_srednia_npr = 5;
-Q.klasa_srednia_pps = 10;
-Q.klasa_srednia_pschd = 20;
-Q.klasa_srednia_pslp = 5;
-Q.klasa_srednia_pslw = 5;
-Q.klasa_srednia_sch = 0;
-Q.klasa_srednia_zln = 20;
-
-// Poparcie dla partii wśród klasy wyższej
-Q.klasa_wyzsza_bbwr = 30;
-Q.klasa_wyzsza_kpp = 0;
-Q.klasa_wyzsza_mniejszosci = 0;
-Q.klasa_wyzsza_npr = 5;
 Q.klasa_wyzsza_pps = 5;
-Q.klasa_wyzsza_pschd = 20;
-Q.klasa_wyzsza_pslp = 5;
-Q.klasa_wyzsza_pslw = 5;
-Q.klasa_wyzsza_sch = 0;
-Q.klasa_wyzsza_zln = 30;
+Q.klasa_wyzsza_bbwr = 5;
+Q.klasa_wyzsza_kpp = 0;
+Q.klasa_wyzsza_pschd = 5;
+Q.klasa_wyzsza_npr = 5;
+Q.klasa_wyzsza_pslw = 10;
+Q.klasa_wyzsza_sch= 10;
+Q.klasa_wyzsza_pslp = 25;
+Q.klasa_wyzsza_sn = 25;
+Q.klasa_wyzsza_owp = 10;
+Q.klasa_wyzsza_other = 10;
 
-// Poparcie dla partii wśród bezrobotnych
-Q.bezrobotni_bbwr = 10;
-Q.bezrobotni_kpp = 30;
-Q.bezrobotni_mniejszosci = 0;
-Q.bezrobotni_npr = 10;
-Q.bezrobotni_pps = 30;
-Q.bezrobotni_pschd = 5;
-Q.bezrobotni_pslp = 0;
-Q.bezrobotni_pslw = 5;
+Q.klasa_srednia_pps = 5;
+Q.klasa_srednia_bbwr = 5;
+Q.klasa_srednia_kpp = 1;
+Q.klasa_srednia_pschd = 10;
+Q.klasa_srednia_npr = 10;
+Q.klasa_srednia_pslw = 25;
+Q.klasa_srednia_sch= 25;
+Q.klasa_srednia_pslp = 25;
+Q.klasa_srednia_sn = 10;
+Q.klasa_srednia_owp = 5;
+Q.klasa_srednia_other = 15;
+
+Q.chlopi_pps = 10;
+Q.chlopi_bbwr = 10;
+Q.chlopi_kpp = 0;
+Q.chlopi_pschd = 5;
+Q.chlopi_npr = 5;
+Q.chlopi_pslw = 5;
+Q.chlopi_sch= 5;
+Q.chlopi_pslp = 15;
+Q.chlopi_sn = 45;
+Q.chlopi_owp = 5;
+Q.chlopi_other = 10;
+
+Q.bezrobotni_pps = 25;
+Q.bezrobotni_bbwr = 25;
+Q.bezrobotni_kpp = 55;
+Q.bezrobotni_pschd = 1;
+Q.bezrobotni_npr = 1;
+Q.bezrobotni_pslw = 0;
 Q.bezrobotni_sch = 0;
-Q.bezrobotni_zln = 0;
+Q.bezrobotni_pslp = 0;
+Q.bezrobotni_sn = 5;
+Q.bezrobotni_owp = 15;
+Q.bezrobotni_other = 9;
 
-// Poparcie dla partii wśród mniejszości
-Q.mniejszosci_bbwr = 5;
-Q.mniejszosci_kpp = 10;
-Q.mniejszosci_mniejszosci = 70;
-Q.mniejszosci_npr = 0;
-Q.mniejszosci_pps = 5;
-Q.mniejszosci_pschd = 0;
-Q.mniejszosci_pslp = 0;
+Q.mniejszosci_pps = 15;
+Q.mniejszosci_bbwr = 15;
+Q.mniejszosci_kpp = 2;
+Q.mniejszosci_pschd = 50;
+Q.mniejszosci_npr = 50;
 Q.mniejszosci_pslw = 0;
 Q.mniejszosci_sch = 0;
-Q.mniejszosci_zln = 0;
+Q.mniejszosci_pslp = 5;
+Q.mniejszosci_sn = 5;
+Q.mniejszosci_owp = 0;
+Q.mniejszosci_other = 12;
 
 
 // Current Sejm composition
