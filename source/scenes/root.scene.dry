@@ -300,8 +300,8 @@ Q.catholics_other = 12;
 // note: the PSCHD figures also include the NPR (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.bbwr_r = 80;
-Q.pps_r = 20;
+Q.bbwr_r = 100;
+Q.pps_r = 0;
 Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
@@ -313,8 +313,8 @@ Q.owp_r = 0;
 Q.other_r = 0;
 
 // diff from prev
-Q.old_bbwr_r = 75;
-Q.old_pps_r = 25;
+Q.old_bbwr_r = 100;
+Q.old_pps_r = 0;
 Q.old_kpp_r = 0;
 Q.old_pschd_r = 0;
 Q.old_npr_r = 0;

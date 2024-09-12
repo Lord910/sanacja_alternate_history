@@ -77,7 +77,7 @@ if (Q.kpp_r >= Q.bbwr_r && Q.kpp_r >= Q.owp_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r - 3;
+Q.weimar_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r;
 Q.grand_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r + Q.pslp_r;
 Q.bourgeois_coalition = Q.pslw_r + Q.pschd_r + Q.pslp_r + Q.other_r;
 Q.center_right_coalition = Q.pschd_r + Q.pslw_r + Q.pslp_r + Q.other_r + Q.sn_r;
@@ -85,7 +85,7 @@ Q.right_coalition = Q.pschd_r + Q.pslp_r + Q.other_r + Q.sn_r;
 Q.far_right_coalition = Q.sn_r + Q.owp_r;
 Q.left_coalition = Q.bbwr_r + Q.kpp_r;
 // this is an absurd concept lol
-Q.popular_front_coalition = Q.bbwr_r + Q.kpp_r + Q.pschd_r + Q.pslw_r - 3;
+Q.popular_front_coalition = Q.bbwr_r + Q.kpp_r + Q.pschd_r + Q.pslw_r;
 Q.anti_democratic_coalition = Q.kpp_r + Q.owp_r + Q.sn_r;
 // aka everyone except nazi, kpp, sn
 Q.neo_weimar_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r + Q.pslp_r + Q.other_r;
@@ -139,8 +139,6 @@ Q.labor_goal_completed = 0;
 Q.foreign_goal_completed = 0;
 Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
-
-Q.pschd_r = Q.pschd_r - 3;
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {

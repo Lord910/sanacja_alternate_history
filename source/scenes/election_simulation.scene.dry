@@ -155,8 +155,8 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 80;
-Q.pps_r = 20;
+Q.bbwr_r = 100;
+Q.pps_r = 0;
 Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
@@ -240,8 +240,8 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 80;
-Q.pps_r = 20;
+Q.bbwr_r = 100;
+Q.pps_r = 0;
 Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
@@ -281,7 +281,7 @@ if (Q.kpp_r >= Q.bbwr_r && Q.kpp_r >= Q.owp_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r - 3;
+Q.weimar_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r;
 Q.grand_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r + Q.pslp_r;
 Q.bourgeois_coalition = Q.pslw_r + Q.pschd_r + Q.pslp_r + Q.other_r;
 Q.center_right_coalition = Q.pschd_r + Q.pslw_r + Q.pslp_r + Q.other_r + Q.sn_r;
@@ -289,7 +289,7 @@ Q.right_coalition = Q.pschd_r + Q.pslp_r + Q.other_r + Q.sn_r;
 Q.far_right_coalition = Q.sn_r + Q.owp_r;
 Q.left_coalition = Q.bbwr_r + Q.kpp_r;
 // this is an absurd concept lol
-Q.united_front_coalition = Q.bbwr_r + Q.kpp_r + Q.pschd_r + Q.pslw_r - 3;
+Q.united_front_coalition = Q.bbwr_r + Q.kpp_r + Q.pschd_r + Q.pslw_r;
 Q.anti_democratic_coalition = Q.kpp_r + Q.owp_r;
 // aka everyone except nazi, kpp, sn
 Q.neo_weimar_coalition = Q.bbwr_r + Q.pslw_r + Q.pschd_r + Q.pslp_r + Q.other_r;

@@ -300,7 +300,6 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-#on-arrival: pschd_r = pschd_r - 3;
 on-display: {!
 data = [
     {
