@@ -187,109 +187,92 @@ Q.capital_strike_progress = 0;
 
 Q.budget = 5;
 
-// Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.robotnicy = 48; // industry and trade
-Q.klasa_wyzsza = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.klasa_srednia = 14; // "new mittelstand"
-Q.chlopi = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.bezrobotni = 8.6;
-Q.mniejszosci = 30;
+// Proportion of different social groups based on 1920s demographics
+Q.robotnicy = 16; // industry and trade
+Q.klasa_wyzsza = 2; // więksi przedsiębiorcy i ziemianie
+Q.klasa_srednia = 15; // drobnomieszczaństwo (11%) + inteligencja i wolne zawody (5%)
+Q.chlopi = 40; // agriculture and forestry employment
+Q.bezrobotni = 7; // unemployment rate
+Q.mniejszosci = 20; // sum of all minorities
 
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial robotnicy in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
-Q.income = 1600;
-// what about incomes for different classes? chlopi robotnicy? middle-class robotnicy?
-
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BBBWRRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
-
-// quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
-Q.robotnicy_qol = 100;
-Q.chlopi_qol = 100;
-Q.bezrobotni_qol = 100;
-Q.klasa_wyzsza_qol = 100;
-Q.klasa_srednia_qol = 100;
+0.5
 
 Q.classes = ['robotnicy', 'klasa_wyzsza', 'klasa_srednia', 'chlopi', 'bezrobotni', 'mniejszosci'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.robotnicy_pps = 60;
-Q.robotnicy_bbwr = 60;
+Q.robotnicy_pps = 50;
+Q.robotnicy_bbwr = 20;
 Q.robotnicy_kpp = 20;
 Q.robotnicy_pschd = 5;
-Q.robotnicy_npr = 5;
+Q.robotnicy_npr = 0;
 Q.robotnicy_pslw = 0;
 Q.robotnicy_sch = 0;
 Q.robotnicy_pslp = 0;
 Q.robotnicy_sn = 5;
 Q.robotnicy_owp = 0;
-Q.robotnicy_other = 10;
+Q.robotnicy_other = 0;
 
-Q.klasa_wyzsza_pps = 5;
-Q.klasa_wyzsza_bbwr = 5;
+Q.klasa_wyzsza_pps = 0;
+Q.klasa_wyzsza_bbwr = 30;
 Q.klasa_wyzsza_kpp = 0;
-Q.klasa_wyzsza_pschd = 5;
-Q.klasa_wyzsza_npr = 5;
-Q.klasa_wyzsza_pslw = 10;
-Q.klasa_wyzsza_sch= 10;
-Q.klasa_wyzsza_pslp = 25;
-Q.klasa_wyzsza_sn = 25;
-Q.klasa_wyzsza_owp = 10;
-Q.klasa_wyzsza_other = 10;
+Q.klasa_wyzsza_pschd = 25;
+Q.klasa_wyzsza_npr = 0;
+Q.klasa_wyzsza_pslw = 0;
+Q.klasa_wyzsza_sch = 0;
+Q.klasa_wyzsza_pslp = 10;
+Q.klasa_wyzsza_sn = 40;
+Q.klasa_wyzsza_owp = 0;
+Q.klasa_wyzsza_other = 5;
 
 Q.klasa_srednia_pps = 5;
-Q.klasa_srednia_bbwr = 5;
-Q.klasa_srednia_kpp = 1;
-Q.klasa_srednia_pschd = 10;
-Q.klasa_srednia_npr = 10;
-Q.klasa_srednia_pslw = 25;
-Q.klasa_srednia_sch= 25;
-Q.klasa_srednia_pslp = 25;
-Q.klasa_srednia_sn = 10;
-Q.klasa_srednia_owp = 5;
-Q.klasa_srednia_other = 15;
+Q.klasa_srednia_bbwr = 30;
+Q.klasa_srednia_kpp = 0;
+Q.klasa_srednia_pschd = 20;
+Q.klasa_srednia_npr = 5;
+Q.klasa_srednia_pslw = 0;
+Q.klasa_srednia_sch = 0;
+Q.klasa_srednia_pslp = 10;
+Q.klasa_srednia_sn = 30;
+Q.klasa_srednia_owp = 0;
+Q.klasa_srednia_other = 0;
 
-Q.chlopi_pps = 10;
-Q.chlopi_bbwr = 10;
+Q.chlopi_pps = 5;
+Q.chlopi_bbwr = 20;
 Q.chlopi_kpp = 0;
 Q.chlopi_pschd = 5;
-Q.chlopi_npr = 5;
-Q.chlopi_pslw = 5;
-Q.chlopi_sch= 5;
-Q.chlopi_pslp = 15;
-Q.chlopi_sn = 45;
-Q.chlopi_owp = 5;
-Q.chlopi_other = 10;
+Q.chlopi_npr = 0;
+Q.chlopi_pslw = 30;
+Q.chlopi_sch = 30;
+Q.chlopi_pslp = 10;
+Q.chlopi_sn = 0;
+Q.chlopi_owp = 0;
+Q.chlopi_other = 0;
 
-Q.bezrobotni_pps = 25;
-Q.bezrobotni_bbwr = 25;
-Q.bezrobotni_kpp = 55;
-Q.bezrobotni_pschd = 1;
-Q.bezrobotni_npr = 1;
+Q.bezrobotni_pps = 50;
+Q.bezrobotni_bbwr = 20;
+Q.bezrobotni_kpp = 20;
+Q.bezrobotni_pschd = 5;
+Q.bezrobotni_npr = 0;
 Q.bezrobotni_pslw = 0;
 Q.bezrobotni_sch = 0;
 Q.bezrobotni_pslp = 0;
 Q.bezrobotni_sn = 5;
-Q.bezrobotni_owp = 15;
-Q.bezrobotni_other = 9;
+Q.bezrobotni_owp = 0;
+Q.bezrobotni_other = 0;
 
-Q.mniejszosci_pps = 15;
-Q.mniejszosci_bbwr = 15;
-Q.mniejszosci_kpp = 2;
-Q.mniejszosci_pschd = 50;
-Q.mniejszosci_npr = 50;
+Q.mniejszosci_pps = 10;
+Q.mniejszosci_bbwr = 10;
+Q.mniejszosci_kpp = 15;
+Q.mniejszosci_pschd = 0;
+Q.mniejszosci_npr = 0;
 Q.mniejszosci_pslw = 0;
 Q.mniejszosci_sch = 0;
-Q.mniejszosci_pslp = 5;
-Q.mniejszosci_sn = 5;
+Q.mniejszosci_pslp = 0;
+Q.mniejszosci_sn = 0;
 Q.mniejszosci_owp = 0;
-Q.mniejszosci_other = 12;
+Q.mniejszosci_other = 100;
 
 
 // Current Sejm composition
