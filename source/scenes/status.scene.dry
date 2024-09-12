@@ -26,33 +26,40 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 President: [+ president +]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Prime Minister: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Sejm composition:
+
+# 1928: 10, 1930: 13
+KPP: [+ kpp_r +]%
+
+# 1928: TODO
+PPS: [+ pps_r +]%
+# 1928: 5, 1930: 4 (as DstP)
+PSL-W: [+ pslw_r +]%
+# 1928: TODO
+SCh: [+ sch_r +]%
+
+# 1928: 9, 1930: 10
+Others: [+ other_r +]%
 
 # 1928: 30, 1930: 25, 1932: 22
 BBWR: [+ bbwr_r +]%
+
+
+# 1928: TODO
+NPR: [+ npr_r +]%
 # 1928: 15, 1930: 15, 1932: 
-PSCHD + NPR: [+ pschd_r +]%
-# 1928: 10, 1930: 13
-KPP: [+ kpp_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-PSL-W: [+ pslw_r +]%
+PSCHD: [+ pschd_r +]%
 # 1928: 9, 1930: 5
 PSL-P: [+ pslp_r +]%
 # 1928: 14, 1930: 7
 SN: [+ sn_r +]%
 # 1928: 3, 1930: 18
 OWP: [+ owp_r +]%
-# 1928: 9, 1930: 10
-Others: [+ other_r +]%
-# 1928: TODO
-PPS: [+ pps_r +]%
-# 1928: TODO
-NPR: [+ npr_r +]%
 
-# 1928: TODO
-SCh: [+ sch_r +]%
+
+
 
 [? if bbwr_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -131,27 +138,27 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 (if the election were to be held now):
 
-BBWR: [+ bbwr_votes +]%
-
-PSCHD + NPR: [+ pschd_votes +]%
-
 KPP: [+ kpp_votes +]%
 
+PPS: [+ pps_votes +]%
+
 PSL-W: [+ pslw_votes +]%
+
+SCh: [+ sch_votes +]%
+
+Others: [+ other_votes +]%
+
+BBWR: [+ bbwr_votes +]%
+
+NPR: [+ npr_votes +]%
+
+PSCHD: [+ pschd_votes +]%
 
 PSL-P: [+ pslp_votes +]%
 
 SN: [+ sn_votes +]%
 
 OWP: [+ owp_votes +]%
-
-Others: [+ other_votes +]%
-
-PPS: [+ pps_votes +]%
-
-NPR: [+ npr_votes +]%
-
-SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 

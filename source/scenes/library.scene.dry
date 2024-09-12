@@ -92,7 +92,7 @@ go-to: menu
 BBWR: [+ bbwr_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
-PSCHD + NPR: [+ pschd_votes +]%
+PSCHD: [+ pschd_votes +]%
 
 # 1928: 10, 1930: 13
 KPP: [+ kpp_votes +]%

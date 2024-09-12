@@ -238,7 +238,7 @@ Q.old_middle_bbwr = 5;
 Q.old_middle_kpp = 0;
 Q.old_middle_pschd = 5;
 Q.old_middle_npr = 5;
-Q.old_middle_pslw= 10;
+Q.old_middle_pslw = 10;
 Q.old_middle_sch= 10;
 Q.old_middle_pslp = 25;
 Q.old_middle_sn = 25;
@@ -250,7 +250,7 @@ Q.new_middle_bbwr = 5;
 Q.new_middle_kpp = 1;
 Q.new_middle_pschd = 10;
 Q.new_middle_npr = 10;
-Q.new_middle_pslw= 25;
+Q.new_middle_pslw = 25;
 Q.new_middle_sch= 25;
 Q.new_middle_pslp = 25;
 Q.new_middle_sn = 10;
@@ -262,7 +262,7 @@ Q.rural_bbwr = 10;
 Q.rural_kpp = 0;
 Q.rural_pschd = 5;
 Q.rural_npr = 5;
-Q.rural_pslw= 5;
+Q.rural_pslw = 5;
 Q.rural_sch= 5;
 Q.rural_pslp = 15;
 Q.rural_sn = 45;
@@ -294,12 +294,8 @@ Q.catholics_owp = 0;
 Q.catholics_other = 12;
 
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the PSCHD figures also include the NPR (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
+// Current Sejm composition
+// % of Sejm in Jan 1927
 Q.bbwr_r = 100;
 Q.pps_r = 0;
 Q.kpp_r = 0;
