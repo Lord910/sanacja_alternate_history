@@ -67,8 +67,8 @@ for (var c of Q.factions) {
     }
 }
 
-if (Q.unemployed <= 1) {
-    Q.unemployed = 1;
+if (Q.bezrobotni <= 1) {
+    Q.bezrobotni = 1;
 }
 
 // re-calculate dissent.
@@ -120,7 +120,7 @@ if (Q.month_actions >= 1) {
     Q.party_support_records.push(party_support_results);
     Q.economic_records.push({'date': new Date(Q.year, Q.month - 1),
                              'inflation': Q.inflation,
-                             'unemployment': Q.unemployed});
+                             'unemployment': Q.bezrobotni});
     // change economic stats...
     // we're basically implicity drawing a Philips curve
     // budget deficits lead to some inflation
@@ -129,22 +129,22 @@ if (Q.month_actions >= 1) {
     }
     if (Q.budget <= -2 && Q.budget > -5 && Q.inflation < 5) {
         Q.inflation += 0.2;
-        if (Q.unemployed >= 12) {
+        if (Q.bezrobotni >= 12) {
             Q.inflation -= 0.1;
         }
     }
     if (Q.budget <= -5 && Q.inflation < 10) {
         Q.inflation += 0.3;
-        if (Q.unemployed >= 15) {
+        if (Q.bezrobotni >= 15) {
             Q.inflation -= 0.1;
         }
     }
     // deflation is bad
-    if (Q.inflation < -0.5 && Q.inflation > -5 && Q.unemployed < 15) {
-        Q.unemployed += 0.2;
+    if (Q.inflation < -0.5 && Q.inflation > -5 && Q.bezrobotni < 15) {
+        Q.bezrobotni += 0.2;
     }
-    if (Q.inflation <= -5 && Q.unemployed < 20) {
-        Q.unemployed += 0.3;
+    if (Q.inflation <= -5 && Q.bezrobotni < 20) {
+        Q.bezrobotni += 0.3;
     }
 }
 Q.has_event = 0;

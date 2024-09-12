@@ -48,16 +48,16 @@ if (Q.kpp_relation >= 60) {
 }
 // general strike strength
 // maximum (given 25 labor strength) is 400
-// use normalized workers_bbwr instead of labor_strength?
-Q.normalized_workers_bbwr = 100*Q.workers_bbwr/(Q.workers_bbwr + Q.workers_kpp + Q.workers_owp + Q.workers_other + Q.workers_sn + Q.workers_z);
-Q.normalized_workers_kpp = 100*Q.workers_kpp/(Q.workers_bbwr + Q.workers_kpp + Q.workers_owp + Q.workers_other + Q.workers_sn + Q.workers_z);
-Q.normalized_workers_total = Q.normalized_workers_bbwr;
+// use normalized robotnicy_bbwr instead of labor_strength?
+Q.normalized_robotnicy_bbwr = 100*Q.robotnicy_bbwr/(Q.robotnicy_bbwr + Q.robotnicy_kpp + Q.robotnicy_owp + Q.robotnicy_other + Q.robotnicy_sn + Q.robotnicy_z);
+Q.normalized_robotnicy_kpp = 100*Q.robotnicy_kpp/(Q.robotnicy_bbwr + Q.robotnicy_kpp + Q.robotnicy_owp + Q.robotnicy_other + Q.robotnicy_sn + Q.robotnicy_z);
+Q.normalized_robotnicy_total = Q.normalized_robotnicy_bbwr;
 if (Q.kpp_relation >= 60) {
-    Q.normalized_workers_total += Q.normalized_workers_kpp;
+    Q.normalized_robotnicy_total += Q.normalized_robotnicy_kpp;
 } else if (Q.kpp_relation >= 45) {
-    Q.normalized_workers_total += Q.normalized_workers_kpp*0.5;
+    Q.normalized_robotnicy_total += Q.normalized_robotnicy_kpp*0.5;
 }
-Q.total_power += (2 - Q.labor_dissent/100)*Q.normalized_workers_total*(2 - Q.unemployed/100)*2.5;
+Q.total_power += (2 - Q.labor_dissent/100)*Q.normalized_robotnicy_total*(2 - Q.bezrobotni/100)*2.5;
 console.log("Supporter strength:", Q.total_power);
 
 // our enemies
@@ -120,7 +120,7 @@ view-if: chancellor_party != "KPP" and president != "Thälmann"
 go-to: war_menu
 on-arrival: war_choices += 1
 
-There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the workers who support the KPP.
+There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the robotnicy who support the KPP.
 
 [? if kpp_relation >= 60 : The KPP is entirely on our side, owing to our good relations.. ?][? if kpp_relation < 60 and kpp_relation >= 45 : Most of the KPP is on our side, due to their good relations with us. ?][? if kpp_relation < 45 : The KPP does not support us. ?]
 
@@ -129,7 +129,7 @@ max-visits: 1
 go-to: war_menu
 on-arrival: war_choices += 1
 
-A general strike stopped the Kapp Putsch in 1920, and it can stop fascism today. [? if normalized_workers_total > 70 : The workers are largely united with us. ?][? if normalized_workers_total >= 50 and normalized_workers_total <= 70 : There is some dissent within labor, but a majority of workers support the general strike. ?][? if normalized_workers_total > 30 and normalized_workers_total < 50 : However, there is substantial dissent within labor, and less than half support the general strike. ?][? if normalized_workers_total <= 30 : However, labor is deeply divided, and most workers do not heed the call to strike. ?]
+A general strike stopped the Kapp Putsch in 1920, and it can stop fascism today. [? if normalized_robotnicy_total > 70 : The robotnicy are largely united with us. ?][? if normalized_robotnicy_total >= 50 and normalized_robotnicy_total <= 70 : There is some dissent within labor, but a majority of robotnicy support the general strike. ?][? if normalized_robotnicy_total > 30 and normalized_robotnicy_total < 50 : However, there is substantial dissent within labor, and less than half support the general strike. ?][? if normalized_robotnicy_total <= 30 : However, labor is deeply divided, and most robotnicy do not heed the call to strike. ?]
 
 
 @loyal_police

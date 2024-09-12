@@ -4,42 +4,42 @@ on-arrival: {!
 // increase OWP vote share 
 // TODO: if a public works program has started, unemployment is not so bad.
 if (Q.works_program && Q.works_program >= 2) {
-    Q.unemployed -= 1;
+    Q.bezrobotni -= 1;
     Q.inflation += 1
 }
 Q.sa_strength += 100;
 Q.sh_strength += 100;
 Q.sa_militancy += 0.05;
-Q.old_middle_owp += 6;
-Q.rural_owp += 4;
-Q.unemployed_owp += 4;
+Q.klasa_wyzsza_owp += 6;
+Q.chlopi_owp += 4;
+Q.bezrobotni_owp += 4;
 if (Q.old_demographics) {
-    Q.catholics_pschd += 5;
+    Q.mniejszosci_pschd += 5;
 }
 if (!Q.works_program) {
-    Q.unemployed += 6; 
+    Q.bezrobotni += 6; 
     Q.inflation -= 2;
-    Q.catholics_pschd += 4;
-    Q.workers -= 5;
-    Q.rural_sn -= 6;
-    Q.rural_owp += 8; 
-    Q.new_middle_owp += 10; 
-    Q.old_middle_owp += 10;
-    Q.unemployed_owp += 6;
-    Q.workers_owp += 5;
-    Q.workers_kpp += 5;
+    Q.mniejszosci_pschd += 4;
+    Q.robotnicy -= 5;
+    Q.chlopi_sn -= 6;
+    Q.chlopi_owp += 8; 
+    Q.klasa_srednia_owp += 10; 
+    Q.klasa_wyzsza_owp += 10;
+    Q.bezrobotni_owp += 6;
+    Q.robotnicy_owp += 5;
+    Q.robotnicy_kpp += 5;
     Q.sa_strength += 200;
-} else if (Q.unemployed > 25) {
-    Q.rural_owp += 5;
-    Q.unemployed_owp += 5;
-    Q.old_middle_owp += 5;
-    Q.new_middle_owp += 4;
+} else if (Q.bezrobotni > 25) {
+    Q.chlopi_owp += 5;
+    Q.bezrobotni_owp += 5;
+    Q.klasa_wyzsza_owp += 5;
+    Q.klasa_srednia_owp += 4;
     Q.sa_strength += 50;
-} else if (Q.unemployed > 20) {
-    Q.rural_owp += 2;
-    Q.unemployed_owp += 2;
-    Q.old_middle_owp += 2;
-    Q.new_middle_owp += 2;
+} else if (Q.bezrobotni > 20) {
+    Q.chlopi_owp += 2;
+    Q.bezrobotni_owp += 2;
+    Q.klasa_wyzsza_owp += 2;
+    Q.klasa_srednia_owp += 2;
 }
 !}
 tags: event

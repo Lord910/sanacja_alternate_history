@@ -29,7 +29,7 @@ title: Organizing women
 subtitle: Sender's strategies are aimed at young working women.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: womens_rights += 1; workers_bbwr += 3*(1-dissent); new_middle_bbwr += 5*(1-dissent); advisor_action_timer = 6
+on-arrival: womens_rights += 1; robotnicy_bbwr += 3*(1-dissent); klasa_srednia_bbwr += 5*(1-dissent); advisor_action_timer = 6
 
 Sender's message is popular among young women working in the service sector, and we have recruited many white-collar employees.
 
@@ -41,7 +41,7 @@ view-if: not constructive_vonc
 subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if bbwr_toleration == 0 : The BBWR is not currently in toleration. ?]
 choose-if: advisor_action_timer == 0 and bbwr_toleration
-on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_bbwr -= 3; rural_bbwr -= 3; old_middle_bbwr -= 3; catholics_bbwr -= 3; reformist_dissent += 8
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_toleration = 0; left_strength += 8; pro_republic -= 4; klasa_srednia_bbwr -= 3; chlopi_bbwr -= 3; klasa_wyzsza_bbwr -= 3; mniejszosci_bbwr -= 3; reformist_dissent += 8
 
 We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
 

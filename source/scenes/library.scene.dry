@@ -46,13 +46,13 @@ go-to: menu
 
 **Petty Bourgeoisie (Drobnomieszczaństwo)**: About 11% of the population, this group typically supported nationalist parties, often aligning with right-wing movements.
 
-**Intelligentsia and Free Professions (Inteligencja i Wolne Zawody)**: Representing around 5% of the population, the intelligentsia was politically divided between progressive, leftist, conservative, and nationalist factions.
+**Intelligentsia and Free Professions (Klasa_srednia i Wolne Zawody)**: Representing around 5% of the population, the intelligentsia was politically divided between progressive, leftist, conservative, and nationalist factions.
 
 **Upper Class (Klasa Wyższa)**: Comprising about 1.4% of the population, the upper class, including large landowners and industrialists, generally supported parties opposed to leftist ideologies, favoring socially conservative and market liberal policies.
 
 **Nationalities:**
 
-**Poles**: The majority of the population, approximately 68%, are Poles, most of whom are Roman Catholics. Poles dominat most social strata, including about 60% of the peasantry and 75-80% of the industrial workforce.
+**Poles**: The majority of the population, approximately 68%, are Poles, most of whom are Roman Mniejszosci. Poles dominat most social strata, including about 60% of the peasantry and 75-80% of the industrial workforce.
 
 **Jews**: Jews, comprising around 10% of the population, are predominantly urban dwellers, making up 21% of the population in cities. Many work in trade, craftsmanship, and as professionals. Politically, they are active in both Zionist and socialist movements like the Bund.
 
@@ -60,7 +60,7 @@ go-to: menu
 
 **Belarusians**: Concentrated in the eastern voivodeships, Belarusians were primarily Orthodox peasants, making up about 5% of the population. Their presence is marked by a low literacy rate and minimal political participation.
 
-**Germans**: The German minority, about 2.5% of the population, is concentrated in western Poland. Many are prosperous farmers or industrial workers, and they generally supported conservative or autonomist political movements.
+**Germans**: The German minority, about 2.5% of the population, is concentrated in western Poland. Many are prosperous farmers or industrial robotnicy, and they generally supported conservative or autonomist political movements.
 
 
 @public_opinion
@@ -123,17 +123,17 @@ SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: BBWR: [+ workers_bbwr_normalized +]%, PSCHD: [+ workers_pschd_normalized +]%, KPP: [+ workers_kpp_normalized +]%, PSL-W: [+ workers_pslw_normalized +]%, PSL-P: [+ workers_pslp_normalized +]%; SN: [+ workers_sn_normalized +]%, OWP: [+ workers_owp_normalized +]%, Others: [+ workers_other_normalized +]%
+Robotnicy: BBWR: [+ robotnicy_bbwr_normalized +]%, PSCHD: [+ robotnicy_pschd_normalized +]%, KPP: [+ robotnicy_kpp_normalized +]%, PSL-W: [+ robotnicy_pslw_normalized +]%, PSL-P: [+ robotnicy_pslp_normalized +]%; SN: [+ robotnicy_sn_normalized +]%, OWP: [+ robotnicy_owp_normalized +]%, Others: [+ robotnicy_other_normalized +]%
 
-New Middle Class: BBWR: [+ new_middle_bbwr_normalized +]%, PSCHD: [+ new_middle_pschd_normalized +]%, KPP: [+ new_middle_kpp_normalized +]%, PSL-W: [+ new_middle_pslw_normalized +]%, PSL-P: [+ new_middle_pslp_normalized +]%; SN: [+ new_middle_sn_normalized +]%, OWP: [+ new_middle_owp_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: BBWR: [+ klasa_srednia_bbwr_normalized +]%, PSCHD: [+ klasa_srednia_pschd_normalized +]%, KPP: [+ klasa_srednia_kpp_normalized +]%, PSL-W: [+ klasa_srednia_pslw_normalized +]%, PSL-P: [+ klasa_srednia_pslp_normalized +]%; SN: [+ klasa_srednia_sn_normalized +]%, OWP: [+ klasa_srednia_owp_normalized +]%, Others: [+ klasa_srednia_other_normalized +]%
 
-Old Middle Class: BBWR: [+ old_middle_bbwr_normalized +]%, PSCHD: [+ old_middle_pschd_normalized +]%, KPP: [+ old_middle_kpp_normalized +]%, PSL-W: [+ old_middle_pslw_normalized +]%, PSL-P: [+ old_middle_pslp_normalized +]%; SN: [+ old_middle_sn_normalized +]%, OWP: [+ old_middle_owp_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: BBWR: [+ klasa_wyzsza_bbwr_normalized +]%, PSCHD: [+ klasa_wyzsza_pschd_normalized +]%, KPP: [+ klasa_wyzsza_kpp_normalized +]%, PSL-W: [+ klasa_wyzsza_pslw_normalized +]%, PSL-P: [+ klasa_wyzsza_pslp_normalized +]%; SN: [+ klasa_wyzsza_sn_normalized +]%, OWP: [+ klasa_wyzsza_owp_normalized +]%, Others: [+ klasa_wyzsza_other_normalized +]%
 
-Rural: BBWR: [+ rural_bbwr_normalized +]%, PSCHD: [+ rural_pschd_normalized +]%, KPP: [+ rural_kpp_normalized +]%, PSL-W: [+ rural_pslw_normalized +]%, PSL-P: [+ rural_pslp_normalized +]%; SN: [+ rural_sn_normalized +]%, OWP: [+ rural_owp_normalized +]%, Others: [+ rural_other_normalized +]%
+Chlopi: BBWR: [+ chlopi_bbwr_normalized +]%, PSCHD: [+ chlopi_pschd_normalized +]%, KPP: [+ chlopi_kpp_normalized +]%, PSL-W: [+ chlopi_pslw_normalized +]%, PSL-P: [+ chlopi_pslp_normalized +]%; SN: [+ chlopi_sn_normalized +]%, OWP: [+ chlopi_owp_normalized +]%, Others: [+ chlopi_other_normalized +]%
 
-Unemployed: BBWR: [+ unemployed_bbwr_normalized +]%, PSCHD: [+ unemployed_pschd_normalized +]%, KPP: [+ unemployed_kpp_normalized +]%, PSL-W: [+ unemployed_pslw_normalized +]%, PSL-P: [+ unemployed_pslp_normalized +]%; SN: [+ unemployed_sn_normalized +]%, OWP: [+ unemployed_owp_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Bezrobotni: BBWR: [+ bezrobotni_bbwr_normalized +]%, PSCHD: [+ bezrobotni_pschd_normalized +]%, KPP: [+ bezrobotni_kpp_normalized +]%, PSL-W: [+ bezrobotni_pslw_normalized +]%, PSL-P: [+ bezrobotni_pslp_normalized +]%; SN: [+ bezrobotni_sn_normalized +]%, OWP: [+ bezrobotni_owp_normalized +]%, Others: [+ bezrobotni_other_normalized +]%
 
-Catholics: BBWR: [+ catholics_bbwr_normalized +]%, PSCHD: [+ catholics_pschd_normalized +]%, KPP: [+ catholics_kpp_normalized +]%, PSL-W: [+ catholics_pslw_normalized +]%, PSL-P: [+ catholics_pslp_normalized +]%; SN: [+ catholics_sn_normalized +]%, OWP: [+ catholics_owp_normalized +]%, Others: [+ catholics_other_normalized +]%
+Mniejszosci: BBWR: [+ mniejszosci_bbwr_normalized +]%, PSCHD: [+ mniejszosci_pschd_normalized +]%, KPP: [+ mniejszosci_kpp_normalized +]%, PSL-W: [+ mniejszosci_pslw_normalized +]%, PSL-P: [+ mniejszosci_pslp_normalized +]%; SN: [+ mniejszosci_sn_normalized +]%, OWP: [+ mniejszosci_owp_normalized +]%, Others: [+ mniejszosci_other_normalized +]%
 
 @parties
 go-to: menu
@@ -144,11 +144,11 @@ go-to: menu
 
 Current relations: [+ pschd_relation : relationships +]
 
-**PSL-W** – *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") – a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in rural areas.
+**PSL-W** – *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") – a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in chlopi areas.
 
 Current relations: [+ pslw_relation : relationships +]
 
-**PSL-P** – *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") – a more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining rural stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
+**PSL-P** – *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") – a more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining chlopi stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
 
 Current relations: [+ pslp_relation : relationships +]
 
@@ -231,7 +231,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 The Sanacja Left, led by Jędrzej Moraczewski, represents the socialist-leaning wing of Piłsudski's supporters. Moraczewski, a former Prime Minister and long-time ally of Piłsudski, is the central figure in this faction, which is made up of former members of the PPS (Polska Partia Socjalistyczna) and other leftist groups who joined the Sanacja movement after the May Coup of 1926.
 
-The Sanacja Left is committed to defending workers’ rights and improving labor conditions while remaining loyal to Piłsudski’s vision for a unified Polish state. They advocate for social reforms that address the needs of the urban working class and rural poor, seeking to align these goals with the broader Sanacja agenda of strengthening the state. Moraczewski and his allies push for progressive social policies, including better labor protections, expanded education, and the inclusion of marginalized groups, while avoiding the more radical methods of their socialist past.
+The Sanacja Left is committed to defending robotnicy’ rights and improving labor conditions while remaining loyal to Piłsudski’s vision for a unified Polish state. They advocate for social reforms that address the needs of the urban working class and chlopi poor, seeking to align these goals with the broader Sanacja agenda of strengthening the state. Moraczewski and his allies push for progressive social policies, including better labor protections, expanded education, and the inclusion of marginalized groups, while avoiding the more radical methods of their socialist past.
 
 Though they operate within the Sanacja movement, the Sanacja Left maintains a distinct identity, championing the social elements of Piłsudski’s revolution and ensuring that the working classes have a voice in the evolving political landscape. By 1927, they are a key force within Sanacja, balancing the movement’s more right-leaning factions with their focus on social justice and labor rights.
 
@@ -243,7 +243,7 @@ Dissent: [+ labor_dissent : dissent +]
 
 The Naprawiacze, a radical left-leaning faction within the Sanacja movement, draw their strength from activists associated with groups like the Riflemen's Association, the Union of Silesian Insurgents, and the Union of Military Settlers. Many of these individuals trace their origins to the nationalist Union of Polish Youth "Zet." By 1927, the Naprawiacze are led informally by Kazimierz Marian Wyszyński, a figure who embodies their commitment to radical constitutional reform and centralization of state power.
 
-The Naprawiacze advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where workers and employers cooperate under the supervision of a robust state apparatus.
+The Naprawiacze advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where robotnicy and employers cooperate under the supervision of a robust state apparatus.
 
 While they share the broader Sanacja goal of stabilizing the Polish state, the Naprawiacze push for more radical and immediate transformations than their conservative or liberal counterparts, emphasizing direct action and rapid political restructuring. By the end of 1927, they have firmly established themselves as a force for significant and swift reform within Piłsudski’s movement.
 

@@ -15,7 +15,7 @@ The BBWR is torn between many different ideological currents. What should be our
 
 - @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
 - @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of workers.
+- @labor: We should work with the trade unions to improve the lives of robotnicy.
 - @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
@@ -50,7 +50,7 @@ if (Q.ideology && Q.ideology != "labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpp_relation -= 3
 
-The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
+The labor wing of the party supports continued particpation in government in order to provide benefits to the robotnicy, and the creation of public works programs for employment.
 
 @reform
 on-arrival: {!
