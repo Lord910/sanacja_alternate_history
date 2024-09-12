@@ -8,12 +8,16 @@ set-jump: post_election
 
 @1928
 on-arrival: {!
-Q.chlopi = 55; // chłopi
-Q.robotnicy = 27.5; // robotnicy
-Q.klasa_srednia = 16; // drobnomieszczaństwo, inteligencja, klasa_srednia i wolne zawody
-Q.klasa_wyzsza = 1.4; // więksi przedsiębiorcy i ziemianie
-Q.bezrobotni = 8.6; // bezrobotni
-Q.mniejszosci = 32; // mniejszości narodowe (Polacy stanowili 68% ogółu obywateli)
+// Proportion of different social groups
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
+Q.robotnicy = 48; // industry and trade
+Q.klasa_wyzsza = 13; // "old mittelstand"
+// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+Q.klasa_srednia = 14; // "new mittelstand"
+Q.chlopi = 25; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+Q.bezrobotni = 8.6;
+Q.mniejszosci = 30;
 
 Q.classes = ['robotnicy', 'klasa_wyzsza', 'klasa_srednia', 'chlopi', 'bezrobotni', 'mniejszosci'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
@@ -97,12 +101,16 @@ set-jump: post_election
 
 @1930
 on-arrival: {!
-Q.chlopi = 55; // chłopi
-Q.robotnicy = 27.5; // robotnicy
-Q.klasa_srednia = 16; // drobnomieszczaństwo, inteligencja, klasa_srednia i wolne zawody
-Q.klasa_wyzsza = 1.4; // więksi przedsiębiorcy i ziemianie
-Q.bezrobotni = 8.6; // bezrobotni
-Q.mniejszosci = 32; // mniejszości narodowe (Polacy stanowili 68% ogółu obywateli)
+// Proportion of different social groups
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
+Q.robotnicy = 48; // industry and trade
+Q.klasa_wyzsza = 13; // "old mittelstand"
+// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+Q.klasa_srednia = 14; // "new mittelstand"
+Q.chlopi = 25; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+Q.bezrobotni = 8.6;
+Q.mniejszosci = 30;
 
 Q.classes = ['robotnicy', 'klasa_wyzsza', 'klasa_srednia', 'chlopi', 'bezrobotni', 'mniejszosci'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
@@ -186,12 +194,16 @@ set-jump: post_election
 
 @1932
 on-arrival: {!
-Q.chlopi = 55; // chłopi
-Q.robotnicy = 27.5; // robotnicy
-Q.klasa_srednia = 16; // drobnomieszczaństwo, inteligencja, klasa_srednia i wolne zawody
-Q.klasa_wyzsza = 1.4; // więksi przedsiębiorcy i ziemianie
-Q.bezrobotni = 8.6; // bezrobotni
-Q.mniejszosci = 32; // mniejszości narodowe (Polacy stanowili 68% ogółu obywateli)
+// Proportion of different social groups
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
+Q.robotnicy = 48; // industry and trade
+Q.klasa_wyzsza = 13; // "old mittelstand"
+// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+Q.klasa_srednia = 14; // "new mittelstand"
+Q.chlopi = 25; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+Q.bezrobotni = 8.6;
+Q.mniejszosci = 30;
 
 Q.classes = ['robotnicy', 'klasa_wyzsza', 'klasa_srednia', 'chlopi', 'bezrobotni', 'mniejszosci'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
