@@ -100,7 +100,7 @@ Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
 Q.kpp_coalition_dissent = 0;
-Q.bbwr_in_government = 0;
+Q.bbwr_in_government = 1;
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
 Q.in_left_front = 0;
@@ -110,14 +110,14 @@ Q.in_minority_government = 0;
 Q.in_unity_government = 0;
 Q.bbwr_toleration = 0;
 Q.bbwr_caretaker = 0;
-Q.foreign_minister_party = 'PSL-P';
-Q.interior_minister_party = 'PSCHD';
-Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'PSCHD';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister_party = 'PSL-W';
-Q.finance_minister_party = 'PSL-P';
-Q.agriculture_minister_party = 'PSCHD';
+Q.foreign_minister_party = 'BBWR';
+Q.interior_minister_party = 'BBWR';
+Q.justice_minister_party = 'BBWR';
+Q.labor_minister_party = 'BBWR';
+Q.reichswehr_minister_party = 'BBWR';
+Q.economic_minister_party = 'BBWR';
+Q.finance_minister_party = 'BBWR';
+Q.agriculture_minister_party = 'BBWR';
 
 // reset KPP goals
 Q.kpp_goals_seen = 0;
@@ -153,13 +153,13 @@ data = [
         "id": "kpp",
         "legend": "KPP",
         "name": "KPP",
-        "seats": Q.kpp_r*5,
+        "seats": Math.round(Q.kpp_r*5),
     },
     {
         "id": "pps",
         "legend": "PPS",
         "name": "PPS",
-        "seats": Q.pps_r*5,
+        "seats": Math.round(Q.pps_r*5),
     },
     {
         "id": "sch",
