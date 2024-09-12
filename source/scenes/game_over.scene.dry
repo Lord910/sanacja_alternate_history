@@ -31,7 +31,7 @@ if (Q.republic_victory) {
 // Verfassungskoalition - form a Constitutional Coalition.
 // Wirtschaftspolitik - enact an economic plan.
 // Wirtschaftswunder - reduce unemployment below 10% and have a non-negative budget by 1933.
-if (Q.year >= 1932  && Q.bezrobotni < 10 && Q.budget > 0 && Q.inflation < 5) {
+if (Q.year >= 1932  && Q.unemployed < 10 && Q.budget > 0 && Q.inflation < 5) {
     this.achieve('wirtschaftswunder');
 }
 // Bollwerk der Demokratie - resist the Prussian Coup, and win.
@@ -72,11 +72,11 @@ for (var c of Q.classes) {
 // Die Rote Fahne - join the KPP in the May Day march.
 // Mehrheitspartei - form an BBWR majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
-if (Q.klasa_srednia_bbwr_normalized && Q.klasa_srednia_bbwr_normalized >= 50) {
+if (Q.new_middle_bbwr_normalized && Q.new_middle_bbwr_normalized >= 50) {
     this.achieve('panik_im_mittelstand');
 }
-// Bauernrevolution - have over 50% chlopi support.
-if (Q.chlopi_bbwr_normalized && Q.chlopi_bbwr_normalized >= 50) {
+// Bauernrevolution - have over 50% rural support.
+if (Q.rural_bbwr_normalized && Q.rural_bbwr_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
 // Räterepublik - begin the transformation to a socialist economy.
@@ -91,7 +91,7 @@ if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Hitler" 
 if ((Q.nationalization_progress >= 1 && Q.wtb_implemented >= 1) || (Q.wtb_implemented >= 1 && Q.moderate_plan_progress >= 1) || (Q.nationalization_progress >= 1 && Q.moderate_plan_progress >= 1)) {
     this.achieve("wirtschaftsexperiment");
 }
-// Syndikalismus - support factory takeovers by robotnicy.
+// Syndikalismus - support factory takeovers by workers.
 if (Q.factory_takeovers >= 2) {
     this.achieve("syndikalismus");
 }
@@ -213,7 +213,7 @@ Our government has enacted a public works program!
 
 @unemployment_reduced
 title: Unemployment has been successfully reduced!
-view-if: bezrobotni <= 20 and bezrobotni >= 10
+view-if: unemployed <= 20 and unemployed >= 10
 tags: endings
 go-to: eg_menu
 
@@ -221,7 +221,7 @@ While still uncomfortably high, unemployment levels are nowhere near their peak.
 
 @unemployment_reduced_2
 title: Unemployment has been successfully reduced!
-view-if: bezrobotni < 10
+view-if: unemployed < 10
 tags: endings
 go-to: eg_menu
 
@@ -231,7 +231,7 @@ Unemployment levels have fallen substantially! This is a success of our economic
 
 @unemployment_high
 title: Unemployment is still too high.
-view-if: bezrobotni >= 30 and (chancellor != "Hitler" and president != "Hitler") and (total_defeat == 0) and long_war == 0
+view-if: unemployed >= 30 and (chancellor != "Hitler" and president != "Hitler") and (total_defeat == 0) and long_war == 0
 tags: endings
 go-to: eg_menu
 
@@ -268,7 +268,7 @@ view-if: works_councils >= 3
 tags: endings
 go-to: eg_menu
 
-Works councils now have substantially greater influence, giving robotnicy democratic control over their economic lives.
+Works councils now have substantially greater influence, giving workers democratic control over their economic lives.
 
 @european_union
 title: There is now a European Union!
@@ -347,13 +347,13 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - BBWR new middle class support is at least 50%. ?]
 
-[? if game_achievement_bauernrevolution: **Bauernrevolution** - BBWR chlopi support is at least 50%. ?]
+[? if game_achievement_bauernrevolution: **Bauernrevolution** - BBWR rural support is at least 50%. ?]
 
 [? if game_achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
 
 [? if game_achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
 
-[? if game_achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the robotnicy. ?]
+[? if game_achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
 
 [? if game_achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
 
@@ -432,13 +432,13 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_panik_im_mittelstand: **Panik im Mittelstand** - BBWR new middle class support is at least 50%. ?]
 
-[? if achievement_bauernrevolution: **Bauernrevolution** - BBWR chlopi support is at least 50%. ?]
+[? if achievement_bauernrevolution: **Bauernrevolution** - BBWR rural support is at least 50%. ?]
 
 [? if achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
 
 [? if achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
 
-[? if achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the robotnicy. ?]
+[? if achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
 
 [? if achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
 
@@ -515,13 +515,13 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_panik_im_mittelstand: **Panik im Mittelstand** - BBWR new middle class support is at least 50%. ?]
 
-[? if not achievement_bauernrevolution: **Bauernrevolution** - BBWR chlopi support is at least 50%. ?]
+[? if not achievement_bauernrevolution: **Bauernrevolution** - BBWR rural support is at least 50%. ?]
 
 [? if not achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
 
 [? if not achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
 
-[? if not achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the robotnicy. ?]
+[? if not achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
 
 [? if not achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
 

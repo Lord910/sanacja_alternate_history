@@ -11,7 +11,7 @@ tags: party_affairs, antifascism
 
 The Iron Front is our new antifascist coordination front, consisting of the BBWR, the trade unions, and the Reichsbanner. How should we use the Iron Front?
 
-[? if robotnicy_bbwr < 45 or robotnicy_bbwr < robotnicy_owp or robotnicy_bbwr < robotnicy_kpp : Unfortunately, the Iron Front's effectiveness is dragged down by the BBWR's unpopularity, as the BBWR is no longer the dominant party among the robotnicy. Many Reichsbanner members have left, and many robotnicy are not interested. ?]
+[? if workers_bbwr < 45 or workers_bbwr < workers_owp or workers_bbwr < workers_kpp : Unfortunately, the Iron Front's effectiveness is dragged down by the BBWR's unpopularity, as the BBWR is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
 - @defense: Rally for defense against the fascists with the Reichsbanner.
 - @pacifism: Rally for pacifism, against nationalism and war.
@@ -31,25 +31,25 @@ The Iron Front rallies for the militant defense of the republic against the fasc
 
 
 @pacifism
-on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; robotnicy_bbwr += 5*(1-dissent) if pacifism >= 4; bezrobotni_bbwr += 4*(1-dissent) if pacifism >= 4; klasa_srednia_bbwr += 4*(1-dissent) if pacifism >= 4
+on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; workers_bbwr += 5*(1-dissent) if pacifism >= 4; unemployed_bbwr += 4*(1-dissent) if pacifism >= 4; new_middle_bbwr += 4*(1-dissent) if pacifism >= 4
 
 The Iron Front rallies against nationalism and war.
 
 @republic
-on-arrival: pro_republic += 5*(1-dissent); democratization += 1; robotnicy_bbwr += 5*(1-dissent) if democratization >= 4; bezrobotni_bbwr += 4*(1-dissent) if democratization >= 4; klasa_srednia_bbwr += 4*(1-dissent) if democratization >= 4
+on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_bbwr += 5*(1-dissent) if democratization >= 4; unemployed_bbwr += 4*(1-dissent) if democratization >= 4; new_middle_bbwr += 4*(1-dissent) if democratization >= 4
 
 The Iron Front rallies in defense of the democratic republic and against dictatorship.
 
 @wtb
 view-if: wtb_adopted == 1
-on-arrival: robotnicy_bbwr += 8*(1-dissent); bezrobotni_bbwr += 8*(1-dissent); klasa_srednia_bbwr += 5*(1-dissent); klasa_wyzsza_bbwr += 3*(1-dissent); chlopi_bbwr += 3*(1-dissent);
+on-arrival: workers_bbwr += 8*(1-dissent); unemployed_bbwr += 8*(1-dissent); new_middle_bbwr += 5*(1-dissent); old_middle_bbwr += 3*(1-dissent); rural_bbwr += 3*(1-dissent);
 
 The WTB-Plan is the rallying point for the entire BBWR and its affiliated organizations, including the Iron Front.
 
 @antisemitism
 title: Rally against antisemitism and in defense of Jewish Germans.
 view-if: confronting_antisemitism > 1
-on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; robotnicy_owp -= 4*(1-dissent); bezrobotni_owp -= 4*(1-dissent);
+on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_owp -= 4*(1-dissent); unemployed_owp -= 4*(1-dissent);
 
 # TODO
 The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.

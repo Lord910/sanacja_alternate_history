@@ -15,7 +15,7 @@ We campaigned on food for children instead of battlecruisers. Will we really bet
 - @abstain: Abstain from the vote.
 
 @vote_yes
-on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; panzerkreuzer_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; robotnicy_bbwr -= 3
+on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; panzerkreuzer_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; workers_bbwr -= 3
 
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision.
 
@@ -29,7 +29,7 @@ go-to: vote_no_chancellor if chancellor_party = "BBWR"; vote_no_pass if chancell
 go-to: braun if chancellor = "Braun"; muller if chancellor = "Müller"
 
 @braun
-on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; robotnicy_bbwr += 5*(1-dissent);
+on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_bbwr += 5*(1-dissent);
 
 Our coalition partners are shocked by our intransigence! However, Chancellor Braun manages to persuade our cabinet ministers to drop the plan to vote on the battlecruiser. The ship will not be built!
 

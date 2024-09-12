@@ -1,8 +1,8 @@
 title: The Hunger Chancellor
 subtitle: Popular discontent with Chancellor [+ chancellor +] rises.
 new-page: true
-view-if: year >= 1931 and month >= 2 and bezrobotni >= 18 and welfare < 0 and works_program == 0
-on-arrival: robotnicy_bbwr *= 0.9 if chancellor_party == "BBWR"; robotnicy_bbwr *= 0.9 if bbwr_in_government == 1; robotnicy_owp += 5 if bbwr_in_government; robotnicy_kpp += 5 if bbwr_in_government; bezrobotni_owp += 5 if bbwr_in_government
+view-if: year >= 1931 and month >= 2 and unemployed >= 18 and welfare < 0 and works_program == 0
+on-arrival: workers_bbwr *= 0.9 if chancellor_party == "BBWR"; workers_bbwr *= 0.9 if bbwr_in_government == 1; workers_owp += 5 if bbwr_in_government; workers_kpp += 5 if bbwr_in_government; unemployed_owp += 5 if bbwr_in_government
 tags: event
 max-visits: 1
 
@@ -16,7 +16,7 @@ People are calling Chancellor [+ chancellor +] the Hunger Chancellor because of 
 @maintain_toleration
 subtitle: It is necessary to preserve democracy.
 view-if: bbwr_toleration == 1
-on-arrival: robotnicy_owp += 5; robotnicy_kpp += 5; bezrobotni_owp += 5; robotnicy_bbwr -= 5; pro_republic -= 5; kpp_relation -= 5
+on-arrival: workers_owp += 5; workers_kpp += 5; unemployed_owp += 5; workers_bbwr -= 5; pro_republic -= 5; kpp_relation -= 5
 
 Our policy of toleration continues.
 

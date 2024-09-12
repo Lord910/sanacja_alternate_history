@@ -33,9 +33,9 @@ go-to: media
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; robotnicy_aid += 1; bezrobotni_bbwr += 5*(1 - dissent);
+on-arrival: resources -= 1; workers_aid += 1; unemployed_bbwr += 5*(1 - dissent);
 
-We have increased funding to Robotnicy' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the bezrobotni. ?]
+We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @culture
 choose-if: resources > 0

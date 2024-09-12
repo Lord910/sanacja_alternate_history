@@ -1,7 +1,7 @@
 title: Nazis in Crisis
 subtitle: Finally, the internal contradictions of the OWP have caught up to it.
 view-if: year = 1933 and month >= 9 and owp_r >= 8 and owp_normalized + sn_normalized < 0.5
-on-arrival: robotnicy_owp -= 12; klasa_srednia_owp -= 12; klasa_wyzsza_owp -= 12; chlopi_owp -= 12; bezrobotni_owp -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; klasa_srednia_pslw += 6; klasa_srednia_pslp += 6; klasa_wyzsza_pslw += 5; klasa_wyzsza_pslp += 5; klasa_wyzsza_sn += 3; chlopi_sn += 6; chlopi_pslw += 2; chlopi_pslp += 2; bezrobotni_kpp += 4; bezrobotni_bbwr += 4
+on-arrival: workers_owp -= 12; new_middle_owp -= 12; old_middle_owp -= 12; rural_owp -= 12; unemployed_owp -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_pslw += 6; new_middle_pslp += 6; old_middle_pslw += 5; old_middle_pslp += 5; old_middle_sn += 3; rural_sn += 6; rural_pslw += 2; rural_pslp += 2; unemployed_kpp += 4; unemployed_bbwr += 4
 max-visits: 1
 new-page: true
 tags: event

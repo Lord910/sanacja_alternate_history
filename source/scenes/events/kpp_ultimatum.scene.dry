@@ -52,16 +52,16 @@ One year ago, the KPP presented a list of goals for the coalition:
 
 [? if finance_goal = 1 : - Make taxes more progressive. - [? if finance_goal_completed : success ?][? if not finance_goal_completed: failed ?] ?]
 
-[? if labor_goal = 1 : - Support robotnicy in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
+[? if labor_goal = 1 : - Support workers in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
 
 [? if foreign_goal = 1 : - Improve our relations with the Soviet Union. - [? if foreign_goal_completed : success ?][? if not foreign_goal_completed: failed ?] ?]
 
 [? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. - [? if reichswehr_goal_completed : success ?][? if not reichswehr_goal_completed: failed ?] ?]
 
 @goals_failed
-on-arrival: kpp_relation -= 10; robotnicy_bbwr -= 8; bezrobotni_bbwr -= 8;
+on-arrival: kpp_relation -= 10; workers_bbwr -= 8; unemployed_bbwr -= 8;
 
-Unfortunately, we have failed to accomplish all of the goals the KPP set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the robotnicy.
+Unfortunately, we have failed to accomplish all of the goals the KPP set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
 
 - @appeal: Appeal to the Communists to have patience - we are trying!
 - @kpp_vote_of_no_confidence.support_center: Could we form a new government based on the Center Party and PSL-W (and possibly PSL-P)?
@@ -76,7 +76,7 @@ We argue that we have already achieved most of the coalition's goals, and in the
 
 
 @goals_success
-on-arrival: robotnicy_bbwr += 8; bezrobotni_bbwr += 8; kpp_relation += 10; robotnicy_kpp += 5; kpp_coalition_success += 1
+on-arrival: workers_bbwr += 8; unemployed_bbwr += 8; kpp_relation += 10; workers_kpp += 5; kpp_coalition_success += 1
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
 Against all expectations, the KPP's goals have all been met! Apparently the Communists did not prepare for this eventuality, a worker's government successfully built through democratic means. They will continue to "tolerate" our government for the rest of our term, while still acting as a watchdog against bourgeois backsliding.

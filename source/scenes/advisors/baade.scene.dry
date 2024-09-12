@@ -10,7 +10,7 @@ new-page: true
 Baade is one of the few agricultural experts in the BBWR, and an unorthodox economist.
 
 - @agriculture
-- @chlopi_campaign
+- @rural_campaign
 - @depression
 - @root: Return to main
 
@@ -23,14 +23,14 @@ on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6
 go-to: agricultural_policy
 
 
-@chlopi_campaign
-title: Chlopi Campaign
-subtitle: Try to campaign among the chlopi populace.
-choose-if: advisor_action_timer == 0 and chlopi_policy > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if chlopi_policy == 0 : We have not enacted any chlopi policies. ?]
-on-arrival: advisor_action_timer = 6; chlopi_bbwr += 5*(1-dissent); peoples_party_support += 1
+@rural_campaign
+title: Rural Campaign
+subtitle: Try to campaign among the rural populace.
+choose-if: advisor_action_timer == 0 and rural_policy > 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_policy == 0 : We have not enacted any rural policies. ?]
+on-arrival: advisor_action_timer = 6; rural_bbwr += 5*(1-dissent); peoples_party_support += 1
 
-We have increased our campaigning among farmers and the chlopi populace.
+We have increased our campaigning among farmers and the rural populace.
 
 @depression
 title: Addressing the economic crisis

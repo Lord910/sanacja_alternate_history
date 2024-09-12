@@ -29,7 +29,7 @@ Meanwhile, moderates and reformists draw up proposals for a limited plan of job 
 subtitle: Let the depression play itself out.
 on-arrival: center_strength += 5; center_dissent -= 5; labor_dissent += 10; wtb_support -= 1; left_dissent += 10;
 
-Woytinsky and the trade unions vehemently criticize the centrists for their policy. The robotnicy are starving; are we going to callously abandon them and side with bourgeois austerity? On the other hand, the centrists criticize Woytinsky for promising the robotnicy false hope; their position is that nothing can be done to alleviate the depression. They also speak of the fear of another round of hyperinflation that may result from deficit spending.
+Woytinsky and the trade unions vehemently criticize the centrists for their policy. The workers are starving; are we going to callously abandon them and side with bourgeois austerity? On the other hand, the centrists criticize Woytinsky for promising the workers false hope; their position is that nothing can be done to alleviate the depression. They also speak of the fear of another round of hyperinflation that may result from deficit spending.
 
 Our policy course is currently that nothing can be done to alleviate the depression.
 
@@ -61,7 +61,7 @@ go-to: support_left_progress if nationalization_support < 3; adopt_left if natio
 
 @support_left_progress
 
-We attempt to convince the party to support a program of mass nationalizations in response to the economic crisis. Leftists argue that this policy is in accordance with our long-standing socialist platform, while reformists and some trade unionists argue that the plan is unrealistic, and that we need to focus on more immediate improvements to robotnicy' lives.
+We attempt to convince the party to support a program of mass nationalizations in response to the economic crisis. Leftists argue that this policy is in accordance with our long-standing socialist platform, while reformists and some trade unionists argue that the plan is unrealistic, and that we need to focus on more immediate improvements to workers' lives.
 
 We have not yet formally adopted the plan. More work needs to be done.
 
@@ -84,7 +84,7 @@ We attempt to convince the party to support a moderate program of job creation w
 We have not yet adopted the plan. More work needs to be done.
 
 @adopt_moderate
-on-arrival: reformst_strength += 10; reformist_dissent -= 10; left_dissent += 8; labor_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if bezrobotni > 15; pschd_relation += 5;
+on-arrival: reformst_strength += 10; reformist_dissent -= 10; left_dissent += 8; labor_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if unemployed > 15; pschd_relation += 5;
 
 With our hard work, we have convinced the majority of the party to adopt the moderate job creation plan! [? if bbwr_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic or Finance ministries. ?]
 

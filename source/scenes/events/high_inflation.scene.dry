@@ -1,9 +1,9 @@
 title: High Inflation
-subtitle: Robotnicy are seeing their purchasing power decline.
+subtitle: Workers are seeing their purchasing power decline.
 view-if: inflation >= 8 and high_inflation_timer = 0 and bbwr_in_government
 new-page: true
 max-visits: 1
-on-arrival: capital_strike_progress += 1; robotnicy_bbwr -= 4; klasa_wyzsza_bbwr -= 6; klasa_srednia_bbwr -= 6; chlopi_bbwr -= 5; bezrobotni_bbwr -= 4; high_inflation_timer = 6; pro_republic -= 5
+on-arrival: capital_strike_progress += 1; workers_bbwr -= 4; old_middle_bbwr -= 6; new_middle_bbwr -= 6; rural_bbwr -= 5; unemployed_bbwr -= 4; high_inflation_timer = 6; pro_republic -= 5
 tags: event
 
 = High Inflation
@@ -19,19 +19,19 @@ The people and the press are clamoring for action to reduce inflation.
 - @nothing: Realistically, there is nothing we can do.
 
 @taxes
-on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; bezrobotni += 1.5; capital_strike_progress -= 1; inflation -= 1; klasa_srednia_bbwr -= 3; klasa_wyzsza_bbwr -= 3; robotnicy_bbwr -= 3; chlopi_bbwr -= 3; kpp_coalition_dissent += 1; kpp_relation -= 5; left_dissent += 5
+on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; unemployed += 1.5; capital_strike_progress -= 1; inflation -= 1; new_middle_bbwr -= 3; old_middle_bbwr -= 3; workers_bbwr -= 3; rural_bbwr -= 3; kpp_coalition_dissent += 1; kpp_relation -= 5; left_dissent += 5
 
 Raising taxes is unpopular among everyone, but it might be what it takes to keep inflation under control.
 
 @welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; bezrobotni += 1.5; klasa_srednia_bbwr += 4*(1-dissent); klasa_wyzsza_bbwr += 4*(1-dissent); robotnicy_bbwr -= 5; bezrobotni_bbwr -= 5; inflation -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; kpp_coalition_dissent += 1;
+on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_bbwr += 4*(1-dissent); old_middle_bbwr += 4*(1-dissent); workers_bbwr -= 5; unemployed_bbwr -= 5; inflation -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; kpp_coalition_dissent += 1;
 
 Reducing the amount of government spending should reduce the inflation rate, according to classical economics. But it imposes pain upon the people who are suffering the most.
 
 @price_controls
-on-arrival: capital_strike_progress += 3; inflation -= 3; coalition_dissent += 1; bezrobotni += 1; klasa_wyzsza_bbwr -= 4; klasa_srednia_bbwr -= 3; chlopi_bbwr -= 5; robotnicy_bbwr -= 2; bezrobotni_bbwr += 3; labor_dissent += 6; pslp_relation -= 6; pschd_relation -= 4; pslw_relation -= 4
+on-arrival: capital_strike_progress += 3; inflation -= 3; coalition_dissent += 1; unemployed += 1; old_middle_bbwr -= 4; new_middle_bbwr -= 3; rural_bbwr -= 5; workers_bbwr -= 2; unemployed_bbwr += 3; labor_dissent += 6; pslp_relation -= 6; pschd_relation -= 4; pslw_relation -= 4
 
-Price controls are very unpopular with the bourgeoisie and their representatives, as well as chlopi producers, while wage controls hurt organized robotnicy. However, the policies do stem the tide of inflation, at least somewhat.
+Price controls are very unpopular with the bourgeoisie and their representatives, as well as rural producers, while wage controls hurt organized workers. However, the policies do stem the tide of inflation, at least somewhat.
 
 @bank
 on-arrival: capital_strike_progress += 2

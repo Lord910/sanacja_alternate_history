@@ -17,14 +17,14 @@ Much of our party is deeply opposed to rearmament, while the center and right pa
 - @ministry: Use the Reichswehr Ministry to prevent the construction.
 
 @vote_yes
-on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5 if not panzerkreuzer_funded; neorevisionist_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; robotnicy_bbwr -= 4
+on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5 if not panzerkreuzer_funded; neorevisionist_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; workers_bbwr -= 4
 
 Our grassroots party members are highly critical of our decision. Many party branches have increased their agitation against our parliamentary fraction. [? if panzerkreuzer_funded : However, given the construction of the previous battlecruiser, this seemed to be a foregone conclusion, and the reaction is muted. ?]
 
 The vote in favor of the battlecruiser easily passes, with opposition only from the KPP. The ship will be built.
 
 @vote_no
-on-arrival: pslp_relation -= 8; pschd_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; robotnicy_bbwr += 4*(1-dissent) if nationalism < 49;
+on-arrival: pslp_relation -= 8; pschd_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_bbwr += 4*(1-dissent) if nationalism < 49;
 go-to: built if bbwr_r + kpp_r + pslw_r < 50; not_built if bbwr_r + kpp_r + pslw_r >= 50
 
 Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if bbwr_toleration: , including the minority government that we are currently supporting ?].

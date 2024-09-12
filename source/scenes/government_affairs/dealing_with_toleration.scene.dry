@@ -26,7 +26,7 @@ Are we sure about this? A vote of no confidence would trigger new elections, and
 - @stay_course: No, we should stay the course.
 
 @vonc
-on-arrival: bbwr_in_government = 0; bbwr_toleration = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "PSCHD"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_toleration = 0; left_strength += 8; pro_republic -= 5; klasa_srednia_bbwr -= 3; chlopi_bbwr -= 3; klasa_wyzsza_bbwr -= 3; mniejszosci_bbwr -= 3; reformist_dissent += 5; left_dissent -= 5
+on-arrival: bbwr_in_government = 0; bbwr_toleration = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "PSCHD"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_bbwr -= 3; rural_bbwr -= 3; old_middle_bbwr -= 3; catholics_bbwr -= 3; reformist_dissent += 5; left_dissent -= 5
 
 We have called for a vote of no confidence, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.
 
@@ -39,7 +39,7 @@ unavailable-subtitle: This can only happen with a budget surplus.
 go-to: urge_success if pslp_relation >= 30 and pschd_relation >= 40; urge_failure if pslp_relation < 30 or pschd_relation < 40
 
 @urge_success
-on-arrival: welfare += 1; budget -= 1; robotnicy_bbwr += 5*(1-dissent); bezrobotni_bbwr += 5*(1-dissent); pschd_relation -= 3; pslp_relation -= 3; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5;
+on-arrival: welfare += 1; budget -= 1; workers_bbwr += 5*(1-dissent); unemployed_bbwr += 5*(1-dissent); pschd_relation -= 3; pslp_relation -= 3; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5;
 
 We have successfully urged the coalition parties to increase social spending! Unfortunately, the center-right parties increasingly see us as a nuisance, and might not wish to continue these negotiations.
 

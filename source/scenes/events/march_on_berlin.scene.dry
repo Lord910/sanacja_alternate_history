@@ -25,7 +25,7 @@ title: There is nothing we can do.
 go-to: accept_election if owp_normalized + sn_normalized >= 0.45; accept_hitler if owp_normalized + sn_normalized < 0.45
 
 @accept_election
-on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; klasa_wyzsza_owp += 10; klasa_srednia_owp += 10; robotnicy_owp += 10; chlopi_owp += 10; bezrobotni_owp += 8; robotnicy_bbwr -= 10; robotnicy_kpp -= 10; sa_strength += 100;
+on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; old_middle_owp += 10; new_middle_owp += 10; workers_owp += 10; rural_owp += 10; unemployed_owp += 8; workers_bbwr -= 10; workers_kpp -= 10; sa_strength += 100;
 
 President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
 
@@ -56,7 +56,7 @@ President [+ president +] has asked our government to resign.
 
 @fight
 title: Deploy the Reichsbanner and call a general strike to resist the fascists!
-on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if bbwr_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += robotnicy_bbwr_normalized*(2 - dissent)*(2 - bezrobotni/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and bbwr_in_government
+on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if bbwr_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_bbwr_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and bbwr_in_government
 go-to: fight_2_win if defense_strength >= enemy_strength; fight_2_pre_civil_war if defense_strength < enemy_strength
 
 The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the fascist demonstration.
@@ -65,7 +65,7 @@ The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to cou
 
 
 @fight_2_win
-on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; robotnicy_owp -= 12*(1-dissent); bezrobotni_owp -= 10*(1-dissent); klasa_srednia_owp -= 6*(1-dissent); robotnicy_bbwr += 8*(1-dissent); bezrobotni_bbwr += 6*(1-dissent); pro_republic += 15
+on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; workers_owp -= 12*(1-dissent); unemployed_owp -= 10*(1-dissent); new_middle_owp -= 6*(1-dissent); workers_bbwr += 8*(1-dissent); unemployed_bbwr += 6*(1-dissent); pro_republic += 15
 achievement: drei_pfeile
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.

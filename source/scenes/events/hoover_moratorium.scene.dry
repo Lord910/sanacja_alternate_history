@@ -1,8 +1,8 @@
 title: Hoover Moratorium
 subtitle: Owing to the economic crisis, our debt payments have been paused...
 new-page: true
-view-if: banking_crisis_seen = 1 and ((year == 1931 and month >= 6) or (year == 1932)) and reparations >= 0 and bezrobotni > 15
-on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; robotnicy_pslp += 3 if foreign_minister_party == "PSL-P"; klasa_srednia_pslp += 3 if foreign_minister_party == "PSL-P"; klasa_wyzsza_pslp += 3 if foreign_minister_party == "PSL-P"; chlopi_pslp += 3 if foreign_minister_party == "PSL-P"; robotnicy_pschd += 3 if foreign_minister_party == "PSCHD"; klasa_srednia_pschd += 3 if foreign_minister_party == "PSCHD"; klasa_wyzsza_pschd += 3 if foreign_minister_party == "PSCHD"; chlopi_pschd += 3 if foreign_minister_party == "PSCHD"; robotnicy_bbwr += 3 if foreign_minister_party == "BBWR"; klasa_srednia_bbwr += 3 if foreign_minister_party == "BBWR"; klasa_wyzsza_bbwr += 3 if foreign_minister_party == "BBWR"; chlopi_bbwr += 3 if foreign_minister_party == "BBWR";
+view-if: banking_crisis_seen = 1 and ((year == 1931 and month >= 6) or (year == 1932)) and reparations >= 0 and unemployed > 15
+on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; workers_pslp += 3 if foreign_minister_party == "PSL-P"; new_middle_pslp += 3 if foreign_minister_party == "PSL-P"; old_middle_pslp += 3 if foreign_minister_party == "PSL-P"; rural_pslp += 3 if foreign_minister_party == "PSL-P"; workers_pschd += 3 if foreign_minister_party == "PSCHD"; new_middle_pschd += 3 if foreign_minister_party == "PSCHD"; old_middle_pschd += 3 if foreign_minister_party == "PSCHD"; rural_pschd += 3 if foreign_minister_party == "PSCHD"; workers_bbwr += 3 if foreign_minister_party == "BBWR"; new_middle_bbwr += 3 if foreign_minister_party == "BBWR"; old_middle_bbwr += 3 if foreign_minister_party == "BBWR"; rural_bbwr += 3 if foreign_minister_party == "BBWR";
 tags: event
 max-visits: 1
 
