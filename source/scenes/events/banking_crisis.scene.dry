@@ -1,7 +1,7 @@
 title: Banking Crisis
 subtitle: The collapse of the German banking system...
 new-page: true
-on-arrival: banking_crisis_seen = 1; workers_kpp += 5; workers_owp += 3; new_middle_owp += 3; old_middle_owp += 4; rural_owp += 3; unemployed += 3; crisis_urgency += 1; workers_bbwr -= 4 if bbwr_in_government; new_middle_bbwr -= 5 if bbwr_in_government; old_middle_bbwr -= 5 if bbwr_in_government; rural_bbwr -= 4 if bbwr_in_government
+on-arrival: banking_crisis_seen = 1; robotnicy_kpp += 5; robotnicy_owp += 3; klasa_srednia_owp += 3; klasa_wyzsza_owp += 4; chlopi_owp += 3; bezrobotni += 3; crisis_urgency += 1; robotnicy_bbwr -= 4 if bbwr_in_government; klasa_srednia_bbwr -= 5 if bbwr_in_government; klasa_wyzsza_bbwr -= 5 if bbwr_in_government; chlopi_bbwr -= 4 if bbwr_in_government
 tags: event
 view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1
@@ -19,7 +19,7 @@ This is a bourgeois dispute, but the costs will be borne by the proletariat. The
 
 @nothing_to_do
 view-if: bbwr_in_government = 1
-on-arrival: welfare -= 1; workers_bbwr -= 3; unemployed_bbwr -= 3; pro_republic -= 3
+on-arrival: welfare -= 1; robotnicy_bbwr -= 3; bezrobotni_bbwr -= 3; pro_republic -= 3
 
 There is, essentially, nothing we can do.
 
@@ -27,13 +27,13 @@ There is, essentially, nothing we can do.
 view-if: bbwr_in_government = 1
 subtitle: -1 budget
 choose-if: budget >= 1
-on-arrival: workers_bbwr += 3*(1-dissent); new_middle_bbwr += 3*(1-dissent); old_middle_bbwr += 2*(1-dissent); rural_bbwr += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_owp -= 3
+on-arrival: robotnicy_bbwr += 3*(1-dissent); klasa_srednia_bbwr += 3*(1-dissent); klasa_wyzsza_bbwr += 2*(1-dissent); chlopi_bbwr += 2*(1-dissent); bezrobotni -= 2; inflation += 1 if inflation < 0; budget -= 1; robotnicy_owp -= 3
 
 In the face of the banking crisis, we have taken emergency action to stabilize the economy. It might not be not enough.
 
 @austerity
 view-if: bbwr_in_government = 0
-on-arrival: welfare -= 1; workers_bbwr -= 3; unemployed_bbwr -= 3; pro_republic -= 3
+on-arrival: welfare -= 1; robotnicy_bbwr -= 3; bezrobotni_bbwr -= 3; pro_republic -= 3
 
 Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.
 

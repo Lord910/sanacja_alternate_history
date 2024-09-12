@@ -16,7 +16,7 @@ The KPP presents us with a list of goals for the coalition:
 
 [? if finance_goal = 1 : - Make taxes more progressive. ?]
 
-[? if labor_goal = 1 : - Support workers in labor disputes. ?]
+[? if labor_goal = 1 : - Support robotnicy in labor disputes. ?]
 
 [? if foreign_goal = 1 : - Improve our relations with the Soviet Union. ?]
 

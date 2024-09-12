@@ -1,11 +1,11 @@
 title: Global Economic Recovery
 subtitle: Finally, the world economy is leaving the worst throes of the depression.
 view-if: year = 1933 and month >= 6
-on-arrival: unemployed -= 3 if unemployed > 25; unemployed -= 2 if unemployed > 15; unemployed -= 1 if unemployed > 8; workers_owp -= 5; unemployed_owp -= 5; inflation += 1.5 if inflation < 0
+on-arrival: bezrobotni -= 3 if bezrobotni > 25; bezrobotni -= 2 if bezrobotni > 15; bezrobotni -= 1 if bezrobotni > 8; robotnicy_owp -= 5; bezrobotni_owp -= 5; inflation += 1.5 if inflation < 0
 new-page: true
 max-visits: 1
 tags: event
 
 = Global Economic Recovery
 
-Finally, countries across the world seem to be recovering from the worst effects of the Great Depression. It is an uneven recovery, but we seem to be exiting the worst period of crisis. [? if unemployed >= 10: Our unemployment has fallen. ?]
+Finally, countries across the world seem to be recovering from the worst effects of the Great Depression. It is an uneven recovery, but we seem to be exiting the worst period of crisis. [? if bezrobotni >= 10: Our unemployment has fallen. ?]
