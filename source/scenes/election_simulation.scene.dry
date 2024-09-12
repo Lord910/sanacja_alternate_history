@@ -149,8 +149,8 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 75;
-Q.pps_r = 25;
+Q.bbwr_r = 80;
+Q.pps_r = 20;
 Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
@@ -233,8 +233,8 @@ Q.catholics_sn = 5;
 Q.catholics_owp = 10;
 Q.catholics_other = 5;
 
-Q.bbwr_r = 75;
-Q.pps_r = 25;
+Q.bbwr_r = 80;
+Q.pps_r = 20;
 Q.kpp_r = 0;
 Q.pschd_r = 0;
 Q.npr_r = 0;
