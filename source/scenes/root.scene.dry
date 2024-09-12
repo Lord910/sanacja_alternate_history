@@ -368,7 +368,7 @@ Q.kpp_coalition_dissent = 0;
 Q.bbwr_toleration = 0;
 
 // is the current government a presidential minority government?
-Q.minority_government = 0;
+Q.minority_government = 1;
 
 // ministries - which parties control the ministries?
 // starting with the 1st Piłsudski’s cabinet https://pl.wikipedia.org/wiki/Pierwszy_rząd_Józefa_Piłsudskiego
