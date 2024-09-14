@@ -13,57 +13,57 @@ The BBWR is torn between many different ideological currents. What should be our
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of robotnicy.
-- @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+- @socialist_roots: We should return to our socialist roots!
+- @repairers: We should call for modernization and industralization of Poland!
+- @colonels: Trusting Józef Piłsudski, we should work for strong, stable and independent Poland!
+- @conservatives: We should call for moral healing of Poland!
 - @easy_discard
 
-@class_struggle
+@socialist_roots
 on-arrival: {!
-if (Q.ideology && Q.ideology != "left") {
+if (Q.ideology && Q.ideology != "sanacja_left") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; repairers_strength += 10; communist_coalition += 1; repairers_dissent -= 5; pschd_relation -= 3; pslp_relation -= 5; nationalization_support += 1; kpp_relation += 3
+on-departure: ideology = "sanacja_left"; sanacja_left_strength += 10; sanacja_left_dissent -= 5; pps_relation += 3; conservatives_dissent += 25
 
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
+We should return to our socialist roots, focusing on the rights of robotnicy and social reforms.
 
-@centrist
+@repairers
 on-arrival: {!
-if (Q.ideology && Q.ideology != "centrist") {
+if (Q.ideology && Q.ideology != "repairers") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; liberals_strength += 10; liberals_dissent -= 10
+on-departure: ideology = "repairers"; repairers_strength += 10; repairers_dissent -= 5; conservatives_dissent += 10
 
-The Center Marxists, represented by Kautsky and Hilferding, support a middle course of preparing for revolution while building up the consciousness of the working class.
+We should call for modernization and industrialization of Poland to ensure its future prosperity.
 
-@labor
+@colonels
 on-arrival: {!
-if (Q.ideology && Q.ideology != "labor") {
+if (Q.ideology && Q.ideology != "colonels") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "labor"; sanacja_left_strength += 10; wtb_support += 1; sanacja_left_dissent -= 5; kpp_relation -= 3
+on-departure: ideology = "colonels"; colonels_strength += 10; colonels_dissent -= 5
 
-The labor wing of the party supports continued particpation in government in order to provide benefits to the robotnicy, and the creation of public works programs for employment.
+Trusting Józef Piłsudski, we should work for a strong, stable, and independent Poland.
 
-@reform
+@conservatives
 on-arrival: {!
-if (Q.ideology && Q.ideology != "reformist") {
+if (Q.ideology && Q.ideology != "conservatives") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; colonels_strength += 10; democratization += 1; colonels_dissent -= 5; pschd_relation += 5; pslp_relation += 5; kpp_relation -= 8; moderate_plan_support += 1
+on-departure: ideology = "conservatives"; conservatives_strength += 10; conservatives_dissent -= 5; repairers_dissent += 5; sanacja_left_dissent += 5
 
-The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+We should call for the moral healing of Poland, focusing on traditional values and stability.
 
 @changed
-on-arrival: repairers_dissent += 5; liberals_dissent += 5; sanacja_left_dissent += 5; colonels_dissent += 5
+on-arrival: repairers_dissent += 5; liberals_dissent += 5; sanacja_left_dissent += 5; colonels_dissent += 5; conservatives_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
