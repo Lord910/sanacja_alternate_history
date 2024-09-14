@@ -282,7 +282,7 @@ Centre-Right Coalition (NPR + PSCHD + PSL-P + SN): [+ centre_right_coalition +]%
 
 Far Right Coalition (SN + OWP): [+ far_right_coalition +]%
 
-Popular Front (KPP + PPS): [+ popular_front_coalition +]%
+# Popular Front (KPP + PPS): [+ popular_front_coalition +]%
 
 [? if nazi_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -315,10 +315,10 @@ Finally, the BBWR can govern alone! Our long campaign of electioneering has paid
 
 Who should be chancellor?
 
-- @pilsudski_majority_chancellor: Józef Piłsudski for Chancellor.
-- @bartel_majority_chancellor: Kazimierz Bartel for Chancellor.
-- @switalski_majority_chancellor: Kazimierz Świtalski for Chancellor.
-- @moraczewski_majority_chancellor: Jędrzej Moraczewski for Chancellor.
+- @pilsudski_majority_chancellor: Józef Piłsudski for Prime Minister.
+- @bartel_majority_chancellor: Kazimierz Bartel for Prime Minister.
+- @switalski_majority_chancellor: Kazimierz Świtalski for Prime Minister.
+- @moraczewski_majority_chancellor: Jędrzej Moraczewski for Prime Minister.
 
 @pilsudski_majority_chancellor
 view-if: not historical_mode or not bbwr_prussia
@@ -334,14 +334,12 @@ go-to: ministries
 Kazimierz Bartel has become Prime Minister of the BBWR majority.
 
 @switalski_majority_chancellor
-view-if: muller_dead = 0
 on-arrival: chancellor = "Świtalski"
 go-to: ministries
 
 Kazimierz Świtalski has become Prime Minister of the BBWR majority.
 
 @moraczewski_majority_chancellor
-view-if: muller_dead = 1
 on-arrival: chancellor = "Moraczewski"
 go-to: ministries
 
@@ -364,27 +362,24 @@ Who should be chancellor?
 - @moraczewski_minority_chancellor: Jędrzej Moraczewski for Chancellor.
 
 @pilsudski_minority_chancellor
-view-if: not historical_mode or not bbwr_prussia
 on-arrival: chancellor = "Piłsudski"
 go-to: ministries
 
-Józef Piłsudski has become Prime Minister of the BBWR minority
+Józef Piłsudski has become Prime Minister of the BBWR Prime Minister
 
 @bartel_minority_chancellor
 on-arrival: chancellor = "Bartel"
 go-to: ministries
 
-Kazimierz Bartel has become Prime Minister of the BBWR minority.
+Kazimierz Bartel has become Prime Minister of the BBWR Prime Minister.
 
 @switalski_minority_chancellor
-view-if: muller_dead = 0
 on-arrival: chancellor = "Świtalski"
 go-to: ministries
 
-Kazimierz Świtalski has become Prime Minister of the BBWR minority.
+Kazimierz Świtalski has become Prime Minister of the BBWR Prime Minister.
 
 @moraczewski_minority_chancellor
-view-if: muller_dead = 1
 on-arrival: chancellor = "Moraczewski"
 go-to: ministries
 
