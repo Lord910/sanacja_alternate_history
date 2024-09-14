@@ -77,24 +77,33 @@ if (Q.kpp_r >= Q.bbwr_r && Q.kpp_r >= Q.owp_r) {
 }
 
 // coalitions
-Q.bbwr_majority = Q.bbwr_r > 50;
-Q.bbwr_minority = Q.bbwr_r < 50;
-Q.patriotic_left_coalition = Q.bbwr_r + Q.pps_r > 50;
-Q.democratic_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r > 50;
-Q.centre_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r + Q.npr_r + Q.pschd_r + Q.pslp_r > 50;
-Q.centre_right_coalition = Q.npr_r + Q.pschd_r + Q.pslp_r + Q.sn_r > 50;
-Q.far_right_coalition = Q.sn_r + Q.owp_r > 50;
-Q.popular_front_coalition = Q.kpp_r + Q.pps_r > 50;
+Q.bbwr_majority = Q.bbwr_r;
+Q.bbwr_minority = Q.bbwr_r;
+Q.patriotic_left_coalition = Q.bbwr_r + Q.pps_r;
+Q.democratic_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r;
+Q.centre_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r + Q.npr_r + Q.pschd_r + Q.pslp_r;
+Q.centre_right_coalition = Q.npr_r + Q.pschd_r + Q.pslp_r + Q.sn_r;
+Q.right_coalition =  Q.pschd_r + Q.pslp_r + Q.sn_r + Q.owp_r;
+Q.far_right_coalition = Q.sn_r + Q.owp_r;
+Q.left_coalition = Q.pps_r + Q.sch_r + Q.kpp_r;
+Q.popular_front_coalition = Q.pps_r + Q.sch_r + Q.pslw_r + Q.kpp_r;
+
+// this is an absurd concept lol
+Q.anti_democratic_coalition = Q.sn_r + Q.owp_r + Q.kpp_r;
+
+// Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
+Q.progressive_coalition = Q.pps_r + Q.sch_r + Q.pslw_r;
+
 
 Q.leverage = Q.bbwr_r;
 
-Q.grand_coalition_failed = 0;
+Q.centre_left_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
 Q.kpp_coalition_dissent = 0;
 Q.bbwr_in_government = 1;
-Q.in_weimar_coalition = 0;
-Q.in_grand_coalition = 0;
+Q.in_democratic_left_coalition = 0;
+Q.in_centre_left_coalition = 0;
 Q.in_left_front = 0;
 Q.in_popular_front = 0;
 Q.in_emergency_government = 0;
@@ -512,14 +521,14 @@ go-to: ministries
 @drop_finance
 title: Drop the Finance Ministry.
 view-if: finance_minister_party = "BBWR"
-on-arrival: finance_minister_party = "PSL-P"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "PSL-W" if in_weimar_coalition or in_popular_front;
+on-arrival: finance_minister_party = "PSL-P"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "PSL-W" if in_democratic_left_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_economic
 title: Drop the Economic Ministry.
 view-if: economic_minister_party = "BBWR"
-on-arrival: economic_minister_party = "PSL-P"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = "PSCHD" if in_weimar_coalition or in_popular_front;
+on-arrival: economic_minister_party = "PSL-P"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = "PSCHD" if in_democratic_left_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -533,7 +542,7 @@ go-to: ministries
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "BBWR"
-on-arrival: foreign_minister_party = "PSL-P"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "PSCHD" if in_weimar_coalition or in_popular_front;
+on-arrival: foreign_minister_party = "PSL-P"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "PSCHD" if in_democratic_left_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 

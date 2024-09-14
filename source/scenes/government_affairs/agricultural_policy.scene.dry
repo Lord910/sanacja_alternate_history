@@ -43,13 +43,13 @@ subtitle: -1 budget - Provide inexpensive food for robotnicy.
 choose-if: budget >= 1
 on-arrival: budget -= 1; pro_consumer += 1; robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 4*(1-dissent); robotnicy_sol += 4; coalition_dissent += 1 if black_thursday_seen
 
-We have increased state purchasing of food staples to provide to urban robotnicy and the poor. This benefits robotnicy more than it benefits farmers, as we are negotiating for lower purchase prices. [? if black_thursday_seen and (in_weimar_coalition or in_grand_coalition) : Our coalition partners consider this policy to be a wasteful handout. ?]
+We have increased state purchasing of food staples to provide to urban robotnicy and the poor. This benefits robotnicy more than it benefits farmers, as we are negotiating for lower purchase prices. [? if black_thursday_seen and (in_democratic_left_coalition or in_centre_left_coalition) : Our coalition partners consider this policy to be a wasteful handout. ?]
 
 @state_buyer
 title: State Buyer
 subtitle: -2 budget - Create a state monopoly for grain purchases, guaranteeing prices for farmers and stable prices for consumers. [? if judicial_reform < 2 : The judiciary would never allow this. ?]
 choose-if: budget >= 2 and judicial_reform >= 2
-on-arrival: budget -= 2; state_buyer = 1; chlopi_bbwr += 5*(1-dissent); chlopi_owp -= 3*(1-dissent); robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 5*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); pslp_relation -= 5; pschd_relation -= 3; peoples_party_support += 1; chlopi_policy += 2; capital_strike_progress += 1
+on-arrival: budget -= 2; state_buyer = 1; chlopi_bbwr += 5*(1-dissent); chlopi_owp -= 3*(1-dissent); robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 5*(1-dissent); coalition_dissent += 1 if (in_centre_left_coalition or in_democratic_left_coalition); pslp_relation -= 5; pschd_relation -= 3; peoples_party_support += 1; chlopi_policy += 2; capital_strike_progress += 1
 max-visits: 1
 
 Our new purchasing agency guarantees fair prices for farmers, while also providing lower food prices for robotnicy and the urban poor. This policy necessitates heavy spending and an unprecedented level of state intervention in the economy, raising the ire of conservative economists.

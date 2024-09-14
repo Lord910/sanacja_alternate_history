@@ -27,7 +27,7 @@ The vote in favor of the battlecruiser easily passes, with opposition only from 
 on-arrival: pslp_relation -= 8; pschd_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; robotnicy_bbwr += 4*(1-dissent) if nationalism < 49;
 go-to: built if bbwr_r + kpp_r + pslw_r < 50; not_built if bbwr_r + kpp_r + pslw_r >= 50
 
-Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if bbwr_toleration: , including the minority government that we are currently supporting ?].
+Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_centre_left_coalition or in_democratic_left_coalition: , including our coalition partners ?][? if bbwr_toleration: , including the minority government that we are currently supporting ?].
 
 @abstain
 on-arrival: pslp_relation -= 5; pschd_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_relation -= 3

@@ -40,7 +40,7 @@ subtitle: This is difficult; all of the right-of-center parties support this pol
 go-to: end_toleration_success if bbwr_r + kpp_r + pslw_r >= 50; end_toleration_fail if bbwr_r + kpp_r + pslw_r < 50
 
 @end_toleration_success
-on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_in_government = 0; in_grand_coalition = 0; bbwr_toleration = 0;
+on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_in_government = 0; in_centre_left_coalition = 0; bbwr_toleration = 0;
 
 With the support of the KPP and PSL-W/DStP, we have successfully stopped the formation of the customs union. This results in the fall of the [+ chancellor +] government.
 

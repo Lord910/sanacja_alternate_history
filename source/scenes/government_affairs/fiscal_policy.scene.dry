@@ -20,13 +20,13 @@ Fiscal policy involves issues of taxation and budget.
 
 @raise_progressive
 subtitle: This does not change overall revenue.
-on-arrival: robotnicy_bbwr += 6*(1-dissent); klasa_wyzsza_bbwr -= 3; klasa_srednia_bbwr -= 3; coalition_dissent += 1 if in_grand_coalition; pslp_relation -= 4; finance_goal_completed += 1; upper_tax_rates += 1; lower_tax_rates -= 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3;
+on-arrival: robotnicy_bbwr += 6*(1-dissent); klasa_wyzsza_bbwr -= 3; klasa_srednia_bbwr -= 3; coalition_dissent += 1 if in_centre_left_coalition; pslp_relation -= 4; finance_goal_completed += 1; upper_tax_rates += 1; lower_tax_rates -= 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3;
 
 Making the tax system more progressive is popular among our base, but it upsets our bourgeois coalition partners, as well as our minimal number of bourgeois voters.
 
 @raise_rich
 subtitle: +2 budget
-on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; robotnicy_bbwr += 4*(1-dissent); klasa_wyzsza_bbwr -= 4; klasa_srednia_bbwr -= 4; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; pslp_relation -= 4; bezrobotni += 1; finance_goal_completed += 1; inflation -= 0.6
+on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; robotnicy_bbwr += 4*(1-dissent); klasa_wyzsza_bbwr -= 4; klasa_srednia_bbwr -= 4; coalition_dissent += 1 if in_centre_left_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; pslp_relation -= 4; bezrobotni += 1; finance_goal_completed += 1; inflation -= 0.6
 
 Raising taxes on the rich is popular among our base, but it alienates the bourgeoisie. Increasing taxes also decreases economic demand, which may lead to more unemployment.
 
@@ -41,7 +41,7 @@ Cutting taxes benefits most the rich and middle-class, who pay more taxes than t
 subtitle: +3 budget
 on-arrival: budget += 3; klasa_srednia_bbwr -= 4; klasa_wyzsza_bbwr -= 4; robotnicy_bbwr -= 3; chlopi_bbwr -= 3; bezrobotni += 2; kpp_coalition_dissent += 1; lower_tax_rates += 1; upper_tax_rates += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 2; robotnicy_bbwr -= 5 if lower_tax_rates > 1; inflation -= 1.1
 
-Raising taxes hurts our support among all those who pay taxes. [? if in_grand_coalition or in_weimar_coalition : However, our coalition partners are more supportive of the idea of "shared sacrifice" than simply taxing the rich. ?] Increasing taxes also decreases economic demand, which may lead to more unemployment.
+Raising taxes hurts our support among all those who pay taxes. [? if in_centre_left_coalition or in_democratic_left_coalition : However, our coalition partners are more supportive of the idea of "shared sacrifice" than simply taxing the rich. ?] Increasing taxes also decreases economic demand, which may lead to more unemployment.
 
 @regressive
 title: Lower taxes on the rich, while increasing consumption taxes (which affect the working class more).

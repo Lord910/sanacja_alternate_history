@@ -17,11 +17,11 @@ Braun [? if bbwr_prussia = 1 : is ?][? if bbwr_prussia = 0 : was ?] the Minister
 @coalition
 title: Negotiating with the Coalition
 subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
-choose-if: advisor_action_timer <= 0 and (bbwr_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
+choose-if: advisor_action_timer <= 0 and (bbwr_prussia or in_democratic_left_coalition or in_centre_left_coalition or in_popular_front)
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not bbwr_prussia : The BBWR does not control the Prussian government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if bbwr_in_government = 1; pschd_relation += 6; pslw_relation += 6; pslp_relation += 2; pslp_relation += 3 if in_grand_coalition
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if bbwr_in_government = 1; pschd_relation += 6; pslw_relation += 6; pslp_relation += 2; pslp_relation += 3 if in_centre_left_coalition
 
-We have improved our relations with the [? if in_grand_coalition : Christian Democrats (PSCHD), PSL-W, and PSL-P, ?][? if not in_grand_coalition: Christian Democrats (PSCHD) and PSL-W, ?] and reduced tensions with the coalition.
+We have improved our relations with the [? if in_centre_left_coalition : Christian Democrats (PSCHD), PSL-W, and PSL-P, ?][? if not in_centre_left_coalition: Christian Democrats (PSCHD) and PSL-W, ?] and reduced tensions with the coalition.
 
 @prussian_bulwark
 title: The Prussian Bulwark

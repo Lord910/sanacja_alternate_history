@@ -315,7 +315,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
 
-[? if game_achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if game_achievement_democratic_left_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
 
 [? if game_achievement_majority_party: **Mehrheitspartei** - form an BBWR-only majority government. ?]
 
@@ -400,7 +400,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
 
-[? if achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if achievement_democratic_left_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
 
 [? if achievement_majority_party: **Mehrheitspartei** - form an BBWR-only majority government. ?]
 
@@ -483,7 +483,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
 
-[? if not achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if not achievement_democratic_left_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
 
 [? if not achievement_majority_party: **Mehrheitspartei** - form an BBWR-only majority government. ?]
 

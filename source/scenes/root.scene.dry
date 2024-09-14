@@ -321,10 +321,10 @@ Q.kpp_in_government = 0;
 Q.owp_in_government = 0;
 
 // Weimar coalition = BBWR + PSCHD + PSL-W
-Q.in_weimar_coalition = 0;
+Q.in_democratic_left_coalition = 0;
 // Grand coalition = BBWR + PSCHD + NPR + PSL-W + PSL-P
 // also includes the "new grand coalition" of BBWR + PSCHD + NPR + PSL-W + PSL-P + Others
-Q.in_grand_coalition = 0;
+Q.in_centre_left_coalition = 0;
 // Popular front = BBWR + KPP + PSCHD + PSL-W
 Q.in_popular_front = 0;
 // left coalition = BBWR + KPP + left-splinters
@@ -332,7 +332,7 @@ Q.in_left_front = 0;
 // emergency government containing the BBWR: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.in_bbwr_majority = 0;
-Q.grand_coalition_failed = 0;
+Q.centre_left_coalition_failed = 0;
 // if the BBWR is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
