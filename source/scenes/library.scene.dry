@@ -123,7 +123,7 @@ SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: 
+**Workers:**
 
 KPP: [+ robotnicy_kpp_normalized +]%, 
 
@@ -149,7 +149,8 @@ OWP: [+ robotnicy_owp_normalized +]%,
 
 
 
-New Middle Class: 
+**New Middle Class:**
+
 KPP: [+ klasa_srednia_kpp_normalized +]%, 
 
 PPS: [+ klasa_srednia_pps_normalized +]%, 
@@ -173,7 +174,8 @@ SN: [+ klasa_srednia_sn_normalized +]%,
 OWP: [+ klasa_srednia_owp_normalized +]%, 
 
 
-Old Middle Class: 
+**Old Middle Class:**
+
 KPP: [+ klasa_wyzsza_kpp_normalized +]%,
 
 PPS: [+ klasa_wyzsza_pps_normalized +]%, 
@@ -197,7 +199,8 @@ SN: [+ klasa_wyzsza_sn_normalized +]%,
 OWP: [+ klasa_wyzsza_owp_normalized +]%, 
 
 
-Peasents: 
+**Peasents:**
+
 KPP: [+ chlopi_kpp_normalized +]%, 
 
 PPS: [+ chlopi_pps_normalized +]%, 

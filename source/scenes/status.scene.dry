@@ -98,15 +98,35 @@ OWP: [+ owp_relation : relationships +]
 
 = Internal Factions of the BBWR
 
-Sanacja Left strength: [+ sanacja_left_strength : strength +], dissent: [+ sanacja_left_dissent : dissent +]
+**Sanacja Left**
 
-Repairers strength: [+ repairers_strength : strength +], dissent: [+ repairers_dissent : dissent +]
+strength: [+ sanacja_left_strength : strength +], 
 
-Liberals strength: [+ liberals_strength : strength +], dissent: [+ liberals_dissent : dissent +]
+dissent: [+ sanacja_left_dissent : dissent +]
 
-Colonels strength: [+ colonels_strength : strength +], dissent: [+ colonels_dissent : dissent +]
+**Repairers** 
 
-Conservatives strength: [+ conservatives_strength : strength +], dissent: [+ conservatives_dissent : dissent +]
+strength: [+ repairers_strength : strength +], 
+
+dissent: [+ repairers_dissent : dissent +]
+
+**Liberals**
+
+strength: [+ liberals_strength : strength +], 
+
+dissent: [+ liberals_dissent : dissent +]
+
+**Colonels**
+
+strength: [+ colonels_strength : strength +], 
+
+dissent: [+ colonels_dissent : dissent +]
+
+**Conservatives**
+
+strength: [+ conservatives_strength : strength +], 
+
+dissent: [+ conservatives_dissent : dissent +]
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
@@ -170,7 +190,7 @@ OWP: [+ owp_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: 
+**Workers:**
 
 KPP: [+ robotnicy_kpp_normalized +]%, 
 
@@ -196,7 +216,8 @@ OWP: [+ robotnicy_owp_normalized +]%,
 
 
 
-New Middle Class: 
+**New Middle Class:**
+
 KPP: [+ klasa_srednia_kpp_normalized +]%, 
 
 PPS: [+ klasa_srednia_pps_normalized +]%, 
@@ -220,7 +241,8 @@ SN: [+ klasa_srednia_sn_normalized +]%,
 OWP: [+ klasa_srednia_owp_normalized +]%, 
 
 
-Old Middle Class: 
+**Old Middle Class:**
+
 KPP: [+ klasa_wyzsza_kpp_normalized +]%,
 
 PPS: [+ klasa_wyzsza_pps_normalized +]%, 
@@ -244,7 +266,8 @@ SN: [+ klasa_wyzsza_sn_normalized +]%,
 OWP: [+ klasa_wyzsza_owp_normalized +]%, 
 
 
-Peasents: 
+**Peasents:**
+
 KPP: [+ chlopi_kpp_normalized +]%, 
 
 PPS: [+ chlopi_pps_normalized +]%, 
