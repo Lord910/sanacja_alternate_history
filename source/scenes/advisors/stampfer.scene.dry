@@ -34,28 +34,28 @@ on-arrival: advisor_action_timer = 6
 Which faction should we support?
 
 - @support_left: Left
-- @support_center: Center
-- @support_labor: Labor
+- @support_liberals: Center
+- @support_sanacja_left: Labor
 - @support_reform: Reformists
 - @support_neorev: Neorevisionists
 
 @support_left
-on-arrival: left_dissent -= 6; left_strength += 5
+on-arrival: repairers_dissent -= 6; repairers_strength += 5
 
 Vorwärts prints editorials in support of Left positions.
 
-@support_center
-on-arrival: center_dissent -= 6; center_strength += 5
+@support_liberals
+on-arrival: liberals_dissent -= 6; liberals_strength += 5
 
 Vorwärts prints editorials in support of centrist positions.
 
-@support_labor
-on-arrival: labor_dissent -= 6; labor_strength += 5
+@support_sanacja_left
+on-arrival: sanacja_left_dissent -= 6; sanacja_left_strength += 5
 
 Vorwärts prints editorials in support of the policies of the trade unions.
 
 @support_reform
-on-arrival: reformist_dissent -= 6; reformist_strength += 5;
+on-arrival: colonels_dissent -= 6; colonels_strength += 5;
 
 Vorwärts prints editorials in support of the reformist policies.
 
@@ -70,6 +70,6 @@ title: Cooperation with the KPP
 subtitle: Could we build closer ties with the KPP?
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 2; kpp_relation += 4*(1-dissent); reformist_dissent += 2
+on-arrival: advisor_action_timer = 6; repairers_strength += 2; kpp_relation += 4*(1-dissent); colonels_dissent += 2
 
 Stampfer works towards closer ties with the KPP through our media.

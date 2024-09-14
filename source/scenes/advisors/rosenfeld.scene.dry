@@ -1,6 +1,6 @@
 title: Kurt Rosenfeld
 is-pinned-card: true
-tags: advisor, left
+tags: advisor, repairers
 card-image: img/portraits/RosenfeldKurt.jpg
 view-if: rosenfeld_advisor = 1
 new-page: true 
@@ -19,7 +19,7 @@ title: Building the Left
 subtitle: Push the BBWR to the left.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 6; left_dissent -= 8; reformist_dissent += 2
+on-arrival: advisor_action_timer = 6; repairers_strength += 6; repairers_dissent -= 8; colonels_dissent += 2
 
 We have increased the strength of the left faction with the BBWR.
 
@@ -28,7 +28,7 @@ title: Cooperation with the KPP
 subtitle: Push the party to be more friendly towards the KPP.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 5; kpp_relation += 4*(1-dissent); reformist_dissent += 2; communist_coalition += 1 if kpp_cooperation_seen <= 1; kpp_cooperation_seen += 1
+on-arrival: advisor_action_timer = 6; repairers_strength += 5; kpp_relation += 4*(1-dissent); colonels_dissent += 2; communist_coalition += 1 if kpp_cooperation_seen <= 1; kpp_cooperation_seen += 1
 
 Through his work, Rosenfeld has defended individual KPP members; this should make some connections possible.
 
@@ -38,7 +38,7 @@ view-if: not constructive_vonc
 subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if bbwr_toleration == 0 : The BBWR is not currently in toleration. ?]
 choose-if: advisor_action_timer == 0 and bbwr_toleration
-on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_toleration = 0; left_strength += 8; pro_republic -= 4; klasa_srednia_bbwr -= 3; chlopi_bbwr -= 3; klasa_wyzsza_bbwr -= 3; mniejszosci_bbwr -= 3; reformist_dissent += 8
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; bbwr_toleration = 0; repairers_strength += 8; pro_republic -= 4; klasa_srednia_bbwr -= 3; chlopi_bbwr -= 3; klasa_wyzsza_bbwr -= 3; mniejszosci_bbwr -= 3; colonels_dissent += 8
 
 We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
 

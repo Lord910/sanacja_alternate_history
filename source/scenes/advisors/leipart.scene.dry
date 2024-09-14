@@ -1,6 +1,6 @@
 title: Theodor Leipart
 is-pinned-card: true
-tags: advisor, labor
+tags: advisor, sanacja_left
 card-image: img/portraits/LeipartTheodor.jpg
 view-if: leipart_advisor = 1
 new-page: true 
@@ -21,7 +21,7 @@ title: Organizing robotnicy
 subtitle: Improve our standing among the robotnicy.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; robotnicy_bbwr += 4*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if wtb_adopted == 1; labor_strength += 2;
+on-arrival: advisor_action_timer = 6; robotnicy_bbwr += 4*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if wtb_adopted == 1; sanacja_left_strength += 2;
 
 We have increased our organizing among the robotnicy.
 
@@ -30,7 +30,7 @@ title: Addressing the economic crisis
 subtitle: Formulate a plan to get us out of this mess.
 choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
-on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 1
+on-arrival: advisor_action_timer = 6; wtb_support += 2; liberals_dissent += 10; sanacja_left_strength += 1
 
 The WTB-Plan, standing for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Leipart canvasses in favor of this policy throughout the party and the unions.
 
@@ -39,6 +39,6 @@ title: Union-party coordination
 subtitle: Reduce dissent among the unions.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; labor_dissent -= 5;
+on-arrival: advisor_action_timer = 6; sanacja_left_dissent -= 5;
 
-We have reduced tensions with the Labor faction.
+We have reduced tensions with the Sanacja Left.

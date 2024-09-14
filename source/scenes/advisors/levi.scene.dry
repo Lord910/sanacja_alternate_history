@@ -1,6 +1,6 @@
 title: Paul Levi
 is-pinned-card: true
-tags: advisor, left
+tags: advisor, repairers
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 1
 new-page: true 
@@ -18,7 +18,7 @@ title: Building the Left
 subtitle: Push the BBWR to the left.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 10; left_dissent -= 8; reformist_dissent += 3
+on-arrival: advisor_action_timer = 6; repairers_strength += 10; repairers_dissent -= 8; colonels_dissent += 3
 
 We have increased the strength of the left faction with the BBWR. This raised concern among the moderate reformists in the party.
 
@@ -27,6 +27,6 @@ title: Cooperation with the KPP
 subtitle: Any cooperation between the parties requires compromise from the KPP as well as the BBWR.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 5; kpp_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if kpp_cooperation_seen <= 1; kpp_cooperation_seen += 1
+on-arrival: advisor_action_timer = 6; repairers_strength += 5; kpp_relation += 6*(1-dissent); colonels_dissent += 3; communist_coalition += 1 if kpp_cooperation_seen <= 1; kpp_cooperation_seen += 1
 
 Levi attempts to reach out to his former colleagues to dissuade the KPP from their current extreme Stalinist path. Some concessions are extracted.

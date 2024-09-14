@@ -21,7 +21,7 @@ title: Against Right and Left
 subtitle: As a Centrist, Hilferding seeks to steer a course between the party's factions.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; labor_strength -= 5; neorevisionist_strength -= 5; center_dissent -= 10
+on-arrival: advisor_action_timer = 5; advisor_action_time = time; liberals_strength += 10; repairers_strength -= 5; sanacja_left_strength -= 5; neorevisionist_strength -= 5; liberals_dissent -= 10
 
 We have reduced the strength of the dissident factions in the party.
 
@@ -30,7 +30,7 @@ title: Defending Toleration
 subtitle: Hilferding supports cooperation with the bourgeois parties.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not bbwr_toleration: The BBWR is not in toleration. ?]
 choose-if: bbwr_in_government = 0 and bbwr_toleration = 1 and advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_dissent -= 10; neorevisionist_dissent -= 8; center_dissent -= 5
+on-arrival: advisor_action_timer = 6; repairers_dissent -= 10; neorevisionist_dissent -= 8; liberals_dissent -= 5
 
 We have reduced dissent among the anti-toleration factions.
 

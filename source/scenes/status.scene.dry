@@ -91,13 +91,13 @@ OWP: [+ owp_relation : relationships +]
 
 = Internal Factions of the BBWR
 
-Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+Repairers strength: [+ repairers_strength : strength +], dissent: [+ repairers_dissent : dissent +]
 
-Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+Center strength: [+ liberals_strength : strength +], dissent: [+ liberals_dissent : dissent +]
 
-Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+Sanacja Left strength: [+ sanacja_left_strength : strength +], dissent: [+ sanacja_left_dissent : dissent +]
 
-Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+Reformist strength: [+ colonels_strength : strength +], dissent: [+ colonels_dissent : dissent +]
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 

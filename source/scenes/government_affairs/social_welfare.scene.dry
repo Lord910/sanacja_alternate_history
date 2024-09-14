@@ -19,7 +19,7 @@ The social welfare program, including unemployment insurance, healthcare, and ol
 
 @reduce_spending
 subtitle: This will hurt our proletarian base. +1 Budget
-on-arrival: budget += 1; robotnicy_bbwr -= 6; bezrobotni_bbwr -= 6; robotnicy_kpp += 3; welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; pslp_relation += 5; pschd_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if in_centre_left_coalition; kpp_coalition_dissent += 1; kpp_relation -= 8; inflation -= 0.3; bezrobotni += 0.4
+on-arrival: budget += 1; robotnicy_bbwr -= 6; bezrobotni_bbwr -= 6; robotnicy_kpp += 3; welfare -= 1; colonels_dissent += 10; repairers_dissent += 10; sanacja_left_dissent += 10; liberals_dissent += 5; neorevisionist_dissent += 5; pslp_relation += 5; pschd_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if in_centre_left_coalition; kpp_coalition_dissent += 1; kpp_relation -= 8; inflation -= 0.3; bezrobotni += 0.4
 
 We have reduced levels of social welfare spending. This means more poverty and suffering for the working class. Our detractors claim that we are sacrificing proletarian livelihoods for the sake of class peace with the bourgeoisie. Are they wrong? Are the robotnicy wrong to turn to the Communists, in light of our choices?
 
@@ -28,7 +28,7 @@ We have reduced levels of social welfare spending. This means more poverty and s
 view-if: bezrobotni <= 15
 choose-if: budget > 0
 subtitle: -1 Budget
-on-arrival: budget -= 1; robotnicy_bbwr += 6*(1-dissent); bezrobotni_bbwr += 6*(1-dissent); welfare += 1; reformist_dissent -= 5; labor_dissent -= 5; center_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; coalition_dissent += 1 if welfare > 1; welfare_goal_completed += 1; inflation += 0.3; bezrobotni -= 0.4
+on-arrival: budget -= 1; robotnicy_bbwr += 6*(1-dissent); bezrobotni_bbwr += 6*(1-dissent); welfare += 1; colonels_dissent -= 5; sanacja_left_dissent -= 5; liberals_dissent -= 5; repairers_dissent -= 5; neorevisionist_dissent -= 5; coalition_dissent += 1 if welfare > 1; welfare_goal_completed += 1; inflation += 0.3; bezrobotni -= 0.4
 
 We have increased welfare spending. Our proletarian base is pleased.
 
@@ -48,7 +48,7 @@ We have kept welfare spending the same.
 
 @spending_same_post_depression
 view-if: bezrobotni > 15
-on-arrival: robotnicy_bbwr -= 3; bezrobotni_bbwr -= 4; welfare -= 1; reformist_dissent += 5; left_dissent += 5; labor_dissent += 5; center_dissent += 5; neorevisionist_dissent += 5; kpp_coalition_dissent += 1; kpp_relation -= 8 if in_popular_front or in_left_front
+on-arrival: robotnicy_bbwr -= 3; bezrobotni_bbwr -= 4; welfare -= 1; colonels_dissent += 5; repairers_dissent += 5; sanacja_left_dissent += 5; liberals_dissent += 5; neorevisionist_dissent += 5; kpp_coalition_dissent += 1; kpp_relation -= 8 if in_popular_front or in_left_front
 subtitle: The increased levels of unemployment necessitate more spending on aid.
 
 Increasing welfare spending is necessary in light of the rise in unemployment, so we have essentially cut welfare. The robotnicy are justifiably displeased - we are sacrificing their livelihoods to appease bourgeois demands for austerity.

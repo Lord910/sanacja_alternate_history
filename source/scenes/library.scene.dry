@@ -235,9 +235,9 @@ The Sanacja Left is committed to defending robotnicy’ rights and improving lab
 
 Though they operate within the Sanacja movement, the Sanacja Left maintains a distinct identity, championing the social elements of Piłsudski’s revolution and ensuring that the working classes have a voice in the evolving political landscape. By 1927, they are a key force within Sanacja, balancing the movement’s more right-leaning factions with their focus on social justice and labor rights.
 
-Strength: [+ labor_strength : strength +]
+Strength: [+ sanacja_left_strength : strength +]
 
-Dissent: [+ labor_dissent : dissent +]
+Dissent: [+ sanacja_left_dissent : dissent +]
 
 **Repairers**
 
@@ -247,9 +247,9 @@ The Naprawiacze advocate for a strong, centralized executive authority, particul
 
 While they share the broader Sanacja goal of stabilizing the Polish state, the Naprawiacze push for more radical and immediate transformations than their conservative or liberal counterparts, emphasizing direct action and rapid political restructuring. By the end of 1927, they have firmly established themselves as a force for significant and swift reform within Piłsudski’s movement.
 
-Strength: [+ left_strength : strength +]
+Strength: [+ repairers_strength : strength +]
 
-Dissent: [+ left_dissent : dissent +]
+Dissent: [+ repairers_dissent : dissent +]
 
 **Liberals**
 
@@ -259,9 +259,9 @@ Bartel and his followers are committed to a rational approach to governance, dri
 
 Opposed to both right-wing nationalism and left-wing radicalism, the Liberals position themselves as defenders of a balanced path, one that avoids extremes while fostering modernization. Though their influence begins to wane in the late 1930s, they continue to advocate for centrist policies that align with their vision of a modern, economically stable, and politically moderate Poland.
 
-Strength: [+ center_strength : strength +]
+Strength: [+ liberals_strength : strength +]
 
-Dissent: [+ center_dissent : dissent +]
+Dissent: [+ liberals_dissent : dissent +]
 
 **Colonels (Grupa Pułkowników)**
 
@@ -273,9 +273,9 @@ Unlike the Liberals, who advocate for moderate reforms, or the Conservatives, wh
 
 By establishing the BBWR, Sławek and the Colonels ensure that Piłsudski’s vision is institutionalized and protected, uniting various factions under a singular goal of safeguarding the nation. Their influence is paramount in shaping the course of Sanacja, ensuring that the Piłsudski’s role remains central to the state's governance and that his legacy continues to guide Poland’s political trajectory.
 
-Strength: [+ reformist_strength : strength +]
+Strength: [+ colonels_strength : strength +]
 
-Dissent: [+ reformist_dissent : dissent +]
+Dissent: [+ colonels_dissent : dissent +]
 
 **Conservatives**
 

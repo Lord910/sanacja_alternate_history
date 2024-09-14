@@ -43,23 +43,23 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['repairers', 'liberals', 'sanacja_left', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
+Q.repairers_strength = 15;
+Q.repairers_dissent = 20;
+Q.liberals_strength = 30;
+Q.liberals_dissent = 0;
+Q.sanacja_left_strength = 25;
+Q.sanacja_left_dissent = 5;
+Q.colonels_strength = 25;
+Q.colonels_dissent = 5;
 Q.neorevisionist_strength = 5;
 Q.neorevisionist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
-Q.center_resigned = 0;
-Q.left_split = 0;
+Q.liberals_resigned = 0;
+Q.repairers_split = 0;
 Q.reformists_resigned = 0;
 
 // have we discovered neorevisionism?
@@ -497,8 +497,19 @@ Q.sa_ban_timer = 0;
 Q.sh_ban_timer = 0;
 Q.kpp_ultimatum_timer = 0;
 
+// Sanacja Left advisors
+Q.leipart_advisor = 0; // Theodor Leipart
+Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
+Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 
-// all the initial advisors are centrists.
+// Repairers advisors
+Q.sender_advisor = 0; // Toni Sender
+Q.levi_advisor = 0; // Paul Levi
+Q.levi_dead = 0;
+Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
+Q.seydewitpschd_advisor = 0; // Max Seydewitz
+
+// all the initial advisors are Liberals.
 Q.wels_advisor = 1; // Otto Wels
 Q.muller_advisor = 1; // Hermann Müller
 Q.muller_dead = 0;
@@ -506,31 +517,18 @@ Q.muller_dead = 0;
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 1; // Rudolf Hilferding
 
-// left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
-Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitpschd_advisor = 0; // Max Seydewitz
-
-// centrist alternate advisors
+// Liberal alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
-// Reformist advisors
+// Colonels advisors
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacpschd_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
-// Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-
-// Revisionist advisors
+// Conservative advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
-
 Q.leber_advisor = 0; // Julius Leber (post-1930)
 Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 
@@ -538,17 +536,19 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
+
 !}
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"The May days have become a starting point in the political life of the state for the enormous growth of the power and strength of the government, while simultaneously weakening the legislative factor: the parliament. The omnipotence of the legislative Sejm led after a few years to the fall of the Sejm and contributed to the omnipotence of the government. The state wavers between these two abnormal and harmful states. It is high time to bring them to balance and to harmonious cooperation between the legislative and executive authorities."*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Ignacy Daszyński, *On the First Anniversary of the May Coup*, 1927
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a **, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+
+For more information on the politics and government of the Polish Republic, see the “Library” page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
 - @1928_easy: Begin (easy difficulty)
 - @1928_main: Begin (normal difficulty)
@@ -560,7 +560,7 @@ on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpp_re
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; pschd_relation = 41; kpp_relation = 16; pslp_relation = 31;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; colonels_dissent = 25; repairers_dissent = 30; sanacja_left_dissent = 25; liberals_dissent = 25; pschd_relation = 41; kpp_relation = 16; pslp_relation = 31;
 go-to: 1928_main
 
 @1928_historical
@@ -571,10 +571,10 @@ Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
 Q.rb_strength = 2000;
-Q.reformist_dissent = 25;
-Q.left_dissent = 30;
-Q.labor_dissent = 25;
-Q.center_dissent = 25;
+Q.colonels_dissent = 25;
+Q.repairers_dissent = 30;
+Q.sanacja_left_dissent = 25;
+Q.liberals_dissent = 25;
 Q.pschd_relation = 41;
 Q.kpp_relation = 16;
 Q.pslp_relation = 31;
@@ -590,8 +590,9 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a bright time for Independent Poland. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. We've brought long awaited political stability to public life.
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Józef Piłsudski is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
+Now, the task of Sanacja is to prepare for the next election. The caretaker government of Józef Piłsudski is preparing for 1928 elections. It will be a major test for our political vision.
+
 
 

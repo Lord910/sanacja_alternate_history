@@ -2,8 +2,8 @@ title: Unions Declare Independence
 new-page: true 
 subtitle: Labor's disagreements with our policies have grown too severe.
 tags: event
-view-if: labor_dissent >= 60
-on-arrival: unions_independent = 1; labor_strength = labor_strength/2; robotnicy_bbwr -= 20; bezrobotni_bbwr -= 10; robotnicy_other += 5; robotnicy_kpp += 5; robotnicy_owp += 5; n_advisors -= 1 if woytinsky_advisor == 1; n_advisors -= 1 if leipart_advisor == 1; woytinsky_advisor = 0; leipart_advisor = 0; rb_strength -= 600; 
+view-if: sanacja_left_dissent >= 60
+on-arrival: unions_independent = 1; sanacja_left_strength = sanacja_left_strength/2; robotnicy_bbwr -= 20; bezrobotni_bbwr -= 10; robotnicy_other += 5; robotnicy_kpp += 5; robotnicy_owp += 5; n_advisors -= 1 if woytinsky_advisor == 1; n_advisors -= 1 if leipart_advisor == 1; woytinsky_advisor = 0; leipart_advisor = 0; rb_strength -= 600; 
 max-visits: 1
 
 = Unions Declare Independence

@@ -13,26 +13,26 @@ max-visits: 4
 
 The industrial Ruhr region is aflame with labor unrest. The employers have started a major lockout to force the robotnicy to take more cuts to wages and benefits.  There is a need for the Labor Ministry to arbitrate in conflicts between employers and robotnicy.
 
-- @support_labor: Support labor in their demands.
+- @support_sanacja_left: Support labor in their demands.
 - @support_employers: Support the employers in their demands.
 - @balance: Try to strike a compromise between the sides.
 - @easy_discard
 
-@support_labor
+@support_sanacja_left
 subtitle: Popular among the robotnicy, this will alienate the bourgeoisie.
-on-arrival: labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; robotnicy_bbwr += 6*(1-dissent); coalition_dissent += 1; pslp_relation -= 4; capital_strike_progress += 1 if pslp_relation <= 30; capital_strike_progress += 1 if bezrobotni > 15; capital_strike_progress += 1 if bezrobotni > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1
+on-arrival: sanacja_left_strength += 5; sanacja_left_dissent -= 5; repairers_dissent -= 5; robotnicy_bbwr += 6*(1-dissent); coalition_dissent += 1; pslp_relation -= 4; capital_strike_progress += 1 if pslp_relation <= 30; capital_strike_progress += 1 if bezrobotni > 15; capital_strike_progress += 1 if bezrobotni > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1
 
 Supporting labor is always popular in the BBWR, although many of our coalition partners represent employers, and they are less enthused.
 
 @support_employers
 subtitle: Popular among the bourgeoisie, much less so among the robotnicy.
-on-arrival: labor_dissent += 8; robotnicy_bbwr -= 3; coalition_dissent -= 1; pslp_relation += 5; pschd_relation += 5; robotnicy_kpp += 3; kpp_coalition_dissent += 1; kpp_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1
+on-arrival: sanacja_left_dissent += 8; robotnicy_bbwr -= 3; coalition_dissent -= 1; pslp_relation += 5; pschd_relation += 5; robotnicy_kpp += 3; kpp_coalition_dissent += 1; kpp_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1
 
 The more radical robotnicy despise our suppression of their strikes, recalling the days of Friedrich Ebert.
 
 @balance
 subtitle: Both sides need to share the pain in the current crisis.
-on-arrival: labor_dissent += 4; robotnicy_bbwr -= 2; kpp_coalition_dissent += 1; kpp_relation -= 5
+on-arrival: sanacja_left_dissent += 4; robotnicy_bbwr -= 2; kpp_coalition_dissent += 1; kpp_relation -= 5
 
 Many robotnicy are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces.
 

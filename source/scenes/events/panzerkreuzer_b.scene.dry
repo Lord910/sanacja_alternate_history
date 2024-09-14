@@ -17,7 +17,7 @@ Much of our party is deeply opposed to rearmament, while the center and right pa
 - @ministry: Use the Reichswehr Ministry to prevent the construction.
 
 @vote_yes
-on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5 if not panzerkreuzer_funded; neorevisionist_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; robotnicy_bbwr -= 4
+on-arrival: repairers_dissent += 10; sanacja_left_dissent += 5; liberals_dissent += 5; colonels_dissent += 5 if not panzerkreuzer_funded; neorevisionist_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; robotnicy_bbwr -= 4
 
 Our grassroots party members are highly critical of our decision. Many party branches have increased their agitation against our parliamentary fraction. [? if panzerkreuzer_funded : However, given the construction of the previous battlecruiser, this seemed to be a foregone conclusion, and the reaction is muted. ?]
 
@@ -30,7 +30,7 @@ go-to: built if bbwr_r + kpp_r + pslw_r < 50; not_built if bbwr_r + kpp_r + pslw
 Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_centre_left_coalition or in_democratic_left_coalition: , including our coalition partners ?][? if bbwr_toleration: , including the minority government that we are currently supporting ?].
 
 @abstain
-on-arrival: pslp_relation -= 5; pschd_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_relation -= 3
+on-arrival: pslp_relation -= 5; pschd_relation -= 3; repairers_dissent += 5; sanacja_left_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpp_relation -= 3
 
 The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Reichstag passes, with all parties in favor except the BBWR and KPP. The ship will be built.
 

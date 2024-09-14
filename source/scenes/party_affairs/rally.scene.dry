@@ -62,12 +62,12 @@ Mass rallies are a common feature of social democratic life, especially in the l
 - @easy_discard
 
 @class_struggle
-on-arrival: robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 3*(1-dissent) if left_strength > reformist_strength; robotnicy_bbwr += 4*(1-dissent) if nationalization_progress > 0; bezrobotni_bbwr += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; klasa_wyzsza_bbwr -= 3; klasa_srednia_bbwr -= 2;
+on-arrival: robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 3*(1-dissent) if repairers_strength > colonels_strength; robotnicy_bbwr += 4*(1-dissent) if nationalization_progress > 0; bezrobotni_bbwr += 3*(1-dissent) if nationalization_progress > 0; repairers_strength += 5; repairers_dissent -= 5; klasa_wyzsza_bbwr -= 3; klasa_srednia_bbwr -= 2;
 
 Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 
 @welfare
-on-arrival: robotnicy_bbwr += 3*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if welfare > 0; bezrobotni_bbwr += 3*(1-dissent) if welfare > 0; bezrobotni_bbwr += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
+on-arrival: robotnicy_bbwr += 3*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if welfare > 0; bezrobotni_bbwr += 3*(1-dissent) if welfare > 0; bezrobotni_bbwr += 4*(1-dissent) if welfare > 1; colonels_strength += 3; sanacja_left_strength += 4; colonels_dissent -= 3; sanacja_left_dissent -= 3;
 
 The reformist message appeals to the organized robotnicy, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 

@@ -26,12 +26,12 @@ on-arrival: resources -= 1; kpp_inter_party_seen += 1
 go-to: kpp_blutmai if blutmai = 1; kpp_1 if blutmai = 0 and kpp_coalition_success = 0; kpp_2 if kpp_coalition_success = 1
 
 @kpp_1
-on-arrival: kpp_relation += 6*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; reformist_dissent += 2; pschd_relation -= 2; pslp_relation -= 3
+on-arrival: kpp_relation += 6*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; colonels_dissent += 2; pschd_relation -= 2; pslp_relation -= 3
 
 The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
 
 @kpp_2
-on-arrival: kpp_relation += 8*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; reformist_dissent += 2; pschd_relation -= 3; pslp_relation -= 3
+on-arrival: kpp_relation += 8*(1 - dissent); communist_coalition += 1 if kpp_inter_party_seen <= 1; colonels_dissent += 2; pschd_relation -= 3; pslp_relation -= 3
 
 After the success of the coalition government with the KPP, they are much more amenable to us.
 
