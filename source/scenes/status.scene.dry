@@ -30,35 +30,27 @@ Prime Minister: [+ chancellor +] ([+ chancellor_party +])
 
 Sejm composition:
 
-# 1928: 10, 1930: 13
 KPP: [+ kpp_r +]%
 
-# 1928: TODO
 PPS: [+ pps_r +]%
-# 1928: 5, 1930: 4 (as DstP)
+
 PSL-W: [+ pslw_r +]%
-# 1928: TODO
+
 SCh: [+ sch_r +]%
 
-# 1928: 9, 1930: 10
-Others: [+ other_r +]%
+Minorities: [+ other_r +]%
 
-# 1928: 30, 1930: 25, 1932: 22
 BBWR: [+ bbwr_r +]%
 
-
-# 1928: TODO
 NPR: [+ npr_r +]%
-# 1928: 15, 1930: 15, 1932: 
+
 PSCHD: [+ pschd_r +]%
-# 1928: 9, 1930: 5
+
 PSL-P: [+ pslp_r +]%
-# 1928: 14, 1930: 7
+
 SN: [+ sn_r +]%
-# 1928: 3, 1930: 18
+
 OWP: [+ owp_r +]%
-
-
 
 
 [? if bbwr_in_government = 1 : Budget: [+ budget +] ?]
