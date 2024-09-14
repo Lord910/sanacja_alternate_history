@@ -76,14 +76,21 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Inter-party Relations
 
+KPP: [+ kpp_relation : relationships +]
 
-PSCHD: [+ pschd_relation : relationships +]
+PPS: [+ pps_relation : relationships +]
+
+SCh: [+ sch_relation : relationships +]
 
 PSL-W: [+ pslw_relation : relationships +]
 
-PSL-P: [+ pslp_relation : relationships +]
+Minorities: [+ other_relation : relationships +]
 
-KPP: [+ kpp_relation : relationships +]
+NPR: [+ npr_relation : relationships +]
+
+PSCHD: [+ pschd_relation : relationships +]
+
+PSL-P: [+ pslp_relation : relationships +]
 
 SN: [+ sn_relation : relationships +]
 
