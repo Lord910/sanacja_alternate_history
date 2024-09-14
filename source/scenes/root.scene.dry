@@ -204,27 +204,27 @@ Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.robotnicy_pps = 30;
-Q.robotnicy_bbwr = 20;
-Q.robotnicy_kpp = 15;
-Q.robotnicy_pschd = 20;
-Q.robotnicy_npr = 15;
+Q.robotnicy_pps = 25;
+Q.robotnicy_bbwr = 35;
+Q.robotnicy_kpp = 10;
+Q.robotnicy_pschd = 10;
+Q.robotnicy_npr = 10;
 Q.robotnicy_pslw = 0;
-Q.robotnicy_sch = 0;
+Q.robotnicy_sch = 5;
 Q.robotnicy_pslp = 0;
 Q.robotnicy_sn = 5;
 Q.robotnicy_owp = 0;
 Q.robotnicy_other = 0;
 
 Q.klasa_wyzsza_pps = 0;
-Q.klasa_wyzsza_bbwr = 35;
+Q.klasa_wyzsza_bbwr = 45;
 Q.klasa_wyzsza_kpp = 0;
-Q.klasa_wyzsza_pschd = 35;
+Q.klasa_wyzsza_pschd = 20;
 Q.klasa_wyzsza_npr = 0;
 Q.klasa_wyzsza_pslw = 0;
 Q.klasa_wyzsza_sch = 0;
 Q.klasa_wyzsza_pslp = 10;
-Q.klasa_wyzsza_sn = 50;
+Q.klasa_wyzsza_sn = 25;
 Q.klasa_wyzsza_owp = 0;
 Q.klasa_wyzsza_other = 0;
 
@@ -234,31 +234,31 @@ Q.klasa_srednia_kpp = 0;
 Q.klasa_srednia_pschd = 10;
 Q.klasa_srednia_npr = 5;
 Q.klasa_srednia_pslw = 0;
-Q.klasa_srednia_sch = 0;
+Q.klasa_srednia_sch = 5;
 Q.klasa_srednia_pslp = 10;
-Q.klasa_srednia_sn = 25;
+Q.klasa_srednia_sn = 20;
 Q.klasa_srednia_owp = 0;
 Q.klasa_srednia_other = 0;
 
 Q.chlopi_pps = 5;
-Q.chlopi_bbwr = 45;
+Q.chlopi_bbwr = 40;
 Q.chlopi_kpp = 5;
 Q.chlopi_pschd = 5;
 Q.chlopi_npr = 0;
 Q.chlopi_pslw = 25;
 Q.chlopi_sch = 15;
-Q.chlopi_pslp = 20;
+Q.chlopi_pslp = 10;
 Q.chlopi_sn = 10;
 Q.chlopi_owp = 0;
 Q.chlopi_other = 0;
 
-Q.bezrobotni_pps = 35;
-Q.bezrobotni_bbwr = 45;
+Q.bezrobotni_pps = 20;
+Q.bezrobotni_bbwr = 35;
 Q.bezrobotni_kpp = 15;
 Q.bezrobotni_pschd = 5;
-Q.bezrobotni_npr = 20;
+Q.bezrobotni_npr = 10;
 Q.bezrobotni_pslw = 0;
-Q.bezrobotni_sch = 0;
+Q.bezrobotni_sch = 5;
 Q.bezrobotni_pslp = 0;
 Q.bezrobotni_sn = 10;
 Q.bezrobotni_owp = 0;
