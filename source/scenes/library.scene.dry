@@ -123,17 +123,88 @@ SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: BBWR: [+ robotnicy_bbwr_normalized +]%, PSCHD: [+ robotnicy_pschd_normalized +]%, KPP: [+ robotnicy_kpp_normalized +]%, PSL-W: [+ robotnicy_pslw_normalized +]%, PPS: [+ robotnicy_pps_normalized +]%, PSL-P: [+ robotnicy_pslp_normalized +]%, SN: [+ robotnicy_sn_normalized +]%, OWP: [+ robotnicy_owp_normalized +]%, SCh: [+ robotnicy_sch_normalized +]%, Mniejszości: [+ robotnicy_other_normalized +]%
+Workers: 
+KPP: [+ robotnicy_kpp_normalized +]%, 
+PPS: [+ robotnicy_pps_normalized +]%, 
+SCh: [+ robotnicy_sch_normalized +]%, 
+PSL-W: [+ robotnicy_pslw_normalized +]%, 
+Minorities: [+ robotnicy_other_normalized +]%
+BBWR: [+ robotnicy_bbwr_normalized +]%, 
+NPR: [+ robotnicy_npr_normalized +]%, 
+PSCHD: [+ robotnicy_pschd_normalized +]%, 
+PSL-P: [+ robotnicy_pslp_normalized +]%, 
+SN: [+ robotnicy_sn_normalized +]%, 
+OWP: [+ robotnicy_owp_normalized +]%, 
 
-New Middle Class: BBWR: [+ klasa_srednia_bbwr_normalized +]%, PSCHD: [+ klasa_srednia_pschd_normalized +]%, KPP: [+ klasa_srednia_kpp_normalized +]%, PSL-W: [+ klasa_srednia_pslw_normalized +]%, PPS: [+ klasa_srednia_pps_normalized +]%, PSL-P: [+ klasa_srednia_pslp_normalized +]%, SN: [+ klasa_srednia_sn_normalized +]%, OWP: [+ klasa_srednia_owp_normalized +]%, SCh: [+ klasa_srednia_sch_normalized +]%, Mniejszości: [+ klasa_srednia_other_normalized +]%
 
-Old Middle Class: BBWR: [+ klasa_wyzsza_bbwr_normalized +]%, PSCHD: [+ klasa_wyzsza_pschd_normalized +]%, KPP: [+ klasa_wyzsza_kpp_normalized +]%, PSL-W: [+ klasa_wyzsza_pslw_normalized +]%, PPS: [+ klasa_wyzsza_pps_normalized +]%, PSL-P: [+ klasa_wyzsza_pslp_normalized +]%, SN: [+ klasa_wyzsza_sn_normalized +]%, OWP: [+ klasa_wyzsza_owp_normalized +]%, SCh: [+ klasa_wyzsza_sch_normalized +]%, Mniejszości: [+ klasa_wyzsza_other_normalized +]%
+New Middle Class: 
+KPP: [+ klasa_srednia_kpp_normalized +]%, 
+PPS: [+ klasa_srednia_pps_normalized +]%, 
+SCh: [+ klasa_srednia_sch_normalized +]%, 
+PSL-W: [+ klasa_srednia_pslw_normalized +]%, 
+Minorities: [+ klasa_srednia_other_normalized +]%
+BBWR: [+ klasa_srednia_bbwr_normalized +]%, 
+NPR: [+ klasa_srednia_npr_normalized +]%, 
+PSCHD: [+ klasa_srednia_pschd_normalized +]%, 
+PSL-P: [+ klasa_srednia_pslp_normalized +]%, 
+SN: [+ klasa_srednia_sn_normalized +]%, 
+OWP: [+ klasa_srednia_owp_normalized +]%, 
 
-Peasents: BBWR: [+ chlopi_bbwr_normalized +]%, PSCHD: [+ chlopi_pschd_normalized +]%, KPP: [+ chlopi_kpp_normalized +]%, PSL-W: [+ chlopi_pslw_normalized +]%, PPS: [+ chlopi_pps_normalized +]%, PSL-P: [+ chlopi_pslp_normalized +]%, SN: [+ chlopi_sn_normalized +]%, OWP: [+ chlopi_owp_normalized +]%, SCh: [+ chlopi_sch_normalized +]%, Mniejszości: [+ chlopi_other_normalized +]%
 
-Unemployment: BBWR: [+ bezrobotni_bbwr_normalized +]%, PSCHD: [+ bezrobotni_pschd_normalized +]%, KPP: [+ bezrobotni_kpp_normalized +]%, PSL-W: [+ bezrobotni_pslw_normalized +]%, PPS: [+ bezrobotni_pps_normalized +]%, PSL-P: [+ bezrobotni_pslp_normalized +]%, SN: [+ bezrobotni_sn_normalized +]%, OWP: [+ bezrobotni_owp_normalized +]%, SCh: [+ bezrobotni_sch_normalized +]%, Mniejszości: [+ bezrobotni_other_normalized +]%
+Old Middle Class: 
+KPP: [+ klasa_wyzsza_kpp_normalized +]%,
+PPS: [+ klasa_wyzsza_pps_normalized +]%, 
+SCh: [+ klasa_wyzsza_sch_normalized +]%, 
+PSL-W: [+ klasa_wyzsza_pslw_normalized +]%, 
+Minorities: [+ klasa_wyzsza_other_normalized +]%
+BBWR: [+ klasa_wyzsza_bbwr_normalized +]%, 
+NPR: [+ klasa_wyzsza_npr_normalized +]%, 
+PSCHD: [+ klasa_wyzsza_pschd_normalized +]%, 
+PSL-P: [+ klasa_wyzsza_pslp_normalized +]%, 
+SN: [+ klasa_wyzsza_sn_normalized +]%, 
+OWP: [+ klasa_wyzsza_owp_normalized +]%, 
 
-Minorities: BBWR: [+ mniejszosci_bbwr_normalized +]%, PSCHD: [+ mniejszosci_pschd_normalized +]%, KPP: [+ mniejszosci_kpp_normalized +]%, PSL-W: [+ mniejszosci_pslw_normalized +]%, PPS: [+ mniejszosci_pps_normalized +]%, PSL-P: [+ mniejszosci_pslp_normalized +]%, SN: [+ mniejszosci_sn_normalized +]%, OWP: [+ mniejszosci_owp_normalized +]%, SCh: [+ mniejszosci_sch_normalized +]%, Mniejszości: [+ mniejszosci_other_normalized +]%
+
+Peasents: 
+KPP: [+ chlopi_kpp_normalized +]%, 
+PPS: [+ chlopi_pps_normalized +]%, 
+SCh: [+ chlopi_sch_normalized +]%, 
+PSL-W: [+ chlopi_pslw_normalized +]%, 
+Minorities: [+ chlopi_other_normalized +]%
+BBWR: [+ chlopi_bbwr_normalized +]%, 
+NPR: [+ chlopi_npr_normalized +]%, 
+PSCHD: [+ chlopi_pschd_normalized +]%, 
+PSL-P: [+ chlopi_pslp_normalized +]%, 
+SN: [+ chlopi_sn_normalized +]%, 
+OWP: [+ chlopi_owp_normalized +]%, 
+
+
+Unemployment:
+KPP: [+ bezrobotni_kpp_normalized +]%, 
+PPS: [+ bezrobotni_pps_normalized +]%, 
+SCh: [+ bezrobotni_sch_normalized +]%, 
+PSL-W: [+ bezrobotni_pslw_normalized +]%, 
+Minorities: [+ bezrobotni_other_normalized +]%
+BBWR: [+ bezrobotni_bbwr_normalized +]%, 
+NPR:[+ bezrobotni_npr_normalized +]%, 
+PSCHD: [+ bezrobotni_pschd_normalized +]%, 
+PSL-P: [+ bezrobotni_pslp_normalized +]%, 
+SN: [+ bezrobotni_sn_normalized +]%, 
+OWP: [+ bezrobotni_owp_normalized +]%, 
+
+
+Minorities: 
+KPP: [+ mniejszosci_kpp_normalized +]%, 
+PPS: [+ mniejszosci_pps_normalized +]%, 
+SCh: [+ mniejszosci_sch_normalized +]%, 
+PSL-W: [+ mniejszosci_pslw_normalized +]%, 
+Minorities: [+ mniejszosci_other_normalized +]%
+BBWR: [+ mniejszosci_bbwr_normalized +]%, 
+NPR: [+ mniejszosci_npr_normalized +]%, 
+PSCHD: [+ mniejszosci_pschd_normalized +]%, 
+PSL-P: [+ mniejszosci_pslp_normalized +]%, 
+SN: [+ mniejszosci_sn_normalized +]%, 
+OWP: [+ mniejszosci_owp_normalized +]%, 
 
 
 @parties
