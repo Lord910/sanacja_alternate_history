@@ -62,13 +62,13 @@ The KPP is not interested in a "toleration" arrangement; they will only support 
 
 @support_kpp_grand
 
-- @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
-- @election_1928.left_coalition
+#- @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
+#- @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.
 
 @support_kpp_weimar
 
-- @election_1928.left_coalition
+#- @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.
 
 

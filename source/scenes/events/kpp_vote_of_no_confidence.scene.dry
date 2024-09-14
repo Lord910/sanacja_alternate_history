@@ -54,8 +54,8 @@ unavailable-subtitle: [? if centre_left_coalition < 50 : This would not give us 
 
 We could try to boot the KPP from our governing coalition, and form a new government with the bourgeois parties.
 
-- @election_1928.democratic_left_coalition: Form a Weimar Coalition?
-- @election_1928.centre_left_coalition: Form a Grand Coalition?
+#- @election_1928.democratic_left_coalition: Form a Weimar Coalition?
+#- @election_1928.centre_left_coalition: Form a Grand Coalition?
 - @let_it_happen: There is nothing we can do.
 
 
