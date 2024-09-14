@@ -325,27 +325,27 @@ view-if: not historical_mode or not bbwr_prussia
 on-arrival: chancellor = "Piłsudski"
 go-to: ministries
 
-Józef Piłsudski has become chancellor of the BBWR majority
+Józef Piłsudski has become Prime Minister of the BBWR majority
 
 @bartel_majority_chancellor
 on-arrival: chancellor = "Bartel"
 go-to: ministries
 
-Kazimierz Bartel has become chancellor of the BBWR majority.
+Kazimierz Bartel has become Prime Minister of the BBWR majority.
 
 @switalski_majority_chancellor
 view-if: muller_dead = 0
 on-arrival: chancellor = "Świtalski"
 go-to: ministries
 
-Kazimierz Świtalski has become chancellor of the BBWR majority.
+Kazimierz Świtalski has become Prime Minister of the BBWR majority.
 
 @moraczewski_majority_chancellor
 view-if: muller_dead = 1
 on-arrival: chancellor = "Moraczewski"
 go-to: ministries
 
-Jędrzej Moraczewski has become chancellor of the BBWR majority.
+Jędrzej Moraczewski has become Prime Minister of the BBWR majority.
 
 @bbwr_minority
 title: BBWR minority government
@@ -368,27 +368,27 @@ view-if: not historical_mode or not bbwr_prussia
 on-arrival: chancellor = "Piłsudski"
 go-to: ministries
 
-Józef Piłsudski has become chancellor of the BBWR minority
+Józef Piłsudski has become Prime Minister of the BBWR minority
 
 @bartel_minority_chancellor
 on-arrival: chancellor = "Bartel"
 go-to: ministries
 
-Kazimierz Bartel has become chancellor of the BBWR minority.
+Kazimierz Bartel has become Prime Minister of the BBWR minority.
 
 @switalski_minority_chancellor
 view-if: muller_dead = 0
 on-arrival: chancellor = "Świtalski"
 go-to: ministries
 
-Kazimierz Świtalski has become chancellor of the BBWR minority.
+Kazimierz Świtalski has become Prime Minister of the BBWR minority.
 
 @moraczewski_minority_chancellor
 view-if: muller_dead = 1
 on-arrival: chancellor = "Moraczewski"
 go-to: ministries
 
-Jędrzej Moraczewski has become chancellor of the BBWR minority.
+Jędrzej Moraczewski has become Prime Minister of the BBWR minority.
 
 
 @ministries
