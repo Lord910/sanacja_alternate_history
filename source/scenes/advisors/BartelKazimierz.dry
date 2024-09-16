@@ -8,7 +8,7 @@ view-if: bartel_advisor = 1
 = Kazimierz Bartel
 
 
-Bartel is a former [? if chancellor = "Bartel": and current ?] Prime Minisster, and is a leader of Liberal faction.
+Bartel is a former [? if chancellor = "Bartel": and current ?] Prime Minister, and is a leader of Liberal faction.
 
 - @coalition
 - @toleration
