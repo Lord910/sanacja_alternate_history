@@ -5,21 +5,15 @@ card-image: img/portraits/MoraczewskiJedrzej.jpg
 view-if: moraczewski_advisor = 1
 new-page: true 
 
-
 = Jędrzej Moraczewski
 
 Moraczewski was first Prime Minister of Poland and a prominent socialist politician who advocated for workers' rights and social reform.
 
 - @organizing
 - @economic_recovery
-- @union_unity
 - @root: Return to main
 
-# Moraczewski was instrumental in establishing labor reforms in post-World War I Poland.
-#- @union_cooperation
-
 @organizing
-
 title: Organizing workers
 subtitle: Improve our standing among the workers.
 choose-if: advisor_action_timer <= 0
@@ -27,7 +21,6 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; robotnicy_bbwr += 4*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if wtb_adopted == 1; sanacja_left_strength += 2;
 
 We have increased our organizing among the workers.
-
 
 @economic_recovery
 title: Tackling the Economic Crisis
