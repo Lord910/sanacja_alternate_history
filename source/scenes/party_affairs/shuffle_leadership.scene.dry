@@ -112,14 +112,14 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 # labor
 
-@remove_leipart
-title: Remove Leipart
+@remove_moraczewski
+title: Remove Moraczewski
 view-if: moraczewski_advisor = 1
 tags: remove_advisor
 on-arrival: moraczewski_advisor = 0; sanacja_left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Leipart has been removed as an advisor. The Sanacja Left disapproves.
+Moraczewski has been removed as an advisor. The Sanacja Left disapproves.
 
 @remove_aufhauser
 title: Remove Aufhäuser
@@ -463,17 +463,17 @@ Max Seydewitz is now an advisor.
 
 # labor
 
-@add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation.
+@add_moraczewski
+title: Jędrzej Moraczewski
+subtitle: Jędrzej Moraczewski is former Prime Minister and socialist politician.
 is-card: true
-card-image: img/portraits/LeipartTheodor.jpg
+card-image: img/portraits/MoraczewskiJedrzej.jpg
 tags: sanacja_left_advisor
 view-if: moraczewski_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: moraczewski_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+Jędrzej Moraczewski is now an advisor.
 
 @add_aufhauser
 title: Siegfried Aufhäuser

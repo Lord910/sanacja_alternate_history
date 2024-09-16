@@ -502,7 +502,7 @@ Q.sh_ban_timer = 0;
 Q.kpp_ultimatum_timer = 0;
 
 // Sanacja Left advisors
-Q.moraczewski_advisor = 0; // Theodor Leipart
+Q.moraczewski_advisor = 0; // Jedrzej Moraczewski
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 
