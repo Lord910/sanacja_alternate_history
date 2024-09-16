@@ -514,7 +514,7 @@ Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
 Q.seydewitpschd_advisor = 0; // Max Seydewitz
 
 // all the initial advisors are Liberals.
-Q.wels_advisor = 1; // Otto Wels
+Q.slawek_advisor = 1; // Walery Sławek
 Q.bartel_advisor = 1; // Kazimierz Bartel
 Q.bartel_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...

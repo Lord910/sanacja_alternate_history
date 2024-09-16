@@ -1,13 +1,13 @@
-title: Otto Wels
+title: Walery Sławek
 is-pinned-card: true
-tags: advisor, centrist
-card-image: img/portraits/WelsOtto.jpg
-view-if: wels_advisor = 1
+tags: advisor, colonels
+card-image: img/portraits/SlawekWalery.jpg
+view-if: slawek_advisor = 1
 new-page: true
 
-= Otto Wels
+= Walery Sławek
 
-Wels is the long-time chairman of the BBWR. He is a gifted organizer and a member of the centrist faction.
+Walery Sławek is one of the oldest and most loyal followers of Józef Piłsudski. He is a leader of Colonels faction and chairman of BBWR.
 
 - @clear_agenda
 - @party_discipline

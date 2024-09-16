@@ -13,7 +13,7 @@ on-arrival: bartel_died_in_office = 1
 Chancellor Kazimierz Bartel has died while in office. He will be greatly missed. But now, we must select a new Chancellor.
 
 - @braun_chancellor: Otto Braun (BBWR) for Chancellor.
-- @wels_chancellor: Otto Wels (BBWR) for Chancellor.
+- @slawek_chancellor: Walery Sławek (BBWR) for Chancellor.
 - @breitscheid_chancellor: Rudolf Breitscheid (BBWR) for Chancellor.
 - @bruning_chancellor: Let Heinrich Bruning of the Center Party become Chancellor.
 
@@ -24,9 +24,9 @@ subtitle: The Center Party is worried about having so much power in one man.
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
 
 
-@wels_chancellor
-on-arrival: chancellor = "Wels"; chancellor_party = "BBWR"; pschd_relation -= 3; pslp_relation -= 3
-subtitle: He is a good organizer, but is he also a good chancellor?
+@slawek_chancellor
+on-arrival: chancellor = "Sławek"; chancellor_party = "BBWR"; pschd_relation -= 3; pslp_relation -= 3
+subtitle: He is a good organizer, but is he also a good Prime Minister?
 
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
 
