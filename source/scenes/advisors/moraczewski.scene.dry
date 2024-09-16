@@ -1,0 +1,65 @@
+title: Jędrzej Moraczewski
+is-pinned-card: true
+tags: advisor, sanacja_left
+card-image: img/portraits/MoraczewskiJedrzej.jpg
+view-if: moraczewski_advisor = 1
+new-page: true 
+
+
+= Jędrzej Moraczewski
+
+Moraczewski was first Prime Minister of Poland and a prominent socialist politician who advocated for workers' rights and social reform.
+
+- @organizing
+- @economic_recovery
+- @union_unity
+- @root: Return to main
+
+# Moraczewski was instrumental in establishing labor reforms in post-World War I Poland.
+#- @union_cooperation
+
+# leipart was one of the people who argued for union independence
+#- @union_unity
+
+@organizing
+
+title: Organizing workers
+subtitle: Improve our standing among the workers.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; robotnicy_bbwr += 4*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if wtb_adopted == 1; sanacja_left_strength += 2;
+
+We have increased our organizing among the workers.
+
+
+@economic_recovery
+title: Tackling the Economic Crisis
+subtitle: Develop a strategy to lift Poland out of economic difficulty.
+choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already enacted the Social Reforms Plan. ?]
+on-arrival: advisor_action_timer = 6; wtb_support += 2; liberals_dissent += 10; sanacja_left_strength += 1
+
+Moraczewski has promoted the Social Reforms Plan as the solution to the economic challenges Poland faces after the war. He continues to campaign for its acceptance within the government and unions.
+
+@union_unity
+
+title: Union-party coordination
+subtitle: Reduce dissent among the unions.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; sanacja_left_dissent -= 5;
+
+We have improved coordination between the government and the labor unions, reducing dissent among left-wing factions.
+
+
+
+
+
+
+
+
+
+
+
+
+

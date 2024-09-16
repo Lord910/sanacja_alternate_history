@@ -114,9 +114,9 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_leipart
 title: Remove Leipart
-view-if: leipart_advisor = 1
+view-if: moraczewski_advisor = 1
 tags: remove_advisor
-on-arrival: leipart_advisor = 0; sanacja_left_dissent += 5; n_advisors -= 1
+on-arrival: moraczewski_advisor = 0; sanacja_left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Leipart has been removed as an advisor. The Sanacja Left disapproves.
@@ -469,8 +469,8 @@ subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Fede
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: sanacja_left_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
+view-if: moraczewski_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: moraczewski_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
 go-to: advisor_menu
 
 Theodor Leipart is now an advisor.
