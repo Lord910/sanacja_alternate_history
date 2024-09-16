@@ -1,0 +1,51 @@
+title: Gabriel Czechowicz
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/CzechowiczGabriel.jpg
+view-if: czechowicz_advisor = 1
+new-page: true
+
+= Gabriel Czechowicz
+
+Gabriel Czechowicz is an economist whose early views leaned toward the left, advocating for progressive reforms and state intervention. However, after becoming Finance Minister in 1926, he adopted a more conservative approach, embracing policies he once criticized, focusing on balanced budgets and fiscal restraint. Which economic ideas will he choose?
+- @against_right_and_left
+- @toleration
+- @finance_ministry_
+- @economic_democracy_
+- @root: Return to main
+
+@find_funding
+title: Fund BBWR
+subtitle: Secure financial support for the BBWR.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; resources += dues
+
+We have gained +[+ dues +] resources for the BBWR's activities.
+
+@finance_ministry_
+title: Fiscal Policy
+subtitle: As Finance Minister, Czechowicz can enact tax policies.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if bbwr_in_government = 0 : BBWR not in government: ?] [? if finance_minister_party != "BBWR" : The BBWR does not control the finance ministry. ?]
+choose-if: advisor_action_timer == 0 and bbwr_in_government == 1 and finance_minister_party == "BBWR"
+on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6
+go-to: fiscal_policy
+
+@choose_economic_policy
+title: Choose Economic Policy
+subtitle: Decide the direction of economic management.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if bbwr_in_government = 0 : BBWR not in government: ?] [? if finance_minister_party != "BBWR" : The BBWR does not control the finance ministry. ?]
+choose-if: advisor_action_timer == 0 and bbwr_in_government == 1 and finance_minister_party == "BBWR"
+on-arrival: advisor_action_timer = 6; economic_policy_timer -= 12
+go-to: economic_policy
+
+@deal_with_crisis
+title: Deal with Economic Crisis
+subtitle: Respond to economic instability or depression.
+choose-if: advisor_action_timer <= 0 and wtb_adopted == 0 and black_thursday_seen == 1 and wtb_support <= 3
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
+on-arrival: advisor_action_timer = 6
+go-to: crisis_program
+
+Czechowicz needs to take action to address the economic crisis.
+

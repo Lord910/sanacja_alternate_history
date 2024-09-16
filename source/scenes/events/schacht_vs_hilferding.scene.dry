@@ -13,7 +13,7 @@ Of course, this criticism is unfounded, but the bourgeois establishment does not
 
 - @expose_him: Expose his reactionary dealings!
 - @work_with: Work with him to shape the budget.
-- @hilferding_resign: Hilferding must resign.
+- @czechowicz_resign: Hilferding must resign.
 
 @expose_him
 view-if: investigate_far_right >= 1
@@ -25,10 +25,10 @@ We expose to the public Schacht's dealings with the Nazis. For better or worse, 
 
 After a second budget proposal, Schacht still considers Hilferding's budget to be unacceptable, despite more regressive taxes and expenditure cuts.
 
-- @hilferding_resign: Hilferding must resign.
+- @czechowicz_resign: Hilferding must resign.
 
 
-@hilferding_resign
+@czechowicz_resign
 on-arrival: finance_minister_party = "PSL-P" if in_centre_left_coalition; finance_minister_party = "I" if in_democratic_left_coalition or in_popular_front or in_left_front; finance_minister = "Moldenhauer"
 
 With no other choice, Hilferding has resigned as Finance Minister, to be replaced by a [? if in_centre_left_coalition: center-right ?][? if not in_centre_left_coalition: technocratic ?] candidate.

@@ -427,7 +427,7 @@ view-if: finance_minister_party != "BBWR"
 on-arrival: leverage -= 10; finance_minister_party = "BBWR"; finance_minister = "Hilferding"
 go-to: ministries
 
-Rudolf Hilferding of the BBWR has been appointed Finance Minister.
+Gabriel Czechowicz of the BBWR has been appointed Finance Minister.
 
 @economic
 title: Economic Ministry

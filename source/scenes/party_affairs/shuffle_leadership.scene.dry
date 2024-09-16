@@ -35,8 +35,8 @@ tags: remove_advisor
 
 @remove_hilferding
 title: Remove Hilferding
-view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; liberals_dissent += 5; n_advisors -= 1
+view-if: czechowicz_advisor = 1
+on-arrival: czechowicz_advisor = 0; liberals_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
@@ -310,16 +310,16 @@ view-if: n_advisors < 3
 - #nonfactional_advisor
 
 @add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians.
+title: Gabriel Czechowicz
+subtitle: Gabriel Czechowicz is an economist and one of our chief Marxist theoreticians.
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: liberals_advisor
-view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: hilferding_advisor = 1; n_advisors += 1
+view-if: czechowicz_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: czechowicz_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+Gabriel Czechowicz is now an advisor.
 
 @add_slawek
 title: Walery Sławek
