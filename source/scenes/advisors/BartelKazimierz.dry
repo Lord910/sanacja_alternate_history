@@ -5,7 +5,7 @@ card-image: img/portraits/BartelKazimierz.jpg
 new-page: true
 view-if: bartel_advisor = 1
 
-= HKazimierz Bartel
+= Kazimierz Bartel
 
 
 Bartel is a former [? if chancellor = "Bartel": and current ?] Prime Minisster, and is a leader of Liberal faction.
