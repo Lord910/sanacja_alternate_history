@@ -8,10 +8,11 @@ new-page: true
 = Gabriel Czechowicz
 
 Gabriel Czechowicz is an economist whose early views leaned toward the left, advocating for progressive reforms and state intervention. However, after becoming Finance Minister in 1926, he adopted a more conservative approach, embracing policies he once criticized, focusing on balanced budgets and fiscal restraint. Which economic ideas will he choose?
-- @against_right_and_left
-- @toleration
+
+- @find_funding
 - @finance_ministry_
-- @economic_democracy_
+- @choose_economic_policy
+- @deal_with_crisis
 - @root: Return to main
 
 @find_funding
