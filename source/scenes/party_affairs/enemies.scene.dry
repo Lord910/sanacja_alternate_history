@@ -247,6 +247,7 @@ Focusing our attacks on far-right parties we will lower their support, and might
 
 @far_left
 on-arrival: enemies = "far left"; colonels_strength += 5; conservatives_dissent -= 5; sanacja_left_dissent -= 5; repairers_dissent -= 5; liberals_dissent -= 5;
+
 // OWP -
 klasa_wyzsza_owp -= 1.5;
 klasa_srednia_owp -= 1.5;
