@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: liberals_advisor, repairers_advisor, colonels_advisor, sanacja_left_advisor, neorev_advisor, nonfactional_advisor 
+tags: liberals_advisor, repairers_advisor, colonels_advisor, sanacja_left_advisor, conservatives_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -33,7 +33,7 @@ go-to: root
 tags: remove_advisor
 
 
-@remove_hilferding
+@remove_czechowicz
 title: Remove Hilferding
 view-if: czechowicz_advisor = 1
 on-arrival: czechowicz_advisor = 0; liberals_dissent += 5; n_advisors -= 1
@@ -268,55 +268,54 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: liberals_advisor, repairers_advisor, colonels_advisor, sanacja_left_advisor, neorev_advisor, nonfactional_advisor
+tags: liberals_advisor, repairers_advisor, colonels_advisor, sanacja_left_advisor, conservatives_advisor, nonfactional_advisor
 frequency: 1
 
-
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labor: Add Labor
-- @neorev: Add Neorevisionists
+- @sanacja_left: Add Sanacja Left
+- @repairers: Add Repairers
+- @liberals: Add Liberals
+- @colonels: Add Colonels
+- @conservatives: Add Conservatoves
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
-@centrist
+@liberals
 view-if: n_advisors < 3
 
 - #liberals_advisor
 
-@reformist
+@colonels
 view-if: n_advisors < 3
 
 - #colonels_advisor
 
-@left
+@repairers
 view-if: n_advisors < 3
 
 - #repairers_advisor
 
-@labor
+@sanacja_left
 view-if: n_advisors < 3
 
 - #sanacja_left_advisor
 
-@neorev
+@conservatives
 view-if: neorevisionism > 0 and n_advisors < 3
 
-- #neorev_advisor
+- #conservatives_advisor
 
 @nonfactional
 view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_hilferding
+@add_czechowicz
 title: Gabriel Czechowicz
-subtitle: Gabriel Czechowicz is an economist and one of our chief Marxist theoreticians.
+subtitle: Gabriel Czechowicz is an economist standing on the crossroads between left and liberal economics.
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
-tags: liberals_advisor
+card-image: img/portraits/CzechowiczGabriel.jpg
+tags: nonfactional_advisor
 view-if: czechowicz_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: czechowicz_advisor = 1; n_advisors += 1
 go-to: advisor_menu
@@ -327,7 +326,7 @@ Gabriel Czechowicz is now an advisor.
 title: Walery Sławek
 subtitle: Walery Sławek is one of the oldest and most loyal followers of Józef Piłsudski. He is also a chairman of BBWR.
 is-card: true
-card-image: img/portraits/SlawekWalery 
+card-image: img/portraits/SlawekWalery.jpg
 tags: colonels_advisor
 view-if: slawek_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: slawek_advisor = 1; n_advisors += 1
@@ -367,7 +366,7 @@ title: Felicjan Sławoj Składkowski
 subtitle: Felicjan Sławoj Składkowski is the current Polish Minister of Internal Affairs and key figure in the Sanacja movement.
 is-card: true
 card-image: img/portraits/SkładkowskiFelicjan.jpg
-tags: sanacja_advisor
+tags: nonfactional_advisor
 view-if: skladkowski_advisor = 0 and n_advisors < 3
 on-arrival: skladkowski_advisor = 1; n_advisors += 1
 go-to: advisor_menu
@@ -512,7 +511,7 @@ card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3
 on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
 go-to: advisor_menu
-tags: neorev_advisor
+tags: conservatives_advisor
 
 Carlo Mierendorff is now an advisor.
 
@@ -521,7 +520,7 @@ title: Kurt Schumacher
 subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies.
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
-tags: neorev_advisor
+tags: conservatives_advisor
 view-if: schumacher_advisor = 0 and n_advisors < 3
 on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
 go-to: advisor_menu
@@ -536,7 +535,7 @@ card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 0 and n_advisors < 3
 on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
 go-to: advisor_menu
-tags: neorev_advisor
+tags: conservatives_advisor
 
 Julius Leber is now an advisor.
 
