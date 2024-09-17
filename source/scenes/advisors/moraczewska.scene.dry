@@ -1,0 +1,23 @@
+title: Zofia Moraczewska
+is-pinned-card: true
+tags: advisor, sanacja_left
+card-image: img/portraits/MoraczewskaZofia.jpg
+view-if: moraczewska_advisor = 1
+new-page: true
+
+= Zofia Moraczewska
+
+Zofia Moraczewska is a politician and social activist who comes from a politically active family. She became a prominent advocate for women’s rights and social reforms in Poland. While supporting the Sanation government, she focuses on improving labor conditions and expanding welfare for the working class.
+
+- @organize_women
+- @root: Return to main
+
+@organizing_women
+title: Organizing Women
+subtitle: Moraczewska is leading efforts to mobilize women in the political sphere and advocate for labor rights.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: womens_rights += 1; robotnicy_bbwr += 3*(1-dissent); klasa_srednia_bbwr += 5*(1-dissent); advisor_action_timer = 6
+
+Moraczewska’s efforts have brought more women into political activism, especially those from the working class.
+

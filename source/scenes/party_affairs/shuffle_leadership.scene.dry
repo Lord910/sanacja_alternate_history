@@ -110,7 +110,7 @@ go-to: rm_main
 Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 
-# labor
+# Sanacja Left
 
 @remove_moraczewski
 title: Remove Moraczewski
@@ -120,6 +120,15 @@ on-arrival: moraczewski_advisor = 0; sanacja_left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Moraczewski has been removed as an advisor. The Sanacja Left disapproves.
+
+@remove_moraczewska
+title: Remove Moraczewska
+view-if: moraczewska_advisor = 1
+tags: remove_advisor
+on-arrival: moraczewska_advisor = 0; sanacja_left_dissent += 3; n_advisors -= 1
+go-to: rm_main
+
+Moraczewska has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_aufhauser
 title: Remove Aufhäuser
@@ -150,14 +159,7 @@ go-to: rm_main
 
 Levi has been removed as an advisor. The Leftist faction disapproves.
 
-@remove_sender
-title: Remove Sender
-view-if: sender_advisor = 1
-tags: remove_advisor
-on-arrival: sender_advisor = 0; repairers_dissent += 3; n_advisors -= 1
-go-to: rm_main
 
-Sender has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_rosenfeld
 title: Remove Rosenfeld
@@ -424,18 +426,6 @@ tags: repairers_advisor
 
 Paul Levi is now an advisor.
 
-@add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member.
-is-card: true
-card-image: img/portraits/SenderToni.jpg
-view-if: sender_advisor = 0 and n_advisors < 3
-on-arrival: sender_advisor = 1; n_advisors += 1; repairers_strength += 5
-go-to: advisor_menu
-tags: repairers_advisor
-
-Toni Sender is now an advisor.
-
 @add_rosenfeld
 title: Kurt Rosenfeld
 subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member.
@@ -461,7 +451,7 @@ tags: repairers_advisor
 Max Seydewitz is now an advisor.
 
 
-# labor
+# Sanacja Left
 
 @add_moraczewski
 title: Jędrzej Moraczewski
@@ -474,6 +464,18 @@ on-arrival: moraczewski_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
 go-to: advisor_menu
 
 Jędrzej Moraczewski is now an advisor.
+
+@add_moraczewska
+title: Zofia Moraczewska
+subtitle: Zofia Moraczewska is a social activist and advocate for worker's and women’s rights.
+is-card: true
+card-image: img/portraits/MoraczewskaZofia.jpg
+view-if: moraczewska_advisor = 0 and n_advisors < 3
+on-arrival: moraczewska_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
+go-to: advisor_menu
+tags: sanacja_left_advisor_advisor
+
+Zofia Moraczewska is now an advisor.
 
 @add_aufhauser
 title: Siegfried Aufhäuser

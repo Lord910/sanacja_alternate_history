@@ -503,29 +503,27 @@ Q.kpp_ultimatum_timer = 0;
 
 // Sanacja Left advisors
 Q.moraczewski_advisor = 0; // Jedrzej Moraczewski
+Q.moraczewska_advisor = 0; // Zofia Moraczewska
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 
 // Repairers advisors
-Q.sender_advisor = 0; // Toni Sender
+
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
 Q.seydewitpschd_advisor = 0; // Max Seydewitz
 
-// all the initial advisors are Liberals.
-Q.slawek_advisor = 1; // Walery Sławek
+// Liberal advisors
 Q.bartel_advisor = 1; // Kazimierz Bartel
 Q.bartel_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-
-
-// Liberal alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Colonels advisors
+Q.slawek_advisor = 1; // Walery Sławek
+
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacpschd_advisor = 0; // Marie Juchacz
