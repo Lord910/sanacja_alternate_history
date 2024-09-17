@@ -73,14 +73,14 @@ Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 # reformists
 
 
-@remove_severing
-title: Remove Severing
-view-if: severing_advisor = 1
+@remove_skladkowski
+title: Remove Składkowski
+view-if: skladkowski_advisor = 1
 tags: remove_advisor
-on-arrival: severing_advisor = 0; colonels_dissent += 5; n_advisors -= 1
+on-arrival: skladkowski_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Severing has been removed as an advisor. The Reformist faction disapproves.
+Składkowski has been removed as an advisor.
 
 @remove_braun
 title: Remove Braun
@@ -362,17 +362,17 @@ Rudolf Breitscheid is now an advisor.
 # reformist
 
 
-@add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer.
+@add_skladkowski
+title: Felicjan Sławoj Składkowski
+subtitle: Felicjan Sławoj Składkowski is the current Polish Minister of Internal Affairs and key figure in the Sanacja movement.
 is-card: true
-card-image: img/portraits/SeveringCarl.jpg
-tags: colonels_advisor
-view-if: severing_advisor = 0 and n_advisors < 3
-on-arrival: severing_advisor = 1; n_advisors += 1; colonels_strength += 5
+card-image: img/portraits/SkładkowskiFelicjan.jpg
+tags: sanacja_advisor
+view-if: skladkowski_advisor = 0 and n_advisors < 3
+on-arrival: skladkowski_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Carl Severing is now an advisor.
+Felicjan Sławoj Składkowski is now an advisor.
 
 @add_braun
 title: Otto Braun

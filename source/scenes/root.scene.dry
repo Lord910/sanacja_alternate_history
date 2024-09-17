@@ -524,7 +524,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 // Colonels advisors
 Q.slawek_advisor = 1; // Walery Sławek
 
-Q.severing_advisor = 0; // Carl Severing
+
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacpschd_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
@@ -535,6 +535,7 @@ Q.leber_advisor = 0; // Julius Leber (post-1930)
 Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 
 // Nonfactional advisors
+Q.skladkowski_advisor = 0; // Felicjan Sławoj Składkowski
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer

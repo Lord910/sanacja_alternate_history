@@ -3,7 +3,7 @@ new-page: true
 subtitle: Reformist disagreements with our policies have grown too severe.
 tags: event
 view-if: colonels_dissent >= 60
-on-arrival: colonels_strength *= 0.3; robotnicy_bbwr -= 10; robotnicy_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if severing_advisor == 1; braun_advisor = 0; severing_advisor = 0; rb_strength -= 250; reformists_resign = 1
+on-arrival: colonels_strength *= 0.3; robotnicy_bbwr -= 10; robotnicy_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if skladkowski_advisor == 1; braun_advisor = 0; skladkowski_advisor = 0; rb_strength -= 250; reformists_resign = 1
 max-visits: 1
 
 = Reformist leaders resign
