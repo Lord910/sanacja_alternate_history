@@ -23,55 +23,45 @@ In our media and campaign materials, who should we consider as our main opponent
 @anti_dem
 on-arrival: enemies = "democratic parties"; colonels_strength += 5; liberals_strength -= 5; repairers_dissent += 5; conservatives_dissent -= 5;
 
-# OWP +
 klasa_wyzsza_owp += 3;
 klasa_srednia_owp += 3;
 robotnicy_owp += 3;
 chlopi_owp += 3;
 bezrobotni_owp += 3;
 
-# SN +
 klasa_wyzsza_sn += 1.5;
 klasa_srednia_sn += 1.5;
 robotnicy_sn += 1.5;
 chlopi_sn += 1.5;
 bezrobotni_sn += 1.5;
 
-# PSCHD -
 pschd_relation -= 5;
 klasa_wyzsza_pschd -= 1.5;
 klasa_srednia_pschd -= 1.5;
 robotnicy_pschd -= 1.5;
 bezrobotni_pschd -= 1.5;
 
-# PSL-P -
 pslp_relation -= 5;
 chlopi_pslp -= 3;
 
-# NPR -
 robotnicy_npr -= 3;
 bezrobotni_npr -= 3;
 
-#  BBWR +
 klasa_wyzsza_bbwr += 1.5;
 klasa_srednia_bbwr += 1.5;
 robotnicy_bbwr += 1.5;
 bezrobotni_bbwr += 1.5;
 
-#  PPS -
 pps_relation -= 5;
 robotnicy_pps -= 1.5;
 bezrobotni_pps -= 1.5;
 
-#  Sch -
 sch_relation -= 5;
 chlopi_sch -= 1.5;
 
-#  PSL-W -
 pslw_relation -= 5;
 chlopi_pslw -= 1.5;
 
-#  KPP +
 bezrobotni_kpp += 5;
 chlopi_kpp -= 1.5;
 
@@ -80,55 +70,45 @@ Focusing our attacks on all democratic parties we will lower their support, but 
 @left
 on-arrival: enemies = "left-wing parties"; colonels_strength += 5; liberals_strength -= 5; conservatives_dissent -= 5; sanacja_left_dissent += 5;
 
-# OWP -
 klasa_wyzsza_owp -= 1.5;
 klasa_srednia_owp -= 1.5;
 robotnicy_owp -= 1.5;
 chlopi_owp -= 1.5;
 bezrobotni_owp -= 1.5;
 
-# SN -
 klasa_wyzsza_sn += 1.5;
 klasa_srednia_sn += 1.5;
 robotnicy_sn += 1.5;
 chlopi_sn += 1.5;
 bezrobotni_sn += 1.5;
 
-# PSCHD +
 pschd_relation += 5;
 klasa_wyzsza_pschd += 1.5;
 klasa_srednia_pschd += 1.5;
 robotnicy_pschd += 1.5;
 bezrobotni_pschd += 1.5;
 
-# PSL-P +
 pslp_relation += 5;
 chlopi_pslp += 3;
 
-# NPR +
 npr_relation += 5;
 robotnicy_npr += 3;
 bezrobotni_npr += 3;
 
-#  BBWR +
 robotnicy_bbwr += 1.5;
 chlopi_bbwr += 1.5;
 bezrobotni_bbwr += 1.5;
 
-#  PPS -
 pps_relation -= 5;
 robotnicy_pps -= 1.5;
 bezrobotni_pps -= 1.5;
 
-#  Sch -
 sch_relation -= 5;
 chlopi_sch -= 1.5;
 
-#  PSL-W -
 pslw_relation -= 5;
 chlopi_pslw -= 1.5;
 
-# KPP +
 robotnicy_kpp += 5.0;
 bezrobotni_kpp += 5.0;
 chlopi_kpp += 5.0;
@@ -138,7 +118,6 @@ Focusing our attacks on all left wing parties we will lower their support, but w
 @right
 on-arrival: enemies = "right-wing parties"; colonels_strength += 5; liberals_strength -= 5; conservatives_dissent += 5; 
 
-# OWP -
 owp_relation -= 5;
 klasa_wyzsza_owp += 3;
 klasa_srednia_owp += 3;
@@ -146,7 +125,6 @@ robotnicy_owp += 3;
 chlopi_owp += 3;
 bezrobotni_owp += 3;
 
-# SN -
 sn_relation -= 5;
 klasa_wyzsza_sn -= 1.5;
 klasa_srednia_sn -= 1.5;
@@ -154,36 +132,29 @@ robotnicy_sn -= 1.5;
 chlopi_sn -= 1.5;
 bezrobotni_sn -= 1.5;
 
-# PSCHD +
 pschd_relation -= 5;
 klasa_wyzsza_pschd -= 1.5;
 klasa_srednia_pschd -= 1.5;
 robotnicy_pschd -= 1.5;
 bezrobotni_pschd -= 1.5;
 
-# PSL-P +
 pslp_relation -= 5;
 chlopi_pslp -= 3;
 
-# NPR +
 robotnicy_npr -= 3;
 bezrobotni_npr -= 3;
 
-#  BBWR +
 robotnicy_bbwr += 1.5;
 chlopi_bbwr += 3.0;
 bezrobotni_bbwr += 1.5;
 
-#  PPS -
 pps_relation += 5;
 robotnicy_pps -= 1.5;
 bezrobotni_pps -= 1.5;
 
-#  Sch -
 sch_relation += 5;
 chlopi_sch -= 1.5;
 
-#  PSL-W -
 pslw_relation += 5;
 chlopi_pslw -= 1.5;
 
@@ -192,53 +163,43 @@ Focusing our attacks on all right wing parties we will lower their support, but 
 @far_right
 on-arrival: enemies = "far right"; colonels_strength += 5; conservatives_dissent -= 5; sanacja_left_dissent += 5; repairers_dissent += 5; liberals_dissent += 5;
 
-# OWP -
 klasa_wyzsza_owp -= 1.5;
 klasa_srednia_owp -= 1.5;
 robotnicy_owp -= 1.5;
 chlopi_owp -= 1.5;
 bezrobotni_owp -= 1.5;
 
-# SN -
 klasa_wyzsza_sn -= 1.5;
 klasa_srednia_sn -= 1.5;
 robotnicy_sn -= 1.5;
 chlopi_sn -= 1.5;
 bezrobotni_sn -= 1.5;
 
-# PSCHD +
 klasa_wyzsza_pschd += 1.5;
 klasa_srednia_pschd += 1.5;
 robotnicy_pschd += 1.5;
 bezrobotni_pschd += 1.5;
 
-# PSL-P +
 chlopi_pslp += 3;
 
-# NPR +
 npr_relation += 5;
 robotnicy_npr += 3;
 bezrobotni_npr += 3;
 
-#  BBWR +
 robotnicy_bbwr += 1.5;
 chlopi_bbwr += 1.5;
 bezrobotni_bbwr += 1.5;
 
-#  PPS -
 pps_relation += 5;
 robotnicy_pps -= 1.5;
 bezrobotni_pps -= 1.5;
 
-#  Sch -
 sch_relation += 5;
 chlopi_sch -= 1.5;
 
-#  PSL-W -
 pslw_relation += 5;
 chlopi_pslw -= 1.5;
 
-# KPP +
 robotnicy_kpp -= 1.0;
 bezrobotni_kpp -= 1.0;
 chlopi_kpp -= 1.0;
@@ -248,44 +209,36 @@ Focusing our attacks on far-right parties we will lower their support, and might
 @far_left
 on-arrival: enemies = "far left"; colonels_strength += 5; conservatives_dissent -= 5; sanacja_left_dissent -= 5; repairers_dissent -= 5; liberals_dissent -= 5;
 
-# OWP -
 klasa_wyzsza_owp -= 1.5;
 klasa_srednia_owp -= 1.5;
 robotnicy_owp -= 1.5;
 chlopi_owp -= 1.5;
 bezrobotni_owp -= 1.5;
 
-# SN -
 klasa_wyzsza_sn -= 1.5;
 klasa_srednia_sn -= 1.5;
 robotnicy_sn -= 1.5;
 chlopi_sn -= 1.5;
 bezrobotni_sn -= 1.5;
 
-# NPR +
 npr_relation += 5;
 robotnicy_npr += 3;
 bezrobotni_npr += 3;
 
-#  BBWR +
 robotnicy_bbwr += 1.5;
 chlopi_bbwr += 1.5;
 bezrobotni_bbwr += 1.5;
 
-#  PPS -
 pps_relation += 5;
 robotnicy_pps -= 1.5;
 bezrobotni_pps -= 1.5;
 
-#  Sch -
 sch_relation += 5;
 chlopi_sch -= 1.5;
 
-#  PSL-W -
 pslw_relation += 5;
 chlopi_pslw -= 1.5;
 
-# KPP +
 robotnicy_kpp -= 1.0;
 bezrobotni_kpp -= 1.0;
 chlopi_kpp -= 1.0;
