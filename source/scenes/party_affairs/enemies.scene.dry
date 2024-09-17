@@ -7,40 +7,285 @@ is-card: true
 card-image: img/poster_1.png
 tags: party_affairs
 
-= Choosing our enemies
+= Choosing Our Enemies
 
 In our media and campaign materials, who should we consider as our main opponents?
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPP, OWP, and SN.
-- @far_right: The far right - the OWP and SN.
-- @owp: The OWP alone.
-- @kpp: The KPP.
-- @bourgeois: The bourgeois parties - the Center and PSL-P.
+- @anti_dem: The democratic parties - PPS, SCH, PSL-W, NPR, PSCHD, PSL-P.
+- @left: The left-wing parties - PPS, SCH, PSL-W, KPP.
+- @right: The right-wing parties - NPR, PSCHD, PSL-P, SN, OWP.
+- @far_right: The far right - OWP and SN.
+- @far_left: The far left - KPP.
 - @easy_discard
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; liberals_strength += 5; colonels_strength += 5; repairers_dissent += 5; robotnicy_kpp -= 2; robotnicy_owp -= 2; robotnicy_sn -= 2; kpp_relation -= 10
+on-arrival: enemies = "democratic parties"; colonels_strength += 5; liberals_strength -= 5; repairers_dissent += 5; conservatives_dissent -= 5;
+#OWP +
+klasa_wyzsza_owp += 3;
+klasa_srednia_owp += 3;
+robotnicy_owp += 3;
+chlopi_owp += 3;
+bezrobotni_owp += 3;
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPP in the future.
+#SN +
+klasa_wyzsza_sn += 1.5;
+klasa_srednia_sn += 1.5;
+robotnicy_sn += 1.5;
+chlopi_sn += 1.5;
+bezrobotni_sn += 1.5;
+
+#PSCHD -
+pschd_relation -= 5;
+klasa_wyzsza_pschd -= 1.5;
+klasa_srednia_pschd -= 1.5;
+robotnicy_pschd -= 1.5;
+bezrobotni_pschd -= 1.5;
+
+#PSL-P -
+pslp_relation -= 5;
+chlopi_pslp -= 3;
+
+#NPR -
+robotnicy_npr -= 3;
+bezrobotni_npr -= 3;
+
+# BBWR +
+klasa_wyzsza_bbwr += 1.5;
+klasa_srednia_bbwr += 1.5;
+robotnicy_bbwr += 1.5;
+bezrobotni_bbwr += 1.5;
+
+# PPS -
+pps_relation -= 5;
+robotnicy_pps -= 1.5;
+bezrobotni_pps -= 1.5;
+
+# Sch -
+sch_relation -= 5;
+chlopi_sch -= 1.5;
+
+# PSL-W -
+pslw_relation -= 5;
+chlopi_pslw -= 1.5;
+
+# KPP +
+bezrobotni_kpp += 5;
+chlopi_kpp -= 1.5;
+
+Focusing our attacks on all democratic parties we will lower their support, but we risk radizalization of their electorate and anger of our left wing factions. Colonels and Conservatives support this action.
+
+@left
+on-arrival: enemies = "left-wing parties"; colonels_strength += 5; liberals_strength -= 5; conservatives_dissent -= 5; sanacja_left_dissent += 5;
+
+#OWP -
+klasa_wyzsza_owp -= 1.5;
+klasa_srednia_owp -= 1.5;
+robotnicy_owp -= 1.5;
+chlopi_owp -= 1.5;
+bezrobotni_owp -= 1.5;
+
+#SN -
+klasa_wyzsza_sn += 1.5;
+klasa_srednia_sn += 1.5;
+robotnicy_sn += 1.5;
+chlopi_sn += 1.5;
+bezrobotni_sn += 1.5;
+
+#PSCHD +
+pschd_relation += 5;
+klasa_wyzsza_pschd += 1.5;
+klasa_srednia_pschd += 1.5;
+robotnicy_pschd += 1.5;
+bezrobotni_pschd += 1.5;
+
+#PSL-P +
+pslp_relation += 5;
+chlopi_pslp += 3;
+
+#NPR +
+npr_relation += 5;
+robotnicy_npr += 3;
+bezrobotni_npr += 3;
+
+# BBWR +
+robotnicy_bbwr += 1.5;
+chlopi_bbwr += 1.5;
+bezrobotni_bbwr += 1.5;
+
+# PPS -
+pps_relation -= 5;
+robotnicy_pps -= 1.5;
+bezrobotni_pps -= 1.5;
+
+# Sch -
+sch_relation -= 5;
+chlopi_sch -= 1.5;
+
+# PSL-W -
+pslw_relation -= 5;
+chlopi_pslw -= 1.5;
+
+#KPP +
+robotnicy_kpp += 5.0;
+bezrobotni_kpp += 5.0;
+chlopi_kpp += 5.0;
+
+Focusing our attacks on all left wing parties we will lower their support, but we risk radizalization of their electorate and anger of our left wing factions. Colonels and Conservatives support this action.
+
+@right
+on-arrival: enemies = "right-wing parties"; colonels_strength += 5; liberals_strength -= 5; conservatives_dissent += 5; 
+
+#OWP -
+owp_relation -= 5;
+klasa_wyzsza_owp += 3;
+klasa_srednia_owp += 3;
+robotnicy_owp += 3;
+chlopi_owp += 3;
+bezrobotni_owp += 3;
+
+#SN -
+sn_relation -= 5;
+klasa_wyzsza_sn -= 1.5;
+klasa_srednia_sn -= 1.5;
+robotnicy_sn -= 1.5;
+chlopi_sn -= 1.5;
+bezrobotni_sn -= 1.5;
+
+#PSCHD +
+pschd_relation -= 5;
+klasa_wyzsza_pschd -= 1.5;
+klasa_srednia_pschd -= 1.5;
+robotnicy_pschd -= 1.5;
+bezrobotni_pschd -= 1.5;
+
+#PSL-P +
+pslp_relation -= 5;
+chlopi_pslp -= 3;
+
+#NPR +
+robotnicy_npr -= 3;
+bezrobotni_npr -= 3;
+
+# BBWR +
+robotnicy_bbwr += 1.5;
+chlopi_bbwr += 3.0;
+bezrobotni_bbwr += 1.5;
+
+# PPS -
+pps_relation += 5;
+robotnicy_pps -= 1.5;
+bezrobotni_pps -= 1.5;
+
+# Sch -
+sch_relation += 5;
+chlopi_sch -= 1.5;
+
+# PSL-W -
+pslw_relation += 5;
+chlopi_pslw -= 1.5;
+
+Focusing our attacks on all right wing parties we will lower their support, but we risk radizalization of their electorate and anger of our Conservatives. Colonels and left wing factions support this this action.
 
 @far_right
-on-arrival: enemies = "far right"; repairers_strength += 5; repairers_dissent -= 5; robotnicy_owp -= 3; robotnicy_sn -= 3;
+on-arrival: enemies = "far right"; colonels_strength += 5; conservatives_dissent -= 5; sanacja_left_dissent += 5; repairers_dissent += 5; liberals_dissent += 5;
 
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPP. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+#OWP -
+klasa_wyzsza_owp -= 1.5;
+klasa_srednia_owp -= 1.5;
+robotnicy_owp -= 1.5;
+chlopi_owp -= 1.5;
+bezrobotni_owp -= 1.5;
 
-@owp
-on-arrival: enemies = "OWP"; neorevisionist_strength += 5; nazi_urgency += 1; robotnicy_owp -= 4;
+#SN -
+klasa_wyzsza_sn -= 1.5;
+klasa_srednia_sn -= 1.5;
+robotnicy_sn -= 1.5;
+chlopi_sn -= 1.5;
+bezrobotni_sn -= 1.5;
 
-[? if nazi_urgency == 0 or owp_r < 10 : The OWP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and owp_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+#PSCHD +
+klasa_wyzsza_pschd += 1.5;
+klasa_srednia_pschd += 1.5;
+robotnicy_pschd += 1.5;
+bezrobotni_pschd += 1.5;
 
-@kpp
-on-arrival: enemies = "KPP"; colonels_strength += 5; repairers_dissent += 8; colonels_dissent -= 5; kpp_relation -= 15; pslp_relation += 5; pschd_relation += 5; robotnicy_kpp -= 4;
+#PSL-P +
+chlopi_pslp += 3;
 
-Attacking the KPP is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPP, this may not be the best choice.
+#NPR +
+npr_relation += 5;
+robotnicy_npr += 3;
+bezrobotni_npr += 3;
 
-@bourgeois
-on-arrival: enemies = "bourgeois parties"; repairers_strength += 8; repairers_dissent -= 5; pslp_relation -= 5; pschd_relation -= 5; kpp_relation += 5; colonels_dissent += 8; robotnicy_pschd -= 3; coalition_dissent += 1
+# BBWR +
+robotnicy_bbwr += 1.5;
+chlopi_bbwr += 1.5;
+bezrobotni_bbwr += 1.5;
 
-Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+# PPS -
+pps_relation += 5;
+robotnicy_pps -= 1.5;
+bezrobotni_pps -= 1.5;
+
+# Sch -
+sch_relation += 5;
+chlopi_sch -= 1.5;
+
+# PSL-W -
+pslw_relation += 5;
+chlopi_pslw -= 1.5;
+
+#KPP +
+robotnicy_kpp -= 1.0;
+bezrobotni_kpp -= 1.0;
+chlopi_kpp -= 1.0;
+
+Focusing our attacks on far-right parties we will lower their support, and might lead to moderate parties getting support. All factions support this action.
+
+@far_left
+on-arrival: enemies = "far right"; colonels_strength += 5; conservatives_dissent -= 5; sanacja_left_dissent -= 5; repairers_dissent -= 5; liberals_dissent -= 5;
+#OWP -
+klasa_wyzsza_owp -= 1.5;
+klasa_srednia_owp -= 1.5;
+robotnicy_owp -= 1.5;
+chlopi_owp -= 1.5;
+bezrobotni_owp -= 1.5;
+
+#SN -
+klasa_wyzsza_sn -= 1.5;
+klasa_srednia_sn -= 1.5;
+robotnicy_sn -= 1.5;
+chlopi_sn -= 1.5;
+bezrobotni_sn -= 1.5;
+
+#NPR +
+npr_relation += 5;
+robotnicy_npr += 3;
+bezrobotni_npr += 3;
+
+# BBWR +
+robotnicy_bbwr += 1.5;
+chlopi_bbwr += 1.5;
+bezrobotni_bbwr += 1.5;
+
+# PPS -
+pps_relation += 5;
+robotnicy_pps -= 1.5;
+bezrobotni_pps -= 1.5;
+
+# Sch -
+sch_relation += 5;
+chlopi_sch -= 1.5;
+
+# PSL-W -
+pslw_relation += 5;
+chlopi_pslw -= 1.5;
+
+#KPP +
+robotnicy_kpp -= 1.0;
+bezrobotni_kpp -= 1.0;
+chlopi_kpp -= 1.0;
+
+Focusing our attacks on far-left parties we will lower their support, and might lead to moderate parties getting support. All factions support this action.
