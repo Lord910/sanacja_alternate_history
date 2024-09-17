@@ -34,13 +34,13 @@ tags: remove_advisor
 
 
 @remove_czechowicz
-title: Remove Hilferding
+title: Remove Czechowicz
 view-if: czechowicz_advisor = 1
-on-arrival: czechowicz_advisor = 0; liberals_dissent += 5; n_advisors -= 1
+on-arrival: czechowicz_advisor = 0; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+Czechowicz has been removed as an advisor. The Liberal faction disapproves.
 
 @remove_slawek
 title: Remove Sławek
@@ -68,7 +68,7 @@ tags: remove_advisor
 on-arrival: breitscheid_advisor = 0; liberals_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Breitscheid has been removed as an advisor. The Liberal faction disapproves.
 
 # reformists
 
@@ -89,7 +89,7 @@ tags: remove_advisor
 on-arrival: braun_advisor = 0; colonels_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Braun has been removed as an advisor. The Reformist faction disapproves.
+Braun has been removed as an advisor. The Repairers faction disapproves.
 
 @remove_juchacz
 title: Remove Juchacz
@@ -98,7 +98,7 @@ tags: remove_advisor
 on-arrival: juchacpschd_advisor = 0; colonels_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Juchacz has been removed as an advisor. The Reformist faction disapproves.
+Juchacz has been removed as an advisor. The Repairers faction disapproves.
 
 @remove_pfulf
 title: Remove Pfülf
@@ -107,7 +107,7 @@ tags: remove_advisor
 on-arrival: pfulf_advisor = 0; colonels_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Pfülf has been removed as an advisor. The Reformist faction disapproves.
+Pfülf has been removed as an advisor. The Repairers faction disapproves.
 
 
 # Sanacja Left
@@ -128,7 +128,7 @@ tags: remove_advisor
 on-arrival: moraczewska_advisor = 0; sanacja_left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Moraczewska has been removed as an advisor. The Leftist faction disapproves.
+Moraczewska has been removed as an advisor. The Sanacja Left disapproves.
 
 @remove_aufhauser
 title: Remove Aufhäuser
@@ -157,7 +157,7 @@ tags: remove_advisor
 on-arrival: levi_advisor = 0; repairers_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Levi has been removed as an advisor. The Leftist faction disapproves.
+Levi has been removed as an advisor. The Sanacja Left disapproves.
 
 
 
@@ -168,7 +168,7 @@ tags: remove_advisor
 on-arrival: rosenfeld_advisor = 0; repairers_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Rosenfeld has been removed as an advisor. The Leftist faction disapproves.
+Rosenfeld has been removed as an advisor. The Sanacja Left disapproves.
 
 @remove_seydewitz
 title: Remove Seydewitz
@@ -177,7 +177,7 @@ tags: remove_advisor
 on-arrival: seydewitpschd_advisor = 0; repairers_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Seydewitz has been removed as an advisor. The Leftist faction disapproves.
+Seydewitz has been removed as an advisor. The Sanacja Left disapproves.
 
 
 
@@ -190,7 +190,7 @@ tags: remove_advisor
 on-arrival: mierendorff_advisor = 0; neorevisionist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Mierendorff has been removed as an advisor. The Neorevisionist faction disapproves.
+Mierendorff has been removed as an advisor. The Conservatives faction disapproves.
 
 @remove_leber
 title: Remove Leber
@@ -199,7 +199,7 @@ tags: remove_advisor
 on-arrival: leber_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Leber has been removed as an advisor. The Neorevisionist faction disapproves.
+Leber has been removed as an advisor. The Conservatives faction disapproves.
 
 @remove_schumacher
 title: Remove Schumacher
@@ -208,7 +208,7 @@ tags: remove_advisor
 on-arrival: schumacher_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Schumacher has been removed as an advisor. The Neorevisionist faction disapproves.
+Schumacher has been removed as an advisor. The Conservatives faction disapproves.
 
 
 ## nonfactional
@@ -224,7 +224,7 @@ go-to: rm_main
 
 Baade has been removed as an advisor.
 
-#The Reformist faction disapproves.
+#The Repairers faction disapproves.
 
 
 @remove_hirschfeld
@@ -472,7 +472,7 @@ card-image: img/portraits/MoraczewskaZofia.jpg
 view-if: moraczewska_advisor = 0 and n_advisors < 3
 on-arrival: moraczewska_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
 go-to: advisor_menu
-tags: sanacja_left_advisor_advisor
+tags: sanacja_left_advisor
 
 Zofia Moraczewska is now an advisor.
 
