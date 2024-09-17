@@ -12,7 +12,7 @@ Zofia Moraczewska is a politician and social activist who comes from a political
 - @organize_women
 - @root: Return to main
 
-@organizing_women
+@organize_women
 title: Organizing Women
 subtitle: Moraczewska is leading efforts to mobilize women in the political sphere and advocate for labor rights.
 choose-if: advisor_action_timer = 0
