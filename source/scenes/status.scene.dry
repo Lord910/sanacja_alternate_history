@@ -120,6 +120,12 @@ strength: [+ conservatives_strength : strength +],
 
 dissent: [+ conservatives_dissent : dissent +]
 
+**4th Brigade**
+
+strength: [+ 4brigade_strength : strength +], 
+
+dissent: [+ 4brigade_dissent : dissent +]
+
 [? if neorevisionism > 0 : Neorevisionist strength: [+ conservatives_strength : strength +], dissent: [+ conservatives_dissent : dissent +] ?]
 
 @paramilitaries
