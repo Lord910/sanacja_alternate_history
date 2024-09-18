@@ -374,6 +374,23 @@ The Conservatives offer crucial financial and political support to the Sanacja r
 
 While maintaining a close relationship with Piłsudski, the Conservatives aim to balance the more radical elements within Sanacja, ensuring that their vision of national order and stability is realized. Their focus on economic stability and safeguarding the interests of the upper classes complements Piłsudski’s broader goal of preventing societal chaos and protecting the state from the excesses of both socialist and nationalist forces. Their presence in the Sanacja movement serves as a counterweight to liberal and radical factions, making them an essential component of the regime’s power structure.
 
+Strength: [+ conservatives_strength : strength +]
+
+Dissent: [+ conservatives_dissent : dissent +]
+
+**IV Brigade**
+
+The IV Brigade has emerged as one of the most controversial factions within the Sanacja movement, often derided as the "Piłsudczycy of the seventh day." This group is composed almost entirely of opportunists who, unlike Piłsudski’s original supporters, did not take part in the revolutionary struggles or the fight for independence. Instead, they aligned themselves with Piłsudski after the May Coup of 1926, eager to seize the advantages of being on the winning side.
+
+Characterized by careerism and self-interest, the members of the IV Brigade have used their newfound loyalty to secure key positions in government, administration, and the military. They are notorious for prioritizing personal gain, engaging in corruption, and maneuvering through backroom deals. Piłsudski himself reportedly holds little respect for this faction, referring to them as "lice" that have attached themselves to his movement. Nevertheless, their presence has proven useful, as they have filled critical roles necessary to operate the machinery of the Sanacja state.
+
+The IV Brigade is largely driven by the desire for power and influence, rather than any genuine commitment to the ideals of the Sanacja movement. They have become indispensable to maintaining the regime, despite the fact that their actions are often motivated by self-interest. Holding sway in the civil service and bureaucracy, they ensure that the political system remains stable—chiefly because they benefit from that stability.
+
+This faction represents the more pragmatic, if cynical, side of the Sanacja regime. While other groups within the movement push for reforms or ideological goals, the IV Brigade is focused squarely on personal advancement and securing its position within the state. Though resented by many within Sanacja for their opportunism, they are an entrenched force, ensuring their continued influence in the political landscape.
+
+Strength: [+ 4_brigade_strength : strength +]
+Dissent: [+ 4_brigade_dissent : dissent +]
+
 @neorevisionists
 go-to: menu
 
@@ -381,9 +398,7 @@ go-to: menu
 
 Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
 
-Strength: [+ neorevisionist_strength : strength +]
 
-Dissent: [+ neorevisionist_dissent : dissent +]
 
 
 @figures

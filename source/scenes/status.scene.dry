@@ -120,7 +120,7 @@ strength: [+ conservatives_strength : strength +],
 
 dissent: [+ conservatives_dissent : dissent +]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+[? if neorevisionism > 0 : Neorevisionist strength: [+ conservatives_strength : strength +], dissent: [+ conservatives_dissent : dissent +] ?]
 
 @paramilitaries
 
