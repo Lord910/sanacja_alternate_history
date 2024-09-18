@@ -120,7 +120,13 @@ strength: [+ conservatives_strength : strength +],
 
 dissent: [+ conservatives_dissent : dissent +]
 
-[? if neorevisionism > 0 : Conservatives strength: [+ conservatives_strength : strength +], dissent: [+ conservatives_dissent : dissent +] ?]
+**IV Brigade**
+
+strength: [+ 4_brigade_strength_strength : strength +], 
+
+dissent: [+ 4_brigade_strength_dissent : dissent +]
+
+[? if sanacja_nationalists > 0 : Nationalists strength: [+ conservatives_strength : strength +], dissent: [+ conservatives_dissent : dissent +] ?]
 
 @paramilitaries
 

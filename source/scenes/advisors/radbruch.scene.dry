@@ -27,8 +27,8 @@ go-to: judiciary
 @constitutional_reform_
 title: Constitutional Reform
 subtitle: Pursue reforms of the inadequate Weimar Constitution.
-choose-if: advisor_action_timer = 0 and bbwr_in_government and justice_minister_party = "BBWR" and neorevisionism
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not bbwr_in_government : The BBWR is not currently in government. ?] [? if justice_minister_party != "BBWR" : We do not have the Justice Ministry. ?] [? if not neorevisionism: We do not have ideological support for constitutional reform yet - new ideas are needed. ?]
+choose-if: advisor_action_timer = 0 and bbwr_in_government and justice_minister_party = "BBWR" and sanacja_nationalists
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not bbwr_in_government : The BBWR is not currently in government. ?] [? if justice_minister_party != "BBWR" : We do not have the Justice Ministry. ?] [? if not sanacja_nationalists: We do not have ideological support for constitutional reform yet - new ideas are needed. ?]
 on-arrival: advisor_action_timer = 6
 go-to: constitutional_reform
 

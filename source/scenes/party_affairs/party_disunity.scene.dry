@@ -1,7 +1,7 @@
 title: Party Disunity
 new-page: true
 is-card: true
-view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (colonels_dissent > 30 and not reformists_resign) or (liberals_dissent > 30 and not centrists_resign) or (repairers_dissent > 30 and not sapd_formed) or (sanacja_left_dissent > 30 and not unions_independent) or (conservatives_dissent > 30 and neorevisionism))
+view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (colonels_dissent > 30 and not reformists_resign) or (liberals_dissent > 30 and not centrists_resign) or (repairers_dissent > 30 and not sapd_formed) or (sanacja_left_dissent > 30 and not unions_independent) or (conservatives_dissent > 30 and sanacja_nationalists))
 on-arrival: month_actions += 1; party_disunity_timer = 4
 card-image: img/Reichstagsfraktion_der_BBWR.jpg
 frequency: 200
@@ -17,7 +17,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if liberals_dissent > 30 : The centrists are displeased with the direction of our party. ?]
 [? if sanacja_left_dissent > 30 : The trade unions disagree with our present course of action. ?]
 [? if repairers_dissent > 30: Leftists are making noises about another party split. ?]
-[? if conservatives_dissent > 30 and neorevisionism = 1 : Conservativess are in disagreement about our political direction. ?]
+[? if conservatives_dissent > 30 and sanacja_nationalists = 1 : Conservatives are in disagreement about our political direction. ?]
 
 Something must be done to reinforce party unity.
 
@@ -26,7 +26,7 @@ Something must be done to reinforce party unity.
 - @concessions_liberals
 - @concessions_left
 - @concessions_labor
-- @concessions_conservativess
+- @concessions_conservatives
 - @do_nothing
 
 
@@ -68,12 +68,12 @@ on-arrival: sanacja_left_dissent -= 7; liberals_dissent += 5
 
 The trade unions will be granted more influence in party decision making. This upsets the centrists, who would prefer to centralize political decision making within the party.
 
-@concessions_conservativess
-title: Give concessions to the conservativess.
-view-if: conservatives_dissent > 30 and neorevisionism = 1
+@concessions_conservatives
+title: Give concessions to the conservatives.
+view-if: conservatives_dissent > 30 and sanacja_nationalists = 1
 on-arrival: conservatives_dissent -= 7; liberals_dissent += 5;
 
-Giving the conservativess more influence will cause increased dissent from the centrists.
+Giving the conservatives more influence will cause increased dissent from the centrists.
 
 
 @do_nothing

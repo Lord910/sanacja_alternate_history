@@ -1,7 +1,7 @@
 title: Constitutional Reform
 new-page: true
 is-card: true
-view-if: bbwr_in_government = 1 and justice_minister_party = "BBWR" and judiciary_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_democratic_left_coalition) or (in_bbwr_majority) or (in_left_front) or (in_popular_front))
+view-if: bbwr_in_government = 1 and justice_minister_party = "BBWR" and judiciary_timer = 0 and judicial_reform >= 4 and sanacja_nationalists and ((in_democratic_left_coalition) or (in_bbwr_majority) or (in_left_front) or (in_popular_front))
 frequency: 25
 on-arrival: month_actions += 1; constitutional_reform_timer += 12; pass_threshold = 0.51; pass_threshold = 0.6 if pro_republic < 65;
 card-image: img/portraits/RadbruchGustav.jpg
@@ -16,7 +16,7 @@ go-to: reforms_menu
 
 # the ideas for constitutional reform here are based on the bundesrepublik basic law... I'm not sure if it's totally realistic to what someone like Mierendorff would've wanted.
 
-Many conservativess consider the Weimar Constitution to be inadequate. They believe that the clauses of the constitution are in part responsible for the instability of the country, and must change in order to build a more stable democratic republic. Ideas from both socialists and liberals
+Many conservatives consider the Weimar Constitution to be inadequate. They believe that the clauses of the constitution are in part responsible for the instability of the country, and must change in order to build a more stable democratic republic. Ideas from both socialists and liberals
 
 A constitutional reform requires either a two-thirds supermajority in the Reichstag, or a constitutional referendum with support from a majority of the electorate. If we do not have a supermajority in the Reichstag, we must be assured of strong support from the other parties for the constitutional referendum.
 

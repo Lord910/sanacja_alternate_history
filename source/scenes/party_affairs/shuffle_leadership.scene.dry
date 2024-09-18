@@ -1,4 +1,4 @@
-title: Shuffle Leadership
+Conservativestitle: Shuffle Leadership
 new-page: true
 is-card: true
 tags: party_affairs
@@ -181,7 +181,7 @@ Seydewitz has been removed as an advisor. The Sanacja Left disapproves.
 
 
 
-# conservativess
+# conservatives
 
 @remove_mierendorff
 title: Remove Mierendorff
@@ -275,7 +275,8 @@ frequency: 1
 - @repairers: Add Repairers
 - @liberals: Add Liberals
 - @colonels: Add Colonels
-- @conservatives: Add Conservatoves
+- @conservatives: Add Conservatives
+- @nationalists: Add Nationalists
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
@@ -301,9 +302,14 @@ view-if: n_advisors < 3
 - #sanacja_left_advisor
 
 @conservatives
-view-if: neorevisionism > 0 and n_advisors < 3
+view-if: n_advisors < 3
 
 - #conservatives_advisor
+
+@nationalists
+view-if: sanacja_nationalists > 0 and n_advisors < 3
+
+- #nationalists_advisor
 
 @nonfactional
 view-if: n_advisors < 3
