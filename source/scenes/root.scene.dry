@@ -43,7 +43,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['repairers', 'liberals', 'sanacja_left', 'reformist', 'conservatives', '4_brigade_strength'];
+Q.factions = ['repairers', 'liberals', 'sanacja_left', 'reformist', 'conservatives', '4_brigade'];
 // should this be normalized to 100%?
 Q.repairers_strength = 15;
 Q.repairers_dissent = 15;
