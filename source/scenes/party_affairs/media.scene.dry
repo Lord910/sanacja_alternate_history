@@ -36,7 +36,7 @@ Our campaign media is mostly reaching the robotnicy who are already saturated wi
 @ideological
 title: We will have vibrant ideological debate within our newspapers.
 subtitle: There will be space for all factions to air their views.
-on-arrival: repairers_dissent -= 6; sanacja_left_dissent -= 6; liberals_dissent -= 6; colonels_dissent -= 6; conservatives_dissent -= 6
+on-arrival: repairers_dissent -= 6; sanacja_left_dissent -= 6; liberals_dissent -= 6; colonels_dissent -= 6; neorevisionist_dissent -= 6
 
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
 

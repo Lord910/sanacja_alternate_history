@@ -41,7 +41,7 @@ We have increased funding to Robotnicy' Welfare. [? if black_thursday_seen > 0 :
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; cultural_organizations += 1; repairers_dissent -= 6; liberals_dissent -= 6; sanacja_left_dissent -= 6; colonels_dissent -= 6; conservatives_dissent -= 6
+on-arrival: resources -= 1; cultural_organizations += 1; repairers_dissent -= 6; liberals_dissent -= 6; sanacja_left_dissent -= 6; colonels_dissent -= 6; neorevisionist_dissent -= 6
 
 It is not enough for the BBWR to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
@@ -59,7 +59,7 @@ We have increased recruiting to the Reichsbanner.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; repairers_strength += 5; conservatives_strength += 5; radicalization += 1;
+on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; repairers_strength += 5; neorevisionist_strength += 5; radicalization += 1;
 
 Our new youth members flock to the left or neorevisionist wings of the party, and also bring new radicalism to the Reichsbanner.
 

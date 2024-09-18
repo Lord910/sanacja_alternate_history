@@ -61,7 +61,7 @@ Vorwärts prints editorials in support of the reformist policies.
 
 @support_neorev
 view-if: neorevisionism
-on-arrival: conservatives_dissent -= 6; conservatives_strength += 5
+on-arrival: neorevisionist_dissent -= 6; neorevisionist_strength += 5
 
 Vorwärts prints editorials in support of neorevisionist ideas.
 

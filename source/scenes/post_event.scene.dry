@@ -72,16 +72,16 @@ if (Q.bezrobotni <= 1) {
 }
 
 // re-calculate dissent.
-var total_strength = Q.repairers_strength + Q.liberals_strength + Q.sanacja_left_strength + Q.colonels_strength + Q.conservatives_strength;
+var total_strength = Q.repairers_strength + Q.liberals_strength + Q.sanacja_left_strength + Q.colonels_strength + Q.neorevisionist_strength;
 
 // normalize strength for the different factions
 Q.repairers_strength = 100*Q.repairers_strength/total_strength;
 Q.liberals_strength = 100*Q.liberals_strength/total_strength;
 Q.sanacja_left_strength = 100*Q.sanacja_left_strength/total_strength;
 Q.colonels_strength = 100*Q.colonels_strength/total_strength;
-Q.conservatives_strength = 100*Q.conservatives_strength/total_strength;
+Q.neorevisionist_strength = 100*Q.neorevisionist_strength/total_strength;
 
-var total_dissent = Q.repairers_strength*Q.repairers_dissent + Q.liberals_strength*Q.liberals_dissent + Q.sanacja_left_strength*Q.sanacja_left_dissent + Q.colonels_strength*Q.colonels_dissent + Q.conservatives_strength*Q.conservatives_dissent;
+var total_dissent = Q.repairers_strength*Q.repairers_dissent + Q.liberals_strength*Q.liberals_dissent + Q.sanacja_left_strength*Q.sanacja_left_dissent + Q.colonels_strength*Q.colonels_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
 
 
 Q.dissent = 0.01*total_dissent/total_strength;
