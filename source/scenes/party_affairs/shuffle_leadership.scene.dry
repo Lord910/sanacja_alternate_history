@@ -517,7 +517,7 @@ card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3
 on-arrival: mierendorff_advisor = 1; n_advisors += 1; conservatives_strength += 5
 go-to: advisor_menu
-tags: conservatives_advisor
+tags: nationalists_advisor
 
 Carlo Mierendorff is now an advisor.
 
