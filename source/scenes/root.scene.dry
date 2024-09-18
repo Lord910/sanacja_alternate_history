@@ -43,7 +43,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['repairers', 'liberals', 'sanacja_left', 'reformist', 'conservatives', '4_brigade'];
+Q.factions = ['repairers', 'liberals', 'sanacja_left', 'reformist', 'conservatives', 'fourth_brigade'];
 // should this be normalized to 100%?
 Q.repairers_strength = 15;
 Q.repairers_dissent = 15;
@@ -54,8 +54,8 @@ Q.sanacja_left_dissent = 10;
 Q.colonels_dissent = 0;
 Q.conservatives_strength = 15;
 Q.conservatives_dissent = 10;
-Q.4_brigade_strength = 15;
-Q.4_brigade_dissent = 15;
+Q.fourth_brigade_strength = 15;
+Q.fourth_brigade_dissent = 15;
 
 // secret events...
 Q.unions_independent = 0;
