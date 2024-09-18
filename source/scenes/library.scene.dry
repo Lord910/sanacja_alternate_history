@@ -388,8 +388,8 @@ The IV Brigade is largely driven by the desire for power and influence, rather t
 
 This faction represents the more pragmatic, if cynical, side of the Sanacja regime. While other groups within the movement push for reforms or ideological goals, the IV Brigade is focused squarely on personal advancement and securing its position within the state. Though resented by many within Sanacja for their opportunism, they are an entrenched force, ensuring their continued influence in the political landscape.
 
-Strength: [+ 4brigade_strength : strength +]
-Dissent: [+ 4brigade_dissent : dissent +]
+Strength: [+ 4_brigade_strength : strength +]
+Dissent: [+ 4_brigade_dissent : dissent +]
 
 @neorevisionists
 go-to: menu
