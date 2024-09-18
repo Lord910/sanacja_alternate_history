@@ -181,13 +181,13 @@ Seydewitz has been removed as an advisor. The Sanacja Left disapproves.
 
 
 
-# neorevisionists
+# conservativess
 
 @remove_mierendorff
 title: Remove Mierendorff
 view-if: mierendorff_advisor = 1
 tags: remove_advisor
-on-arrival: mierendorff_advisor = 0; neorevisionist_dissent += 5; n_advisors -= 1
+on-arrival: mierendorff_advisor = 0; conservatives_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Mierendorff has been removed as an advisor. The Conservatives faction disapproves.
@@ -196,7 +196,7 @@ Mierendorff has been removed as an advisor. The Conservatives faction disapprove
 title: Remove Leber
 view-if: leber_advisor = 1
 tags: remove_advisor
-on-arrival: leber_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
+on-arrival: leber_advisor = 0; conservatives_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Leber has been removed as an advisor. The Conservatives faction disapproves.
@@ -205,7 +205,7 @@ Leber has been removed as an advisor. The Conservatives faction disapproves.
 title: Remove Schumacher
 view-if: schumacher_advisor = 1
 tags: remove_advisor
-on-arrival: schumacher_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
+on-arrival: schumacher_advisor = 0; conservatives_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Schumacher has been removed as an advisor. The Conservatives faction disapproves.
@@ -501,7 +501,7 @@ go-to: advisor_menu
 Wladimir Woytinsky is now an advisor.
 
 
-# neorevisionist leaders
+# conservatives leaders
 
 @add_mierendorff
 title: Carlo Mierendorff
@@ -509,7 +509,7 @@ subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3
-on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+on-arrival: mierendorff_advisor = 1; n_advisors += 1; conservatives_strength += 5
 go-to: advisor_menu
 tags: conservatives_advisor
 
@@ -522,7 +522,7 @@ is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
 tags: conservatives_advisor
 view-if: schumacher_advisor = 0 and n_advisors < 3
-on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+on-arrival: schumacher_advisor = 1; n_advisors += 1; conservatives_strength += 5
 go-to: advisor_menu
 
 Kurt Schumacher is now an advisor.
@@ -533,7 +533,7 @@ subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition
 is-card: true
 card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+on-arrival: leber_advisor = 1; n_advisors += 1; conservatives_strength += 5
 go-to: advisor_menu
 tags: conservatives_advisor
 

@@ -11,7 +11,7 @@ max-visits: 3
 
 Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar robotnicy and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
 
-In order to build a socialist majority, many reformists and neorevisionists are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
+In order to build a socialist majority, many reformists and conservativess are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
 
 - @support_peoples_party: Yes, we must become a people's party!
 - @build_support: We must build additional support before becoming a people's party.
@@ -21,16 +21,16 @@ In order to build a socialist majority, many reformists and neorevisionists are 
 - @easy_discard
 
 @build_support
-view-if: (neorevisionist_strength + colonels_strength < repairers_strength + liberals_strength) or peoples_party_support < 5
-on-arrival: peoples_party_support += 1; neorevisionist_strength += 5; repairers_strength -= 5; repairers_dissent += 5
+view-if: (conservatives_strength + colonels_strength < repairers_strength + liberals_strength) or peoples_party_support < 5
+on-arrival: peoples_party_support += 1; conservatives_strength += 5; repairers_strength -= 5; repairers_dissent += 5
 
 Within our party, we are pushing forward proposals for a people's party against the Left and Center.
 
 
 @support_peoples_party
-choose-if: (neorevisionist_strength + colonels_strength >= repairers_strength + liberals_strength) and peoples_party_support >= 4
+choose-if: (conservatives_strength + colonels_strength >= repairers_strength + liberals_strength) and peoples_party_support >= 4
 unavailable-subtitle: The opposition is too strong.
-on-arrival: neorevisionist_strength += 15; colonels_strength += 15; neorevisionist_dissent -= 10; colonels_dissent -= 10; peoples_party = 1; robotnicy_bbwr -= 12; chlopi_bbwr += 10; klasa_srednia_bbwr += 10; klasa_wyzsza_bbwr += 8; mniejszosci_bbwr += 8; repairers_dissent += 25; liberals_dissent += 20; kpp_relation -= 10; kpp_coalition_dissent += 1; coalition_dissent -= 1; pschd_relation += 5*(1-dissent); pslp_relation += 5*(1-dissent)
+on-arrival: conservatives_strength += 15; colonels_strength += 15; conservatives_dissent -= 10; colonels_dissent -= 10; peoples_party = 1; robotnicy_bbwr -= 12; chlopi_bbwr += 10; klasa_srednia_bbwr += 10; klasa_wyzsza_bbwr += 8; mniejszosci_bbwr += 8; repairers_dissent += 25; liberals_dissent += 20; kpp_relation -= 10; kpp_coalition_dissent += 1; coalition_dissent -= 1; pschd_relation += 5*(1-dissent); pslp_relation += 5*(1-dissent)
 achievement: volkspartei
 
 In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the robotnicy and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
@@ -47,8 +47,8 @@ Should we run a new campaign to publicize our new platform?
 
 @support_peoples_party_hard
 subtitle: This will increase dissent.
-view-if: (neorevisionist_strength + colonels_strength < repairers_strength + liberals_strength) or (peoples_party_support < 4)
-on-arrival: neorevisionist_strength += 10; colonels_strength += 8; peoples_party = 1; robotnicy_bbwr -= 15; chlopi_bbwr += 10; klasa_srednia_bbwr += 10; klasa_wyzsza_bbwr += 8; mniejszosci_bbwr += 8; repairers_dissent += 40; liberals_dissent += 40; kpp_relation -= 10; kpp_coalition_dissent += 1; coalition_dissent -= 1
+view-if: (conservatives_strength + colonels_strength < repairers_strength + liberals_strength) or (peoples_party_support < 4)
+on-arrival: conservatives_strength += 10; colonels_strength += 8; peoples_party = 1; robotnicy_bbwr -= 15; chlopi_bbwr += 10; klasa_srednia_bbwr += 10; klasa_wyzsza_bbwr += 8; mniejszosci_bbwr += 8; repairers_dissent += 40; liberals_dissent += 40; kpp_relation -= 10; kpp_coalition_dissent += 1; coalition_dissent -= 1
 achievement: volkspartei
 
 It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
@@ -102,7 +102,7 @@ Mniejszosci have historically been tied to the Center Party, but there is no rea
 
 
 @no_new_ideas
-on-arrival: neorevisionist_strength -= 6; neorevisionist_dissent += 5; liberals_strength += 8; repairers_strength += 3; peoples_party = 0; peoples_party_support -= 3
+on-arrival: conservatives_strength -= 6; conservatives_dissent += 5; liberals_strength += 8; repairers_strength += 3; peoples_party = 0; peoples_party_support -= 3
 
 The Social Democrats have been and will always be a party of the working class.
 

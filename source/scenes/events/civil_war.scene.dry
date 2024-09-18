@@ -5,8 +5,8 @@ Q.rb_strength = Math.round(Q.rb_strength);
 Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength);
 // re-calculate dissent, in case we transitioned from, say, the KPP support that raised reformist dissent.
-var total_strength = Q.repairers_strength + Q.liberals_strength + Q.sanacja_left_strength + Q.colonels_strength + Q.neorevisionist_strength;
-var total_dissent = Q.repairers_strength*Q.repairers_dissent + Q.liberals_strength*Q.liberals_dissent + Q.sanacja_left_strength*Q.sanacja_left_dissent + Q.colonels_strength*Q.colonels_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
+var total_strength = Q.repairers_strength + Q.liberals_strength + Q.sanacja_left_strength + Q.colonels_strength + Q.conservatives_strength;
+var total_dissent = Q.repairers_strength*Q.repairers_dissent + Q.liberals_strength*Q.liberals_dissent + Q.sanacja_left_strength*Q.sanacja_left_dissent + Q.colonels_strength*Q.colonels_dissent + Q.conservatives_strength*Q.conservatives_dissent;
 
 Q.dissent = 0.01*total_dissent/total_strength;
 console.log('new dissent: ' + Q.dissent);

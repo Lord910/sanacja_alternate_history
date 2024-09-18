@@ -302,7 +302,7 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 
 
 @factions
-go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
+go-to: conservativess if neorevisionism > 0; menu if neorevisionism <= 0
 
 **Internal Factions of the Sanacja Movement**
 
@@ -374,16 +374,16 @@ The Conservatives offer crucial financial and political support to the Sanacja r
 
 While maintaining a close relationship with Piłsudski, the Conservatives aim to balance the more radical elements within Sanacja, ensuring that their vision of national order and stability is realized. Their focus on economic stability and safeguarding the interests of the upper classes complements Piłsudski’s broader goal of preventing societal chaos and protecting the state from the excesses of both socialist and nationalist forces. Their presence in the Sanacja movement serves as a counterweight to liberal and radical factions, making them an essential component of the regime’s power structure.
 
-@neorevisionists
+@conservativess
 go-to: menu
 
-**Neorevisionists**
+**Conservativess**
 
-Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
+Conservativess focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
 
-Strength: [+ neorevisionist_strength : strength +]
+Strength: [+ conservatives_strength : strength +]
 
-Dissent: [+ neorevisionist_dissent : dissent +]
+Dissent: [+ conservatives_dissent : dissent +]
 
 
 @figures

@@ -54,7 +54,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
-on-arrival: bbwr_support_thalmann = 1; colonels_dissent += 15; liberals_dissent += 10; sanacja_left_dissent += 5; neorevisionist_dissent += 10; mniejszosci_bbwr -= 5; robotnicy_bbwr -= 3; kpp_relation += 10; communist_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
+on-arrival: bbwr_support_thalmann = 1; colonels_dissent += 15; liberals_dissent += 10; sanacja_left_dissent += 5; conservatives_dissent += 10; mniejszosci_bbwr -= 5; robotnicy_bbwr -= 3; kpp_relation += 10; communist_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
 
 Fine. We have thrown our support to Chairman Thälmann of the KPP.
 
@@ -365,7 +365,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: braun_campaign = 0; bbwr_support_thalmann = 1; colonels_dissent += 15; liberals_dissent += 10; sanacja_left_dissent += 5; neorevisionist_dissent += 10; mniejszosci_bbwr -= 5; robotnicy_bbwr -= 3; kpp_relation += 10; communist_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
+on-arrival: braun_campaign = 0; bbwr_support_thalmann = 1; colonels_dissent += 15; liberals_dissent += 10; sanacja_left_dissent += 5; conservatives_dissent += 10; mniejszosci_bbwr -= 5; robotnicy_bbwr -= 3; kpp_relation += 10; communist_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
 on-departure: pschd_support_braun = 0; kpp_support_braun = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the KPP.

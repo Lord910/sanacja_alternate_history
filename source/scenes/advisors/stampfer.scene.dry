@@ -37,7 +37,7 @@ Which faction should we support?
 - @support_liberals: Center
 - @support_sanacja_left: Labor
 - @support_reform: Reformists
-- @support_neorev: Neorevisionists
+- @support_neorev: Conservativess
 
 @support_left
 on-arrival: repairers_dissent -= 6; repairers_strength += 5
@@ -61,9 +61,9 @@ Vorwärts prints editorials in support of the reformist policies.
 
 @support_neorev
 view-if: neorevisionism
-on-arrival: neorevisionist_dissent -= 6; neorevisionist_strength += 5
+on-arrival: conservatives_dissent -= 6; conservatives_strength += 5
 
-Vorwärts prints editorials in support of neorevisionist ideas.
+Vorwärts prints editorials in support of conservatives ideas.
 
 @kpp_cooperation
 title: Cooperation with the KPP

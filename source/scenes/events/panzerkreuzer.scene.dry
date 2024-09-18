@@ -15,7 +15,7 @@ We campaigned on food for children instead of battlecruisers. Will we really bet
 - @abstain: Abstain from the vote.
 
 @vote_yes
-on-arrival: repairers_dissent += 10; sanacja_left_dissent += 5; liberals_dissent += 5; colonels_dissent += 5; neorevisionist_dissent += 5; panzerkreuzer_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; robotnicy_bbwr -= 3
+on-arrival: repairers_dissent += 10; sanacja_left_dissent += 5; liberals_dissent += 5; colonels_dissent += 5; conservatives_dissent += 5; panzerkreuzer_funded = 1; kpp_coalition_dissent += 1; kpp_relation -= 6; robotnicy_bbwr -= 3
 
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision.
 
