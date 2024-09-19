@@ -453,6 +453,7 @@ Julius Leber of the BBWR has been appointed Reichswehr Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
+go-to: speaker_election_1928
 
 This coalition arrangement is tolerable to all.
 
