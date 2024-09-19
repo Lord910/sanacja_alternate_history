@@ -1,6 +1,6 @@
 title: Speaker of Sejm Elections
 subtitle: It is time to elect a new Speaker of Sejm...
-view-if: year = 1928 and speaker_election_seen = 0 and speaker_election_time = 1
+view-if: year = 1928 and speaker_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true

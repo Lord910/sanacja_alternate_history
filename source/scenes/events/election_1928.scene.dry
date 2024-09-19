@@ -319,7 +319,7 @@ What will be Piłsudski’s decision?
 
 @pilsudski_majority_chancellor
 view-if: not historical_mode or not bbwr_prussia
-on-arrival: chancellor = "Piłsudski"; speaker_election_time = 1;
+on-arrival: chancellor = "Piłsudski"; 
 go-to: ministries
 
 Józef Piłsudski has become Prime Minister of the BBWR majority
@@ -338,7 +338,7 @@ What will be Piłsudski’s decision?
 - @pilsudski_minority_chancellor: Józef Piłsudski will stay as Prime Minister.
 
 @pilsudski_minority_chancellor
-on-arrival: chancellor = "Piłsudski"; speaker_election_time = 1;
+on-arrival: chancellor = "Piłsudski"; 
 go-to: ministries
 
 Józef Piłsudski will stay as Prime Minister.
