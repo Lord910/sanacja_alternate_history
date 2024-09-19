@@ -65,13 +65,25 @@ As the swearing-in proceeded, Marshal Piłsudski departed for a Senate meeting. 
 
 @speaker_election_start
 
-Finally, the moment everyone had been waiting for arrived: the election of the Speaker. Each faction had put forth its candidate. Rulling camp had two clear options, reflecting the internal divisions within their ranks. The Colonels' faction, fiercely loyal to Piłsudski, leaned toward nominating Kazimierz Świtalski, a close and unwavering supporter of the Marshal. However, Świtalski's candidacy presented a challenge—his loyalty to Piłsudski was unquestioned, but his ability to garner support from other parties seemed unlikely without significant effort and persuasion.
+Finally, the moment everyone had been waiting for arrived: the election of the Speaker. Each faction had put forth its candidate. 
+
+Rulling camp had two clear options, reflecting the internal divisions within their ranks:
+
+The Colonels' faction, fiercely loyal to Piłsudski, leaned toward nominating Kazimierz Świtalski, a close and unwavering supporter of the Marshal. However, Świtalski's candidacy presented a challenge—his loyalty to Piłsudski was unquestioned, but his ability to garner support from other parties seemed unlikely without significant effort and persuasion.
 
 On the other hand, there was Kazimierz Bartel, a former Prime Minister and current Deputy Prime Minister, representing the more liberal wing of the Sanation movement. Bartel was a pragmatic choice, more palatable to the left-wing and minority factions. However, his nomination carried risks as well. His ties to the liberal side of the party could alienate the more conservative elements of Sanation, who might see this as a concession to the opposition rather than a victory.
 
-Meanwhile, the Polish Socialist Party (PPS) backed the respected Ignacy Daszyński, a figure well-known for his leadership and integrity. PPS already managed to convince other left-wing parties (SCh and PSL-W) for their candidate. The National Democrats (ZLN), determined to counter the government’s influence, nominated Aleksander Zwierzyński. Centre-right parties (PSCHD, NPR, PSL-P) did not pick their own candidate and it is expected they wont vote at all. The Ukrainian bloc supported Jan Leszczyński, hoping to secure a candidate sympathetic to minority rights. Even the Communists, weakened by the day’s arrests, proposed Konstanty Sypuła and Adolf Warski, though it was clear their chances were slim.
+Meanwhile, the Polish Socialist Party (PPS) backed the respected Ignacy Daszyński, a figure well-known for his leadership and integrity. PPS already managed to convince other left-wing parties (SCh and PSL-W) for their candidate. 
 
-The decision now lay in Sanation’s hands. Should they rally behind the loyal Świtalski and risk alienating potential allies, or choose the more moderate Bartel and risk internal division? The next move would shape the future of the Sejm.
+The National Democrats (ZLN), determined to counter the government’s influence, nominated Aleksander Zwierzyński. 
+
+Centre-right parties (PSCHD, NPR, PSL-P) did not pick their own candidate and it is expected they wont vote at all. 
+
+The Ukrainian bloc supported Jan Leszczyński, hoping to secure a candidate sympathetic to minority rights. 
+
+Even the Communists, weakened by the day’s arrests, proposed Konstanty Sypuła and Adolf Warski, though it was clear their chances were slim.
+
+The decision now lay in Piłsudski’s’s hands. Should they rally behind the loyal Świtalski and risk alienating potential allies, or choose the more moderate Bartel and risk internal division? The next move would shape the future of the Sejm.
 
 [? if pps_relation >= 50 : Another possibilty is an united front with left wing parties, either to support Daszyński or our own candidate. ?]
 
