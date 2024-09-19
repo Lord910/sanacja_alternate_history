@@ -131,15 +131,15 @@ Q.prussian_government = "BBWR";
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.lm_strength = 0;
-Q.lm_militancy = 0.00;
+Q.lm_militancy = 0.01;
 Q.women_in_lm = 0;
 Q.lm_banned = 0;
 Q.zpmd_strength = 0;
-Q.zpmd_militancy = 0.00;
+Q.zpmd_militancy = 0.01;
 Q.women_in_zpmd = 0;
 Q.zpmd_banned = 0;
 Q.zpm_strength = 0;
-Q.zpm_militancy = 0.00;
+Q.zpm_militancy = 0.01;
 Q.women_in_zpm = 0;
 Q.zpm_banned = 0;
 Q.sh_strength = 500;
