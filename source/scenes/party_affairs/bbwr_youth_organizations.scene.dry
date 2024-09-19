@@ -11,9 +11,9 @@ max-visits: 5
 
 The BBWR has multiple youth organizations, each serving different purposes and ideologies. We must decide how to allocate our resources between these groups:
 
-- @legion_and_vanguard
-- @democratic_youth
-- @conservative_youth
+- @legion_and_vanguard: Legion and Vanguard
+- @democratic_youth: Union of Polish Democratic Youth
+- @conservative_youth: Union for Imperial Effort
 - @easy_discard
 
 @legion_and_vanguard
@@ -26,7 +26,6 @@ on-arrival: {!
         lm_militarization_cost = 1;
     }
 !}
-
 
 The *Legion Młodych* (Youth Legion) and *Straż Przednia* (Vanguard) are patriotic youth organizations that discipline, and physical fitness and oppose ethnic nationalism of Endecja. They are the backbone of the BBWR's youth wing, representing a new generation of Polish leadership.
 
