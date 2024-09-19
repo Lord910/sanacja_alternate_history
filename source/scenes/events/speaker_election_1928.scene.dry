@@ -357,48 +357,48 @@ Q.sn_speaker_votes += Q.owp_r;
 Q.kpp_speaker_votes += Q.kpp_r;
 Q.minorities_speaker_votes += Q.other_r;
 
-
 if (Q.bbwr_speaker_campaign) {
     Q.bbwr_speaker_votes += Q.bbwr_r;
-if (Q.bbwr_support_pps) {
-    Q.bbwr_speaker_votes -= Q.bbwr_r;
-    Q.pps_speaker_votes += Q.bbwr_r;
-    Q.pps_speaker_votes += Q.pslw_r;
-    Q.pps_speaker_votes += Q.sch_r;
-    Q.minorities_speaker_votes -= Q.other_r;
-    Q.pps_speaker_votes += Q.other_r;
-    Q.sn_speaker_votes += Q.pschd_votes;
-    Q.sn_speaker_votes += Q.npr_votes;
-    Q.sn_speaker_votes += Q.pslp_votes;
-} else if (Q.pps_support_bbwr) {
-    Q.pps_speaker_votes -= Q.pps_r;
-    Q.bbwr_speaker_votes += Q.pps_r;
-    Q.bbwr_speaker_votes += Q.pslw_r;
-    Q.bbwr_speaker_votes += Q.sch_r;
-    Q.minorities_speaker_votes -= Q.other_r;
-    Q.bbwr_speaker_votes += Q.other_r;
-    Q.sn_speaker_votes += Q.pschd_votes;
-    Q.sn_speaker_votes += Q.npr_votes;
-    Q.sn_speaker_votes += Q.pslp_votes;
-} else {
-    if (Q.other_support_bbwr) {
+    if (Q.bbwr_support_pps) {
+        Q.bbwr_speaker_votes -= Q.bbwr_r;
+        Q.pps_speaker_votes += Q.bbwr_r;
+        Q.pps_speaker_votes += Q.pslw_r;
+        Q.pps_speaker_votes += Q.sch_r;
+        Q.minorities_speaker_votes -= Q.other_r;
+        Q.pps_speaker_votes += Q.other_r;
+        Q.sn_speaker_votes += Q.pschd_votes;
+        Q.sn_speaker_votes += Q.npr_votes;
+        Q.sn_speaker_votes += Q.pslp_votes;
+    } else if (Q.pps_support_bbwr) {
+        Q.pps_speaker_votes -= Q.pps_r;
+        Q.bbwr_speaker_votes += Q.pps_r;
+        Q.bbwr_speaker_votes += Q.pslw_r;
+        Q.bbwr_speaker_votes += Q.sch_r;
         Q.minorities_speaker_votes -= Q.other_r;
         Q.bbwr_speaker_votes += Q.other_r;
-    }
-    if (Q.npr_support_bbwr) {
-        Q.bbwr_speaker_votes += Q.npr_r;
+        Q.sn_speaker_votes += Q.pschd_votes;
+        Q.sn_speaker_votes += Q.npr_votes;
+        Q.sn_speaker_votes += Q.pslp_votes;
     } else {
-        Q.empty_speaker_votes += Q.npr_r;
-    }
-    if (Q.pschd_support_bbwr) {
-        Q.bbwr_speaker_votes += Q.pschd_r;
-    } else {
-        Q.empty_speaker_votes += Q.pschd_r;
-    }
-    if (Q.pslp_support_bbwr) {
-        Q.bbwr_speaker_votes += Q.pslp_r;
-    } else {
-        Q.empty_speaker_votes += Q.pslp_r;
+        if (Q.other_support_bbwr) {
+            Q.minorities_speaker_votes -= Q.other_r;
+            Q.bbwr_speaker_votes += Q.other_r;
+        }
+        if (Q.npr_support_bbwr) {
+            Q.bbwr_speaker_votes += Q.npr_r;
+        } else {
+            Q.empty_speaker_votes += Q.npr_r;
+        }
+        if (Q.pschd_support_bbwr) {
+            Q.bbwr_speaker_votes += Q.pschd_r;
+        } else {
+            Q.empty_speaker_votes += Q.pschd_r;
+        }
+        if (Q.pslp_support_bbwr) {
+            Q.bbwr_speaker_votes += Q.pslp_r;
+        } else {
+            Q.empty_speaker_votes += Q.pslp_r;
+        }
     }
 }
 
@@ -406,7 +406,7 @@ if (Q.bbwr_support_pps) {
 Q.bbwr_speaker_majority = (Q.bbwr_speaker_votes >= 50);
 Q.pps_speaker_majority = (Q.pps_speaker_votes >= 50);
 Q.sn_speaker_majority = (Q.sn_votes >= 50);
-Q.any_majority = Q.bbwr_speaker_majority | Q.pps_speaker_majority | Q.sn_speaker_majority
+Q.any_majority = Q.bbwr_speaker_majority || Q.pps_speaker_majority || Q.sn_speaker_majority;
 
 // check for plurality
 Q.bbwr_speaker_plurality = (Q.bbwr_speaker_votes >= Q.sn_speaker_votes && Q.bbwr_speaker_votes >= Q.pps_speaker_votes);
