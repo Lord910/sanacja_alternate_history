@@ -22,7 +22,7 @@ The *Legion Młodych* (Youth Legion) and *Straż Przednia* (Vanguard) are patrio
 
 - @lm_increase_funding: Allocate more resources to expand their operations.
 - @lm_military_training: Increase the focus on military training.
-- @same: Maintain current support and programs.
+- @lm_same: Maintain current support and programs.
 - @lm_cut: Cut funding to reduce their influence.
 
 @lm_increase_funding
@@ -38,7 +38,7 @@ on-arrival: resources -= lm_militarization_cost; lm_investment += 1; lm_strength
 
 Emphasizing military training attracts more patriotic youth and prepares them for future leadership roles.
 
-@same
+@lm_same
 subtitle: No change
 The current level of support is sufficient for now.
 
@@ -54,7 +54,7 @@ The *Związek Polskiej Młodzieży Demokratycznej* focuses on democratic ideals 
 
 - @zpmd_increase_funding: Invest more resources into political education and recruitment.
 - @zpmd_military_training: Shift towards a more militarized structure.
-- @same: Maintain current support and programs.
+- @zpmd_same: Maintain current support and programs.
 - @zpmd_cut: Cut funding to this organization.
 
 @zpmd_increase_funding
@@ -70,7 +70,7 @@ on-arrival: resources -= zpmd_militarization_cost; zpmd_investment += 1; zpmd_st
 
 Introducing military training may attract a more disciplined and committed membership, though it could alienate some democratically inclined youth.
 
-@same
+@zpmd_same
 subtitle: No change
 The current approach is working well enough.
 
@@ -86,7 +86,7 @@ The *Związek Pracy Mocarstwowej* (Union for Imperial Effort) is a geopolitical 
 
 - @zpm_increase_funding: Expand the influence of this organization.
 - @zpm_military_training: Increase the emphasis on strategic military training.
-- @same: Keep the current level of support.
+- @zpm_same: Keep the current level of support.
 - @zpm_cut: Reduce support for this organization.
 
 @zpm_increase_funding
@@ -102,7 +102,7 @@ on-arrival: resources -= zpm_militarization_cost; zpm_investment += 1; zpm_stren
 
 Focusing on military strategy further aligns with the group’s goals of projecting Polish power abroad.
 
-@same
+@zpm_same
 subtitle: No change
 The organization is operating effectively as it is.
 
