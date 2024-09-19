@@ -355,6 +355,7 @@ Q.pps_speaker_votes += Q.pps_r;
 Q.sn_speaker_votes += Q.sn_r;
 Q.sn_speaker_votes += Q.owp_r;
 Q.kpp_speaker_votes += Q.kpp_r;
+Q.minorities_speaker_votes += Q.other_r;
 
 
 if (Q.bbwr_speaker_campaign) {
@@ -364,6 +365,7 @@ if (Q.bbwr_speaker_campaign) {
         Q.bbwr_speaker_votes += Q.pps_r;
         Q.bbwr_speaker_votes += Q.sch_r;
         Q.bbwr_speaker_votes += Q.pslw_r;
+        Q.minorities_speaker_votes -= Q.other_r;
         Q.bbwr_speaker_votes += Q.other_r;
         Q.sn_speaker_votes += Q.pschd_votes;
         Q.sn_speaker_votes += Q.npr_votes;
