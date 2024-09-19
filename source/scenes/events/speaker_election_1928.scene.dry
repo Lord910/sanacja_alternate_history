@@ -550,7 +550,6 @@ Fine. We have thrown our support to [+ pps_candidate +] of the PPS.
 @round2_vote
 go-to: election_algorithm
 set-jump: post_election
-on-arrival: bbwr_speaker_campaign = 0; bbwr_support_pps = 0
 
 @round2_results
 go-to: bbwr_speaker_wins if bbwr_speaker_plurality == 1; pps_speaker_wins if pps_plurality == 1; sn_speaker_wins if sn_plurality == 1
