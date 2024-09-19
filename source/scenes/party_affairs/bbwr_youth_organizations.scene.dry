@@ -17,7 +17,12 @@ The BBWR has multiple youth organizations, each serving different purposes and i
 - @easy_discard
 
 @legion_and_vanguard
-on-arrival: lm_militarization_cost = 2 if lm_militancy > 0.1 else lm_militarization_cost = 1; lm_militarization_cost = 3 if lm_militancy > 0.25
+on-arrival: {!
+    lm_militarization_cost = 2 if lm_militancy > 0.1 else lm_militarization_cost = 1;
+    if (lm_militancy > 0.25) {
+        lm_militarization_cost = 3;
+    }
+!}
 
 
 The *Legion Młodych* (Youth Legion) and *Straż Przednia* (Vanguard) are patriotic youth organizations that discipline, and physical fitness and oppose ethnic nationalism of Endecja. They are the backbone of the BBWR's youth wing, representing a new generation of Polish leadership.
@@ -52,7 +57,12 @@ on-arrival: resources += 1; lm_strength -= 150; lm_militancy -= 0.05
 Cutting funding will reduce their influence, and some of their members may drift to more radical organizations.
 
 @democratic_youth
-on-arrival: zpmd_militarization_cost = 2 if zpmd_militancy > 0.1 else zpmd_militarization_cost = 1; zpmd_militarization_cost = 3 if zpmd_militancy > 0.25
+on-arrival: {!
+    zpmd_militarization_cost = 2 if zpmd_militancy > 0.1 else zpmd_militarization_cost = 1;
+    if (zpmd_militancy > 0.25) {
+        zpmd_militarization_cost = 3;
+    }
+!}
 
 The *Związek Polskiej Młodzieży Demokratycznej* focuses on democratic ideals and civic responsibility. It is less militaristic than other youth organizations but provides a platform for political engagement.
 
@@ -84,7 +94,12 @@ on-arrival: resources += 1; zpmd_strength -= 100; zpmd_militancy -= 0.05
 Cutting funding reduces their influence, with members potentially shifting to other democratic or socialist organizations.
 
 @conservative_youth
-on-arrival: zpm_militarization_cost = 2 if zpm_militancy > 0.1 else zpm_militarization_cost = 1; zpm_militarization_cost = 3 if zpm_militancy > 0.25
+on-arrival: {!
+    zpm_militarization_cost = 2 if zpm_militancy > 0.1 else zpm_militarization_cost = 1;
+    if (zpm_militancy > 0.25) {
+        zpm_militarization_cost = 3;
+    }
+!}
 
 The *Związek Pracy Mocarstwowej* (Union for Imperial Effort) is a geopolitical youth organization promoting Poland’s expansion and imperial aspirations. Its members focus on foreign policy and strategic dominance.
 
