@@ -360,31 +360,30 @@ Q.minorities_speaker_votes += Q.other_r;
 
 if (Q.bbwr_speaker_campaign) {
     Q.bbwr_speaker_votes += Q.bbwr_r;
-    if (Q.pps_support_bbwr) {
-        Q.pps_speaker_votes -= Q.pps_r;
-        Q.bbwr_speaker_votes += Q.pps_r;
-        Q.bbwr_speaker_votes += Q.sch_r;
-        Q.bbwr_speaker_votes += Q.pslw_r;
-        Q.minorities_speaker_votes -= Q.other_r;
-        Q.bbwr_speaker_votes += Q.other_r;
-        Q.sn_speaker_votes += Q.pschd_votes;
-        Q.sn_speaker_votes += Q.npr_votes;
-        Q.sn_speaker_votes += Q.pslp_votes;      
-    } else {
-        Q.pps_speaker_votes += Q.pslw_r;
-        Q.pps_speaker_votes += Q.sch_r;
-    }
+if (Q.bbwr_support_pps) {
+    Q.bbwr_speaker_votes -= Q.bbwr_r;
+    Q.pps_speaker_votes += Q.bbwr_r;
+    Q.pps_speaker_votes += Q.pslw_r;
+    Q.pps_speaker_votes += Q.sch_r;
+    Q.minorities_speaker_votes -= Q.other_r;
+    Q.pps_speaker_votes += Q.other_r;
+    Q.sn_speaker_votes += Q.pschd_votes;
+    Q.sn_speaker_votes += Q.npr_votes;
+    Q.sn_speaker_votes += Q.pslp_votes;
+} else if (Q.pps_support_bbwr) {
+    Q.pps_speaker_votes -= Q.pps_r;
+    Q.bbwr_speaker_votes += Q.pps_r;
+    Q.bbwr_speaker_votes += Q.pslw_r;
+    Q.bbwr_speaker_votes += Q.sch_r;
+    Q.minorities_speaker_votes -= Q.other_r;
+    Q.bbwr_speaker_votes += Q.other_r;
+    Q.sn_speaker_votes += Q.pschd_votes;
+    Q.sn_speaker_votes += Q.npr_votes;
+    Q.sn_speaker_votes += Q.pslp_votes;
+} else {
     if (Q.other_support_bbwr) {
         Q.minorities_speaker_votes -= Q.other_r;
         Q.bbwr_speaker_votes += Q.other_r;
-    } else {
-        
-    }
-    if (Q.other_support_pps) {
-        Q.minorities_speaker_votes -= Q.other_r;
-        Q.pps_speaker_votes += Q.other_r;
-    } else {
-        
     }
     if (Q.npr_support_bbwr) {
         Q.bbwr_speaker_votes += Q.npr_r;
@@ -401,21 +400,6 @@ if (Q.bbwr_speaker_campaign) {
     } else {
         Q.empty_speaker_votes += Q.pslp_r;
     }
-} else if (Q.bbwr_support_pps) {
-    Q.pps_speaker_votes += Q.bbwr_r;
-    Q.pps_speaker_votes += Q.pslw_r;
-    Q.pps_speaker_votes += Q.sch_r;
-    Q.minorities_speaker_votes -= Q.other_r;
-    Q.pps_speaker_votes += Q.other_votes;
-    Q.sn_speaker_votes += Q.pschd_votes;
-    Q.sn_speaker_votes += Q.npr_votes;
-    Q.sn_speaker_votes += Q.pslp_votes;
-} else {
-    Q.sn_speaker_votes += Q.bbwr_votes;
-    Q.sn_speaker_votes += Q.pschd_votes;
-    Q.sn_speaker_votes += Q.pslw_votes;
-    Q.sn_speaker_votes += Q.pslp_votes;
-    Q.pps_speaker_votes += Q.kpp_votes;
 }
 
 // check for majority
@@ -467,7 +451,7 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 @round2_convince_pschd
 view-if: bbwr_speaker_campaign > 0 and pschd_support_bbwr != 1 
-choose-if: pps_support_bbwr or bbwr_support_pps
+choose-if: pps_support_bbwr = 1 or bbwr_support_pps = 1
 unavailable-subtitle: PSCHD wont work with us after our deal with PPS
 on-arrival: {!
 Q.pps_support_bbwr = 0;
