@@ -1,7 +1,7 @@
 title: BBWR Youth Organizations
 new-page: true
 is-card: true
-tags: youth_affairs
+tags: party_affairs
 view-if: bbwr_youth_timer <= 0
 card-image: img/bbwr_youth.jpg
 on-arrival: month_actions += 1; bbwr_youth_timer += 6
@@ -38,9 +38,10 @@ on-arrival: resources -= lm_militarization_cost; lm_investment += 1; lm_strength
 Emphasizing military training attracts more patriotic youth and prepares them for future leadership roles.
 
 @same
+subtitle: No change
 The current level of support is sufficient for now.
 
-@cut
+@lm_cut
 subtitle: +1 resources
 on-arrival: resources += 1; lm_strength -= 150; lm_militancy -= 0.05
 
@@ -51,7 +52,7 @@ Cutting funding will reduce their influence, and some of their members may drift
 The *Związek Polskiej Młodzieży Demokratycznej* focuses on democratic ideals and civic responsibility. It is less militaristic than other youth organizations but provides a platform for political engagement.
 
 - @zpmd_increase_funding: Invest more resources into political education and recruitment.
-- @military_training: Shift towards a more militarized structure.
+- @zpmd_military_training: Shift towards a more militarized structure.
 - @same: Maintain current support and programs.
 - @zpmd_cut: Cut funding to this organization.
 
@@ -68,6 +69,7 @@ on-arrival: resources -= 2; zpmd_strength += 200; zpmd_militancy += 0.1
 Introducing military training may attract a more disciplined and committed membership, though it could alienate some democratically inclined youth.
 
 @same
+subtitle: No change
 The current approach is working well enough.
 
 @zpmd_cut
@@ -97,7 +99,8 @@ on-arrival: resources -= 1; zpm_strength += 100; zpm_militancy += 0.05
 
 Focusing on military strategy further aligns with the group’s goals of projecting Polish power abroad.
 
-#### @same
+@same
+subtitle: No change
 The organization is operating effectively as it is.
 
 @zpm_cut
