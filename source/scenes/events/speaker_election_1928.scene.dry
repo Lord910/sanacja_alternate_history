@@ -181,7 +181,7 @@ go-to: bbwr_speaker_campaign
 
 Thanks to our good relations, the PSL-W has promised to support BBWR candidate in the election.
 
-@convince_sch_fail
+@convince_pslw_fail
 on-arrival: pslw_support_bbwr = 0
 go-to: bbwr_speaker_campaign
 
