@@ -380,9 +380,23 @@ if (Q.bbwr_speaker_campaign) {
         Q.sn_speaker_votes += Q.npr_votes;
         Q.sn_speaker_votes += Q.pslp_votes;
     } else {
+        if (Q.sch_support_bbwr) {
+            Q.bbwr_speaker_votes += Q.sch_r;
+        } else {
+            Q.pps_speaker_votes += Q.sch_r;
+        }
+        if (Q.pslw_support_bbwr) {
+            Q.bbwr_speaker_votes += Q.pslw_r;
+        } else {
+            Q.pps_speaker_votes += Q.pslw_r;
+        }
         if (Q.other_support_bbwr) {
             Q.minorities_speaker_votes -= Q.other_r;
             Q.bbwr_speaker_votes += Q.other_r;
+        } else if (Q.other_support_pps) {
+            Q.minorities_speaker_votes -= Q.other_r;
+            Q.pps_speaker_votes += Q.other_r;
+        } else {
         }
         if (Q.npr_support_bbwr) {
             Q.bbwr_speaker_votes += Q.npr_r;
