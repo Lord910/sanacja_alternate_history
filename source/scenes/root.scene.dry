@@ -382,6 +382,7 @@ Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
 Q.unemployment_insurance_seen = 0;
 Q.blutmai = 0;
+speaker_election_1928_time = 0
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
