@@ -1,0 +1,598 @@
+title: Speaker of Sejm Elections
+subtitle: It is time to elect a new Speaker of Sejm...
+view-if: year = 1928 and (month = 3) and speaker_election_seen = 0
+frequency: 1000
+max-visits: 1
+new-page: true
+on-arrival: bbwr_speaker_campaign = 0; other_support_pps = 0; speaker_election_seen = 1; pps_candidate = "Daszyński"; sn_candidate = "Zwierzyński"; minorities_candidate = "Leszczyński"; kpp_candidate = "Sypuła & Warski";
+tags: event
+go-to: election_algorithm
+set-jump: speaker_election
+
+@speaker_election
+
+Few weeks after the elections newly elected Sejm gathered in Warsaw for one of its most anticipated sessions—the election of the Speaker. The atmosphere was charged. Fresh from a bitterly fought general election, the members of parliament (MPs) arrived knowing the day’s proceedings would define the political landscape for the coming term. [? if Q.in_bbwr_majority = 1 : The election of the Speaker of the Sejm should be a mere formality, given our majority in parliament. With Piłsudski’s camp holding the reins, the outcome appears predetermined, yet the opposition is sure to voice its discontent. While the process may be filled with posturing from various parties, our control ensures that we will shape this session's results.. ?][? if Q.in_bbwr_minority = 1 : We do not hold a majority in the Sejm, and the Speaker election will be anything but smooth. Victory will only be possible through deals, compromises, and, if necessary, direct threats to MPs. With Piłsudski's influence at stake, every vote counts, and the opposition will not give in easily. This is a battle we must win, but one that will require every bit of political maneuvering. ?]Piłsudski and his government, though claiming victory, faced stiff resistance from an emboldened opposition. Tensions were further heightened by the disqualification of numerous Communist candidates during the election, stoking discontent among the left-wing and minority representatives. Many expected disruption, especially from the Ukrainian and Communist MPs, who were still outraged by the government’s handling of the campaign.
+
+- @pilsudski_arrival: Piłsudski’s Arrival
+
+@pilsudski_arrival
+
+As the MPs took their seats, Piłsudski arrived early. His presence cast a long shadow over the chamber, though he spoke little upon entering. Dressed in his military uniform, he moved quietly but purposefully, exchanging brief words with Jakub Bojko (former leader and political veteran of People's Movement, now member of BBWR), who had been surprisingly appointed Senior Speaker of the session. Bojko’s appointment raised eyebrows—it broke parliamentary tradition, as he wasn’t the eldest member present. Yet, like many things that day, it was a sign of Piłsudski’s influence. His authority was inescapable, and even in the opening minutes, it was clear the Marshal’s camp had set the tone for what was to follow.
+
+- @pilsudski_speech: Piłsudski started his opening speech
+
+@pilsudski_speech
+
+Piłsudski began reading a message from the president, Ignacy Mościcki, when the chamber erupted into chaos. Ukrainian and Communist MPs, their frustrations simmering from months of repression, broke into loud protest. "Down with fascist government!" shouted one, while others followed with accusations: “Piłsudski persecutes Ukrainians!”.
+
+Marshal Piłsudski, leaning heavily on the table with both hands, turns toward the shouting deputies and, in a firm, deliberate voice, declares, "Gentlemen, you will be thrown out of this chamber!" He repeats the warning twice, his words cutting through the noise, but the commotion refuses to die down.
+
+The cries grew louder as opposition MPs joined the chorus, adding fuel to the fire. Their voices rang out: “This parliament is a farce!” “The elections were rigged!”
+
+Piłsudski, mid-sentence, stopped and looked out over the shouting MPs. His face remained impassive, but the tension was palpable. The Sanation deputies sat in silence, watching the outburst unfold. Some hurled their own accusations at the protesters: “How much are you getting from Moscow for this?”
+
+For a moment, Piłsudski paused, weighing his options. He could ignore the shouts and allow the chaos to subside, or he could make a statement. 
+
+- @ignore_provocators: Piłsudski ignored them
+- @arrest_provocators: Piłsudski lost his patience
+
+@ignore_provocators
+
+TODO
+
+@arrest_provocators
+
+His decision was swift. With a quiet nod, he gave the order to clear the chamber. Armed police units entered the Sejm, moving quickly to silence the disruption. Ukrainian and Communist MPs resisted, but force was met with force. In one dramatic scene, Ukrainian MP Baczyński was dragged out of the chamber by his legs, minister Sławoj-Składkowski overseeing the action. Seven MPs were arrested before the chamber fell silent once more.
+
+Piłsudski returned to his reading as if nothing had happened. The message from the president was brief, but its delivery, under these conditions, was more telling than its content. He had demonstrated once again that disorder would not be tolerated under his watch.
+
+- @swearing_in: It's time to move to swearing in of MPs
+
+@swearing_in
+
+With the chamber subdued, the next order of business began: the swearing-in of MPs. The opposition, still furious, argued that some of their colleagues had been unjustly imprisoned and should be allowed to take the oath. Bojko, unmoved by their protests, pressed forward with the proceedings. “You are not MPs until you’ve sworn in,” he declared, dismissing their appeals. One by one, members came forward to take their oath, the tension in the air still thick, but the process moved forward.
+
+Suddenly, the uproar reignited, louder than before. Chaos filled the room once again, forcing Bojko to suspend the session. An hour passed since the break was called, and in the corridors, whispers and speculation swirled about the fate of the arrested deputies. Then, unexpectedly, they appeared—escorted by the Sejm's Guard, emerging from the shadows of their confinement. The deputies, surrounded by a crowd of supporters, were released from the guard’s custody, disappearing into the embrace of their colleagues.
+
+The arrested MPs shared their stories, explaining how they had been taken by car to City Hall, each placed in separate cells. Not long after, the police brought them back to the Sejm, restoring their place in the proceedings.
+
+Once the arrested deputies had returned and the break concluded, Bojko resumed the session and read aloud the oath. One by one, the deputies stood as their names were called, each declaring, “I swear.” The Ukrainian members, in a quiet act of defiance, responded with, “Prysiakhaju.”
+
+As the swearing-in proceeded, Marshal Piłsudski departed for a Senate meeting. By 7:00 PM, he had left for Belweder, leaving behind a chamber still buzzing with tension and the weight of what was yet to come.
+
+- @speaker_election_start: It's finally time to elected Sejm's Speaker
+
+Finally, the moment everyone had been waiting for arrived: the election of the Speaker. Each faction had put forth its candidate. Rulling camp had two clear options, reflecting the internal divisions within their ranks. The Colonels' faction, fiercely loyal to Piłsudski, leaned toward nominating Kazimierz Świtalski, a close and unwavering supporter of the Marshal. However, Świtalski's candidacy presented a challenge—his loyalty to Piłsudski was unquestioned, but his ability to garner support from other parties seemed unlikely without significant effort and persuasion.
+
+On the other hand, there was Kazimierz Bartel, a former Prime Minister and current Deputy Prime Minister, representing the more liberal wing of the Sanation movement. Bartel was a pragmatic choice, more palatable to the left-wing and minority factions. However, his nomination carried risks as well. His ties to the liberal side of the party could alienate the more conservative elements of Sanation, who might see this as a concession to the opposition rather than a victory.
+
+Meanwhile, the Polish Socialist Party (PPS) backed the respected Ignacy Daszyński, a figure well-known for his leadership and integrity. PPS already managed to convince other left-wing parties (SCh and PSL-W) for their candidate. The National Democrats (ZLN), determined to counter the government’s influence, nominated Aleksander Zwierzyński. Centre-right parties (PSCHD, NPR, PSL-P) did not pick their own candidate and it is expected they wont vote at all. The Ukrainian bloc supported Jan Leszczyński, hoping to secure a candidate sympathetic to minority rights. Even the Communists, weakened by the day’s arrests, proposed Konstanty Sypuła and Adolf Warski, though it was clear their chances were slim.
+
+The decision now lay in Sanation’s hands. Should they rally behind the loyal Świtalski and risk alienating potential allies, or choose the more moderate Bartel and risk internal division? The next move would shape the future of the Sejm.
+
+[? if pps_relation >= 50 : Another possibilty is an united front with left wing parties, either to support Daszyński or our own candidate. ?]
+
+- @support_bartel: Run Bartel of the BBWR (Liberals)
+- @support_switalski: Run Świtalski of the BBWR (Colonels) 
+- @support_daszynski: Support Ignacy Daszyński of the PPS.
+
+@support_bartel
+subtitle: This is the default option.
+on-arrival: resources -= 2; bbwr_speaker_campaign = 1; bbwr_candidate = "Bartel";
+go-to: bbwr_speaker_campaign
+
+We've decided to pick Bartel as our Speaker candidate.
+
+Some minority MPs will likely support us. Who else will? Can we convince the left-wing agrarians, who Bartel used to work with, to support him?
+
+@support_switalski
+subtitle: This will cost us 2 resources.
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 2; bbwr_speaker_campaign = 1; bbwr_candidate = "Świtalski";
+go-to: bbwr_speaker_campaign
+
+It takes effort to run a somewhat unexpected campaign. First, Świtalski has to be convinced to run. He himself doesn't expect he has a chance against well known Daszyński, and it takes a good deal of prodding to convince him of his destiny.
+
+Some minority MPs will likely support us. Who else will? Can we convince other parties to support him as well?
+
+@support_daszynski
+choose-if: pps_relation >= 50 and colonels_strength < liberals_strength
+unavailable-subtitle: [? if pps_relation < 50 : We do not have good enough relations with the Socialists, so they are not even willing to accept our support. ?] It will hurt our relations with Conservatives and Right-Wing parties.
+
+Supporting Daszyński is rather unpopular by the right-wing of our party, and unexpected for Socialists as well.
+
+- @support_daszynski_2: Yes, we will support Daszyński, despite the conservatives' pleas against it.
+- @support_switalski: Support Świtalski instead.
+- @support_bartel: Support Bartel instead.
+
+@support_daszynski_2
+on-arrival: bbwr_support_daszynski = 1; conservatives_dissent += 15; liberals_dissent -= 10; sanacja_left_dissent -= 5; conservatives_dissent += 50; mniejszosci_bbwr += 5; robotnicy_bbwr += 3; pps_relation += 10; pps_bbwr_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
+
+Fine. We have thrown our support to Ignacy Daszyński of the PPS.
+
+- @final_election: The final vote...
+
+@bbwr_speaker_campaign
+
+- @convince_pps: Convince the Socialists (PPS)
+- @convince_sch: Convince the Agrarian Radical Left (SCh)
+- @convince_pslw: Convince the Agrarian Left (PSL-W)
+- @convince_other: Convince the remaining minorities, wherever they are.
+- @convince_npr: Convince the National-Solidarists (NPR).
+- @convince_pschd: Convince the Christian-Democrats (PSCHD).
+- @convince_pslp: Convince the Agrarian Right (PSL-P)
+- @convince_sn: Convince the National-Democrats (SN)
+- @final_election: The final vote...
+
+@convince_pps
+choose-if: bbwr_votes >= kpp_votes
+unavailable-subtitle: The KPP knows that they are more popular than us; they do not see a reason to support our candidate.
+max-visits: 1
+
+The PPS is supporting their own candidate, Ignacy Daszyński. [? if pps_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Bartel; how do we convince them? ?][? if pps_relation < 50 : They do not seem willing to be convinced. ?]
+
+- @pps_resources: Use our resources.
+- @pps_relations: Use our good relations.
+- @bbwr_speaker_campaign: Forget about the PPS.
+
+@pps_resources
+view-if: pps_relation >= 50
+choose-if: resources >= 3
+subtitle: -3 resources
+unavailable-subtitle: Not enough resources (need 3).
+on-arrival: resources -= 3; pps_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+The PPS now endorses Bartel in the Speaker Elections!
+
+@pps_relations
+view-if: pps_relation >= 60
+unavailable-subtitle: Our relations are not good enough.
+on-arrival: pps_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+The PPS now endorses Bartel in the Speaker Elections!
+
+@convince_sch
+max-visits: 1
+go-to: convince_sch_success if sch_relation >= 50 or pps_support_bbwr = 1; convince_sch_fail if sch_relation < 50 and pps_support_bbwr = 0
+
+If we have good realtions we might convince SCh to support our candidate.
+
+@convince_sch_success
+on-arrival: sch_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+Thanks to our good relations, the SCh has promised to support BBWR candidate in the election.
+
+@convince_sch_fail
+on-arrival: sch_support_bbwr = 0
+go-to: bbwr_speaker_campaign
+
+We failed to convince the SCh to support BBWR candidate.
+
+@convince_pslw
+max-visits: 1
+go-to: convince_pslw_success if pslw_relation >= 50 or pps_support_bbwr = 1; convince_pslw_fail if pslw_relation < 50 and pps_support_bbwr = 0
+
+If we have good realtions we might convince PSL-W to support our candidate.
+
+@convince_pslw_success
+on-arrival: pslw_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+Thanks to our good relations, the PSL-W has promised to support BBWR candidate in the election.
+
+@convince_sch_fail
+on-arrival: pslw_support_bbwr = 0
+go-to: bbwr_speaker_campaign
+
+We failed to convince the PSL-W to support BBWR candidate.
+
+@convince_other
+max-visits: 1
+go-to: convince_other_success if other_relation >= 50 or pps_support_bbwr = 1; convince_other_fail if other_relation < 50 and pps_support_bbwr = 0
+
+If we have good realtions we might convince Minority parties to support our candidate.
+
+@convince_other_success
+on-arrival: other_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+Thanks to our good relations, the Minorities has promised to support BBWR candidate in the election.
+
+@convince_other_fail
+on-arrival: other_support_bbwr = 0
+go-to: bbwr_speaker_campaign
+
+We failed to convince the Minorities to support BBWR candidate.
+
+@convince_npr
+choose-if: pps_support_bbwr = 0
+unavailable-subtitle: NPR wont support us after our deal with the left.
+max-visits: 1
+go-to: convince_npr_success if npr_relation >= 50; convince_npr_fail if npr_relation < 50
+
+If we have good realtions we might convince NPR to support our candidate.
+
+@convince_npr_success
+on-arrival: npr_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+Thanks to our good relations, the NPR has promised to support BBWR candidate in the election.
+
+@convince_npr_fail
+on-arrival: npr_support_bbwr = 0
+go-to: bbwr_speaker_campaign
+
+We failed to convince the NPR to support BBWR candidate.
+
+@convince_pschd
+choose-if: pps_support_bbwr = 0
+unavailable-subtitle: PSCHD wont support us after our deal with the left.
+on-arrival: {!
+Q.pschd_support_bbwr = 0;
+if (Q.pschd_relation >= 55) {
+    Q.pschd_support_bbwr = 1;
+} else if (Q.pschd_relation <= 35) {
+    Q.pschd_support_bbwr = 0;
+} else {
+    Q.pschd_support_bbwr = 2;
+}
+!}
+go-to: pschd_failed if pschd_support_bbwr = 0; pschd_success if pschd_support_bbwr = 1; pschd_partial if pschd_support_bbwr = 2
+max-visits: 1
+
+We try to convince PSCHD that BBWR is only party that is able to protect Poland from the radicalism of the left.
+
+@pschd_success
+go-to: bbwr_speaker_campaign
+
+The Christian Democrats are convinced! They will support BBWR candidate.
+
+@pschd_partial
+
+The PSCHD are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
+
+- @pay_pschd: Give them the resources they need.
+- @bbwr_speaker_campaign: Forget about the PSCHD.
+
+@pay_pschd
+choose-if: resources >= 3
+subtitle: -3 resources
+unavailable-subtitle: Not enough resources (need 3)
+on-arrival: resources -= 3; pschd_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+With our resources, the PSCHD are convinced to support BBWR candidate.
+
+@pschd_failed
+go-to: bbwr_speaker_campaign
+
+Unfortunately, we failed to convince PSCHD.
+
+@convince_pslp
+choose-if: pps_support_bbwr = 0
+unavailable-subtitle: PSL-P wont support us after our deal with the left.
+on-arrival: {!
+Q.pslp_support_bbwr = 0;
+if (Q.pslp_relation >= 55) {
+    Q.pslp_support_bbwr = 1;
+} else if (Q.pslp_relation <= 35) {
+    Q.pslp_support_bbwr = 0;
+} else {
+    Q.pslp_support_bbwr = 2;
+}
+!}
+go-to: pslp_failed if pslp_support_bbwr = 0; pslp_success if pslp_support_bbwr = 1; pslp_partial if pslp_support_bbwr = 2
+max-visits: 1
+
+We try to convince PSL-P that BBWR is only party that is able to protect Poland from the radicalism of the left.
+
+@pslp_success
+go-to: bbwr_speaker_campaign
+
+The PSL-P are convinced! They will support BBWR candidate.
+
+@pslp_partial
+
+The PSL-P are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
+
+- @pay_pslp: Give them the resources they need.
+- @bbwr_speaker_campaign: Forget about the PSL-P.
+
+@pay_pslp
+choose-if: resources >= 3
+subtitle: -3 resources
+unavailable-subtitle: Not enough resources (need 3)
+on-arrival: resources -= 3; pslp_support_bbwr = 1
+go-to: bbwr_speaker_campaign
+
+With our resources, the PSL-P are convinced to support BBWR candidate.
+
+@pslp_failed
+go-to: bbwr_speaker_campaign
+
+Unfortunately, we failed to convince PSL-P.
+
+@convince_sn
+choose-if: sn_support_bbwr = 1
+unavailable-subtitle: Are you serious?
+
+@final_election
+on-arrival: election_round = 0
+go-to: election_algorithm
+set-jump: post_election
+
+
+@post_election
+on-arrival: {!
+Q.bbwr_speaker_votes = 0;
+Q.pps_speaker_votes = 0;
+Q.sn_speaker_votes = 0;
+Q.minorities_speaker_votes = 0;
+Q.kpp_speaker_votes = 0;
+Q.empty_speaker_votes = 0;
+
+// initial phase:
+Q.pps_speaker_votes += Q.pps_r;
+Q.sn_speaker_votes += Q.sn_r;
+Q.sn_speaker_votes += Q.owp_r;
+Q.kpp_speaker_votes += Q.kpp_r;
+
+
+if (Q.bbwr_speaker_campaign) {
+    Q.bbwr_speaker_votes += Q.bbwr_r;
+    if (Q.pps_support_bbwr) {
+        Q.pps_speaker_votes -= Q.pps_r;
+        Q.bbwr_speaker_votes += Q.pps_r;
+        Q.bbwr_speaker_votes += Q.sch_r;
+        Q.bbwr_speaker_votes += Q.pslw_r;
+        Q.bbwr_speaker_votes += Q.other_r;
+        Q.sn_speaker_votes += Q.pschd_votes;
+        Q.sn_speaker_votes += Q.npr_votes;
+        Q.sn_speaker_votes += Q.pslp_votes;      
+    } else {
+        Q.pps_speaker_votes += Q.pslw_r;
+        Q.pps_speaker_votes += Q.sch_r;
+    }
+    if (Q.other_support_bbwr) {
+        Q.minorities_speaker_votes -= Q.other_r;
+        Q.bbwr_speaker_votes += Q.other_r;
+    } else {
+        Q.empty_speaker_votes += Q.npr_r;
+    }
+    if (Q.npr_support_bbwr) {
+        Q.bbwr_speaker_votes += Q.npr_r;
+    } else {
+        Q.empty_speaker_votes += Q.npr_r;
+    }
+    if (Q.pschd_support_bbwr) {
+        Q.bbwr_speaker_votes += Q.pschd_r;
+    } else {
+        Q.empty_speaker_votes += Q.pschd_r;
+    }
+    if (Q.pslp_support_bbwr) {
+        Q.bbwr_speaker_votes += Q.pslp_r;
+    } else {
+        Q.empty_speaker_votes += Q.pslp_r;
+    }
+} else if (Q.bbwr_support_pps) {
+    Q.pps_speaker_votes += Q.bbwr_r;
+    Q.pps_speaker_votes += Q.pslw_r;
+    Q.pps_speaker_votes += Q.sch_r;
+    Q.minorities_speaker_votes -= Q.other_r;
+    Q.pps_speaker_votes += Q.other_votes;
+    Q.sn_speaker_votes += Q.pschd_votes;
+    Q.sn_speaker_votes += Q.npr_votes;
+    Q.sn_speaker_votes += Q.pslp_votes;
+} else {
+    Q.sn_speaker_votes += Q.bbwr_votes;
+    Q.sn_speaker_votes += Q.pschd_votes;
+    Q.sn_speaker_votes += Q.pslw_votes;
+    Q.sn_speaker_votes += Q.pslp_votes;
+    Q.pps_speaker_votes += Q.kpp_votes;
+}
+if (Q.other_support_pps) {
+    Q.sn_speaker_votes -= Q.owp_votes;
+    Q.sn_speaker_votes += Q.owp_votes;
+}
+
+if (Q.hindenburg_to_braun_bonus) {
+    Q.sn_speaker_votes -= Q.hindenburg_to_braun_bonus;
+    Q.bbwr_speaker_votes += Q.hindenburg_to_braun_bonus;
+}
+if (Q.thalmann_to_braun_bonus) {
+    Q.pps_speaker_votes -= Q.thalmann_to_braun_bonus;
+    Q.bbwr_speaker_votes += Q.thalmann_to_braun_bonus;
+}
+
+// check for majority
+Q.bbwr_speaker_majority = (Q.bbwr_speaker_votes >= 50);
+Q.pps_speaker_majority = (Q.pps_speaker_votes >= 50);
+Q.sn_speaker_majority = (Q.sn_votes >= 50);
+Q.any_majority = Q.bbwr_speaker_majority | Q.pps_speaker_majority | Q.sn_speaker_majority
+
+// check for plurality
+Q.bbwr_speaker_plurality = (Q.bbwr_speaker_votes >= Q.sn_speaker_votes && Q.bbwr_speaker_votes >= Q.pps_speaker_votes);
+Q.pps_plurality = (Q.pps_speaker_votes >= Q.sn_speaker_votes && Q.pps_speaker_votes >= Q.bbwr_speaker_votes);
+Q.sn_plurality = (Q.sn_speaker_votes >= Q.pps_speaker_votes && Q.sn_speaker_votes >= Q.bbwr_speaker_votes);
+
+// If no candidate gets above 50%, then there's a second round. In the second round, a plurality wins. 
+Q.election_round += 1;
+!}
+go-to: bbwr_speaker_wins if bbwr_speaker_majority == 1; pps_speaker_wins if pps_speaker_majority == 1; sn_speaker_wins if sn_speaker_majority == 1; no_majority_round1 if any_majority == 0 and election_round == 1; round2_results if election_round >= 2
+
+Results:
+
+[? if bbwr_speaker_campaign > 0 : [+ bbwr_candidate +] - [+ bbwr_speaker_votes +]% ?]
+
+[? if pps_support_bbwr == 0 : [+ pps_candidate +] - [+ pps_speaker_votes +]% ?]
+
+[+ sn_candidate +] - [+ sn_speaker_votes +]%
+
+[? if other_support_bbwr == 0 and other_support_pps == 0 : [+ minorities_candidate +] - [+ minorities_speaker_votes +]% ?]
+
+[+ kpp_candidate +] - [+ kpp_speaker_votes +]%
+
+Empty Votes - [+ empty_speaker_votes +]%
+
+@no_majority_round1
+on-arrival: other_support_pps = 1 if (pps_plurality)
+go-to: round2_menu
+
+There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
+
+[? if pps_plurality : In order to consolidate the vote against the Right, and to prevent a BBWR from becoming electing a Speaker, [+ minorities_candidate +] is no longer running in the second round, and has switched his endorsement to [+ pps_candidate +]. ?]
+
+
+@round2_menu
+
+- @round2_convince_pschd: Convince the Center to switch their support to us.
+- @round2_convince_pps: Convince the KPP to switch their support to us. 
+- @round2_hindenburg: Switch our support to Hindenburg.
+- @round2_thalmann: Switch our support to Thälmann of the KPP.
+- @round2_vote: Let the second round voting begin.
+
+
+@round2_convince_pschd
+view-if: bbwr_speaker_campaign > 0 and pschd_support_bbwr != 1 
+choose-if: bbwr_votes >= pschd_votes
+unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
+on-arrival: {!
+Q.pps_support_bbwr = 0;
+
+if (Q.pschd_relation >= 55) {
+    Q.pps_support_bbwr = 1;
+    if (Q.other_support_pps) {
+        Q.hindenburg_to_braun_bonus += Math.round(Q.other_votes/2);
+    }
+} else if (Q.pschd_relation >= 50 && Q.other_support_pps) {
+    Q.pps_support_bbwr = 1;
+    Q.hindenburg_to_braun_bonus += Math.round(Q.other_votes/2);
+} else if (Q.pschd_relation <= 35) {
+    Q.pps_support_bbwr = 0;
+} else {
+    Q.pps_support_bbwr = 2;
+}
+!}
+go-to: r2_pschd_failed if pps_support_bbwr = 0 or (pps_support_bbwr = 2 and historical_mode); r2_pschd_success if pps_support_bbwr = 1; r2_pschd_partial if pps_support_bbwr = 2 and not historical_mode
+max-visits: 1
+
+@r2_pschd_success
+go-to: round2_menu
+
+[? if other_support_pps : The Center's opinion is affected by the Nazis' support of Hindenburg, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Braun coalition. [? if other_support_pps : In addition, they will also bring in some minor parties who will support us. ?]
+
+@r2_pschd_partial
+
+The Center are not satisfied with our arguments, but they are open to being convinced[? if other_support_pps: , especially given the Nazis' support for Hindenburg. ?]. They are willing to run a joint campaign if we front the resources.
+
+- @r2_pay_z: Give them the resources they need.
+- @round2_menu: Forget about the Center.
+
+@r2_pay_z
+choose-if: resources >= 2
+subtitle: -2 resources
+unavailable-subtitle: Not enough resources (need 2)
+on-arrival: resources -= 2; pps_support_bbwr = 1
+go-to: round2_menu
+
+With our resources, the Center are convinced to support Braun over Hindenburg.
+
+@r2_pschd_failed
+go-to: round2_menu
+
+Unfortunately, we fail to turn them away from Hindenburg.
+
+
+
+
+@round2_convince_pps
+choose-if: bbwr_votes >= kpp_votes
+unavailable-subtitle: The KPP knows that they are more popular than us; they do not see a reason to support our candidate.
+view-if: bbwr_speaker_campaign > 0 and pps_support_bbwr == 0 
+max-visits: 1
+
+The KPP is committed to supporting Ernst Thälmann. [? if pps_relation >= 45 : However, the Nazi-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if pps_relation < 45 : They do not seem willing to be convinced. ?]
+
+- @r2_pps_resources: Use our resources.
+- @r2_pps_relations: Use our good relations.
+- @round2_menu: Forget about the KPP.
+
+@r2_pps_resources
+view-if: pps_relation >= 45 and not historical_mode
+choose-if: resources >= 3
+subtitle: -3 resources
+unavailable-subtitle: Not enough resources (need 3).
+on-arrival: resources -= 3; pps_support_bbwr = 1
+go-to: round2_menu
+
+The KPP now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+
+@r2_pps_relations
+view-if: pps_relation >= 60
+unavailable-subtitle: Our relations are not good enough.
+on-arrival: pps_support_bbwr = 1
+go-to: round2_menu
+
+The KPP now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
+
+@round2_thalmann
+view-if: bbwr_support_daszynski == 0 and pps_support_bbwr == 0
+choose-if: pps_relation >= 50 and repairers_strength > colonels_strength 
+unavailable-subtitle: [? if pps_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if colonels_strength >= repairers_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
+max-visits: 1
+
+Supporting Thälmann is rather unpopular in our party, even if the Communists accept our support. Are we sure?
+
+- @round2_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
+- @round2_menu: Never mind.
+
+@round2_thalmann_2
+on-arrival: bbwr_speaker_campaign = 0; bbwr_support_daszynski = 1; colonels_dissent += 15; liberals_dissent += 10; sanacja_left_dissent += 5; conservatives_dissent += 10; mniejszosci_bbwr -= 5; robotnicy_bbwr -= 3; pps_relation += 10; pps_bbwr_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
+on-departure: pps_support_bbwr = 0; pps_support_bbwr = 0;
+
+Fine. We have thrown our support to Chairman Thälmann of the KPP.
+
+[? if pps_support_bbwr : The Center Party is confused at our capricious behavior, and have switched their support to Hindenburg. ?]
+
+- @round2_vote: Let the second round voting begin.
+
+@round2_hindenburg
+view-if: bbwr_speaker_campaign > 0 or bbwr_support_daszynski > 0
+on-arrival: bbwr_speaker_campaign = 0; bbwr_support_daszynski = 0
+
+We have switched our support to Hindenburg.
+
+- @round2_vote: Let the second round voting begin.
+
+@round2_vote
+go-to: election_algorithm
+set-jump: post_election
+
+@round2_results
+go-to: bbwr_speaker_wins if bbwr_speaker_plurality == 1; pps_speaker_wins if pps_plurality == 1; sn_speaker_wins if sn_plurality == 1
+
+
+@bbwr_speaker_wins
+on-arrival: speaker = [+ bbwr_candidate +]; speaker_party = "BBWR"; colonels_dissent -= 15; liberals_dissent -= 15; sanacja_left_dissent -= 15; repairers_dissent -= 5; robotnicy_bbwr += 8*(1-dissent); klasa_wyzsza_bbwr += 5*(1-dissent); klasa_srednia_bbwr += 5*(1-dissent); chlopi_bbwr += 5*(1-dissent); bezrobotni_bbwr += 5*(1-dissent);
+
+[+ bbwr_candidate +] of the BBWR has won the Speaker election! This is a moment of celebration for our party, and his victory is able to bolster our support.
+
+@pps_speaker_wins
+on-arrival: speaker = [+ pps_candidate +]; speaker_party = "PPS";
+
+Ernst Thälmann of the KPP has won the presidency. Immediately, the far-right launches a coup attempt against the government. We have no choice but to unite with the KPP against the fascists...
+
+- @civil_war: This is civil war.
+
+@sn_speaker_wins
+on-arrival: speaker = [+ sn_candidate +]; speaker_party = "ZLN"
+
+[+ sn_candidate +], ZLN candidate has won the Speaker election.
+
+- @hitler_takes_power: What do we do now?
+
+

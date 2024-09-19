@@ -74,7 +74,7 @@ The Soviets are slightly upset, but they seemed to expect this answer.
 
 
 @kpp
-on-arrival: kpp_relation += 8*(1-dissent); communist_coalition += 1 if kpp_foreign_seen == 0; kpp_foreign_seen = 1
+on-arrival: kpp_relation += 8*(1-dissent); pps_bbwr_coalition += 1 if kpp_foreign_seen == 0; kpp_foreign_seen = 1
 
 We also mention the KPP in our conversations with the Soviet ambassador. They claim that the KPP is entirely independent of the Soviet government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the KPP.
 

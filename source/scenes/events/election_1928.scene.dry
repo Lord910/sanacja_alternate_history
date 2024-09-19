@@ -313,12 +313,9 @@ achievement: majority_party
 
 Finally, the BBWR can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
-Who should be chancellor?
+What will be Piłsudski’s decision?
 
-- @pilsudski_majority_chancellor: Józef Piłsudski for Prime Minister.
-- @bartel_majority_chancellor: Kazimierz Bartel for Prime Minister.
-- @switalski_majority_chancellor: Kazimierz Świtalski for Prime Minister.
-- @moraczewski_majority_chancellor: Jędrzej Moraczewski for Prime Minister.
+- @pilsudski_majority_chancellor: Józef Piłsudski will stay as Prime Minister.
 
 @pilsudski_majority_chancellor
 view-if: not historical_mode or not bbwr_prussia
@@ -326,24 +323,6 @@ on-arrival: chancellor = "Piłsudski"
 go-to: ministries
 
 Józef Piłsudski has become Prime Minister of the BBWR majority
-
-@bartel_majority_chancellor
-on-arrival: chancellor = "Bartel"
-go-to: ministries
-
-Kazimierz Bartel has become Prime Minister of the BBWR majority.
-
-@switalski_majority_chancellor
-on-arrival: chancellor = "Świtalski"
-go-to: ministries
-
-Kazimierz Świtalski has become Prime Minister of the BBWR majority.
-
-@moraczewski_majority_chancellor
-on-arrival: chancellor = "Moraczewski"
-go-to: ministries
-
-Jędrzej Moraczewski has become Prime Minister of the BBWR majority.
 
 @bbwr_minority
 title: BBWR minority government
@@ -354,37 +333,15 @@ achievement: minority_party
 
 The BBWR will govern as a minority. This will require careful negotiation and compromise with other parties to pass legislation.
 
-Who should be chancellor?
+What will be Piłsudski’s decision?
 
-- @pilsudski_minority_chancellor: Józef Piłsudski for Chancellor.
-- @bartel_minority_chancellor: Kazimierz Bartel for Chancellor.
-- @switalski_minority_chancellor: Kazimierz Świtalski for Chancellor.
-- @moraczewski_minority_chancellor: Jędrzej Moraczewski for Chancellor.
+- @pilsudski_minority_chancellor: Józef Piłsudski will stay as Prime Minister.
 
 @pilsudski_minority_chancellor
 on-arrival: chancellor = "Piłsudski"
 go-to: ministries
 
-Józef Piłsudski has become Prime Minister of the BBWR Prime Minister
-
-@bartel_minority_chancellor
-on-arrival: chancellor = "Bartel"
-go-to: ministries
-
-Kazimierz Bartel has become Prime Minister of the BBWR Prime Minister.
-
-@switalski_minority_chancellor
-on-arrival: chancellor = "Świtalski"
-go-to: ministries
-
-Kazimierz Świtalski has become Prime Minister of the BBWR Prime Minister.
-
-@moraczewski_minority_chancellor
-on-arrival: chancellor = "Moraczewski"
-go-to: ministries
-
-Jędrzej Moraczewski has become Prime Minister of the BBWR minority.
-
+Józef Piłsudski will stay as Prime Minister.
 
 @ministries
 
@@ -496,6 +453,7 @@ Julius Leber of the BBWR has been appointed Reichswehr Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
+go-to: speaker_election_1928
 
 This coalition arrangement is tolerable to all.
 

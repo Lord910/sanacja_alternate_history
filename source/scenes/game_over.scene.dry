@@ -114,7 +114,7 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 - @end_game: End game.
 
 
-@hitler_wins
+@sn_speaker_wins
 view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0)
 title: Adolf Hitler is in undisputed control over Germany.
 tags: endings

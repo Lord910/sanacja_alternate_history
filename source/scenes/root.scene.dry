@@ -79,7 +79,7 @@ Q.pacifism = 0;
 // Support for democratic reform within the BBWR relative to 1928
 Q.democratization = 0;
 // Support for a communist coalition relative to 1928
-Q.communist_coalition = 0;
+Q.pps_bbwr_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
 Q.economic_plan = 0;
@@ -318,6 +318,8 @@ Q.president = "Ignacy Mościcki";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'BBWR';
+Q.speaker = "Rataj";
+Q.speaker_party = 'PSL-P';
 Q.bbwr_in_government = 1;
 Q.pschd_in_government = 0;
 Q.pslw_in_government = 0;

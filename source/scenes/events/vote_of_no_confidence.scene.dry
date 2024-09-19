@@ -46,8 +46,8 @@ on-arrival: resources -= 3; coalition_dissent -= 1;
 By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
 
 @support_kpp
-choose-if: (in_centre_left_coalition and communist_coalition >= 3 and kpp_relation >= 50 and kpp_r >= pslp_r) or (in_democratic_left_coalition and kpp_relation >= 50 and kpp_r >= pschd_r and communist_coalition >= 3)
-unavailable-subtitle: [? if communist_coalition < 3 : The KPP won't take part in parliamentary government. ?] [? if kpp_relation < 50 : The KPP is not friendly enough with us. ?] [? if (in_centre_left_coalition and kpp_r < pslp_r) or (in_democratic_left_coalition and kpp_r < pschd_r): The KPP does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the KPP. ?]
+choose-if: (in_centre_left_coalition and pps_bbwr_coalition >= 3 and kpp_relation >= 50 and kpp_r >= pslp_r) or (in_democratic_left_coalition and kpp_relation >= 50 and kpp_r >= pschd_r and pps_bbwr_coalition >= 3)
+unavailable-subtitle: [? if pps_bbwr_coalition < 3 : The KPP won't take part in parliamentary government. ?] [? if kpp_relation < 50 : The KPP is not friendly enough with us. ?] [? if (in_centre_left_coalition and kpp_r < pslp_r) or (in_democratic_left_coalition and kpp_r < pschd_r): The KPP does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the KPP. ?]
 
 If the Communists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the KPP. This could lead to broader cooperation in the future, for better or for worse.
 
@@ -55,7 +55,7 @@ If the Communists abstain, then we essentially can maintain a minority governmen
 - @let_it_happen: Never mind. Let the vote happen.
 
 @support_kpp_2
-on-arrival: communist_coalition += 1; robotnicy_kpp += 3; kpp_relation += 5
+on-arrival: pps_bbwr_coalition += 1; robotnicy_kpp += 3; kpp_relation += 5
 go-to: support_kpp_weimar if in_democratic_left_coalition; support_kpp_grand if in_centre_left_coalition
 
 The KPP is not interested in a "toleration" arrangement; they will only support us if they can participate in the government as part of a coalition. And, if this toleration agreement happens, the right-wing parties will not be inclined to support us. 
