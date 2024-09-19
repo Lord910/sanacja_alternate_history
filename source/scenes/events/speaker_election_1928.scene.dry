@@ -514,7 +514,7 @@ unavailable-subtitle: Not enough resources (need 2)
 on-arrival: resources -= 2; pschd_support_bbwr = 1
 go-to: round2_menu
 
-With our resources, the PSCHD are convinced to support [? bbwr_candidate ?] against [? pps_candidate ?].
+With our resources, the PSCHD are convinced to support [+ bbwr_candidate +] against [+ pps_candidate +].
 
 @r2_pschd_failed
 go-to: round2_menu
@@ -527,7 +527,7 @@ unavailable-subtitle: The PPS knows that they are more popular than us; they do 
 view-if: bbwr_speaker_campaign > 0 and pps_support_bbwr == 0 
 max-visits: 1
 
-The PPS is committed to supporting [? pps_candidate ?]. [? if pps_relation >= 45 and sn_plurality : However, the Right-Wing coalition worries them enough that they are willing to be convinced to drop their candidate and support ours. ?][? if pps_relation < 45 : They do not seem willing to be convinced. ?]
+The PPS is committed to supporting [+ pps_candidate +]. [? if pps_relation >= 45 and sn_plurality : However, the Right-Wing coalition worries them enough that they are willing to be convinced to drop their candidate and support ours. ?][? if pps_relation < 45 : They do not seem willing to be convinced. ?]
 
 - @r2_pps_resources: Use our resources.
 - @r2_pps_relations: Use our good relations.
@@ -541,7 +541,7 @@ unavailable-subtitle: Not enough resources (need 3).
 on-arrival: resources -= 3; pps_support_bbwr = 1
 go-to: round2_menu
 
-The PPD now endorses [? bbwr_candidate ?] in the Speaker's Elections!
+The PPD now endorses [+ bbwr_candidate +] in the Speaker's Elections!
 
 @r2_pps_relations
 view-if: pps_relation >= 60
@@ -549,7 +549,7 @@ unavailable-subtitle: Our relations are not good enough.
 on-arrival: pps_support_bbwr = 1
 go-to: round2_menu
 
-The PPD now endorses [? bbwr_candidate ?] in the Speaker's Elections!
+The PPD now endorses [+ bbwr_candidate +] in the Speaker's Elections!
 
 @round2_pps
 view-if: bbwr_support_pps == 0 and pps_support_bbwr == 0
@@ -557,16 +557,16 @@ choose-if: pps_relation >= 50
 unavailable-subtitle: [? if pps_relation < 50 : We do not have good enough relations with the Socialists, so they are not even willing to accept our support. ?]
 max-visits: 1
 
-Supporting [? pps_candidate ?] is rather unexpected given we already have [? bbwr_candidate ?], even if the PPS accept our support. Are we sure?
+Supporting [+ pps_candidate +] is rather unexpected given we already have [+ bbwr_candidate +], even if the PPS accept our support. Are we sure?
 
-- @round2_thalmann_2: Yes, we will support [? pps_candidate ?], against the [? sn_candidate ?]!
+- @round2_thalmann_2: Yes, we will support [+ pps_candidate +], against the [+ sn_candidate +]!
 - @round2_menu: Never mind.
 
 @round2_pps_2
 on-arrival: bbwr_speaker_campaign = 0; bbwr_support_pps = 1; colonels_dissent += 15; liberals_dissent -= 10; sanacja_left_dissent -= 5; conservatives_dissent += 50; mniejszosci_bbwr += 5; robotnicy_bbwr += 3; pps_relation += 10; pps_bbwr_coalition += 2; pschd_relation -= 15; pslp_relation -= 15
 on-departure: pschd_support_bbwr = 0; pslp_support_bbwr = 0; npr_support_bbwr = 0;
 
-Fine. We have thrown our support to [? pps_candidate ?] of the PPS.
+Fine. We have thrown our support to [+ pps_candidate +] of the PPS.
 
 [? if pschd_support_bbwr or pslp_support_bbwr or npr_support_bbwr : The Center-Right parties is confused at our capricious behavior, and have pulled their support for us. ?]
 
