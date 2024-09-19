@@ -84,8 +84,9 @@ on-arrival: resources -= 1; zpmd_investment += 1; zpmd_strength += 100; zpmd_mil
 More resources allow this organization to attract politically active youth.
 
 @zpmd_military_training
-subtitle: -2 resources
-on-arrival: resources -= 2; zpmd_strength += 200; zpmd_militancy += 0.1
+choose-if: resources >= zpmd_militarization_cost
+subtitle: -[+ zpmd_militarization_cost +] resources
+on-arrival: resources -= zpmd_militarization_cost; zpmd_investment += 1; zpmd_strength += 200; zpmd_militancy += 0.1
 
 Introducing military training may attract a more disciplined and committed membership, though it could alienate some democratically inclined youth.
 
@@ -115,8 +116,9 @@ on-arrival: resources -= 2; zpm_investment += 1; zpm_strength += 200; zpm_milita
 Increased funding enables the organization to expand its geopolitical vision and attract more members.
 
 @zpm_military_training
-subtitle: -1 resources
-on-arrival: resources -= 1; zpm_strength += 100; zpm_militancy += 0.05
+choose-if: resources >= zpm_militarization_cost
+subtitle: -[+ zpm_militarization_cost +] resources
+on-arrival: resources -= zpm_militarization_cost; zpm_investment += 1; zpm_strength += 100; zpm_militancy += 0.05
 
 Focusing on military strategy further aligns with the group’s goals of projecting Polish power abroad.
 
