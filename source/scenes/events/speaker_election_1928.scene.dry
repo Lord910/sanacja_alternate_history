@@ -418,15 +418,6 @@ if (Q.bbwr_speaker_campaign) {
     Q.pps_speaker_votes += Q.kpp_votes;
 }
 
-if (Q.hindenburg_to_braun_bonus) {
-    Q.sn_speaker_votes -= Q.hindenburg_to_braun_bonus;
-    Q.bbwr_speaker_votes += Q.hindenburg_to_braun_bonus;
-}
-if (Q.thalmann_to_braun_bonus) {
-    Q.pps_speaker_votes -= Q.thalmann_to_braun_bonus;
-    Q.bbwr_speaker_votes += Q.thalmann_to_braun_bonus;
-}
-
 // check for majority
 Q.bbwr_speaker_majority = (Q.bbwr_speaker_votes >= 50);
 Q.pps_speaker_majority = (Q.pps_speaker_votes >= 50);
@@ -468,10 +459,9 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 @round2_menu
 
-- @round2_convince_pschd: Convince the Center to switch their support to us.
-- @round2_convince_pps: Convince the KPP to switch their support to us. 
-- @round2_hindenburg: Switch our support to Hindenburg.
-- @round2_thalmann: Switch our support to Thälmann of the KPP.
+- @round2_convince_pschd: Convince the PSCHD to switch their support to us.
+- @round2_convince_pps: Convince the PPS to switch their support to us. 
+- @round2_pps: Switch our support to [+ bbwr_candidate +] of the PPS.
 - @round2_vote: Let the second round voting begin.
 
 
@@ -559,7 +549,7 @@ max-visits: 1
 
 Supporting [+ pps_candidate +] is rather unexpected given we already have [+ bbwr_candidate +], even if the PPS accept our support. Are we sure?
 
-- @round2_thalmann_2: Yes, we will support [+ pps_candidate +], against the [+ sn_candidate +]!
+- @round2_pps_2: Yes, we will support [+ pps_candidate +], against the [+ sn_candidate +]!
 - @round2_menu: Never mind.
 
 @round2_pps_2
