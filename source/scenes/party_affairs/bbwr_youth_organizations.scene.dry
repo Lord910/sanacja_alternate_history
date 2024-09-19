@@ -39,7 +39,6 @@ on-arrival: resources -= lm_militarization_cost; lm_investment += 1; lm_strength
 Emphasizing military training attracts more patriotic youth and prepares them for future leadership roles.
 
 @lm_same
-subtitle: No change
 The current level of support is sufficient for now.
 
 @lm_cut
@@ -71,7 +70,6 @@ on-arrival: resources -= zpmd_militarization_cost; zpmd_investment += 1; zpmd_st
 Introducing military training may attract a more disciplined and committed membership, though it could alienate some democratically inclined youth.
 
 @zpmd_same
-subtitle: No change
 The current approach is working well enough.
 
 @zpmd_cut
@@ -103,7 +101,6 @@ on-arrival: resources -= zpm_militarization_cost; zpm_investment += 1; zpm_stren
 Focusing on military strategy further aligns with the group’s goals of projecting Polish power abroad.
 
 @zpm_same
-subtitle: No change
 The organization is operating effectively as it is.
 
 @zpm_cut
