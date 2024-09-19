@@ -4,7 +4,27 @@ is-card: true
 tags: party_affairs
 view-if: bbwr_youth_timer <= 0
 card-image: img/bbwr_youth.jpg
-on-arrival: month_actions += 1; bbwr_youth_timer += 6; lm_militarization_cost = 2 if lm_militancy > 0.1 else lm_militarization_cost = 1; lm_militarization_cost = 3 if lm_militancy > 0.25; zpmd_militarization_cost = 2 if zpmd_militancy > 0.1 else zpmd_militarization_cost = 1; zpmd_militarization_cost = 3 if zpmd_militancy > 0.25; zpm_militarization_cost = 2 if zpm_militancy > 0.1 else zpm_militarization_cost = 1; zpm_militarization_cost = 3 if zpm_militancy > 0.25
+on-arrival: |
+  month_actions += 1
+  bbwr_youth_timer += 6
+  if lm_militancy > 0.25:
+    lm_militarization_cost = 3
+  elif lm_militancy > 0.1:
+    lm_militarization_cost = 2
+  else:
+    lm_militarization_cost = 1
+  if zpmd_militancy > 0.25:
+    zpmd_militarization_cost = 3
+  elif zpmd_militancy > 0.1:
+    zpmd_militarization_cost = 2
+  else:
+    zpmd_militarization_cost = 1
+  if zpm_militancy > 0.25:
+    zpm_militarization_cost = 3
+  elif zpm_militancy > 0.1:
+    zpm_militarization_cost = 2
+  else:
+    zpm_militarization_cost = 1
 
 max-visits: 5
 
