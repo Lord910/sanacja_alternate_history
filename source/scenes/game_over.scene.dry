@@ -40,10 +40,7 @@ if (Q.republic_victory && Q.resist_coup) {
 }
 // Der österreichische Gefreiter - deport hitler
 // Volkspartei - form a people's party
-// Hirschfeld - legalize 2 of homosexual rights and trans rights.
-if (Q.homosexual_rights >= 2) {
-    this.achieve('hirschfeld');
-}
+
 // Mädchen und Uniform - a woman's place is in the Reichsbanner.
 // Gleichheit - Support and enact reforms for women's rights.
 if ((Q.womens_work && Q.womens_rights >= 5) || (Q.abortion_rights && Q.womens_rights >= 3)) {
@@ -337,8 +334,6 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
 
-[? if game_achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
-
 [? if game_achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
 
 [? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
@@ -422,8 +417,6 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
 
-[? if achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
-
 [? if achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
 
 [? if achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
@@ -504,8 +497,6 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 [? if not achievement_freie_marktwirtschaft: **Freie Marktwirtschaft** - survive to 1933 without adopting an economic plan. ?]
 
 [? if not achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
-
-[? if not achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
 
 [? if not achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
 

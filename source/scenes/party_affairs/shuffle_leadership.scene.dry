@@ -100,16 +100,6 @@ go-to: rm_main
 
 Juchacz has been removed as an advisor. The Repairers faction disapproves.
 
-@remove_pfulf
-title: Remove Pfülf
-view-if: pfulf_advisor = 1
-tags: remove_advisor
-on-arrival: pfulf_advisor = 0; colonels_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Pfülf has been removed as an advisor. The Repairers faction disapproves.
-
-
 # Sanacja Left
 
 @remove_moraczewski
@@ -225,16 +215,6 @@ go-to: rm_main
 Baade has been removed as an advisor.
 
 #The Repairers faction disapproves.
-
-
-@remove_hirschfeld
-title: Remove Hirschfeld
-view-if: hirschfeld_advisor = 1
-tags: remove_advisor
-on-arrival: hirschfeld_advisor = 0; n_advisors -= 1
-go-to: rm_main
-
-Hirschfeld has been removed as an advisor. 
 
 @remove_stampfer
 title: Remove Stampfer
@@ -403,19 +383,6 @@ tags: colonels_advisor
 
 Marie Juchacz is now an advisor.
 
-@add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights.
-is-card: true
-card-image: img/portraits/PfülfAntonie.jpg
-view-if: pfulf_advisor = 0 and n_advisors < 3
-on-arrival: pfulf_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: colonels_advisor
-
-Antonie Pfülf is now an advisor.
-
-
 
 # left
 
@@ -558,21 +525,6 @@ go-to: advisor_menu
 tags: nonfactional_advisor
 
 Fritz Baade is now an advisor.
-
-
-@add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities.
-is-card: true
-card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 3
-on-arrival: hirschfeld_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Magnus Hirschfeld is now an advisor.
-
-# TODO: add radbruch, stampfer
 
 @add_radbruch
 title: Gustav Radbruch
