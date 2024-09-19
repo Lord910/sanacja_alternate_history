@@ -18,9 +18,12 @@ The BBWR has multiple youth organizations, each serving different purposes and i
 
 @legion_and_vanguard
 on-arrival: {!
-    lm_militarization_cost = 2 if lm_militancy > 0.1 else lm_militarization_cost = 1;
     if (lm_militancy > 0.25) {
         lm_militarization_cost = 3;
+    } else if (lm_militancy > 0.1) {
+        lm_militarization_cost = 2;
+    } else {
+        lm_militarization_cost = 1;
     }
 !}
 
@@ -58,9 +61,12 @@ Cutting funding will reduce their influence, and some of their members may drift
 
 @democratic_youth
 on-arrival: {!
-    zpmd_militarization_cost = 2 if zpmd_militancy > 0.1 else zpmd_militarization_cost = 1;
     if (zpmd_militancy > 0.25) {
         zpmd_militarization_cost = 3;
+    } else if (zpmd_militancy > 0.1) {
+        zpmd_militarization_cost = 2;
+    } else {
+        zpmd_militarization_cost = 1;
     }
 !}
 
@@ -95,9 +101,12 @@ Cutting funding reduces their influence, with members potentially shifting to ot
 
 @conservative_youth
 on-arrival: {!
-    zpm_militarization_cost = 2 if zpm_militancy > 0.1 else zpm_militarization_cost = 1;
     if (zpm_militancy > 0.25) {
         zpm_militarization_cost = 3;
+    } else if (zpm_militancy > 0.1) {
+        zpm_militarization_cost = 2;
+    } else {
+        zpm_militarization_cost = 1;
     }
 !}
 
