@@ -132,9 +132,9 @@ dissent: [+ fourth_brigade_strength_dissent : dissent +]
 
 = Paramilitaries
 
-Reichsbanner Strength: [+ rb_strength +] thousand
+Reichsbanner Strength: [+ lm_strength +] thousand
 
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
+Reichsbanner Militarization: [+ lm_militancy : militancy +]
 
 RFB Strength: [+ rfb_strength +] thousand
 

@@ -130,10 +130,18 @@ Q.prussian_government = "BBWR";
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
-Q.women_in_rb = 0;
-Q.rb_banned = 0;
+Q.lm_strength = 0;
+Q.lm_militancy = 0.00;
+Q.women_in_lm = 0;
+Q.lm_banned = 0;
+Q.zpmd_strength = 0;
+Q.zpmd_militancy = 0.00;
+Q.women_in_zpmd = 0;
+Q.zpmd_banned = 0;
+Q.zpm_strength = 0;
+Q.zpm_militancy = 0.00;
+Q.women_in_zpm = 0;
+Q.zpm_banned = 0;
 Q.sh_strength = 500;
 Q.sh_militancy = 0.5;
 Q.sh_banned = 0;
@@ -468,7 +476,7 @@ Q.media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
 Q.rally_timer = 0;
-Q.reichsbanner_timer = 0;
+Q.bbwr_youth_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
 Q.peoples_party_timer = 0;

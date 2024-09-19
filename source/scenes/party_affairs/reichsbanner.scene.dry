@@ -1,68 +1,107 @@
-title: Reichsbanner
+title: BBWR Youth Organizations
 new-page: true
 is-card: true
-tags: party_affairs
-view-if: reichsbanner_timer <= 0
-card-image: img/reichsbanner.jpg
-on-arrival: month_actions += 1; reichsbanner_timer += 6; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
+tags: youth_affairs
+view-if: bbwr_youth_timer <= 0
+card-image: img/bbwr_youth.jpg
+on-arrival: month_actions += 1; bbwr_youth_timer += 6
 max-visits: 5
 
-= Reichsbanner
+= BBWR Youth Organizations
 
-The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the BBWR, Center, and PSL-W, but by far the largest component is with the BBWR.
+The BBWR has multiple youth organizations, each serving different purposes and ideologies. We must decide how to allocate our resources between these groups:
 
-[? if robotnicy_bbwr < 46 or robotnicy_bbwr < robotnicy_owp or robotnicy_bbwr < robotnicy_kpp : The Reichsbanner is having a more difficult time recruiting, as the BBWR is no longer the dominant party among the robotnicy. Many of its members have left. ?]
+- @legion_and_vanguard
+- @democratic_youth
+- @conservative_youth
 
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
-- @same: Keep the Reichsbanner as it is.
-- @cut_rb: Cut funding for the Reichsbanner.
-- @women_rb
-- @easy_discard
+@legion_and_vanguard
 
-#- Orient reichsbanner towards anti-fascism (only available if we have prioritized anti fascism)
+The *Legion Młodych* (Youth Legion) and *Straż Przednia* (Vanguard) are patriotic youth organizations that discipline, and physical fitness and oppose ethnic nationalism of Endecja. They are the backbone of the BBWR's youth wing, representing a new generation of Polish leadership.
 
-@militant
-choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-subtitle: -[+ rb_militarization_cost +] resources
-on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; repairers_strength += 2; repairers_dissent -= 2; colonels_dissent += 5; bbwr_militancy += 0.05; robotnicy_bbwr += 2*(1-dissent); bezrobotni_bbwr += 2*(1-dissent); pschd_relation -= 5 if historical_mode 
+- @lm_increase_funding: Allocate more resources to expand their operations.
+- @lm_military_training: Increase the focus on military training.
+- @same: Maintain current support and programs.
+- @lm_cut: Cut funding to reduce their influence.
 
-Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
+@lm_increase_funding
+subtitle: -2 resources
+on-arrival: resources -= 2; lm_investment += 1; lm_strength += 200; lm_militancy += 0.1
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
+Increased funding allows these organizations to expand their influence and recruit more young members.
 
+@lm_military_training
+choose-if: resources >= lm_militarization_cost
+subtitle: -[+ lm_militarization_cost +] resources
+on-arrival: resources -= lm_militarization_cost; lm_investment += 1; lm_strength += 100; lm_militancy += 0.05
 
-@militant_2
-view-if: funded_reichsbanner >= 1
-on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
-
-As we have already funded resources towards the Reichsbanner, we can invest in building up their militancy.
-
+Emphasizing military training attracts more patriotic youth and prepares them for future leadership roles.
 
 @same
+The current level of support is sufficient for now.
 
-The Reichsbanner is already serving the purpose it needs to serve. There is no reason to change what already works.
-
-- @return: Continue...
-
-
-@cut_rb
+@cut
 subtitle: +1 resources
-on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; repairers_strength -= 2; repairers_dissent -= 2; bbwr_militancy -= 0.05; robotnicy_kpp += 2; bezrobotni_kpp += 2
+on-arrival: resources += 1; lm_strength -= 150; lm_militancy -= 0.05
 
-Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the Communists instead.
+Cutting funding will reduce their influence, and some of their members may drift to more radical organizations.
 
+@democratic_youth
 
-@women_rb
-title: Allow women to join the Reichsbanner.
-subtitle: -1 resources - This might cause a backlash from existing members.
-choose-if: resources > 0
-view-if: womens_rights >= 4 and moraczewska_advisor == 1 and iron_front_formed == 1
-on-arrival: resources -= 1; rb_militancy *= 0.85; rb_strength += 400; women_in_rb = 1; rb_militancy += 0.05 if repealed_175; rb_militancy += 0.04 if trans_rights; rb_militancy += 0.02 if reformed_183;
-max-visits: 1
-achievement: women_reichsbanner
+The *Związek Polskiej Młodzieży Demokratycznej* focuses on democratic ideals and civic responsibility. It is less militaristic than other youth organizations but provides a platform for political engagement.
 
-The suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and inverts ?].
+- @zpmd_increase_funding: Invest more resources into political education and recruitment.
+- @military_training: Shift towards a more militarized structure.
+- @same: Maintain current support and programs.
+- @zpmd_cut: Cut funding to this organization.
 
-After allowing women to join, the number of comrades who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans, and many of the new members have no experience with military-style training.
+@zpmd_increase_funding
+subtitle: -1 resources
+on-arrival: resources -= 1; zpmd_investment += 1; zpmd_strength += 100; zpmd_militancy += 0.05
+
+More resources allow this organization to attract politically active youth.
+
+@zpmd_military_training
+subtitle: -2 resources
+on-arrival: resources -= 2; zpmd_strength += 200; zpmd_militancy += 0.1
+
+Introducing military training may attract a more disciplined and committed membership, though it could alienate some democratically inclined youth.
+
+@same
+The current approach is working well enough.
+
+@zpmd_cut
+subtitle: +1 resources
+on-arrival: resources += 1; zpmd_strength -= 100; zpmd_militancy -= 0.05
+
+Cutting funding reduces their influence, with members potentially shifting to other democratic or socialist organizations.
+
+@conservative_youth
+
+The *Związek Pracy Mocarstwowej* (Union for Imperial Effort) is a geopolitical youth organization promoting Poland’s expansion and imperial aspirations. Its members focus on foreign policy and strategic dominance.
+
+- @zpm_increase_funding: Expand the influence of this organization.
+- @zpm_military_training: Increase the emphasis on strategic military training.
+- @same: Keep the current level of support.
+- @zpm_cut: Reduce support for this organization.
+
+@zpm_increase_funding
+subtitle: -2 resources
+on-arrival: resources -= 2; zpm_investment += 1; zpm_strength += 200; zpm_militancy += 0.1
+
+Increased funding enables the organization to expand its geopolitical vision and attract more members.
+
+@zpm_military_training
+subtitle: -1 resources
+on-arrival: resources -= 1; zpm_strength += 100; zpm_militancy += 0.05
+
+Focusing on military strategy further aligns with the group’s goals of projecting Polish power abroad.
+
+#### @same
+The organization is operating effectively as it is.
+
+@zpm_cut
+subtitle: +1 resources
+on-arrival: resources += 1; zpm_strength -= 100; zpm_militancy -= 0.05
+
+Cutting funding weakens their influence, reducing the number of imperialist-minded youth within the BBWR.

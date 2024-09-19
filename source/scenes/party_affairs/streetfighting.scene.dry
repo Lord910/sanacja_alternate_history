@@ -1,7 +1,7 @@
 title: Streetfighting
 new-page: true
 is-card: true
-on-arrival: streetfighting_timer = 6; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
+on-arrival: streetfighting_timer = 6; month_actions += 1; lm_militarization_cost = 2 if lm_militancy > 0.1 else lm_militarization_cost = 1; lm_militarization_cost = 3 if lm_militancy > 0.25
 view-if: year >= 1930 and sa_strength >= 150 and streetfighting_timer == 0
 card-image: img/blutmai_2.jpg
 tags: party_affairs; antifascism
@@ -13,7 +13,7 @@ Battles rage on the streets between the Nazi SA, nationalist Stahlhelm, communis
 We must do something to protect the robotnicy against these predations.
 
 # - @battle: Test our defense units in battle against the fascists!
-- @arm_rb: Increase training and armaments for the Reichsbanner.
+- @arm_lm: Increase training and armaments for the Reichsbanner.
 - @if_training: Train union members to fight as part of the Iron Front.
 - @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
 - @peace: Try to avoid all militant confrontations, as much as possible.
@@ -21,17 +21,17 @@ We must do something to protect the robotnicy against these predations.
 - @easy_discard
 
 @battle
-view-if: rb_militancy > 0.1 and rb_militancy < 0.5
-on-arrival: rb_militancy += 0.1; sa_strength += 40; rb_strength -= 100; 
+view-if: lm_militancy > 0.1 and lm_militancy < 0.5
+on-arrival: lm_militancy += 0.1; sa_strength += 40; lm_strength -= 100; 
 max-visits: 1
 
 Many Reichsbanner members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
 
-@arm_rb
-subtitle: -[+ rb_militarization_cost +] resource
-choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-on-arrival: resources -= rb_militarization_cost; rb_militancy += 0.06; rb_strength += 50; sa_strength += 50; pschd_relation -= 5 if historical_mode 
+@arm_lm
+subtitle: -[+ lm_militarization_cost +] resource
+choose-if: resources >= lm_militarization_cost
+unavailable-subtitle: Not enough resources ([+ lm_militarization_cost +] needed).
+on-arrival: resources -= lm_militarization_cost; lm_militancy += 0.06; lm_strength += 50; sa_strength += 50; pschd_relation -= 5 if historical_mode 
 
 We have increased training and purchased more armaments for the Reichsbanner.
 
@@ -40,19 +40,19 @@ We have increased training and purchased more armaments for the Reichsbanner.
 
 @if_training
 view-if: iron_front_formed == 1
-on-arrival: rb_militancy += 0.03; rb_strength += 200; sa_strength += 50; 
+on-arrival: lm_militancy += 0.03; lm_strength += 200; sa_strength += 50; 
 max-visits: 2
 
 As part of the Iron Front, we are increasing coordination between the Reichsbanner and the unions, and many union members want to become more involved.
 
 @prussian_police_training
 view-if: bbwr_prussia == 1 and prussian_police_loyalty > 0.5
-on-arrival: rb_militancy += 0.05; sa_strength += 50; 
+on-arrival: lm_militancy += 0.05; sa_strength += 50; 
 
 The loyal sections of the Prussian police can help train the Reichsbanner.
 
 @peace
-on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
+on-arrival: lm_militancy -= 0.02; lm_strength -= 50; pacifism += 1
 
 By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
 
@@ -60,6 +60,6 @@ By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the pa
 choose-if: kpp_relation >= 45
 view-if: kpp_truce == 0
 unavailable-subtitle: The KPP is not interested.
-on-arrival: kpp_truce = 1; kpp_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
+on-arrival: kpp_truce = 1; kpp_relation += 5; rfb_strength += 50; lm_strength += 50; sa_strength += 50;
 
 We have made at least a temporary truce with the KPP, so that our respective paramilitaries will stop fighting.

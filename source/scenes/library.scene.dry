@@ -257,7 +257,7 @@ Current relations: [+ owp_relation : relationships +]
 
 @paramilitaries
 on-arrival: {!
-Q.rb_strength = Math.round(Q.rb_strength);
+Q.lm_strength = Math.round(Q.lm_strength);
 Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength); 
 !}
@@ -267,9 +267,9 @@ go-to: menu
 
 **Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the BBWR, PSCHD, and PSL-W, but primarily with the BBWR. Historically, this has been an unarmed organization.
 
-Strength: [+ rb_strength +] thousand
+Strength: [+ lm_strength +] thousand
 
-Militarization: [+ rb_militancy : militancy +]
+Militarization: [+ lm_militancy : militancy +]
 
 **Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the KPP.
 

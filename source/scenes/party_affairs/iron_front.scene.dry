@@ -2,7 +2,7 @@ title: The Iron Front
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and iron_front_timer = 0
-on-arrival: iron_front_timer = 7; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
+on-arrival: iron_front_timer = 7; month_actions += 1; lm_militarization_cost = 2 if lm_militancy > 0.1 else lm_militarization_cost = 1; lm_militarization_cost = 3 if lm_militancy > 0.25
 card-image: img/iron_front.png
 frequency: 200
 tags: party_affairs, antifascism
@@ -21,9 +21,9 @@ The Iron Front is our new antifascist coordination front, consisting of the BBWR
 - @easy_discard
 
 @defense
-subtitle: -[+ rb_militarization_cost +] resources
-choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; pschd_relation -= 5 if historical_mode
+subtitle: -[+ lm_militarization_cost +] resources
+choose-if: resources >= lm_militarization_cost
+on-arrival: resources -= lm_militarization_cost; lm_strength += 50; lm_militancy += 0.05; pschd_relation -= 5 if historical_mode
 
 The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
 

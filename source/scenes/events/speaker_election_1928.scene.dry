@@ -465,7 +465,7 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 @round2_convince_pschd
 view-if: bbwr_speaker_campaign > 0 and pschd_support_bbwr != 1 
-choose-if: pps_support_bbwr = 1 or bbwr_support_pps = 1
+choose-if: pps_support_bbwr = 0 or bbwr_support_pps = 0
 unavailable-subtitle: PSCHD wont work with us after our deal with PPS
 on-arrival: {!
 Q.pps_support_bbwr = 0;

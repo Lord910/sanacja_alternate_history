@@ -51,7 +51,7 @@ It is not enough for the BBWR to solely be a political party. The Worker Singer'
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
+on-arrival: resources -= 1; lm_strength  += 100; lm_militancy += 0.01; bbwr_youth_timer = 0; funded_reichsbanner += 1
 
 We have increased recruiting to the Reichsbanner.
 
@@ -59,7 +59,7 @@ We have increased recruiting to the Reichsbanner.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; repairers_strength += 5; conservatives_strength += 5; radicalization += 1;
+on-arrival: resources -= 1; lm_strength += 50; lm_militancy += 0.02; young_socialists += 1; repairers_strength += 5; conservatives_strength += 5; radicalization += 1;
 
 Our new youth members flock to the left or conservatives wings of the party, and also bring new radicalism to the Reichsbanner.
 
