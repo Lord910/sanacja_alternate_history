@@ -1,0 +1,42 @@
+title: Zdzisław Lubomirski
+is-pinned-card: true
+tags: advisor, conservatives
+card-image: img/portraits/LubomirskiZdzislaw.jpg
+view-if: lubomirski_advisor = 1
+new-page: true 
+
+= Zdzisław Lubomirski
+
+Zdzisław Lubomirski is a prominent Polish aristocrat, politician, and influential figure in modern Poland. Born into the noble Lubomirski family, he plays a significant role in shaping the political landscape of Poland. Known for his conservative views, Lubomirski is a staunch supporter of traditional values and the preservation of the aristocracy's influence in Polish society. He held various political positions and is actively involved in the BBWR, advocating for policies that favored the landed gentry and the upper class.
+
+Lubomirski's political career is marked by his efforts to balance the interests of the nobility with the demands of modern governance. He is a key figure in negotiating with other conservative and right-wing parties, aiming to create a stable coalition that could effectively govern Poland. His influence extends beyond politics into social and cultural spheres, where he champions the preservation of Poland's historical heritage and the promotion of its national identity.
+
+- @coalition
+- @aristocratic_influence
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Lubomirski can improve our relationships with conservative and right-wing parties.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; 
+
+We have improved our relations with the Conservative and Right-Wing parties and reduced tensions with the coalition.
+
+@aristocratic_influence
+title: Aristocratic Influence
+subtitle: As a prominent aristocrat, Lubomirski has significant influence over the Polish nobility and traditional institutions.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Lubomirski" and president != "Lubomirski" : Lubomirski must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and (chancellor == "Lubomirski" or president == "Lubomirski")
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].

@@ -532,6 +532,7 @@ Q.seydewitpschd_advisor = 0; // Max Seydewitz
 // Liberal advisors
 Q.bartel_advisor = 1; // Kazimierz Bartel
 Q.bartel_dead = 0;
+Q.kosciolkowski_advisor = 0; // Marian Zyndram-Kościałkowski
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
@@ -544,6 +545,11 @@ Q.juchacpschd_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
 // Conservative advisors
+Q.radziwill_advisor = 0;  // Janusz Franciszek Radziwiłł
+Q.lubomirski_advisor = 0; // Zdzisław Lubomirski
+Q.wierzbicki_advisor = 0; // Andrzej Wierzbicki
+
+
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
 Q.leber_advisor = 0; // Julius Leber (post-1930)
 Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)

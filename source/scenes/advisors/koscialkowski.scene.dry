@@ -1,0 +1,42 @@
+title: Marian Zyndram-Kościałkowski
+is-pinned-card: true
+tags: advisor, liberals
+card-image: img/portraits/KosciolkowskiMarian.jpg
+view-if: kosciolkowski_advisor = 1
+new-page: true 
+
+= Marian Zyndram-Kościałkowski
+
+Marian Zyndram-Kościałkowski is a prominent Polish politician and influential figure in modern Poland. Known for his liberal views, Kościałkowski is a strong advocate for progressive policies and the modernization of Polish society. He held various political positions and is actively involved in promoting social reforms, economic development, and the expansion of civil liberties.
+
+Kościałkowski's political career is marked by his efforts to balance the interests of different social groups while pushing for progressive changes. He is a key figure in negotiating with other liberal and centrist parties, aiming to create a stable coalition that could effectively govern Poland. His influence extends beyond politics into social and cultural spheres, where he champions the promotion of education, scientific advancement, and the protection of individual rights.
+
+- @coalition
+- @liberal_reforms
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Kościałkowski can improve our relationships with liberal and centrist parties.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; 
+
+We have improved our relations with the Liberal and Centrist parties and reduced tensions with the coalition.
+
+@liberal_reforms
+title: Liberal Reforms
+subtitle: As a prominent liberal, Kościałkowski advocates for progressive social and economic reforms.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Kościałkowski" and president != "Kościałkowski" : Kościałkowski must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and (chancellor == "Kościałkowski" or president == "Kościałkowski")
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].

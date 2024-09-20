@@ -1,0 +1,42 @@
+title: Andrzej Wierzbicki
+is-pinned-card: true
+tags: advisor, conservatives
+card-image: img/portraits/WierzbickiAndrzej.jpg
+view-if: wierzbicki_advisor = 1
+new-page: true 
+
+= Andrzej Wierzbicki
+
+Andrzej Wierzbicki is a prominent Polish politician and influential figure in modern Poland. Known for his conservative views and right-wing roots, Wierzbicki is a strong advocate for traditional values and the preservation of national heritage. He held various political positions and is actively involved in promoting policies that support economic stability, national security, and the interests of the Polish middle and upper classes. Wierzbicki is also the leader of Lewiatan, an influential organization representing the interests of Polish entrepreneurs and industrialists.
+
+Wierzbicki's political career is marked by his efforts to balance the interests of different social groups while maintaining a focus on conservative principles. He is a key figure in negotiating with other conservative and right-wing parties, aiming to create a stable coalition that could effectively govern Poland. His influence extends beyond politics into social and cultural spheres, where he champions the promotion of Polish culture, family values, and the strengthening of national identity.
+
+- @coalition
+- @conservative_policies
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Wierzbicki can improve our relationships with conservative and right-wing parties.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; 
+
+We have improved our relations with the Conservative and Right-Wing parties and reduced tensions with the coalition.
+
+@conservative_policies
+title: Conservative Policies
+subtitle: As a prominent conservative, Wierzbicki advocates for policies that support economic stability and traditional values.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Wierzbicki" and president != "Wierzbicki" : Wierzbicki must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and (chancellor == "Wierzbicki" or president == "Wierzbicki")
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].

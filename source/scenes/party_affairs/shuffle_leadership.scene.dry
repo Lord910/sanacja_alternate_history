@@ -60,6 +60,14 @@ go-to: rm_main
 
 Bartel has been removed as an advisor. The Liberal faction disapproves.
 
+@remove_kosciolkowski
+title: Remove Kościałkowski
+view-if: kosciolkowski_advisor = 1
+tags: remove_advisor
+on-arrival: kosciolkowski_advisor = 0; liberals_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Bartel has been removed as an advisor. The Liberal faction disapproves.
 
 @remove_breitscheid
 title: Remove Breitscheid
@@ -296,6 +304,34 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
+# Liberals
+
+@add_bartel
+title: Kazimierz Bartel
+subtitle: Kazimierz Bartel is first Prime Minister after May Coup and leader of Liberal faction.
+is-card: true
+card-image: img/portraits/BartelKazimierz.jpg
+tags: liberals_advisor
+view-if: bartel_advisor = 0 and bartel_dead = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: bartel_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Kazimierz Bartel is now an advisor.
+
+@add_kosciolkowski
+title: Marian Zyndram-Kościałkowski
+subtitle: Marian Zyndram-Kościałkowski former member of PSL-W and member of our Liberal faction.
+is-card: true
+card-image: img/portraits/KosciolkowskiMarian.jpg
+tags: liberals_advisor
+view-if: kosciolkowski_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: kosciolkowski_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Marian Zyndram-Kościałkowski is now an advisor.
+
+
+
 @add_czechowicz
 title: Gabriel Czechowicz
 subtitle: Gabriel Czechowicz is an economist standing on the crossroads between left and liberal economics.
@@ -320,17 +356,7 @@ go-to: advisor_menu
 
 Walery Sławek is now an advisor.
 
-@add_bartel
-title: Kazimierz Bartel
-subtitle: Kazimierz Bartel is first Prime Minister after May Coup and leader of Liberal faction.
-is-card: true
-card-image: img/portraits/BartelKazimierz.jpg
-tags: liberals_advisor
-view-if: bartel_advisor = 0 and bartel_dead = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: bartel_advisor = 1; n_advisors += 1
-go-to: advisor_menu
 
-Kazimierz Bartel is now an advisor.
 
 @add_breitscheid
 title: Rudolf Breitscheid
