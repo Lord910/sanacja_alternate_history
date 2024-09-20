@@ -104,7 +104,7 @@ PSL-W: [+ pslw_votes +]%
 PSL-P: [+ pslp_votes +]%
 
 # 1928: 14, 1930: 7
-SN: [+ sn_votes +]%
+[+ sn_party_name +]: [+ sn_votes +]%
 
 # 1928: 3, 1930: 18
 OWP: [+ owp_votes +]%
@@ -143,7 +143,7 @@ PSCHD: [+ robotnicy_pschd_normalized +]%,
 
 PSL-P: [+ robotnicy_pslp_normalized +]%, 
 
-SN: [+ robotnicy_sn_normalized +]%, 
+[+ sn_party_name +]: [+ robotnicy_sn_normalized +]%, 
 
 OWP: [+ robotnicy_owp_normalized +]%, 
 
@@ -169,7 +169,7 @@ PSCHD: [+ klasa_srednia_pschd_normalized +]%,
 
 PSL-P: [+ klasa_srednia_pslp_normalized +]%, 
 
-SN: [+ klasa_srednia_sn_normalized +]%, 
+[+ sn_party_name +]: [+ klasa_srednia_sn_normalized +]%, 
 
 OWP: [+ klasa_srednia_owp_normalized +]%, 
 
@@ -194,7 +194,7 @@ PSCHD: [+ klasa_wyzsza_pschd_normalized +]%,
 
 PSL-P: [+ klasa_wyzsza_pslp_normalized +]%, 
 
-SN: [+ klasa_wyzsza_sn_normalized +]%, 
+[+ sn_party_name +]: [+ klasa_wyzsza_sn_normalized +]%, 
 
 OWP: [+ klasa_wyzsza_owp_normalized +]%, 
 
@@ -219,7 +219,7 @@ PSCHD: [+ chlopi_pschd_normalized +]%,
 
 PSL-P: [+ chlopi_pslp_normalized +]%, 
 
-SN: [+ chlopi_sn_normalized +]%, 
+[+ sn_party_name +]: [+ chlopi_sn_normalized +]%, 
 
 OWP: [+ chlopi_owp_normalized +]%, 
 
@@ -277,7 +277,7 @@ Strength: [+ rfb_strength +] thousand
 
 Militarization: [+ rfb_militancy : militancy +]
 
-**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the SN.
+**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the [+ sn_party_name +].
 
 Strength: [+ sh_strength +] thousand
 
@@ -460,8 +460,8 @@ data = [
     },
     {
         "id": "sn",
-        "legend": "SN",
-        "name": "SN",
+        "legend": "[+ sn_party_name +]",
+        "name": "[+ sn_party_name +]",
         "seats": Math.round(Q.sn_r*5),
     },
     {
@@ -536,7 +536,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0000CD'> </div> !} SN: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0000CD'> </div> !} [+ sn_party_name +]: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ owp_r +]% {!</td><td>!} [+ str_change_owp +] {!</td></tr>!}
 {!</table>!}

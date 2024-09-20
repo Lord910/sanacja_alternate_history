@@ -108,8 +108,8 @@ Q.npr_relation = 15;
 // SN and OWP are invariably hostile
 Q.pschd_relation = 10;
 Q.pslp_relation = 10;
-Q.SN_relation = 10;
-Q.OWP_relation = 0;
+Q.sn_relation = 10;
+Q.owp_relation = 0;
 
 Q.kpp_leader = "Thälmann";
 Q.pschd_leader = "Brüning";
@@ -328,6 +328,7 @@ Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'BBWR';
 Q.speaker = "Rataj";
 Q.speaker_party = 'PSL-P';
+Q.sn_party_name = "ZLN"
 Q.bbwr_in_government = 1;
 Q.pschd_in_government = 0;
 Q.pslw_in_government = 0;

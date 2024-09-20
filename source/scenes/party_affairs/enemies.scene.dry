@@ -15,8 +15,8 @@ In our media and campaign materials, who should we consider as our main opponent
 
 - @anti_dem: The democratic parties - PPS, SCH, PSL-W, NPR, PSCHD, PSL-P.
 - @left: The left-wing parties - PPS, SCH, PSL-W, KPP.
-- @right: The right-wing parties - NPR, PSCHD, PSL-P, SN, OWP.
-- @far_right: The far right - OWP and SN.
+- @right: The right-wing parties - NPR, PSCHD, PSL-P, [+ sn_party_name +], OWP.
+- @far_right: The far right - OWP and [+ sn_party_name +].
 - @far_left: The far left - KPP.
 - @easy_discard
 

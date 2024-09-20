@@ -206,8 +206,8 @@ data = [
     },
     {
         "id": "sn",
-        "legend": "SN",
-        "name": "SN",
+        "legend": "[+ sn_party_name +]",
+        "name": "[+ sn_party_name +]",
         "seats": Math.round(Q.sn_r*5),
     },
     {
@@ -261,7 +261,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !} PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0000CD'> </div> !} SN: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0000CD'> </div> !} [+ sn_party_name +]: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ owp_r +]% {!</td><td>!} [+ str_change_owp +] {!</td></tr>!}
 {!</table>!}
@@ -278,15 +278,15 @@ Democratic Left Coalition (PPS + SCh + PSL-W): [+ democratic_left_coalition +]%
 
 Centre-Left Coalition (PPS + SCh + PSL-W + NPR + PSCHD + PSL-P): [+ centre_left_coalition +]%
 
-Centre-Right Coalition (NPR + PSCHD + PSL-P + SN): [+ centre_right_coalition +]%
+Centre-Right Coalition (NPR + PSCHD + PSL-P + [+ sn_party_name +]): [+ centre_right_coalition +]%
 
-Far Right Coalition (SN + OWP): [+ far_right_coalition +]%
+Far Right Coalition ([+ sn_party_name +] + OWP): [+ far_right_coalition +]%
 
 # Popular Front (KPP + PPS): [+ popular_front_coalition +]%
 
 [? if nazi_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPP, SN, and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPP, [+ sn_party_name +], and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 

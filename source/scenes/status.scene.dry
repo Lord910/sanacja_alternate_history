@@ -24,9 +24,15 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+President: 
 
-Prime Minister: [+ chancellor +] ([+ chancellor_party +])
+[+ president +]
+
+Speaker: 
+
+[+ speaker +] ([+ speaker_party +])
+
+Speaker
 
 Sejm composition:
 
@@ -48,7 +54,7 @@ PSCHD: [+ pschd_r +]%
 
 PSL-P: [+ pslp_r +]%
 
-SN: [+ sn_r +]%
+[+ sn_party_name +]: [+ sn_r +]%
 
 OWP: [+ owp_r +]%
 
@@ -84,7 +90,7 @@ PSCHD: [+ pschd_relation : relationships +]
 
 PSL-P: [+ pslp_relation : relationships +]
 
-SN: [+ sn_relation : relationships +]
+[+ sn_party_name +]: [+ sn_relation : relationships +]
 
 OWP: [+ owp_relation : relationships +]
 
@@ -182,7 +188,7 @@ PSCHD: [+ pschd_votes +]%
 
 PSL-P: [+ pslp_votes +]%
 
-SN: [+ sn_votes +]%
+[+ sn_party_name +]: [+ sn_votes +]%
 
 OWP: [+ owp_votes +]%
 
@@ -208,7 +214,7 @@ PSCHD: [+ robotnicy_pschd_normalized +]%,
 
 PSL-P: [+ robotnicy_pslp_normalized +]%, 
 
-SN: [+ robotnicy_sn_normalized +]%, 
+[+ sn_party_name +]: [+ robotnicy_sn_normalized +]%, 
 
 OWP: [+ robotnicy_owp_normalized +]%, 
 
@@ -234,7 +240,7 @@ PSCHD: [+ klasa_srednia_pschd_normalized +]%,
 
 PSL-P: [+ klasa_srednia_pslp_normalized +]%, 
 
-SN: [+ klasa_srednia_sn_normalized +]%, 
+[+ sn_party_name +]: [+ klasa_srednia_sn_normalized +]%, 
 
 OWP: [+ klasa_srednia_owp_normalized +]%, 
 
@@ -259,7 +265,7 @@ PSCHD: [+ klasa_wyzsza_pschd_normalized +]%,
 
 PSL-P: [+ klasa_wyzsza_pslp_normalized +]%, 
 
-SN: [+ klasa_wyzsza_sn_normalized +]%, 
+[+ sn_party_name +]: [+ klasa_wyzsza_sn_normalized +]%, 
 
 OWP: [+ klasa_wyzsza_owp_normalized +]%, 
 
@@ -284,7 +290,7 @@ PSCHD: [+ chlopi_pschd_normalized +]%,
 
 PSL-P: [+ chlopi_pslp_normalized +]%, 
 
-SN: [+ chlopi_sn_normalized +]%, 
+[+ sn_party_name +]: [+ chlopi_sn_normalized +]%, 
 
 OWP: [+ chlopi_owp_normalized +]%, 
 

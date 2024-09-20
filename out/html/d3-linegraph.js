@@ -34,7 +34,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         };
     }
     if (!partyNames) {
-        partyNames = {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'SN', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR','sch': 'SCh' };
+        partyNames = {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': '[+ sn_party_name +]', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR','sch': 'SCh' };
     }
     if (!additionalMonths) {
         additionalMonths = 10;
