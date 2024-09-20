@@ -557,8 +557,7 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 
 // Nonfactional advisors
 Q.skladkowski_advisor = 0; // Felicjan Sławoj Składkowski
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
+
 Q.czechowicz_advisor = 1; // Gabriel Czechowicz
 Q.stpiczynski_advisor = 0; // Wojciech Stpiczyński
 

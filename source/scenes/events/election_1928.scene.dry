@@ -405,10 +405,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: justice_minister_party != "BBWR"
-on-arrival: leverage -= 10; justice_minister_party = "BBWR"; justice_minister = "Radbruch"
+on-arrival: leverage -= 10; justice_minister_party = "BBWR"; justice_minister = "Car"
 go-to: ministries
 
-Gustav Radbruch of the BBWR has been appointed Justice Minister.
+Stanisław Car of the BBWR has been appointed Justice Minister.
 
 @foreign
 title: Foreign Ministry
