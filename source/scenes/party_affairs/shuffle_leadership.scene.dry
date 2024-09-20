@@ -246,8 +246,6 @@ Schumacher has been removed as an advisor. The Conservatives faction disapproves
 
 ## nonfactional
 
-# tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
-
 @remove_baade
 title: Remove Baade
 view-if: baade_advisor = 1
@@ -258,15 +256,6 @@ go-to: rm_main
 Baade has been removed as an advisor.
 
 #The Repairers faction disapproves.
-
-@remove_stampfer
-title: Remove Stampfer
-view-if: stampfer_advisor = 1
-tags: remove_advisor
-on-arrival: stampfer_advisor = 0; n_advisors -= 1
-go-to: rm_main
-
-Stampfer has been removed as an advisor. 
 
 @remove_radbruch
 title: Remove Radbruch
@@ -644,17 +633,5 @@ tags: nonfactional_advisor
 
 Gustav Radbruch is now an advisor.
 
-
-@add_stampfer
-title: Friedrich Stampfer
-subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper.
-is-card: true
-card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 0 and n_advisors < 3
-on-arrival: stampfer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Friedrich Stampfer is now an advisor.
 
 
