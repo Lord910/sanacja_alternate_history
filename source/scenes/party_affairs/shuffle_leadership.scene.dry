@@ -181,7 +181,7 @@ Seydewitz has been removed as an advisor. The Sanacja Left disapproves.
 
 # conservatives
 
-@remove_radziwill
+@remove_wierzbicki
 title: Remove Andrzej Wierzbicki
 view-if: wierzbicki_advisor = 1
 tags: remove_advisor
