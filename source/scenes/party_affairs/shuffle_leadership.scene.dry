@@ -181,6 +181,33 @@ Seydewitz has been removed as an advisor. The Sanacja Left disapproves.
 
 # conservatives
 
+@remove_radziwill
+title: Remove Andrzej Wierzbicki
+view-if: wierzbicki_advisor = 1
+tags: remove_advisor
+on-arrival: wierzbicki_advisor = 0; conservatives_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Wierzbicki has been removed as an advisor. The Conservatives faction disapproves.
+
+@remove_radziwill
+title: Remove Janusz Franciszek Radziwiłł
+view-if: radziwill_advisor = 1
+tags: remove_advisor
+on-arrival: radziwill_advisor = 0; conservatives_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Radziwiłł has been removed as an advisor. The Conservatives faction disapproves.
+
+@remove_lubomirski
+title: Remove Lubomirski
+view-if: lubomirski_advisor = 1
+tags: remove_advisor
+on-arrival: lubomirski_advisor = 0; conservatives_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Lubomirski has been removed as an advisor. The Conservatives faction disapproves.
+
 @remove_mierendorff
 title: Remove Mierendorff
 view-if: mierendorff_advisor = 1
@@ -331,7 +358,6 @@ go-to: advisor_menu
 Marian Zyndram-Kościałkowski is now an advisor.
 
 
-
 @add_czechowicz
 title: Gabriel Czechowicz
 subtitle: Gabriel Czechowicz is an economist standing on the crossroads between left and liberal economics.
@@ -355,8 +381,6 @@ on-arrival: slawek_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Walery Sławek is now an advisor.
-
-
 
 @add_breitscheid
 title: Rudolf Breitscheid
@@ -501,6 +525,42 @@ Wladimir Woytinsky is now an advisor.
 
 
 # conservatives leaders
+
+@add_wierzbicki
+title: Andrzej Wierzbicki
+subtitle: Andrzej Wierzbicki an industrialist, leader of Lewiatan group and member of Conservatives faction.
+is-card: true
+card-image: img/portraits/WierzbickiAndrzej.jpg
+tags: conservatives_advisor
+view-if: wierzbicki_advisor = 0 and n_advisors < 3 and conservatives_resigned = 0
+on-arrival: wierzbicki_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Andrzej Wierzbicki is now an advisor.
+
+@add_radziwill
+title: Janusz Franciszek Radziwiłł
+subtitle: Janusz Franciszek Radziwiłł an aristocrat and leader of our Conservatives faction.
+is-card: true
+card-image: img/portraits/RadziwillJanusz.jpg
+tags: conservatives_advisor
+view-if: radziwill_advisor = 0 and n_advisors < 3 and conservatives_resigned = 0
+on-arrival: radziwill_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Janusz Franciszek Radziwiłł is now an advisor.
+
+@add_lubomirski
+title: Zdzisław Lubomirski
+subtitle: Zdzisław Lubomirski an aristocrat, former member of Regency Council and leader of our Conservatives faction.
+is-card: true
+card-image: img/portraits/LubomirskiZdzislaw.jpg
+tags: conservatives_advisor
+view-if: lubomirski_advisor = 0 and n_advisors < 3 and conservatives_resigned = 0
+on-arrival: lubomirski_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Zdzisław Lubomirski is now an advisor.
 
 @add_mierendorff
 title: Carlo Mierendorff

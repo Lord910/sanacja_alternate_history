@@ -62,6 +62,7 @@ Q.unions_independent = 0;
 Q.liberals_resigned = 0;
 Q.repairers_split = 0;
 Q.reformists_resigned = 0;
+Q.conservatives_resigned = 0;
 
 // have we discovered sanacja_nationalists?
 Q.sanacja_nationalists = 0;
