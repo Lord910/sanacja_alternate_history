@@ -24,17 +24,19 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: 
+** President:**  
 
-[+ president +]
+[+ president +] ([+ president_party +])
 
-Speaker: 
+** Prime Minister:** 
+
+[+ chancellor +] ([+ chancellor_party +])
+
+** Speaker:**  
 
 [+ speaker +] ([+ speaker_party +])
 
-Speaker
-
-Sejm composition:
+** Sejm composition:** 
 
 KPP: [+ kpp_r +]%
 

@@ -116,6 +116,7 @@ Q.pschd_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the BBWR.
 Q.pschd_party_leader = "Marx";
 Q.bbwr_leader = "Sławek";
+Q.pslp_leader = "Witos"
 Q.owp_leader = "Dmowski";
 
 // hmm... maybe we can play nice with Hindenburg???
@@ -214,15 +215,15 @@ Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.robotnicy_pps = 35;
-Q.robotnicy_bbwr = 35;
-Q.robotnicy_kpp = 2;
-Q.robotnicy_pschd = 3;
-Q.robotnicy_npr = 10;
+Q.robotnicy_pps = 38;
+Q.robotnicy_bbwr = 25;
+Q.robotnicy_kpp = 3;
+Q.robotnicy_pschd = 5;
+Q.robotnicy_npr = 12;
 Q.robotnicy_pslw = 0;
-Q.robotnicy_sch = 5;
+Q.robotnicy_sch = 6;
 Q.robotnicy_pslp = 0;
-Q.robotnicy_sn = 8;
+Q.robotnicy_sn = 11;
 Q.robotnicy_owp = 0;
 Q.robotnicy_other = 0;
 
@@ -238,39 +239,39 @@ Q.klasa_wyzsza_sn = 30;
 Q.klasa_wyzsza_owp = 0;
 Q.klasa_wyzsza_other = 0;
 
-Q.klasa_srednia_pps = 10;
-Q.klasa_srednia_bbwr = 35;
+Q.klasa_srednia_pps = 12;
+Q.klasa_srednia_bbwr = 25;
 Q.klasa_srednia_kpp = 0;
-Q.klasa_srednia_pschd = 10;
-Q.klasa_srednia_npr = 5;
+Q.klasa_srednia_pschd = 15;
+Q.klasa_srednia_npr = 7;
 Q.klasa_srednia_pslw = 0;
-Q.klasa_srednia_sch = 5;
-Q.klasa_srednia_pslp = 10;
-Q.klasa_srednia_sn = 25;
+Q.klasa_srednia_sch = 7;
+Q.klasa_srednia_pslp = 12;
+Q.klasa_srednia_sn = 22;
 Q.klasa_srednia_owp = 0;
 Q.klasa_srednia_other = 0;
 
-Q.chlopi_pps = 5;
-Q.chlopi_bbwr = 40;
-Q.chlopi_kpp = 5;
-Q.chlopi_pschd = 5;
+Q.chlopi_pps = 7;
+Q.chlopi_bbwr = 25;
+Q.chlopi_kpp = 7;
+Q.chlopi_pschd = 7;
 Q.chlopi_npr = 0;
-Q.chlopi_pslw = 25;
-Q.chlopi_sch = 10;
-Q.chlopi_pslp = 10;
-Q.chlopi_sn = 10;
+Q.chlopi_pslw = 30;
+Q.chlopi_sch = 12;
+Q.chlopi_pslp = 12;
+Q.chlopi_sn = 12;
 Q.chlopi_owp = 0;
 Q.chlopi_other = 0;
 
-Q.bezrobotni_pps = 30;
-Q.bezrobotni_bbwr = 35;
-Q.bezrobotni_kpp = 2;
-Q.bezrobotni_pschd = 3;
-Q.bezrobotni_npr = 10;
+Q.bezrobotni_pps = 35;
+Q.bezrobotni_bbwr = 25;
+Q.bezrobotni_kpp = 3;
+Q.bezrobotni_pschd = 5;
+Q.bezrobotni_npr = 12;
 Q.bezrobotni_pslw = 0;
-Q.bezrobotni_sch = 5;
+Q.bezrobotni_sch = 6;
 Q.bezrobotni_pslp = 0;
-Q.bezrobotni_sn = 10;
+Q.bezrobotni_sn = 14;
 Q.bezrobotni_owp = 0;
 Q.bezrobotni_other = 0;
 
@@ -323,12 +324,13 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Ignacy Mościcki";
+Q.president_party = "BBWR";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'BBWR';
 Q.speaker = "Rataj";
 Q.speaker_party = 'PSL-P';
-Q.sn_party_name = "ZLN"
+Q.sn_party_name = "ZLN";
 Q.bbwr_in_government = 1;
 Q.pschd_in_government = 0;
 Q.pslw_in_government = 0;
