@@ -32,6 +32,14 @@ title: Stop changing advisors.
 go-to: root
 tags: remove_advisor
 
+@remove_stpiczynski
+title: Remove Stpiczyński
+view-if: stpiczynski_advisor = 1
+on-arrival: stpiczynski_advisor = 0; n_advisors -= 1
+tags: remove_advisor
+go-to: rm_main
+
+Stpiczyński has been removed as an advisor.
 
 @remove_czechowicz
 title: Remove Czechowicz
@@ -599,6 +607,18 @@ tags: conservatives_advisor
 Julius Leber is now an advisor.
 
 # Nonfactional advisors
+
+@add_stpiczynski
+title: Wojciech Stpiczyński
+subtitle: Wojciech Stpiczyński is one of the most influential political journalists and publicists in the Piłsudski camp, known for coining the term "Sanacja."
+is-card: true
+card-image: img/portraits/StpiczynskiWojciech.jpg
+view-if: stpiczynski_advisor = 0 and n_advisors < 3
+on-arrival: stpiczynski_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Wojciech Stpiczyński is now an advisor.
 
 @add_baade
 title: Fritz Baade

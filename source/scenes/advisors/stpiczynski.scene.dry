@@ -1,0 +1,62 @@
+title: Wojciech Stpiczyński
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/StpiczynskiWojciech.jpg
+view-if: stpiczynski_advisor = 1
+new-page: true 
+
+= Wojciech Stpiczyński
+
+Wojciech Stpiczyński is one of the most controversial political journalists in the Second Republic and a key figure in the Piłsudski camp. He is credited with coining the term *Sanacja* to describe the government's efforts to "cleanse" Polish politics after the May Coup. Known for his fiery polemics and public clashes with opponents, Stpiczyński plays a central role in shaping public opinion through his sharp writing. He advocates for radical social and economic reforms, pushing for increased state control while critiquing the conservative elite. His confrontational style and provocative ideas make him a feared yet influential voice in Polish political journalism.
+
+- @media_
+- @faction_attack
+- @root: Return to main
+
+@media_
+title: Media
+subtitle: Manage our party's newspapers and media.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; media_timer -= 6
+go-to: media
+
+@faction_attack
+title: Editorial Line
+subtitle: We can change the editorial line of our media to attack a particular faction.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+
+Which faction should we attack?
+
+- @attack_sanacja_left: Sanacja Left
+- @attack_repairers: Repairers
+- @attack_liberals: Liberals
+- @attack_colonels: Colonels
+- @attack_conservatives: Conservatives
+
+@attack_sanacja_left
+on-arrival: sanacja_left_dissent += 6; sanacja_left_strength -= 5
+
+Our media outlets publish editorials attacking Sanacja Left positions.
+
+@attack_repairers
+on-arrival: repairers_dissent += 6; repairers_strength -= 5
+
+Our media outlets publish editorials attacking Repairers positions.
+
+@attack_liberals
+on-arrival: liberals_dissent += 6; liberals_strength -= 5
+
+Our media outlets publish editorials attacking Liberal positions.
+
+@attack_colonels
+on-arrival: colonels_dissent += 6; colonels_strength -= 5
+
+Our media outlets attack Colonels policies.
+
+@attack_conservatives
+on-arrival: conservatives_dissent += 6; conservatives_strength -= 5
+
+Our media outlets attack Conservative ideas.
