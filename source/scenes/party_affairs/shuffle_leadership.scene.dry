@@ -257,14 +257,14 @@ Baade has been removed as an advisor.
 
 #The Repairers faction disapproves.
 
-@remove_radbruch
-title: Remove Radbruch
-view-if: radbruch_advisor = 1
-tags: remove_advisor
-on-arrival: radbruch_advisor = 0; n_advisors -= 1
+@remove_car
+title: Remove Car
+view-if: car_advisor = 1
+tags: car_advisor
+on-arrival: car_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Radbruch has been removed as an advisor. 
+Car has been removed as an advisor. 
 
 
 
@@ -378,6 +378,19 @@ on-arrival: slawek_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Walery Sławek is now an advisor.
+
+
+@add_car
+title: Stanisław Car
+subtitle: Stanisław Car is a renowned legal scholar.
+is-card: true
+card-image: img/portraits/CarStanislaw.jpg
+view-if: car_advisor = 0 and n_advisors < 3
+on-arrival: car_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: colonels_advisor
+
+Stanisław Car is now an advisor.
 
 @add_breitscheid
 title: Rudolf Breitscheid
@@ -621,17 +634,6 @@ tags: nonfactional_advisor
 
 Fritz Baade is now an advisor.
 
-@add_radbruch
-title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time BBWR justice minister.
-is-card: true
-card-image: img/portraits/RadbruchGustav.jpg
-view-if: radbruch_advisor = 0 and n_advisors < 3
-on-arrival: radbruch_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Gustav Radbruch is now an advisor.
 
 
 
