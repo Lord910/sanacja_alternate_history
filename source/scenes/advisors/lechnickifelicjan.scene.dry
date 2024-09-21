@@ -2,7 +2,7 @@ title: Felicjan Lechnicki
 is-pinned-card: true
 tags: advisor, repairers
 card-image: img/portraits/LechnickiFelicjan.jpg
-view-if: lechnickifelicjan_advisor = 1
+view-if: lechnicki_felicjan_advisor = 1
 new-page: true
 
 = Felicjan Lechnicki
