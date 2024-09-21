@@ -399,7 +399,7 @@ card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
 on-arrival: breitscheid_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: liberals_advisor
+tags: nationalists_advisor
 
 Rudolf Breitscheid is now an advisor.
 
