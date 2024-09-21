@@ -583,13 +583,13 @@ go-to: advisor_menu
 Zdzisław Lechnicki is now an advisor. His influence strengthens the Repairers’ push for constitutional reforms and economic interventionism.
 
 @add_felicjan_lechnicki
-title: Add Felicjan Lechnicki
+title: Felicjan Lechnicki
 subtitle: Felicjan Lechnicki is a landowner and political advocate focused on improving the welfare of rural communities and pushing for constitutional reforms.
 is-card: true
 card-image: img/portraits/LechnickiFelicjan.jpg
 tags: repairers_advisor
-view-if: felicjan_lechnicki_advisor = 0 and n_advisors < 3
-on-arrival: felicjan_lechnicki_advisor = 1; n_advisors += 1
+view-if: lechnicki_felicjan_advisor = 0 and n_advisors < 3
+on-arrival: lechnicki_felicjan_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Felicjan Lechnicki is now an advisor. His presence strengthens the Repairers faction and focuses efforts on rural reforms and constitutional changes.
