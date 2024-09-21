@@ -1,0 +1,44 @@
+title: Nationalists Split: The Creation of ONR
+new-page: true
+is-card: true
+card-image: img/portraits/ONRLeaders.jpg
+view-if: owp_banned > 0 and sanacja_nationalists == 0
+on-arrival: shuffle_leadership_timer = 0;
+tags: party_affairs
+max-visits: 1
+
+= Radical Nationalists Split: The Creation of ONR
+
+A new nationalist faction has emerged in the wake of deep disagreements within the *Stronnictwo Narodowe* (SN). The *Obóz Narodowo-Radykalny* (ONR) has been formed by a group of young, radical nationalists who believe the SN’s leadership has become too moderate. The ONR advocates for an extreme form of nationalism, including xenophobic, anti-Semitic views and a call for authoritarian governance.
+
+Their leadership is composed mostly of young, energetic figures who believe that aggressive action, both political and paramilitary, is necessary to "purify" the nation. Their rise presents us with a dilemma: should we attempt to engage with them, monitor their activities, or take immediate action to ban them before they grow too powerful?
+
+#- @shuffle_leadership: We should reconsider our leadership strategy in light of these developments.
+- @contact_onr: Try to make contact with the ONR.
+- @monitor_onr: Keep an eye on them, but do nothing for now.
+- @ban_onr: Ban the ONR outright.
+- @easy_discard
+
+@contact_onr
+on-arrival: sanacja_nationalists_strength += 5; colonels_strength -= 5; sanacja_nationalists = 1
+
+We choose to cautiously make contact with the leadership of the *Obóz Narodowo-Radykalny*. While their views are extreme, we may find common ground on certain nationalist policies that can help fragment the far-right and weaken our opponents. However, this risks further emboldening their radical elements.
+
+- @shuffle_leadership: This might be a good time to rethink our leadership.
+- @root: Continue...
+
+@monitor_onr
+on-arrival: liberals_dissent -= 5; repairers_dissent -= 5; sanacja_left_dissent -= 5; sanacja_nationalists = -1
+
+We decide to keep an eye on the *Obóz Narodowo-Radykalny*, monitoring their actions closely. For now, their influence is limited, but they could become a dangerous force if left unchecked. We will remain cautious and observe their next moves.
+
+- @shuffle_leadership: We should assess if leadership adjustments are needed based on how this evolves.
+- @root: Continue...
+
+@ban_onr
+on-arrival: liberals_dissent -= 5; repairers_dissent -= 5; sanacja_left_dissent -= 5; sanacja_nationalists = -1
+
+We choose to ban the *Obóz Narodowo-Radykalny* outright, refusing to tolerate their radical and dangerous ideas. This decision will send a clear signal that we will not allow such extremist movements to threaten national stability, but it may provoke backlash from nationalist elements.
+
+- @shuffle_leadership: Repression is rising; it's time to reconsider leadership decisions.
+- @root: Continue...

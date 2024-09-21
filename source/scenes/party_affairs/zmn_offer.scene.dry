@@ -1,0 +1,32 @@
+title: Nationalists Split: The Creation of ZMN
+new-page: true
+is-card: true
+card-image: img/portraits/ZMN.jpg
+view-if: owp_banned > 0 and sanacja_nationalists == 0
+on-arrival: shuffle_leadership_timer = 0;
+tags: party_affairs
+max-visits: 1
+
+= Nationalist Split: A New Opportunity
+
+The *Stronnictwo Narodowe* (SN) is in disarray following the internal struggles caused by the influx of former members from the banned *Obóz Wielkiej Polski* (OWP). In the midst of this, the **ZMN** (*Związek Młodych Narodowców*) (Union of Young Nationalists) — a new faction formed by young nationalists disillusioned with the SN’s direction — has approached us with an offer of support.
+
+While their ethnic nationalism is controversial, aligning with them might help us further fragment the far-right, creating divisions that could weaken their influence. On the other hand, rejecting their offer would signal our firm opposition to their radical ideas and ethnic nationalism.
+
+#- @shuffle_leadership: It's time to reconsider our leadership strategy in light of these developments.
+- @accept_offer: Accept their offer and use them to factionalize the far right.
+- @reject_offer: Reject their ethnic nationalism vision.
+- @easy_discard
+
+@accept_offer
+on-arrival: sanacja_nationalists_strength += 5; colonels_strength -= 5; sanacja_nationalists = 1
+
+We accept the *Związek Młodych Narodowców*'s offer, intending to use them as a tool to divide the far-right. While we don’t fully align with their views, their energy might help us exploit the ongoing fractures in the nationalist movement.
+
+- @shuffle_leadership: This is an opportunity to reevaluate our advisors...
+- @root: Continue...
+
+@reject_offer
+on-arrival: liberals_dissent -= 5; repairers_dissent -= 5; sanacja_left_dissent -= 5; sanacja_nationalists = -1
+
+We reject the offer from the *Związek Młodych Narodowców*, firmly distancing ourselves from their ethnic nationalism and everything it represents. This decision makes our position clear: we will not align with movements that promote such ideas.
