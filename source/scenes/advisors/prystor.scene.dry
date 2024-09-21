@@ -1,0 +1,43 @@
+title: Aleksander Prystor
+is-pinned-card: true
+tags: advisor, colonels
+card-image: img/portraits/PrystorAleksander.jpg
+view-if: prystor_advisor = 1
+new-page: true
+
+= Aleksander Prystor
+
+Aleksander Prystor is a close associate of Piłsudski, known for his skill in managing the inner workings of the government rather than for public leadership. He spends most of his time behind a desk, handling administrative duties and attending meetings with ministers and dignitaries.
+
+- @bureaucratic_reforms
+- @loyalist_network
+- @crisis_management
+- @root: Return to main
+
+@bureaucratic_reforms
+title: Bureaucratic Efficiency Reforms
+subtitle: Improve the efficiency of the administration by reforming key bureaucratic processes.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 6
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+
+Prystor’s experience in administration allows him to push for bureaucratic reforms aimed at streamlining decision-making and cutting down inefficiencies in the government. Though not glamorous, these reforms improve the overall effectiveness of the state apparatus.
+
+@loyalist_network
+title: Strengthen the Loyalist Network
+subtitle: Use personal contacts to build a network of loyal officials and allies within the government.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 6
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+
+
+Prystor quietly builds a network of trusted allies in key positions across the government. While this gives him more control over the administration, it also stirs resentment among other factions, particularly those outside the Colonels.
+
+@crisis_management
+title: Manage Political Scandals
+subtitle: Address internal scandals and prevent political fallout from reaching the higher ranks of government.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 6
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+
+Prystor’s cautious approach allows him to mitigate potential scandals within the government before they escalate. He uses backdoor negotiations and personal favors to ensure the loyalty of ministers and avoid public embarrassment, but this comes at the cost of political capital within the Colonels faction.

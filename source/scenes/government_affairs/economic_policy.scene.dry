@@ -113,13 +113,13 @@ Unfortunately, we do not have the budget to begin buying out industrial faciliti
 
 @nationalize_deficit_1
 title: Take a budget deficit to fund the nationalization program.
-choose-if: repairers_strength > colonels_strength + liberals_strength or woytinsky_advisor == 1
-subtitle: [? if woytinsky_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
-unavailable-subtitle: [? if repairers_strength <= colonels_strength + liberals_strength: The party does not yet support budget deficits for this purpose. ?] [? if not woytinsky_advisor : Perhaps bringing on an advisor might help make this action palatable? ?]
+choose-if: repairers_strength > colonels_strength + liberals_strength or prystor_advisor == 1
+subtitle: [? if prystor_advisor: Woytinsky can bring us around to supporting a budget deficit. ?]
+unavailable-subtitle: [? if repairers_strength <= colonels_strength + liberals_strength: The party does not yet support budget deficits for this purpose. ?] [? if not prystor_advisor : Perhaps bringing on an advisor might help make this action palatable? ?]
 on-arrival: nationalization_progress += 1; capital_strike_progress += 3; bezrobotni -= 3 if bezrobotni >= 6; bezrobotni -= 1.2 if works_councils >= 3; budget -= nationalize_budget; works_program += 1; robotnicy_bbwr += 8*(1-dissent); bezrobotni_bbwr += 5*(1-dissent); coalition_dissent += 2; pslp_relation -= 6; pschd_relation -= 4; klasa_srednia_bbwr -= 3; klasa_wyzsza_bbwr -= 3; economy_goal_completed += 1; inflation += 3
 achievement: wirtschaftspolitik
 
-[? if woytinsky_advisor: Most of the party, even on the left, are opposed to budget deficits for any purpose, with the exception of Wladimir Woytinsky. While he did not originally support the left's "transformational" plan, he has come around, and has persuaded the party and the Finance Ministry to support budget deficits in limited cases, for the purpose of exiting from the depression. ?]
+[? if prystor_advisor: Most of the party, even on the left, are opposed to budget deficits for any purpose, with the exception of Wladimir Woytinsky. While he did not originally support the left's "transformational" plan, he has come around, and has persuaded the party and the Finance Ministry to support budget deficits in limited cases, for the purpose of exiting from the depression. ?]
 
 [? if nationalization_progress == 1 : We have begun purchasing idling enterprises from the capitalists[? if works_councils >= 1: , and running them in coordination with empowered works councils ?]. By keeping production going, we can stave off the rising unemployment. ?]
 

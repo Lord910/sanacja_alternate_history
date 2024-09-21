@@ -521,7 +521,7 @@ Q.kpp_ultimatum_timer = 0;
 Q.moraczewski_advisor = 0; // Jedrzej Moraczewski
 Q.moraczewska_advisor = 0; // Zofia Moraczewska
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
+
 
 // Repairers advisors
 
@@ -539,7 +539,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Colonels advisors
 Q.slawek_advisor = 1; // Walery Sławek
-
+prystor_advisor = 0; // Aleksander Prystor
 
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacpschd_advisor = 0; // Marie Juchacz
