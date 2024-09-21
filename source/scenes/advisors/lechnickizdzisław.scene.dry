@@ -2,7 +2,7 @@ title: Zdzisław Lechnicki
 is-pinned-card: true
 tags: advisor, repairers
 card-image: img/portraits/LechnickiZdzisław.jpg
-view-if: zdzisław_lechnicki_advisor = 1
+view-if: lechnickizdzisław_advisor = 1
 new-page: true
 
 = Zdzisław Lechnicki
@@ -20,7 +20,7 @@ subtitle: Work with left and centrist factions to push for constitutional change
 choose-if: advisor_action_timer <= 0
 on-arrival: advisor_action_timer = 8
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
-#go-to: reform_plan.cooperation_built
+
 
 Zdzisław reaches out to key figures from the left and center to find common ground on constitutional reforms, focusing on building support for a stronger executive. This cooperation helps consolidate power but may trigger dissent from parliamentary factions.
 
@@ -30,7 +30,7 @@ subtitle: Push for state intervention in key sectors of the economy, including a
 choose-if: advisor_action_timer <= 0 and state_intervention_implemented == 0
 on-arrival: advisor_action_timer = 8
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
-#go-to: intervention_plan.state_intervention_implemented
+
 
 Zdzisław advocates for state control over critical sectors such as industry and agriculture to stabilize the economy. He supports policies such as government purchases of surplus goods, protective tariffs, and financial support for struggling sectors. These measures improve the economic situation for rural communities but may upset industrial leaders.
 
@@ -40,6 +40,6 @@ subtitle: Seek better relations with the left and centrist factions through nego
 choose-if: advisor_action_timer <= 0
 on-arrival: advisor_action_timer = 6
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
-#go-to: faction_relations_improved
+
 
 Zdzisław Lechnicki initiates diplomatic efforts with left and centrist factions, seeking to align on mutual interests such as constitutional reform and economic policies. This improves relations with these factions and strengthens the Repairers' position in parliament.

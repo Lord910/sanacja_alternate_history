@@ -442,10 +442,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
 view-if: reichswehr_minister_party != "BBWR"
-on-arrival: leverage -= 15; reichswehr_minister_party = "BBWR"; reichswehr_minister = "-"
+on-arrival: leverage -= 15; reichswehr_minister_party = "BBWR"; reichswehr_minister = "someone"
 go-to: ministries
 
-- of the BBWR has been appointed Reichswehr Minister.
+BBWR has been appointed Reichswehr Minister.
 
 
 

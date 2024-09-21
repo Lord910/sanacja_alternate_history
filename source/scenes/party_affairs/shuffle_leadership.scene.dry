@@ -90,9 +90,9 @@ Breitscheid has been removed as an advisor. The Liberal faction disapproves.
 
 @remove_felicjan_lechnicki
 title: Remove Felicjan Lechnicki
-view-if: felicjan_lechnicki_advisor = 1
+view-if: lechnickifelicjan_advisor = 1
 tags: remove_advisor
-on-arrival: felicjan_lechnicki_advisor = 0; repairers_dissent += 5; n_advisors -= 1
+on-arrival: lechnickifelicjan_advisor = 0; repairers_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Felicjan Lechnicki has been removed as an advisor. The Repairers faction disapproves.
@@ -580,8 +580,8 @@ subtitle: Zdzisław Lechnicki is a political strategist and advocate for strong 
 is-card: true
 card-image: img/portraits/LechnickiZdzisław.jpg
 tags: repairers_advisor
-view-if: zdzisław_lechnicki_advisor = 0 and n_advisors < 3
-on-arrival: zdzisław_lechnicki_advisor = 1; n_advisors += 1
+view-if: lechnickizdzisław_advisor = 0 and n_advisors < 3
+on-arrival: lechnickizdzisław_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Zdzisław Lechnicki is now an advisor. His influence strengthens the Repairers’ push for constitutional reforms and economic interventionism.
