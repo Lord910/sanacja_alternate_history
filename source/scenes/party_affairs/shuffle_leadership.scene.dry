@@ -576,8 +576,8 @@ subtitle: Zdzisław Lechnicki is a political strategist and advocate for strong 
 is-card: true
 card-image: img/portraits/LechnickiZdzisław.jpg
 tags: repairers_advisor
-view-if: lechnicki_zdzisław_advisor = 0 and n_advisors < 3
-on-arrival: lechnicki_zdzisław_advisor = 1; n_advisors += 1
+view-if: lechnicki_zdzislaw_advisor = 0 and n_advisors < 3
+on-arrival: lechnicki_zdzislaw_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Zdzisław Lechnicki is now an advisor. His influence strengthens the Repairers’ push for constitutional reforms and economic interventionism.

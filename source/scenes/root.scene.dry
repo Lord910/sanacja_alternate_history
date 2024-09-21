@@ -525,7 +525,7 @@ Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 
 // Repairers advisors
 Q.lechnicki_felicjan_advisor = 0; // Felicjan Lechnicki
-Q.lechnicki_zdzisław_advisor = 0; // Zdzisław Lechnicki
+Q.lechnicki_zdzislaw_advisor = 0; // Zdzisław Lechnicki
 
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
