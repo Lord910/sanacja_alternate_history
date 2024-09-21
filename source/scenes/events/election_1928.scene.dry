@@ -442,10 +442,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
 view-if: reichswehr_minister_party != "BBWR"
-on-arrival: leverage -= 15; reichswehr_minister_party = "BBWR"; reichswehr_minister = "Leber"
+on-arrival: leverage -= 15; reichswehr_minister_party = "BBWR"; reichswehr_minister = "-"
 go-to: ministries
 
-Julius Leber of the BBWR has been appointed Reichswehr Minister.
+- of the BBWR has been appointed Reichswehr Minister.
 
 
 

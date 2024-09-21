@@ -1,0 +1,45 @@
+title: Zdzisław Lechnicki
+is-pinned-card: true
+tags: advisor, repairers
+card-image: img/portraits/LechnickiZdzisław.jpg
+view-if: zdzisław_lechnicki_advisor = 1
+new-page: true
+
+= Zdzisław Lechnicki
+
+Zdzisław Lechnicki is a key political ideologue in the Repairers faction. He actively seeks cooperation with the left and center to reform the constitution and strengthen the executive. He is also an advocate for economic interventionism, believing that the state must actively manage key sectors to protect the nation’s economy.
+
+- @constitutional_cooperation
+- @economic_interventionism
+- @improve_faction_relations
+- @root: Return to main
+
+@constitutional_cooperation
+title: Build Cooperation for Constitutional Reforms
+subtitle: Work with left and centrist factions to push for constitutional changes that strengthen the executive.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 8
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+#go-to: reform_plan.cooperation_built
+
+Zdzisław reaches out to key figures from the left and center to find common ground on constitutional reforms, focusing on building support for a stronger executive. This cooperation helps consolidate power but may trigger dissent from parliamentary factions.
+
+@economic_interventionism
+title: Advocate for State Economic Intervention
+subtitle: Push for state intervention in key sectors of the economy, including agriculture and industry.
+choose-if: advisor_action_timer <= 0 and state_intervention_implemented == 0
+on-arrival: advisor_action_timer = 8
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+#go-to: intervention_plan.state_intervention_implemented
+
+Zdzisław advocates for state control over critical sectors such as industry and agriculture to stabilize the economy. He supports policies such as government purchases of surplus goods, protective tariffs, and financial support for struggling sectors. These measures improve the economic situation for rural communities but may upset industrial leaders.
+
+@improve_faction_relations
+title: Improve Relations with Left and Centrist Factions
+subtitle: Seek better relations with the left and centrist factions through negotiation and policy alignment.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 6
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+#go-to: faction_relations_improved
+
+Zdzisław Lechnicki initiates diplomatic efforts with left and centrist factions, seeking to align on mutual interests such as constitutional reform and economic policies. This improves relations with these factions and strengthens the Repairers' position in parliament.

@@ -1,0 +1,45 @@
+title: Felicjan Lechnicki
+is-pinned-card: true
+tags: advisor, repairers
+card-image: img/portraits/LechnickiFelicjan.jpg
+view-if: felicjan_lechnicki_advisor = 1
+new-page: true
+
+= Felicjan Lechnicki
+
+Felicjan Lechnicki is a staunch advocate of strengthening the government and improving the economic position of rural Poland. He focuses on constitutional reforms that centralize executive power, enhance economic opportunities for workers and farmers, and unite the rural movement to increase its political influence.
+
+- @constitutional_reforms
+- @economic_improvements
+- @unite_rural_movement
+- @root: Return to main
+
+@constitutional_reforms
+title: Constitutional Reforms for a Strong Executive
+subtitle: Push for reforms that strengthen the executive branch and establish a stable, democratic government.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 8
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+#go-to: reform_plan.executive_reforms_implemented
+
+Felicjan Lechnicki advocates for constitutional reforms to centralize power in the executive branch, ensuring a stable, strong, and democratic government. These changes secure the government’s long-term ability to implement effective policies but could face opposition from parliamentary supporters.
+
+@economic_improvements
+title: Economic Improvements for Workers and Farmers
+subtitle: Improve the economic conditions of agriculture, industry, and trade while protecting social and economic gains.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 8
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+#go-to: reform_plan.economic_reforms_implemented
+
+Lechnicki supports policies that improve the economic situation for farmers, workers, and small businesses. These reforms aim to maintain social and economic achievements while balancing the interests of both agriculture and industry.
+
+@unite_rural_movement
+title: Unify the Rural Movement
+subtitle: Bring together the rural political movements to strengthen their influence in the government.
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 6
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before the next action. ?]
+#go-to: unity_plan.rural_unity_achieved
+
+Felicjan seeks to unite rural political factions to ensure their agenda is aligned with national interests. By creating a unified front, the rural movement can increase its influence in shaping government policies, though this may lead to friction with urban political interests.
