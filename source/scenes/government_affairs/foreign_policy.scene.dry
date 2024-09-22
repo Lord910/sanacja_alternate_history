@@ -3,8 +3,8 @@ new-page: true
 is-card: true
 tags: govt_affairs
 on-arrival: month_actions += 1; foreign_policy_timer += 8
-view-if: bbwr_in_government = 1 and foreign_minister_party = "BBWR" and  foreign_policy_timer <= 0
-card-image: img/portraits/BreitscheidRudolf.jpg
+view-if: bbwr_in_government = 1 and foreign_minister_party = "BBWR" and foreign_policy_timer <= 0
+card-image: img/portraits/ForeignPolicyPoland.jpg
 go-to: fp_menu
 
 = Foreign Policy
@@ -13,173 +13,66 @@ What should our foreign policy priority be?
 
 @fp_menu
 
-- @improve_west
-- @improve_east
-- @improve_soviet
+- @improve_relations_germany
+- @improve_relations_soviet
+- @improve_relations_france_uk
+- @improve_relations_czechoslovakia
+- @improve_relations_lithuania
+- @non_aggression_pact_germany
+- @non_aggression_pact_ussr
 - @customs_union
-- @negotiate
-- @reduce_reparations
-- @expose
-- @european_union
-- @european_union_2
-- @concordat_negotiate
-- @concordat
-- @root: Do not enact any policies for now.
-- @easy_discard
+- @diplomatic_focus
+- @do_nothing
 
-@improve_west
-title: Improve our relations with the Western Allies.
-on-arrival: west_relation += 2; reparations_negotiation += 1
+@improve_relations_germany
+title: Improve relations with Germany.
+on-arrival: germany_relation += 3
 
-The key to peace in Europe is a rapproachment between France and Germany. We are taking steps towards that rapproachment. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
+Although relations with Germany remain difficult due to territorial disputes and historical enmities, pursuing diplomatic overtures could stabilize the western frontier. Poland must carefully navigate between seeking security and avoiding dependence on Germany.
 
-@improve_east
-title: Improve our relations with our eastern neighbors.
-on-arrival: east_relation += 2;
+@improve_relations_soviet
+title: Improve relations with Soviet Russia.
+on-arrival: soviet_relation += 3
 
-We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
+Soviet Russia remains a constant threat to our eastern borders. However, engaging in cautious diplomacy could prevent further conflicts and help secure our eastern front, while buying time to strengthen our military.
 
-@improve_soviet
-title: Improve our relations with the Soviet Union.
-subtitle: We could also broach the question of the KPP...
+@improve_relations_france_uk
+title: Improve relations with France and the United Kingdom.
+on-arrival: france_relation += 2; uk_relation += 2
 
-The Soviet Union also suffered from the international order created by the Treaty of Versailles; they have been participating in our secret rearmament program. The Treaty of Rapallo in 1922 affirmed our friendly relations.
+Our alliances with France and the United Kingdom are critical to safeguarding Poland’s independence. Strengthening these relationships is essential for ensuring support against both German and Soviet threats, while securing Poland’s position in Europe.
 
-The Soviets are asking for economic and developmental assistance. They are still a poor country on the whole, and are desperately trying to catch up to the western powers. There is a chance that our anti-communist coalition partners would be upset, but we could assuage them by asking the Soviets for secret assistance in training and equiping the Reichswehr.
+@improve_relations_czechoslovakia
+title: Improve relations with Czechoslovakia.
+on-arrival: czechoslovakia_relation += 2
 
-- @soviet_economic_aid_yes_mil: Provide aid, in exchange for Reichswehr assistance.
-- @soviet_economic_aid_yes: Provide aid, in exchange for only good relations.
-- @soviet_economic_aid_no: Don't provide aid.
+Despite ongoing tensions over territorial disputes, improving relations with Czechoslovakia is essential for regional security. Cooperation with our southern neighbor could help balance the pressures from Germany and Soviet Russia.
 
-@soviet_economic_aid_yes_mil
-choose-if: budget >= 1
-subtitle: -1 budget
-on-arrival: budget -= 1; soviet_relation += 1; reichswehr_strength += 20; reichswehr_loyalty += 0.05; foreign_goal_completed += 1
+@improve_relations_lithuania
+title: Improve relations with Lithuania.
+on-arrival: lithuania_relation += 2
 
-The Soviets are pleased that we have sent them aid, and have agreed to help train our military. The Reichswehr appreciates our support.
+The dispute over Vilnius has strained relations with Lithuania. However, seeking rapprochement could stabilize our northern border and pave the way for greater regional cooperation.
 
-@soviet_economic_aid_yes
-choose-if: budget >= 1
-subtitle: -1 budget
-on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_goal_completed += 1
+@non_aggression_pact_germany
+title: Pursue Non-Aggression Pact with Germany
+unavailable-subtitle: [? if germany_relation < 5 : Our relations with Germany are not good enough. ?]
+view-if: non_aggression_pact_germany_signed = 0
+choose-if: germany_relation >= 5
+on-arrival: germany_relation += 2; non_aggression_pact_germany_signed += 1; soviet_relation -= 2; france_relation -= 2; uk_relation -=2
+Negotiating a non-aggression pact with Germany could provide Poland with security along the western border. By neutralizing the immediate threat from Germany, Poland can focus on internal development and eastern challenges. However, this agreement must be carefully balanced, as Germany’s long-term ambitions remain unclear, and Poland must not appear too reliant on Berlin.
 
-The Soviets are pleased that we have sent them aid, and have not asked for anything specific in exchange. Our coalition partners are less pleased.
+@non_aggression_pact_ussr
+title: Pursue Non-Aggression Pact with USSR
+unavailable-subtitle: [? if soviet_relation < 5 : Our relations with USSR are not good enough. ?]
+view-if: non_aggression_pact_ussr_signed = 0
+choose-if: soviet_relation >= 5
+on-arrival: soviet_relation += 2; non_aggression_pact_ussr_signed += 1; germany_relation -= 2; france_relation -= 2; uk_relation -=2
 
-- @kpp: Ask if Moscow could help repair our relations with the KPP.
-- @root: Do not mention the KPP.
+Securing a non-aggression pact with Soviet Russia would help stabilize Poland’s vulnerable eastern frontier. Such an agreement could reduce the immediate risk of Soviet expansionism and buy time for Poland to strengthen its defenses. Nonetheless, the volatile nature of Soviet politics means this pact must be treated with caution, as Moscow’s long-term intentions toward Poland remain suspect.
 
-@soviet_economic_aid_no
+@do_nothing
+title: Maintain the status quo and avoid foreign entanglements.
+on-arrival: foreign_policy_timer += 8
 
-The Soviets are slightly upset, but they seemed to expect this answer.
-
-
-@kpp
-on-arrival: kpp_relation += 8*(1-dissent); pps_bbwr_coalition += 1 if kpp_foreign_seen == 0; kpp_foreign_seen = 1
-
-We also mention the KPP in our conversations with the Soviet ambassador. They claim that the KPP is entirely independent of the Soviet government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the KPP.
-
-
-@customs_union
-title: Form a customs union with Austria?
-subtitle: This will likely incur the wrath of France.
-unavailable-subtitle: This is superseded by the European Union.
-choose-if: eu = 0
-view-if: black_thursday_seen = 1 and customs_union = 0
-
-The right has long desired closer ties with Austria, with the eventual goal of the merger of the two German-speaking countries. A customs union with Austria is the first step towards this goal. Additionally, many believe that a union with Austria would improve our current economic circumstances.
-
-However, the Allies, especially France, are likely to object. This agreement would break the terms of the Versailles Treaty, and could lead to economic sanctions, further hurting our economy.
-
-- @customs_union_2: Yes, do it!
-- @fp_menu: No, we should do something else.
-
-@customs_union_2
-on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2; pschd_relation += 6; pslp_relation += 6; coalition_dissent -= 1; political_crisis_level -= 1
-max-visits: 1
-
-We have formed a customs union with Austria! The right-wing parties are praising us for this unexpected turn of events.
-
-Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
-
-
-@negotiate
-title: Negotiate regarding our remaining obligations from the Treaty of Versailles.
-subtitle: [? if young_plan_seen == 1 : After passing the Young Plan, France has committed to withdrawing from the Rhineland. Now, we must see if they can reduce our reparations further, given the economic depression. ?]
-view-if: reparations > -2 and reparations_negotiation < 3
-on-arrival: west_relation += 1; reparations_negotiation += 1; reparations_negotiation += 1 if pacifism >= 3; reparations_negotiations += 1 if nationalism <= 50; reparations_negotiation += 1 if west_relation >= 3
-
-Negotiations procede smoothly for the most part. The Western powers are convinced of Germany's sincerity and goodwill. [? if nationalism <= 50 or pacifism >= 3 : They are pleased to see that we are renouncing militarism. ?]
-
-
-@reduce_reparations
-title: The Western Allies are finally willing to pause our reparations payments!
-subtitle: Our negotiations have been successful.
-view-if: reparations_negotiation >= 3 and black_thursday_seen == 1 and reparations > -2
-on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; coalition_dissent -= 1; robotnicy_bbwr += 8*(1-dissent); klasa_wyzsza_bbwr += 5*(1-dissent); klasa_srednia_bbwr += 5*(1-dissent); chlopi_bbwr += 5*(1-dissent); political_crisis_level -= 2 if political_crisis_level > 2
-max-visits: 1
-
-Finally, given both the economic circumstances and our continued negotiations, the Western Allies are willing to pause our reparations payments! Much of the credit must go to American president Hoover, who has been friendlier towards us than the Europeans.
-
-This has reduced tensions within our government, and our party has gotten credit for the achievement.
-
-@expose
-title: Expose the secret rearmament plans of the previous foreign ministry!
-view-if: rearmament_exposed == 0
-on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coalition_dissent += 1; rearmament_exposed += 1; reparations_negotiation += 3; political_crisis_level += 2
-
-The previous foreign ministry, despite its benevolent and peaceful face, was secretly helping the Reichswehr to build up its forces, in contravention of the Treaty of Versailles.
-
-The Allies are grateful of our exposure and repudiation of militarism. Our partners in the coalition are less supportive.
-
-
-@economic_conference
-title: Organize an international economic conference to deal with the Depression.
-unavailable-subtitle: [? if west_relation < 4 : Our relations with the West are not good enough. ?]
-view-if: black_friday_seen == 1 and crisis_urgency >= 1 and reparations <= -2
-choose-if: west_relation >= 4
-on-arrival: economic_conference = 1; west_relation += 1; east_relation += 1
-max-visits: 1
-
-
-@concordat_negotiate
-title: Negotiate a Concordat between the Germany and the Vatican.
-view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
-on-arrival: reichskonkordat_progress += 2; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; pschd_relation += 3
-
-The Roman Catholic Church is interested in furthering relations with the German Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The Center Party is especially interested in making this agreement.
-
-[? if family_law : Our liberalized divorce policies make it difficult to build relations with the Vatican. ?] [? if abortion : Our legalization of abortion make it difficult to connect with the Church. ?]
-
-@concordat
-title: We can sign a Concordat with the Vatican!
-view-if: reichskonkordat_progress >= 4
-on-arrival: reichskonkordat = 1; pschd_relation += 15; mniejszosci_bbwr += 8; mniejszosci_pschd += 5 if in_democratic_left_coalition or in_centre_left_coalition or in_popular_front;
-achievement: reichskonkordat
-
-We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Mniejszosci, and the right of the church to appoint their own clergy. Mniejszosci in Germany are pleased, as are their representatives in the Center Party.
-
-
-
-@european_union
-title: Take steps to form a "European Union".
-subtitle: Is a "United States of Europe" possible?
-unavailable-subtitle: [? if west_relation < 5 : Our relations with the West are not good enough. ?] [? if east_relation < 4 : Our relations with the East are not good enough. ?]
-view-if: reparations <= -2 and eu_progress < 2
-choose-if: west_relation >= 5 and east_relation >= 4
-on-arrival: eu_progress += 1; west_relation += 1
-
-Forming a "United States of Europe" has long been part of the Social Democratic foreign program. Finally, we are taking steps towards it. Given our positive relations with the other countries of Europe, we can begin to hold multilateral negotiations for more European federalism. It will take time to hammer out the exact shape of this future "European Union", however.
-
-
-@european_union_2
-title: We can sign a treaty to form a European Union!
-view-if: west_relation >= 5 and east_relation >= 4 and eu_progress >= 2
-on-arrival: eu = 1; bezrobotni -= 2 if bezrobotni >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; robotnicy_bbwr += 5*(1-dissent); klasa_srednia_bbwr += 5*(1-dissent); klasa_wyzsza_bbwr += 5*(1-dissent); chlopi_bbwr += 4*(1-dissent); mniejszosci_bbwr += 4*(1-dissent); bezrobotni_bbwr += 4*(1-dissent); pro_republic += 5; nationalism -= 5; budget += 1
-max-visits: 1
-achievement: eu
-
-Along with France, Great Britain, and many other states of Western and Eastern Europe, we have signed a treaty to form a European Union! It is hoped that Europe has learned the lessons of the Great War; never again will there be another war that tears the continent apart.
-
-A major component of the union is the free movement of people and goods across the countries of Europe, as well as the stabilization of currency exchange rates. This provides new markets for German products and new sources of investment.
-
-Fascist Italy remains a problem, and the Soviet Union also lies outside the system. But for now, there is new hope for peace and prosperity throughout the continent.
+Given the current international situation, it may be wise to avoid foreign policy actions and maintain the status quo. This will help Poland focus on internal issues without escalating foreign tensions.

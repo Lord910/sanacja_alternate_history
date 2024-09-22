@@ -23,7 +23,7 @@ However, the Allies, especially France, are likely to object. This agreement wou
 - @end_toleration: Attempt to stop this arrangement!
 
 @let_it_happen
-on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
+on-arrival: banking_crisis_timer = 2; customs_union = 1; germany_relation -= 2; soviet_relation -= 2
 
 The customs union has been formed. Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
 
@@ -47,6 +47,6 @@ With the support of the KPP and PSL-W/DStP, we have successfully stopped the for
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @end_toleration_fail
-on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
+on-arrival: banking_crisis_timer = 2; customs_union = 1; germany_relation -= 2; soviet_relation -= 2
 
 Unfortunately, the far-right parties united with the government to outvote us. The customs union will be formed.
