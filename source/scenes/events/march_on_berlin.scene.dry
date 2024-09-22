@@ -1,6 +1,6 @@
 title: March on Berlin
 subtitle: Right-wing militants are taking action...
-view-if: (bbwr_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and owp_normalized + sn_normalized >= 0.5)
+view-if: (bbwr_in_government = 1 and political_crisis_level >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and owp_normalized + sn_normalized >= 0.5)
 new-page: true
 max-visits: 1
 on-arrival: march_on_berlin_seen = 1; sa_strength += 80; sh_strength += 80
@@ -65,7 +65,7 @@ The Reichsbanner number at [+ lm_strength +] thousand; many are in Berlin to cou
 
 
 @fight_2_win
-on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; robotnicy_owp -= 12*(1-dissent); bezrobotni_owp -= 10*(1-dissent); klasa_srednia_owp -= 6*(1-dissent); robotnicy_bbwr += 8*(1-dissent); bezrobotni_bbwr += 6*(1-dissent); pro_republic += 15
+on-arrival: political_crisis_level = 0; sa_strength *= 0.6; sh_strength *= 0.6; robotnicy_owp -= 12*(1-dissent); bezrobotni_owp -= 10*(1-dissent); klasa_srednia_owp -= 6*(1-dissent); robotnicy_bbwr += 8*(1-dissent); bezrobotni_bbwr += 6*(1-dissent); pro_republic += 15
 achievement: drei_pfeile
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.

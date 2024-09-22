@@ -9,89 +9,92 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The BBWR cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the BBWR, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The BBWR cannot govern by itself yet. Since we do not have an electoral majority, we need the support of other political factions. Recently, our governments have sought cooperation with a range of parties. Now, we can take steps to improve relations with key groups to strengthen our position in the Republic.
 
-- @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
-- @center: Strengthen our bonds with the Catholic Center Party.
-- @kpp: Work towards repairing relationships with the Communist Party.
+- @socialists: Strengthen ties with the Polish Socialist Party (PPS).
+- @agrarian_left: Build connections with the agrarian left, including Stronnictwo Chłopskie (SCh) and PSL-Wyzwolenie.
+- @national_minorities: Reach out to national minorities, including Germans, Ukrainians, Belarusians, and Jews.
+- @national_workers: Improve our relations with the National Workers' Party (NPR).
+- @christian_democrats: Deepen ties with the Christian Democrats (PSCHD).
+- @agrarian_right: Strengthen connections with PSL-Piast, representing the agrarian right.
+- @national_democracy: Establish common ground with National Democracy (ZLN/SN).
 - @bbwr_alone: The BBWR can stand alone for now.
 - @easy_discard
 
-
-@kpp
+@socialists
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpp_inter_party_seen += 1
-go-to: kpp_blutmai if blutmai = 1; kpp_1 if blutmai = 0 and kpp_coalition_success = 0; kpp_2 if kpp_coalition_success = 1
+on-arrival: resources -= 1; pps_relation += 5*(1 - dissent)
+go-to: pps_daszynski if daszynski_dead = 0; pps_loss if daszynski_dead = 1 and year <= 1936; pps_moribund if year > 1936
 
-@kpp_1
-on-arrival: kpp_relation += 6*(1 - dissent); pps_bbwr_coalition += 1 if kpp_inter_party_seen <= 1; colonels_dissent += 2; pschd_relation -= 2; pslp_relation -= 3
+The PPS has been one of our key allies in advocating for social justice and workers' rights. Their influence among the working class makes them a crucial partner.
 
-The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
+@pps_daszynski
+on-arrival: pps_relation += 8*(1 - dissent)
 
-@kpp_2
-on-arrival: kpp_relation += 8*(1 - dissent); pps_bbwr_coalition += 1 if kpp_inter_party_seen <= 1; colonels_dissent += 2; pschd_relation -= 3; pslp_relation -= 3
+Ignacy Daszyński, the leader of the PPS, has been a strong advocate for progressive policies. Building strong ties with the PPS could help us maintain support from the working class.
 
-After the success of the coalition government with the KPP, they are much more amenable to us.
+@pps_loss
+on-arrival: pps_relation += 5*(1 - dissent)
 
-@kpp_blutmai
-on-arrival: kpp_relation += 3*(1 - dissent)
+With Daszyński’s death, the PPS has lost direction. While their influence has waned, maintaining some ties could still prove useful.
 
-After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
+@pps_moribund
+on-arrival: pps_relation += 5*(1 - dissent)
 
-@center
+Without strong leadership, the PPS is declining in influence. Nevertheless, their connection to the working class may still offer opportunities for cooperation.
+
+@agrarian_left
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; pschd_relation += 2 if pschd_party_leader == "Joos"
-go-to: center_op if pschd_in_government = 1 and bbwr_in_government = 0 and chancellor != "Brüning"; center_coalition if bbwr_in_government = 1 and pschd_in_government = 1; center_bruning if chancellor = "Brüning"
+on-arrival: resources -= 1; pslw_relation += 5*(1 - dissent); sch_relation += 5*(1 - dissent)
 
-@center_op
-on-arrival: pschd_relation += 5*(1 - dissent)
+The agrarian left, represented by PSL-Wyzwolenie and Stronnictwo Chłopskie, has significant influence among the peasantry. Strengthening our relations with these groups could improve our standing in rural areas.
 
-We are currently in opposition to the Center-led government, but that does not preclude the general building of feelings of good will.
-
-@center_coalition
-on-arrival: pschd_relation += 8*(1 - dissent)
-
-We are currently coalition partners with them, so improving relations comes naturally.
-
-@center_bruning
-on-arrival: pschd_relation += 5*(1 - dissent)
-
-The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
-
-@liberals
+@national_minorities
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; pslw_relation += 5*(1 - dissent)
-go-to: pslp_stresemann if stresemann_dead = 0; pslp_loss if stresemann_dead = 1 and year <= 1930; pslp_moribound if year > 1930
+on-arrival: resources -= 1; other_relation += 5*(1 - dissent)
 
-The PSL-W has been one of our closest allies through the course of the Republic.
+Improving our relationships with national minorities, including Germans, Ukrainians, Belarusians, and Jews, could broaden our support base and ensure stability in minority regions.
 
-@pslp_stresemann
-on-arrival: pslp_relation += 8*(1 - dissent)
+@national_workers
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; npr_relation += 5*(1 - dissent)
 
-Gustav Stresemann, the leader of the PSL-P is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
+The National Workers' Party (NPR) represents a significant portion of the working class with a nationalist bent. Improving ties with NPR could help us win over nationalistic workers.
 
-@pslp_loss
-on-arrival: pslp_relation += 5*(1 - dissent)
+@christian_democrats
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; pschd_relation += 5*(1 - dissent)
 
-With the death of Gustav Stresemann, the PSL-P is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
+The Christian Democrats (PSCHD) play a vital role in representing conservative Catholics. Strengthening relations with PSCHD can help us gain support among religious voters.
 
-However, given the influence of the PSL-P among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+@agrarian_right
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; pslp_relation += 5*(1 - dissent)
 
-@pslp_moribound
-on-arrival: pslp_relation += 5*(1 - dissent)
+The agrarian right, represented by PSL-Piast, has considerable influence among landowners and rural elites. Closer ties with PSL-P could help us consolidate rural support.
 
-The liberal parties (both the PSL-W and PSL-P) are electorally moribund, so perhaps our efforts are best spent elsewhere.
+@national_democracy
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; sn_relation += 5*(1 - dissent)
 
-However, given the influence of the PSL-P among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+National Democracy ([+ sn_party_name +]) represents the nationalist right, and establishing ties with them could help us secure the nationalist vote and strengthen our position against the left.
 
 @bbwr_alone
 
-Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
+The BBWR can stand alone for now, focusing on strengthening its own base without forming new alliances.
 
 - @return: Continue...

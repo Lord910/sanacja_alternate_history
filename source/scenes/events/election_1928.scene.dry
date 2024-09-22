@@ -26,7 +26,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; pslp_relation -= 8; pschd_relation -= 8; pslw_relation -= 10; kpp_relation -= 8; coup_progress += 2; robotnicy_bbwr -= 4; klasa_srednia_bbwr -= 5; klasa_wyzsza_bbwr -= 5; chlopi_bbwr -= 5; mniejszosci_bbwr -= 5; bezrobotni_bbwr -= 5; coup_progress += 2 if owp_normalized >= 0.3; coup_progress += 2 if owp_normalized + sn_normalized >= 0.5
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; pslp_relation -= 8; pschd_relation -= 8; pslw_relation -= 10; kpp_relation -= 8; political_crisis_level += 2; robotnicy_bbwr -= 4; klasa_srednia_bbwr -= 5; klasa_wyzsza_bbwr -= 5; chlopi_bbwr -= 5; mniejszosci_bbwr -= 5; bezrobotni_bbwr -= 5; political_crisis_level += 2 if owp_normalized >= 0.3; political_crisis_level += 2 if owp_normalized + sn_normalized >= 0.5
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -147,7 +147,7 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and owp_r >= 15)
+on-departure: centrolew_urgency = 1 if (centrolew_urgency == 0 and owp_r >= 15)
 on-display: {!
 data = [
     {
@@ -284,7 +284,7 @@ Far Right Coalition ([+ sn_party_name +] + OWP): [+ far_right_coalition +]%
 
 # Popular Front (KPP + PPS): [+ popular_front_coalition +]%
 
-[? if nazi_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if centrolew_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
 [? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPP, [+ sn_party_name +], and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
@@ -412,7 +412,7 @@ Stanisław Car of the BBWR has been appointed Justice Minister.
 
 @foreign
 title: Foreign Ministry
-subtitle: This is usually the domain of Gustav Stresemann of the PSL-P.
+subtitle: The Foreign Ministry controls our foreign relations.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -496,7 +496,7 @@ go-to: ministries
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "BBWR"
-on-arrival: foreign_minister_party = "PSL-P"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "PSCHD" if in_democratic_left_coalition or in_popular_front;
+on-arrival: foreign_minister_party = "PSL-P"; foreign_minister = "zmienic"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "PSCHD" if in_democratic_left_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 

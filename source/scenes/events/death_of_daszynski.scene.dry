@@ -1,0 +1,8 @@
+title: The Death of Ignacy Daszyński
+view-if: year = 1936 and month >= 10
+frequency: 1000
+max-visits: 1
+tags: event
+on-arrival: daszynski_dead = 1; pps_relation -= 15
+
+Ignacy Daszyński, one of the most influential leaders of the PPS and a founding figure of Polish socialism, has passed away. As a pivotal voice in the fight for workers' rights and social justice, his leadership shaped the direction of the PPS for decades. With his death, the party loses a central figure of unity and inspiration, leaving the socialist movement asignificantly weakened in their struggle against the Sanation regime.

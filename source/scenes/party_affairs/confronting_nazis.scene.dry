@@ -1,7 +1,7 @@
 title: Confronting the Nazis
 new-page: true
 is-card: true
-view-if: (owp_r >= 10 and nazi_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
+view-if: (owp_r >= 10 and centrolew_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
 on-arrival: confronting_nazis_seen += 1; confronting_nazis_timer = 5; month_actions += 1
 card-image: img/iron_front.png
 tags: party_affairs; antifascism
@@ -19,7 +19,7 @@ Many in our party are calling for urgent action. The "conservatives" faction, le
 
 
 @not_a_big_deal
-on-arrival: nazi_urgency -= 1; repairers_dissent += 5; conservatives_dissent += 15
+on-arrival: centrolew_urgency -= 1; repairers_dissent += 5; conservatives_dissent += 15
 view-if: lechnicki_zdzislaw_advisor = 0 and lechnicki_felicjan_advisor = 0 and schumacher_advisor = 0
 
 The Nazis are just another far-right movement that will die of its own contradictions sooner or later; we do not need to build a specific policy to combat them.
@@ -30,16 +30,16 @@ view-if: economic_plan == 0 and black_thursday_seen == 1
 go-to: crisis_program
 
 @major_crisis
-view-if: nazi_urgency < 5
-on-arrival: nazi_urgency += 1; conservatives_dissent -= 5; conservatives_strength += 5
+view-if: centrolew_urgency < 5
+on-arrival: centrolew_urgency += 1; conservatives_dissent -= 5; conservatives_strength += 5
 
 The Nazis are one of the foremost threats to the German republic. However, we are still formulating a strategy to confront them, and still trying to build up consensus within our party for action. Check back on this later.
 
 @iron_front
 title: Form the Iron Front!
 subtitle: The Iron Front consists of the BBWR, the trade unions, and the Reichsbanner.
-view-if: nazi_urgency >= 3 and iron_front_formed == 0
-on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; robotnicy_bbwr += 5*(1-dissent); pro_republic += 5*(1-dissent); repairers_dissent -= 8; conservatives_dissent -= 10; conservatives_strength += 5
+view-if: centrolew_urgency >= 3 and iron_front_formed == 0
+on-arrival: iron_front_formed = 1; radicalization += 1; centrolew_urgency += 1; robotnicy_bbwr += 5*(1-dissent); pro_republic += 5*(1-dissent); repairers_dissent -= 8; conservatives_dissent -= 10; conservatives_strength += 5
 achievement: eiserne_front
 
 The Nazi threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the BBWR, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.

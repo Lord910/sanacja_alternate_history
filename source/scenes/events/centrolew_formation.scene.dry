@@ -1,0 +1,20 @@
+title: The Formation of Centrolew
+subtitle: The opposition forces unite against the Sanation government.
+new-page: true
+on-arrival: centrolew_seen = 1; robotnicy_bbwr -= 5; bezrobotni_bbwr -= 5; chlopi_bbwr -= 5; centrolew_urgency += 1
+tags: event
+view-if: (year = 1929 and month >= 5 and ruling_party = "BBWR") and (political_crisis_level >= 6) and (pps_relation < 5 and pslw_relation < 5 and sch_relation < 5 and pslp_relation < 5 and pschd_relation < 5)
+max-visits: 1
+
+= The Formation of Centrolew
+
+Security reports that opposition parties, including PPS, PSL, and Christian Democrats, have united under the banner of Centrolew with the goal of restoring parliamentary democracy, reversing authoritarian policies, defending civil liberties, pushing for economic reforms, and organizing mass demonstrations to undermine government authority and secure electoral victory.
+
+- @strategy: We must develop a coherent strategy to maintain control.
+
+@strategy
+view-if: centrolew_urgency < 3
+on-arrival: centrolew_urgency += 1
+
+The opposition is gaining strength, and we do not yet have a coherent strategy to counter their alliance. We must act quickly to protect our government and policies.
+

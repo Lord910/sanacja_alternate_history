@@ -75,8 +75,8 @@ Q.reform_support = Q.bbwr_normalized + Q.pslw_normalized;
 if (Q.pschd_relation >= 30) {
     Q.reform_support += Q.pschd_normalized;
 }
-if (!Q.stresemann_dead) {
-    Q.reform_support += Q.pslp_normalized;
+if (!Q.daszynski_dead) {
+    Q.reform_support += Q.pps_normalized;
 }
 !}
 

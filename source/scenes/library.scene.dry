@@ -460,8 +460,8 @@ data = [
     },
     {
         "id": "sn",
-        "legend": "[+ sn_party_name +]",
-        "name": "[+ sn_party_name +]",
+        "legend": "sn_party_name",
+        "name": "sn_party_name",
         "seats": Math.round(Q.sn_r*5),
     },
     {

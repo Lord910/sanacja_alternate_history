@@ -1,8 +1,0 @@
-title: The Death of Gustav Stresemann
-view-if: year = 1929 and month >= 9
-frequency: 1000
-max-visits: 1
-tags: event
-on-arrival: stresemann_dead = 1; pslp_relation -= 5
-
-Gustav Stresemann, leader of the PSL-P, has died. He was the primary force driving the party to support democracy; without him, the democratic forces in the Republic will be so much weaker.
