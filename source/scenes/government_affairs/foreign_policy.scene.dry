@@ -4,7 +4,7 @@ is-card: true
 tags: govt_affairs
 on-arrival: month_actions += 1; foreign_policy_timer += 8
 view-if: bbwr_in_government = 1 and foreign_minister_party = "BBWR" and foreign_policy_timer <= 0
-card-image: img/portraits/ForeignPolicyPoland.jpg
+card-image: img/ForeignPolicyPoland.jpg
 go-to: fp_menu
 
 = Foreign Policy
