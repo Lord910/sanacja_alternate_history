@@ -60,6 +60,7 @@ unavailable-subtitle: [? if germany_relation < 5 : Our relations with Germany ar
 view-if: non_aggression_pact_germany_signed = 0
 choose-if: germany_relation >= 5
 on-arrival: germany_relation += 2; non_aggression_pact_germany_signed += 1; soviet_relation -= 2; france_relation -= 2; uk_relation -=2
+
 Negotiating a non-aggression pact with Germany could provide Poland with security along the western border. By neutralizing the immediate threat from Germany, Poland can focus on internal development and eastern challenges. However, this agreement must be carefully balanced, as Germany’s long-term ambitions remain unclear, and Poland must not appear too reliant on Berlin.
 
 @non_aggression_pact_ussr

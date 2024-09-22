@@ -430,8 +430,10 @@ Q.france_relation = 0;
 Q.uk_relation = 0;
 // Relations with Germany
 Q.germany_relation = 0;
+Q.non_aggression_pact_germany_signed = 0;
 // Relations with the Soviet Union
 Q.soviet_relation = 0;
+Q.non_aggression_pact_ussr_signed = 0;
 // Relations with Czechoslovakia
 Q.czechoslovakia_relation = 0;
 // Relations with Lithuania
