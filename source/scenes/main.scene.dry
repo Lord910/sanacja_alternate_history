@@ -59,3 +59,10 @@ card-image: img/sejm.jpg
 is-deck: true
 
 - #govt_affairs
+
+@opposition
+title: Opposition Affairs
+card-image: img/sejm.jpg
+is-deck: true
+
+- #opposition_affairs
