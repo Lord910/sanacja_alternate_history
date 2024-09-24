@@ -120,7 +120,7 @@ view-if: chancellor_party != "KPP" and president != "Thälmann"
 go-to: war_menu
 on-arrival: war_choices += 1
 
-There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the robotnicy who support the KPP.
+There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the workers who support the KPP.
 
 [? if kpp_relation >= 60 : The KPP is entirely on our side, owing to our good relations.. ?][? if kpp_relation < 60 and kpp_relation >= 45 : Most of the KPP is on our side, due to their good relations with us. ?][? if kpp_relation < 45 : The KPP does not support us. ?]
 
@@ -129,7 +129,7 @@ max-visits: 1
 go-to: war_menu
 on-arrival: war_choices += 1
 
-A general strike stopped the Kapp Putsch in 1920, and it can stop fascism today. [? if normalized_robotnicy_total > 70 : The robotnicy are largely united with us. ?][? if normalized_robotnicy_total >= 50 and normalized_robotnicy_total <= 70 : There is some dissent within labor, but a majority of robotnicy support the general strike. ?][? if normalized_robotnicy_total > 30 and normalized_robotnicy_total < 50 : However, there is substantial dissent within labor, and less than half support the general strike. ?][? if normalized_robotnicy_total <= 30 : However, labor is deeply divided, and most robotnicy do not heed the call to strike. ?]
+A general strike stopped the Kapp Putsch in 1920, and it can stop fascism today. [? if normalized_robotnicy_total > 70 : The workers are largely united with us. ?][? if normalized_robotnicy_total >= 50 and normalized_robotnicy_total <= 70 : There is some dissent within labor, but a majority of workers support the general strike. ?][? if normalized_robotnicy_total > 30 and normalized_robotnicy_total < 50 : However, there is substantial dissent within labor, and less than half support the general strike. ?][? if normalized_robotnicy_total <= 30 : However, labor is deeply divided, and most workers do not heed the call to strike. ?]
 
 
 @loyal_police

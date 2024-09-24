@@ -25,13 +25,13 @@ on-arrival: advisor_action_timer = 6; resources += dues
 We have gained +[+ dues +] resources.
 
 @welfare
-title: Support Robotnicy' Welfare, our mutual aid organization.
+title: Support workers' Welfare, our mutual aid organization.
 subtitle: -1 resources
 choose-if: resources > 0 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources < 0: Not enough resources. ?]
 on-arrival: resources -= 1; robotnicy_aid += 1; bezrobotni_bbwr += 5*(1 - dissent); robotnicy_bbwr += 3*(1-dissent); robotnicy_bbwr += 2*(1-dissent) if black_thursday_seen; advisor_action_timer = 6;
 
-We have increased funding to Robotnicy' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the bezrobotni. ?]
+We have increased funding to workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the bezrobotni. ?]
 
 @organizing_women
 title: Organizing women

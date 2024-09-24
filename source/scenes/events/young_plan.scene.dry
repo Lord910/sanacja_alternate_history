@@ -25,7 +25,7 @@ How should we campaign in favor of the Plan?
 @internationalism
 on-arrival: nationalism -= 5*(1-dissent) if pacifism >= 2 else nationalism += 3; pacifism += 1; robotnicy_bbwr += 5*(1-dissent) if pacifism >= 3 and nationalism <= 50; robotnicy_owp += 4 if pacifism <= 3; chlopi_owp += 5; mniejszosci_bbwr -= 4 if pacifism <= 3; chlopi_pslp -= 4
 
-We rail hard against nationalism and in favor of pacifism and belonging to the international community of nations. The referendum easily fails, with only around 15% of voters supporting it. It seems that nationalism is not omnipotent in Germany, despite everything. [? if pacifism >= 3 and nationalism <= 50 : We have rallied the robotnicy to the cause of internationalism. ?]
+We rail hard against nationalism and in favor of pacifism and belonging to the international community of nations. The referendum easily fails, with only around 15% of voters supporting it. It seems that nationalism is not omnipotent in Germany, despite everything. [? if pacifism >= 3 and nationalism <= 50 : We have rallied the workers to the cause of internationalism. ?]
 
 
 @rational

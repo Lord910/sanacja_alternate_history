@@ -9,7 +9,7 @@ max-visits: 3
 
 = Building a People's Party
 
-Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar robotnicy and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
+Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar workers and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
 
 In order to build a socialist majority, many reformists and conservatives are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
 
@@ -33,7 +33,7 @@ unavailable-subtitle: The opposition is too strong.
 on-arrival: conservatives_strength += 15; colonels_strength += 15; conservatives_dissent -= 10; colonels_dissent -= 10; peoples_party = 1; robotnicy_bbwr -= 12; chlopi_bbwr += 10; klasa_srednia_bbwr += 10; klasa_wyzsza_bbwr += 8; mniejszosci_bbwr += 8; repairers_dissent += 25; liberals_dissent += 20; kpp_relation -= 10; kpp_coalition_dissent += 1; coalition_dissent -= 1; pschd_relation += 5*(1-dissent); pslp_relation += 5*(1-dissent)
 achievement: volkspartei
 
-In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the robotnicy and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
 
 Should we run a new campaign to publicize our new platform?
 
@@ -63,10 +63,10 @@ Should we run a new campaign to publicize our new platform?
 - @campaign_mniejszosci
 
 @campaign_robotnicy
-title: Campaign among the robotnicy, to assuage their doubts about our changes.
+title: Campaign among the workers, to assuage their doubts about our changes.
 on-arrival: robotnicy_bbwr += 6*(1-dissent);
 
-The robotnicy are still a key part of our constituency, and we must not alienate them in the transformation of our party.
+The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
 
 @campaign_middle
 title: Campaign among the middle classes.
@@ -80,7 +80,7 @@ choose-if: chlopi_policy > 0
 unavailable-subtitle: We have not enacted any chlopi policies yet.
 on-arrival: chlopi_bbwr += 7*(1-dissent)
 
-As a people's party, we represent farmers and chlopi robotnicy as well, and they are becoming receptive to our messages.
+As a people's party, we represent farmers and chlopi workers as well, and they are becoming receptive to our messages.
 
 @campaign_bezrobotni
 title: Campaign among the bezrobotni.

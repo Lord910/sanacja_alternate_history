@@ -52,7 +52,7 @@ on-arrival: robotnicy_bbwr -= 0.15*robotnicy_bbwr; umemployed_bbwr -= 0.3*bezrob
 
 Unfortunately, we must accept this ultimatum if we are to maintain this coalition. The Nazis and Communists are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
 
-The robotnicy are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPP's gain, and even the OWP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPP's gain, and even the OWP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 
 @compromise
@@ -67,4 +67,4 @@ Thanks to our good relations, the PSL-P have offered a compromise that raises so
 @accept_compromise
 on-arrival: robotnicy_bbwr -= 5; bezrobotni_bbwr -= 6; robotnicy_kpp += 5; bezrobotni_kpp += 3; bezrobotni_owp += 3; repairers_dissent += 10; sanacja_left_dissent += 8; liberals_dissent += 5; welfare -= 1; budget += 1; month += 1; kpp_relation -= 4; inflation -= 1
 
-We have accepted the compromise offered by the bourgeoisie. Many of the robotnicy and bezrobotni see this as a betrayal, although we present it as the successful aversion of a much worse alternative.
+We have accepted the compromise offered by the bourgeoisie. Many of the workers and bezrobotni see this as a betrayal, although we present it as the successful aversion of a much worse alternative.

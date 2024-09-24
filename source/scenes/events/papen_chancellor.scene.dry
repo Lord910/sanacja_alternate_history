@@ -6,7 +6,7 @@ new-page: true
 tags: event
 max-visits: 1
 
-President Hindenburg's secretive group of advisors (often called the "camarilla") has turned against [+ old_chancellor +], and Hindenburg his dismissed the Chancellor, replacing him with the more reactionary Franz von Papen, an independent formerly of the Center Party. [? if year == 1932 : Brüning's final straw was his "agricultural settlement" policy, sending bezrobotni robotnicy to homestead in underutilized lands (that happen to be owned by aristocrats). ?]
+President Hindenburg's secretive group of advisors (often called the "camarilla") has turned against [+ old_chancellor +], and Hindenburg his dismissed the Chancellor, replacing him with the more reactionary Franz von Papen, an independent formerly of the Center Party. [? if year == 1932 : Brüning's final straw was his "agricultural settlement" policy, sending bezrobotni workers to homestead in underutilized lands (that happen to be owned by aristocrats). ?]
 
 Papen is immediately faced with a vote of no confidence, given his unpopularity. However the BBWR votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties. Meanwhile, he is governing via emergency powers with Hindenburg. His first policy is to legalize the Nazi SA, but this does not win their loyalty.
 

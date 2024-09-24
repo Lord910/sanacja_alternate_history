@@ -11,7 +11,7 @@ tags: party_affairs, antifascism
 
 The Iron Front is our new antifascist coordination front, consisting of the BBWR, the trade unions, and the Reichsbanner. How should we use the Iron Front?
 
-[? if robotnicy_bbwr < 45 or robotnicy_bbwr < robotnicy_owp or robotnicy_bbwr < robotnicy_kpp : Unfortunately, the Iron Front's effectiveness is dragged down by the BBWR's unpopularity, as the BBWR is no longer the dominant party among the robotnicy. Many Reichsbanner members have left, and many robotnicy are not interested. ?]
+[? if robotnicy_bbwr < 45 or robotnicy_bbwr < robotnicy_owp or robotnicy_bbwr < robotnicy_kpp : Unfortunately, the Iron Front's effectiveness is dragged down by the BBWR's unpopularity, as the BBWR is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
 - @defense: Rally for defense against the fascists with the Reichsbanner.
 - @pacifism: Rally for pacifism, against nationalism and war.

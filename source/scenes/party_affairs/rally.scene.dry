@@ -69,15 +69,15 @@ Our message of class struggle appeals to the left wing of the working class, whi
 @welfare
 on-arrival: robotnicy_bbwr += 3*(1-dissent); robotnicy_bbwr += 3*(1-dissent) if welfare > 0; bezrobotni_bbwr += 3*(1-dissent) if welfare > 0; bezrobotni_bbwr += 4*(1-dissent) if welfare > 1; colonels_strength += 3; sanacja_left_strength += 4; colonels_dissent -= 3; sanacja_left_dissent -= 3;
 
-The reformist message appeals to the organized robotnicy, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); robotnicy_bbwr += 4*(1-dissent) if democratization >= 3; bezrobotni_bbwr += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; klasa_srednia_bbwr += 4*(1-dissent) if democratization >= 3 
 
 Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
 
-[? if democratization < 3 : Talk of democracy does not excite the robotnicy as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
-[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the robotnicy are enthusiastic about our message. ?]
+[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
+[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); robotnicy_bbwr += 4*(1 - dissent) if pacifism >= 3; bezrobotni_bbwr += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; klasa_srednia_bbwr += 4*(1-dissent) if pacifism >= 3
@@ -85,16 +85,16 @@ on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); robotnicy_bbwr += 4*(
 Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
 
 [? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
-[? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the robotnicy are enthusiastic about our message. ?]
+[? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @wtb
 view-if: wtb_adopted = 1
 on-arrival: wtb_support += 1; robotnicy_bbwr += 6*(1-dissent); bezrobotni_bbwr += 6*(1-dissent); chlopi_bbwr += 3*(1-dissent); klasa_srednia_bbwr += 3*(1-dissent); klasa_wyzsza_bbwr += 3*(1-dissent);
 
-The WTB plan has become a popular rallying cry for our party. The robotnicy are eager to go back to work, and that is exactly what the plan promises.
+The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises.
 
 
 @local
 on-arrival: robotnicy_bbwr += 3*(1-dissent); klasa_wyzsza_bbwr += 1*(1-dissent); klasa_srednia_bbwr += 2*(1-dissent); bezrobotni_bbwr += 3*(1-dissent);
 
-Our speakers have gauged the mood and are speaking to the issues that seem to most affect the robotnicy in this moment.
+Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.

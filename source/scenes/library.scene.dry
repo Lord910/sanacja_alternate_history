@@ -42,7 +42,7 @@ go-to: menu
 
 **Peasants (Chłopi)**: Making up around 55% of the population, peasants supported a range of agrarian parties, including PSL-Piast, PSL-Wyzwolenie, and other regional agrarian movements.
 
-**Working Class (Robotnicy)**: Comprising about 27.5% of the population, the working class supported leftist parties like PPS and KPP, as well as solidarist parties like NPR (Narodowa Partia Robotnicza).
+**Working Class (workers)**: Comprising about 27.5% of the population, the working class supported leftist parties like PPS and KPP, as well as solidarist parties like NPR (Narodowa Partia Robotnicza).
 
 **Petty Bourgeoisie (Drobnomieszczaństwo)**: About 11% of the population, this group typically supported nationalist parties, often aligning with right-wing movements.
 
@@ -52,7 +52,7 @@ go-to: menu
 
 **Nationalities:**
 
-**Poles**: The majority of the population, approximately 68%, are Poles, most of whom are Roman Mniejszosci. Poles dominat most social strata, including about 60% of the peasantry and 75-80% of the industrial workforce.
+**Poles**: The majority of the population, approximately 68%, are Poles, most of whom are Roman Catholicss. Poles dominat most social strata, including about 60% of the peasantry and 75-80% of the industrial workforce.
 
 **Jews**: Jews, comprising around 10% of the population, are predominantly urban dwellers, making up 21% of the population in cities. Many work in trade, craftsmanship, and as professionals. Politically, they are active in both Zionist and socialist movements like the Bund.
 
@@ -60,7 +60,7 @@ go-to: menu
 
 **Belarusians**: Concentrated in the eastern voivodeships, Belarusians were primarily Orthodox peasants, making up about 5% of the population. Their presence is marked by a low literacy rate and minimal political participation.
 
-**Germans**: The German minority, about 2.5% of the population, is concentrated in western Poland. Many are prosperous farmers or industrial robotnicy, and they generally supported conservative or autonomist political movements.
+**Germans**: The German minority, about 2.5% of the population, is concentrated in western Poland. Many are prosperous farmers or industrial workers, and they generally supported conservative or autonomist political movements.
 
 
 @public_opinion
@@ -409,7 +409,7 @@ Dissent: [+ sanacja_left_dissent : dissent +]
 
 The Naprawiacze, a radical left-leaning faction within the Sanacja movement, draw their strength from activists associated with groups like the Riflemen's Association, the Union of Silesian Insurgents, and the Union of Military Settlers. Many of these individuals trace their origins to the nationalist Union of Polish Youth "Zet." By 1927, the Naprawiacze are led informally by Kazimierz Marian Wyszyński, a figure who embodies their commitment to radical constitutional reform and centralization of state power.
 
-The Naprawiacze advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where robotnicy and employers cooperate under the supervision of a robust state apparatus.
+The Naprawiacze advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where workers and employers cooperate under the supervision of a robust state apparatus.
 
 While they share the broader Sanacja goal of stabilizing the Polish state, the Naprawiacze push for more radical and immediate transformations than their conservative or liberal counterparts, emphasizing direct action and rapid political restructuring. By the end of 1927, they have firmly established themselves as a force for significant and swift reform within Piłsudski’s movement.
 

@@ -11,22 +11,22 @@ tags: party_affairs
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @robotnicy: The urban working class, our traditional support base.
-- @klasa_srednia: The "new middle class" of government employees and white-collar robotnicy.
+- @workers: The urban working class, our traditional support base.
+- @klasa_srednia: The "new middle class" of government employees and white-collar workers.
 - @klasa_wyzsza: The "old middle class" of small independent businessmen and artisans.
-- @chlopi: Chlopi robotnicy and small farmers, who have felt neglected by us in the past.
+- @chlopi: Chlopi workers and small farmers, who have felt neglected by us in the past.
 - @bezrobotni: The bezrobotni.
 - @mniejszosci: Mniejszosci, who typically support the Center Party.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
-@robotnicy
+@workers
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: robotnicy_bbwr += 6*(1-dissent); robotnicy_bbwr -= 2 if bezrobotni >= 15; robotnicy_bbwr -= 2 if bezrobotni >= 25; robotnicy_bbwr += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; robotnicy_bbwr += 3*(1-dissent) if nationalization_progress >= 1;
 
-We have increased our campaigning among the robotnicy. [? if bezrobotni >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract robotnicy. ?]
+We have increased our campaigning among the workers. [? if bezrobotni >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
 
 @klasa_srednia
 subtitle: -1 resources

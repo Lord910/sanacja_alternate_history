@@ -48,13 +48,13 @@ This position gains us no allies, and does not alienate anyone any further.
 @allow_police
 on-arrival: kpp_relation += 5; robotnicy_kpp += 5; bezrobotni_kpp += 5
 
-The demonstration proceeds peacefully under the watchful eyes of the police. Onlookers admire the strength of the Communist robotnicy, and perhaps some of our supporters have been peeled off.
+The demonstration proceeds peacefully under the watchful eyes of the police. Onlookers admire the strength of the Communist workers, and perhaps some of our supporters have been peeled off.
 
 
 @allow
 on-arrival: robotnicy_kpp += 5; bezrobotni_kpp += 5; kpp_relation += 10; rfb_strength += 50; pschd_relation -= 3; pslp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1
 
-The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist robotnicy, and perhaps some of our members have been peeled off. The KPP will never admit it, but they are developing a less hostile view towards us (even if they do not *like* us yet). Our centrist allies denounce the demonstration, but their cries are ineffectual.
+The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and perhaps some of our members have been peeled off. The KPP will never admit it, but they are developing a less hostile view towards us (even if they do not *like* us yet). Our centrist allies denounce the demonstration, but their cries are ineffectual.
 
 
 @join
@@ -63,4 +63,4 @@ unavailable-subtitle: The Communists do not trust us enough.
 on-arrival: kpp_relation += 15; robotnicy_kpp += 5; bezrobotni_kpp += 5; robotnicy_bbwr += 5; bezrobotni_bbwr += 5; klasa_srednia_bbwr -= 5; klasa_wyzsza_bbwr -= 5; pschd_relation -= 10; pslp_relation -= 10; coalition_dissent += 2; pps_bbwr_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50
 achievement: die_rote_fahne
 
-It is difficult to persuade the Communists to let us march with them, given the histories of their party and ours. However, they eventually relent. The display of proletarian unity inspires the robotnicy and terrifies the bourgeoisie and middle class. [? if in_centre_left_coalition : Our coalition partners in the government are outraged at our display with the communists, and are threatening to break up the government. ?] The far-right paramilitaries increase their recruitment to counter us.
+It is difficult to persuade the Communists to let us march with them, given the histories of their party and ours. However, they eventually relent. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class. [? if in_centre_left_coalition : Our coalition partners in the government are outraged at our display with the communists, and are threatening to break up the government. ?] The far-right paramilitaries increase their recruitment to counter us.

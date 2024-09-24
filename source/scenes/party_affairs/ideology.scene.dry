@@ -28,7 +28,7 @@ if (Q.ideology && Q.ideology != "sanacja_left") {
 go-to: changed if changed = 1
 on-departure: ideology = "sanacja_left"; sanacja_left_strength += 10; sanacja_left_dissent -= 5; pps_relation += 3; conservatives_dissent += 25
 
-We should return to our socialist roots, focusing on the rights of robotnicy and social reforms.
+We should return to our socialist roots, focusing on the rights of workers and social reforms.
 
 @repairers
 on-arrival: {!

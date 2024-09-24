@@ -10,10 +10,10 @@ title: Campaigning (People's Party)
 - @campaign_mniejszosci
 
 @campaign_robotnicy
-title: Campaign among the robotnicy, to assuage their doubts about our changes.
+title: Campaign among the workers, to assuage their doubts about our changes.
 on-arrival: robotnicy_bbwr += 5*(1-dissent);
 
-The robotnicy are still a key part of our constituency, and we must not alienate them in the transformation of our party.
+The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
 
 @campaign_middle
 title: Campaign among the middle classes.
@@ -27,7 +27,7 @@ choose-if: chlopi_policy > 0
 unavailable-subtitle: We have not enacted any chlopi policies yet.
 on-arrival: chlopi_bbwr += 6*(1-dissent)
 
-As a people's party, we represent farmers and chlopi robotnicy as well, and they are becoming receptive to our messages.
+As a people's party, we represent farmers and chlopi workers as well, and they are becoming receptive to our messages.
 
 @campaign_bezrobotni
 title: Campaign among the bezrobotni.

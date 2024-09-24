@@ -52,7 +52,7 @@ One year ago, the KPP presented a list of goals for the coalition:
 
 [? if finance_goal = 1 : - Make taxes more progressive. - [? if finance_goal_completed : success ?][? if not finance_goal_completed: failed ?] ?]
 
-[? if labor_goal = 1 : - Support robotnicy in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
+[? if labor_goal = 1 : - Support workers in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
 
 [? if foreign_goal = 1 : - Improve our relations with the Soviet Union. - [? if foreign_goal_completed : success ?][? if not foreign_goal_completed: failed ?] ?]
 
@@ -61,7 +61,7 @@ One year ago, the KPP presented a list of goals for the coalition:
 @goals_failed
 on-arrival: kpp_relation -= 10; robotnicy_bbwr -= 8; bezrobotni_bbwr -= 8;
 
-Unfortunately, we have failed to accomplish all of the goals the KPP set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the robotnicy.
+Unfortunately, we have failed to accomplish all of the goals the KPP set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
 
 - @appeal: Appeal to the Communists to have patience - we are trying!
 - @kpp_vote_of_no_confidence.support_center: Could we form a new government based on the Center Party and PSL-W (and possibly PSL-P)?

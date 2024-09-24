@@ -19,7 +19,7 @@ While agricultural policy has historically not been the domain of the BBWR, ther
 
 @land_reform
 title: Land Reform
-subtitle: -1 budget - Break up the large aristocratic estates and give land to landless robotnicy.
+subtitle: -1 budget - Break up the large aristocratic estates and give land to landless workers.
 unavailable-subtitle: [? if budget <= 0 : Requires 1 budget. ?] [? if judicial_reform < 2 : The judiciary would never allow this. ?]
 choose-if: judicial_reform >= 2 and budget > 0
 on-arrival: budget -= 1; land_reform += 1; coalition_dissent += 1; chlopi_bbwr += 5*(1-dissent); chlopi_owp -= 4*(1-dissent); bezrobotni -= 1 if bezrobotni >= 5; pslp_relation -= 5; pschd_relation -= 4; repairers_strength += 8; repairers_dissent -= 5; chlopi_sol += 3; chlopi_policy += 1; political_crisis_level += 1; agriculture_goal_completed += 1;
@@ -39,11 +39,11 @@ We have increased financial support for small farmers, providing access to credi
 
 @pro_consumer
 title: Food Procurement
-subtitle: -1 budget - Provide inexpensive food for robotnicy.
+subtitle: -1 budget - Provide inexpensive food for workers.
 choose-if: budget >= 1
 on-arrival: budget -= 1; pro_consumer += 1; robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 4*(1-dissent); robotnicy_sol += 4; coalition_dissent += 1 if black_thursday_seen
 
-We have increased state purchasing of food staples to provide to urban robotnicy and the poor. This benefits robotnicy more than it benefits farmers, as we are negotiating for lower purchase prices. [? if black_thursday_seen and (in_democratic_left_coalition or in_centre_left_coalition) : Our coalition partners consider this policy to be a wasteful handout. ?]
+We have increased state purchasing of food staples to provide to urban workers and the poor. This benefits workers more than it benefits farmers, as we are negotiating for lower purchase prices. [? if black_thursday_seen and (in_democratic_left_coalition or in_centre_left_coalition) : Our coalition partners consider this policy to be a wasteful handout. ?]
 
 @state_buyer
 title: State Buyer
@@ -52,4 +52,4 @@ choose-if: budget >= 2 and judicial_reform >= 2
 on-arrival: budget -= 2; state_buyer = 1; chlopi_bbwr += 5*(1-dissent); chlopi_owp -= 3*(1-dissent); robotnicy_bbwr += 4*(1-dissent); bezrobotni_bbwr += 5*(1-dissent); coalition_dissent += 1 if (in_centre_left_coalition or in_democratic_left_coalition); pslp_relation -= 5; pschd_relation -= 3; peoples_party_support += 1; chlopi_policy += 2; capital_strike_progress += 1
 max-visits: 1
 
-Our new purchasing agency guarantees fair prices for farmers, while also providing lower food prices for robotnicy and the urban poor. This policy necessitates heavy spending and an unprecedented level of state intervention in the economy, raising the ire of conservative economists.
+Our new purchasing agency guarantees fair prices for farmers, while also providing lower food prices for workers and the urban poor. This policy necessitates heavy spending and an unprecedented level of state intervention in the economy, raising the ire of conservative economists.

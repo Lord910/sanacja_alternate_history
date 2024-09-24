@@ -31,7 +31,7 @@ title: Labor Ministry
 subtitle: The Labor Ministry is giving significant concessions to organized labor.
 view-if: labor_minister_party = "KPP"
 
-The KPP-controlled Labor Ministry is taking a policy of supporting labor in every dispute between robotnicy and employees, leading to a proliferation of strikes across the country. Given the economic circumstances, there are worries that this could harm any potential economic recovery, not to mention the conflicts this may engender with the bourgeois parties.
+The KPP-controlled Labor Ministry is taking a policy of supporting labor in every dispute between workers and employees, leading to a proliferation of strikes across the country. Given the economic circumstances, there are worries that this could harm any potential economic recovery, not to mention the conflicts this may engender with the bourgeois parties.
 
 Do we support their radical labor policy?
 
@@ -41,19 +41,19 @@ Do we support their radical labor policy?
 @labor_support
 on-arrival: capital_strike_progress += 2; robotnicy_kpp += 5; robotnicy_bbwr += 3*(1-dissent); kpp_labor_support += 1; coalition_dissent += 1; pschd_relation -= 6; unemployment += 2; kpp_influence += 2
 
-The pro-labor policy is popular among robotnicy and is bringing the KPP more support, but in response businesses are laying off more robotnicy and reducing hours. This is setting the government up for a confrontation with the capitalists.
+The pro-labor policy is popular among workers and is bringing the KPP more support, but in response businesses are laying off more workers and reducing hours. This is setting the government up for a confrontation with the capitalists.
 
 @labor_oppose
 on-arrival: kpp_coalition_dissent += 1; robotnicy_bbwr -= 5; robotnicy_kpp += 5; kpp_relation -= 6
 
-We oppose the KPP's policy, and prevent it from being enacted. The KPP is displeased, as are the robotnicy who would have stood to benefit.
+We oppose the KPP's policy, and prevent it from being enacted. The KPP is displeased, as are the workers who would have stood to benefit.
 
 @economy
 title: Economy Ministry
 subtitle: The Economy Ministry is pursuing a policy of nationalizations.
 view-if: economy_minister_party = "KPP"
 
-The KPP-controlled Economy Ministry is planning a policy of mass nationalizations. [? if budget < 3 : They plan to use deficit spending to finance state takeovers of underutilized industrial enterprises, and run them for the benefit of the robotnicy. ?] [? if budget >= 3 : They plan to buy out closed and underutilized industrial enterprises, and run them at full capacity for the benefit of the robotnicy. ?] 
+The KPP-controlled Economy Ministry is planning a policy of mass nationalizations. [? if budget < 3 : They plan to use deficit spending to finance state takeovers of underutilized industrial enterprises, and run them for the benefit of the workers. ?] [? if budget >= 3 : They plan to buy out closed and underutilized industrial enterprises, and run them at full capacity for the benefit of the workers. ?] 
 
 Do we support this policy?
 
@@ -63,7 +63,7 @@ Do we support this policy?
 @economy_support
 on-arrival: nationalization_progress += 1; capital_strike_progress += 4; bezrobotni -= 2.5 if bezrobotni >= 6; bezrobotni -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; robotnicy_bbwr += 4*(1-dissent); robotnicy_kpp += 8*(1-dissent); bezrobotni_kpp += 4*(1-dissent); coalition_dissent += 2; pslp_relation -= 6; pschd_relation -= 4; klasa_srednia_bbwr -= 3; klasa_wyzsza_bbwr -= 3; economy_goal_completed += 1; kpp_influence += 2
 
-The KPP has gained credit with the robotnicy for enabling many to keep their jobs. Meanwhile, the bourgeois parties and middle-class voters blame the BBWR for enabling the nationalizations.
+The KPP has gained credit with the workers for enabling many to keep their jobs. Meanwhile, the bourgeois parties and middle-class voters blame the BBWR for enabling the nationalizations.
 
 @economy_oppose
 on-arrival: kpp_coalition_dissent += 1; robotnicy_bbwr -= 5; robotnicy_kpp += 5; kpp_relation -= 6

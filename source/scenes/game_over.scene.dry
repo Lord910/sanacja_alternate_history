@@ -88,7 +88,7 @@ if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Hitler" 
 if ((Q.nationalization_progress >= 1 && Q.wtb_implemented >= 1) || (Q.wtb_implemented >= 1 && Q.moderate_plan_progress >= 1) || (Q.nationalization_progress >= 1 && Q.moderate_plan_progress >= 1)) {
     this.achieve("wirtschaftsexperiment");
 }
-// Syndikalismus - support factory takeovers by robotnicy.
+// Syndikalismus - support factory takeovers by workers.
 if (Q.factory_takeovers >= 2) {
     this.achieve("syndikalismus");
 }
@@ -265,7 +265,7 @@ view-if: works_councils >= 3
 tags: endings
 go-to: eg_menu
 
-Works councils now have substantially greater influence, giving robotnicy democratic control over their economic lives.
+Works councils now have substantially greater influence, giving workers democratic control over their economic lives.
 
 @european_union
 title: There is now a European Union!
@@ -348,7 +348,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
 
-[? if game_achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the robotnicy. ?]
+[? if game_achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
 
 [? if game_achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
 
@@ -431,7 +431,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
 
-[? if achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the robotnicy. ?]
+[? if achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
 
 [? if achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
 
@@ -512,7 +512,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
 
-[? if not achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the robotnicy. ?]
+[? if not achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
 
 [? if not achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
 

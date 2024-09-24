@@ -26,7 +26,7 @@ subtitle: Paid maternal leave policies, equal pay policies, and so on.
 on-arrival: womens_work = 1; womens_rights += 1; robotnicy_bbwr -= 4 if bezrobotni > 15; klasa_srednia_bbwr += 4*(1-dissent); robotnicy_bbwr += 4*(1 - dissent);
 max-visits: 3
 
-These policies mean that our party is increasing in popularity among the "new women" who work outside the home. [? if bezrobotni > 15 : However, many male robotnicy develop a backlash towards women in the workplace, especially given the rising unemployment. ?]
+These policies mean that our party is increasing in popularity among the "new women" who work outside the home. [? if bezrobotni > 15 : However, many male workers develop a backlash towards women in the workplace, especially given the rising unemployment. ?]
 
 @family
 subtitle: Change family and inheritance law to treat women more equally.

@@ -1,5 +1,5 @@
 title: High Inflation
-subtitle: Robotnicy are seeing their purchasing power decline.
+subtitle: workers are seeing their purchasing power decline.
 view-if: inflation >= 8 and high_inflation_timer = 0 and bbwr_in_government
 new-page: true
 max-visits: 1
@@ -31,7 +31,7 @@ Reducing the amount of government spending should reduce the inflation rate, acc
 @price_controls
 on-arrival: capital_strike_progress += 3; inflation -= 3; coalition_dissent += 1; bezrobotni += 1; klasa_wyzsza_bbwr -= 4; klasa_srednia_bbwr -= 3; chlopi_bbwr -= 5; robotnicy_bbwr -= 2; bezrobotni_bbwr += 3; sanacja_left_dissent += 6; pslp_relation -= 6; pschd_relation -= 4; pslw_relation -= 4
 
-Price controls are very unpopular with the bourgeoisie and their representatives, as well as chlopi producers, while wage controls hurt organized robotnicy. However, the policies do stem the tide of inflation, at least somewhat.
+Price controls are very unpopular with the bourgeoisie and their representatives, as well as chlopi producers, while wage controls hurt organized workers. However, the policies do stem the tide of inflation, at least somewhat.
 
 @bank
 on-arrival: capital_strike_progress += 2
