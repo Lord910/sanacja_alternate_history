@@ -241,7 +241,7 @@ This is us. We are a political movement built around the leadership of Józef Pi
 <h4><em>Communist Party of Poland<em></h4>
 {!</div>!}
 
-A communist party
+**KPP** a subversive force, loyal not to Poland but to Soviet Russia. They advocate for the destruction of our state and the imposition of a communist regime, funded and supported by the USSR to advance its internationalist goals. These extremists aim to undermine our sovereignty and drag Poland into foreign subservience. While their support among the general population remains limited, their efforts to destabilize our institutions make them a significant threat that requires constant surveillance and firm opposition to protect our national unity.
 
 Current relations: [+ kpp_relation : relationships +]
 
@@ -251,7 +251,7 @@ Current relations: [+ kpp_relation : relationships +]
 <h4><em>Polish Socialist Party<em></h4>
 {!</div>!}
 
-A socialist party that, despite its past association with Piłsudski, now positions itself as a critic of our government. They claim to stand for the working class and parliamentary democracy, but their socialist agenda often undermines the stability and unity we strive to maintain. While they were once allies in the fight for independence, their current opposition to our reforms shows their growing disconnect from the needs of modern Poland.
+**PPS*, once a vital ally in the struggle for independence, has now become a vocal critic of the government. While they claim to represent the working class and advocate for social justice, their increasingly radical socialist platform threatens the stability of the state. They push for policies that could weaken national unity and undermine the reforms necessary for Poland’s future. Though they enjoy some support within labor circles, their opposition to the government’s direction reveals a growing disconnect from the broader needs of the nation. Their agenda, if unchecked, risks fueling division rather than progress.
 
 Current relations: [+ pps_relation : relationships +]
 
@@ -261,7 +261,8 @@ Current relations: [+ pps_relation : relationships +]
 <h4><em>Peasent's Party<em></h4>
 {!</div>!}
 
-A left-wing agrarian party
+
+**SCh** presents itself as the political voice of Poland’s rural population, advocating for the rights and welfare of the peasantry. However, its increasingly populist demands, particularly around radical land reform, have sparked concerns about the potential for economic disruption and social instability. While the party enjoys significant support in rural areas, critics argue that its policies risk undermining agricultural productivity and the broader national economy. Though it aims to address the challenges faced by the peasantry, there are fears that its agenda may create divisions within society and hinder Poland’s path to balanced development.
 
 Current relations: [+ sch_relation : relationships +]
 
@@ -271,7 +272,7 @@ Current relations: [+ sch_relation : relationships +]
 <h4><em>Polish People's Party "Liberation"<em></h4>
 {!</div>!}
 
-A left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in chlopi areas.
+**PSL-W** is a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in chlopi areas.
 
 Current relations: [+ pslw_relation : relationships +]
 
@@ -287,7 +288,7 @@ Various political movements represent the interests of Poland's national minorit
 <h4><em>National Worker's Party<em></h4>
 {!</div>!}
 
-A centrist to center-right party
+A center-left to centrist party with roots in Polish labor movements, combining elements of socialism and nationalism. Focused on workers' rights and social justice, the NPR advocates for state intervention in the economy to protect labor and support welfare programs, while also promoting Polish national identity. Though they emphasize the importance of social solidarity, their nationalist orientation and moderate stance can sometimes limit their appeal among more progressive movements.
 
 Current relations: [+ npr_relation : relationships +]
 
@@ -307,7 +308,7 @@ Current relations: [+ pschd_relation : relationships +]
 <h4><em>Polish People's Party "Piast"<em></h4>
 {!</div>!}
 
-A more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining chlopi stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
+A more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining peasents stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
 
 Current relations: [+ pslp_relation : relationships +]
 
