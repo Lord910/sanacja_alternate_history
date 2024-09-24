@@ -381,19 +381,28 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 @factions
 go-to: nationalists if sanacja_nationalists > 0; menu if sanacja_nationalists <= 0
 
-**Internal Factions of the Sanacja Movement**
+{!<div style="text-align: center;">!}
+<h2><strong>Internal Factions of the Sanacja Movement</strong></h2>
+<h3>Salus Patriae Suprema Lex</h3>
+<h4><em>The health of the nation is the supreme law</em></h4>
+{!</div>!}
 
-*Salus Patriae Suprema Lex*
+The Sanacja movement, born out of Piłsudski’s **May Coup** in 1926, is not defined by rigid party structures but by a shared commitment to the **welfare of the Polish state**. It unites a broad coalition of political perspectives under the guiding principle that the **health of the nation** is the **supreme law**.
 
-The Sanacja movement, born out of Piłsudski’s *May Coup* in 1926, is not defined by rigid party structures but by a shared commitment to the *welfare of the Polish state*. It unites a broad coalition of political perspectives under the guiding principle that the *health of the nation* is the **supreme law**. The movement’s factions, though ideologically diverse, are united in their vision of *strengthening* and *centralizing state power* to ensure *national stability* and *security*.
+The movement’s factions, though ideologically diverse, are united in their vision of **strengthening** and **centralizing state power** to ensure **national stability** and **security**.
 
-**Within the movement, there is space for both *progressive reformers*, who advocate for *modernization*, and *staunch traditionalists*, who focus on preserving Poland’s *cultural heritage* and *stability*.** Each faction contributes its own approach to *safeguarding* the nation. The factions differ in their focus on *economic reform*, *social policy*, and the *role of the state*, but all align in their *loyalty to Piłsudski* as the guiding force of the nation. This internal diversity enables Sanacja to adapt to Poland’s *evolving political landscape* while presenting a *unified front* committed to *strong leadership* and *national integrity*.
+Within the movement, there is space for both **progressive reformers**, who advocate for **modernization**, and **staunch traditionalists**, who focus on preserving Poland’s **cultural heritage** and **stability*. Each faction contributes its own approach to *safeguarding* the nation. The factions differ in their focus on **economic reform**, **social policy**, and the **role of the state**, but all align in their **loyalty to Piłsudski** as the guiding force of the nation. 
 
-Despite ideological differences, these factions operate within the same framework of *preserving Poland’s independence*, navigating both *domestic challenges* and a shifting *international environment*. United by the belief that the *survival* and *strength of the state* take precedence over individual political doctrines, the Sanacja factions form a *cohesive* yet *dynamic force* shaping the future of Poland.
+This internal diversity enables Sanacja to adapt to Poland’s **evolving political landscape** while presenting a **unified front** committed to **strong leadership** and **national integrity**.
+
+Despite ideological differences, these factions operate within the same framework of **preserving Poland’s independence**, navigating both **domestic challenges** and a shifting **international environment**. United by the belief that the **survival** and **strength of the state** take precedence over individual political doctrines, the Sanacja factions form a **cohesive** yet **dynamic force** shaping the future of Poland.
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Sanacja Left**
+{!<div style="text-align: center;">!}
+<h2><strong>Sanacja Left</strong></h2>
+<h3><em>Lewica Sanacyjna</em></h3>
+{!</div>!}
 
 The Sanacja Left, led by Jędrzej Moraczewski, represents the socialist-leaning wing of Piłsudski's supporters. Moraczewski, a former Prime Minister and long-time ally of Piłsudski, is the central figure in this faction, which is made up of former members of the PPS (Polska Partia Socjalistyczna) and other leftist groups who joined the Sanacja movement after the May Coup of 1926.
 
@@ -405,11 +414,14 @@ Strength: [+ sanacja_left_strength : strength +]
 
 Dissent: [+ sanacja_left_dissent : dissent +]
 
-**Repairers**
+{!<div style="text-align: center;">!}
+<h2><strong>Repairers</strong></h2>
+<h3><em>Naprawiacze</em></h3>
+{!</div>!}
 
-The Naprawiacze, a radical left-leaning faction within the Sanacja movement, draw their strength from activists associated with groups like the Riflemen's Association, the Union of Silesian Insurgents, and the Union of Military Settlers. Many of these individuals trace their origins to the nationalist Union of Polish Youth "Zet." By 1927, the Naprawiacze are led informally by Kazimierz Marian Wyszyński, a figure who embodies their commitment to radical constitutional reform and centralization of state power.
+The Repairers, a radical left-leaning faction within the Sanacja movement, draw their strength from activists associated with groups like the Riflemen's Association, the Union of Silesian Insurgents, and the Union of Military Settlers. Many of these individuals trace their origins to the nationalist Union of Polish Youth "Zet." 
 
-The Naprawiacze advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where workers and employers cooperate under the supervision of a robust state apparatus.
+The Repairers advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where workers and employers cooperate under the supervision of a robust state apparatus.
 
 While they share the broader Sanacja goal of stabilizing the Polish state, the Naprawiacze push for more radical and immediate transformations than their conservative or liberal counterparts, emphasizing direct action and rapid political restructuring. By the end of 1927, they have firmly established themselves as a force for significant and swift reform within Piłsudski’s movement.
 
@@ -417,7 +429,10 @@ Strength: [+ repairers_strength : strength +]
 
 Dissent: [+ repairers_dissent : dissent +]
 
-**Liberals**
+{!<div style="text-align: center;">!}
+<h2><strong>Liberals</strong></h2>
+<h3><em>Liberałowie</em></h3>
+{!</div>!}
 
 The Liberals within the Sanacja movement are centered around Kazimierz Bartel and his allies, who played a key role immediately after the May Coup of 1926, with Bartel becoming the first Prime Minister of the new regime. The liberal faction advocates for a moderate reformist agenda that seeks to balance centralized state power with elements of democratic governance. They focus on implementing technocratic, pragmatic solutions to modernize Poland, aiming to maintain a stable government while preventing authoritarian excesses.
 
@@ -429,7 +444,10 @@ Strength: [+ liberals_strength : strength +]
 
 Dissent: [+ liberals_dissent : dissent +]
 
-**Colonels (Grupa Pułkowników)**
+{!<div style="text-align: center;">!}
+<h2><strong>Colonels</strong></h2>
+<h3><em>Pułkownicy</em></h3>
+{!</div>!}
 
 The Colonels within the Sanacja movement are the most loyal supporters of Józef Piłsudski, with their roots deeply embedded in the revolutionary activities of the Polska Partia Socjalistyczna (PPS) and its militant wing, the Organization of Combat. Led by Walery Sławek, this faction played a key role in consolidating Piłsudski’s power following the May Coup of 1926. By 1927, Sławek had formalized their influence by creating the BBWR (Non-Partisan Bloc for Cooperation with the Government), a political vehicle designed to unite all supporters of Piłsudski’s vision under one banner.
 
@@ -443,7 +461,10 @@ Strength: [+ colonels_strength : strength +]
 
 Dissent: [+ colonels_dissent : dissent +]
 
-**Conservatives**
+{!<div style="text-align: center;">!}
+<h2><strong>Conservatives</strong></h2>
+<h3><em>Konserwatyści</em></h3>
+{!</div>!}
 
 The Conservative faction within the Sanacja movement is composed of prominent landowners, industrialists, and political figures who have aligned themselves with Piłsudski’s regime following the May Coup of 1926. By 1928, their presence is firmly institutionalized within the BBWR through key structures such as the Komitet Zachowawczy, representing conservative political organizations, the Komitet Gospodarczy, which speaks for the interests of landowners and industrialists, and the Koło Gospodarcze, a circle of BBWR deputies and senators focused on economic matters.
 
@@ -451,7 +472,10 @@ The Conservatives offer crucial financial and political support to the Sanacja r
 
 While maintaining a close relationship with Piłsudski, the Conservatives aim to balance the more radical elements within Sanacja, ensuring that their vision of national order and stability is realized. Their focus on economic stability and safeguarding the interests of the upper classes complements Piłsudski’s broader goal of preventing societal chaos and protecting the state from the excesses of both socialist and nationalist forces. Their presence in the Sanacja movement serves as a counterweight to liberal and radical factions, making them an essential component of the regime’s power structure.
 
-**IV Brigade**
+{!<div style="text-align: center;">!}
+<h2><strong>IV Brigade</strong></h2>
+<h3><em>Czwarta Brygada</em></h3>
+{!</div>!}
 
 The IV Brigade has emerged as one of the most controversial factions within the Sanacja movement, often derided as the "Piłsudczycy of the seventh day." This group is composed almost entirely of opportunists who, unlike Piłsudski’s original supporters, did not take part in the revolutionary struggles or the fight for independence. Instead, they aligned themselves with Piłsudski after the May Coup of 1926, eager to seize the advantages of being on the winning side.
 
@@ -467,7 +491,10 @@ Dissent: [+ fourth_brigade_dissent : dissent +]
 @nationalists
 go-to: menu
 
-**National Pilsudkists**
+{!<div style="text-align: center;">!}
+<h2><strong>National Pilsudkists</strong></h2>
+<h3><em>Narodowi Piłsudczycy</em></h3>
+{!</div>!}
 
 Conservatives focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
 
