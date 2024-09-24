@@ -228,9 +228,9 @@ OWP: [+ chlopi_owp_normalized +]%,
 go-to: menu
 
 {!<div style="text-align: center;">!}
-= **BBWR**
-== *Bezpartyjny Blok Współpracy z Rządem*
-=== (Nonpartisan Bloc for Cooperation with the Government)
+<h1><strong>BBWR</strong></h1>
+<h2><em>Bezpartyjny Blok Współpracy z Rządem</em></h2>
+<h3>(Nonpartisan Bloc for Cooperation with the Government)</h3>
 {!</div>!}
 
 this is us. We are a political movement built around the leadership of Józef Piłsudski. Our mission is to rise above party politics and create a unified, stable Poland. We support strong executive power and believe in the necessity of Sanacja reforms to modernize the country and secure its future. We are committed to maintaining order and pushing back against the chaos of partisan politics that could weaken the Republic.
