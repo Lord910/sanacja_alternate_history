@@ -423,7 +423,7 @@ The Repairers, a radical left-leaning faction within the Sanacja movement, draw 
 
 The Repairers advocate for a strong, centralized executive authority, particularly through enhancing the powers of the presidency at the expense of parliamentary influence. They see this as essential to securing the stability and independence of Poland. Their vision includes extensive state involvement in economic reforms, particularly in industrial development, and they promote a syndicalist model where workers and employers cooperate under the supervision of a robust state apparatus.
 
-While they share the broader Sanacja goal of stabilizing the Polish state, the Naprawiacze push for more radical and immediate transformations than their conservative or liberal counterparts, emphasizing direct action and rapid political restructuring. By the end of 1927, they have firmly established themselves as a force for significant and swift reform within Piłsudski’s movement.
+While they share the broader Sanacja goal of stabilizing the Polish state, the Repairers push for more radical and immediate transformations than their conservative or liberal counterparts, emphasizing direct action and rapid political restructuring. By the end of 1927, they have firmly established themselves as a force for significant and swift reform within Piłsudski’s movement.
 
 Strength: [+ repairers_strength : strength +]
 
@@ -486,6 +486,7 @@ The IV Brigade is largely driven by the desire for power and influence, rather t
 This faction represents the more pragmatic, if cynical, side of the Sanacja regime. While other groups within the movement push for reforms or ideological goals, the IV Brigade is focused squarely on personal advancement and securing its position within the state. Though resented by many within Sanacja for their opportunism, they are an entrenched force, ensuring their continued influence in the political landscape.
 
 Strength: [+ fourth_brigade_strength : strength +]
+
 Dissent: [+ fourth_brigade_dissent : dissent +]
 
 @nationalists
