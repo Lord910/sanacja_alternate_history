@@ -387,15 +387,15 @@ go-to: nationalists if sanacja_nationalists > 0; menu if sanacja_nationalists <=
 <h4><em>The health of the nation is the supreme law</em></h4>
 {!</div>!}
 
-The Sanacja movement, born out of Piłsudski’s **May Coup** in 1926, is not defined by rigid party structures but by a shared commitment to the **welfare of the Polish state**. It unites a broad coalition of political perspectives under the guiding principle that the **health of the nation** is the **supreme law**.
+The Sanacja movement, born out of Piłsudski’s May Coup in 1926, is not defined by rigid party structures but by a shared commitment to the welfare of the Polish state. It unites a broad coalition of political perspectives under the guiding principle that the health of the nation is the supreme law.
 
-The movement’s factions, though ideologically diverse, are united in their vision of **strengthening** and **centralizing state power** to ensure **national stability** and **security**.
+The movement’s factions, though ideologically diverse, are united in their vision of strengthening and centralizing state power to ensure national stability and security.
 
-Within the movement, there is space for both **progressive reformers**, who advocate for **modernization**, and **staunch traditionalists**, who focus on preserving Poland’s **cultural heritage** and **stability*. Each faction contributes its own approach to *safeguarding* the nation. The factions differ in their focus on **economic reform**, **social policy**, and the **role of the state**, but all align in their **loyalty to Piłsudski** as the guiding force of the nation. 
+Within the movement, there is space for both progressive reformers, who advocate for modernization, and staunch traditionalists, who focus on preserving Poland’s cultural heritage and stability. Each faction contributes its own approach to *safeguarding* the nation. The factions differ in their focus on economic reform, social policy, and the role of the state, but all align in their loyalty to Piłsudski as the guiding force of the nation. 
 
-This internal diversity enables Sanacja to adapt to Poland’s **evolving political landscape** while presenting a **unified front** committed to **strong leadership** and **national integrity**.
+This internal diversity enables Sanacja to adapt to Poland’s evolving political landscape while presenting a unified front committed to strong leadership and national integrity.
 
-Despite ideological differences, these factions operate within the same framework of **preserving Poland’s independence**, navigating both **domestic challenges** and a shifting **international environment**. United by the belief that the **survival** and **strength of the state** take precedence over individual political doctrines, the Sanacja factions form a **cohesive** yet **dynamic force** shaping the future of Poland.
+Despite ideological differences, these factions operate within the same framework of preserving Poland’s independence, navigating both domestic challenges and a shifting international environment. United by the belief that the survival and strength of the state take precedence over individual political doctrines, the Sanacja factions form a cohesive yet dynamic force shaping the future of Poland.
 
 Overall dissent: [+ dissent_percent : dissent +]
 
