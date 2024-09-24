@@ -228,38 +228,108 @@ OWP: [+ chlopi_owp_normalized +]%,
 go-to: menu
 
 {!<div style="text-align: center;">!}
-<h1><strong>BBWR</strong></h1>
-<h2><em>Bezpartyjny Blok Współpracy z Rządem</em></h2>
-<h3>(Nonpartisan Bloc for Cooperation with the Government)</h3>
+<h2><strong>BBWR</strong></h2>
+<h3><em>Bezpartyjny Blok Współpracy z Rządem</em></h3>
+<h4>(Nonpartisan Bloc for Cooperation with the Government)</h4>
 {!</div>!}
 
-this is us. We are a political movement built around the leadership of Józef Piłsudski. Our mission is to rise above party politics and create a unified, stable Poland. We support strong executive power and believe in the necessity of Sanacja reforms to modernize the country and secure its future. We are committed to maintaining order and pushing back against the chaos of partisan politics that could weaken the Republic.
+This is us. We are a political movement built around the leadership of Józef Piłsudski. Our mission is to rise above party politics and create a unified, stable Poland. We support strong executive power and believe in the necessity of Sanacja reforms to modernize the country and secure its future. We are committed to maintaining order and pushing back against the chaos of partisan politics that could weaken the Republic.
 
-**PSChD** – *Polskie Stronnictwo Chrześcijańskiej Demokracji* (Polish Christian Democratic Party) – a centrist to center-right party grounded in Catholic social teachings. They aim to integrate Christian ethics into public life, and while they support some welfare measures, they often lean toward more conservative, religious solutions to social problems. Their alignment with traditional Catholic values sometimes places them in opposition to the broader social reforms we envision.
+{!<div style="text-align: center;">!}
+<h2><strong>KPP</strong></h2>
+<h3>Komunistyczna Partia Polski</h3>
+<h4><em>Communist Party of Poland<em></h4>
+{!</div>!}
 
-Current relations: [+ pschd_relation : relationships +]
-
-**PSL-W** – *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") – a left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in chlopi areas.
-
-Current relations: [+ pslw_relation : relationships +]
-
-**PSL-P** – *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") – a more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining chlopi stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
-
-Current relations: [+ pslp_relation : relationships +]
-
-**SN** – *Stronnictwo Narodowe* (National Party) – a right-wing nationalist party that promotes a homogeneous Polish state. Their platform is rooted in antisemitism, extreme nationalism, and authoritarianism. While they claim to defend Polish identity, their agenda threatens the unity and progress of the Republic by fostering division and exclusion. We view their vision for Poland as dangerously regressive.
-
-Current relations: [+ sn_relation : relationships +]
-
-**PPS** – *Polska Partia Socjalistyczna* (Polish Socialist Party) – a socialist party that, despite its past association with Piłsudski, now positions itself as a critic of our government. They claim to stand for the working class and parliamentary democracy, but their socialist agenda often undermines the stability and unity we strive to maintain. While they were once allies in the fight for independence, their current opposition to our reforms shows their growing disconnect from the needs of modern Poland.
+A communist party
 
 Current relations: [+ kpp_relation : relationships +]
 
-**OWP** – Obóz Wielkiej Polski (Camp of Great Poland) – an extremist, fascist-leaning group inspired by foreign movements. OWP seeks to dismantle the democratic institutions of Poland and replace them with a totalitarian regime. Their nationalist rhetoric and violent antisemitism make them a threat to the Republic’s security and the values we hold dear. Their rise represents a grave danger to Poland’s stability and unity.
+{!<div style="text-align: center;">!}
+<h2><strong>PPS</strong></h2>
+<h3>Polska Partia Socjalistyczna</h3>
+<h4><em>Polish Socialist Party<em></h4>
+{!</div>!}
+
+A socialist party that, despite its past association with Piłsudski, now positions itself as a critic of our government. They claim to stand for the working class and parliamentary democracy, but their socialist agenda often undermines the stability and unity we strive to maintain. While they were once allies in the fight for independence, their current opposition to our reforms shows their growing disconnect from the needs of modern Poland.
+
+Current relations: [+ pps_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>SCh</strong></h2>
+<h3>Stronnictwo Chłopskie</h3>
+<h4><em>Peasent's Party<em></h4>
+{!</div>!}
+
+A left-wing agrarian party
+
+Current relations: [+ sch_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>PSL-W</strong></h2>
+<h3>Polskie Stronnictwo Ludowe "Wyzwolenie</h3>
+<h4><em>Polish People's Party "Liberation"<em></h4>
+{!</div>!}
+
+A left-wing agrarian party focused on radical land reforms. While they represent the peasantry and advocate for social change, their policies often align with the more extreme left, promoting instability in the countryside. Their vision for Poland contrasts with our goal of stability and order, as they push for reforms that could disrupt the delicate balance in chlopi areas.
+
+Current relations: [+ pslw_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>Minority Parties</strong></h2>
+{!</div>!}
+
+Various political movements represent the interests of Poland's national minorities, including Jews, Ukrainians, Belarusians, and Germans. These parties advocate for the cultural and political rights of their respective groups, often seeking autonomy or better representation within the Republic.
+
+{!<div style="text-align: center;">!}
+<h2><strong>NPR</strong></h2>
+<h3>Narodowa Partia Robotnicza</h3>
+<h4><em>National Worker's Party<em></h4>
+{!</div>!}
+
+A centrist to center-right party
+
+Current relations: [+ npr_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>PSCHD</strong></h2>
+<h3>Polskie Stronnictwo Chrześcijańskiej Demokracji</h3>
+<h4><em>Polish Christian Democratic Party<em></h4>
+{!</div>!}
+
+A centrist to center-right party grounded in Catholic social teachings. They aim to integrate Christian ethics into public life, and while they support some welfare measures, they often lean toward more conservative, religious solutions to social problems. Their alignment with traditional Catholic values sometimes places them in opposition to the broader social reforms we envision.
+
+Current relations: [+ pschd_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>PSL-P</strong></h2>
+<h3>Polskie Stronnictwo Ludowe "Piast</h3>
+<h4><em>Polish People's Party "Piast"<em></h4>
+{!</div>!}
+
+A more conservative agrarian party that represents wealthier farmers and landowners. They support land reform, but in a more gradual and controlled manner than PSL-W. Though we share common interests in maintaining chlopi stability, their preference for moderate change and private property rights reflects a more cautious approach to Poland's future. 
+
+Current relations: [+ pslp_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>SN</strong></h2>
+<h3>Stronnictwo Narodow</h3>
+<h4><em>National Party<em></h4>
+{!</div>!}
+
+A right-wing nationalist party that promotes a homogeneous Polish state. Their platform is rooted in antisemitism, extreme nationalism, and authoritarianism. While they claim to defend Polish identity, their agenda threatens the unity and progress of the Republic by fostering division and exclusion. We view their vision for Poland as dangerously regressive.
+
+Current relations: [+ sn_relation : relationships +]
+
+{!<div style="text-align: center;">!}
+<h2><strong>OWP</strong></h2>
+<h3>Obóz Wielkiej Polski</h3>
+<h4><em>Camp of Great Poland<em></h4>
+{!</div>!}
+
+An extremist, fascist-leaning group inspired by foreign movements. OWP seeks to dismantle the democratic institutions of Poland and replace them with a totalitarian regime. Their nationalist rhetoric and violent antisemitism make them a threat to the Republic’s security and the values we hold dear. Their rise represents a grave danger to Poland’s stability and unity.
 
 Current relations: [+ owp_relation : relationships +]
-
-**Minority Parties** – Various political movements represent the interests of Poland's national minorities, including Jews, Ukrainians, Belarusians, and Germans. These parties advocate for the cultural and political rights of their respective groups, often seeking autonomy or better representation within the Republic.
 
 @paramilitaries
 on-arrival: {!
