@@ -4,7 +4,7 @@ is-card: true
 card-image: img/portraits/SocialistLeaders.jpg
 view-if: government_stability > 0 and akcja_socjalistyczna_created == 0 and (far_right_movement_r >= 10 or far_right_activity_r >= 0.15)
 on-arrival: shuffle_leadership_timer = 0;
-tags: party_affairs
+tags: opposition_affairs
 max-visits: 1
 
 = Socialist Action: A Response to Far-Right Activity

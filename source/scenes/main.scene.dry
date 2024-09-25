@@ -19,6 +19,7 @@ max-cards: 3
 - @party
 - @govt
 - #advisor
+- @opposition
 - @shuffle_leadership_pinned
 
 @main_easy
@@ -42,6 +43,7 @@ max-cards: 4
 - @party
 - @govt
 - #advisor
+- @opposition
 - @shuffle_leadership_pinned
 
 
@@ -59,3 +61,10 @@ card-image: img/sejm.jpg
 is-deck: true
 
 - #govt_affairs
+
+@opposition
+title: Opposition Affairs
+card-image: img/sejm.jpg
+is-deck: true
+
+- #opposition_affairs
