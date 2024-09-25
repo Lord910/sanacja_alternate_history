@@ -123,13 +123,10 @@ SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 
-<div id='content'>
-    <div id="workers_pie"></div>
-    <div id="new_middle_class_pie"></div>
-    <div id="old_middle_class_pie"></div>
-    <div id="peasants_pie"></div>
-</div>
-
+<svg id="workersPieChart"></svg>
+<svg id="newMiddleClassPieChart"></svg>
+<svg id="oldMiddleClassPieChart"></svg>
+<svg id="peasantsPieChart"></svg>
 
 @parties
 go-to: menu

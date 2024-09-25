@@ -11,6 +11,7 @@
     <script src="d3.v7.min.js"></script>
     <script src="d3-parliament.js"></script>
     <script src="d3-linegraph.js"></script>
+    <script src="d3.piechart.js"></script>   
     <script src="core.js"></script>
     <script src="game.js"></script>
   </head>
@@ -289,131 +290,5 @@
             </footer>
         </div>
     </div>
-    <!DOCTYPE html>
-    <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Wykresy Kołowe</title>
-        <script src="https://d3js.org/d3.v6.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <!-- Twoje istniejące elementy nagłówka -->
-        </header>
-        <div id="tools_wrapper">
-            <!-- Twoje istniejące elementy narzędzi -->
-        </div>
-        <div id='content'>
-            <div id="workers_pie"></div>
-            <div id="new_middle_class_pie"></div>
-            <div id="old_middle_class_pie"></div>
-            <div id="peasants_pie"></div>
-        </div>
-        <footer>
-            <!-- Twoje istniejące elementy stopki -->
-        </footer>
-    
-        <script>
-            // Dane
-            const data = {
-                workers: [
-                    { party: 'KPP', value: robotnicy_kpp_normalized },
-                    { party: 'PPS', value: robotnicy_pps_normalized },
-                    { party: 'SCh', value: robotnicy_sch_normalized },
-                    { party: 'PSL-W', value: robotnicy_pslw_normalized },
-                    { party: 'Minorities', value: robotnicy_other_normalized },
-                    { party: 'BBWR', value: robotnicy_bbwr_normalized },
-                    { party: 'NPR', value: robotnicy_npr_normalized },
-                    { party: 'PSCHD', value: robotnicy_pschd_normalized },
-                    { party: 'PSL-P', value: robotnicy_pslp_normalized },
-                    { party: sn_party_name, value: robotnicy_sn_normalized },
-                    { party: 'OWP', value: robotnicy_owp_normalized }
-                ],
-                new_middle_class: [
-                    { party: 'KPP', value: klasa_srednia_kpp_normalized },
-                    { party: 'PPS', value: klasa_srednia_pps_normalized },
-                    { party: 'SCh', value: klasa_srednia_sch_normalized },
-                    { party: 'PSL-W', value: klasa_srednia_pslw_normalized },
-                    { party: 'Minorities', value: klasa_srednia_other_normalized },
-                    { party: 'BBWR', value: klasa_srednia_bbwr_normalized },
-                    { party: 'NPR', value: klasa_srednia_npr_normalized },
-                    { party: 'PSCHD', value: klasa_srednia_pschd_normalized },
-                    { party: 'PSL-P', value: klasa_srednia_pslp_normalized },
-                    { party: sn_party_name, value: klasa_srednia_sn_normalized },
-                    { party: 'OWP', value: klasa_srednia_owp_normalized }
-                ],
-                old_middle_class: [
-                    { party: 'KPP', value: klasa_wyzsza_kpp_normalized },
-                    { party: 'PPS', value: klasa_wyzsza_pps_normalized },
-                    { party: 'SCh', value: klasa_wyzsza_sch_normalized },
-                    { party: 'PSL-W', value: klasa_wyzsza_pslw_normalized },
-                    { party: 'Minorities', value: klasa_wyzsza_other_normalized },
-                    { party: 'BBWR', value: klasa_wyzsza_bbwr_normalized },
-                    { party: 'NPR', value: klasa_wyzsza_npr_normalized },
-                    { party: 'PSCHD', value: klasa_wyzsza_pschd_normalized },
-                    { party: 'PSL-P', value: klasa_wyzsza_pslp_normalized },
-                    { party: sn_party_name, value: klasa_wyzsza_sn_normalized },
-                    { party: 'OWP', value: klasa_wyzsza_owp_normalized }
-                ],
-                peasants: [
-                    { party: 'KPP', value: chlopi_kpp_normalized },
-                    { party: 'PPS', value: chlopi_pps_normalized },
-                    { party: 'SCh', value: chlopi_sch_normalized },
-                    { party: 'PSL-W', value: chlopi_pslw_normalized },
-                    { party: 'Minorities', value: chlopi_other_normalized },
-                    { party: 'BBWR', value: chlopi_bbwr_normalized },
-                    { party: 'NPR', value: chlopi_npr_normalized },
-                    { party: 'PSCHD', value: chlopi_pschd_normalized },
-                    { party: 'PSL-P', value: chlopi_pslp_normalized },
-                    { party: sn_party_name, value: chlopi_sn_normalized },
-                    { party: 'OWP', value: chlopi_owp_normalized }
-                ]
-            };
-    
-            // Wymiary wykresu
-            const width = 300;
-            const height = 300;
-            const radius = Math.min(width, height) / 2;
-    
-            // Definiowanie własnej skali kolorów
-            const color = d3.scaleOrdinal()
-                .domain(data.workers.map(d => d.party))
-                .range(['#AF0000', '#CC0000', '#556B2F', '#179900', '#FFD700', '#808080', '#841839', '#1E90FF', '#0000CD', '#954B00', '#3A6538']);
-    
-            // Funkcja do tworzenia wykresu kołowego
-            const pie = d3.pie().value(d => d.value);
-            const arc = d3.arc().outerRadius(radius - 10).innerRadius(0);
-    
-            function drawPieChart(data, selector) {
-                const svg = d3.select(selector)
-                    .append('svg')
-                    .attr('width', width)
-                    .attr('height', height)
-                    .append('g')
-                    .attr('transform', `translate(${width / 2}, ${height / 2})`);
-    
-                const g = svg.selectAll('.arc')
-                    .data(pie(data))
-                    .enter().append('g')
-                    .attr('class', 'arc');
-    
-                g.append('path')
-                    .attr('d', arc)
-                    .style('fill', d => color(d.data.party));
-    
-                g.append('text')
-                    .attr('transform', d => `translate(${arc.centroid(d)})`)
-                    .attr('dy', '.35em')
-                    .text(d => d.data.party);
-            }
-    
-            // Rysowanie wykresów kołowych dla każdej grupy społecznej
-            drawPieChart(data.workers, '#workers_pie');
-            drawPieChart(data.new_middle_class, '#new_middle_class_pie');
-            drawPieChart(data.old_middle_class, '#old_middle_class_pie');
-            drawPieChart(data.peasants, '#peasants_pie');
-        </script>
-    </body>
-    </html>
   </body>
 </html>
