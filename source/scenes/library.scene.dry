@@ -123,12 +123,105 @@ SCh: [+ sch_votes +]%
 
 **Detailed results for each demographic**
 
-<div id='content'>
-    <div id="workers_pie"></div>
-    <div id="new_middle_class_pie"></div>
-    <div id="old_middle_class_pie"></div>
-    <div id="peasants_pie"></div>
-</div>
+**Workers:**
+
+KPP: [+ robotnicy_kpp_normalized +]%, 
+
+PPS: [+ robotnicy_pps_normalized +]%, 
+
+SCh: [+ robotnicy_sch_normalized +]%, 
+
+PSL-W: [+ robotnicy_pslw_normalized +]%, 
+
+Minorities: [+ robotnicy_other_normalized +]%
+
+BBWR: [+ robotnicy_bbwr_normalized +]%, 
+
+NPR: [+ robotnicy_npr_normalized +]%, 
+
+PSCHD: [+ robotnicy_pschd_normalized +]%, 
+
+PSL-P: [+ robotnicy_pslp_normalized +]%, 
+
+[+ sn_party_name +]: [+ robotnicy_sn_normalized +]%, 
+
+OWP: [+ robotnicy_owp_normalized +]%, 
+
+
+
+**New Middle Class:**
+
+KPP: [+ klasa_srednia_kpp_normalized +]%, 
+
+PPS: [+ klasa_srednia_pps_normalized +]%, 
+
+SCh: [+ klasa_srednia_sch_normalized +]%, 
+
+PSL-W: [+ klasa_srednia_pslw_normalized +]%, 
+
+Minorities: [+ klasa_srednia_other_normalized +]%
+
+BBWR: [+ klasa_srednia_bbwr_normalized +]%, 
+
+NPR: [+ klasa_srednia_npr_normalized +]%, 
+
+PSCHD: [+ klasa_srednia_pschd_normalized +]%, 
+
+PSL-P: [+ klasa_srednia_pslp_normalized +]%, 
+
+[+ sn_party_name +]: [+ klasa_srednia_sn_normalized +]%, 
+
+OWP: [+ klasa_srednia_owp_normalized +]%, 
+
+
+**Old Middle Class:**
+
+KPP: [+ klasa_wyzsza_kpp_normalized +]%,
+
+PPS: [+ klasa_wyzsza_pps_normalized +]%, 
+
+SCh: [+ klasa_wyzsza_sch_normalized +]%, 
+
+PSL-W: [+ klasa_wyzsza_pslw_normalized +]%, 
+
+Minorities: [+ klasa_wyzsza_other_normalized +]%
+
+BBWR: [+ klasa_wyzsza_bbwr_normalized +]%, 
+
+NPR: [+ klasa_wyzsza_npr_normalized +]%, 
+
+PSCHD: [+ klasa_wyzsza_pschd_normalized +]%, 
+
+PSL-P: [+ klasa_wyzsza_pslp_normalized +]%, 
+
+[+ sn_party_name +]: [+ klasa_wyzsza_sn_normalized +]%, 
+
+OWP: [+ klasa_wyzsza_owp_normalized +]%, 
+
+
+**Peasents:**
+
+KPP: [+ chlopi_kpp_normalized +]%, 
+
+PPS: [+ chlopi_pps_normalized +]%, 
+
+SCh: [+ chlopi_sch_normalized +]%, 
+
+PSL-W: [+ chlopi_pslw_normalized +]%, 
+
+Minorities: [+ chlopi_other_normalized +]%
+
+BBWR: [+ chlopi_bbwr_normalized +]%, 
+
+NPR: [+ chlopi_npr_normalized +]%, 
+
+PSCHD: [+ chlopi_pschd_normalized +]%, 
+
+PSL-P: [+ chlopi_pslp_normalized +]%, 
+
+[+ sn_party_name +]: [+ chlopi_sn_normalized +]%, 
+
+OWP: [+ chlopi_owp_normalized +]%, 
 
 
 @parties
