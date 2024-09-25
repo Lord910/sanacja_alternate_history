@@ -194,7 +194,7 @@ function generatePieChart(data, selector) {
         .append("g")
         .attr("transform", `translate(${width / 2},${height / 2})`);
 
-    var pieData = pie(Object.keys(data).map(key => ({ party: key, value: data[key] })));
+    var pieData = pie(data);
 
     svg.selectAll("path")
         .data(pieData)
