@@ -23,7 +23,7 @@ As a people's party, we represent the employees and small businesspeople of the 
 
 @campaign_chlopi
 title: Campaign in chlopi areas.
-choose-if: chlopi_policy > 0
+choose-if: peasents_policy > 0
 unavailable-subtitle: We have not enacted any chlopi policies yet.
 on-arrival: chlopi_bbwr += 6*(1-dissent)
 

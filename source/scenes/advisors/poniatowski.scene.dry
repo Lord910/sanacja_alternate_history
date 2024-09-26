@@ -1,0 +1,42 @@
+title: Juliusz Poniatowski
+is-pinned-card: true
+tags: advisor, liberals
+card-image: img/portraits/JuliuszPoniatowski.jpg
+view-if: poniatowski_advisor = 1
+new-page: true 
+
+= Juliusz Poniatowski
+
+Poniatowski is one of the most prominent agricultural reformers in Poland and a leading expert on land redistribution. As Minister of Agriculture, his focus is on improving the lives of the rural population through land reforms and modernizing agricultural practices.
+
+- @agriculture
+- @peasent_campaign
+- @economic_crisis
+- @root: Return to main
+
+@agriculture
+title: Agricultural Policy
+subtitle: Poniatowski is the Minister of Agriculture.
+choose-if: advisor_action_timer <= 0 and bbwr_in_government and agriculture_minister_party == "BBWR"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not bbwr_in_government : The BBWR is not in government. ?][? if agriculture_minister_party != "BBWR": The BBWR does not have the Agriculture Ministry. ?]
+on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6
+go-to: agricultural_policy
+
+@peasent_campaign
+title: Peasent Campaign
+subtitle: Try to campaign among the peasent populace.
+choose-if: advisor_action_timer == 0 and peasents_policy > 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peasents_policy == 0 : We have not enacted any peasent policies. ?]
+on-arrival: advisor_action_timer = 6; chlopi_bbwr += 5*(1-dissent); peoples_party_support += 1
+
+We have increased our campaigning among farmers and the peasent populace.
+
+@depression
+title: ddressing Rural Economic Issues
+subtitle: Develop a plan to mitigate the economic impact on rural areas.
+choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
+on-arrival: advisor_action_timer = 6; wtb_support += 2; liberals_dissent -= 10; conservatives_dissent += 10
+
+In response to the ongoing economic crisis, Poniatowski has formulated a rural economic recovery plan aimed at stabilizing the agricultural sector and preventing further collapse. His efforts are crucial in maintaining rural stability.
+
