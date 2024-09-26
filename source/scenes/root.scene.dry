@@ -115,7 +115,7 @@ Q.owp_relation = 0;
 Q.kpp_leader = "Thälmann";
 Q.pschd_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the BBWR.
-Q.pschd_party_leader = "Marx";
+Q.pschd_party_leader = "Korfanty";
 Q.bbwr_leader = "Sławek";
 Q.pslp_leader = "Witos"
 Q.owp_leader = "Dmowski";
@@ -409,7 +409,13 @@ Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
 Q.unemployment_insurance_seen = 0;
 Q.blutmai = 0;
-speaker_election_1928_time = 0
+Q.speaker_election_1928_time = 0;
+
+// Agrarian Movement
+Q.sl_formed = 0;
+Q.sl_pslw_split = 0;
+Q.sl_sch_split = 0;
+Q.sl_pslp_split = 0;
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;

@@ -42,9 +42,22 @@ KPP: [+ kpp_r +]%
 
 PPS: [+ pps_r +]%
 
-PSL-W: [+ pslw_r +]%
-
-SCh: [+ sch_r +]%
+{!if sl_formed == 1!}
+     SL: [+ sl_r +]%
+  {!if sl_pslw_split == 1!}
+    PSL-W: [+ pslw_r +]%
+  {!endif!}
+  {!if sl_sch_split == 1!}
+    SCh: [+ sch_r +]%
+  {!endif!}
+  {!if sl_pslp_split == 1!}
+    PSL-P: [+ pslp_r +]%
+  {!endif!}
+{!else!}
+  PSL-W: [+ pslw_r +]%
+  SCh: [+ sch_r +]%
+  PSL-P: [+ pslp_r +]%
+{!endif!}
 
 Minorities: [+ other_r +]%
 
@@ -53,8 +66,6 @@ BBWR: [+ bbwr_r +]%
 NPR: [+ npr_r +]%
 
 PSCHD: [+ pschd_r +]%
-
-PSL-P: [+ pslp_r +]%
 
 [+ sn_party_name +]: [+ sn_r +]%
 
