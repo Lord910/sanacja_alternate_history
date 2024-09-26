@@ -1,0 +1,23 @@
+title: ZLN Party Conference
+subtitle: The ZLN chooses their new direction...
+view-if: year = 1928 and month = 6 and sn_party_name = "ZLN" and sn_r < 30
+max-visits: 1
+tags: event
+new-page: true
+
+= ZLN Party Conference
+
+The **Związek Ludowo-Narodowy** - *Popular National Union* (ZLN) has formally decided to rename itself as **Stronnictwo Narodowe** - *National Party* (SN), following the meeting of the party's General Council. This decision comes in the wake of ZLN's diminishing influence in the Sejm, where they secured only [+ sn_r +]% of seats in recent elections.
+
+The transformation is driven by the party's need to address internal divisions. Younger activists, influenced by the dynamic **Obóz Wielkiej Polski** - *Camp of Greater Poland* (OWP), have criticized the ZLN's slow pace and organizational stagnation. In contrast, some older members of the party leadership continue to support parliamentary methods, believing in a return to democratic governance.
+
+Initially, the older generation holds significant influence within the newly-formed SN leadership, but younger nationalists are increasingly dominating the party's direction. The SN now faces a growing struggle between its moderate, democratic elements and more radical forces eager for a more aggressive opposition strategy.
+
+This name change reflects both a symbolic rebranding and a deeper structural reorganization within the nationalist movement. The BBWR should remain vigilant as SN continues to consolidate and potentially becomes a more unified and assertive political force.
+
+- @new_sn_party_name: ZLN changes its name to SN.
+
+@new_sn_party_name
+on-arrival: sn_party_name = "SN"
+
+We should keep an eye on them.
