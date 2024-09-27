@@ -164,37 +164,37 @@ data = [
     }
 ];
 
-if (Q.sl_formed && !Q.sl_r) {
+if (Q.sl_formed && Q.sl_r) {
     data.push({
-        "id": "sl",
-        "legend": "SL",
-        "name": "SL",
-        "seats": Math.round(Q.sl_r * 5),
-    });
-    if (!Q.sl_formed || Q.sl_sch_split) {
-        data.push({
+            "id": "sl",
+            "legend": "SL",
+            "name": "SL",
+            "seats": Math.round(Q.sl_r * 5),
+        });
+}
+if (!Q.sl_formed || Q.sl_sch_split) {
+    data.push({
             "id": "sch",
             "legend": "SCh",
             "name": "SCh",
             "seats": Math.round(Q.sch_r * 5),
         });
-    }
+}
     if (!Q.sl_formed || Q.sl_pslw_split) {
-        data.push({
+    data.push({
             "id": "pslw",
             "legend": "PSL-W",
             "name": "PSL-W",
             "seats": Math.round(Q.pslw_r * 5),
         });
-    }
-    if (!Q.sl_formed || Q.sl_pslp_split) {
-        data.push({
-            "id": "pslp",
-            "legend": "PSL-P",
-            "name": "PSL-P",
-            "seats": Math.round(Q.pslp_r * 5),
-        });
-    }
+}
+if (!Q.sl_formed || Q.sl_pslp_split) {
+    data.push({
+        "id": "pslp",
+        "legend": "PSL-P",
+        "name": "PSL-P",
+        "seats": Math.round(Q.pslp_r * 5),
+    });
 }
 
 data = data.concat([
