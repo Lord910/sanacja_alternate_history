@@ -613,39 +613,47 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'kpp': '#AF0000', // dark red
-            'pps': '#CC0000', // red
-            'sch': '#556B2F', // dark olive green
-            'pslw': '#179900', // bright green
-            'other': '#FFD700', // gold
-            'bbwr': '#808080', // gray
-            'npr': '#841839', // redish
-            'pschd': '#1E90FF', // dodger blue
-            'pslp': '#3A6538', // dark green
-            'sn': '#0000CD', // dark blue
-            'owp': '#954B00' // brown},
-            {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR','sch': 'SCh','sl': 'SL'});
+            {
+                'kpp': '#AF0000', // dark red
+                'pps': '#CC0000', // red
+                'sch': '#556B2F', // dark olive green
+                'pslw': '#179900', // bright green
+                'other': '#FFD700', // gold
+                'bbwr': '#808080', // gray
+                'npr': '#841839', // redish
+                'pschd': '#1E90FF', // dodger blue
+                'pslp': '#3A6538', // dark green
+                'sn': '#0000CD', // dark blue
+                'owp': '#954B00' // brown
+            },
+            {
+                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
+            }
+    );
     lines.width(width).height(400);
-    //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
-    //document.getElementById('election_history').innerHTML = svg.outerHTML;
 
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'kpp': '#AF0000', // dark red
-            'pps': '#CC0000', // red
-            'sch': '#556B2F', // dark olive green
-            'pslw': '#179900', // bright green
-            'other': '#FFD700', // gold
-            'bbwr': '#808080', // gray
-            'npr': '#841839', // redish
-            'pschd': '#1E90FF', // dodger blue
-            'pslp': '#3A6538', // dark green
-            'sn': '#0000CD', // dark blue
-            'owp': '#954B00' // brown},
-            {'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS','npr': 'NPR','sch': 'SCh','sl': 'SL'});
+            {
+                'kpp': '#AF0000', // dark red
+                'pps': '#CC0000', // red
+                'sch': '#556B2F', // dark olive green
+                'pslw': '#179900', // bright green
+                'other': '#FFD700', // gold
+                'bbwr': '#808080', // gray
+                'npr': '#841839', // redish
+                'pschd': '#1E90FF', // dodger blue
+                'pslp': '#3A6538', // dark green
+                'sn': '#0000CD', // dark blue
+                'owp': '#954B00' // brown
+            },
+            {
+                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
+            }
+        );
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
