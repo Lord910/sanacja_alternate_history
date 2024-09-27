@@ -523,14 +523,14 @@ data = [
     }
 ];
 
-if (Q.sl_formed && !Q.sl_r) {
+if (Q.sl_formed && Q.sl_r) {
     data.push({
         "id": "sl",
         "legend": "SL",
         "name": "SL",
         "seats": Math.round(Q.sl_r * 5),
     });
-    if (!Q.sl_formed || Q.sl_sch_split) {
+    if (!Q.sl_formed || Q.sl_sch_split > 0) {
         data.push({
             "id": "sch",
             "legend": "SCh",
@@ -538,7 +538,7 @@ if (Q.sl_formed && !Q.sl_r) {
             "seats": Math.round(Q.sch_r * 5),
         });
     }
-    if (!Q.sl_formed || Q.sl_pslw_split) {
+    if (!Q.sl_formed || Q.sl_pslw_split > 0) {
         data.push({
             "id": "pslw",
             "legend": "PSL-W",
@@ -546,7 +546,7 @@ if (Q.sl_formed && !Q.sl_r) {
             "seats": Math.round(Q.pslw_r * 5),
         });
     }
-    if (!Q.sl_formed || Q.sl_pslp_split) {
+    if (!Q.sl_formed || Q.sl_pslp_split > 0) {
         data.push({
             "id": "pslp",
             "legend": "PSL-P",
@@ -649,15 +649,11 @@ if (d3 && window) {
 
 [? if sl_formed : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!} ?]
 
-[? if sl_formed and sl_sch_split : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
+[? if not sl_formed or sl_sch_split : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
 
-[? if sl_formed and sl_pslw_split : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
+[? if not sl_formed or sl_pslw_split : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
 
-[? if sl_formed and sl_pslp_split : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
-
-[? if not sl_formed  :     {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
-    {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
-    {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
+[? if not sl_formed or sl_pslp_split : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
