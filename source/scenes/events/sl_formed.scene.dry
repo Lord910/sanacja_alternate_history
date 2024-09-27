@@ -17,11 +17,17 @@ on-arrival: {!
     Q.sl_formed = 1;
     Q.parties.push('sl');
     // update all records
+    Q.bezrobotni_sl = Q.bezrobotni_pslw + Q.bezrobotni_sch + Q.bezrobotni_pslp;
+    Q.chlopi_sl = Q.chlopi_pslw + Q.chlopi_sch + Q.chlopi_pslp;
+    Q.klasa_srednia_sl = Q.klasa_srednia_pslw + Q.klasa_srednia_sch + Q.klasa_srednia_pslp;
+    Q.klasa_wyzsza_sl = Q.klasa_wyzsza_pslw + Q.klasa_wyzsza_sch + Q.klasa_wyzsza_pslp;
+    Q.mniejszosci_sl = Q.mniejszosci_pslw + Q.mniejszosci_sch + Q.mniejszosci_pslp;
+    Q.robotnicy_sl = Q.robotnicy_pslw + Q.robotnicy_sch + Q.robotnicy_pslp;
+
     Q.sl_r = Q.pslw_r + Q.sch_r + Q.pslp_r;
     Q.str_change_sl = (Q.str_change_pslw + Q.str_change_sch + Q.str_change_pslp) / 3;
     Q.sl_relation = (Q.pslw_relation + Q.sch_relation + Q.pslp_relation) / 3;
     Q.old_sl_r = (Q.pslw_r + Q.sch_r + Q.pslp_r) / 3;
-    Q.sl_voters = Q.pslw_voters + Q.sch_voters + Q.pslp_voters;
     for (var record of election_records) {
         record['sl'] = 0;
     }
