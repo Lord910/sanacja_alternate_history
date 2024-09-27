@@ -149,75 +149,79 @@ Q.election_records.push(election_result);
 !}
 on-departure: centrolew_urgency = 1 if (centrolew_urgency == 0 and owp_r >= 15)
 on-display: {!
-const data = [
+let data = [
     {
         "id": "kpp",
         "legend": "KPP",
         "name": "KPP",
         "seats": Math.round(Q.kpp_r * 5),
-    },
+    }
+];
+
+if (Q.sl_formed) {
+    data.push({
+        "id": "sl",
+        "legend": "SL",
+        "name": "SL",
+        "seats": Math.round(Q.sl_r * 5),
+    });
+
+    if (Q.sl_pslw_split === 1) {
+        data.push({
+            "id": "pslw",
+            "legend": "PSL-W",
+            "name": "PSL-W",
+            "seats": Math.round(Q.pslw_r * 5),
+        });
+    }
+
+    if (Q.sl_sch_split === 1) {
+        data.push({
+            "id": "sch",
+            "legend": "SCh",
+            "name": "SCh",
+            "seats": Math.round(Q.sch_r * 5),
+        });
+    }
+
+    if (Q.sl_pslp_split === 1) {
+        data.push({
+            "id": "pslp",
+            "legend": "PSL-P",
+            "name": "PSL-P",
+            "seats": Math.round(Q.pslp_r * 5),
+        });
+    }
+} else {
+    data = data.concat([
+        {
+            "id": "pslw",
+            "legend": "PSL-W",
+            "name": "PSL-W",
+            "seats": Math.round(Q.pslw_r * 5),
+        },
+        {
+            "id": "sch",
+            "legend": "SCh",
+            "name": "SCh",
+            "seats": Math.round(Q.sch_r * 5),
+        },
+        {
+            "id": "pslp",
+            "legend": "PSL-P",
+            "name": "PSL-P",
+            "seats": Math.round(Q.pslp_r * 5),
+        }
+    ]);
+}
+
+data = data.concat([
     {
         "id": "pps",
         "legend": "PPS",
         "name": "PPS",
         "seats": Math.round(Q.pps_r * 5),
     },
-    ...(Q.sl_formed
-        ? [
-            // SL was formed
-            {
-                "id": "sl",
-                "legend": "SL",
-                "name": "SL",
-                "seats": Math.round(Q.sl_r * 5),
-            },
-            ...(Q.sl_pslw_split === 1
-                ? [{
-                    "id": "pslw",
-                    "legend": "PSL-W",
-                    "name": "PSL-W",
-                    "seats": Math.round(Q.pslw_r * 5),
-                }]
-                : []),
-            ...(Q.sl_sch_split === 1
-                ? [{
-                    "id": "sch",
-                    "legend": "SCh",
-                    "name": "SCh",
-                    "seats": Math.round(Q.sch_r * 5),
-                }]
-                : []),
-            ...(Q.sl_pslp_split === 1
-                ? [{
-                    "id": "pslp",
-                    "legend": "PSL-P",
-                    "name": "PSL-P",
-                    "seats": Math.round(Q.pslp_r * 5),
-                }]
-                : []),
-        ]
-        : [
-            // SL was not formed, show PSL-W, SCh, and PSL-P
-            {
-                "id": "pslw",
-                "legend": "PSL-W",
-                "name": "PSL-W",
-                "seats": Math.round(Q.pslw_r * 5),
-            },
-            {
-                "id": "sch",
-                "legend": "SCh",
-                "name": "SCh",
-                "seats": Math.round(Q.sch_r * 5),
-            },
-            {
-                "id": "pslp",
-                "legend": "PSL-P",
-                "name": "PSL-P",
-                "seats": Math.round(Q.pslp_r * 5),
-            }
-        ]
-    ),
     {
         "id": "other",
         "legend": "Other",
@@ -253,8 +257,8 @@ const data = [
         "legend": "OWP",
         "name": "OWP",
         "seats": Math.round(Q.owp_r * 5),
-    },
-];
+    }
+]);
 if (window && d3) {
     var width = 500; 
     var height = 500;
