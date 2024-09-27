@@ -290,29 +290,24 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!}
-?]
-[? if sl_formed and sl_sch_split == 1 :
+
+[? if sl_formed and sl_sch_split == 1 :]
     {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
-?]
-[? if sl_formed and sl_pslw_split == 1 :
+[?]
+
+[? if sl_formed and sl_pslw_split == 1 :]
     {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
-?]
-[? if sl_formed and sl_pslp_split == 1 :
+[?]
+
+[? if sl_formed and sl_pslp_split == 1 :]
     {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
-?]
-[? if not sl_formed :
+[?]
+
+[? if not sl_formed :]
     {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
-    
     {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
-   
     {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
-?]
-
-{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#841839'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
+[?]
 
 {!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
@@ -343,11 +338,13 @@ Centre-Right Coalition (NPR + PSCHD + PSL-P + [+ sn_party_name +]): [+ centre_ri
 
 Far Right Coalition ([+ sn_party_name +] + OWP): [+ far_right_coalition +]%
 
-# Popular Front (KPP + PPS): [+ popular_front_coalition +]%
+[? if centrolew_urgency <= 1 and owp_r >= 15 :]
+    The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany.
+[?]
 
-[? if centrolew_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
-
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPP, [+ sn_party_name +], and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 :]
+    Together, the anti-democratic KPP, [+ sn_party_name +], and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible.
+[?]
 
 There are some potential coalition arrangements.
 
