@@ -158,7 +158,7 @@ let data = [
     }
 ];
 
-if (Q.sl_formed) {
+if (sl_formed) {
     data.push({
         "id": "sl",
         "legend": "SL",
@@ -166,7 +166,7 @@ if (Q.sl_formed) {
         "seats": Math.round(Q.sl_r * 5),
     });
 
-    if (Q.sl_pslw_split === 1) {
+    if (sl_pslw_split === 1) {
         data.push({
             "id": "pslw",
             "legend": "PSL-W",
@@ -175,7 +175,7 @@ if (Q.sl_formed) {
         });
     }
 
-    if (Q.sl_sch_split === 1) {
+    if (sl_sch_split === 1) {
         data.push({
             "id": "sch",
             "legend": "SCh",
@@ -184,7 +184,7 @@ if (Q.sl_formed) {
         });
     }
 
-    if (Q.sl_pslp_split === 1) {
+    if (sl_pslp_split === 1) {
         data.push({
             "id": "pslp",
             "legend": "PSL-P",
@@ -289,23 +289,23 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 
-[? if Q.sl_formed : 
+[? if sl_formed : 
     {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!}
 ?]
 
-[? if Q.sl_formed and Q.sl_sch_split === 1 :
+[? if sl_formed and sl_sch_split === 1 :
     {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
 ?]
 
-[? if Q.sl_formed and Q.sl_pslw_split === 1 :
+[? if sl_formed and sl_pslw_split === 1 :
     {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
 ?]
 
-[? if Q.sl_formed and Q.sl_pslp_split === 1 :
+[? if sl_formed and sl_pslp_split === 1 :
     {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
 ?]
 
-[? if !Q.sl_formed :
+[? if !sl_formed :
     {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!}
     {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!}
     {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!}
