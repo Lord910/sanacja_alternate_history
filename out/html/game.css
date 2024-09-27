@@ -526,6 +526,9 @@ table {
 .seat.pslw {
   fill: #179900; /* bright green */
 }
+.seat.sl {
+  fill: #3A6538; /* dark green */
+}
 .seat.other {
   fill: #FFD700; /* gold */
 }

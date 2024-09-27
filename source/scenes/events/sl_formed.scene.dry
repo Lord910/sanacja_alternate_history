@@ -1,0 +1,33 @@
+title: Unification of Agrarian Parties
+subtitle: PSL-W, SCh, and PSL-P decided to unite into one party
+view-if: year = 1928 and month = 6 and sl_formed = 0
+max-visits: 1
+tags: event
+new-page: true
+
+max-visits: 1
+= Formation of SL
+
+The PSL-W, SCh, and PSL-P parties have decided to unite into a single party, SL. This unification aims to consolidate their voter base and strengthen their electoral results.
+
+- @agrarians_united: We should keep an eye on them.
+
+@agrarians_united
+on-arrival: {!
+// set up the infrastructure
+Q.sl_formed = 1;
+Q.parties.push('sl');
+
+// update all records
+Q.sl_r = pslw_r + sch_r + pslp_r;
+Q.str_change_sl = (str_change_pslw + str_change_sch + str_change_pslp) / 3;
+Q,sl_relation = (pslw_relation + sch_relation + pslp_relation) / 3;
+Q.old_sl_r = 0;
+Q.sl_voters = pslw_voters + sch_voters + pslp_voters;
+for (var record of Q.election_records) {
+    record['sl'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['sl'] = 0;
+}
+!}
