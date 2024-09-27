@@ -4,13 +4,9 @@ view-if: year = 1928 and month = 6 and sl_formed = 0
 tags: event
 new-page: true
 max-visits: 1
-
 = Formation of SL
-
 The PSL-W, SCh, and PSL-P parties have decided to unite into a single party, SL. This unification aims to consolidate their voter base and strengthen their electoral results.
-
 - @agrarians_united: We should keep an eye on them.
-
 @agrarians_united
 on-arrival: 
 {
