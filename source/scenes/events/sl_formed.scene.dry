@@ -12,8 +12,7 @@ The PSL-W, SCh, and PSL-P parties have decided to unite into a single party, SL.
 - @agrarians_united: We should keep an eye on them.
 
 @agrarians_united
-on-arrival: 
-{
+on-arrival: {!
     // set up the infrastructure
     sl_formed = 1;
     parties.push('sl');
@@ -29,4 +28,4 @@ on-arrival:
     for (var record of party_support_records) {
         record['sl'] = 0;
     }
-}
+!}
