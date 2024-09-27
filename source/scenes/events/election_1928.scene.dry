@@ -286,29 +286,27 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 
 {!
-    // Conditional: If SL was formed
     Q.sl_formed ?
     `
-    <tr><td><div class="box" style='background-color:#3A6538'> </div> </td><td> SL: [+ sl_r +]% </td><td> [+ str_change_sl +] </td></tr>
+    <tr><td><div class="box" style='background-color:#3A6538'> </div> </td><td> SL: ${Q.sl_r}% </td><td> ${Q.str_change_sl} </td></tr>
     ` +
     // If SL was formed and SCh is split, also display SCh
     (Q.sl_sch_split === 1 ? `
-        <tr><td><div class="box" style='background-color:#556B2F'> </div> </td><td> SCh: [+ sch_r +]% </td><td> [+ str_change_sch +] </td></tr>
+        <tr><td><div class="box" style='background-color:#556B2F'> </div> </td><td> SCh: ${Q.sch_r}% </td><td> ${Q.str_change_sch} </td></tr>
     ` : '') +
     // If SL was formed and PSL-W is split, also display PSL-W
     (Q.sl_pslw_split === 1 ? `
-        <tr><td><div class="box" style='background-color:#179900'> </div> </td><td> PSL-W: [+ pslw_r +]% </td><td> [+ str_change_pslw +] </td></tr>
+        <tr><td><div class="box" style='background-color:#179900'> </div> </td><td> PSL-W: ${Q.pslw_r}% </td><td> ${Q.str_change_pslw} </td></tr>
     ` : '') +
     // If SL was formed and PSL-P is split, also display PSL-P
     (Q.sl_pslp_split === 1 ? `
-        <tr><td><div class="box" style='background-color:#3A6538'> </div> </td><td> PSL-P: [+ pslp_r +]% </td><td> [+ str_change_pslp +] </td></tr>
+        <tr><td><div class="box" style='background-color:#3A6538'> </div> </td><td> PSL-P: ${Q.pslp_r}% </td><td> ${Q.str_change_pslp} </td></tr>
     ` : '')
     :
-    // If SL was not formed, display PSL-W, SCh, and PSL-P normally
     `
-    <tr><td><div class="box" style='background-color:#179900'> </div> </td><td> PSL-W: [+ pslw_r +]% </td><td> [+ str_change_pslw +] </td></tr>
-    <tr><td><div class="box" style='background-color:#556B2F'> </div> </td><td> SCh: [+ sch_r +]% </td><td> [+ str_change_sch +] </td></tr>
-    <tr><td><div class="box" style='background-color:#3A6538'> </div> </td><td> PSL-P: [+ pslp_r +]% </td><td> [+ str_change_pslp +] </td></tr>
+    <tr><td><div class="box" style='background-color:#179900'> </div> </td><td> PSL-W: ${Q.pslw_r}% </td><td> ${Q.str_change_pslw} </td></tr>
+    <tr><td><div class="box" style='background-color:#556B2F'> </div> </td><td> SCh: ${Q.sch_r}% </td><td> ${Q.str_change_sch} </td></tr>
+    <tr><td><div class="box" style='background-color:#3A6538'> </div> </td><td> PSL-P: ${Q.pslp_r}% </td><td> ${Q.str_change_pslp} </td></tr>
     `
 !}
 
