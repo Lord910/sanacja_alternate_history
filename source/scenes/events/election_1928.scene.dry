@@ -161,7 +161,7 @@ data = [
         "legend": "PPS",
         "name": "PPS",
         "seats": Math.round(Q.pps_r * 5),
-    },
+    }
 ];
 
 if (Q.sl_formed && !Q.sl_r) {
