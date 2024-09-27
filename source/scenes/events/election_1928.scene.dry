@@ -156,25 +156,22 @@ data = [
         "name": "KPP",
         "seats": Math.round(Q.kpp_r * 5),
     }
+    {
+        "id": "pps",
+        "legend": "PPS",
+        "name": "PPS",
+        "seats": Math.round(Q.pps_r * 5),
+    },
 ];
 
-if (Q.sl_formed === 1) {
+if (Q.sl_formed && !Q.sl_r) {
     data.push({
         "id": "sl",
         "legend": "SL",
         "name": "SL",
         "seats": Math.round(Q.sl_r * 5),
     });
-
-    if (Q.sl_pslw_split === 1) {
-        data.push({
-            "id": "pslw",
-            "legend": "PSL-W",
-            "name": "PSL-W",
-            "seats": Math.round(Q.pslw_r * 5),
-        });
-    }
-    if (Q.sl_sch_split === 1) {
+    if (!Q.sl_formed || Q.sl_sch_split) {
         data.push({
             "id": "sch",
             "legend": "SCh",
@@ -182,7 +179,15 @@ if (Q.sl_formed === 1) {
             "seats": Math.round(Q.sch_r * 5),
         });
     }
-    if (Q.sl_pslp_split === 1) {
+    if (!Q.sl_formed || Q.sl_pslw_split) {
+        data.push({
+            "id": "pslw",
+            "legend": "PSL-W",
+            "name": "PSL-W",
+            "seats": Math.round(Q.pslw_r * 5),
+        });
+    }
+    if (!Q.sl_formed || Q.sl_pslp_split) {
         data.push({
             "id": "pslp",
             "legend": "PSL-P",
@@ -190,34 +195,9 @@ if (Q.sl_formed === 1) {
             "seats": Math.round(Q.pslp_r * 5),
         });
     }
-} else {
-    data.push({
-        "id": "pslw",
-        "legend": "PSL-W",
-        "name": "PSL-W",
-        "seats": Math.round(Q.pslw_r * 5),
-    });
-    data.push({
-        "id": "sch",
-        "legend": "SCh",
-        "name": "SCh",
-        "seats": Math.round(Q.sch_r * 5),
-    });
-    data.push({
-        "id": "pslp",
-        "legend": "PSL-P",
-        "name": "PSL-P",
-        "seats": Math.round(Q.pslp_r * 5),
-    });
 }
 
 data = data.concat([
-    {
-        "id": "pps",
-        "legend": "PPS",
-        "name": "PPS",
-        "seats": Math.round(Q.pps_r * 5),
-    },
     {
         "id": "other",
         "legend": "Other",
@@ -286,7 +266,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!}
+[? if sl_formed : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!} ?]
 
 [? if sl_formed and sl_sch_split : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
 
