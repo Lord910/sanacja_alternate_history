@@ -17,11 +17,11 @@ on-arrival: {!
     Q.sl_formed = 1;
     Q.parties.push('sl');
     // update all records
-    Q.sl_r = pslw_r + sch_r + pslp_r;
-    Q.str_change_sl = (str_change_pslw + str_change_sch + str_change_pslp) / 3;
-    Q.sl_relation = (pslw_relation + sch_relation + pslp_relation) / 3;
+    Q.sl_r = Q.pslw_r + Q.sch_r + Q.pslp_r;
+    Q.str_change_sl = (Q.str_change_pslw + Q.str_change_sch + Q.str_change_pslp) / 3;
+    Q.sl_relation = (Q.pslw_relation + Q.sch_relation + Q.pslp_relation) / 3;
     Q.old_sl_r = (Q.pslw_r + Q.sch_r + Q.pslp_r) / 3;
-    Q.sl_voters = pslw_voters + sch_voters + pslp_voters;
+    Q.sl_voters = Q.pslw_voters + Q.sch_voters + Q.pslp_voters;
     for (var record of election_records) {
         record['sl'] = 0;
     }
