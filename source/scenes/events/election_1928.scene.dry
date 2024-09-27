@@ -149,7 +149,7 @@ Q.election_records.push(election_result);
 !}
 on-departure: centrolew_urgency = 1 if (centrolew_urgency == 0 and owp_r >= 15)
 on-display: {!
-let data = [
+data = [
     {
         "id": "kpp",
         "legend": "KPP",
@@ -158,7 +158,7 @@ let data = [
     }
 ];
 
-if (sl_formed) {
+if (Q.sl_formed === 1) {
     data.push({
         "id": "sl",
         "legend": "SL",
@@ -166,7 +166,7 @@ if (sl_formed) {
         "seats": Math.round(Q.sl_r * 5),
     });
 
-    if (sl_pslw_split === 1) {
+    if (Q.sl_pslw_split === 1) {
         data.push({
             "id": "pslw",
             "legend": "PSL-W",
@@ -174,8 +174,7 @@ if (sl_formed) {
             "seats": Math.round(Q.pslw_r * 5),
         });
     }
-
-    if (sl_sch_split === 1) {
+    if (Q.sl_sch_split === 1) {
         data.push({
             "id": "sch",
             "legend": "SCh",
@@ -183,8 +182,7 @@ if (sl_formed) {
             "seats": Math.round(Q.sch_r * 5),
         });
     }
-
-    if (sl_pslp_split === 1) {
+    if (Q.sl_pslp_split === 1) {
         data.push({
             "id": "pslp",
             "legend": "PSL-P",
@@ -193,26 +191,24 @@ if (sl_formed) {
         });
     }
 } else {
-    data = data.concat([
-        {
-            "id": "pslw",
-            "legend": "PSL-W",
-            "name": "PSL-W",
-            "seats": Math.round(Q.pslw_r * 5),
-        },
-        {
-            "id": "sch",
-            "legend": "SCh",
-            "name": "SCh",
-            "seats": Math.round(Q.sch_r * 5),
-        },
-        {
-            "id": "pslp",
-            "legend": "PSL-P",
-            "name": "PSL-P",
-            "seats": Math.round(Q.pslp_r * 5),
-        }
-    ]);
+    data.push({
+        "id": "pslw",
+        "legend": "PSL-W",
+        "name": "PSL-W",
+        "seats": Math.round(Q.pslw_r * 5),
+    });
+    data.push({
+        "id": "sch",
+        "legend": "SCh",
+        "name": "SCh",
+        "seats": Math.round(Q.sch_r * 5),
+    });
+    data.push({
+        "id": "pslp",
+        "legend": "PSL-P",
+        "name": "PSL-P",
+        "seats": Math.round(Q.pslp_r * 5),
+    });
 }
 
 data = data.concat([
@@ -248,8 +244,8 @@ data = data.concat([
     },
     {
         "id": "sn",
-        "legend": sn_party_name,
-        "name": sn_party_name,
+        "legend": "sn_party_name",
+        "name": "sn_party_name",
         "seats": Math.round(Q.sn_r * 5),
     },
     {
@@ -259,6 +255,7 @@ data = data.concat([
         "seats": Math.round(Q.owp_r * 5),
     }
 ]);
+
 if (window && d3) {
     var width = 500; 
     var height = 500;
