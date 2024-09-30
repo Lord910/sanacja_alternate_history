@@ -764,7 +764,7 @@ Member of **Conservatives** of the BBWR has been appointed Agriculture Minister.
 @reichswehr
 title: Military Affairs Ministry
 subtitle: The Ministry responsible for the Armed Forces. It is the domain of Marshal Józef Piłsudski.
-unavailable-subtitle: [? leverage >= 15 : We do not have enough leverage. ?][? army_minister = "Józef Piłsudski" : We can't remove Piłsudski from this position ?]
+unavailable-subtitle: [? if leverage >= 15 : We do not have enough leverage. ?][? if army_minister = "Józef Piłsudski" : We can't remove Piłsudski from this position ?]
 tags: mins_1928
 choose-if: leverage >= 15 and army_minister != "Józef Piłsudski"
 view-if: army_minister_party != "BBWR"
