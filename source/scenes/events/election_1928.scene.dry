@@ -328,7 +328,9 @@ There are some potential coalition arrangements.
 @bbwr_majority
 title: BBWR majority alone
 subtitle: BBWR: [+ bbwr_r +]%
-view-if: bbwr_r >= 50
+view-if: bbwr_r >= 20
+unavailable-subtitle: BBWR does not have majority
+choose-if: bbwr_r >= 50
 on-arrival: chancellor = "Empty"; chancellor_party = "BBWR"; bbwr_in_government = 1; in_bbwr_majority = 1; pro_republic += 5; foreign_minister_party = "BBWR"; interior_minister_party = "BBWR"; justice_minister_party = "BBWR"; labor_minister_party = "BBWR"; reichswehr_minister_party = "BBWR"; economic_minister_party = "BBWR"; finance_minister_party = "BBWR"; agriculture_minister_party = "BBWR"; reichswehr_loyalty -= 0.05; 
 achievement: majority_party
 
@@ -348,7 +350,9 @@ Józef Piłsudski has become Prime Minister of the BBWR majority
 @bbwr_minority
 title: BBWR minority government
 subtitle: BBWR: [+ bbwr_r +]%
-view-if: bbwr_r < 50 and president == "Ignacy Mościcki"
+view-if: bbwr_r >= 20
+unavailable-subtitle: We can't do it without loyal President
+choose-if: bbwr_r < 50 and president_party == "BBWR"
 on-arrival: chancellor = "Empty"; chancellor_party = "BBWR"; bbwr_in_government = 1; in_bbwr_minority = 1; pro_republic += 3; foreign_minister_party = "BBWR"; interior_minister_party = "BBWR"; justice_minister_party = "BBWR"; labor_minister_party = "BBWR"; reichswehr_minister_party = "BBWR"; economic_minister_party = "BBWR"; finance_minister_party = "BBWR"; agriculture_minister_party = "BBWR"; reichswehr_loyalty -= 0.03; 
 achievement: minority_party
 
@@ -373,27 +377,129 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 
 @labor
 title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us.
+subtitle: The Labour Ministry manages employment, worker rights, and social policies.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: labor_minister_party != "BBWR"
-on-arrival: leverage -= 5; labor_minister_party = "BBWR"; labor_minister = "Wissell"
+
+- @labour_minister_sanacja_left: Labour Ministry should be controlled by Sanacja Left
+- @labour_minister_repairers: Labour Ministry should be controlled by Repairers
+- @labour_minister_liberals: Labour Ministry should be controlled by Liberals
+- @labour_minister_colonels: Labour Ministry should be controlled by Colonels
+- @labour_minister_conservatives: Labour Ministry should be controlled by Conservatives
+
+@labour_minister_sanacja_left
+title: **Sanacja Left**
+subtitle: Labour Ministry should be controlled by **Sanacja Left**
+unavailable-subtitle: We do not have enough leverage.
+view-if: labor_minister_faction != "Sanacja Left" or labor_minister_party != "BBWR"
+on-arrival: leverage -= 5; labor_minister_faction = "Sanacja Left"; labor_minister = "Placeholder"; labor_minister_party = "BBWR"
 go-to: ministries
 
-Rudolf Wissell of the BBWR has been appointed labor minister.
+Member of **Sanacja Left** of the BBWR has been appointed Labor Minister.
+
+@labour_minister_repairers
+title: **Repairers**
+subtitle: Labour Ministry should be controlled by **Repairers**
+unavailable-subtitle: We do not have enough leverage.
+view-if: labor_minister_faction != "Repairers" or labor_minister_party != "BBWR"
+on-arrival: leverage -= 5; labor_minister_faction = "Repairers"; labor_minister = "Placeholder"; labor_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Repairers** of the BBWR has been appointed Labor Minister.
+
+@labour_minister_liberals
+title: **Liberals**
+subtitle: Labour Ministry should be controlled by **Liberals**
+unavailable-subtitle: We do not have enough leverage.
+view-if: labor_minister_faction != "Liberals" or labor_minister_party != "BBWR"
+on-arrival: leverage -= 5; labor_minister_faction = "Liberals"; labor_minister = "Placeholder"; labor_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Liberals** of the BBWR has been appointed Labor Minister.
+
+@labour_minister_colonels
+title: **Colonels**
+subtitle: Labour Ministry should be controlled by **Colonels**
+unavailable-subtitle: We do not have enough leverage.
+view-if: labor_minister_faction != "Colonels" or labor_minister_party != "BBWR"
+on-arrival: leverage -= 5; labor_minister_faction = "Colonels"; labor_minister = "Placeholder"; labor_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Colonels** of the BBWR has been appointed Labor Minister.
+
+@labour_minister_conservatives
+title: **Conservatives**
+subtitle: Labour Ministry should be controlled by **Conservatives**
+unavailable-subtitle: We do not have enough leverage.
+view-if: labor_minister_faction != "Conservatives" or labor_minister_party != "BBWR"
+on-arrival: leverage -= 5; labor_minister_faction = "Conservatives"; labor_minister = "Placeholder"; labor_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Conservatives** of the BBWR has been appointed Labor Minister.
 
 @interior
 title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+subtitle: The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "BBWR"
-on-arrival: leverage -= 5; interior_minister_party = "BBWR"; interior_minister = "Severing"
+
+- @interior_minister_sanacja_left
+- @interior_minister_repairers
+- @interior_minister_liberals
+- @interior_minister_colonels
+- @interior_minister_conservatives
+
+@interior_minister_sanacja_left
+title: **Sanacja Left**
+subtitle: Interior Ministry should be controlled by **Sanacja Left**.
+view-if: interior_minister_faction != "Sanacja Left" or interior_minister_party != "BBWR"
+on-arrival: leverage -= 5; interior_minister_faction = "Sanacja Left"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
 go-to: ministries
 
-Carl Severing of the BBWR has been appointed Interior Minister.
+Member of **Sanacja Left** of the BBWR has been appointed Interior Minister.
+
+@interior_minister_repairers
+title: **Repairers**
+subtitle: Interior Ministry should be controlled by **Repairers**.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: interior_minister_faction != "Repairers" or interior_minister_party != "BBWR"
+on-arrival: leverage -= 5; interior_minister_faction = "Repairers"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Repairers** of the BBWR has been appointed Interior Minister.
+
+@interior_minister_liberals
+title: **Liberals**
+subtitle: Interior Ministry should be controlled by **Liberals**. 
+view-if: interior_minister_faction != "Liberals" or interior_minister_party != "BBWR"
+on-arrival: leverage -= 5; interior_minister_faction = "Liberals"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Liberals** of the BBWR has been appointed Interior Minister.
+
+@interior_minister_colonels
+title: **Colonels**
+subtitle: Interior Ministry should be controlled by **Colonels**.
+view-if: interior_minister_faction != "Colonels" or interior_minister_party != "BBWR"
+on-arrival: leverage -= 5; interior_minister_faction = "Colonels"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Colonels** of the BBWR has been appointed Interior Minister.
+
+@interior_minister_conservatives
+title: **Conservatives**
+subtitle: Interior Ministry should be controlled by **Conservatives**. The Interior Ministry controls domestic security.
+view-if: interior_minister_faction != "Conservatives" or interior_minister_party != "BBWR"
+on-arrival: leverage -= 5; interior_minister_faction = "Conservatives"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
+go-to: ministries
+
+Member of **Conservatives** of the BBWR has been appointed Interior Minister.
 
 @finance
 title: Finance Ministry

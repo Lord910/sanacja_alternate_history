@@ -1,5 +1,5 @@
 title: The Death of Kazimierz Bartel
-view-if: year = 1931 and month >= 3
+view-if: year = 1945
 frequency: 1000
 max-visits: 1
 tags: event
