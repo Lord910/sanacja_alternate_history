@@ -1,6 +1,6 @@
 title: The KPP presents its list of goals for the coalition.
 view-if: (in_popular_front = 1 or in_left_front = 1) and kpp_goals_seen = 0 and kpp_coalition_success = 0 and next_election_time - time > 12 and bbwr_in_government
-on-arrival: kpp_goals_seen = 1; welfare_goal = 1; foreign_goal = 0; agriculture_goal = 1 if agriculture_minister_party != "KPP"; economy_goal = 1 if economy_minister_party != "KPP"; finance_goal = 1 if finance_minister_party != "KPP"; labor_goal = 1 if labor_minister_party != "KPP"; reichswehr_goal = 1 if reichswehr_minister_party != "KPP"; kpp_ultimatum_timer = 12; kpp_ultimatum_timer = 16 if kpp_relation >= 60; kpp_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
+on-arrival: kpp_goals_seen = 1; welfare_goal = 1; foreign_goal = 0; agriculture_goal = 1 if agriculture_minister_party != "KPP"; economy_goal = 1 if economy_minister_party != "KPP"; finance_goal = 1 if finance_minister_party != "KPP"; labor_goal = 1 if labor_minister_party != "KPP"; reichswehr_goal = 1 if army_minister_party != "KPP"; kpp_ultimatum_timer = 12; kpp_ultimatum_timer = 16 if kpp_relation >= 60; kpp_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
 new-page: true
 tags: event
 

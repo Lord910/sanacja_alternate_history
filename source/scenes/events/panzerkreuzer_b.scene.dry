@@ -48,6 +48,6 @@ Our vote against the battlecruiser succeeds, with the support of the KPP and ant
 
 @ministry
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0
-view-if: reichswehr_minister_party == "BBWR"
+view-if: army_minister_party == "BBWR"
 
 With our control of the Reichswehr Ministry, we have pressured the Navy to abandon its rearmament plans. The ship will not be built. [? if panzerkreuzer_funded == 0 : We have saved some budget from not funding the two ships. ?]

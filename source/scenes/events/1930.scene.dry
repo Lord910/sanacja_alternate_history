@@ -34,7 +34,7 @@ if (Q.budget > 0) {
 }
 !}
 tags: event
-view-if: year = 1930 and month = 1 
+view-if: year = 1945
 priority: 2
 max-visits: 1
 
