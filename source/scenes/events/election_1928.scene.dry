@@ -874,7 +874,7 @@ tags: drop_mins_1928
 go-to: ministries
 
 @drop_reichswehr
-title: Drop the Military Affair Ministry.
+title: Drop the Military Affairs Ministry.
 view-if: army_minister_party = "BBWR"
 unavailable-subtitle: [? if army_minister = "Piłsudski" : We can't remove Piłsudski from this position ?]
 choose-if: army_minister != "Piłsudski"
