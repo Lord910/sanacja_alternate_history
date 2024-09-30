@@ -383,14 +383,13 @@ tags: mins_1928
 choose-if: leverage >= 5
 view-if: labor_minister_party != "BBWR"
 
-- @labour_minister_sanacja_left: Labour Ministry should be controlled by Sanacja Left
-- @labour_minister_repairers: Labour Ministry should be controlled by Repairers
-- @labour_minister_liberals: Labour Ministry should be controlled by Liberals
-- @labour_minister_colonels: Labour Ministry should be controlled by Colonels
-- @labour_minister_conservatives: Labour Ministry should be controlled by Conservatives
+- @labour_minister_sanacja_left: **Sanacja Left**
+- @labour_minister_repairers: **Repairers**
+- @labour_minister_liberals: **Liberals**
+- @labour_minister_colonels: **Colonels**
+- @labour_minister_conservatives: **Conservatives**
 
 @labour_minister_sanacja_left
-title: **Sanacja Left**
 subtitle: Labour Ministry should be controlled by **Sanacja Left**
 unavailable-subtitle: We do not have enough leverage.
 view-if: labor_minister_faction != "Sanacja Left" or labor_minister_party != "BBWR"
@@ -400,7 +399,6 @@ go-to: ministries
 Member of **Sanacja Left** of the BBWR has been appointed Labor Minister.
 
 @labour_minister_repairers
-title: **Repairers**
 subtitle: Labour Ministry should be controlled by **Repairers**
 unavailable-subtitle: We do not have enough leverage.
 view-if: labor_minister_faction != "Repairers" or labor_minister_party != "BBWR"
@@ -410,7 +408,6 @@ go-to: ministries
 Member of **Repairers** of the BBWR has been appointed Labor Minister.
 
 @labour_minister_liberals
-title: **Liberals**
 subtitle: Labour Ministry should be controlled by **Liberals**
 unavailable-subtitle: We do not have enough leverage.
 view-if: labor_minister_faction != "Liberals" or labor_minister_party != "BBWR"
@@ -420,7 +417,6 @@ go-to: ministries
 Member of **Liberals** of the BBWR has been appointed Labor Minister.
 
 @labour_minister_colonels
-title: **Colonels**
 subtitle: Labour Ministry should be controlled by **Colonels**
 unavailable-subtitle: We do not have enough leverage.
 view-if: labor_minister_faction != "Colonels" or labor_minister_party != "BBWR"
@@ -430,7 +426,6 @@ go-to: ministries
 Member of **Colonels** of the BBWR has been appointed Labor Minister.
 
 @labour_minister_conservatives
-title: **Conservatives**
 subtitle: Labour Ministry should be controlled by **Conservatives**
 unavailable-subtitle: We do not have enough leverage.
 view-if: labor_minister_faction != "Conservatives" or labor_minister_party != "BBWR"
@@ -447,14 +442,13 @@ tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "BBWR"
 
-- @interior_minister_sanacja_left
-- @interior_minister_repairers
-- @interior_minister_liberals
-- @interior_minister_colonels
-- @interior_minister_conservatives
+- @interior_minister_sanacja_left: **Sanacja Left**
+- @interior_minister_repairers: **Repairers**
+- @interior_minister_liberals: **Liberals**
+- @interior_minister_colonels: **Colonels**
+- @interior_minister_conservatives: **Conservatives**
 
 @interior_minister_sanacja_left
-title: **Sanacja Left**
 subtitle: Interior Ministry should be controlled by **Sanacja Left**.
 view-if: interior_minister_faction != "Sanacja Left" or interior_minister_party != "BBWR"
 on-arrival: leverage -= 5; interior_minister_faction = "Sanacja Left"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
@@ -463,11 +457,8 @@ go-to: ministries
 Member of **Sanacja Left** of the BBWR has been appointed Interior Minister.
 
 @interior_minister_repairers
-title: **Repairers**
 subtitle: Interior Ministry should be controlled by **Repairers**.
 unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 5
 view-if: interior_minister_faction != "Repairers" or interior_minister_party != "BBWR"
 on-arrival: leverage -= 5; interior_minister_faction = "Repairers"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
 go-to: ministries
@@ -475,7 +466,6 @@ go-to: ministries
 Member of **Repairers** of the BBWR has been appointed Interior Minister.
 
 @interior_minister_liberals
-title: **Liberals**
 subtitle: Interior Ministry should be controlled by **Liberals**. 
 view-if: interior_minister_faction != "Liberals" or interior_minister_party != "BBWR"
 on-arrival: leverage -= 5; interior_minister_faction = "Liberals"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
@@ -484,7 +474,6 @@ go-to: ministries
 Member of **Liberals** of the BBWR has been appointed Interior Minister.
 
 @interior_minister_colonels
-title: **Colonels**
 subtitle: Interior Ministry should be controlled by **Colonels**.
 view-if: interior_minister_faction != "Colonels" or interior_minister_party != "BBWR"
 on-arrival: leverage -= 5; interior_minister_faction = "Colonels"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
@@ -493,7 +482,6 @@ go-to: ministries
 Member of **Colonels** of the BBWR has been appointed Interior Minister.
 
 @interior_minister_conservatives
-title: **Conservatives**
 subtitle: Interior Ministry should be controlled by **Conservatives**. The Interior Ministry controls domestic security.
 view-if: interior_minister_faction != "Conservatives" or interior_minister_party != "BBWR"
 on-arrival: leverage -= 5; interior_minister_faction = "Conservatives"; interior_minister = "Placeholder"; interior_minister_party = "BBWR"
