@@ -81,14 +81,14 @@ var leverage_map = {
 };
 
 var ministers = {
-    labor_minister_faction: labor_minister_faction,
-    interior_minister_faction: interior_minister_faction,
-    finance_minister_faction: finance_minister_faction,
-    economic_minister_faction: economic_minister_faction,
-    justice_minister_faction: justice_minister_faction,
-    foreign_minister_faction: foreign_minister_faction,
-    agriculture_minister_faction: agriculture_minister_faction,
-    army_minister_faction: army_minister_faction
+    labor_minister_faction: Q.labor_minister_faction,
+    interior_minister_faction: Q.interior_minister_faction,
+    finance_minister_faction: Q.finance_minister_faction,
+    economic_minister_faction: Q.economic_minister_faction,
+    justice_minister_faction: Q.justice_minister_faction,
+    foreign_minister_faction: Q.foreign_minister_faction,
+    agriculture_minister_faction: Q.agriculture_minister_faction,
+    army_minister_faction: Q.army_minister_faction
 };
 
 for (var minister in ministers) {
