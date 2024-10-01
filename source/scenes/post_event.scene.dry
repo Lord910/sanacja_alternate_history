@@ -85,6 +85,7 @@ Q.colonels_leverage = 100*Q.colonels_leverage/total_leverage;
 Q.conservatives_leverage = 100*Q.conservatives_leverage/total_leverage;
 Q.fourth_brigade_leverage = 100*Q.fourth_brigade_leverage/total_leverage;
 
+
 if (Q.labor_minister_faction === "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
