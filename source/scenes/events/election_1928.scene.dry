@@ -820,131 +820,131 @@ title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
 on-arrival: {!
-if (labor_minister_faction = "Sanacja Left") {
+if (labor_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (labor_minister_faction = "Conservatives") {
+if (labor_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (labor_minister_faction = "Liberals") {
+if (labor_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (labor_minister_faction = "Repairers") {
+if (labor_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (labor_minister_faction = "Colonels") {
+if (labor_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (interior_minister_faction = "Sanacja Left") {
+if (interior_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (interior_minister_faction = "Conservatives") {
+if (interior_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (interior_minister_faction = "Liberals") {
+if (interior_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (interior_minister_faction = "Repairers") {
+if (interior_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (interior_minister_faction = "Colonels") {
+if (interior_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (finance_minister_faction = "Sanacja Left") {
+if (finance_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (finance_minister_faction = "Conservatives") {
+if (finance_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (finance_minister_faction = "Liberals") {
+if (finance_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (finance_minister_faction = "Repairers") {
+if (finance_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (finance_minister_faction = "Colonels") {
+if (finance_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (economic_minister_faction = "Sanacja Left") {
+if (economic_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (economic_minister_faction = "Conservatives") {
+if (economic_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (economic_minister_faction = "Liberals") {
+if (economic_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (economic_minister_faction = "Repairers") {
+if (economic_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (economic_minister_faction = "Colonels") {
+if (economic_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (justice_minister_faction = "Sanacja Left") {
+if (justice_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (justice_minister_faction = "Conservatives") {
+if (justice_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (justice_minister_faction = "Liberals") {
+if (justice_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (justice_minister_faction = "Repairers") {
+if (justice_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (justice_minister_faction = "Colonels") {
+if (justice_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (foreign_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
+if (foreign_minister_faction == "Sanacja Left") {
+    sanacja_left_leverage += 10;
 }
-if (foreign_minister_faction = "Conservatives") {
+if (foreign_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (foreign_minister_faction = "Liberals") {
+if (foreign_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (foreign_minister_faction = "Repairers") {
+if (foreign_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (foreign_minister_faction = "Colonels") {
+if (foreign_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (agriculture_minister_faction = "Sanacja Left") {
+if (agriculture_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (agriculture_minister_faction = "Conservatives") {
+if (agriculture_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (agriculture_minister_faction = "Liberals") {
+if (agriculture_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (agriculture_minister_faction = "Repairers") {
+if (agriculture_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (agriculture_minister_faction = "Colonels") {
+if (agriculture_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 
-if (army_minister_faction = "Sanacja Left") {
+if (army_minister_faction == "Sanacja Left") {
     sanacja_left_leverage += 10;
 }
-if (army_minister_faction = "Conservatives") {
+if (army_minister_faction == "Conservatives") {
     conservatives_leverage += 10;
 }
-if (army_minister_faction = "Liberals") {
+if (army_minister_faction == "Liberals") {
     liberals_leverage += 10;
 }
-if (army_minister_faction = "Repairers") {
+if (army_minister_faction == "Repairers") {
     repairers_leverage += 10;
 }
-if (army_minister_faction = "Colonels") {
+if (army_minister_faction == "Colonels") {
     colonels_leverage += 10;
 }
 speaker_election_1928_time = 1
