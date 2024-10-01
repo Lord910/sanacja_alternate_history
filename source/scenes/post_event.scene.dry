@@ -86,131 +86,131 @@ Q.conservatives_leverage = 100*Q.conservatives_leverage/total_leverage;
 Q.fourth_brigade_leverage = 100*Q.fourth_brigade_leverage/total_leverage;
 
 
-if (Q.labor_minister_faction === "Sanacja Left") {
+if (Q.labor_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.labor_minister_faction === "Conservatives") {
+if (Q.labor_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.labor_minister_faction === "Liberals") {
+if (Q.labor_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.labor_minister_faction === "Repairers") {
+if (Q.labor_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.labor_minister_faction === "Colonels") {
+if (Q.labor_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.interior_minister_faction === "Sanacja Left") {
+if (Q.interior_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.interior_minister_faction === "Conservatives") {
+if (Q.interior_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.interior_minister_faction === "Liberals") {
+if (Q.interior_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.interior_minister_faction === "Repairers") {
+if (Q.interior_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.interior_minister_faction === "Colonels") {
+if (Q.interior_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.finance_minister_faction === "Sanacja Left") {
+if (Q.finance_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.finance_minister_faction === "Conservatives") {
+if (Q.finance_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.finance_minister_faction === "Liberals") {
+if (Q.finance_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.finance_minister_faction === "Repairers") {
+if (Q.finance_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.finance_minister_faction === "Colonels") {
+if (Q.finance_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.economic_minister_faction === "Sanacja Left") {
+if (Q.economic_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.economic_minister_faction === "Conservatives") {
+if (Q.economic_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.economic_minister_faction === "Liberals") {
+if (Q.economic_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.economic_minister_faction === "Repairers") {
+if (Q.economic_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.economic_minister_faction === "Colonels") {
+if (Q.economic_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.justice_minister_faction === "Sanacja Left") {
+if (Q.justice_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.justice_minister_faction === "Conservatives") {
+if (Q.justice_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.justice_minister_faction === "Liberals") {
+if (Q.justice_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.justice_minister_faction === "Repairers") {
+if (Q.justice_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.justice_minister_faction === "Colonels") {
+if (Q.justice_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.foreign_minister_faction === "Sanacja Left") {
+if (Q.foreign_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.foreign_minister_faction === "Conservatives") {
+if (Q.foreign_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.foreign_minister_faction === "Liberals") {
+if (Q.foreign_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.foreign_minister_faction === "Repairers") {
+if (Q.foreign_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.foreign_minister_faction === "Colonels") {
+if (Q.foreign_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.agriculture_minister_faction === "Sanacja Left") {
+if (Q.agriculture_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.agriculture_minister_faction === "Conservatives") {
+if (Q.agriculture_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.agriculture_minister_faction === "Liberals") {
+if (Q.agriculture_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.agriculture_minister_faction === "Repairers") {
+if (Q.agriculture_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.agriculture_minister_faction === "Colonels") {
+if (Q.agriculture_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
-if (Q.army_minister_faction === "Sanacja Left") {
+if (Q.army_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.army_minister_faction === "Conservatives") {
+if (Q.army_minister_faction = "Conservatives") {
     Q.conservatives_leverage += 10;
 }
-if (Q.army_minister_faction === "Liberals") {
+if (Q.army_minister_faction = "Liberals") {
     Q.liberals_leverage += 10;
 }
-if (Q.army_minister_faction === "Repairers") {
+if (Q.army_minister_faction = "Repairers") {
     Q.repairers_leverage += 10;
 }
-if (Q.army_minister_faction === "Colonels") {
+if (Q.army_minister_faction = "Colonels") {
     Q.colonels_leverage += 10;
 }
 
