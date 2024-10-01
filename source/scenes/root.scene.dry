@@ -411,20 +411,20 @@ Q.army_minister_party = 'BBWR';
 Q.army_minister_faction = 'Non-Aligned';
 Q.economic_minister = 'Kwiatkowski';
 Q.economic_minister_party = 'BBWR';
-Q.economic_minister_faction = 'Technocrats';
+Q.economic_minister_faction = 'Liberals';
 Q.finance_minister = 'Czechowicz';
 Q.finance_minister_party = 'BBWR';
 Q.finance_minister_faction = 'Non-Aligned';
 Q.agriculture_minister = 'Staniewicz';
 Q.agriculture_minister_party = 'BBWR';
-Q.agriculture_minister_faction = 'Technocrats';
+Q.agriculture_minister_faction = 'Liberals';
 
 // how many government positions doest each faction holds?
-Q.repairers_leverage = 0;
-Q.liberals_leverage = 0;
-Q.sanacja_left_leverage = 0;
-Q.colonels_leverage = 0;
-Q.conservatives_leverage = 0;
+Q.repairers_leverage = 20;
+Q.liberals_leverage = 5;
+Q.sanacja_left_leverage = 20;
+Q.colonels_leverage = 40;
+Q.conservatives_leverage = 20;
 // does any of the faction dominate the government?
 Q.repairers_dominance = 0;
 Q.liberals_dominance = 0;
