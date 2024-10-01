@@ -71,6 +71,38 @@ if (Q.bezrobotni <= 1) {
     Q.bezrobotni = 1;
 }
 
+var factions = ["Sanacja Left", "Conservatives", "Liberals", "Repairers", "Colonels"];
+var leverage_map = {
+    "Sanacja Left": "sanacja_left_leverage",
+    "Conservatives": "conservatives_leverage",
+    "Liberals": "liberals_leverage",
+    "Repairers": "repairers_leverage",
+    "Colonels": "colonels_leverage"
+};
+
+var ministers = {
+    labor_minister_faction: labor_minister_faction,
+    interior_minister_faction: interior_minister_faction,
+    finance_minister_faction: finance_minister_faction,
+    economic_minister_faction: economic_minister_faction,
+    justice_minister_faction: justice_minister_faction,
+    foreign_minister_faction: foreign_minister_faction,
+    agriculture_minister_faction: agriculture_minister_faction,
+    army_minister_faction: army_minister_faction
+};
+
+for (var minister in ministers) {
+    for (var faction of factions) {
+        if (ministers[minister] == faction) {
+            if (minister == "army_minister_faction") {
+                Q[leverage_map[faction]] += 20;
+            } else {
+                Q[leverage_map[faction]] += 10;
+            }
+        }
+    }
+}
+
 if (Q.repairers_leverage > 37.5) {
     Q.repairers_dominance = 1;
 }
