@@ -65,9 +65,6 @@ for (var c of Q.factions) {
     if (Q[c+'_strength'] < 0) {
         Q[c+'_strength'] = 0;
     }
-    if (Q[c+'_leverage'] < 0) {
-        Q[c+'_leverage'] = 0;
-    }    
 }
 
 if (Q.bezrobotni <= 1) {
