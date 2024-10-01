@@ -130,7 +130,7 @@ dissent: [+ conservatives_dissent : dissent +]
 
 **IV Brigade**
 
-strength: [+ fourth_brigade_strength_strength : strength +], 
+strength: [+ fourth_brigade_strength : strength +], 
 
 dissent: [+ fourth_brigade_strength_dissent : dissent +]
 
