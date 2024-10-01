@@ -820,132 +820,132 @@ title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
 on-arrival: {!
-if (Q.labor_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
+if (labor_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
 }
-if (Q.labor_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
+if (labor_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
 }
-if (Q.labor_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
+if (labor_minister_faction = "Liberals") {
+    liberals_leverage += 10;
 }
-if (Q.labor_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
+if (labor_minister_faction = "Repairers") {
+    repairers_leverage += 10;
 }
-if (Q.labor_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
-}
-
-if (Q.interior_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
-}
-if (Q.interior_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
-}
-if (Q.interior_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
-}
-if (Q.interior_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
-}
-if (Q.interior_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
+if (labor_minister_faction = "Colonels") {
+    colonels_leverage += 10;
 }
 
-if (Q.finance_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
+if (interior_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
 }
-if (Q.finance_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
+if (interior_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
 }
-if (Q.finance_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
+if (interior_minister_faction = "Liberals") {
+    liberals_leverage += 10;
 }
-if (Q.finance_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
+if (interior_minister_faction = "Repairers") {
+    repairers_leverage += 10;
 }
-if (Q.finance_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
-}
-
-if (Q.economic_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
-}
-if (Q.economic_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
-}
-if (Q.economic_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
-}
-if (Q.economic_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
-}
-if (Q.economic_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
+if (interior_minister_faction = "Colonels") {
+    colonels_leverage += 10;
 }
 
-if (Q.justice_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
+if (finance_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
 }
-if (Q.justice_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
+if (finance_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
 }
-if (Q.justice_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
+if (finance_minister_faction = "Liberals") {
+    liberals_leverage += 10;
 }
-if (Q.justice_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
+if (finance_minister_faction = "Repairers") {
+    repairers_leverage += 10;
 }
-if (Q.justice_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
-}
-
-if (Q.foreign_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
-}
-if (Q.foreign_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
-}
-if (Q.foreign_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
-}
-if (Q.foreign_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
-}
-if (Q.foreign_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
+if (finance_minister_faction = "Colonels") {
+    colonels_leverage += 10;
 }
 
-if (Q.agriculture_minister_faction = "Sanacja Left") {
-    Q.sanacja_left_leverage += 10;
+if (economic_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
 }
-if (Q.agriculture_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
+if (economic_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
 }
-if (Q.agriculture_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
+if (economic_minister_faction = "Liberals") {
+    liberals_leverage += 10;
 }
-if (Q.agriculture_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
+if (economic_minister_faction = "Repairers") {
+    repairers_leverage += 10;
 }
-if (Q.agriculture_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
+if (economic_minister_faction = "Colonels") {
+    colonels_leverage += 10;
 }
 
-if (Q.army_minister_faction = "Sanacja Left") {
+if (justice_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
+}
+if (justice_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
+}
+if (justice_minister_faction = "Liberals") {
+    liberals_leverage += 10;
+}
+if (justice_minister_faction = "Repairers") {
+    repairers_leverage += 10;
+}
+if (justice_minister_faction = "Colonels") {
+    colonels_leverage += 10;
+}
+
+if (foreign_minister_faction = "Sanacja Left") {
     Q.sanacja_left_leverage += 10;
 }
-if (Q.army_minister_faction = "Conservatives") {
-    Q.conservatives_leverage += 10;
+if (foreign_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
 }
-if (Q.army_minister_faction = "Liberals") {
-    Q.liberals_leverage += 10;
+if (foreign_minister_faction = "Liberals") {
+    liberals_leverage += 10;
 }
-if (Q.army_minister_faction = "Repairers") {
-    Q.repairers_leverage += 10;
+if (foreign_minister_faction = "Repairers") {
+    repairers_leverage += 10;
 }
-if (Q.army_minister_faction = "Colonels") {
-    Q.colonels_leverage += 10;
+if (foreign_minister_faction = "Colonels") {
+    colonels_leverage += 10;
+}
+
+if (agriculture_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
+}
+if (agriculture_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
+}
+if (agriculture_minister_faction = "Liberals") {
+    liberals_leverage += 10;
+}
+if (agriculture_minister_faction = "Repairers") {
+    repairers_leverage += 10;
+}
+if (agriculture_minister_faction = "Colonels") {
+    colonels_leverage += 10;
+}
+
+if (army_minister_faction = "Sanacja Left") {
+    sanacja_left_leverage += 10;
+}
+if (army_minister_faction = "Conservatives") {
+    conservatives_leverage += 10;
+}
+if (army_minister_faction = "Liberals") {
+    liberals_leverage += 10;
+}
+if (army_minister_faction = "Repairers") {
+    repairers_leverage += 10;
+}
+if (army_minister_faction = "Colonels") {
+    colonels_leverage += 10;
 }
 !}
 
@@ -955,56 +955,56 @@ go-to: speaker_election_1928
 This coalition arrangement is tolerable to all.
 
 @drop_labor
-title: Drop the Labor Ministry.
+title: Drop the Labor Ministry ([+ labor_minister_faction +])
 view-if: labor_minister_party = "BBWR"
 on-arrival: labor_minister_party = "None"; labor_minister = "Vacancy"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_interior
-title: Drop the Interior Ministry.
+title: Drop the Interior Ministry ([+ interior_minister_faction +])
 view-if: interior_minister_party = "BBWR"
 on-arrival: interior_minister_party = "None"; interior_minister = "Vacancy"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_finance
-title: Drop the Finance Ministry.
+title: Drop the Finance Ministry ([+ finance_minister_faction +])
 view-if: finance_minister_party = "BBWR"
 on-arrival: finance_minister_party = "None"; finance_minister = "Vacancy"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_economic
-title: Drop the Economic Ministry.
+title: Drop the Economic Ministry ([+ economic_minister_faction +])
 view-if: economic_minister_party = "BBWR"
 on-arrival: economic_minister_party = "None"; economic_minister = "Vacancy"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_justice
-title: Drop the Justice Ministry.
+title: Drop the Justice Ministry ([+ justice_minister_faction +])
 view-if: justice_minister_party = "BBWR"
 on-arrival: justice_minister_party = "None"; justice_minister = "Vacancy"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_foreign
-title: Drop the Foreign Ministry.
+title: Drop the Foreign Ministry ([+ foreign_minister_faction +])
 view-if: foreign_minister_party = "BBWR"
 on-arrival: foreign_minister_party = "None"; foreign_minister = "Vacancy";
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_agriculture
-title: Drop the Agriculture Ministry.
+title: Drop the Agriculture Ministry ([+ agriculture_minister_faction +])
 view-if: agriculture_minister_party = "BBWR"
 on-arrival: agriculture_minister_party = "None"; agriculture_minister = "Vacancy"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_reichswehr
-title: Drop the Military Affairs Ministry.
+title: Drop the Military Affairs Ministry ([+ army_minister_faction +])
 view-if: army_minister_party = "BBWR"
 unavailable-subtitle: [? if army_minister = "Piłsudski" : We can't remove Piłsudski from this position ?]
 choose-if: army_minister != "Piłsudski"

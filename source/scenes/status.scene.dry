@@ -22,8 +22,6 @@ BBWR position: [? if bbwr_toleration : toleration ?][? if bbwr_in_government : i
 
 Internal dissent: [+ dissent_percent : dissent +]
 
-Internal dissent: [+ dissent_percent : dissent +]
-
 Sanacja Left Leverage: [+ sanacja_left_leverage +]
 
 Repairers Leverage: [+ repairers_leverage +]
