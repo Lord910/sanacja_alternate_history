@@ -947,9 +947,8 @@ if (army_minister_faction = "Repairers") {
 if (army_minister_faction = "Colonels") {
     colonels_leverage += 10;
 }
-!}
-
 speaker_election_1928_time = 1
+!}
 go-to: speaker_election_1928
 
 This coalition arrangement is tolerable to all.
