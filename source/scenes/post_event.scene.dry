@@ -71,6 +71,17 @@ if (Q.bezrobotni <= 1) {
     Q.bezrobotni = 1;
 }
 
+if Q.repairers_leverage > 37.5: Q.repairers_dominance = 1; 
+if Q.liberals_leverage > 37.5: Q.liberals_dominance = 1; 
+if Q.sanacja_left_leverage > 37.5: Q.sanacja_left_dominance = 1; 
+if Q.colonels_leverage > 37.5: Q.colonels_dominance = 1; 
+if Q.conservatives_leverage > 37.5: Q.conservatives_dominance = 1;
+if Q.repairers_leverage < 10: Q.repairers_sidelined = 1;
+if Q.liberals_leverage < 10: Q.liberals_sidelined = 1;
+if Q.sanacja_left_leverage < 10: Q.sanacja_left_sidelined = 1;
+if Q.colonels_leverage < 10: Q.colonels_sidelined = 1;
+if Q.conservatives_leverage < 10: Q.conservatives_sidelined = 1;
+
 // re-calculate dissent.
 var total_strength = Q.repairers_strength + Q.liberals_strength + Q.sanacja_left_strength + Q.colonels_strength + Q.conservatives_strength + Q.fourth_brigade_strength_strength;
 

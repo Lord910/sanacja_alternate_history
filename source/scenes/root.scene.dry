@@ -58,10 +58,10 @@ Q.fourth_brigade_strength = 15;
 Q.fourth_brigade_dissent = 15;
 
 // secret events...
-Q.unions_independent = 0;
+Q.sanacja_left_resigned = 0;
+Q.repairers_resigned = 0;
 Q.liberals_resigned = 0;
-Q.repairers_split = 0;
-Q.reformists_resigned = 0;
+Q.colonels_resigned = 0;
 Q.conservatives_resigned = 0;
 
 // have we discovered sanacja_nationalists?
@@ -419,6 +419,28 @@ Q.agriculture_minister = 'Staniewicz';
 Q.agriculture_minister_party = 'BBWR';
 Q.agriculture_minister_faction = 'Technocrats';
 
+// how many government positions doest each faction holds?
+Q.repairers_leverage = 0;
+Q.liberals_leverage = 0;
+Q.sanacja_left_leverage = 0;
+Q.colonels_leverage = 0;
+Q.conservatives_leverage = 0;
+// does any of the faction dominate the government?
+Q.repairers_dominance = 0;
+Q.liberals_dominance = 0;
+Q.sanacja_left_dominance = 0;
+Q.colonels_dominance = 0;
+Q.conservatives_dominance = 0;
+// is any of the faction sidelined from the government?
+Q.repairers_sidelined = 0
+Q.liberals_sidelined = 0
+Q.sanacja_left_sidelined = 0
+Q.colonels_sidelined = 0
+Q.conservatives_sidelined = 0
+
+
+
+
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
 Q.panzerkreuzer_funded = 0;
@@ -500,7 +522,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'economic_policy', 'coalition_affairs',
             'war_guilt', 'womens_rights', 'economic_democracy',
             'dealing_with_toleration',
-            'constitutional_reform',
+            'constitutional_reform', 'government_disunity',
             // events
             'emergency_cuts', 'unemployment_insurance',
             'sa_ban', 'sh_ban',

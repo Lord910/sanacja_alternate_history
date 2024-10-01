@@ -335,7 +335,7 @@ subtitle: Kazimierz Bartel is first Prime Minister after May Coup and leader of 
 is-card: true
 card-image: img/portraits/BartelKazimierz.jpg
 tags: liberals_advisor
-view-if: bartel_advisor = 0 and bartel_dead = 0 and n_advisors < 3 and centrists_resign = 0
+view-if: bartel_advisor = 0 and bartel_dead = 0 and n_advisors < 3 and liberals_resign = 0
 on-arrival: bartel_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -347,7 +347,7 @@ subtitle: Marian Zyndram-Kościałkowski former member of PSL-W and member of ou
 is-card: true
 card-image: img/portraits/KosciolkowskiMarian.jpg
 tags: liberals_advisor
-view-if: kosciolkowski_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+view-if: kosciolkowski_advisor = 0 and n_advisors < 3 and liberals_resign = 0
 on-arrival: kosciolkowski_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -360,7 +360,7 @@ subtitle: Gabriel Czechowicz is an economist standing on the crossroads between 
 is-card: true
 card-image: img/portraits/CzechowiczGabriel.jpg
 tags: nonfactional_advisor
-view-if: czechowicz_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+view-if: czechowicz_advisor = 0 and n_advisors < 3 and liberals_resign = 0
 on-arrival: czechowicz_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -372,7 +372,7 @@ subtitle: Walery Sławek is one of the oldest and most loyal followers of Józef
 is-card: true
 card-image: img/portraits/SlawekWalery.jpg
 tags: colonels_advisor
-view-if: slawek_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+view-if: slawek_advisor = 0 and n_advisors < 3 and liberals_resign = 0
 on-arrival: slawek_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -450,7 +450,7 @@ title: Paul Levi
 subtitle: Paul Levi is a former KPP leader who was purged for criticizing Communist policies.
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
-view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and sapd_formed = 0
+view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and repairers_resigned = 0
 on-arrival: levi_advisor = 1; n_advisors += 1; repairers_strength += 5
 go-to: advisor_menu
 tags: repairers_advisor
@@ -462,7 +462,7 @@ title: Kurt Rosenfeld
 subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member.
 is-card: true
 card-image: img/portraits/RosenfeldKurt.jpg
-view-if: rosenfeld_advisor = 0 and n_advisors < 3 and sapd_formed = 0
+view-if: rosenfeld_advisor = 0 and n_advisors < 3 and repairers_resigned = 0
 on-arrival: rosenfeld_advisor = 1; n_advisors += 1; repairers_strength += 5
 go-to: advisor_menu
 tags: repairers_advisor
@@ -474,7 +474,7 @@ title: Max Seydewitz
 subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the BBWR, and advocates for class struggle.
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitpschd_advisor = 0 and n_advisors < 3 and sapd_formed = 0
+view-if: seydewitpschd_advisor = 0 and n_advisors < 3 and repairers_resigned = 0
 on-arrival: seydewitpschd_advisor = 1; n_advisors += 1; repairers_strength += 5
 go-to: advisor_menu
 tags: repairers_advisor
@@ -490,7 +490,7 @@ subtitle: Jędrzej Moraczewski is former Prime Minister and socialist politician
 is-card: true
 card-image: img/portraits/MoraczewskiJedrzej.jpg
 tags: sanacja_left_advisor
-view-if: moraczewski_advisor = 0 and n_advisors < 3 and unions_independent = 0
+view-if: moraczewski_advisor = 0 and n_advisors < 3 and colonels_resigned = 0
 on-arrival: moraczewski_advisor = 1; n_advisors += 1; sanacja_left_strength += 5
 go-to: advisor_menu
 
