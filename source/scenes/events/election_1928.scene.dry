@@ -778,7 +778,7 @@ view-if: army_minister_party != "BBWR"
 @army_minister_sanacja_left
 subtitle: Military Affairs Ministry should be controlled by **Sanacja Left**.
 view-if: army_minister_faction != "Sanacja Left" or army_minister_party != "BBWR"
-on-arrival: leverage -= 10; army_minister_faction = "Sanacja Left"; army_minister = "Placeholder"; army_minister_party = "BBWR"
+on-arrival: leverage -= 15; army_minister_faction = "Sanacja Left"; army_minister = "Placeholder"; army_minister_party = "BBWR"
 go-to: ministries
 
 Member of **Sanacja Left** of the BBWR has been appointed Agriculture Minister.
@@ -786,7 +786,7 @@ Member of **Sanacja Left** of the BBWR has been appointed Agriculture Minister.
 @army_minister_repairers
 subtitle: Military Affairs Ministry should be controlled by **Repairers**.
 view-if: army_minister_faction != "Repairers" or army_minister_party != "BBWR"
-on-arrival: leverage -= 10; army_minister_faction = "Repairers"; army_minister = "Placeholder"; army_minister_party = "BBWR"
+on-arrival: leverage -= 15; army_minister_faction = "Repairers"; army_minister = "Placeholder"; army_minister_party = "BBWR"
 go-to: ministries
 
 Member of **Repairers** of the BBWR has been appointed Agriculture Minister.
@@ -794,7 +794,7 @@ Member of **Repairers** of the BBWR has been appointed Agriculture Minister.
 @army_minister_liberals
 subtitle: Military Affairs Ministry should be controlled by **Liberals**.
 view-if: army_minister_faction != "Liberals" or army_minister_party != "BBWR"
-on-arrival: leverage -= 10; army_minister_faction = "Liberals"; army_minister = "Placeholder"; army_minister_party = "BBWR"
+on-arrival: leverage -= 15; army_minister_faction = "Liberals"; army_minister = "Placeholder"; army_minister_party = "BBWR"
 go-to: ministries
 
 Member of **Liberals** of the BBWR has been appointed Agriculture Minister.
@@ -802,7 +802,7 @@ Member of **Liberals** of the BBWR has been appointed Agriculture Minister.
 @army_minister_colonels
 subtitle: Military Affairs Ministry should be controlled by **Colonels**.
 view-if: army_minister_faction != "Colonels" or army_minister_party != "BBWR"
-on-arrival: leverage -= 10; army_minister_faction = "Colonels"; army_minister = "Placeholder"; army_minister_party = "BBWR"
+on-arrival: leverage -= 15; army_minister_faction = "Colonels"; army_minister = "Placeholder"; army_minister_party = "BBWR"
 go-to: ministries
 
 Member of **Colonels** of the BBWR has been appointed Agriculture Minister.
@@ -810,7 +810,7 @@ Member of **Colonels** of the BBWR has been appointed Agriculture Minister.
 @army_minister_conservatives
 subtitle: Military Affairs Ministry should be controlled by **Conservatives**.
 view-if: army_minister_faction != "Conservatives" or army_minister_party != "BBWR"
-on-arrival: leverage -= 10; army_minister_faction = "Conservatives"; army_minister = "Placeholder"; army_minister_party = "BBWR"
+on-arrival: leverage -= 15; army_minister_faction = "Conservatives"; army_minister = "Placeholder"; army_minister_party = "BBWR"
 go-to: ministries
 
 Member of **Conservatives** of the BBWR has been appointed Agriculture Minister.
