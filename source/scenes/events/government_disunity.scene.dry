@@ -22,11 +22,16 @@ Something must be done to reinforce party unity.
 
 @enforce_unity
 on-arrival: 
-  if colonels_sidelined: colonels_dissent -= 5; 
-  if liberals_sidelined: liberals_dissent -= 5; 
-  if sanacja_left_sidelined: sanacja_left_dissent -= 5; 
-  if repairers_sidelined: repairers_dissent -= 5; 
-  if conservatives_sidelined: conservatives_dissent -= 5
+  if colonels_sidelined 
+    colonels_dissent -= 5
+  if liberals_sidelined 
+    liberals_dissent -= 5
+  if sanacja_left_sidelined 
+    sanacja_left_dissent -= 5
+  if repairers_sidelined 
+    repairers_dissent -= 5
+  if conservatives_sidelined 
+    conservatives_dissent -= 5
 
 Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
 
