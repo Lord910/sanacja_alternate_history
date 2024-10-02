@@ -99,12 +99,42 @@ for (var minister in ministers) {
             } else {
                 Q[leverage_map[faction]] += 10;
             }
-            // Ensure leverage does not exceed 100 and is not below 0
-            if (Q[leverage_map[faction]] > 100) {
-                Q[leverage_map[faction]] = 100;
-            } else if (Q[leverage_map[faction]] < 0) {
-                Q[leverage_map[faction]] = 0;
+
+            // apply limitations to leverage
+            if (Q.repairers_leverage < 0) {
+                Q.repairers_leverage = 0;
+            } else if (Q.repairers_leverage >= 100) {
+                Q.repairers_leverage = 99;
             }
+            if (Q.liberals_leverage < 0) {
+                Q.liberals_leverage = 0;
+            } else if (Q.liberals_leverage >= 100) {
+                Q.liberals_leverage = 99;
+            }
+            if (Q.sanacja_left_leverage < 0) {
+                Q.sanacja_left_leverage = 0;
+            } else if (Q.sanacja_left_leverage >= 100) {
+                Q.sanacja_left_leverage = 99;
+            }
+            if (Q.colonels_leverage < 0) {
+                Q.colonels_leverage = 0;
+            } else if (Q.colonels_leverage >= 100) {
+                Q.colonels_leverage = 99;
+            }
+            if (Q.conservatives_leverage < 0) {
+                Q.conservatives_leverage = 0;
+            } else if (Q.conservatives_leverage >= 100) {
+                Q.conservatives_leverage = 99;
+            }
+            // re-calculate dissent using leverage.
+            var total_leverage = Q.repairers_leverage + Q.liberals_leverage + Q.sanacja_left_leverage + Q.colonels_leverage + Q.conservatives_leverage;
+
+            // normalize leverage for the different factions
+            Q.repairers_leverage = 100 * Q.repairers_leverage / total_leverage;
+            Q.liberals_leverage = 100 * Q.liberals_leverage / total_leverage;
+            Q.sanacja_left_leverage = 100 * Q.sanacja_left_leverage / total_leverage;
+            Q.colonels_leverage = 100 * Q.colonels_leverage / total_leverage;
+            Q.conservatives_leverage = 100 * Q.conservatives_leverage / total_leverage;
         }
     }
 }
