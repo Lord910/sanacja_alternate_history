@@ -99,6 +99,12 @@ for (var minister in ministers) {
             } else {
                 Q[leverage_map[faction]] += 10;
             }
+            // Ensure leverage does not exceed 100 and is not below 0
+            if (Q[leverage_map[faction]] > 100) {
+                Q[leverage_map[faction]] = 100;
+            } else if (Q[leverage_map[faction]] < 0) {
+                Q[leverage_map[faction]] = 0;
+            }
         }
     }
 }
