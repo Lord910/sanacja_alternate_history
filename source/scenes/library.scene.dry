@@ -124,7 +124,7 @@ SCh: [+ sch_votes +]%
 **Detailed results for each demographic**
 
 <div style="overflow-x:auto;">
-    <table>
+    <table style="text-align:center;">
         <tr>
             <th>Class</th>
             <th>Higher Class</th>
