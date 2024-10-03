@@ -79,7 +79,7 @@ if (Q.kpp_r >= Q.bbwr_r && Q.kpp_r >= Q.owp_r) {
 // coalitions
 Q.bbwr_majority = Q.bbwr_r;
 Q.bbwr_minority = Q.bbwr_r;
-Q.patriotic_left_coalition = Q.bbwr_r + Q.pps_r;
+Q.patriotic_left_coalition = Q.bbwr_r + Q.pps_r + Q.sch_r + Q.pslw_r;
 Q.democratic_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r;
 Q.centre_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r + Q.npr_r + Q.pschd_r + Q.pslp_r;
 Q.centre_right_coalition = Q.npr_r + Q.pschd_r + Q.pslp_r + Q.sn_r;
@@ -93,8 +93,6 @@ Q.anti_democratic_coalition = Q.sn_r + Q.owp_r + Q.kpp_r;
 
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.pps_r + Q.sch_r + Q.pslw_r;
-
-
 Q.leverage = Q.bbwr_r;
 
 Q.centre_left_coalition_failed = 0;
@@ -293,21 +291,15 @@ BBWR Majority (BBWR): [+ bbwr_majority +]%
 
 BBWR Minority (BBWR): [+ bbwr_minority +]%
 
-Patriotic Left Coalition (BBWR + PPS): [+ patriotic_left_coalition +]%
+[? if patriotic_left_coalition >= 50 : Patriotic Left Coalition (BBWR + PPS + SCh + PSL-W): [+ patriotic_left_coalition +]% ?]
 
-Democratic Left Coalition (PPS + SCh + PSL-W): [+ democratic_left_coalition +]%
+[? if democratic_left_coalition >= 50 : Democratic Left Coalition (PPS + SCh + PSL-W): [+ democratic_left_coalition +]% ?]
 
-Centre-Left Coalition (PPS + SCh + PSL-W + NPR + PSCHD + PSL-P): [+ centre_left_coalition +]%
+[? if centre_left_coalition >= 50 : Centre-Left Coalition (PPS + SCh + PSL-W + NPR + PSCHD + PSL-P): [+ centre_left_coalition +]% ?]
 
-Centre-Right Coalition (NPR + PSCHD + PSL-P + [+ sn_party_name +]): [+ centre_right_coalition +]%
+[? if centre_right_coalition >= 50 : Centre-Right Coalition (NPR + PSCHD + PSL-P + [+ sn_party_name +]): [+ centre_right_coalition +]% ?]
 
-Far Right Coalition ([+ sn_party_name +] + OWP): [+ far_right_coalition +]%
-
-# Popular Front (KPP + PPS): [+ popular_front_coalition +]%
-
-[? if centrolew_urgency <= 1 and owp_r >= 15 : The rapid rise in OWP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
-
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPP, [+ sn_party_name +], and OWP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if far_right_coalition >= 50 : Far Right Coalition ([+ sn_party_name +] + OWP): [+ far_right_coalition +]% ?]
 
 There are some potential coalition arrangements.
 
@@ -315,7 +307,7 @@ There are some potential coalition arrangements.
 
 - @bbwr_majority
 - @bbwr_minority
-#- @patriotic_left_coalition
+- @patriotic_left_coalition
 #- @democratic_left_coalition
 #- @centre_left_coalition
 #- @centre_right_coalition
@@ -367,6 +359,14 @@ on-arrival: chancellor = "Piłsudski";
 go-to: ministries
 
 Józef Piłsudski will stay as Prime Minister.
+
+@patriotic_left_coalition
+title: Patriotic Left Coalition
+subtitle: [+ patriotic_left_coalition +]%
+view-if: bbwr_r >= 10
+unavailable-subtitle: This coalition is impossible right now
+choose-if: patriotic_left_coalition >= 50 and pps_relation > 50 and pslw_relation > 50 and sch_relation > 50
+on-arrival: bbwr_in_government = 1; in_bbwr_majority = 1; pro_republic += 5; foreign_minister_party = "Vacancy"; interior_minister_party = "Vacancy"; justice_minister_party = "Vacancy"; labor_minister_party = "Vacancy"; army_minister_party = "Vacancy"; economic_minister_party = "Vacancy"; finance_minister_party = "Vacancy"; agriculture_minister_party = "Vacancy"
 
 @ministries
 
