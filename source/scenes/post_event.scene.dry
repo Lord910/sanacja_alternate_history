@@ -166,8 +166,25 @@ if (Q.sanacja_left_leverage < 10) {
 if (Q.colonels_leverage < 10) {
     Q.colonels_sidelined = 1;
 }
+
 if (Q.conservatives_leverage < 10) {
     Q.conservatives_sidelined = 1;
+}
+
+if (Q.colonels_sidelined) {
+  Q.colonels_dissent += 5;
+}
+if (Q.liberals_sidelined) {
+  Q.liberals_dissent += 5;
+}
+if (Q.sanacja_left_sidelined) {
+  Q.sanacja_left_dissent += 5;
+}
+if (Q.repairers_sidelined) {
+  Q.repairers_dissent += 5;
+}
+if (Q.conservatives_sidelined) {
+  Q.conservatives_dissent += 5;
 }
 
 // re-calculate dissent.

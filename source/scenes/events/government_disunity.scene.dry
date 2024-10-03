@@ -2,7 +2,7 @@ title: Governmnent Disunity
 new-page: true
 tags: event
 view-if: bbwr_in_government = 1 and government_disunity_timer = 0 and ((sanacja_left_sidelined and not sanacja_left_resigned) or (repairers_sidelined and not repairers_resigned) or (liberals_sidelined and not liberals_resigned) or (colonels_sidelined and not colonels_resigned) or (conservatives_sidelined and not conservatives_resigned))
-on-arrival: month_actions += 1; government_disunity_timer = 3
+on-arrival: government_disunity_timer = 3
 
 = Governmnent Disunity
 
@@ -28,21 +28,7 @@ on-arrival: month_actions += 1; government_disunity_timer = 3
 
 @enforce_unity
 on-arrival: {!
-if (colonels_sidelined) {
-  colonels_dissent += 5;
-}
-if (liberals_sidelined) {
-  liberals_dissent += 5;
-}
-if (sanacja_left_sidelined) {
-  sanacja_left_dissent += 5;
-}
-if (repairers_sidelined) {
-  repairers_dissent += 5;
-}
-if (conservatives_sidelined) {
-  conservatives_dissent += 5;
-}
+
 !}
 
 Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
