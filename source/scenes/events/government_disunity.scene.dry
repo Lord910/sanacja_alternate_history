@@ -7,20 +7,23 @@ on-arrival: month_actions += 1; government_disunity_timer = 3
 = Governmnent Disunity
 
 The government is being torn apart by internal strife. Feeling sidelined from key positions, factions have begun undermining their rivals, which is hindering our ability to govern effectively and push forward our agenda.
+{!<div style="text-align: center;">!}
+<h2><strong></strong></h2>
 
-[? if sanacja_left_dominance : The Sanacja Left has achieved a dominant position in the government, sidelining rivals and securing control over key positions. ?]
-[? if repairers_dominance : The Repairers have gained dominant influence in government, limiting other factions' access to important appointments. ?]
-[? if liberals_dominance : The Liberals have risen to a dominant position in the government, marginalizing their opponents and filling key roles with their own members. ?]
-[? if colonels_dominance : The Colonels have established dominance in the government, pushing their rivals out of significant posts. ?]
-[? if conservatives_dominance :  Conservatives have secured a dominant position within the government, sidelining other factions from influential positions. ?]
+[? if sanacja_left_dominance : <h2><strong>The Sanacja Left</strong></h2><br> has achieved a dominant position in the government, sidelining rivals and securing control over key positions. ?]
+[? if repairers_dominance : <h2><strong>The Repairers </strong></h2><br> have gained dominant influence in government, limiting other factions' access to important appointments. ?]
+[? if liberals_dominance : <h2><strong>The Liberals</strong></h2><br> have risen to a dominant position in the government, marginalizing their opponents and filling key roles with their own members. ?]
+[? if colonels_dominance : <h2><strong>The Colonels</strong></h2><br> have established dominance in the government, pushing their rivals out of significant posts. ?]
+[? if conservatives_dominance : <h2><strong>The Conservatives</strong></h2><br> have secured a dominant position within the government, sidelining other factions from influential positions. ?]
 
-[? if sanacja_left_sidelined : The Sanacja Left expresses frustration over their exclusion from government roles. ?]
-[? if repairers_sidelined : The Repairers are displeased about being left out of key government appointments. ?]
-[? if liberals_sidelined : The Liberals feel discontented by their marginalization from government positions.  ?]
-[? if colonels_sidelined : The Colonels are aggrieved by their exclusion from significant government posts. ?]
-[? if conservatives_sidelined :  Conservatives are dissatisfied with being shut out of influential government roles. ?]
+[? if sanacja_left_sidelined : <h2><strong>The Sanacja Left</strong></h2><br> expresses frustration over their exclusion from government roles. ?]
+[? if repairers_sidelined : <h2><strong>The Repairers </strong></h2><br> are displeased about being left out of key government appointments. ?]
+[? if liberals_sidelined : <h2><strong>The Liberals</strong></h2><br> feel discontented by their marginalization from government positions.  ?]
+[? if colonels_sidelined : <h2><strong>The Colonels</strong></h2><br> are aggrieved by their exclusion from significant government posts. ?]
+[? if conservatives_sidelined : <h2><strong>The Conservatives</strong></h2><br> are dissatisfied with being shut out of influential government roles. ?]
 
 Something must be done to reinforce party unity.
+{!</div>!}
 
 - @enforce_unity: Enforce party discipline.
 - @shuffle_cabinet: Shuffle Cabinet.
