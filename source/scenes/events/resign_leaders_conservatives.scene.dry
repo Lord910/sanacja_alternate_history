@@ -1,0 +1,11 @@
+title: Conservatives Resign
+new-page: true 
+subtitle: Conservatives disagreements with our policies have grown too severe.
+tags: event
+view-if: conservatives_dissent >= 60
+on-arrival: conservatives_strength *= 0.3; klasa_wyzsza_bbwr -= 5; n_advisors -= 1 if radziwill_advisor == 1; conservatives_resigned = 1
+max-visits: 1
+
+= Conservative leaders resign
+
+Our policy choices have greatly offended the Conservative faction. Many of our most experienced leaders have resigned.
