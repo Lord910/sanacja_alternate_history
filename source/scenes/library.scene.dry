@@ -125,101 +125,111 @@ SCh: [+ sch_votes +]%
 
 <table>
     <tr>
-        <th>Demographic</th>
-        <th>KPP</th>
-        <th>PPS</th>
-        <th>SCh</th>
-        <th>PSL-W</th>
-        <th>Minorities</th>
-        <th>BBWR</th>
-        <th>NPR</th>
-        <th>PSCHD</th>
-        <th>PSL-P</th>
-        <th>[+ sn_party_name +]</th>
-        <th>OWP</th>
+        <th>Class</th>
+        <th>Higher Class</th>
+        <th>Middle Class</th>
+        <th>Workers</th>
+        <th>Unemployed</th>
+        <th>Peasants</th>
+        <th>National Minorities</th>
     </tr>
     <tr>
-        <td>Higher Class</td>
+        <td>KPP</td>
         <td>[+ klasa_wyzsza_kpp_normalized +]%</td>
-        <td>[+ klasa_wyzsza_pps_normalized +]%</td>
-        <td>[+ klasa_wyzsza_sch_normalized +]%</td>
-        <td>[+ klasa_wyzsza_pslw_normalized +]%</td>
-        <td>[+ klasa_wyzsza_other_normalized +]%</td>
-        <td>[+ klasa_wyzsza_bbwr_normalized +]%</td>
-        <td>[+ klasa_wyzsza_npr_normalized +]%</td>
-        <td>[+ klasa_wyzsza_pschd_normalized +]%</td>
-        <td>[+ klasa_wyzsza_pslp_normalized +]%</td>
-        <td>[+ klasa_wyzsza_sn_normalized +]%</td>
-        <td>[+ klasa_wyzsza_owp_normalized +]%</td>
-    </tr>
-    <tr>
-        <td>Middle Class</td>
         <td>[+ klasa_srednia_kpp_normalized +]%</td>
-        <td>[+ klasa_srednia_pps_normalized +]%</td>
-        <td>[+ klasa_srednia_sch_normalized +]%</td>
-        <td>[+ klasa_srednia_pslw_normalized +]%</td>
-        <td>[+ klasa_srednia_other_normalized +]%</td>
-        <td>[+ klasa_srednia_bbwr_normalized +]%</td>
-        <td>[+ klasa_srednia_npr_normalized +]%</td>
-        <td>[+ klasa_srednia_pschd_normalized +]%</td>
-        <td>[+ klasa_srednia_pslp_normalized +]%</td>
-        <td>[+ klasa_srednia_sn_normalized +]%</td>
-        <td>[+ klasa_srednia_owp_normalized +]%</td>
-    </tr>
-    <tr>
-        <td>Workers</td>
         <td>[+ robotnicy_kpp_normalized +]%</td>
-        <td>[+ robotnicy_pps_normalized +]%</td>
-        <td>[+ robotnicy_sch_normalized +]%</td>
-        <td>[+ robotnicy_pslw_normalized +]%</td>
-        <td>[+ robotnicy_other_normalized +]%</td>
-        <td>[+ robotnicy_bbwr_normalized +]%</td>
-        <td>[+ robotnicy_npr_normalized +]%</td>
-        <td>[+ robotnicy_pschd_normalized +]%</td>
-        <td>[+ robotnicy_pslp_normalized +]%</td>
-        <td>[+ robotnicy_sn_normalized +]%</td>
-        <td>[+ robotnicy_owp_normalized +]%</td>
-    </tr>
-    <tr>
-        <td>Unemployed</td>
         <td>[+ bezrobotni_kpp_normalized +]%</td>
-        <td>[+ bezrobotni_pps_normalized +]%</td>
-        <td>[+ bezrobotni_sch_normalized +]%</td>
-        <td>[+ bezrobotni_pslw_normalized +]%</td>
-        <td>[+ bezrobotni_other_normalized +]%</td>
-        <td>[+ bezrobotni_bbwr_normalized +]%</td>
-        <td>[+ bezrobotni_npr_normalized +]%</td>
-        <td>[+ bezrobotni_pschd_normalized +]%</td>
-        <td>[+ bezrobotni_pslp_normalized +]%</td>
-        <td>[+ bezrobotni_sn_normalized +]%</td>
-        <td>[+ bezrobotni_owp_normalized +]%</td>
-    </tr>
-    <tr>
-        <td>Peasants</td>
         <td>[+ chlopi_kpp_normalized +]%</td>
-        <td>[+ chlopi_pps_normalized +]%</td>
-        <td>[+ chlopi_sch_normalized +]%</td>
-        <td>[+ chlopi_pslw_normalized +]%</td>
-        <td>[+ chlopi_other_normalized +]%</td>
-        <td>[+ chlopi_bbwr_normalized +]%</td>
-        <td>[+ chlopi_npr_normalized +]%</td>
-        <td>[+ chlopi_pschd_normalized +]%</td>
-        <td>[+ chlopi_pslp_normalized +]%</td>
-        <td>[+ chlopi_sn_normalized +]%</td>
-        <td>[+ chlopi_owp_normalized +]%</td>
+        <td>[+ mniejszosci_kpp_normalized +]%</td>
     </tr>
     <tr>
-        <td>National Minorities</td>
-        <td>[+ mniejszosci_kpp_normalized +]%</td>
+        <td>PPS</td>
+        <td>[+ klasa_wyzsza_pps_normalized +]%</td>
+        <td>[+ klasa_srednia_pps_normalized +]%</td>
+        <td>[+ robotnicy_pps_normalized +]%</td>
+        <td>[+ bezrobotni_pps_normalized +]%</td>
+        <td>[+ chlopi_pps_normalized +]%</td>
         <td>[+ mniejszosci_pps_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>SCh</td>
+        <td>[+ klasa_wyzsza_sch_normalized +]%</td>
+        <td>[+ klasa_srednia_sch_normalized +]%</td>
+        <td>[+ robotnicy_sch_normalized +]%</td>
+        <td>[+ bezrobotni_sch_normalized +]%</td>
+        <td>[+ chlopi_sch_normalized +]%</td>
         <td>[+ mniejszosci_sch_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>PSL-W</td>
+        <td>[+ klasa_wyzsza_pslw_normalized +]%</td>
+        <td>[+ klasa_srednia_pslw_normalized +]%</td>
+        <td>[+ robotnicy_pslw_normalized +]%</td>
+        <td>[+ bezrobotni_pslw_normalized +]%</td>
+        <td>[+ chlopi_pslw_normalized +]%</td>
         <td>[+ mniejszosci_pslw_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>Minorities</td>
+        <td>[+ klasa_wyzsza_other_normalized +]%</td>
+        <td>[+ klasa_srednia_other_normalized +]%</td>
+        <td>[+ robotnicy_other_normalized +]%</td>
+        <td>[+ bezrobotni_other_normalized +]%</td>
+        <td>[+ chlopi_other_normalized +]%</td>
         <td>[+ mniejszosci_other_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>BBWR</td>
+        <td>[+ klasa_wyzsza_bbwr_normalized +]%</td>
+        <td>[+ klasa_srednia_bbwr_normalized +]%</td>
+        <td>[+ robotnicy_bbwr_normalized +]%</td>
+        <td>[+ bezrobotni_bbwr_normalized +]%</td>
+        <td>[+ chlopi_bbwr_normalized +]%</td>
         <td>[+ mniejszosci_bbwr_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>NPR</td>
+        <td>[+ klasa_wyzsza_npr_normalized +]%</td>
+        <td>[+ klasa_srednia_npr_normalized +]%</td>
+        <td>[+ robotnicy_npr_normalized +]%</td>
+        <td>[+ bezrobotni_npr_normalized +]%</td>
+        <td>[+ chlopi_npr_normalized +]%</td>
         <td>[+ mniejszosci_npr_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>PSCHD</td>
+        <td>[+ klasa_wyzsza_pschd_normalized +]%</td>
+        <td>[+ klasa_srednia_pschd_normalized +]%</td>
+        <td>[+ robotnicy_pschd_normalized +]%</td>
+        <td>[+ bezrobotni_pschd_normalized +]%</td>
+        <td>[+ chlopi_pschd_normalized +]%</td>
         <td>[+ mniejszosci_pschd_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>PSL-P</td>
+        <td>[+ klasa_wyzsza_pslp_normalized +]%</td>
+        <td>[+ klasa_srednia_pslp_normalized +]%</td>
+        <td>[+ robotnicy_pslp_normalized +]%</td>
+        <td>[+ bezrobotni_pslp_normalized +]%</td>
+        <td>[+ chlopi_pslp_normalized +]%</td>
         <td>[+ mniejszosci_pslp_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>[+ sn_party_name +]</td>
+        <td>[+ klasa_wyzsza_sn_normalized +]%</td>
+        <td>[+ klasa_srednia_sn_normalized +]%</td>
+        <td>[+ robotnicy_sn_normalized +]%</td>
+        <td>[+ bezrobotni_sn_normalized +]%</td>
+        <td>[+ chlopi_sn_normalized +]%</td>
         <td>[+ mniejszosci_sn_normalized +]%</td>
+    </tr>
+    <tr>
+        <td>OWP</td>
+        <td>[+ klasa_wyzsza_owp_normalized +]%</td>
+        <td>[+ klasa_srednia_owp_normalized +]%</td>
+        <td>[+ robotnicy_owp_normalized +]%</td>
+        <td>[+ bezrobotni_owp_normalized +]%</td>
+        <td>[+ chlopi_owp_normalized +]%</td>
         <td>[+ mniejszosci_owp_normalized +]%</td>
     </tr>
 </table>
