@@ -1,0 +1,11 @@
+title: Colonels Resign
+new-page: true 
+subtitle: Colonels disagreements with our policies have grown too severe.
+tags: event
+view-if: colonels_dissent >= 60 and pilsudski_dead = 1
+on-arrival: colonels_strength *= 0.3; robotnicy_bbwr -= 5; n_advisors -= 1 if slawek_advisor == 1; n_advisors -= 1 if prystor_advisor == 1; colonels_resigned = 1
+max-visits: 1
+
+= Colonels leaders resign
+
+Our policy choices have greatly offended the Colonels faction. Many of our most experienced leaders have resigned.

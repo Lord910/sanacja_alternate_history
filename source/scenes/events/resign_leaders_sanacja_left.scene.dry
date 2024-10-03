@@ -3,7 +3,7 @@ new-page: true
 subtitle: Sanacja Left disagreements with our policies have grown too severe.
 tags: event
 view-if: sanacja_left_dissent >= 60
-on-arrival: colonels_resigned = 1; sanacja_left_strength = sanacja_left_strength/2; robotnicy_bbwr -= 20; bezrobotni_pps += 10; bezrobotni_npr += 5; bezrobotni_kpp += 5; robotnicy_other += 5; robotnicy_kpp += 5; robotnicy_owp += 5; n_advisors -= 1 if prystor_advisor == 1; n_advisors -= 1 if moraczewski_advisor == 1; prystor_advisor = 0; moraczewski_advisor = 0; lm_strength -= 600; 
+on-arrival: sanacja_left_strength = sanacja_left_strength/2; robotnicy_bbwr -= 20; bezrobotni_pps += 10; bezrobotni_npr += 5; bezrobotni_kpp += 5; robotnicy_other += 5; robotnicy_kpp += 5; robotnicy_owp += 5; n_advisors -= 1 if moraczewska_advisor == 1; n_advisors -= 1 if moraczewski_advisor == 1; sanacja_left_resigned = 1
 max-visits: 1
 
 = Unions Declare Independence

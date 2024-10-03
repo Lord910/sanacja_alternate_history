@@ -586,6 +586,7 @@ Q.moraczewski_advisor = 0; // Jedrzej Moraczewski
 Q.moraczewska_advisor = 0; // Zofia Moraczewska
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 
+Q.pilsudski_dead = 0;
 
 // Repairers advisors
 Q.lechnicki_felicjan_advisor = 0; // Felicjan Lechnicki
