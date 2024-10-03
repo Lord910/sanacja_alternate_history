@@ -3,7 +3,7 @@ new-page: true
 tags: event
 priority: -1
 view-if: (year = next_election_year and month >= next_election_month) or (year > next_election_year)
-on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48;
+on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; speaker_election_1928_time = 1
 set-jump: post_election_1928
 
 # the low priority means that this event is only seen after all other events are resolved for the month.
@@ -819,8 +819,7 @@ Member of **Conservatives** of the BBWR has been appointed Agriculture Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
-on-arrival: speaker_election_1928_time = 1
-go-to: speaker_election_1928
+go-to: speaker_election_1928 if (speaker_election_1928_time = 1 and speaker_election_1928_seen = 0)
 
 This coalition arrangement is tolerable to all.
 
