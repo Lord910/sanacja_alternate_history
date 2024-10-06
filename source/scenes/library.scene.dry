@@ -148,6 +148,7 @@ go-to: menu
         <tr>
             <th>Party</th>
             <th>Higher Class</th>
+            <th>Intelligentsia</th>
             <th>Middle Class</th>
             <th>Workers</th>
             <th>Unemployed</th>
@@ -157,6 +158,7 @@ go-to: menu
         <tr>
             <td>KPP</td>
             <td>[+ klasa_wyzsza_kpp_normalized +]%</td>
+            <td>[+ inteligencja_kkp_normalized +]%</td>
             <td>[+ klasa_srednia_kpp_normalized +]%</td>
             <td>[+ robotnicy_kpp_normalized +]%</td>
             <td>[+ bezrobotni_kpp_normalized +]%</td>
@@ -166,6 +168,7 @@ go-to: menu
         <tr>
             <td>PPS</td>
             <td>[+ klasa_wyzsza_pps_normalized +]%</td>
+            <td>[+ inteligencja_pps_normalized +]%</td>
             <td>[+ klasa_srednia_pps_normalized +]%</td>
             <td>[+ robotnicy_pps_normalized +]%</td>
             <td>[+ bezrobotni_pps_normalized +]%</td>
@@ -175,6 +178,7 @@ go-to: menu
         <tr>
             <td>SCh</td>
             <td>[+ klasa_wyzsza_sch_normalized +]%</td>
+            <td>[+ inteligencja_sch_normalized +]%</td>
             <td>[+ klasa_srednia_sch_normalized +]%</td>
             <td>[+ robotnicy_sch_normalized +]%</td>
             <td>[+ bezrobotni_sch_normalized +]%</td>
@@ -184,6 +188,7 @@ go-to: menu
         <tr>
             <td>PSL-W</td>
             <td>[+ klasa_wyzsza_pslw_normalized +]%</td>
+            <td>[+ inteligencja_pslw_normalized +]%</td>
             <td>[+ klasa_srednia_pslw_normalized +]%</td>
             <td>[+ robotnicy_pslw_normalized +]%</td>
             <td>[+ bezrobotni_pslw_normalized +]%</td>
@@ -193,6 +198,7 @@ go-to: menu
         <tr>
             <td>Minorities</td>
             <td>[+ klasa_wyzsza_other_normalized +]%</td>
+            <td>[+ inteligencja_other_normalized +]%</td>
             <td>[+ klasa_srednia_other_normalized +]%</td>
             <td>[+ robotnicy_other_normalized +]%</td>
             <td>[+ bezrobotni_other_normalized +]%</td>
@@ -202,6 +208,7 @@ go-to: menu
         <tr>
             <td>BBWR</td>
             <td>[+ klasa_wyzsza_bbwr_normalized +]%</td>
+            <td>[+ inteligencja_bbwr_normalized +]%</td>
             <td>[+ klasa_srednia_bbwr_normalized +]%</td>
             <td>[+ robotnicy_bbwr_normalized +]%</td>
             <td>[+ bezrobotni_bbwr_normalized +]%</td>
@@ -211,6 +218,7 @@ go-to: menu
         <tr>
             <td>NPR</td>
             <td>[+ klasa_wyzsza_npr_normalized +]%</td>
+            <td>[+ inteligencja_npr_normalized +]%</td>   
             <td>[+ klasa_srednia_npr_normalized +]%</td>
             <td>[+ robotnicy_npr_normalized +]%</td>
             <td>[+ bezrobotni_npr_normalized +]%</td>
@@ -220,6 +228,7 @@ go-to: menu
         <tr>
             <td>PSCHD</td>
             <td>[+ klasa_wyzsza_pschd_normalized +]%</td>
+            <td>[+ inteligencja_pschd_normalized +]%</td>   
             <td>[+ klasa_srednia_pschd_normalized +]%</td>
             <td>[+ robotnicy_pschd_normalized +]%</td>
             <td>[+ bezrobotni_pschd_normalized +]%</td>
@@ -229,6 +238,7 @@ go-to: menu
         <tr>
             <td>PSL-P</td>
             <td>[+ klasa_wyzsza_pslp_normalized +]%</td>
+            <td>[+ inteligencja_pslp_normalized +]%</td>    
             <td>[+ klasa_srednia_pslp_normalized +]%</td>
             <td>[+ robotnicy_pslp_normalized +]%</td>
             <td>[+ bezrobotni_pslp_normalized +]%</td>
@@ -238,6 +248,7 @@ go-to: menu
         <tr>
             <td>[+ sn_party_name +]</td>
             <td>[+ klasa_wyzsza_sn_normalized +]%</td>
+            <td>[+ inteligencja_sn_normalized +]%</td>            
             <td>[+ klasa_srednia_sn_normalized +]%</td>
             <td>[+ robotnicy_sn_normalized +]%</td>
             <td>[+ bezrobotni_sn_normalized +]%</td>
@@ -247,6 +258,7 @@ go-to: menu
         <tr>
             <td>OWP</td>
             <td>[+ klasa_wyzsza_owp_normalized +]%</td>
+            <td>[+ inteligencja_owp_normalized +]%</td>
             <td>[+ klasa_srednia_owp_normalized +]%</td>
             <td>[+ robotnicy_owp_normalized +]%</td>
             <td>[+ bezrobotni_owp_normalized +]%</td>
