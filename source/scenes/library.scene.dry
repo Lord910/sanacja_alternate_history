@@ -765,8 +765,6 @@ if (d3 && window) {
     d3.select("#bar_chart").datum(barChartData).call(barChart);
 }
 !}
-}
-!}
 
 = Sejm composition
 
