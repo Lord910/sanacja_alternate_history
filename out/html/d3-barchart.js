@@ -1,4 +1,4 @@
-d3.barchart = function() {
+3.barchart = function() {
     var width = 500;
     var height = 400;
     var margin = {top: 20, right: 20, bottom: 30, left: 40};
@@ -21,7 +21,10 @@ d3.barchart = function() {
             svg.append("g")
                 .attr("class", "x-axis")
                 .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-                .call(d3.axisBottom(x));
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .attr("transform", "rotate(-45)")
+                .style("text-anchor", "end");
 
             svg.append("g")
                 .attr("class", "y-axis")
@@ -36,7 +39,7 @@ d3.barchart = function() {
                 .attr("y", function(d) { return y(d.value); })
                 .attr("width", x.bandwidth())
                 .attr("height", function(d) { return height - margin.bottom - y(d.value); })
-                .attr("fill", "steelblue");
+                .attr("fill", function(d) { return d.color; });
         });
     }
 

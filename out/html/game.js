@@ -165,19 +165,24 @@
   window.onDisplayContent = function() {
     window.updateSidebar();
 
-    // Example data for the bar chart
+    // Przykładowe dane dla wykresu słupkowego z kolorami
     var data = [
-        {name: "Category 1", value: 30},
-        {name: "Category 2", value: 80},
-        {name: "Category 3", value: 45},
-        {name: "Category 4", value: 60},
-        {name: "Category 5", value: 20},
-        {name: "Category 6", value: 90},
-        {name: "Category 7", value: 55}
+        {name: "Sanacja Left - Strength", value: sanacja_left_strength, color: "darkred"},
+        {name: "Sanacja Left - Dissent", value: sanacja_left_dissent, color: "darkred"},
+        {name: "Repairers - Strength", value: repairers_strength, color: "lightcoral"},
+        {name: "Repairers - Dissent", value: repairers_dissent, color: "lightcoral"},
+        {name: "Liberals - Strength", value: liberals_strength, color: "yellow"},
+        {name: "Liberals - Dissent", value: liberals_dissent, color: "yellow"},
+        {name: "Colonels - Strength", value: colonels_strength, color: "gray"},
+        {name: "Colonels - Dissent", value: colonels_dissent, color: "gray"},
+        {name: "Conservatives - Strength", value: conservatives_strength, color: "darkblue"},
+        {name: "Conservatives - Dissent", value: conservatives_dissent, color: "darkblue"},
+        {name: "IV Brigade - Strength", value: fourth_brigade_strength, color: "lightblue"},
+        {name: "IV Brigade - Dissent", value: fourth_brigade_strength_dissent, color: "lightblue"}
     ];
 
     var barChart = d3.barchart().width(500).height(400);
-    d3.select("#bar_chart").datum(data).call(barChart);
+    d3.select("#faction_barchart").datum(data).call(barChart);
 };
 
   /*
