@@ -7,36 +7,54 @@ d3.barchart = function() {
         selection.each(function(data) {
             var svg = d3.select(this)
                 .attr("width", width)
-                .attr("height", height);
+                .attr("height", height)
+              .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            var subgroups = data.columns.slice(1);
+            var groups = d3.map(data, function(d){return(d.group)}).keys();
 
             var x = d3.scaleBand()
-                .range([margin.left, width - margin.right])
-                .padding(0.1)
-                .domain(data.map(function(d) { return d.name; }));
+                .domain(groups)
+                .range([0, width - margin.left - margin.right])
+                .padding(0.2);
 
             var y = d3.scaleLinear()
-                .range([height - margin.bottom, margin.top])
-                .domain([0, d3.max(data, function(d) { return d.value; })]);
+                .domain([0, d3.max(data, function(d) { return d3.max(subgroups, function(key) { return d[key]; }); })])
+                .range([height - margin.top - margin.bottom, 0]);
+
+            var xSubgroup = d3.scaleBand()
+                .domain(subgroups)
+                .range([0, x.bandwidth()])
+                .padding(0.05);
+
+            var color = d3.scaleOrdinal()
+                .domain(subgroups)
+                .range(['#e41a1c','#377eb8','#4daf4a']);
 
             svg.append("g")
                 .attr("class", "x-axis")
-                .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-                .call(d3.axisBottom(x));
+                .attr("transform", "translate(0," + (height - margin.top - margin.bottom) + ")")
+                .call(d3.axisBottom(x).tickSize(0));
 
             svg.append("g")
                 .attr("class", "y-axis")
-                .attr("transform", "translate(" + margin.left + ",0)")
                 .call(d3.axisLeft(y));
 
-            svg.selectAll(".bar")
+            svg.append("g")
+                .selectAll("g")
                 .data(data)
+                .enter()
+                .append("g")
+                  .attr("transform", function(d) { return "translate(" + x(d.group) + ",0)"; })
+                .selectAll("rect")
+                .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key]}; }); })
                 .enter().append("rect")
-                .attr("class", "bar")
-                .attr("x", function(d) { return x(d.name); })
-                .attr("y", function(d) { return y(d.value); })
-                .attr("width", x.bandwidth())
-                .attr("height", function(d) { return height - margin.bottom - y(d.value); })
-                .attr("fill", "steelblue");
+                  .attr("x", function(d) { return xSubgroup(d.key); })
+                  .attr("y", function(d) { return y(d.value); })
+                  .attr("width", xSubgroup.bandwidth())
+                  .attr("height", function(d) { return height - margin.top - margin.bottom - y(d.value); })
+                  .attr("fill", function(d) { return color(d.key); });
         });
     }
 
