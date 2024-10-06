@@ -167,22 +167,16 @@
 
     // Przykładowe dane dla wykresu słupkowego
     var data = [
-        {name: "Sanacja Left - Strength", value: sanacja_left_strength},
-        {name: "Sanacja Left - Dissent", value: sanacja_left_dissent},
-        {name: "Repairers - Strength", value: repairers_strength},
-        {name: "Repairers - Dissent", value: repairers_dissent},
-        {name: "Liberals - Strength", value: liberals_strength},
-        {name: "Liberals - Dissent", value: liberals_dissent},
-        {name: "Colonels - Strength", value: colonels_strength},
-        {name: "Colonels - Dissent", value: colonels_dissent},
-        {name: "Conservatives - Strength", value: conservatives_strength},
-        {name: "Conservatives - Dissent", value: conservatives_dissent},
-        {name: "IV Brigade - Strength", value: fourth_brigade_strength},
-        {name: "IV Brigade - Dissent", value: fourth_brigade_strength_dissent}
+        {name: "Sanacja Left - Strength", value: Q.sanacja_left_strength},
+        {name: "Repairers - Strength", value: Q.repairers_strength},
+        {name: "Liberals - Strength", value: Q.liberals_strength},
+        {name: "Colonels - Strength", value: Q.colonels_strength},
+        {name: "Conservatives - Strength", value: Q.conservatives_strength},
+        {name: "IV Brigade - Strength", value: Q.fourth_brigade_strength},
     ];
 
     var barChart = d3.barchart().width(500).height(400);
-    d3.select("#faction_barchart").datum(data).call(barChart);
+    d3.select("#bar_chart").datum(data).call(barChart);
 };
 
   /*
