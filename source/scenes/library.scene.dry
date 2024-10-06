@@ -36,7 +36,30 @@ In November 1927, the *Nonpartisan Bloc for Cooperation with the Government* (BB
 @demographics
 go-to: menu
 
-**Demographic Groups**
+<div style="overflow-x:auto;">
+    <table style="text-align:center;">
+        <tr>
+            <th>Demographic Group</th>
+            <th>Higher Class</th>
+            <th>Intelligentsia</th>
+            <th>Middle Class</th>
+            <th>Workers</th>
+            <th>Unemployed</th>
+            <th>Peasants</th>
+            <th>Minorities</th>
+        </tr>
+        <tr>
+            <td>test</td>
+            <td>[+ klasa_wyzsza +]%</td>
+            <td>[+ inteligencja +]%</td>
+            <td>[+ klasa_srednia +]%</td>
+            <td>[+ robotnicy +]%</td>
+            <td>[+ bezrobotni +]%</td>
+            <td>[+ chlopi +]%</td>
+            <td>[+ mniejszosci +]%</td>
+        </tr>
+    </table>
+</div>
 
 **Social Classes:**
 
