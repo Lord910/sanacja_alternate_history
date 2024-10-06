@@ -312,17 +312,18 @@ Q.bezrobotni_pslp = 0;
 Q.bezrobotni_sn = 0;
 Q.bezrobotni_owp = 0;
 
-Q.mniejszosci_pps = 5;
-Q.mniejszosci_bbwr = 5;
-Q.mniejszosci_kpp = 2;
-Q.mniejszosci_pschd = 0;
-Q.mniejszosci_npr = 0;
+Q.mniejszosci_kpp = 0;
+Q.mniejszosci_pps = 0;
 Q.mniejszosci_pslw = 0;
 Q.mniejszosci_sch = 0;
+Q.mniejszosci_other = 70;
+Q.mniejszosci_bbwr = 30;
+Q.mniejszosci_npr = 0;
+Q.mniejszosci_pschd = 0;
 Q.mniejszosci_pslp = 0;
 Q.mniejszosci_sn = 0;
 Q.mniejszosci_owp = 0;
-Q.mniejszosci_other = 175;
+
 
 // Current Sejm composition
 // % of Sejm in Jan 1927
