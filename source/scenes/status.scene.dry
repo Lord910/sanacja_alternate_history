@@ -108,9 +108,43 @@ OWP: [+ owp_relation : relationships +]
 
 = Internal Factions of the BBWR
 
-**Strenght**
+**Sanacja Left**
 
-<svg id="barchart" style="width: 500px; height: 400px;"></svg>
+strength: [+ sanacja_left_strength : strength +], 
+
+dissent: [+ sanacja_left_dissent : dissent +]
+
+**Repairers** 
+
+strength: [+ repairers_strength : strength +], 
+
+dissent: [+ repairers_dissent : dissent +]
+
+**Liberals**
+
+strength: [+ liberals_strength : strength +], 
+
+dissent: [+ liberals_dissent : dissent +]
+
+**Colonels**
+
+strength: [+ colonels_strength : strength +], 
+
+dissent: [+ colonels_dissent : dissent +]
+
+**Conservatives**
+
+strength: [+ conservatives_strength : strength +], 
+
+dissent: [+ conservatives_dissent : dissent +]
+
+**IV Brigade**
+
+strength: [+ fourth_brigade_strength : strength +], 
+
+dissent: [+ fourth_brigade_strength_dissent : dissent +]
+
+[? if sanacja_nationalists > 0 : Nationalists strength: [+ conservatives_strength : strength +], dissent: [+ conservatives_dissent : dissent +] ?]
 
 @paramilitaries
 
