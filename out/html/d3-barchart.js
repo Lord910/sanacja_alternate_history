@@ -1,4 +1,4 @@
-3.barchart = function() {
+d3.barchart = function() {
     var width = 500;
     var height = 400;
     var margin = {top: 20, right: 20, bottom: 30, left: 40};
