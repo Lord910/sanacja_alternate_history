@@ -167,12 +167,12 @@
 
     // Przykładowe dane dla wykresu słupkowego
     var data = [
-        {name: "Sanacja Left - Strength", value: Q.sanacja_left_strength},
-        {name: "Repairers - Strength", value: Q.repairers_strength},
-        {name: "Liberals - Strength", value: Q.liberals_strength},
-        {name: "Colonels - Strength", value: Q.colonels_strength},
-        {name: "Conservatives - Strength", value: Q.conservatives_strength},
-        {name: "IV Brigade - Strength", value: Q.fourth_brigade_strength},
+        {name: "Sanacja Left - Strength", value: 10},
+        {name: "Repairers - Strength", value: 20},
+        {name: "Liberals - Strength", value: 30},
+        {name: "Colonels - Strength", value: 40},
+        {name: "Conservatives - Strength", value: 50},
+        {name: "IV Brigade - Strength", value: 60},
     ];
 
     var barChart = d3.barchart().width(500).height(400);
