@@ -163,8 +163,22 @@
   };
 
   window.onDisplayContent = function() {
-      window.updateSidebar();
-  };
+    window.updateSidebar();
+
+    // Example data for the bar chart
+    var data = [
+        {name: "Category 1", value: 30},
+        {name: "Category 2", value: 80},
+        {name: "Category 3", value: 45},
+        {name: "Category 4", value: 60},
+        {name: "Category 5", value: 20},
+        {name: "Category 6", value: 90},
+        {name: "Category 7", value: 55}
+    ];
+
+    var barChart = d3.barchart().width(500).height(400);
+    d3.select("#bar_chart").datum(data).call(barChart);
+};
 
   /*
    * This function copied from the code for Infinite Space Battle Simulator

@@ -796,3 +796,6 @@ if (d3 && window) {
 
 {!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
 # TODO: maybe add textual histories too? some accessibility stuff as well...
+
+= Bar Chart Example
+{!<svg id="bar_chart" style="width: 500px; height: 400px;"> </svg>!}
