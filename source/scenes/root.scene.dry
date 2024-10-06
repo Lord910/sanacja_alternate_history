@@ -227,13 +227,13 @@ Q.capital_strike_progress = 0;
 Q.budget = 5;
 
 // Proportion of different social groups based on updated demographics
-Q.robotnicy = 23.45; // sum of workers of industrial and agrarian workers
-Q.chlopi = 31.03; // sum of all peasents
-Q.inteligencja = 3.47; 
-Q.klasa_wyzsza = 1.0;
-Q.klasa_srednia = 4.1;
-Q.bezrobotni = 0.6; // unemployment rate 
-Q.mniejszosci = 36.35; // sum of all minorities 
+Q.robotnicy = 23; // sum of workers of industrial and agrarian workers
+Q.chlopi = 31; // sum of all peasants
+Q.inteligencja = 4; 
+Q.klasa_wyzsza = 1;
+Q.klasa_srednia = 4;
+Q.bezrobotni = 1; // unemployment rate 
+Q.mniejszosci = 36; // sum of all minorities 
 
 Q.classes = ['robotnicy', 'chlopi', 'inteligencja', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'mniejszosci'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
