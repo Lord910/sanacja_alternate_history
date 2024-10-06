@@ -235,7 +235,7 @@ Q.klasa_srednia = 4;
 Q.bezrobotni = 1; // unemployment rate 
 Q.mniejszosci = 36; // sum of all minorities 
 
-Q.classes = ['robotnicy', 'chlopi', 'inteligencja', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'mniejszosci'];
+Q.classes = ['robotnicy', 'chlopi', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'mniejszosci', 'inteligencja'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
 
 // Support for party by social group
@@ -272,6 +272,7 @@ Q.inteligencja_other = 0;
 Q.inteligencja_bbwr = 50;
 Q.inteligencja_npr = 0;
 Q.inteligencja_pschd = 10;
+Q.inteligencja_pslp = 0;
 Q.inteligencja_sn = 20;
 Q.inteligencja_owp = 0;
 
