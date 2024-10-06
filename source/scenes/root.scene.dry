@@ -227,77 +227,89 @@ Q.capital_strike_progress = 0;
 Q.budget = 5;
 
 // Proportion of different social groups based on updated demographics
-Q.robotnicy = 22;
-Q.klasa_wyzsza = 1.1;
-Q.klasa_srednia = 12.8;
-Q.chlopi = 44.4; 
-Q.bezrobotni = 6.9; // unemployment rate 
-Q.mniejszosci = 20; // sum of all minorities 
+Q.robotnicy = 23.45; // sum of workers of industrial and agrarian workers
+Q.chlopi = 31.03; // sum of all peasents
+Q.inteligencja = 3.47; 
+Q.klasa_wyzsza = 1.0;
+Q.klasa_srednia = 4.1;
+Q.bezrobotni = 0.6; // unemployment rate 
+Q.mniejszosci = 36.35; // sum of all minorities 
 
-Q.classes = ['robotnicy', 'klasa_wyzsza', 'klasa_srednia', 'chlopi', 'bezrobotni', 'mniejszosci'];
+Q.classes = ['robotnicy', 'chlopi', 'inteligencja', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'mniejszosci'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.robotnicy_pps = 37;
-Q.robotnicy_bbwr = 25;
-Q.robotnicy_kpp = 3;
-Q.robotnicy_pschd = 4;
-Q.robotnicy_npr = 12;
+Q.robotnicy_kpp = 10;
+Q.robotnicy_pps = 55;
 Q.robotnicy_pslw = 0;
-Q.robotnicy_sch = 6;
-Q.robotnicy_pslp = 0;
-Q.robotnicy_sn = 10;
-Q.robotnicy_owp = 0;
+Q.robotnicy_sch = 0;
 Q.robotnicy_other = 0;
+Q.robotnicy_bbwr = 16;
+Q.robotnicy_npr = 45;
+Q.robotnicy_pschd = 16;
+Q.robotnicy_pslp = 0;
+Q.robotnicy_sn = 0;
+Q.robotnicy_owp = 0;
 
-Q.klasa_wyzsza_pps = 0;
-Q.klasa_wyzsza_bbwr = 40;
-Q.klasa_wyzsza_kpp = 0;
-Q.klasa_wyzsza_pschd = 20;
-Q.klasa_wyzsza_npr = 0;
-Q.klasa_wyzsza_pslw = 0;
-Q.klasa_wyzsza_sch = 0;
-Q.klasa_wyzsza_pslp = 10;
-Q.klasa_wyzsza_sn = 30;
-Q.klasa_wyzsza_owp = 0;
-Q.klasa_wyzsza_other = 0;
-
-Q.klasa_srednia_pps = 12;
-Q.klasa_srednia_bbwr = 25;
-Q.klasa_srednia_kpp = 0;
-Q.klasa_srednia_pschd = 12;
-Q.klasa_srednia_npr = 6;
-Q.klasa_srednia_pslw = 0;
-Q.klasa_srednia_sch = 6;
-Q.klasa_srednia_pslp = 12;
-Q.klasa_srednia_sn = 22;
-Q.klasa_srednia_owp = 0;
-Q.klasa_srednia_other = 0;
-
-Q.chlopi_pps = 6;
-Q.chlopi_bbwr = 25;
-Q.chlopi_kpp = 6;
-Q.chlopi_pschd = 6;
-Q.chlopi_npr = 0;
-Q.chlopi_pslw = 30;
+Q.chlopi_kpp = 10;
+Q.chlopi_pps = 7;
+Q.chlopi_pslw = 18;
 Q.chlopi_sch = 12;
-Q.chlopi_pslp = 12;
+Q.chlopi_other = 0;
+Q.chlopi_bbwr = 23;
+Q.chlopi_npr = 0;
+Q.chlopi_pschd = 8;
+Q.chlopi_pslp = 10;
 Q.chlopi_sn = 12;
 Q.chlopi_owp = 0;
-Q.chlopi_other = 0;
 
-Q.bezrobotni_pps = 35;
-Q.bezrobotni_bbwr = 25;
+Q.inteligencja_kpp = 10;
+Q.inteligencja_pps = 25;
+Q.inteligencja_sch = 0;
+Q.inteligencja_pslw = 10;
+Q.inteligencja_other = 0;
+Q.inteligencja_bbwr = 50;
+Q.inteligencja_npr = 0;
+Q.inteligencja_pschd = 10;
+Q.inteligencja_sn = 20;
+Q.inteligencja_owp = 0;
+
+Q.klasa_wyzsza_kpp = 0;
+Q.klasa_wyzsza_pps = 0;
+Q.klasa_wyzsza_pslw = 0;
+Q.klasa_wyzsza_sch = 0;
+Q.klasa_wyzsza_other = 0;
+Q.klasa_wyzsza_bbwr = 70;
+Q.klasa_wyzsza_npr = 0;
+Q.klasa_wyzsza_pschd = 0;
+Q.klasa_wyzsza_pslp = 0;
+Q.klasa_wyzsza_sn = 30;
+Q.klasa_wyzsza_owp = 0;
+
+Q.klasa_srednia_kpp = 0;
+Q.klasa_srednia_pps = 0;
+Q.klasa_srednia_pslw = 0;
+Q.klasa_srednia_sch = 0;
+Q.klasa_srednia_other = 0;
+Q.klasa_srednia_bbwr = 20;
+Q.klasa_srednia_npr = 0;
+Q.klasa_srednia_pschd = 20;
+Q.klasa_srednia_pslp = 0;
+Q.klasa_srednia_sn = 60;
+Q.klasa_srednia_owp = 0;
+
 Q.bezrobotni_kpp = 3;
-Q.bezrobotni_pschd = 4;
-Q.bezrobotni_npr = 12;
+Q.bezrobotni_pps = 35;
 Q.bezrobotni_pslw = 0;
 Q.bezrobotni_sch = 6;
-Q.bezrobotni_pslp = 0;
-Q.bezrobotni_sn = 14;
-Q.bezrobotni_owp = 0;
 Q.bezrobotni_other = 0;
+Q.bezrobotni_bbwr = 25;
+Q.bezrobotni_npr = 12;
+Q.bezrobotni_pschd = 4;
+Q.bezrobotni_pslp = 0;
+Q.bezrobotni_sn = 0;
+Q.bezrobotni_owp = 0;
 
 Q.mniejszosci_pps = 5;
 Q.mniejszosci_bbwr = 5;
