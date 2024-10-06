@@ -11,8 +11,8 @@ d3.barchart = function() {
               .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            var subgroups = data.columns.slice(1);
-            var groups = d3.map(data, function(d){return(d.group)}).keys();
+            var subgroups = data.columns.slice(1); // ["Strength", "Dissent"]
+            var groups = data.map(function(d) { return d.group; }); // ["Sanacja Left", "Repairers", ...]
 
             var x = d3.scaleBand()
                 .domain(groups)

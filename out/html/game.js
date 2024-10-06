@@ -167,16 +167,16 @@
 
     // Przykładowe dane dla wykresu słupkowego
     var data = [
-        {group: "Sanacja Left", Strength: 10},
-        {group: "Repairers", Strength: 20},
-        {group: "Liberals", Strength: 30},
-        {group: "Colonels", Strength: 40},
-        {group: "Conservatives", Strength: 50},
-        {group: "IV Brigade", Strength: 60},
+        {group: "Sanacja Left", Strength: 10, Dissent: 5},
+        {group: "Repairers", Strength: 20, Dissent: 10},
+        {group: "Liberals", Strength: 30, Dissent: 15},
+        {group: "Colonels", Strength: 40, Dissent: 20},
+        {group: "Conservatives", Strength: 50, Dissent: 25},
+        {group: "IV Brigade", Strength: 60, Dissent: 30},
     ];
 
     // Dodaj kolumny do danych
-    data.columns = ["group", "Strength"];
+    data.columns = ["group", "Strength", "Dissent"];
 
     var barChart = d3.barchart().width(500).height(400);
     d3.select("#bar_chart").datum(data).call(barChart);
