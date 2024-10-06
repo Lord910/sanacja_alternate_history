@@ -1,7 +1,7 @@
 d3.barchart = function() {
     var width = 500;
     var height = 400;
-    var margin = {top: 20, right: 20, bottom: 30, left: 40};
+    var margin = {top: 20, right: 20, bottom: 50, left: 40}; // Zwiększono dolny margines
 
     function chart(selection) {
         selection.each(function(data) {
@@ -35,7 +35,10 @@ d3.barchart = function() {
             svg.append("g")
                 .attr("class", "x-axis")
                 .attr("transform", "translate(0," + (height - margin.top - margin.bottom) + ")")
-                .call(d3.axisBottom(x).tickSize(0));
+                .call(d3.axisBottom(x).tickSize(0))
+                .selectAll("text")
+                .attr("transform", "rotate(-45)") // Obrót etykiet
+                .style("text-anchor", "end"); // Ustawienie kotwicy tekstu
 
             svg.append("g")
                 .attr("class", "y-axis")
