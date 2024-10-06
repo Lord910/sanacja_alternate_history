@@ -259,8 +259,8 @@ Q.chlopi_sch = 12;
 Q.chlopi_other = 0;
 Q.chlopi_bbwr = 23;
 Q.chlopi_npr = 0;
-Q.chlopi_pschd = 8;
-Q.chlopi_pslp = 10;
+Q.chlopi_pschd = 6.4;
+Q.chlopi_pslp = 11.6;
 Q.chlopi_sn = 12;
 Q.chlopi_owp = 0;
 
