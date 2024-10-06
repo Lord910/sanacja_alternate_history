@@ -40,22 +40,34 @@ go-to: menu
     <table style="text-align:center;">
         <tr>
             <th>Demographic Group</th>
-            <th>Higher Class</th>
-            <th>Intelligentsia</th>
-            <th>Middle Class</th>
-            <th>Workers</th>
-            <th>Unemployed</th>
-            <th>Peasants</th>
-            <th>Minorities</th>
+            <td>%</td>
         </tr>
         <tr>
-            <td>test</td>
+            <th>Higher Class</th>
             <td>[+ klasa_wyzsza +]%</td>
+        </tr>
+        <tr>
+            <th>Intelligentsia</th>
             <td>[+ inteligencja +]%</td>
+        </tr>
+        <tr>
+            <th>Middle Class</th>
             <td>[+ klasa_srednia +]%</td>
+        </tr>
+        <tr>
+            <th>Workers</th>
             <td>[+ robotnicy +]%</td>
+        </tr>
+        <tr>
+            <th>Unemployed</th>
             <td>[+ bezrobotni +]%</td>
+        </tr>
+        <tr>
+            <th>Peasants</th>
             <td>[+ chlopi +]%</td>
+        </tr>
+        <tr>
+            <th>Minorities</th>
             <td>[+ mniejszosci +]%</td>
         </tr>
     </table>
