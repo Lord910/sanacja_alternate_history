@@ -146,7 +146,7 @@ go-to: menu
 <div style="overflow-x:auto;">
     <table style="text-align:center;">
         <tr>
-            <th>Class</th>
+            <th>Party</th>
             <th>Higher Class</th>
             <th>Middle Class</th>
             <th>Workers</th>
