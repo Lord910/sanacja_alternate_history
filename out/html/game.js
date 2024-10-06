@@ -165,24 +165,31 @@
   window.onDisplayContent = function() {
     window.updateSidebar();
 
-    // Przykładowe dane dla wykresu słupkowego
+    // Przekształcone dane dla wykresu słupkowego
     var data = [
-        {name: "Sanacja Left - Strength", value: sanacja_left_strength},
-        {name: "Sanacja Left - Dissent", value: sanacja_left_dissent},
-        {name: "Repairers - Strength", value: repairers_strength},
-        {name: "Repairers - Dissent", value: repairers_dissent},
-        {name: "Liberals - Strength", value: liberals_strength},
-        {name: "Liberals - Dissent", value: liberals_dissent},
-        {name: "Colonels - Strength", value: colonels_strength},
-        {name: "Colonels - Dissent", value: colonels_dissent},
-        {name: "Conservatives - Strength", value: conservatives_strength},
-        {name: "Conservatives - Dissent", value: conservatives_dissent},
-        {name: "IV Brigade - Strength", value: fourth_brigade_strength},
-        {name: "IV Brigade - Dissent", value: fourth_brigade_strength_dissent}
+        {faction: "Sanacja Left", type: "Strength", value: Q.sanacja_left_strength},
+        {faction: "Sanacja Left", type: "Dissent", value: Q.sanacja_left_dissent},
+        {faction: "Repairers", type: "Strength", value: Q.repairers_strength},
+        {faction: "Repairers", type: "Dissent", value: Q.repairers_dissent},
+        {faction: "Liberals", type: "Strength", value: Q.liberals_strength},
+        {faction: "Liberals", type: "Dissent", value: Q.liberals_dissent},
+        {faction: "Colonels", type: "Strength", value: Q.colonels_strength},
+        {faction: "Colonels", type: "Dissent", value: Q.colonels_dissent},
+        {faction: "Conservatives", type: "Strength", value: Q.conservatives_strength},
+        {faction: "Conservatives", type: "Dissent", value: Q.conservatives_dissent},
+        {faction: "IV Brigade", type: "Strength", value: Q.fourth_brigade_strength},
+        {faction: "IV Brigade", type: "Dissent", value: Q.fourth_brigade_dissent}
     ];
 
-    var barChart = d3.barchart().width(500).height(400);
-    d3.select("#faction_barchart").datum(data).call(barChart);
+    // Konfiguracja wykresu słupkowego
+    var barChart = d3.barchart()
+        .width(500)
+        .height(400)
+        .x(d => d.faction)
+        .y(d => d.value)
+        .groupBy(d => d.type);
+
+    d3.select("#bar_chart").datum(data).call(barChart);
 };
 
   /*
