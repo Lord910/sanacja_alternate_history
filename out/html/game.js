@@ -165,15 +165,20 @@
   window.onDisplayContent = function() {
     window.updateSidebar();
 
-    // Przykładowe dane dla wykresu słupkowego
-    var data = [
-        {group: "Sanacja Left", Strength: 10, Dissent: 5},
-        {group: "Repairers", Strength: 20, Dissent: 10},
-        {group: "Liberals", Strength: 30, Dissent: 15},
-        {group: "Colonels", Strength: 40, Dissent: 20},
-        {group: "Conservatives", Strength: 50, Dissent: 25},
-        {group: "IV Brigade", Strength: 60, Dissent: 30},
-    ];
+    // Funkcja generująca dane na podstawie wartości zmiennych Q
+    function generateData() {
+        return [
+            {group: "Sanacja Left", Strength: Q.sanacja_left_strength, Dissent: Q.sanacja_left_dissent},
+            {group: "Repairers", Strength: Q.repairers_strength, Dissent: Q.repairers_dissent},
+            {group: "Liberals", Strength: Q.liberals_strength, Dissent: Q.liberals_dissent},
+            {group: "Colonels", Strength: 0, Dissent: Q.colonels_dissent},
+            {group: "Conservatives", Strength: Q.conservatives_strength, Dissent: Q.conservatives_dissent},
+            {group: "IV Brigade", Strength: Q.fourth_brigade_strength, Dissent: Q.fourth_brigade_dissent},
+        ];
+    }
+
+    // Generowanie danych
+    var data = generateData();
 
     // Dodaj kolumny do danych
     data.columns = ["group", "Strength", "Dissent"];

@@ -1,7 +1,7 @@
 d3.barchart = function() {
     var width = 500;
     var height = 400;
-    var margin = {top: 20, right: 20, bottom: 50, left: 40}; // Zwiększono dolny margines
+    var margin = {top: 20, right: 20, bottom: 70, left: 40}; // Zwiększono dolny margines
 
     function chart(selection) {
         selection.each(function(data) {
