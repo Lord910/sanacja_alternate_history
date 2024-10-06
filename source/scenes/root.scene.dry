@@ -240,7 +240,7 @@ Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.robotnicy_kpp = 10;
+Q.robotnicy_kpp = 5;
 Q.robotnicy_pps = 55;
 Q.robotnicy_pslw = 0;
 Q.robotnicy_sch = 0;
@@ -293,9 +293,9 @@ Q.klasa_srednia_pps = 0;
 Q.klasa_srednia_pslw = 0;
 Q.klasa_srednia_sch = 0;
 Q.klasa_srednia_other = 0;
-Q.klasa_srednia_bbwr = 20;
+Q.klasa_srednia_bbwr = 30;
 Q.klasa_srednia_npr = 0;
-Q.klasa_srednia_pschd = 20;
+Q.klasa_srednia_pschd = 10;
 Q.klasa_srednia_pslp = 0;
 Q.klasa_srednia_sn = 60;
 Q.klasa_srednia_owp = 0;
