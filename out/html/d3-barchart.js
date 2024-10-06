@@ -9,19 +9,10 @@ d3.barchart = function() {
                 .attr("width", width)
                 .attr("height", height);
 
-            // Grupy frakcji
-            var factions = d3.map(data, function(d) { return d.faction; }).keys();
-            var types = d3.map(data, function(d) { return d.type; }).keys();
-
-            var x0 = d3.scaleBand()
+            var x = d3.scaleBand()
                 .range([margin.left, width - margin.right])
                 .padding(0.1)
-                .domain(factions);
-
-            var x1 = d3.scaleBand()
-                .padding(0.05)
-                .domain(types)
-                .range([0, x0.bandwidth()]);
+                .domain(data.map(function(d) { return d.name; }));
 
             var y = d3.scaleLinear()
                 .range([height - margin.bottom, margin.top])
@@ -30,31 +21,22 @@ d3.barchart = function() {
             svg.append("g")
                 .attr("class", "x-axis")
                 .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-                .call(d3.axisBottom(x0));
+                .call(d3.axisBottom(x));
 
             svg.append("g")
                 .attr("class", "y-axis")
                 .attr("transform", "translate(" + margin.left + ",0)")
                 .call(d3.axisLeft(y));
 
-            var color = d3.scaleOrdinal()
-                .domain(types)
-                .range(["steelblue", "orange"]);
-
-            var faction = svg.selectAll(".faction")
+            svg.selectAll(".bar")
                 .data(data)
-                .enter().append("g")
-                .attr("class", "faction")
-                .attr("transform", function(d) { return "translate(" + x0(d.faction) + ",0)"; });
-
-            faction.selectAll("rect")
-                .data(function(d) { return types.map(function(type) { return {type: type, value: d.value, faction: d.faction}; }); })
                 .enter().append("rect")
-                .attr("x", function(d) { return x1(d.type); })
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d.name); })
                 .attr("y", function(d) { return y(d.value); })
-                .attr("width", x1.bandwidth())
+                .attr("width", x.bandwidth())
                 .attr("height", function(d) { return height - margin.bottom - y(d.value); })
-                .attr("fill", function(d) { return color(d.type); });
+                .attr("fill", "steelblue");
         });
     }
 
