@@ -819,7 +819,6 @@ Member of **Conservatives** of the BBWR has been appointed Agriculture Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
-go-to: speaker_election_1928 if (speaker_election_1928_time = 1 and speaker_election_1928_seen = 0)
 
 This coalition arrangement is tolerable to all.
 
