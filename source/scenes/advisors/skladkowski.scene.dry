@@ -10,7 +10,6 @@ new-page: true
 Składkowski currently serves as Poland’s Minister of Internal Affairs and is a key figure in Józef Piłsudski's Sanacja movement. He prioritizes using state security services to maintain public order and enforce the policies of the post-May Coup government.
 
 - @internal_affairs
-- @security_forces
 - @root: Return to main
 
 @internal_affairs
@@ -20,13 +19,4 @@ choose-if: advisor_action_timer <= 0 and bbwr_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not bbwr_prussia : The BBWR is not in control of Prussia. ?]
 on-arrival: advisor_action_timer = 6; internal_affairs_timer -= 6
 go-to: internal_affairs
-
-
-@security_forces
-title: Police affairs 
-subtitle: We can set our police policy. 
-choose-if: advisor_action_timer == 0 and bbwr_in_government and interior_minister_party == "BBWR"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not bbwr_in_government : The BBWR is not in government. ?][? if interior_minister_party != "BBWR": The BBWR does not have the Interior ministry. ?]
-on-arrival: advisor_action_timer = 6; internal_affairs_timer -= 6
-go-to: police
 
