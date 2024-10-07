@@ -778,7 +778,7 @@ var factionData = [
     {
         "faction": "Fourth Brigade",
         "strength": Math.round(Q.fourth_brigade_strength),
-        "dissent": Math.round(Q.fourth_brigade_dissenth)
+        "dissent": Math.round(Q.fourth_brigade_dissent)
     }
 ];
 
@@ -799,7 +799,7 @@ var bars = d3.barchart(false, // noTicks
         { faction: 'Sanacja Left', strength: 'sanacja_left_strength', dissent: 'sanacja_left_dissent' },
         { faction: 'Colonels', strength: null, dissent: 'colonels_dissent' },
         { faction: 'Conservatives', strength: 'conservatives_strength', dissent: 'conservatives_dissent' },
-        { faction: 'Fourth Brigade', strength: 'fourth_brigade_strength', dissent: 'fourth_brigade_dissenth' }
+        { faction: 'Fourth Brigade', strength: 'fourth_brigade_strength', dissent: 'fourth_brigade_dissent' }
     ],
     {
         'strength': '#4682B4', // steelblue for strength
@@ -816,7 +816,7 @@ var bars = d3.barchart(false, // noTicks
         'conservatives_strength': 'Conservatives Strength', 
         'conservatives_dissent': 'Conservatives Dissent', 
         'fourth_brigade_strength': 'Fourth Brigade Strength', 
-        'fourth_brigade_dissenth': 'Fourth Brigade Dissent'
+        'fourth_brigade_dissent': 'Fourth Brigade Dissent'
     }
 );
 
@@ -825,7 +825,6 @@ bars.width(width).height(height);
 
 // Select the element where the bar chart will be rendered and bind the data
 d3.select("#faction_strength_dissent").datum(factionData).call(bars);
-
 !}
 
 
