@@ -748,21 +748,6 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
-    // Dodanie wykresu słupkowego
-    var barChartData = [
-        {group: "Sanacja Left", Strength: Q.sanacja_left_strength, Dissent: Q.sanacja_left_dissent},
-        {group: "Repairers", Strength: Q.repairers_strength, Dissent: Q.repairers_dissent},
-        {group: "Liberals", Strength: Q.liberals_strength, Dissent: Q.liberals_dissent},
-        {group: "Colonels", Strength: 0, Dissent: Q.colonels_dissent},
-        {group: "Conservatives", Strength: Q.conservatives_strength, Dissent: Q.conservatives_dissent},
-        {group: "IV Brigade", Strength: Q.fourth_brigade_strength, Dissent: Q.fourth_brigade_dissent},
-    ];
-
-    // Dodaj kolumny do danych
-    barChartData.columns = ["group", "Strength", "Dissent"];
-
-    var barChart = d3.barchart().width(500).height(400);
-    d3.select("#bar_chart").datum(barChartData).call(barChart);
 }
 !}
 
@@ -813,5 +798,3 @@ if (d3 && window) {
 {!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
 # TODO: maybe add textual histories too? some accessibility stuff as well...
 
-= Bar Chart Example
-<svg id="bar_chart" style="width: 500px; height: 400px;"></svg>

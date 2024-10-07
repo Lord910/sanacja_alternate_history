@@ -162,20 +162,10 @@
       window.updateSidebar();
   };
 
-  import { generateChartData } from './library.scene.dry';
-
   window.onDisplayContent = function() {
-      window.updateSidebar();
-  
-      // Generowanie danych
-      var data = generateChartData();
-  
-      // Dodaj kolumny do danych
-      data.columns = ["group", "Strength", "Dissent"];
-  
-      var barChart = d3.barchart().width(500).height(400);
-      d3.select("#bar_chart").datum(data).call(barChart);
-  };
+    window.updateSidebar();
+};
+
 
   /*
    * This function copied from the code for Infinite Space Battle Simulator
