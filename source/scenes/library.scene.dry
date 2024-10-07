@@ -748,6 +748,17 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 }
+    var data = {
+        columns: ["group", "Strength", "Dissent"],
+        values: [
+            { group: "KPP", Strength: 100, Dissent: 20 },
+            { group: "PPS", Strength: 80, Dissent: 30 },
+            { group: "SL", Strength: 60, Dissent: 40 }
+        ]
+    };
+
+    // Wywołaj funkcję do wyświetlenia wykresu
+    window.onDisplayContent(data);
 !}
 
 = Sejm composition

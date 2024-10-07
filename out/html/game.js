@@ -162,29 +162,22 @@
       window.updateSidebar();
   };
 
-  window.onDisplayContent = function() {
+  window.onDisplayContent = function(data) {
     window.updateSidebar();
 
     // Funkcja generująca dane na podstawie wartości zmiennych Q
     function generateData() {
-        return [
-            {group: "Sanacja Left", Strength: Q.sanacja_left_strength, Dissent: Q.sanacja_left_dissent},
-            {group: "Repairers", Strength: Q.repairers_strength, Dissent: Q.repairers_dissent},
-            {group: "Liberals", Strength: Q.liberals_strength, Dissent: Q.liberals_dissent},
-            {group: "Colonels", Strength: 0, Dissent: Q.colonels_dissent},
-            {group: "Conservatives", Strength: Q.conservatives_strength, Dissent: Q.conservatives_dissent},
-            {group: "IV Brigade", Strength: Q.fourth_brigade_strength, Dissent: Q.fourth_brigade_dissent},
-        ];
+        return data || window.getDataForChart();
     }
 
     // Generowanie danych
-    var data = generateData();
+    var chartData = generateData();
 
     // Dodaj kolumny do danych
-    data.columns = ["group", "Strength", "Dissent"];
+    chartData.columns = ["group", "Strength", "Dissent"];
 
     var barChart = d3.barchart().width(500).height(400);
-    d3.select("#bar_chart").datum(data).call(barChart);
+    d3.select("#bar_chart").datum(chartData).call(barChart);
 };
 
   /*
