@@ -166,6 +166,30 @@
     window.updateSidebar();
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+    const repairers_strength = parseInt(document.querySelector(':repairers_strength').textContent);
+    const repairers_dissent = parseInt(document.querySelector(':repairers_dissent').textContent);
+    const liberals_strength = parseInt(document.querySelector(':liberals_strength').textContent);
+    const liberals_dissent = parseInt(document.querySelector(':liberals_dissent').textContent);
+    const sanacja_left_strength = parseInt(document.querySelector(':sanacja_left_strength').textContent);
+    const sanacja_left_dissent = parseInt(document.querySelector(':sanacja_left_dissent').textContent);
+    const colonels_dissent = parseInt(document.querySelector(':colonels_dissent').textContent);
+    const conservatives_strength = parseInt(document.querySelector(':conservatives_strength').textContent);
+    const conservatives_dissent = parseInt(document.querySelector(':conservatives_dissent').textContent);
+    const fourth_brigade_strength = parseInt(document.querySelector(':fourth_brigade_strength').textContent);
+    const fourth_brigade_dissent = parseInt(document.querySelector(':fourth_brigade_dissent').textContent);
+
+    const data = [
+        { group: 'Repairers', strength: repairers_strength, dissent: repairers_dissent },
+        { group: 'Liberals', strength: liberals_strength, dissent: liberals_dissent },
+        { group: 'Sanacja Left', strength: sanacja_left_strength, dissent: sanacja_left_dissent },
+        { group: 'Colonels', strength: 0, dissent: colonels_dissent },
+        { group: 'Conservatives', strength: conservatives_strength, dissent: conservatives_dissent },
+        { group: 'Fourth Brigade', strength: fourth_brigade_strength, dissent: fourth_brigade_dissent }
+    ];
+
+    createBarChart(data, 'barchart');
+});
 
   /*
    * This function copied from the code for Infinite Space Battle Simulator
