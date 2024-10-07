@@ -10,7 +10,7 @@ new-page: true
 Braun [? if bbwr_prussia = 1 : is ?][? if bbwr_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
 
 - @coalition
-- @prussian_bulwark
+- @internal_affairs
 - @snap_election
 - @root: Return to main
 
@@ -23,13 +23,13 @@ on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if bbwr_in_governme
 
 We have improved our relations with the [? if in_centre_left_coalition : Christian Democrats (PSCHD), PSL-W, and PSL-P, ?][? if not in_centre_left_coalition: Christian Democrats (PSCHD) and PSL-W, ?] and reduced tensions with the coalition.
 
-@prussian_bulwark
+@internal_affairs
 title: The Prussian Bulwark
 subtitle: As the Minister-President of Prussia, Braun has power over the Prussian bureaucracy and security services.
 choose-if: advisor_action_timer <= 0 and bbwr_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if bbwr_prussia == 0 : The BBWR does not control Prussia. ?]
-on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6
-go-to: prussian_affairs
+on-arrival: advisor_action_timer = 6; internal_affairs_timer -= 6
+go-to: internal_affairs
 
 @snap_election
 title: Snap Election

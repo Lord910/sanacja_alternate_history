@@ -184,9 +184,9 @@ Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
+Q.state_police_strength = 90;
+Q.state_police_militancy = 1;
+Q.state_police_loyalty = 0.5;
 
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
@@ -535,7 +535,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
-            'police', 'prussian_affairs', 'shuffle_cabinet', 'social_welfare',
+            'internal_affairs', 'shuffle_cabinet', 'social_welfare',
             'economic_policy', 'coalition_affairs',
             'war_guilt', 'womens_rights', 'economic_democracy',
             'dealing_with_toleration',
@@ -580,8 +580,7 @@ Q.foreign_policy_timer = 0;
 Q.judiciary_timer = 0;
 Q.labor_affairs_timer = 0;
 Q.military_policy_timer = 0;
-Q.police_timer = 0;
-Q.prussian_affairs_timer = 0;
+Q.internal_affairs_timer = 0;
 Q.shuffle_cabinet_timer = 0;
 Q.social_welfare_timer = 0;
 Q.war_guilt_timer = 0;

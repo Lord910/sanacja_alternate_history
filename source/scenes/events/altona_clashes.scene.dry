@@ -22,7 +22,7 @@ We have banned the planned protest. The Nazis appeal the ban in the courts in th
 
 
 @allow_police
-go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no_violence if prussian_police_loyalty > 0.75 
+go-to: allow_police_violence if state_police_loyalty <= 0.75; allow_police_no_violence if state_police_loyalty > 0.75 
 
 @allow_police_violence
 on-arrival: strife += 1; sa_strength += 50; kpp_relation -= 8; pps_bbwr_coalition -= 1

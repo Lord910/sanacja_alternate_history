@@ -1,0 +1,46 @@
+title: Internal Security
+new-page: true
+is-card: true
+tags: govt_affairs
+on-arrival: internal_affairs_timer += 6; month_actions += 1
+view-if: bbwr_in_government = 1 and interior_minister_party = "BBWR" and internal_affairs_timer <= 0
+card-image: img/portraits/SeveringCarl.jpg
+
+= Internal Security
+
+The Interior Ministry controls internal security throughout the German Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
+
+As with the state police units and the Reichswehr, the internal police tends to be reactionary, and has serious issues with loyalty to the elected government of the Republic.
+
+- @police: Increase loyality and funding for our security forces
+- @bureaucracy: Purge the bureaucracy of reactionary elements.
+- @domestic_enemies: Investigate or ban our domestic enemies.
+- @root: Take no action for now.
+- @easy_discard
+
+@police_affairs
+subtitle: Current police loyalty: [+ state_police_loyalty : loyalty +]
+
+- @police_loyalty: Bolster the loyalty of the police.
+- @police_strength: Recruit additional police.
+
+
+@police_loyalty
+view-if: state_police_loyalty < 1
+on-arrival: state_police_loyalty += 0.1
+
+# increase police loyalty
+The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
+
+Current police loyalty: [+ state_police_loyalty : loyalty +].
+
+@police_strength
+on-arrival: state_police_strength += 20
+
+We have increased the size of the Prussian police.
+
+@bureaucracy
+on-arrival: state_police_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); klasa_srednia_bbwr += 2*(1-dissent) if democratization >= 3; klasa_srednia_bbwr += 2*(1-dissent) if democratization >= 4; political_crisis_level += 0.5
+
+The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
+
