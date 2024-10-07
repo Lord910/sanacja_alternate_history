@@ -748,18 +748,6 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
-    // party strength and dissent
-    const data = [
-        { group: 'Repairers', strength: Q.repairers_strength, dissent: Q.repairers_dissent },
-        { group: 'Liberals', strength: Q.liberals_strength, dissent: Q.liberals_dissent },
-        { group: 'Sanacja Left', strength: Q.sanacja_left_strength, dissent: Q.sanacja_left_dissent },
-        { group: 'Colonels', strength: 0, dissent: Q.colonels_dissent },
-        { group: 'Conservatives', strength: Q.conservatives_strength, dissent: Q.conservatives_dissent },
-        { group: 'Fourth Brigade', strength: Q.fourth_brigade_strength, dissent: Q.fourth_brigade_dissent }
-    ];
-
-    createBarChart(data, 'barchart');
-}
 !}
 
 
