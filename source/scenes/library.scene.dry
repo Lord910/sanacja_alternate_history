@@ -748,7 +748,86 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 }
+
+var factionData = [
+    {
+        "faction": "Repairers",
+        "strength": Math.round(Q.repairers_strength),
+        "dissent": Math.round(Q.repairers_dissent)
+    },
+    {
+        "faction": "Liberals",
+        "strength": Math.round(Q.liberals_strength),
+        "dissent": Math.round(Q.liberals_dissent)
+    },
+    {
+        "faction": "Sanacja Left",
+        "strength": Math.round(Q.sanacja_left_strength),
+        "dissent": Math.round(Q.sanacja_left_dissent)
+    },
+    {
+        "faction": "Colonels",
+        "strength": 0,  // No strength value
+        "dissent": Math.round(Q.colonels_dissent)
+    },
+    {
+        "faction": "Conservatives",
+        "strength": Math.round(Q.conservatives_strength),
+        "dissent": Math.round(Q.conservatives_dissent)
+    },
+    {
+        "faction": "Fourth Brigade",
+        "strength": Math.round(Q.fourth_brigade_strength),
+        "dissent": Math.round(Q.fourth_brigade_dissenth)
+    }
+];
+
+// Get screen width to adapt chart size
+var width = 800;
+var height = 500;
+var screenWidth = document.getElementById('content').offsetWidth;
+if (screenWidth < width - 50) {
+    width = screenWidth - 50;
+    height = width * 0.625; // Maintain aspect ratio
+}
+
+// Initialize the bar chart
+var bars = d3.barchart(false, // noTicks
+    [
+        { faction: 'Repairers', strength: 'repairers_strength', dissent: 'repairers_dissent' },
+        { faction: 'Liberals', strength: 'liberals_strength', dissent: 'liberals_dissent' },
+        { faction: 'Sanacja Left', strength: 'sanacja_left_strength', dissent: 'sanacja_left_dissent' },
+        { faction: 'Colonels', strength: null, dissent: 'colonels_dissent' },
+        { faction: 'Conservatives', strength: 'conservatives_strength', dissent: 'conservatives_dissent' },
+        { faction: 'Fourth Brigade', strength: 'fourth_brigade_strength', dissent: 'fourth_brigade_dissenth' }
+    ],
+    {
+        'strength': '#4682B4', // steelblue for strength
+        'dissent': '#FF6347'   // tomato for dissent
+    },
+    {
+        'repairers_strength': 'Repairers Strength', 
+        'repairers_dissent': 'Repairers Dissent', 
+        'liberals_strength': 'Liberals Strength', 
+        'liberals_dissent': 'Liberals Dissent', 
+        'sanacja_left_strength': 'Sanacja Left Strength', 
+        'sanacja_left_dissent': 'Sanacja Left Dissent', 
+        'colonels_dissent': 'Colonels Dissent',
+        'conservatives_strength': 'Conservatives Strength', 
+        'conservatives_dissent': 'Conservatives Dissent', 
+        'fourth_brigade_strength': 'Fourth Brigade Strength', 
+        'fourth_brigade_dissenth': 'Fourth Brigade Dissent'
+    }
+);
+
+// Set the width and height for the chart
+bars.width(width).height(height);
+
+// Select the element where the bar chart will be rendered and bind the data
+d3.select("#faction_strength_dissent").datum(factionData).call(bars);
+
 !}
+
 
 
 = Sejm composition
@@ -798,7 +877,6 @@ if (d3 && window) {
 {!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
 # TODO: maybe add textual histories too? some accessibility stuff as well...
 
-= Party Strength and Dissent
+= Faction Strength and Dissent
 
-{!<svg id="barchart" style="width: 800px; height: 400px;"></svg>!}
-
+{!<svg id="faction_strength_dissent" style="width: 800px; height: 500px;"> </svg>!}
