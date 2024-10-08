@@ -5,7 +5,7 @@ on-arrival: month_actions += 1; enemies_timer = 18
 max-visits: 3
 is-card: true
 card-image: img/poster_1.png
-tags: opopposition_affairs
+tags: opposition_affairs
 
 = Choosing Our Enemies
 
