@@ -1,7 +1,7 @@
 title: Governmnent Disunity
 new-page: true
 tags: event
-view-if: bbwr_in_government = 1 and government_disunity_timer = 0 and ((sanacja_left_sidelined and not sanacja_left_resigned) or (repairers_sidelined and not repairers_resigned) or (liberals_sidelined and not liberals_resigned) or (colonels_sidelined and not colonels_resigned) or (conservatives_sidelined and not conservatives_resigned)) and year = 1945
+view-if: year = 1945; bbwr_in_government = 1 and government_disunity_timer = 0 and ((sanacja_left_sidelined and not sanacja_left_resigned) or (repairers_sidelined and not repairers_resigned) or (liberals_sidelined and not liberals_resigned) or (colonels_sidelined and not colonels_resigned) or (conservatives_sidelined and not conservatives_resigned))
 on-arrival: government_disunity_timer = 3
 
 = Governmnent Disunity
