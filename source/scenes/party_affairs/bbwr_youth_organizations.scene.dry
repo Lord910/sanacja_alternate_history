@@ -2,7 +2,7 @@ title: BBWR Youth Organizations
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: bbwr_youth_timer <= 0
+view-if: bbwr_youth_timer <= 0 and year = 1945
 card-image: img/bbwr_youth.jpg
 on-arrival: month_actions += 1; bbwr_youth_timer += 6
 max-visits: 5
