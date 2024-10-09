@@ -119,6 +119,7 @@ Q.pschd_party_leader = "Marx";
 Q.bbwr_leader = "Sławek";
 Q.pslp_leader = "Witos"
 Q.owp_leader = "Dmowski";
+Q.sch_leader = "Dąbski";
 
 // Stronnictwo Ludowe (SL) isn't formed yet, but it may be formed
 Q.sl_formed = 0;
