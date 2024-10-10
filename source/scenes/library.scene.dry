@@ -764,7 +764,7 @@ var groupNames = {
     'repairers': 'Repairers',
     'liberals': 'Liberals',
     'sanacja_left': 'Sanacja Left',
-    'reformist': 'Reformist',
+    'colonels': 'Colonels',
     'conservatives': 'Conservatives',
     'fourth_brigade': 'Fourth Brigade'
 };
