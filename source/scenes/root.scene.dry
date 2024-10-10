@@ -411,7 +411,7 @@ Q.minority_government = 0;
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Zaleski';
 Q.foreign_minister_party = 'BBWR';
-Q.foreign_minister_faction = 'Non-Aligned';
+Q.foreign_minister_faction = 'Liberals';
 Q.interior_minister = 'Składkowski';
 Q.interior_minister_party = 'BBWR';
 Q.interior_minister_faction = 'Colonels';
@@ -429,7 +429,7 @@ Q.economic_minister_party = 'BBWR';
 Q.economic_minister_faction = 'Liberals';
 Q.finance_minister = 'Czechowicz';
 Q.finance_minister_party = 'BBWR';
-Q.finance_minister_faction = 'Non-Aligned';
+Q.finance_minister_faction = 'Liberals';
 Q.agriculture_minister = 'Staniewicz';
 Q.agriculture_minister_party = 'BBWR';
 Q.agriculture_minister_faction = 'Liberals';
