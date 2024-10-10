@@ -758,7 +758,7 @@ var groupColors = {
     'repairers': '#FF0000', // Example color for repairers
     'liberals': '#00FF00', // Example color for liberals
     'sanacja_left': '#0000FF', // Example color for sanacja_left
-    'colonels': '#FFFF00', // Example color for colonels
+    'reformist': '#FFFF00', // Example color for reformist
     'conservatives': '#FF00FF', // Example color for conservatives
     'fourth_brigade': '#00FFFF' // Example color for fourth_brigade
 };
@@ -767,7 +767,7 @@ var groupNames = {
     'repairers': 'Repairers',
     'liberals': 'Liberals',
     'sanacja_left': 'Sanacja Left',
-    'colonels': 'Colonels',
+    'reformist': 'Reformist',
     'conservatives': 'Conservatives',
     'fourth_brigade': 'Fourth Brigade'
 };
