@@ -755,12 +755,8 @@ var barData = Q.factions.map(faction => [
 ]).flat();
 
 var groupColors = {
-    'repairers': '#FF0000', // Example color for repairers
-    'liberals': '#00FF00', // Example color for liberals
-    'sanacja_left': '#0000FF', // Example color for sanacja_left
-    'reformist': '#FFFF00', // Example color for reformist
-    'conservatives': '#FF00FF', // Example color for conservatives
-    'fourth_brigade': '#00FFFF' // Example color for fourth_brigade
+    'strength': '#00FF00', // green
+    'dissent': '#FF0000'   // red
 };
 
 var groupNames = {
@@ -772,7 +768,7 @@ var groupNames = {
     'fourth_brigade': 'Fourth Brigade'
 };
 
-d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(width).height(300).colors(groupColors).names(groupNames));
+d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(500).height(300).colors(groupColors).names(groupNames));
 
 }
 !}

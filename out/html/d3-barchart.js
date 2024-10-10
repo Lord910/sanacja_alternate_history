@@ -9,11 +9,8 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
     }
     if (!groupColors) {
         groupColors = {
-            'group1': '#FF0000', // red
-            'group2': '#00FF00', // green
-            'group3': '#0000FF', // blue
-            'group4': '#FFFF00', // yellow
-            'group5': '#FF00FF'  // magenta
+            'strength': '#00FF00', // green
+            'dissent': '#FF0000'   // red
         };
     }
     if (!groupNames) {
@@ -81,7 +78,7 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
                  .attr("y", d => y(d.value))
                  .attr("width", x1.bandwidth())
                  .attr("height", d => chartHeight - y(d.value))
-                 .attr("fill", d => groupColors[d.group])
+                 .attr("fill", d => groupColors[d.subgroup])
                  .on("mouseover", function(event, d) {
                      tooltip.style("visibility", "visible")
                             .text(d.group + " (" + d.subgroup + "): " + d.value);
