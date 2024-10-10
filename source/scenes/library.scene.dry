@@ -749,20 +749,31 @@ if (d3 && window) {
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
 // bar chart data
-var barData = [
-    {group: 'Group 1', subgroup: 'A', value: 5},
-    {group: 'Group 1', subgroup: 'B', value: 7},
-    {group: 'Group 2', subgroup: 'A', value: 3},
-    {group: 'Group 2', subgroup: 'B', value: 8},
-    {group: 'Group 3', subgroup: 'A', value: 6},
-    {group: 'Group 3', subgroup: 'B', value: 4},
-    {group: 'Group 4', subgroup: 'A', value: 9},
-    {group: 'Group 4', subgroup: 'B', value: 2},
-    {group: 'Group 5', subgroup: 'A', value: 1},
-    {group: 'Group 5', subgroup: 'B', value: 10}
-];
+var barData = Q.factions.map(faction => [
+    {group: faction, subgroup: 'strength', value: Q[faction + '_strength']},
+    {group: faction, subgroup: 'dissent', value: Q[faction + '_dissent']}
+]).flat();
 
-d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(width).height(300));
+var groupColors = {
+    'repairers': '#FF0000', // Example color for repairers
+    'liberals': '#00FF00', // Example color for liberals
+    'sanacja_left': '#0000FF', // Example color for sanacja_left
+    'reformist': '#FFFF00', // Example color for reformist
+    'conservatives': '#FF00FF', // Example color for conservatives
+    'fourth_brigade': '#00FFFF' // Example color for fourth_brigade
+};
+
+var groupNames = {
+    'repairers': 'Repairers',
+    'liberals': 'Liberals',
+    'sanacja_left': 'Sanacja Left',
+    'reformist': 'Reformist',
+    'conservatives': 'Conservatives',
+    'fourth_brigade': 'Fourth Brigade'
+};
+
+d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(width).height(300).colors(groupColors).names(groupNames));
+
 }
 !}
 

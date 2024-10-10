@@ -1,10 +1,33 @@
-d3.simpleBarchart = function() {
+d3.simpleBarchart = function(groups, groupColors, groupNames) {
     var width = 500,
         height = 300,
         margin = {top: 20, right: 30, bottom: 40, left: 40};
 
+    /* params */
+    if (!groups) {
+        groups = ['group1', 'group2', 'group3', 'group4', 'group5'];
+    }
+    if (!groupColors) {
+        groupColors = {
+            'group1': '#FF0000', // red
+            'group2': '#00FF00', // green
+            'group3': '#0000FF', // blue
+            'group4': '#FFFF00', // yellow
+            'group5': '#FF00FF'  // magenta
+        };
+    }
+    if (!groupNames) {
+        groupNames = {
+            'group1': 'Group 1',
+            'group2': 'Group 2',
+            'group3': 'Group 3',
+            'group4': 'Group 4',
+            'group5': 'Group 5'
+        };
+    }
+
     function barchart(selection) {
-        selection.each(function() {
+        selection.each(function(data) {
             var svg = d3.select(this)
                         .attr("width", width)
                         .attr("height", height);
@@ -12,24 +35,18 @@ d3.simpleBarchart = function() {
             var chartWidth = width - margin.left - margin.right;
             var chartHeight = height - margin.top - margin.bottom;
 
-            var data = [];
-            for (var i = 1; i <= 5; i++) {
-                data.push({group: 'Group ' + i, subgroup: 'A', value: Math.floor(Math.random() * 10) + 1});
-                data.push({group: 'Group ' + i, subgroup: 'B', value: Math.floor(Math.random() * 10) + 1});
-            }
-
             var x0 = d3.scaleBand()
                        .domain(data.map(d => d.group))
                        .range([0, chartWidth])
                        .padding(0.1);
 
             var x1 = d3.scaleBand()
-                       .domain(['A', 'B'])
+                       .domain(['strength', 'dissent'])
                        .range([0, x0.bandwidth()])
                        .padding(0.05);
 
             var y = d3.scaleLinear()
-                      .domain([0, 10])
+                      .domain([0, 100])
                       .nice()
                       .range([chartHeight, 0]);
 
@@ -57,7 +74,8 @@ d3.simpleBarchart = function() {
                  .attr("x", d => x1(d.subgroup))
                  .attr("y", d => y(d.value))
                  .attr("width", x1.bandwidth())
-                 .attr("height", d => chartHeight - y(d.value));
+                 .attr("height", d => chartHeight - y(d.value))
+                 .attr("fill", d => groupColors[d.group]);
         });
     }
 
@@ -76,6 +94,18 @@ d3.simpleBarchart = function() {
     barchart.margin = function(value) {
         if (!arguments.length) return margin;
         margin = value;
+        return barchart;
+    };
+
+    barchart.colors = function(value) {
+        if (!arguments.length) return groupColors;
+        groupColors = value;
+        return barchart;
+    };
+
+    barchart.names = function(value) {
+        if (!arguments.length) return groupNames;
+        groupNames = value;
         return barchart;
     };
 
