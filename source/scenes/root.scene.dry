@@ -255,13 +255,13 @@ Q.robotnicy_owp = 0;
 
 Q.chlopi_kpp = 4;
 Q.chlopi_pps = 7;
-Q.chlopi_pslw = 25;
-Q.chlopi_sch = 16;
+Q.chlopi_pslw = 29;
+Q.chlopi_sch = 19;
 Q.chlopi_other = 0;
 Q.chlopi_bbwr = 23;
 Q.chlopi_npr = 0;
 Q.chlopi_pschd = 4;
-Q.chlopi_pslp = 11.6;
+Q.chlopi_pslp = 16;
 Q.chlopi_sn = 12;
 Q.chlopi_owp = 0;
 
