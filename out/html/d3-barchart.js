@@ -53,7 +53,7 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
             g.append("g")
              .attr("class", "axis axis--x")
              .attr("transform", "translate(0," + chartHeight + ")")
-             .call(d3.axisBottom(x0));
+             .call(d3.axisBottom(x0).tickFormat(d => groupNames[d]));
 
             g.append("g")
              .attr("class", "axis axis--y")
@@ -71,7 +71,7 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
                          .attr("transform", d => "translate(" + x0(d.group) + ",0)");
 
             group.selectAll("rect")
-                 .data(d => [d])
+                 .data(d => ['strength', 'dissent'].map(subgroup => ({group: d.group, subgroup: subgroup, value: d[subgroup]})))
                  .enter().append("rect")
                  .attr("class", "bar")
                  .attr("x", d => x1(d.subgroup))
@@ -81,7 +81,7 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
                  .attr("fill", d => groupColors[d.subgroup])
                  .on("mouseover", function(event, d) {
                      tooltip.style("visibility", "visible")
-                            .text(d.group + " (" + d.subgroup + "): " + d.value);
+                            .text(groupNames[d.group] + " (" + d.subgroup + "): " + d.value);
                  })
                  .on("mousemove", function(event) {
                      tooltip.style("top", (event.pageY - 10) + "px")
