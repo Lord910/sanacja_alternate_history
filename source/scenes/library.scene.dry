@@ -749,10 +749,11 @@ if (d3 && window) {
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
 // bar chart data
-var barData = Q.factions.map(faction => [
-    {group: faction, subgroup: 'strength', value: Q[faction + '_strength']},
-    {group: faction, subgroup: 'dissent', value: Q[faction + '_dissent']}
-]).flat();
+var barData = Q.factions.map(faction => ({
+    group: faction,
+    strength: Q[faction + '_strength'],
+    dissent: Q[faction + '_dissent']
+}));
 
 var groupColors = {
     'repairers': '#FF0000', // Example color for repairers

@@ -36,7 +36,7 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
             var chartHeight = height - margin.top - margin.bottom;
 
             var x0 = d3.scaleBand()
-                       .domain(data.map(d => d.group))
+                       .domain(groups)
                        .range([0, chartWidth])
                        .padding(0.1);
 
@@ -74,17 +74,17 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
                          .attr("transform", d => "translate(" + x0(d.group) + ",0)");
 
             group.selectAll("rect")
-                 .data(d => [d])
+                 .data(d => ['strength', 'dissent'].map(key => ({key: key, value: d[key], group: d.group})))
                  .enter().append("rect")
                  .attr("class", "bar")
-                 .attr("x", d => x1(d.subgroup))
+                 .attr("x", d => x1(d.key))
                  .attr("y", d => y(d.value))
                  .attr("width", x1.bandwidth())
                  .attr("height", d => chartHeight - y(d.value))
                  .attr("fill", d => groupColors[d.group])
                  .on("mouseover", function(event, d) {
                      tooltip.style("visibility", "visible")
-                            .text(d.group + " (" + d.subgroup + "): " + d.value);
+                            .text(d.group + " (" + d.key + "): " + d.value);
                  })
                  .on("mousemove", function(event) {
                      tooltip.style("top", (event.pageY - 10) + "px")
