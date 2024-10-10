@@ -164,7 +164,7 @@ go-to: nationalize_deficit if budget < nationalize_budget; nationalize_no_defici
 # Moderate economic plan
 
 @moderate_plan
-title: Implement the Reformists' job-creation plan.
+title: Implement the Colonelss' job-creation plan.
 subtitle: -2 budget.
 unavailable-subtitle: -2 budget. [? if budget < 2 : We do not have the necessary budget. ?] [? if bezrobotni < 8 : Unemployment is low enough that job creation is not necessary. ?]
 view-if: moderate_plan_adopted == 1
@@ -183,7 +183,7 @@ achievement: wirtschaftspolitik
 [? if in_popular_front or in_left_front: The KPP opposes the economic plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
 
 @moderate_plan_limited_budget
-title: Partially implement the Reformists' job-creation plan, with a lower cost.
+title: Partially implement the Colonelss' job-creation plan, with a lower cost.
 subtitle: -1 budget.
 unavailable-subtitle: -1 budget. [? if budget < 1 : We do not have the necessary budget. ?] [? if bezrobotni < 8 : Unemployment is low enough that job creation is not necessary. ?]
 view-if: moderate_plan_adopted == 1

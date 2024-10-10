@@ -59,7 +59,7 @@ The workers are furious at our betrayal, as are a good portion of our membership
 unavailable-subtitle: We do not have good enough relations with the right-wing parties.
 choose-if: pslp_relation >= 35
 
-Thanks to our good relations, the PSL-P have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Reformists and Centrists support maintaining our government to keep the fascists and communists out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
+Thanks to our good relations, the PSL-P have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Colonelss and Centrists support maintaining our government to keep the fascists and communists out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
 
 - @accept_compromise: Accept the compromise.
 - @destroy: Reject the compromise and let this government fall.

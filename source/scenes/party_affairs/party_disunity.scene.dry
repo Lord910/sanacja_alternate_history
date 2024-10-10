@@ -13,7 +13,7 @@ tags: party_affairs
 
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
 
-[? if colonels_dissent > 30 : The reformists are upset at our direction.  ?]
+[? if colonels_dissent > 30 : The colonelss are upset at our direction.  ?]
 [? if liberals_dissent > 30 : The centrists are displeased with the direction of our party. ?]
 [? if sanacja_left_dissent > 30 : The trade unions disagree with our present course of action. ?]
 [? if repairers_dissent > 30: Leftists are making noises about another party split. ?]
@@ -22,7 +22,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 Something must be done to reinforce party unity.
 
 - @enforce_unity
-- @concessions_reformists
+- @concessions_colonelss
 - @concessions_liberals
 - @concessions_left
 - @concessions_labor
@@ -40,19 +40,19 @@ Enforcing party discipline reduces dissent, but it could lead to an exit of diss
 
 # each party has a concessions action and an expulsions action.
 
-@concessions_reformists
-title: Give concessions to the reformists.
+@concessions_colonelss
+title: Give concessions to the colonelss.
 view-if: colonels_dissent > 30
 on-arrival: colonels_dissent -= 7; repairers_dissent += 5
 
-We have promised to adopt a more reformist posture. This may alienate the left, however.
+We have promised to adopt a more colonels posture. This may alienate the left, however.
 
 @concessions_liberals
 title: Give concessions to the centrists.
 view-if: liberals_dissent > 30
 on-arrival: liberals_dissent -= 7; colonels_dissent += 2; repairers_dissent += 2; conservatives_dissent += 2
 
-We have promised to take more policy suggestions from the centrists. Both the left and reformist wings of the party might be displeased.
+We have promised to take more policy suggestions from the centrists. Both the left and colonels wings of the party might be displeased.
 
 @concessions_left
 title: Give concessions to the left.
@@ -84,7 +84,7 @@ Let the factions bicker; perhaps dissent is healthy for the party.
 
 # TODO: should we be allowed to preemptively expel factions?
 
-@expel_reformists
-title: Expel the dissident reformists.
+@expel_colonelss
+title: Expel the dissident colonelss.
 view-if: colonels_dissent > 30
 

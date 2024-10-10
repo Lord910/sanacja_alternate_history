@@ -403,7 +403,7 @@ tags: nationalists_advisor
 
 Rudolf Breitscheid is now an advisor.
 
-# reformist
+# colonels
 
 
 @add_skladkowski
@@ -597,7 +597,7 @@ Felicjan Lechnicki is now an advisor. His presence strengthens the Repairers fac
 
 @add_schumacher
 title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies.
+subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors colonels policies.
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
 tags: conservatives_advisor

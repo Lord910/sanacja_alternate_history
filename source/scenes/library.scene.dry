@@ -514,7 +514,7 @@ Dissent: [+ repairers_dissent : dissent +]
 <h3><em>Liberałowie</em></h3>
 {!</div>!}
 
-The Liberals within the Sanacja movement are centered around Kazimierz Bartel and his allies, who played a key role immediately after the May Coup of 1926, with Bartel becoming the first Prime Minister of the new regime. The liberal faction advocates for a moderate reformist agenda that seeks to balance centralized state power with elements of democratic governance. They focus on implementing technocratic, pragmatic solutions to modernize Poland, aiming to maintain a stable government while preventing authoritarian excesses.
+The Liberals within the Sanacja movement are centered around Kazimierz Bartel and his allies, who played a key role immediately after the May Coup of 1926, with Bartel becoming the first Prime Minister of the new regime. The liberal faction advocates for a moderate colonels agenda that seeks to balance centralized state power with elements of democratic governance. They focus on implementing technocratic, pragmatic solutions to modernize Poland, aiming to maintain a stable government while preventing authoritarian excesses.
 
 Bartel and his followers are committed to a rational approach to governance, driven by neoclassical economic principles. They promote state involvement in the economy when necessary but within a framework that respects market forces. In the realm of social policy, the Liberals push for progressive educational reforms and greater inclusion of minorities, while ensuring that Piłsudski’s vision of a strong and unified Polish state remains intact.
 
@@ -758,7 +758,7 @@ var groupColors = {
     'repairers': '#FF0000', // Example color for repairers
     'liberals': '#00FF00', // Example color for liberals
     'sanacja_left': '#0000FF', // Example color for sanacja_left
-    'reformist': '#FFFF00', // Example color for reformist
+    'colonels': '#FFFF00', // Example color for colonels
     'conservatives': '#FF00FF', // Example color for conservatives
     'fourth_brigade': '#00FFFF' // Example color for fourth_brigade
 };
@@ -767,7 +767,7 @@ var groupNames = {
     'repairers': 'Repairers',
     'liberals': 'Liberals',
     'sanacja_left': 'Sanacja Left',
-    'reformist': 'Reformist',
+    'colonels': 'Colonels',
     'conservatives': 'Conservatives',
     'fourth_brigade': 'Fourth Brigade'
 };
