@@ -748,12 +748,21 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
-    var barchart = d3.barchart();
-    barchart.width(width).height(height).margin({top: 20, right: 30, bottom: 40, left: 40});
-    barchart.enter.fromBottom(true);
-    barchart.exit.toBottom(true);
-    d3.select("#internal_factions").datum(data).call(barchart);
+// bar chart data
+var barData = [
+    {group: 'Group 1', subgroup: 'A', value: 5},
+    {group: 'Group 1', subgroup: 'B', value: 7},
+    {group: 'Group 2', subgroup: 'A', value: 3},
+    {group: 'Group 2', subgroup: 'B', value: 8},
+    {group: 'Group 3', subgroup: 'A', value: 6},
+    {group: 'Group 3', subgroup: 'B', value: 4},
+    {group: 'Group 4', subgroup: 'A', value: 9},
+    {group: 'Group 4', subgroup: 'B', value: 2},
+    {group: 'Group 5', subgroup: 'A', value: 1},
+    {group: 'Group 5', subgroup: 'B', value: 10}
+];
 
+d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(width).height(300));
 }
 !}
 
