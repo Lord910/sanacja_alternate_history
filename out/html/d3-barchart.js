@@ -62,6 +62,12 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
              .attr("class", "axis axis--y")
              .call(d3.axisLeft(y).ticks(10));
 
+            // Tooltip
+            var tooltip = d3.select("body").append("div")
+                            .attr("class", "barchart-tooltip")
+                            .style("position", "absolute")
+                            .style("visibility", "hidden");
+
             var group = g.selectAll(".group")
                          .data(data)
                          .enter().append("g")
@@ -75,7 +81,18 @@ d3.simpleBarchart = function(groups, groupColors, groupNames) {
                  .attr("y", d => y(d.value))
                  .attr("width", x1.bandwidth())
                  .attr("height", d => chartHeight - y(d.value))
-                 .attr("fill", d => groupColors[d.group]);
+                 .attr("fill", d => groupColors[d.group])
+                 .on("mouseover", function(event, d) {
+                     tooltip.style("visibility", "visible")
+                            .text(d.group + " (" + d.subgroup + "): " + d.value);
+                 })
+                 .on("mousemove", function(event) {
+                     tooltip.style("top", (event.pageY - 10) + "px")
+                            .style("left", (event.pageX + 10) + "px");
+                 })
+                 .on("mouseout", function() {
+                     tooltip.style("visibility", "hidden");
+                 });
         });
     }
 
