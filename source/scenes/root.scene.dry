@@ -645,14 +645,16 @@ Q.stpiczynski_advisor = 0; // Wojciech Stpiczyński
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"The May days have become a starting point in the political life of the state for the enormous growth of the power and strength of the government, while simultaneously weakening the legislative factor: the parliament. The omnipotence of the legislative Sejm led after a few years to the fall of the Sejm and contributed to the omnipotence of the government. The state wavers between these two abnormal and harmful states. It is high time to bring them to balance and to harmonious cooperation between the legislative and executive authorities."*
+> {!<div style="text-align: center;">!} *"The May days have become a starting point in the political life of the state for the enormous growth of the power and strength of the government, while simultaneously weakening the legislative factor: the parliament. The omnipotence of the legislative Sejm led after a few years to the fall of the Sejm and contributed to the omnipotence of the government. The state wavers between these two abnormal and harmful states. It is high time to bring them to balance and to harmonious cooperation between the legislative and executive authorities."*
 
- - Ignacy Daszyński, *On the First Anniversary of the May Coup*, 1927
+<h2><strong>Ignacy Daszyński</strong></h2>
+<h3><em>On the First Anniversary of the May Coup, 1927</em></h3>
+{!</div>!}
 
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+<p style="text-align: justify">This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the Polish Republic, see the “Library” page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and government of the Polish Republic, see the “Library” page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.</p>
 
 - @1928_main: Begin (normal difficulty)
 
@@ -663,9 +665,9 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a bright time for Independent Poland. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. We've brought long awaited political stability to public life.
+<p style="text-align: justify">It is a bright time for Independent Poland. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. We've brought long awaited political stability to public life.
 
-The caretaker government of Józef Piłsudski is preparing for 1928 elections. It will be a major test for our political vision.
+The caretaker government of Józef Piłsudski is preparing for 1928 elections. It will be a major test for our political vision.</p>
 
 
 
