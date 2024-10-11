@@ -645,10 +645,10 @@ Q.stpiczynski_advisor = 0; // Wojciech Stpiczyński
 set-bg: img/map_2.jpg
 new-page: true
 
-> {!<div style="text-align: center;">!} *"The May days have become a starting point in the political life of the state for the enormous growth of the power and strength of the government, while simultaneously weakening the legislative factor: the parliament. The omnipotence of the legislative Sejm led after a few years to the fall of the Sejm and contributed to the omnipotence of the government. The state wavers between these two abnormal and harmful states. It is high time to bring them to balance and to harmonious cooperation between the legislative and executive authorities."*
-
-<h2><strong>Ignacy Daszyński</strong></h2>
-<h3><em>On the First Anniversary of the May Coup, 1927</em></h3>
+{!<div style="text-align: center;">!} 
+<em>"The events of May have marked a turning point in the political life of the state, leading to a significant increase in the power and authority of the government, while simultaneously weakening the role of the parliament. The unchecked dominance of the legislative Sejm eventually led to its decline, giving rise to the supremacy of the government. The state now fluctuates between these two problematic and harmful extremes. It is high time to restore balance and foster harmonious cooperation between the legislative and executive branches of government!"</em>
+<h5><strong>Ignacy Daszyński</strong></h7>
+<h7><em>On the First Anniversary of the May Coup, 1927</em></h7>
 {!</div>!}
 
 
