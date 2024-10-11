@@ -255,7 +255,7 @@ Q.robotnicy_sn = 0;
 Q.robotnicy_owp = 0;
 
 Q.chlopi_kpp = 4;
-Q.chlopi_pps = 5.6;
+Q.chlopi_pps = 4;
 Q.chlopi_pslw = 29;
 Q.chlopi_sch = 19;
 Q.chlopi_other = 0;
@@ -263,7 +263,7 @@ Q.chlopi_bbwr = 13;
 Q.chlopi_npr = 0;
 Q.chlopi_pschd = 0;
 Q.chlopi_pslp = 16;
-Q.chlopi_sn = 13.4;
+Q.chlopi_sn = 15;
 Q.chlopi_owp = 0;
 
 Q.inteligencja_kpp = 10;
