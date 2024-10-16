@@ -68,7 +68,7 @@ We have established a new newspaper to promote the interests of the Colonels.
 title: Support Colonels press.
 subtitle: Bolster the new Colonels' newspaper.
 view-if: colonels_press_created = 1
-choose-if: chancellor_faction = 'Colonels' resources >= 1
+choose-if: chancellor_faction = 'Colonels' and resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1
 
