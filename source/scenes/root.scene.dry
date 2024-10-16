@@ -369,7 +369,7 @@ Q.president_party = "BBWR";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'BBWR';
-Q.chancellor_faction = 'Colonels';
+Q.chancellor_faction = 'Non-Aligned';
 Q.speaker = "Rataj";
 Q.speaker_party = 'PSL-P';
 Q.sn_party_name = "ZLN";
