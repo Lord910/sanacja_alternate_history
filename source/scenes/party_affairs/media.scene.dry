@@ -8,37 +8,71 @@ card-image: img/media.jpg
 
 = Media
 
-The BBWR runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+The Sanacja movement receives press support from various circles: the workers' movement, progressive intelligentsia, and conservative elites. We need to determine which voice should be amplified the most...
 
-- @commercial
-- @campaign
-- @ideological
+- @sanacja_left_press
+- @repairers_press
+- @liberal_press
+- @colonels_create
+- @colonels_press
+- @conservative_press
 - @radio
 - @radio_2
 - @radio_3
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 
-@commercial
-title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
-subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
-on-arrival: resources += 1; commercialized_media += 1; klasa_srednia_bbwr += 4*(1 - dissent); klasa_wyzsza_bbwr += 3*(1-dissent); repairers_dissent += 10; sanacja_left_dissent += 10
+@liberal_press
+title: Support Liberal press.
+subtitle: Focus on gaining middle-class liberal support.
+choose-if: resources >= 1
+on-arrival: inteligencja_bbwr += 5*(1 - dissent); liberal_strength += 2; liberal_dissent -= 2; conservatives_strength -= 2; conservatives_dissent += 2; resources -= 1
 
-Our commercialized newspapers are able to bring in more funds. However, the left and sanacja lefts express their displeasure.
+We are focusing on supporting liberal voices in our press, aimed at appealing to middle-class liberals.
 
-@campaign
-title: The purpose of our media is to elect more Social Democrats.
-subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; robotnicy_bbwr += 4*(1 - dissent); bezrobotni_bbwr += 2*(1-dissent);
+@conservative_press
+title: Support Conservative press.
+subtitle: Gain influence among conservative groups.
+choose-if: resources >= 1
+on-arrival: klasa_wyzsza_bbwr += 4*(1 - dissent); conservatives_strength += 2; conservatives_dissent -= 2; liberal_strength -= 2; liberal_dissent += 2; resources -= 1
 
-Our campaign media is mostly reaching the workers who are already saturated with Socialist propaganda, but it must be doing *something*, or at least that is what we hope.
+We are focusing on supporting conservative newspapers to gain influence among conservative factions.
 
-@ideological
-title: We will have vibrant ideological debate within our newspapers.
-subtitle: There will be space for all factions to air their views.
-on-arrival: repairers_dissent -= 6; sanacja_left_dissent -= 6; liberals_dissent -= 6; colonels_dissent -= 6; conservatives_dissent -= 6
+@repairers_press
+title: Support Repairers press.
+subtitle: Show our cooperation with Repairers.
+choose-if: resources >= 1
+on-arrival: inteligencja_bbwr += 4*(1 - dissent); repairers_strength -= 2; repairers_dissent += 2; conservatives_strength -= 2; conservatives_dissent += 2; resources -= 1
 
-This has been our media course historically, and it has successfully paved over the many tensions in our party.
+We are showing our cooperation with Repairers by supporting their newspapers.
+
+@sanacja_left_press
+title: Support Sanacja Left press.
+subtitle: Alleviate the dissent from the Sanacja Left faction.
+choose-if: resources >= 1
+on-arrival: robotnicy_bbwr += 4*(1 - dissent); sanacja_left_strength += 2; sanacja_left_dissent -= 2; conservatives_strength -= 2; conservatives_dissent += 2; resources -= 1
+
+We are using our newspapers to alleviate dissent among the Sanacja Left.
+
+@colonels_create
+title: Create Colonels press.
+subtitle: Establish a new newspaper to support the Colonels.
+view-if: colonels_press_created = 0
+choose-if: chancellor_faction = 'Colonels'
+unavailable-subtitle: Colonels dont lead the government.
+on-arrival: colonels_press_created += 1; resources -= 2; liberal_strength -= 2; liberal_dissent += 2
+
+We have established a new newspaper to promote the interests of the Colonels.
+
+@colonels_press
+title: Support Colonels press.
+subtitle: Bolster the new Colonels' newspaper.
+view-if: colonels_press_created = 1
+choose-if: chancellor_faction = 'Colonels' resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1
+
+We are supporting the newly established Colonels' newspaper to strengthen their influence.
 
 @radio
 title: Why not fund a radio station?

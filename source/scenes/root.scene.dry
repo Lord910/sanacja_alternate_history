@@ -64,6 +64,7 @@ Q.repairers_resigned = 0;
 Q.liberals_resigned = 0;
 Q.colonels_resigned = 0;
 Q.conservatives_resigned = 0;
+Q.colonels_press_created = 0;
 
 // have we discovered sanacja_nationalists?
 Q.sanacja_nationalists = 0;
@@ -368,6 +369,7 @@ Q.president_party = "BBWR";
 // starting chancellor: Józef Piłsudski
 Q.chancellor = "Piłsudski";
 Q.chancellor_party = 'BBWR';
+Q.chancellor_faction = 'Colonels';
 Q.speaker = "Rataj";
 Q.speaker_party = 'PSL-P';
 Q.sn_party_name = "ZLN";
