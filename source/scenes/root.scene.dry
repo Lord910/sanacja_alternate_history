@@ -11,11 +11,10 @@ go-to: start_menu_2
 = Sanacja: An Alternate History
 
 @start_menu_2
-
-<div style="width: 400px; margin: 0 auto; padding: 20px; background-color: #2b2b2b; color: #f1f1f1; border-radius: 10px; font-family: Arial, sans-serif;">
+<div style="width: 400px; margin: 0 auto; padding: 20px;  color: #f1f1f1; border-radius: 10px; font-family: Arial, sans-serif;">
     <h1 style="font-size: 24px; text-align: center; margin-bottom: 20px;">Republic of Poland</h1>
     <div style="text-align: center; margin-bottom: 20px;">
-        <img src="image.jpg" alt="Flag of Poland" style="width: 100px; height: auto;">
+        <img src="img/portraits/BaadeFritz.jpg" alt="Flag of Poland" style="width: 100px; height: auto;">
     </div>
     <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
         <span style="font-weight: bold;">Government:</span>
@@ -41,6 +40,7 @@ go-to: start_menu_2
         <p>Almost 2 years have passed since 1926 May Coup. The government of Józef Piłsudski is preparing for upcoming elections.</p>
     </div>
 </div>
+
 
 
 - @start: Start game
