@@ -8,44 +8,46 @@ if (Q.bezrobotni) {
 if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
-// bar chart data
-var barData2 = Q.parties.map(party => ({
-    group: party,
-    support: Q[party + '_votes']
-}));
+if (d3 && window) {
 
-var groupColors2 = {
-    'bbwr': '#00FF00', // green
-    'kpp': '#FF0000', // red
-    'pslw': '#0000FF', // blue
-    'pschd': '#FFFF00', // yellow
-    'pslp': '#FF00FF', // magenta
-    'sn': '#00FFFF', // cyan
-    'owp': '#FFA500', // orange
-    'other': '#808080', // gray
-    'pps': '#800080', // purple
-    'npr': '#008000', // dark green
-    'sch': '#000080', // navy
-    'sl': '#A52A2A' // brown
-};
+    // bar chart data
+    var barData2 = Q.parties.map(party => ({
+        group: party,
+        support: Q[party + '_votes']
+    }));
 
-var groupNames2 = {
-    'bbwr': 'BBWR',
-    'kpp': 'KPP',
-    'pslw': 'PSL-W',
-    'pschd': 'PSCHD',
-    'pslp': 'PSL-P',
-    'sn': 'SN',
-    'owp': 'OWP',
-    'other': 'Others',
-    'pps': 'PPS',
-    'npr': 'NPR',
-    'sch': 'SCh',
-    'sl': 'SL'
-};
+    var groupColors2 = {
+        'bbwr': '#00FF00', // green
+        'kpp': '#FF0000', // red
+        'pslw': '#0000FF', // blue
+        'pschd': '#FFFF00', // yellow
+        'pslp': '#FF00FF', // magenta
+        'sn': '#00FFFF', // cyan
+        'owp': '#FFA500', // orange
+        'other': '#808080', // gray
+        'pps': '#800080', // purple
+        'npr': '#008000', // dark green
+        'sch': '#000080', // navy
+        'sl': '#A52A2A' // brown
+    };
 
-d3.select("#election_poll").datum(barData2).call(d3.simpleBarchart().width(500).height(300).colors(groupColors2).names(groupNames2));
+    var groupNames2 = {
+        'bbwr': 'BBWR',
+        'kpp': 'KPP',
+        'pslw': 'PSL-W',
+        'pschd': 'PSCHD',
+        'pslp': 'PSL-P',
+        'sn': 'SN',
+        'owp': 'OWP',
+        'other': 'Others',
+        'pps': 'PPS',
+        'npr': 'NPR',
+        'sch': 'SCh',
+        'sl': 'SL'
+    };
 
+    d3.select("#election_poll").datum(barData2).call(d3.simpleBarchart().width(500).height(300).colors(groupColors2).names(groupNames2));
+}
 !}
 
 = Status
