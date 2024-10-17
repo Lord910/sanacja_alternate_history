@@ -12,31 +12,36 @@ go-to: start_menu_2
 
 @start_menu_2
 
-<div style="text-align: center;">
-    <h1>Republic of Poland</h1>
-    <div class="flex-container">
-        <span>Government:</span>
+<div style="width: 400px; margin: 0 auto; padding: 20px; background-color: #2b2b2b; color: #f1f1f1; border-radius: 10px; font-family: Arial, sans-serif;">
+    <h1 style="font-size: 24px; text-align: center; margin-bottom: 20px;">Republic of Poland</h1>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="image.jpg" alt="Flag of Poland" style="width: 100px; height: auto;">
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <span style="font-weight: bold;">Government:</span>
         <span>Semi-Presidential Republic</span>
     </div>
-    <div class="flex-container">
-        <span>Population:</span>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <span style="font-weight: bold;">Population:</span>
         <span>38 million</span>
     </div>
-    <div class="flex-container">
-        <span>Economy:</span>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <span style="font-weight: bold;">Economy:</span>
         <span>Recovering</span>
     </div>
-    <div class="flex-container">
-        <span>Military:</span>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <span style="font-weight: bold;">Military:</span>
         <span>Regional Power</span>
     </div>
-    <div class="flex-container">
-        <span>Starting Date:</span>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <span style="font-weight: bold;">Starting Date:</span>
         <span>1928</span>
     </div>
-    <h3>Almost 2 years have passed since 1926 May Coup. The government of Józef Piłsudski is preparing for upcoming elections.</h3>
-    <img src="image.jpg" alt="Horizontal image">
+    <div style="text-align: center; margin-top: 20px;">
+        <p>Almost 2 years have passed since 1926 May Coup. The government of Józef Piłsudski is preparing for upcoming elections.</p>
+    </div>
 </div>
+
 
 - @start: Start game
 - @game_over.achievements
