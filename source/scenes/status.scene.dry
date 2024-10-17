@@ -8,6 +8,33 @@ if (Q.bezrobotni) {
 if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
+// bar chart data
+var barData2 = Q.parties.map(party => ({
+    group: party,
+    support: Q[party + '_votes']
+}));
+
+var groupColors2 = {
+    'support': '#00FF00', // green
+};
+
+var groupNames2 = {
+        'bbwr': 'BBWR',
+        'kpp': 'KPP',
+        'pslw': 'PSL-W',
+        'pschd': 'PSCHD',
+        'pslp': 'PSL-P',
+        'sn': 'sn_party_name',
+        'owp': 'OWP',
+        'other': 'Others',
+        'pps': 'PPS',
+        'npr': 'NPR',
+        'sch': 'SCh',
+        'sl': 'SL'   
+};
+
+d3.select("#election_poll").datum(barData2).call(d3.simpleBarchart().width(500).height(300).colors(groupColors2).names(groupNames2));
+
 !}
 
 = Status
@@ -180,35 +207,7 @@ Prussian police loyalty: [+ state_police_loyalty : loyalty +]
 
 = Projected election results
 
-// bar chart data
-var barData2 = Q.parties.map(party => ({
-    group: party,
-    support: Q[party + '_votes']
-}));
-
-var groupColors2 = {
-    'support': '#00FF00', // green
-};
-
-var groupNames2 = {
-        'bbwr': 'BBWR',
-        'kpp': 'KPP',
-        'pslw': 'PSL-W',
-        'pschd': 'PSCHD',
-        'pslp': 'PSL-P',
-        'sn': 'sn_party_name',
-        'owp': 'OWP',
-        'other': 'Others',
-        'pps': 'PPS',
-        'npr': 'NPR',
-        'sch': 'SCh',
-        'sl': 'SL'   
-};
-
-d3.select("#election_poll").datum(barData2).call(d3.simpleBarchart().width(500).height(300).colors(groupColors2).names(groupNames2));
-
 {!<svg id="election_poll" style="width: 500px; height: 400px;"> </svg>!}
-
 
 (if the election were to be held now):
 
