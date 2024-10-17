@@ -8,6 +8,8 @@ if (Q.bezrobotni) {
 if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
+!}
+on-display: {!
 if (d3 && window) {
 // bar chart data
 var barData = Q.factions.map(faction => ({
