@@ -539,24 +539,8 @@ table {
 .seat.sl {
   fill: #3A6538; /* dark green */
 }
-.seat.ukrainianparty {
-  fill: #FFA500; /* orange */
-}
-
-.seat.jewishparty {
-  fill: #FF8C00; /* dark orange */
-}
-
-.seat.belarusianparty {
-  fill: #FF7F50; /* coral */
-}
-
-.seat.germanparty {
-  fill: #FF6347; /* tomato */
-}
-
-.seat.otherminorities {
-  fill: #FF4500; /* orange red */
+.seat.other {
+  fill: #FFD700; /* gold */
 }
 .seat.bbwr {
   fill: #808080; /* gray */
