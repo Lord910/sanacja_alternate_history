@@ -638,10 +638,34 @@ if (!Q.sl_formed || Q.sl_pslp_split) {
 
 data = data.concat([
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r * 4.44),
+        "id": "ukrainianparty_r",
+        "legend": "Ukrainian Party",
+        "name": "Ukrainian Party",
+        "seats": Math.round(Q.ukrainianparty_r * 4.44),
+    },
+    {
+        "id": "jewishparty_r",
+        "legend": "Jewish Party",
+        "name": "Jewish Party",
+        "seats": Math.round(Q.jewishparty_r * 4.44),
+    },
+    {
+        "id": "belarusianparty",
+        "legend": "Belarusian Party",
+        "name": "Belarusian Party",
+        "seats": Math.round(Q.belarusianparty * 4.44),
+    },
+    {
+        "id": "germanparty",
+        "legend": "German Party",
+        "name": "German Party",
+        "seats": Math.round(Q.germanparty * 4.44),
+    },
+    {
+        "id": "otherminorities",
+        "legend": "Other Minorities",
+        "name": "Other Minorities",
+        "seats": Math.round(Q.otherminorities * 4.44),
     },
     {
         "id": "bbwr",
@@ -795,7 +819,15 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
 
 [? if not sl_formed or sl_pslp_split : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFA500'> </div> !} Ukrainian Party: {!</td><td>!} [+ ukrainianparty_r +] % {!</td><td>!} [+ str_change_ukrainianparty +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FF8C00'> </div> !} Jewish Party: {!</td><td>!} [+ jewishparty_r +] % {!</td><td>!} [+ str_change_jewishparty +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FF7F50'> </div> !} Belarusian Party: {!</td><td>!} [+ belarusianparty +] % {!</td><td>!} [+ str_change_belarusianparty +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FF6347'> </div> !} German Party: {!</td><td>!} [+ germanparty +] % {!</td><td>!} [+ str_change_germanparty +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FF4500'> </div> !} Other Minorities: {!</td><td>!} [+ otherminorities +] % {!</td><td>!} [+ str_change_otherminorities +] {!</td></tr>!}   
 
 {!<tr><td><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
 

@@ -3,9 +3,11 @@ new-page: true
 on-arrival: {!
 // make sure no stat is below 0.
 for (var c of Q.classes) {
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
+    for (var n of Q.nationalities) {
+        for (var party of Q.parties) {
+            if (Q[n + '_' + c + '_' + party] < 0) {
+                Q[n + '_' + c + '_' + party] = 0;
+            }
         }
     }
 }
@@ -20,50 +22,56 @@ if (Q.pro_republic < 0) {
 if (Q.pro_republic >= 100) {
     Q.pro_republic = 99;
 }
+
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
-    var class_votes = 0;
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
+    for (var n of Q.nationalities) {
+        var class_votes = 0;
+        for (var party of Q.parties) {
+            if (Q[n + '_' + c + '_' + party] < 0) {
+                Q[n + '_' + c + '_' + party] = 0;
+            }
+            class_votes += Q[n + '_' + c + '_' + party];
         }
-        class_votes += Q[c+'_'+party];
-    }
-    for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = Math.round(100*Q[c+'_'+party]/class_votes);
+        for (var party of Q.parties) {
+            Q[n + '_' + c + '_' + party + '_normalized'] = Math.round(100 * Q[n + '_' + c + '_' + party] / class_votes);
+        }
     }
 }
+
 // calculate support for each of the parties
-var total_support = 0; 
+var total_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
+        for (var n of Q.nationalities) {
+            if (Q.old_demographics) {
+                party_support += Q[n + '_' + c] * Q[n + '_' + c + '_' + party];
+            } else {
+                party_support += Q[n + '_' + c] * Q[n + '_' + c + '_' + party + '_normalized'];
+            }
+        }
     }
     Q[party + '_support'] = party_support;
-    total_support += party_support; 
-}
-// 2. normalize support (fraction)
-for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
+    total_support += party_support;
 }
 
+// 2. normalize support (fraction)
+for (var party of Q.parties) {
+    Q[party + '_normalized'] = Q[party + '_support'] / total_support;
+    Q[party + '_votes'] = Math.round(Q[party + '_normalized'] * 100);
+}
 
 // set faction strength/dissent to 0
 for (var c of Q.factions) {
-    if (Q[c+'_dissent'] < 0) {
-        Q[c+'_dissent'] = 0;
-    } else if (Q[c+'_dissent'] >= 100) {
-        Q[c+'_dissent'] = 99;
+    if (Q[c + '_dissent'] < 0) {
+        Q[c + '_dissent'] = 0;
+    } else if (Q[c + '_dissent'] >= 100) {
+        Q[c + '_dissent'] = 99;
     }
-    if (Q[c+'_strength'] < 0) {
-        Q[c+'_strength'] = 0;
+    if (Q[c + '_strength'] < 0) {
+        Q[c + '_strength'] = 0;
     }
 }
 
@@ -183,26 +191,22 @@ if (Q.sanacja_left_sidelined) {
 if (Q.repairers_sidelined) {
   Q.repairers_dissent += 5;
 }
-if (Q.conservatives_sidelined) {
-  Q.conservatives_dissent += 5;
-}
 
 // re-calculate dissent.
 var total_strength = Q.repairers_strength + Q.liberals_strength + Q.sanacja_left_strength + Q.colonels_strength + Q.conservatives_strength + Q.fourth_brigade_strength;
 
 // normalize strength for the different factions
-Q.repairers_strength = 100*Q.repairers_strength/total_strength;
-Q.liberals_strength = 100*Q.liberals_strength/total_strength;
-Q.sanacja_left_strength = 100*Q.sanacja_left_strength/total_strength;
-Q.colonels_strength = 100*Q.colonels_strength/total_strength;
-Q.conservatives_strength = 100*Q.conservatives_strength/total_strength;
-Q.fourth_brigade_strength = 100*Q.fourth_brigade_strength/total_strength;
+Q.repairers_strength = 100 * Q.repairers_strength / total_strength;
+Q.liberals_strength = 100 * Q.liberals_strength / total_strength;
+Q.sanacja_left_strength = 100 * Q.sanacja_left_strength / total_strength;
+Q.colonels_strength = 100 * Q.colonels_strength / total_strength;
+Q.conservatives_strength = 100 * Q.conservatives_strength / total_strength;
+Q.fourth_brigade_strength = 100 * Q.fourth_brigade_strength / total_strength;
 
-var total_dissent = Q.repairers_strength*Q.repairers_dissent + Q.liberals_strength*Q.liberals_dissent + Q.sanacja_left_strength*Q.sanacja_left_dissent + Q.colonels_strength*Q.colonels_dissent + Q.conservatives_strength*Q.conservatives_dissent + Q.fourth_brigade_strength*Q.fourth_brigade_strength_dissent;
+var total_dissent = Q.repairers_strength * Q.repairers_dissent + Q.liberals_strength * Q.liberals_dissent + Q.sanacja_left_strength * Q.sanacja_left_dissent + Q.colonels_strength * Q.colonels_dissent + Q.conservatives_strength * Q.conservatives_dissent + Q.fourth_brigade_strength * Q.fourth_brigade_strength_dissent;
 
-
-Q.dissent = 0.01*total_dissent/total_strength;
-Q.dissent_percent = Q.dissent*100;
+Q.dissent = 0.01 * total_dissent / total_strength;
+Q.dissent_percent = Q.dissent * 100;
 console.log('new dissent: ' + Q.dissent);
 
 if (Q.dissent < 0) {
@@ -225,19 +229,21 @@ if (Q.month_actions >= 1) {
     }
     // decrement timers
     for (timer of Q.timers) {
-        if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
-            Q[timer+'_timer'] -= 1;
+        if (Q[timer + '_timer'] && Q[timer + '_timer'] > 0) {
+            Q[timer + '_timer'] -= 1;
         }
     }
     // TODO: append to historical party support records
-    var party_support_results = {'date': new Date(Q.year, Q.month - 1)};
+    var party_support_results = { 'date': new Date(Q.year, Q.month - 1) };
     for (var party of Q.parties) {
-        party_support_results[party] = Q[party + '_normalized']*100;
+        party_support_results[party] = Q[party + '_normalized'] * 100;
     }
     Q.party_support_records.push(party_support_results);
-    Q.economic_records.push({'date': new Date(Q.year, Q.month - 1),
-                             'inflation': Q.inflation,
-                             'unemployment': Q.bezrobotni});
+    Q.economic_records.push({
+        'date': new Date(Q.year, Q.month - 1),
+        'inflation': Q.inflation,
+        'unemployment': Q.bezrobotni
+    });
     // change economic stats...
     // we're basically implicity drawing a Philips curve
     // budget deficits lead to some inflation
