@@ -748,30 +748,6 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
-// bar chart data
-var barData = Q.factions.map(faction => ({
-    group: faction,
-    strength: Q[faction + '_strength'],
-    dissent: Q[faction + '_dissent']
-}));
-
-var groupColors = {
-    'strength': '#00FF00', // green
-    'dissent': '#FF0000'   // red
-};
-
-var groupNames = {
-    'repairers': 'Repairers',
-    'liberals': 'Liberals',
-    'sanacja_left': 'Sanacja Left',
-    'colonels': 'Colonels',
-    'conservatives': 'Conservatives',
-    'fourth_brigade': 'Fourth Brigade'
-};
-
-d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(500).height(300).colors(groupColors).names(groupNames));
-
-}
 !}
 
 
@@ -823,7 +799,4 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
 {!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
 # TODO: maybe add textual histories too? some accessibility stuff as well...
 
-= Factions 
-
-{!<svg id="internal_factions" style="width: 500px; height: 300px;"> </svg>!}
 
