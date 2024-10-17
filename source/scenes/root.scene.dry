@@ -889,6 +889,9 @@ Q.pslp_r = 12;
 Q.sn_r = 28;
 Q.owp_r = 0;
 
+'ukrainianparty', 'jewishparty', 'belarusianparty', 'germanparty', 'otherminorities'];
+
+
 // diff from prev
 Q.old_kpp_r = 1;
 Q.old_pps_r = 9;
