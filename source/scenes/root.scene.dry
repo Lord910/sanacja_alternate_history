@@ -12,17 +12,31 @@ go-to: start_menu_2
 
 @start_menu_2
 
-{!<div style="text-align: center;">!} 
+<div style="text-align: center;">
     <h1>Republic of Poland</h1>
-    <h2>Government: Semi-Presidential Republic</h2>
-    <p>Population:</p>
-    <p>Economy: Recovering</p>
-    <p>Military: Regional Power</p>
-    <p>Starting Date: 1928</p>
+    <div class="flex-container">
+        <span>Government:</span>
+        <span>Semi-Presidential Republic</span>
+    </div>
+    <div class="flex-container">
+        <span>Population:</span>
+        <span>38 million</span>
+    </div>
+    <div class="flex-container">
+        <span>Economy:</span>
+        <span>Recovering</span>
+    </div>
+    <div class="flex-container">
+        <span>Military:</span>
+        <span>Regional Power</span>
+    </div>
+    <div class="flex-container">
+        <span>Starting Date:</span>
+        <span>1928</span>
+    </div>
     <h3>Almost 2 years have passed since 1926 May Coup. The government of Józef Piłsudski is preparing for upcoming elections.</h3>
     <img src="image.jpg" alt="Horizontal image">
-{!</div>!}
-
+</div>
 
 - @start: Start game
 - @game_over.achievements

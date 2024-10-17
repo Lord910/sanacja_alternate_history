@@ -227,6 +227,14 @@ blockquote + blockquote.attribution {
     background-color: #ececec;
 }
 
+<style>
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10%;
+    }
+</style>
+
 
 .overlay {
     background: rgba(0,0,0,0.7);
