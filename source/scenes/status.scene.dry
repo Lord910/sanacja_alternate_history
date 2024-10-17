@@ -9,26 +9,32 @@ if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
 if (d3 && window) {
-        var barchart_2 = d3.simpleBarchart(Q.parties,
-            {
-                'kpp': '#AF0000', // dark red
-                'pps': '#CC0000', // red
-                'sch': '#556B2F', // dark olive green
-                'pslw': '#179900', // bright green
-                'other': '#FFD700', // gold
-                'bbwr': '#808080', // gray
-                'npr': '#841839', // redish
-                'pschd': '#1E90FF', // dodger blue
-                'pslp': '#3A6538', // dark green
-                'sn': '#0000CD', // dark blue
-                'owp': '#954B00' // brown
-            },
-            {
-                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
-            }
-        );
-        barchart_2.width(width).height(400);
-        d3.select("#party_support_poll").datum(Q[party + '_votes']).call(barchart_2);
+    var partyVotesData = Q.parties.map(party => ({
+        group: party,
+        votes: Q[party + '_votes']
+    }));
+
+    var partyColors = {
+        'kpp': '#AF0000', // dark red
+        'pps': '#CC0000', // red
+        'sch': '#556B2F', // dark olive green
+        'pslw': '#179900', // bright green
+        'other': '#FFD700', // gold
+        'bbwr': '#808080', // gray
+        'npr': '#841839', // redish
+        'pschd': '#1E90FF', // dodger blue
+        'pslp': '#3A6538', // dark green
+        'sn': '#0000CD', // dark blue
+        'owp': '#954B00' // brown
+    };
+
+    var partyNames = {
+        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
+    };
+
+    var barchart_2 = d3.simpleBarchart(Q.parties, partyColors, partyNames);
+    barchart_2.width(500).height(400);
+    d3.select("#party_support_poll").datum(partyVotesData).call(barchart_2);
 }
 !}
 
