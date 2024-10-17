@@ -9,61 +9,37 @@ max-visits: 3
 
 = Questions of Ideology
 
-The BBWR is torn between many different ideological currents. What should be our primary ideological guidance for now?
+As the elections approach, the BBWR faces a crucial decision on its ideological direction. Different factions within the party propose competing visions for Poland’s future. Should we adopt a more radical agenda, follow a centrist approach, or move toward a more authoritarian model to secure our nation?
 
-[? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
+[? if ideology != 0 : We have previously committed to a [+ ideology +] ideology. Changing course now could create dissent within the party. ?]
 
-- @socialist_roots: We should return to our socialist roots!
-- @repairers: We should call for modernization and industralization of Poland!
-- @colonels: Trusting Józef Piłsudski, we should work for strong, stable and independent Poland!
-- @conservatives: We should call for moral healing of Poland!
+- @radical: We should embrace the values of "May Revolution", focusing on social and industrial transformation to modernize the state!
+- @liberal: We should take a centrist, moderate path that unites all social classes under the goal of national stability and progress!
+- @authoritarian: We need a strong, centralized authority to ensure stability and defend Poland from the chaos of partisan politics!
 - @easy_discard
 
-@socialist_roots
-on-arrival: {!
-if (Q.ideology && Q.ideology != "sanacja_left") {
-    Q.changed = 1;
-}
-!}
+@radical
+on-arrival: {! if (Q.ideology && Q.ideology != "radical") { Q.changed = 1; } !}
 go-to: changed if changed = 1
-on-departure: ideology = "sanacja_left"; sanacja_left_strength += 10; sanacja_left_dissent -= 5; pps_relation += 3; conservatives_dissent += 25
+on-departure: ideology = "radical"; sanacja_left_strength += 10; repairers_strength += 10; conservatives_dissent += 10
 
-We should return to our socialist roots, focusing on the rights of workers and social reforms.
+Radical reforms are essential to modernizing Poland. By advocating for social justice, labor rights, and rapid industrialization, we can gain support from workers and intellectuals. However, this direction may cause tensions with conservative factions who favor a more traditional approach.
 
-@repairers
-on-arrival: {!
-if (Q.ideology && Q.ideology != "repairers") {
-    Q.changed = 1;
-}
-!}
+@liberal
+on-arrival: {! if (Q.ideology && Q.ideology != "moderate") { Q.changed = 1; } !}
 go-to: changed if changed = 1
-on-departure: ideology = "repairers"; repairers_strength += 10; repairers_dissent -= 5; conservatives_dissent += 10
+on-departure: ideology = "moderate"; liberals_strength += 10; conservatives_dissent += 5; sanacja_left_dissent += 5
 
-We should call for modernization and industrialization of Poland to ensure its future prosperity.
+A centrist approach offers a balanced path, aiming to unite workers, intellectuals, and the middle class for the sake of national stability. By focusing on economic progress and practical governance, we avoid the pitfalls of extreme ideologies. This may disappoint radicals who demand stronger reforms, but it appeals to a wide base of society.
 
-@colonels
-on-arrival: {!
-if (Q.ideology && Q.ideology != "colonels") {
-    Q.changed = 1;
-}
-!}
+@authoritarian
+on-arrival: {! if (Q.ideology && Q.ideology != "authoritarian") { Q.changed = 1; } !}
 go-to: changed if changed = 1
-on-departure: ideology = "colonels"; colonels_strength += 10; colonels_dissent -= 5
+on-departure: ideology = "authoritarian"; colonels_strength += 10; conservatives_strength += 10; repairers_dissent += 5; sanacja_left_dissent += 5
 
-Trusting Józef Piłsudski, we should work for a strong, stable, and independent Poland.
-
-@conservatives
-on-arrival: {!
-if (Q.ideology && Q.ideology != "conservatives") {
-    Q.changed = 1;
-}
-!}
-go-to: changed if changed = 1
-on-departure: ideology = "conservatives"; conservatives_strength += 10; conservatives_dissent -= 5; repairers_dissent += 5; sanacja_left_dissent += 5
-
-We should call for the moral healing of Poland, focusing on traditional values and stability.
+Poland needs strong, centralized leadership to guide it through these turbulent times. By consolidating power under a firm executive authority, we can protect the nation from internal division and instability. This approach will appeal to conservatives and nationalists, but progressive factions may view it as a step toward authoritarianism.
 
 @changed
 on-arrival: repairers_dissent += 5; liberals_dissent += 5; sanacja_left_dissent += 5; colonels_dissent += 5; conservatives_dissent += 5
 
-We have changed ideologies. Many in the party feel unmoored.
+The decision to shift our ideological stance has caused unrest within the party. As the elections approach, factions are clashing, and maintaining party unity is becoming a challenge. Time is running out, and the future of our party — and Poland — hangs in the balance.
