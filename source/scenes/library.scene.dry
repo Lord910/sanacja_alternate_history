@@ -731,7 +731,7 @@ if (d3 && window) {
                 'owp': '#954B00' // brown
             },
             {
-                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
+                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
             }
         );
         lines_2.width(width).height(400);
