@@ -9,32 +9,29 @@ if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
 if (d3 && window) {
-    var partyVotesData = Q.parties.map(party => ({
-        group: party,
-        votes: Q[party + '_votes']
-    }));
+// bar chart data
+var barData = Q.factions.map(faction => ({
+    group: faction,
+    strength: Q[faction + '_strength'],
+    dissent: Q[faction + '_dissent']
+}));
 
-    var partyColors = {
-        'kpp': '#AF0000', // dark red
-        'pps': '#CC0000', // red
-        'sch': '#556B2F', // dark olive green
-        'pslw': '#179900', // bright green
-        'other': '#FFD700', // gold
-        'bbwr': '#808080', // gray
-        'npr': '#841839', // redish
-        'pschd': '#1E90FF', // dodger blue
-        'pslp': '#3A6538', // dark green
-        'sn': '#0000CD', // dark blue
-        'owp': '#954B00' // brown
-    };
+var groupColors = {
+    'strength': '#00FF00', // green
+    'dissent': '#FF0000'   // red
+};
 
-    var partyNames = {
-        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
-    };
+var groupNames = {
+    'repairers': 'Repairers',
+    'liberals': 'Liberals',
+    'sanacja_left': 'Sanacja Left',
+    'colonels': 'Colonels',
+    'conservatives': 'Conservatives',
+    'fourth_brigade': 'Fourth Brigade'
+};
 
-    var barchart_2 = d3.simpleBarchart(Q.parties, partyColors, partyNames);
-    barchart_2.width(500).height(400);
-    d3.select("#party_support_poll").datum(partyVotesData).call(barchart_2);
+d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(500).height(300).colors(groupColors).names(groupNames));
+
 }
 !}
 
@@ -208,7 +205,7 @@ Prussian police loyalty: [+ state_police_loyalty : loyalty +]
 
 = Projected election results
 
-{!<svg id="party_support_poll" style="width: 500px; height: 400px;"> </svg>!}
+{!<svg id="internal_factions" style="width: 500px; height: 300px;"> </svg>!}
 
 (if the election were to be held now):
 
