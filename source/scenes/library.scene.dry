@@ -788,15 +788,17 @@ Government:
 
 [? if pps_in_government : {!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!} ?]
 
-[? if sl_formed : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!} ?]
+[? if sl_formed and sl_in_government : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!} ?]
 
-[? if not sl_formed or sl_sch_split or sch_in_government : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
+[? if (not sl_formed or sl_sch_split) or sch_in_government : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
 
-[? if not sl_formed or sl_pslw_split or pslw_in_government : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
+[? if (not sl_formed or sl_pslw_split) and pslw_in_government : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
 
-[? if not sl_formed or sl_pslp_split or pslp_in_government : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
+[? if (not sl_formed or sl_pslp_split) and pslp_in_government : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
 
 [? if other_in_government : {!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!} ?]
+
+[? if bbwr_in_government : !<tr><td><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}  ?]
 
 [? if npr_in_government : {!<tr><td><div class="box" style='background-color:#841839'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!} ?]
 
@@ -815,13 +817,17 @@ Opposition:
 
 [? if not pps_in_government : {!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!} ?]
 
-[? if not sl_formed or sl_sch_split or not sch_in_government : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
+[? if (not sl_formed or sl_sch_split) and not sch_in_government : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
 
-[? if not sl_formed or sl_pslw_split or not pslw_in_government : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
+[? if (not sl_formed or sl_pslw_split) and not pslw_in_government : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
 
-[? if not sl_formed or sl_pslp_split or not pslp_in_government : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
+[? if (not sl_formed or sl_pslp_split) and not pslp_in_government : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
+
+[? if sl_formed and not sl_in_government : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!} ?]
 
 [? if not other_in_government : {!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!} ?]
+
+[? if not bbwr_in_government : !<tr><td><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}  ?]
 
 [? if not npr_in_government : {!<tr><td><div class="box" style='background-color:#841839'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!} ?]
 
