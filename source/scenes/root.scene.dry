@@ -23,7 +23,7 @@ go-to: start_menu_2
     </div>
     <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
         <span style="font-weight: bold;">Population:</span>
-        <span>38 million</span>
+        <span>30 million</span>
     </div>
     <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
         <span style="font-weight: bold;">Economy:</span>
@@ -35,10 +35,10 @@ go-to: start_menu_2
     </div>
     <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
         <span style="font-weight: bold;">Starting Date:</span>
-        <span>1928</span>
+        <span>January 1st 1928</span>
     </div>
     <div style="text-align: center; margin-top: 20px;">
-        <p>Almost 2 years have passed since 1926 May Coup. The government of Józef Piłsudski is preparing for upcoming elections.</p>
+        <p>Almost 2 years have passed since 1926 May Coup.<br />The government of Józef Piłsudski is preparing for upcoming elections.</p>
     </div>
 </div>
 
