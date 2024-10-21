@@ -1,0 +1,14 @@
+title: Piłsudski Dismisses His Government
+view-if: year = 1928 and month = 6 and chancellor = "Piłsudski"
+frequency: 1000
+max-visits: 1
+tags: event
+on-arrival: chancellor_party = "None"; chancellor = "Vacancy"; leverage += 15;
+
+Józef Piłsudski has dismissed his own government. This unexpected move has left the nation in shock.
+
+- @pilsudski_dismissed_gov: We must now select a new Prime Minister.
+
+@pilsudski_dismissed_gov
+go-to: election_1928.ministries
+

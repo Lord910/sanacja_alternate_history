@@ -375,6 +375,65 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 - #mins_1928
 - #drop_mins_1928
 
+@chancellor
+title: Prime Minister
+subtitle: We must select a new Prime Minister to lead the government.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: chancellor_party != "BBWR"
+
+- @chancellor_sanacja_left: **Sanacja Left**
+- @chancellor_repairers: **Repairers**
+- @chancellor_liberals: **Liberals**
+- @chancellor_colonels: **Colonels**
+- @chancellor_conservatives: **Conservatives**
+
+@chancellor_sanacja_left
+subtitle: The new Prime Minister should be from **Sanacja Left**
+unavailable-subtitle: We do not have enough leverage.
+view-if: chancellor_faction != "Sanacja Left" or chancellor_party != "BBWR"
+on-arrival: leverage -= 5; chancellor_faction = "Sanacja Left"; chancellor = "Placeholder"; chancellor_party = "BBWR"
+go-to: government
+
+Member of **Sanacja Left** of the BBWR has been appointed Prime Minister.
+
+@chancellor_repairers
+subtitle: The new Prime Minister should be from **Repairers**
+unavailable-subtitle: We do not have enough leverage.
+view-if: chancellor_faction != "Repairers" or chancellor_party != "BBWR"
+on-arrival: leverage -= 5; chancellor_faction = "Repairers"; chancellor = "Placeholder"; chancellor_party = "BBWR"
+go-to: government
+
+Member of **Repairers** of the BBWR has been appointed Prime Minister.
+
+@chancellor_liberals
+subtitle: The new Prime Minister should be from **Liberals**
+unavailable-subtitle: We do not have enough leverage.
+view-if: chancellor_faction != "Liberals" or chancellor_party != "BBWR"
+on-arrival: leverage -= 5; chancellor_faction = "Liberals"; chancellor = "Placeholder"; chancellor_party = "BBWR"
+go-to: government
+
+Member of **Liberals** of the BBWR has been appointed Prime Minister.
+
+@chancellor_colonels
+subtitle: The new Prime Minister should be from **Colonels**
+unavailable-subtitle: We do not have enough leverage.
+view-if: chancellor_faction != "Colonels" or chancellor_party != "BBWR"
+on-arrival: leverage -= 5; chancellor_faction = "Colonels"; chancellor = "Placeholder"; chancellor_party = "BBWR"
+go-to: government
+
+Member of **Colonels** of the BBWR has been appointed Prime Minister.
+
+@chancellor_conservatives
+subtitle: The new Prime Minister should be from **Conservatives**
+unavailable-subtitle: We do not have enough leverage.
+view-if: chancellor_faction != "Conservatives" or chancellor_party != "BBWR"
+on-arrival: leverage -= 5; chancellor_faction = "Conservatives"; chancellor = "Placeholder"; chancellor_party = "BBWR"
+go-to: government
+
+Member of **Conservatives** of the BBWR has been appointed Prime Minister.
+
 @labor
 title: Labor Ministry
 subtitle: The Labour Ministry manages employment, worker rights, and social policies.
@@ -877,6 +936,15 @@ view-if: army_minister_party = "BBWR"
 unavailable-subtitle: [? if army_minister = "Piłsudski" : We can't remove Piłsudski from this position ?]
 choose-if: army_minister != "Piłsudski"
 on-arrival: army_minister_party = "None"; army_minister = "Vacancy"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_chancellor
+title: Replace Prime Minister ([+ chancellor_faction +])
+view-if: chancellor_party = "BBWR"
+unavailable-subtitle: [? if chancellor = "Piłsudski" : We can't remove Piłsudski from this position ?]
+choose-if: chancellor != "Piłsudski"
+on-arrival: chancellor_party = "None"; chancellor = "Vacancy"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
