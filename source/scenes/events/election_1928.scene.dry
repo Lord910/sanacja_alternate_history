@@ -394,7 +394,7 @@ subtitle: The new Prime Minister should be from **Sanacja Left**
 unavailable-subtitle: We do not have enough leverage.
 view-if: chancellor_faction != "Sanacja Left" or chancellor_party != "BBWR"
 on-arrival: leverage -= 5; chancellor_faction = "Sanacja Left"; chancellor = "Placeholder"; chancellor_party = "BBWR"
-go-to: government
+go-to: ministries
 
 Member of **Sanacja Left** of the BBWR has been appointed Prime Minister.
 
@@ -403,7 +403,7 @@ subtitle: The new Prime Minister should be from **Repairers**
 unavailable-subtitle: We do not have enough leverage.
 view-if: chancellor_faction != "Repairers" or chancellor_party != "BBWR"
 on-arrival: leverage -= 5; chancellor_faction = "Repairers"; chancellor = "Placeholder"; chancellor_party = "BBWR"
-go-to: government
+go-to: ministries
 
 Member of **Repairers** of the BBWR has been appointed Prime Minister.
 
@@ -412,7 +412,7 @@ subtitle: The new Prime Minister should be from **Liberals**
 unavailable-subtitle: We do not have enough leverage.
 view-if: chancellor_faction != "Liberals" or chancellor_party != "BBWR"
 on-arrival: leverage -= 5; chancellor_faction = "Liberals"; chancellor = "Placeholder"; chancellor_party = "BBWR"
-go-to: government
+go-to: ministries
 
 Member of **Liberals** of the BBWR has been appointed Prime Minister.
 
@@ -421,7 +421,7 @@ subtitle: The new Prime Minister should be from **Colonels**
 unavailable-subtitle: We do not have enough leverage.
 view-if: chancellor_faction != "Colonels" or chancellor_party != "BBWR"
 on-arrival: leverage -= 5; chancellor_faction = "Colonels"; chancellor = "Placeholder"; chancellor_party = "BBWR"
-go-to: government
+go-to: ministries
 
 Member of **Colonels** of the BBWR has been appointed Prime Minister.
 
@@ -430,7 +430,7 @@ subtitle: The new Prime Minister should be from **Conservatives**
 unavailable-subtitle: We do not have enough leverage.
 view-if: chancellor_faction != "Conservatives" or chancellor_party != "BBWR"
 on-arrival: leverage -= 5; chancellor_faction = "Conservatives"; chancellor = "Placeholder"; chancellor_party = "BBWR"
-go-to: government
+go-to: ministries
 
 Member of **Conservatives** of the BBWR has been appointed Prime Minister.
 
