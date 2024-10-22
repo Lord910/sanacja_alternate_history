@@ -417,6 +417,9 @@ Q.pslp_in_government = 0;
 Q.sn_in_government = 0;
 Q.owp_in_government = 0;
 
+Q.government_votes = 0;
+Q.opposition_votes = 0;
+
 // Weimar coalition = BBWR + PSCHD + PSL-W
 Q.in_democratic_left_coalition = 0;
 // Grand coalition = BBWR + PSCHD + NPR + PSL-W + PSL-P

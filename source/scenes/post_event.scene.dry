@@ -10,9 +10,6 @@ for (var c of Q.classes) {
     }
 }
 
-Q.government_votes = 0;
-Q.opposition_votes = 0;
-
 if (Q.bbwr_in_government) {
     Q.government_votes += Q.bbwr_r;
 } else {
