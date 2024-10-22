@@ -35,7 +35,16 @@ function updateVotes() {
         {name: 'sl', in_government: Q.sl_in_government, votes: Q.sl_r},
         {name: 'pschd', in_government: Q.pschd_in_government, votes: Q.pschd_r},
         {name: 'sn', in_government: Q.sn_in_government, votes: Q.sn_r},
-        {name: 'owp', in_government: Q.owp_in_government, votes: Q.owp_r}
+        {name: 'owp', in_government: Q.owp_in_government, votes: Q.owp_r},
+        {name: 'selrob', in_government: Q.selrob_in_government, votes: Q.selrob_r},
+        {name: 'solrad', in_government: Q.solrad_in_government, votes: Q.solrad_r},
+        {name: 'undo_center', in_government: Q.undo_center_in_government, votes: Q.undo_center_r},
+        {name: 'undo_right', in_government: Q.undo_right_in_government, votes: Q.undo_right_r},
+        {name: 'belarusian_left', in_government: Q.belarusian_left_in_government, votes: Q.belarusian_left_r},
+        {name: 'belarusian_right', in_government: Q.belarusian_right_in_government, votes: Q.belarusian_right_r},
+        {name: 'jewish_party', in_government: Q.jewish_party_in_government, votes: Q.jewish_party_r},
+        {name: 'german_left', in_government: Q.german_left_in_government, votes: Q.german_left_r},
+        {name: 'german_right', in_government: Q.german_right_in_government, votes: Q.german_right_r}
     ];
 
     for (var party of parties) {

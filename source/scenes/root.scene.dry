@@ -266,10 +266,14 @@ Q.inteligencja = 4;
 Q.klasa_wyzsza = 1;
 Q.klasa_srednia = 4;
 Q.bezrobotni = 1; // unemployment rate 
-Q.mniejszosci = 36; // sum of all minorities 
+Q.ukrainians = 10;
+Q.jews = 10;
+Q.belarusians = 8;
+Q.germans = 5;
+Q.other_minorities = 3;
 
-Q.classes = ['robotnicy', 'chlopi', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'mniejszosci', 'inteligencja'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch'];
+Q.classes = ['robotnicy', 'chlopi', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'ukrainians', 'jews', 'belarusians', 'germans', 'other_minorities', 'inteligencja'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'other', 'pps', 'npr', 'sch', 'selrob', 'solrad', 'undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 'jewish_party', 'german_left', 'german_right'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -345,17 +349,20 @@ Q.bezrobotni_pslp = 0;
 Q.bezrobotni_sn = 0;
 Q.bezrobotni_owp = 0;
 
-Q.mniejszosci_kpp = 0;
-Q.mniejszosci_pps = 0;
-Q.mniejszosci_pslw = 0;
-Q.mniejszosci_sch = 0;
-Q.mniejszosci_other = 70;
-Q.mniejszosci_bbwr = 30;
-Q.mniejszosci_npr = 0;
-Q.mniejszosci_pschd = 0;
-Q.mniejszosci_pslp = 0;
-Q.mniejszosci_sn = 0;
-Q.mniejszosci_owp = 0;
+Q.ukrainians_selrob = 25;
+Q.ukrainians_solrad = 25;
+Q.ukrainians_undo_center = 25;
+Q.ukrainians_undo_right = 25;
+
+Q.jews_jewish_party = 100;
+
+Q.belarusians_belarusian_left = 50;
+Q.belarusians_belarusian_right = 50;
+
+Q.germans_german_left = 50;
+Q.germans_german_right = 50;
+
+Q.other_minorities_other = 100;
 
 
 // Current Sejm composition
@@ -364,26 +371,44 @@ Q.kpp_r = 3;
 Q.pps_r = 9;
 Q.sch_r = 8;
 Q.pslw_r = 6;
-Q.other_r = 19;
+Q.other_r = 18;
 Q.bbwr_r = 3;
 Q.npr_r = 4;
 Q.pschd_r = 9;
 Q.pslp_r = 12;
 Q.sn_r = 28;
 Q.owp_r = 0;
+Q.selrob_r = 0;
+Q.solrad_r = 0;
+Q.undo_center_r = 0;
+Q.undo_right_r = 0;
+Q.belarusian_left_r = 0;
+Q.belarusian_right_r = 0;
+Q.jewish_party_r = 0;
+Q.german_left_r = 0;
+Q.german_right_r = 0;
 
 // diff from prev
 Q.old_kpp_r = 1;
 Q.old_pps_r = 9;
 Q.old_sch_r = 1;
 Q.old_pslw_r = 11;
-Q.old_other_r = 19;
+Q.old_other_r = 20;
 Q.old_bbwr_r = 0;
 Q.old_npr_r = 4;
 Q.old_pschd_r = 0;
 Q.old_pslp_r = 16;
 Q.old_sn_r = 38;
 Q.old_owp_r = 0;
+Q.old_selrob_r = 0;
+Q.old_solrad_r = 0;
+Q.old_undo_center_r = 0;
+Q.old_undo_right_r = 0;
+Q.old_belarusian_left_r = 0;
+Q.old_belarusian_right_r = 0;
+Q.old_jewish_party_r = 0;
+Q.old_german_left_r = 0;
+Q.old_german_right_r = 0;
 
 
 // array of objects of the form {date: Date(), bbwr: 10, kpp: 12, ...} for each election
@@ -416,6 +441,15 @@ Q.pschd_in_government = 0;
 Q.pslp_in_government = 0;
 Q.sn_in_government = 0;
 Q.owp_in_government = 0;
+Q.selrob_in_government = 0;
+Q.solrad_in_government = 0;
+Q.undo_center_in_government = 0;
+Q.undo_right_in_government = 0;
+Q.belarusian_left_in_government = 0;
+Q.belarusian_right_in_government = 0;
+Q.jewish_party_in_government = 0;
+Q.german_left_in_government = 0;
+Q.german_right_in_government = 0;
 
 Q.government_votes = 0;
 Q.opposition_votes = 0;
