@@ -257,33 +257,212 @@ go-to: coalition_menu
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+<table style="width: 100%; text-align: center;">
+    <tr>
+        <td>Government</td>
+        <td>[+ government_votes +]%</td>
+        <td>Vote share</td>
+    </tr>
 
-{!<tr><td><div class="box" style='background-color:#AF0000'> </div> !} KPP: {!</td><td>!} [+ kpp_r +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
+    [? if kpp_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> KPP:</td>
+        <td> [+ kpp_r +]% </td>
+        <td> [+ str_change_kpp +] </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#CC0000'> </div> !} PPS: {!</td><td>!} [+ pps_r +]% {!</td><td>!} [+ str_change_pps +] {!</td></tr>!}
+    [? if pps_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> PPS:</td>
+        <td> [+ pps_r +]% </td>
+        <td> [+ str_change_pps +] </td>
+    </tr>
+    ?]
 
-[? if sl_formed : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}SL: {!</td><td>!} [+ sl_r +]% {!</td><td>!} [+ str_change_sl +] {!</td></tr>!} ?]
+    [? if sl_formed and sl_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> SL:</td>
+        <td> [+ sl_r +]% </td>
+        <td> [+ str_change_sl +] </td>
+    </tr>
+    ?]
 
-[? if not sl_formed or sl_sch_split : {!<tr><td><div class="box" style='background-color:#556B2F'> </div> !}SCh: {!</td><td>!} [+ sch_r +]% {!</td><td>!} [+ str_change_sch +] {!</td></tr>!} ?]
+    [? if (not sl_formed or sl_sch_split) and sch_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
+        <td> [+ sch_r +]% </td>
+        <td> [+ str_change_sch +] </td>
+    </tr>
+    ?]
 
-[? if not sl_formed or sl_pslw_split : {!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ pslw_r +]% {!</td><td>!} [+ str_change_pslw +] {!</td></tr>!} ?]
+    [? if (not sl_formed or sl_pslw_split) and pslw_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
+        <td> [+ pslw_r +]% </td>
+        <td> [+ str_change_pslw +] </td>
+    </tr>
+    ?]
 
-[? if not sl_formed or sl_pslp_split : {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ pslp_r +]% {!</td><td>!} [+ str_change_pslp +] {!</td></tr>!} ?]
+    [? if (not sl_formed or sl_pslp_split) and pslp_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-P:</td>
+        <td> [+ pslp_r +]% </td>
+        <td> [+ str_change_pslp +] </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+    [? if other_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Others:</td>
+        <td> [+ other_r +]% </td>
+        <td> [+ str_change_other +] </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'> </div> !} **BBWR:** {!</td><td>!} **[+ bbwr_r +]%** {!</td><td>!} **[+ str_change_bbwr +]** {!</td></tr>!}
+    [? if bbwr_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'></div> **BBWR:**</td>
+        <td> **[+ bbwr_r +]%** </td>
+        <td> **[+ str_change_bbwr +]** </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#841839'> </div> !} NPR: {!</td><td>!} [+ npr_r +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
+    [? if npr_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#841839'></div> NPR:</td>
+        <td> [+ npr_r +]% </td>
+        <td> [+ str_change_npr +] </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#1E90FF'> </div> !} PSCHD: {!</td><td>!} [+ pschd_r +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
+    [? if pschd_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> PSCHD:</td>
+        <td> [+ pschd_r +]% </td>
+        <td> [+ str_change_pschd +] </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#0000CD'> </div> !} [+ sn_party_name +]: {!</td><td>!} [+ sn_r +]% {!</td><td>!} [+ str_change_sn +] {!</td></tr>!}
+    [? if sn_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
+        <td> [+ sn_r +]% </td>
+        <td> [+ str_change_sn +] </td>
+    </tr>
+    ?]
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} OWP: {!</td><td>!} [+ owp_r +]% {!</td><td>!} [+ str_change_owp +] {!</td></tr>!}
-{!</table>!}
+    [? if owp_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
+        <td> [+ owp_r +]% </td>
+        <td> [+ str_change_owp +] </td>
+    </tr>
+    ?]
+
+    <tr>
+        <td>Opposition</td>
+        <td>[+ opposition_votes +]%</td>
+        <td>Vote share</td>
+    </tr>
+
+    [? if not kpp_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> KPP:</td>
+        <td> [+ kpp_r +]% </td>
+        <td> [+ str_change_kpp +] </td>
+    </tr>
+    ?]
+
+    [? if not pps_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> PPS:</td>
+        <td> [+ pps_r +]% </td>
+        <td> [+ str_change_pps +] </td>
+    </tr>
+    ?]
+
+    [? if (not sl_formed or sl_sch_split) and not sch_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
+        <td> [+ sch_r +]% </td>
+        <td> [+ str_change_sch +] </td>
+    </tr>
+    ?]
+
+    [? if (not sl_formed or sl_pslw_split) and not pslw_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
+        <td> [+ pslw_r +]% </td>
+        <td> [+ str_change_pslw +] </td>
+    </tr>
+    ?]
+
+    [? if (not sl_formed or sl_pslp_split) and not pslp_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-P:</td>
+        <td> [+ pslp_r +]% </td>
+        <td> [+ str_change_pslp +] </td>
+    </tr>
+    ?]
+
+    [? if sl_formed and not sl_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> SL:</td>
+        <td> [+ sl_r +]% </td>
+        <td> [+ str_change_sl +] </td>
+    </tr>
+    ?]
+
+    [? if not other_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Others:</td>
+        <td> [+ other_r +]% </td>
+        <td> [+ str_change_other +] </td>
+    </tr>
+    ?]
+
+    [? if not bbwr_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'></div> **BBWR:**</td>
+        <td> **[+ bbwr_r +]%** </td>
+        <td> **[+ str_change_bbwr +]** </td>
+    </tr>
+    ?]
+
+    [? if not npr_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#841839'></div> NPR:</td>
+        <td> [+ npr_r +]% </td>
+        <td> [+ str_change_npr +] </td>
+    </tr>
+    ?]
+
+    [? if not pschd_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> PSCHD:</td>
+        <td> [+ pschd_r +]% </td>
+        <td> [+ str_change_pschd +] </td>
+    </tr>
+    ?]
+
+    [? if not sn_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
+        <td> [+ sn_r +]% </td>
+        <td> [+ str_change_sn +] </td>
+    </tr>
+    ?]
+
+    [? if not owp_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
+        <td> [+ owp_r +]% </td>
+        <td> [+ str_change_owp +] </td>
+    </tr>
+    ?]
+</table>
+
 
 **Potential coalitions:**
 
