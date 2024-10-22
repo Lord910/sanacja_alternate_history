@@ -32,6 +32,10 @@ Colonels Leverage: [+ colonels_leverage +]
 
 Conservatives Leverage: [+ conservatives_leverage +]
 
+Government: [+ government_votes +]
+Opposition: [+ opposition_votes +]
+
+
 = Government
 
 ** President:**  
