@@ -10,65 +10,43 @@ for (var c of Q.classes) {
     }
 }
 
-if (Q.bbwr_in_government) {
-    Q.government_votes += Q.bbwr_r;
-} else {
-    Q.opposition_votes += Q.bbwr_r;
+// Initialize government and opposition votes if not already done
+if (typeof Q.government_votes === 'undefined') {
+    Q.government_votes = 0;
+}
+if (typeof Q.opposition_votes === 'undefined') {
+    Q.opposition_votes = 0;
 }
 
-if (Q.kpp_in_government) {
-    Q.government_votes += Q.kpp_r;
-} else {
-    Q.opposition_votes += Q.kpp_r;
-}
+// Function to update votes
+function updateVotes() {
+    Q.government_votes = 0;
+    Q.opposition_votes = 0;
 
-if (Q.pps_in_government) {
-    Q.government_votes += Q.pps_r;
-} else {
-    Q.opposition_votes += Q.pps_r;
-}
+    var parties = [
+        {name: 'bbwr', in_government: Q.bbwr_in_government, votes: Q.bbwr_r},
+        {name: 'kpp', in_government: Q.kpp_in_government, votes: Q.kpp_r},
+        {name: 'pps', in_government: Q.pps_in_government, votes: Q.pps_r},
+        {name: 'other', in_government: Q.other_in_government, votes: Q.other_r},
+        {name: 'npr', in_government: Q.npr_in_government, votes: Q.npr_r},
+        {name: 'pslp', in_government: Q.pslp_in_government, votes: Q.pslp_r},
+        {name: 'sch', in_government: Q.sch_in_government, votes: Q.sch_r},
+        {name: 'pslw', in_government: Q.pslw_in_government, votes: Q.pslw_r},
+        {name: 'sl', in_government: Q.sl_in_government, votes: Q.sl_r},
+        {name: 'pschd', in_government: Q.pschd_in_government, votes: Q.pschd_r},
+        {name: 'sn', in_government: Q.sn_in_government, votes: Q.sn_r},
+        {name: 'owp', in_government: Q.owp_in_government, votes: Q.owp_r}
+    ];
 
-if (Q.other_in_government) {
-    Q.government_votes += Q.other_r;
-} else {
-    Q.opposition_votes += Q.other_r;
-}
-
-if (Q.npr_in_government) {
-    Q.government_votes += Q.npr_r;
-} else {
-    Q.opposition_votes += Q.npr_r;
-}
-
-if (!Q.sl_formed) {
-    if (Q.pslp_in_government) {
-        Q.government_votes += Q.pslp_r;
-    } else {
-        Q.opposition_votes += Q.pslp_r;
-    }
-    if (Q.sch_in_government) {
-        Q.government_votes += Q.sch_r;
-    } else {
-        Q.opposition_votes += Q.sch_r;
-    }
-    if (Q.pslw_in_government) {
-        Q.government_votes += Q.pslw_r;
-    } else {
-        Q.opposition_votes += Q.pslw_r;
-    }
-} else {
-    if (!Q.sl_pslp_split) {
-        if (Q.sl_in_government) {
-            Q.government_votes += Q.sl_r;
+    for (var party of parties) {
+        if (party.in_government) {
+            Q.government_votes += party.votes;
         } else {
-            Q.opposition_votes += Q.sl_r;
+            Q.opposition_votes += party.votes;
         }
-    } else {
-        if (Q.sl_in_government) {
-            Q.government_votes += Q.sl_r;
-        } else {
-            Q.opposition_votes += Q.sl_r;
-        }
+    }
+
+    if (!Q.sl_formed) {
         if (Q.pslp_in_government) {
             Q.government_votes += Q.pslp_r;
         } else {
@@ -84,25 +62,42 @@ if (!Q.sl_formed) {
         } else {
             Q.opposition_votes += Q.pslw_r;
         }
+    } else {
+        if (!Q.sl_pslp_split) {
+            if (Q.sl_in_government) {
+                Q.government_votes += Q.sl_r;
+            } else {
+                Q.opposition_votes += Q.sl_r;
+            }
+        } else {
+            if (Q.sl_in_government) {
+                Q.government_votes += Q.sl_r;
+            } else {
+                Q.opposition_votes += Q.sl_r;
+            }
+            if (Q.pslp_in_government) {
+                Q.government_votes += Q.pslp_r;
+            } else {
+                Q.opposition_votes += Q.pslp_r;
+            }
+            if (Q.sch_in_government) {
+                Q.government_votes += Q.sch_r;
+            } else {
+                Q.opposition_votes += Q.sch_r;
+            }
+            if (Q.pslw_in_government) {
+                Q.government_votes += Q.pslw_r;
+            } else {
+                Q.opposition_votes += Q.pslw_r;
+            }
+        }
     }
 }
 
-if (Q.pschd_in_government) {
-    Q.government_votes += Q.pschd_r;
-} else {
-    Q.opposition_votes += Q.pschd_r;
-}
-
-if (Q.sn_in_government) {
-    Q.government_votes += Q.sn_r;
-} else {
-    Q.opposition_votes += Q.sn_r;
-}
-
-if (Q.owp_in_government) {
-    Q.government_votes += Q.owp_r;
-} else {
-    Q.opposition_votes += Q.owp_r;
+// Call updateVotes function only if there is a change in government
+if (Q.government_changed) {
+    updateVotes();
+    Q.government_changed = false; // Reset the flag
 }
 
 Q.pro_republic = Math.round(Q.pro_republic);
