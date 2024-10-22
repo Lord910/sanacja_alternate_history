@@ -10,6 +10,104 @@ for (var c of Q.classes) {
     }
 }
 
+Q.government_votes = 0;
+Q.opposition_votes = 0;
+
+if (Q.bbwr_in_government) {
+    Q.government_votes += Q.bbwr_r;
+} else {
+    Q.opposition_votes += Q.bbwr_r;
+}
+
+if (Q.kpp_in_government) {
+    Q.government_votes += Q.kpp_r;
+} else {
+    Q.opposition_votes += Q.kpp_r;
+}
+
+if (Q.pps_in_government) {
+    Q.government_votes += Q.pps_r;
+} else {
+    Q.opposition_votes += Q.pps_r;
+}
+
+if (Q.other_in_government) {
+    Q.government_votes += Q.other_r;
+} else {
+    Q.opposition_votes += Q.other_r;
+}
+
+if (Q.npr_in_government) {
+    Q.government_votes += Q.npr_r;
+} else {
+    Q.opposition_votes += Q.npr_r;
+}
+
+if (!Q.sl_formed) {
+    if (Q.pslp_in_government) {
+        Q.government_votes += Q.pslp_r;
+    } else {
+        Q.opposition_votes += Q.pslp_r;
+    }
+    if (Q.sch_in_government) {
+        Q.government_votes += Q.sch_r;
+    } else {
+        Q.opposition_votes += Q.sch_r;
+    }
+    if (Q.pslw_in_government) {
+        Q.government_votes += Q.pslw_r;
+    } else {
+        Q.opposition_votes += Q.pslw_r;
+    }
+} else {
+    if (!Q.sl_pslp_split) {
+        if (Q.sl_in_government) {
+            Q.government_votes += Q.sl_r;
+        } else {
+            Q.opposition_votes += Q.sl_r;
+        }
+    } else {
+        if (Q.sl_in_government) {
+            Q.government_votes += Q.sl_r;
+        } else {
+            Q.opposition_votes += Q.sl_r;
+        }
+        if (Q.pslp_in_government) {
+            Q.government_votes += Q.pslp_r;
+        } else {
+            Q.opposition_votes += Q.pslp_r;
+        }
+        if (Q.sch_in_government) {
+            Q.government_votes += Q.sch_r;
+        } else {
+            Q.opposition_votes += Q.sch_r;
+        }
+        if (Q.pslw_in_government) {
+            Q.government_votes += Q.pslw_r;
+        } else {
+            Q.opposition_votes += Q.pslw_r;
+        }
+    }
+}
+
+if (Q.pschd_in_government) {
+    Q.government_votes += Q.pschd_r;
+} else {
+    Q.opposition_votes += Q.pschd_r;
+}
+
+if (Q.sn_in_government) {
+    Q.government_votes += Q.sn_r;
+} else {
+    Q.opposition_votes += Q.sn_r;
+}
+
+if (Q.owp_in_government) {
+    Q.government_votes += Q.owp_r;
+} else {
+    Q.opposition_votes += Q.owp_r;
+}
+
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);
