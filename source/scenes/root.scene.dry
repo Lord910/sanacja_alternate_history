@@ -260,16 +260,16 @@ Q.capital_strike_progress = 0;
 Q.budget = 5;
 
 // Proportion of different social groups based on updated demographics
-Q.robotnicy = 23; // sum of workers of industrial and agrarian workers
-Q.chlopi = 31; // sum of all peasants
-Q.inteligencja = 4; 
-Q.klasa_wyzsza = 1;
-Q.klasa_srednia = 4;
-Q.bezrobotni = 1; // unemployment rate 
-Q.ukrainians = 10;
-Q.jews = 10;
-Q.belarusians = 8;
-Q.germans = 5;
+Q.robotnicy = 24.07;
+Q.chlopi = 32.45;
+Q.inteligencja = 4.19;
+Q.klasa_wyzsza = 1.05;
+Q.klasa_srednia = 4.19;
+Q.bezrobotni = 1.05;
+Q.ukrainians = 15;
+Q.jews = 8.5;
+Q.belarusians = 3.5;
+Q.germans = 3;
 Q.other_minorities = 3;
 
 Q.classes = ['robotnicy', 'chlopi', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'ukrainians', 'jews', 'belarusians', 'germans', 'other_minorities', 'inteligencja'];
