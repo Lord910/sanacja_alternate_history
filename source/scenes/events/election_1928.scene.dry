@@ -144,6 +144,12 @@ for (var party of Q.parties) {
     election_result[party] = Q[party + '_r'];
 }
 Q.election_records.push(election_result);
+
+if (Q.government_changed) {
+    updateVotes();
+    Q.government_changed = false; // Reset the flag
+}
+
 !}
 on-departure: centrolew_urgency = 1 if (centrolew_urgency == 0 and owp_r >= 15)
 on-display: {!
