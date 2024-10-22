@@ -45,53 +45,6 @@ function updateVotes() {
             Q.opposition_votes += party.votes;
         }
     }
-
-    if (!Q.sl_formed) {
-        if (Q.pslp_in_government) {
-            Q.government_votes += Q.pslp_r;
-        } else {
-            Q.opposition_votes += Q.pslp_r;
-        }
-        if (Q.sch_in_government) {
-            Q.government_votes += Q.sch_r;
-        } else {
-            Q.opposition_votes += Q.sch_r;
-        }
-        if (Q.pslw_in_government) {
-            Q.government_votes += Q.pslw_r;
-        } else {
-            Q.opposition_votes += Q.pslw_r;
-        }
-    } else {
-        if (!Q.sl_pslp_split) {
-            if (Q.sl_in_government) {
-                Q.government_votes += Q.sl_r;
-            } else {
-                Q.opposition_votes += Q.sl_r;
-            }
-        } else {
-            if (Q.sl_in_government) {
-                Q.government_votes += Q.sl_r;
-            } else {
-                Q.opposition_votes += Q.sl_r;
-            }
-            if (Q.pslp_in_government) {
-                Q.government_votes += Q.pslp_r;
-            } else {
-                Q.opposition_votes += Q.pslp_r;
-            }
-            if (Q.sch_in_government) {
-                Q.government_votes += Q.sch_r;
-            } else {
-                Q.opposition_votes += Q.sch_r;
-            }
-            if (Q.pslw_in_government) {
-                Q.government_votes += Q.pslw_r;
-            } else {
-                Q.opposition_votes += Q.pslw_r;
-            }
-        }
-    }
 }
 
 // Call updateVotes function only if there is a change in government
