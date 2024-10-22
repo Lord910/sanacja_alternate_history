@@ -100,6 +100,8 @@ if (Q.government_changed) {
     Q.government_changed = false; // Reset the flag
 }
 
+Q.government_changed = true;
+
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);
