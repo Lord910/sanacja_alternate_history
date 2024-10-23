@@ -183,7 +183,7 @@ data = [
         "legend": "German Left",
         "name": "German Left",
         "seats": Math.round(Q.german_left_r * 4.44),
-    }
+    },
 ];
 
 if (Q.sl_formed && Q.sl_r) {
@@ -279,7 +279,7 @@ data = data.concat([
         "legend": "OWP",
         "name": "OWP",
         "seats": Math.round(Q.owp_r * 4.44),
-    }
+    },
 ]);
 
 if (window && d3) {
