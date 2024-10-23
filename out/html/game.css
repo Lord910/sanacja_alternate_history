@@ -538,6 +538,12 @@ table {
 .seat.pps {
   fill: #CC0000; /* red */
 }
+.seat.selrob {
+  fill: #FF4500; /* orange red */
+}
+.seat.solrad {
+  fill: #8B0000; /* dark red */
+}
 .seat.sch {
   fill: #556B2F; /* dark olive green */
 }
@@ -570,23 +576,11 @@ table {
 .seat.owp {
   fill: #954B00; /* brown */
 }
-.seat.selrob {
-  fill: #FF4500; /* orange red */
-}
-.seat.solrad {
-  fill: #8B0000; /* dark red */
-}
-.seat.undo_center {
+.seat.undo {
   fill: #4682B4; /* steel blue */
 }
-.seat.undo_right {
-  fill: #00008B; /* dark blue */
-}
-.seat.belarusian_left {
+.seat.belarusians {
   fill: #32CD32; /* lime green */
-}
-.seat.belarusian_right {
-  fill: #006400; /* dark green */
 }
 .seat.jewish_party {
   fill: #FFD700; /* gold */
@@ -595,5 +589,5 @@ table {
   fill: #FF6347; /* tomato */
 }
 .seat.german_right {
-  fill: #8B4513; /* saddle brown */
+  fill: #000080; /* navy */
 }

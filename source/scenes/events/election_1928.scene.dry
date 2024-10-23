@@ -138,6 +138,8 @@ Q.labor_goal_completed = 0;
 Q.foreign_goal_completed = 0;
 Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
+Q.undo_sum = Q.undo_center_r + Q.undo_right_r;
+Q.belarusians_sum = Q.belarusian_left_r + Q.belarusian_right_r;
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -424,35 +426,19 @@ go-to: coalition_menu
     </tr>
     ?]
 
-    [? if undo_center_in_government :
+    [? if undo_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#8B4513'></div> Undo Center:</td>
-        <td> [+ undo_center_r +]% </td>
+        <td> [+ undo_sum +]% </td>
         <td> [+ str_change_undo_center +] </td>
     </tr>
     ?]
 
-    [? if undo_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#A52A2A'></div> Undo Right:</td>
-        <td> [+ undo_right_r +]% </td>
-        <td> [+ str_change_undo_right +] </td>
-    </tr>
-    ?]
-
-    [? if belarusian_left_in_government :
+    [? if belarusians_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> Belarusian Left:</td>
-        <td> [+ belarusian_left_r +]% </td>
+        <td> [+ belarusians_sum +]% </td>
         <td> [+ str_change_belarusian_left +] </td>
-    </tr>
-    ?]
-
-    [? if belarusian_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> Belarusian Right:</td>
-        <td> [+ belarusian_right_r +]% </td>
-        <td> [+ str_change_belarusian_right +] </td>
     </tr>
     ?]
 
@@ -598,35 +584,19 @@ go-to: coalition_menu
     </tr>
     ?]
 
-    [? if not undo_center_in_government :
+    [? if not undo_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#8B4513'></div> Undo Center:</td>
-        <td> [+ undo_center_r +]% </td>
+        <td> [+ undo_sum +]% </td>
         <td> [+ str_change_undo_center +] </td>
     </tr>
     ?]
 
-    [? if not undo_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#A52A2A'></div> Undo Right:</td>
-        <td> [+ undo_right_r +]% </td>
-        <td> [+ str_change_undo_right +] </td>
-    </tr>
-    ?]
-
-    [? if not belarusian_left_in_government :
+    [? if not belarusians_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> Belarusian Left:</td>
-        <td> [+ belarusian_left_r +]% </td>
+        <td> [+ belarusians_sum +]% </td>
         <td> [+ str_change_belarusian_left +] </td>
-    </tr>
-    ?]
-
-    [? if not belarusian_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> Belarusian Right:</td>
-        <td> [+ belarusian_right_r +]% </td>
-        <td> [+ str_change_belarusian_right +] </td>
     </tr>
     ?]
 
