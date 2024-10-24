@@ -369,7 +369,7 @@ go-to: coalition_menu
     <tr>
         <td colspan="3" style="text-align: left;">
             <table style="width: 100%; text-align: left;">
-                [? if selrob_in_government :
+                [? if selrob_r > 0 :
                 <tr>
                     <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
                     <td> [+ selrob_r +]% </td>
@@ -377,7 +377,7 @@ go-to: coalition_menu
                 </tr>
                 ?]
 
-                [? if solrad_in_government :
+                [? if solrad_r > 0 :
                 <tr>
                     <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
                     <td> [+ solrad_r +]% </td>
@@ -385,7 +385,7 @@ go-to: coalition_menu
                 </tr>
                 ?]
 
-                [? if undo_in_government :
+                [? if undo_sum > 0 :
                 <tr>
                     <td><div class="box" style='background-color:#8B4513'></div> UNDO Center:</td>
                     <td> [+ undo_sum +]% </td>
@@ -393,7 +393,7 @@ go-to: coalition_menu
                 </tr>
                 ?]
 
-                [? if jewish_party_in_government :
+                [? if jewish_party_r > 0 :
                 <tr>
                     <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
                     <td> [+ jewish_party_r +]% </td>
@@ -401,7 +401,7 @@ go-to: coalition_menu
                 </tr>
                 ?]
 
-                [? if belarusians_in_government :
+                [? if belarusians_sum > 0 :
                 <tr>
                     <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
                     <td> [+ belarusians_sum +]% </td>
@@ -409,7 +409,7 @@ go-to: coalition_menu
                 </tr>
                 ?]
 
-                [? if german_left_in_government :
+                [? if german_left_r > 0 :
                 <tr>
                     <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
                     <td> [+ german_left_r +]% </td>
@@ -417,7 +417,7 @@ go-to: coalition_menu
                 </tr>
                 ?]
                 
-                [? if german_right_in_government :
+                [? if german_right_r > 0  :
                 <tr>
                     <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
                     <td> [+ german_right_r +]% </td>
