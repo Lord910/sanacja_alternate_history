@@ -772,6 +772,13 @@ var groupNames = {
 d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(500).height(300).colors(groupColors).names(groupNames));
 
 }
+
+Q.government_changed = true;
+
+if (Q.government_changed) {
+    updateVotes();
+    Q.government_changed = false; // Reset the flag
+}
 !}
 
 
@@ -876,69 +883,63 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
         <td>Vote share</td>
     </tr>
 
-    <!-- Subtable for Minority Parties -->
+    [? if selrob_r > 0 :
     <tr>
-        <td colspan="3" style="text-align: left;">
-            <table style="width: 100%; text-align: left;">
-                [? if selrob_r > 0 :
-                <tr>
-                    <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
-                    <td> [+ selrob_r +]% </td>
-                    <td> [+ str_change_selrob +] </td>
-                </tr>
-                ?]
-
-                [? if solrad_r > 0 :
-                <tr>
-                    <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
-                    <td> [+ solrad_r +]% </td>
-                    <td> [+ str_change_solrad +] </td>
-                </tr>
-                ?]
-
-                [? if undo_sum > 0 :
-                <tr>
-                    <td><div class="box" style='background-color:#8B4513'></div> UNDO Center:</td>
-                    <td> [+ undo_sum +]% </td>
-                    <td> [+ str_change_undo_sum +] </td>
-                </tr>
-                ?]
-
-                [? if jewish_party_r > 0 :
-                <tr>
-                    <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
-                    <td> [+ jewish_party_r +]% </td>
-                    <td> [+ str_change_jewish_party +] </td>
-                </tr>
-                ?]
-
-                [? if belarusians_sum > 0 :
-                <tr>
-                    <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
-                    <td> [+ belarusians_sum +]% </td>
-                    <td> [+ str_change_belarusian_sum +] </td>
-                </tr>
-                ?]
-
-                [? if german_left_r > 0 :
-                <tr>
-                    <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
-                    <td> [+ german_left_r +]% </td>
-                    <td> [+ str_change_german_left +] </td>
-                </tr>
-                ?]
-                
-                [? if german_right_r > 0  :
-                <tr>
-                    <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
-                    <td> [+ german_right_r +]% </td>
-                    <td> [+ str_change_german_right +] </td>
-                </tr>
-                ?]
-            </table>
-        </td>
+        <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
+        <td> [+ selrob_r +]% </td>
+        <td> [+ str_change_selrob +] </td>
     </tr>
+    ?]
+
+    [? if solrad_r > 0 :
+    <tr>
+        <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
+        <td> [+ solrad_r +]% </td>
+        <td> [+ str_change_solrad +] </td>
+    </tr>
+    ?]
+
+    [? if undo_sum > 0 :
+    <tr>
+        <td><div class="box" style='background-color:#8B4513'></div> UNDO:</td>
+        <td> [+ undo_sum +]% </td>
+        <td> [+ str_change_undo_sum +] </td>
+    </tr>
+    ?]
+
+    [? if jewish_party_r > 0 :
+    <tr>
+        <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
+        <td> [+ jewish_party_r +]% </td>
+        <td> [+ str_change_jewish_party +] </td>
+    </tr>
+    ?]
+
+    [? if belarusians_sum > 0 :
+    <tr>
+        <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
+        <td> [+ belarusians_sum +]% </td>
+        <td> [+ str_change_belarusian_sum +] </td>
+    </tr>
+    ?]
+
+    [? if german_left_r > 0 :
+    <tr>
+        <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
+        <td> [+ german_left_r +]% </td>
+        <td> [+ str_change_german_left +] </td>
+    </tr>
+    ?]
+
+    [? if german_right_r > 0 :
+    <tr>
+        <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
+        <td> [+ german_right_r +]% </td>
+        <td> [+ str_change_german_right +] </td>
+    </tr>
+    ?]
 </table>
+
 
 <table style="width: 100%; text-align: center;">
     <tr>
