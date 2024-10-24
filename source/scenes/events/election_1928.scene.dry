@@ -139,7 +139,11 @@ Q.foreign_goal_completed = 0;
 Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
 Q.undo_sum = Q.undo_center_r + Q.undo_right_r;
+Q.str_change_undo_sum = Q.str_change_undo_center + Q.str_change_undo_right;
 Q.belarusians_sum = Q.belarusian_left_r + Q.belarusian_right_r;
+Q.str_change_belarusian_sum = Q.str_change_belarusian_left + Q.str_change_belarusian_right;
+Q.minorities_r_sum = Q.undo_center_r + Q.undo_right_r + Q.belarusian_left_r + Q.belarusian_right_r + Q.jewish_party_r + Q.german_left_r + Q.german_right_r + Q.solrad_r + Q.selrob_r;
+Q.str_change_minorities_sum = Q.str_change_undo_center + Q.str_change_undo_right + Q.str_change + Q.str_change + Q.str_change + Q.str_change + Q.str_change + Q.str_change + Q.str_change ;
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -163,28 +167,10 @@ data = [
         "seats": Math.round(Q.kpp_r * 4.44),
     },
     {
-        "id": "selrob",
-        "legend": "SelRob",
-        "name": "SelRob",
-        "seats": Math.round(Q.selrob_r * 4.44),
-    },
-    {
-        "id": "solrad",
-        "legend": "SolRad",
-        "name": "SolRad",
-        "seats": Math.round(Q.solrad_r * 4.44),
-    },
-    {
         "id": "pps",
         "legend": "PPS",
         "name": "PPS",
         "seats": Math.round(Q.pps_r * 4.44),
-    },
-    {
-        "id": "german_left",
-        "legend": "German Left",
-        "name": "German Left",
-        "seats": Math.round(Q.german_left_r * 4.44),
     },
 ];
 
@@ -226,7 +212,7 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r * 4.44),
+        "seats": Math.round(Q.minorities_r_sum * 4.44),
     },
     {
         "id": "bbwr",
@@ -245,30 +231,6 @@ data = data.concat([
         "legend": "PSCHD",
         "name": "PSCHD",
         "seats": Math.round(Q.pschd_r * 4.44),
-    },
-    {
-        "id": "undo",
-        "legend": "UNDO",
-        "name": "UNDO",
-        "seats": Math.round((Q.undo_center_r + Q.undo_right_r) * 4.44),
-    },
-    {
-        "id": "belarusians",
-        "legend": "Belarusians",
-        "name": "Belarusians",
-        "seats": Math.round((Q.belarusian_left_r + Q.belarusian_right_r) * 4.44),
-    },
-    {
-        "id": "jewish_party",
-        "legend": "Jewish Party",
-        "name": "Jewish Party",
-        "seats": Math.round(Q.jewish_party_r * 4.44),
-    },
-    {
-        "id": "german_right",
-        "legend": "German Right",
-        "name": "German Right",
-        "seats": Math.round(Q.german_right_r * 4.44),
     },
     {
         "id": "sn",
@@ -314,6 +276,7 @@ go-to: coalition_menu
         <td>Vote share</td>
     </tr>
 
+    <!-- KPP -->
     [? if kpp_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> KPP:</td>
@@ -322,6 +285,7 @@ go-to: coalition_menu
     </tr>
     ?]
 
+    <!-- PPS -->
     [? if pps_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> PPS:</td>
@@ -330,15 +294,8 @@ go-to: coalition_menu
     </tr>
     ?]
 
-    [? if sl_formed and sl_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> SL:</td>
-        <td> [+ sl_r +]% </td>
-        <td> [+ str_change_sl +] </td>
-    </tr>
-    ?]
-
-    [? if (not sl_formed or sl_sch_split) and sch_in_government :
+    <!-- SCh -->
+    [? if sch_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
         <td> [+ sch_r +]% </td>
@@ -346,7 +303,8 @@ go-to: coalition_menu
     </tr>
     ?]
 
-    [? if (not sl_formed or sl_pslw_split) and pslw_in_government :
+    <!-- PSL-W -->
+    [? if pslw_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
         <td> [+ pslw_r +]% </td>
@@ -354,22 +312,78 @@ go-to: coalition_menu
     </tr>
     ?]
 
-    [? if (not sl_formed or sl_pslp_split) and pslp_in_government :
+    <!-- Other -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-P:</td>
-        <td> [+ pslp_r +]% </td>
-        <td> [+ str_change_pslp +] </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> National Minorities:</td>
+        <td> [+ minorities_r_sum +]% </td>
+        <td> [+ str_change_minorities_sum +] </td>
     </tr>
-    ?]
 
-    [? if other_in_government :
+    <!-- Subtable for Minority Parties under 'Other' -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Others:</td>
-        <td> [+ other_r +]% </td>
-        <td> [+ str_change_other +] </td>
-    </tr>
-    ?]
+        <td colspan="3" style="text-align: left;">
+            <table style="width: 100%; text-align: left;">
+                [? if selrob_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
+                    <td> [+ selrob_r +]% </td>
+                    <td> [+ str_change_selrob +] </td>
+                </tr>
+                ?]
 
+                [? if solrad_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
+                    <td> [+ solrad_r +]% </td>
+                    <td> [+ str_change_solrad +] </td>
+                </tr>
+                ?]
+
+                [? if undo_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#8B4513'></div> UNDO Center:</td>
+                    <td> [+ undo_sum +]% </td>
+                    <td> [+ str_change_undo_sum +] </td>
+                </tr>
+                ?]
+
+                [? if jewish_party_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
+                    <td> [+ jewish_party_r +]% </td>
+                    <td> [+ str_change_jewish_party +] </td>
+                </tr>
+                ?]
+
+                [? if belarusians_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
+                    <td> [+ belarusians_sum +]% </td>
+                    <td> [+ str_change_belarusian_sum +] </td>
+                </tr>
+                ?]
+
+                [? if german_left_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
+                    <td> [+ german_left_r +]% </td>
+                    <td> [+ str_change_german_left +] </td>
+                </tr>
+                ?]
+                
+                [? if german_right_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
+                    <td> [+ german_right_r +]% </td>
+                    <td> [+ str_change_german_right +] </td>
+                </tr>
+                ?]
+            </table>
+        </td>
+    </tr>
+
+    <!-- Continue with the other major parties -->
+    <!-- BBWR -->
     [? if bbwr_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'></div> **BBWR:**</td>
@@ -378,6 +392,7 @@ go-to: coalition_menu
     </tr>
     ?]
 
+    <!-- NPR -->
     [? if npr_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#841839'></div> NPR:</td>
@@ -386,6 +401,7 @@ go-to: coalition_menu
     </tr>
     ?]
 
+    <!-- PSCHD -->
     [? if pschd_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> PSCHD:</td>
@@ -394,6 +410,7 @@ go-to: coalition_menu
     </tr>
     ?]
 
+    <!-- SN -->
     [? if sn_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
@@ -402,6 +419,7 @@ go-to: coalition_menu
     </tr>
     ?]
 
+    <!-- OWP -->
     [? if owp_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
@@ -409,63 +427,7 @@ go-to: coalition_menu
         <td> [+ str_change_owp +] </td>
     </tr>
     ?]
-
-    [? if selrob_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
-        <td> [+ selrob_r +]% </td>
-        <td> [+ str_change_selrob +] </td>
-    </tr>
-    ?]
-
-    [? if solrad_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
-        <td> [+ solrad_r +]% </td>
-        <td> [+ str_change_solrad +] </td>
-    </tr>
-    ?]
-
-    [? if undo_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#8B4513'></div> Undo Center:</td>
-        <td> [+ undo_sum +]% </td>
-        <td> [+ str_change_undo_center +] </td>
-    </tr>
-    ?]
-
-    [? if belarusians_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> Belarusian Left:</td>
-        <td> [+ belarusians_sum +]% </td>
-        <td> [+ str_change_belarusian_left +] </td>
-    </tr>
-    ?]
-
-    [? if jewish_party_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
-        <td> [+ jewish_party_r +]% </td>
-        <td> [+ str_change_jewish_party +] </td>
-    </tr>
-    ?]
-
-    [? if german_left_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> German Left:</td>
-        <td> [+ german_left_r +]% </td>
-        <td> [+ str_change_german_left +] </td>
-    </tr>
-    ?]
-
-    [? if german_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> German Right:</td>
-        <td> [+ german_right_r +]% </td>
-        <td> [+ str_change_german_right +] </td>
-    </tr>
-    ?]
-
+    
     <tr>
         <td>Opposition</td>
         <td>[+ opposition_votes +]%</td>
@@ -520,13 +482,75 @@ go-to: coalition_menu
     </tr>
     ?]
 
-    [? if not other_in_government :
+    <!-- Other -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Others:</td>
-        <td> [+ other_r +]% </td>
-        <td> [+ str_change_other +] </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> National Minorities:</td>
+        <td> [+ minorities_r_sum +]% </td>
+        <td> [+ str_change_minorities_sum +] </td>
     </tr>
-    ?]
+
+    <!-- Subtable for Minority Parties under 'Other' -->
+    <tr>
+        <td colspan="3" style="text-align: left;">
+            <table style="width: 100%; text-align: left;">
+                [? if not selrob_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
+                    <td> [+ selrob_r +]% </td>
+                    <td> [+ str_change_selrob +] </td>
+                </tr>
+                ?]
+
+                [? if not solrad_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
+                    <td> [+ solrad_r +]% </td>
+                    <td> [+ str_change_solrad +] </td>
+                </tr>
+                ?]
+
+                [? if not undo_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#8B4513'></div> UNDO Center:</td>
+                    <td> [+ undo_sum +]% </td>
+                    <td> [+ str_change_undo_sum +] </td>
+                </tr>
+                ?]
+
+                [? if not jewish_party_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
+                    <td> [+ jewish_party_r +]% </td>
+                    <td> [+ str_change_jewish_party +] </td>
+                </tr>
+                ?]
+
+                [? if not belarusians_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
+                    <td> [+ belarusians_sum +]% </td>
+                    <td> [+ str_change_belarusian_sum +] </td>
+                </tr>
+                ?]
+
+                [? if not german_left_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
+                    <td> [+ german_left_r +]% </td>
+                    <td> [+ str_change_german_left +] </td>
+                </tr>
+                ?]
+                
+                [? if not german_right_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
+                    <td> [+ german_right_r +]% </td>
+                    <td> [+ str_change_german_right +] </td>
+                </tr>
+                ?]
+            </table>
+        </td>
+    </tr>
 
     [? if not bbwr_in_government :
     <tr>
@@ -567,63 +591,8 @@ go-to: coalition_menu
         <td> [+ str_change_owp +] </td>
     </tr>
     ?]
-
-    [? if not selrob_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
-        <td> [+ selrob_r +]% </td>
-        <td> [+ str_change_selrob +] </td>
-    </tr>
-    ?]
-
-    [? if not solrad_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
-        <td> [+ solrad_r +]% </td>
-        <td> [+ str_change_solrad +] </td>
-    </tr>
-    ?]
-
-    [? if not undo_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#8B4513'></div> Undo Center:</td>
-        <td> [+ undo_sum +]% </td>
-        <td> [+ str_change_undo_center +] </td>
-    </tr>
-    ?]
-
-    [? if not belarusians_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> Belarusian Left:</td>
-        <td> [+ belarusians_sum +]% </td>
-        <td> [+ str_change_belarusian_left +] </td>
-    </tr>
-    ?]
-
-    [? if not jewish_party_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
-        <td> [+ jewish_party_r +]% </td>
-        <td> [+ str_change_jewish_party +] </td>
-    </tr>
-    ?]
-
-    [? if not german_left_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> German Left:</td>
-        <td> [+ german_left_r +]% </td>
-        <td> [+ str_change_german_left +] </td>
-    </tr>
-    ?]
-
-    [? if not german_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> German Right:</td>
-        <td> [+ german_right_r +]% </td>
-        <td> [+ str_change_german_right +] </td>
-    </tr>
-    ?]
 </table>
+    
 
 
 **Potential coalitions:**

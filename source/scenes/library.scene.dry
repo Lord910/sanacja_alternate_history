@@ -787,6 +787,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
         <td>Vote share</td>
     </tr>
 
+    <!-- KPP -->
     [? if kpp_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> KPP:</td>
@@ -795,6 +796,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
+    <!-- PPS -->
     [? if pps_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> PPS:</td>
@@ -803,15 +805,8 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
-    [? if sl_formed and sl_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> SL:</td>
-        <td> [+ sl_r +]% </td>
-        <td> [+ str_change_sl +] </td>
-    </tr>
-    ?]
-
-    [? if (not sl_formed or sl_sch_split) and sch_in_government :
+    <!-- SCh -->
+    [? if sch_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
         <td> [+ sch_r +]% </td>
@@ -819,7 +814,8 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
-    [? if (not sl_formed or sl_pslw_split) and pslw_in_government :
+    <!-- PSL-W -->
+    [? if pslw_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
         <td> [+ pslw_r +]% </td>
@@ -827,22 +823,78 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
-    [? if (not sl_formed or sl_pslp_split) and pslp_in_government :
+    <!-- Other -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-P:</td>
-        <td> [+ pslp_r +]% </td>
-        <td> [+ str_change_pslp +] </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> National Minorities:</td>
+        <td> [+ minorities_r_sum +]% </td>
+        <td> [+ str_change_minorities_sum +] </td>
     </tr>
-    ?]
 
-    [? if other_in_government :
+    <!-- Subtable for Minority Parties under 'Other' -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Others:</td>
-        <td> [+ other_r +]% </td>
-        <td> [+ str_change_other +] </td>
-    </tr>
-    ?]
+        <td colspan="3" style="text-align: left;">
+            <table style="width: 100%; text-align: left;">
+                [? if selrob_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
+                    <td> [+ selrob_r +]% </td>
+                    <td> [+ str_change_selrob +] </td>
+                </tr>
+                ?]
 
+                [? if solrad_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
+                    <td> [+ solrad_r +]% </td>
+                    <td> [+ str_change_solrad +] </td>
+                </tr>
+                ?]
+
+                [? if undo_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#8B4513'></div> UNDO Center:</td>
+                    <td> [+ undo_sum +]% </td>
+                    <td> [+ str_change_undo_sum +] </td>
+                </tr>
+                ?]
+
+                [? if jewish_party_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
+                    <td> [+ jewish_party_r +]% </td>
+                    <td> [+ str_change_jewish_party +] </td>
+                </tr>
+                ?]
+
+                [? if belarusians_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
+                    <td> [+ belarusians_sum +]% </td>
+                    <td> [+ str_change_belarusian_sum +] </td>
+                </tr>
+                ?]
+
+                [? if german_left_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
+                    <td> [+ german_left_r +]% </td>
+                    <td> [+ str_change_german_left +] </td>
+                </tr>
+                ?]
+                
+                [? if german_right_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
+                    <td> [+ german_right_r +]% </td>
+                    <td> [+ str_change_german_right +] </td>
+                </tr>
+                ?]
+            </table>
+        </td>
+    </tr>
+
+    <!-- Continue with the other major parties -->
+    <!-- BBWR -->
     [? if bbwr_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'></div> **BBWR:**</td>
@@ -851,6 +903,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
+    <!-- NPR -->
     [? if npr_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#841839'></div> NPR:</td>
@@ -859,6 +912,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
+    <!-- PSCHD -->
     [? if pschd_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> PSCHD:</td>
@@ -867,6 +921,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
+    <!-- SN -->
     [? if sn_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
@@ -875,6 +930,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
+    <!-- OWP -->
     [? if owp_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
@@ -882,79 +938,7 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
         <td> [+ str_change_owp +] </td>
     </tr>
     ?]
-
-    [? if selrob_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
-        <td> [+ selrob_r +]% </td>
-        <td> [+ str_change_selrob +] </td>
-    </tr>
-    ?]
-
-    [? if solrad_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
-        <td> [+ solrad_r +]% </td>
-        <td> [+ str_change_solrad +] </td>
-    </tr>
-    ?]
-
-    [? if undo_center_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#8B4513'></div> Undo Center:</td>
-        <td> [+ undo_center_r +]% </td>
-        <td> [+ str_change_undo_center +] </td>
-    </tr>
-    ?]
-
-    [? if undo_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#A52A2A'></div> Undo Right:</td>
-        <td> [+ undo_right_r +]% </td>
-        <td> [+ str_change_undo_right +] </td>
-    </tr>
-    ?]
-
-    [? if belarusian_left_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> Belarusian Left:</td>
-        <td> [+ belarusian_left_r +]% </td>
-        <td> [+ str_change_belarusian_left +] </td>
-    </tr>
-    ?]
-
-    [? if belarusian_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> Belarusian Right:</td>
-        <td> [+ belarusian_right_r +]% </td>
-        <td> [+ str_change_belarusian_right +] </td>
-    </tr>
-    ?]
-
-    [? if jewish_party_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
-        <td> [+ jewish_party_r +]% </td>
-        <td> [+ str_change_jewish_party +] </td>
-    </tr>
-    ?]
-
-    [? if german_left_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> German Left:</td>
-        <td> [+ german_left_r +]% </td>
-        <td> [+ str_change_german_left +] </td>
-    </tr>
-    ?]
-
-    [? if german_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> German Right:</td>
-        <td> [+ german_right_r +]% </td>
-        <td> [+ str_change_german_right +] </td>
-    </tr>
-    ?]
-
+    
     <tr>
         <td>Opposition</td>
         <td>[+ opposition_votes +]%</td>
@@ -1009,13 +993,75 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
     </tr>
     ?]
 
-    [? if not other_in_government :
+    <!-- Other -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Others:</td>
-        <td> [+ other_r +]% </td>
-        <td> [+ str_change_other +] </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> National Minorities:</td>
+        <td> [+ minorities_r_sum +]% </td>
+        <td> [+ str_change_minorities_sum +] </td>
     </tr>
-    ?]
+
+    <!-- Subtable for Minority Parties under 'Other' -->
+    <tr>
+        <td colspan="3" style="text-align: left;">
+            <table style="width: 100%; text-align: left;">
+                [? if not selrob_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
+                    <td> [+ selrob_r +]% </td>
+                    <td> [+ str_change_selrob +] </td>
+                </tr>
+                ?]
+
+                [? if not solrad_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
+                    <td> [+ solrad_r +]% </td>
+                    <td> [+ str_change_solrad +] </td>
+                </tr>
+                ?]
+
+                [? if not undo_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#8B4513'></div> UNDO Center:</td>
+                    <td> [+ undo_sum +]% </td>
+                    <td> [+ str_change_undo_sum +] </td>
+                </tr>
+                ?]
+
+                [? if not jewish_party_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
+                    <td> [+ jewish_party_r +]% </td>
+                    <td> [+ str_change_jewish_party +] </td>
+                </tr>
+                ?]
+
+                [? if not belarusians_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF6347'></div> Belarusians:</td>
+                    <td> [+ belarusians_sum +]% </td>
+                    <td> [+ str_change_belarusian_sum +] </td>
+                </tr>
+                ?]
+
+                [? if not german_left_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Left:</td>
+                    <td> [+ german_left_r +]% </td>
+                    <td> [+ str_change_german_left +] </td>
+                </tr>
+                ?]
+                
+                [? if not german_right_in_government :
+                <tr>
+                    <td><div class="box" style='background-color:#FF4500'></div> German Right:</td>
+                    <td> [+ german_right_r +]% </td>
+                    <td> [+ str_change_german_right +] </td>
+                </tr>
+                ?]
+            </table>
+        </td>
+    </tr>
 
     [? if not bbwr_in_government :
     <tr>
@@ -1054,78 +1100,6 @@ d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(50
         <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
         <td> [+ owp_r +]% </td>
         <td> [+ str_change_owp +] </td>
-    </tr>
-    ?]
-
-    [? if not selrob_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> SelRob:</td>
-        <td> [+ selrob_r +]% </td>
-        <td> [+ str_change_selrob +] </td>
-    </tr>
-    ?]
-
-    [? if not solrad_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> SolRad:</td>
-        <td> [+ solrad_r +]% </td>
-        <td> [+ str_change_solrad +] </td>
-    </tr>
-    ?]
-
-    [? if not undo_center_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#8B4513'></div> Undo Center:</td>
-        <td> [+ undo_center_r +]% </td>
-        <td> [+ str_change_undo_center +] </td>
-    </tr>
-    ?]
-
-    [? if not undo_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#A52A2A'></div> Undo Right:</td>
-        <td> [+ undo_right_r +]% </td>
-        <td> [+ str_change_undo_right +] </td>
-    </tr>
-    ?]
-
-    [? if not belarusian_left_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> Belarusian Left:</td>
-        <td> [+ belarusian_left_r +]% </td>
-        <td> [+ str_change_belarusian_left +] </td>
-    </tr>
-    ?]
-
-    [? if not belarusian_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> Belarusian Right:</td>
-        <td> [+ belarusian_right_r +]% </td>
-        <td> [+ str_change_belarusian_right +] </td>
-    </tr>
-    ?]
-
-    [? if not jewish_party_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Jewish Party:</td>
-        <td> [+ jewish_party_r +]% </td>
-        <td> [+ str_change_jewish_party +] </td>
-    </tr>
-    ?]
-
-    [? if not german_left_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF6347'></div> German Left:</td>
-        <td> [+ german_left_r +]% </td>
-        <td> [+ str_change_german_left +] </td>
-    </tr>
-    ?]
-
-    [? if not german_right_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#FF4500'></div> German Right:</td>
-        <td> [+ german_right_r +]% </td>
-        <td> [+ str_change_german_right +] </td>
     </tr>
     ?]
 </table>
