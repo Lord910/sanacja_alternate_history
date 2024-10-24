@@ -891,14 +891,8 @@ if (Q.government_changed) {
     </tr>
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>Vote Share</strong></td>
-        <td><strong>Change</strong></td>
-    </tr>
-
-    <tr>
-        <td><strong>Total Minority Votes:</strong></td>
-        <td>[+ minorities_r_sum +]%</td>
-        <td>Vote share</td>
+        <td><strong>[+ minorities_r_sum +]%</strong></td>
+        <td><strong>[+ str_change_minorities_sum +]%</strong></td>
     </tr>
 
     <!-- SelRob -->
@@ -1004,6 +998,15 @@ if (Q.government_changed) {
         <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
         <td> [+ sch_r +]% </td>
         <td> [+ str_change_sch +] </td>
+    </tr>
+    ?]
+
+    <!-- PSL-W -->
+    [? if (not sl_formed or sl_pslw_split) and not pslsw_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
+        <td> [+ pslw_r +]% </td>
+        <td> [+ str_change_pslw +] </td>
     </tr>
     ?]
 
