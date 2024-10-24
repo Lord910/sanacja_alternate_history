@@ -583,11 +583,11 @@ table {
   fill: #32CD32; /* lime green */
 }
 .seat.jewish_party {
-  fill: #FFD700; /* gold */
+  fill: #1E90FF; /* gold */
 }
 .seat.german_left {
-  fill: #FF6347; /* tomato */
+  fill: #CC0000; /* tomato */
 }
 .seat.german_right {
-  fill: #000080; /* navy */
+  fill: #0000CD; /* navy */
 }
