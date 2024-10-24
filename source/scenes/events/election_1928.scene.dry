@@ -35,33 +35,63 @@ Let us hope this does not backfire.
 
 @post_election_1928
 on-arrival: {!
-// set old results
-// election threshold constitutional reform
-// banning parties
-var new_party_sum = 0;
+// Set the total number of seats in the Reichstag (example: 444 total seats)
+var total_seats = 444; 
+
+// Initialize storage for party quotients and seat allocation
+var party_quotients = [];
+var seat_allocation = {};
+
+// Initialize total votes
+var total_votes = 0;
+
+// Step 1: Calculate total national votes for each party
 for (var party of Q.parties) {
-    Q['old_' + party + '_r'] = Q[party + '_r'];
-    if (Q.constitutional_reform > 0) {
-        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned']) {
-            Q[party + '_r'] = 0;
-        } else {
-            Q[party + '_r'] = Q[party + '_votes'];
-        }
-        new_party_sum += Q[party + '_r'];
-    } else {
-        Q[party + '_r'] = Q[party + '_votes'];
+    Q[party + '_national_votes'] = 0;  // Initialize national vote count for each party
+
+    // Aggregate votes for each party across all social classes
+    for (var c of Q.classes) {
+        Q[party + '_national_votes'] += Q[c] * Q[c + '_' + party + '_normalized'];
     }
-    Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
-    var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
-    Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
+
+    // Track total votes cast nationally
+    total_votes += Q[party + '_national_votes'];
+
+    // Initialize seat allocation for each party
+    seat_allocation[party] = 0;
 }
-// calculate new party sum if electoral reform
-if (Q.electoral_threshold && Q.electoral_threshold > 0) {
-    for (var party of Q.parties) {
-        if (Q[party + '_r'] > 0) {
-            Q[party + '_r'] = Math.round(Q[party + '_r']*100/new_party_sum);
-        }
+
+// Step 2: Apply d'Hondt method to calculate quotients for each party
+for (var party of Q.parties) {
+    var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
+
+    // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
+    for (var i = 1; i <= total_seats; i++) {
+        var quotient = party_votes / i;  // Calculate quotient
+        party_quotients.push({ party: party, quotient: quotient });  // Store party and quotient
     }
+}
+
+// Step 3: Sort quotients in descending order (highest quotients first)
+party_quotients.sort(function(a, b) {
+    return b.quotient - a.quotient;  // Sort from highest to lowest
+});
+
+// Step 4: Allocate seats based on the highest quotients
+for (var i = 0; i < total_seats; i++) {
+    var winning_party = party_quotients[i].party;  // Find the party with the highest remaining quotient
+    seat_allocation[winning_party] += 1;  // Assign a seat to this party
+}
+
+// Step 5: Assign final seat counts to the _r variable for each party (Reichstag seats)
+for (var party of Q.parties) {
+    Q['old_' + party + '_r'] = Q[party + '_r'] || 0;  // Save old seat allocation for comparison
+    Q[party + '_r'] = seat_allocation[party];  // Store the final seat allocation in _r
+
+    // Step 6: Calculate the change in seats (compared to old results)
+    Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];  // Calculate seat change
+    var sign = Q['change_' + party + '_r'] > 0 ? '+' : '';
+    Q['str_change_' + party] = sign + Q['change_' + party + '_r'];  // Store the string change for display
 }
 
 // get change arrows and signs
