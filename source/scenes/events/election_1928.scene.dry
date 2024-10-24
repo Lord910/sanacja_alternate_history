@@ -302,8 +302,18 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 <table style="width: 100%; text-align: center;">
+    <!-- Government Section -->
     <tr>
-        <td>Government</td>
+        <td colspan="3"><strong>Government</strong></td>
+    </tr>
+    <tr>
+        <td>Party</td>
+        <td>Vote Share</td>
+        <td>Change</td>
+    </tr>
+
+    <tr>
+        <td>Total Government Votes:</td>
         <td>[+ government_votes +]%</td>
         <td>Vote share</td>
     </tr>
@@ -388,11 +398,20 @@ go-to: coalition_menu
         <td> [+ str_change_owp +] </td>
     </tr>
     ?]
-</table>
 
-<table style="width: 100%; text-align: center;">
+    <!-- National Minorities Section -->
     <tr>
-        <td>National Minorities</td>
+        <td colspan="3"><strong>National Minorities</strong></td>
+    </tr>
+
+    <tr>
+        <td>Party</td>
+        <td>Vote Share</td>
+        <td>Change</td>
+    </tr>
+
+    <tr>
+        <td>Total Minority Votes:</td>
         <td>[+ minorities_r_sum +]%</td>
         <td>Vote share</td>
     </tr>
@@ -452,11 +471,20 @@ go-to: coalition_menu
         <td> [+ str_change_german_right +] </td>
     </tr>
     ?]
-</table>
 
-<table style="width: 100%; text-align: center;">
+    <!-- Opposition Section -->
     <tr>
-        <td>Opposition</td>
+        <td colspan="3"><strong>Opposition</strong></td>
+    </tr>
+
+    <tr>
+        <td>Party</td>
+        <td>Vote Share</td>
+        <td>Change</td>
+    </tr>
+
+    <tr>
+        <td>Total Opposition Votes:</td>
         <td>[+ opposition_votes +]%</td>
         <td>Vote share</td>
     </tr>
@@ -560,6 +588,7 @@ go-to: coalition_menu
     </tr>
     ?]
 </table>
+
 
 
 **Potential coalitions:**
