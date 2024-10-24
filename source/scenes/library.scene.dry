@@ -593,13 +593,13 @@ data = [
         "id": "kpp",
         "legend": "KPP",
         "name": "KPP",
-        "seats": Math.round(Q.kpp_r * 4.44),
+        "seats": Math.round(Q.kpp_r),
     },
     {
         "id": "pps",
         "legend": "PPS",
         "name": "PPS",
-        "seats": Math.round(Q.pps_r * 4.44),
+        "seats": Math.round(Q.pps_r),
     }
 ];
 
@@ -608,7 +608,7 @@ if (Q.sl_formed && Q.sl_r) {
             "id": "sl",
             "legend": "SL",
             "name": "SL",
-            "seats": Math.round(Q.sl_r * 4.44),
+            "seats": Math.round(Q.sl_r),
         });
 }
 if (!Q.sl_formed || Q.sl_sch_split) {
@@ -616,7 +616,7 @@ if (!Q.sl_formed || Q.sl_sch_split) {
             "id": "sch",
             "legend": "SCh",
             "name": "SCh",
-            "seats": Math.round(Q.sch_r * 4.44),
+            "seats": Math.round(Q.sch_r),
         });
 }
     if (!Q.sl_formed || Q.sl_pslw_split) {
@@ -624,7 +624,7 @@ if (!Q.sl_formed || Q.sl_sch_split) {
             "id": "pslw",
             "legend": "PSL-W",
             "name": "PSL-W",
-            "seats": Math.round(Q.pslw_r * 4.44),
+            "seats": Math.round(Q.pslw_r),
         });
 }
 if (!Q.sl_formed || Q.sl_pslp_split) {
@@ -632,7 +632,7 @@ if (!Q.sl_formed || Q.sl_pslp_split) {
         "id": "pslp",
         "legend": "PSL-P",
         "name": "PSL-P",
-        "seats": Math.round(Q.pslp_r * 4.44),
+        "seats": Math.round(Q.pslp_r),
     });
 }
 
@@ -641,37 +641,37 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r * 4.44),
+        "seats": Math.round(Q.other_r),
     },
     {
         "id": "bbwr",
         "legend": "BBWR",
         "name": "BBWR",
-        "seats": Math.round(Q.bbwr_r * 4.44),
+        "seats": Math.round(Q.bbwr_r),
     },
     {
         "id": "npr",
         "legend": "NPR",
         "name": "NPR",
-        "seats": Math.round(Q.npr_r * 4.44),
+        "seats": Math.round(Q.npr_r),
     },
     {
         "id": "pschd",
         "legend": "PSCHD",
         "name": "PSCHD",
-        "seats": Math.round(Q.pschd_r * 4.44),
+        "seats": Math.round(Q.pschd_r),
     },
     {
         "id": "sn",
         "legend": "sn_party_name",
         "name": "sn_party_name",
-        "seats": Math.round(Q.sn_r * 4.44),
+        "seats": Math.round(Q.sn_r),
     },
     {
         "id": "owp",
         "legend": "OWP",
         "name": "OWP",
-        "seats": Math.round(Q.owp_r * 4.44),
+        "seats": Math.round(Q.owp_r),
     }
 ]);
 
