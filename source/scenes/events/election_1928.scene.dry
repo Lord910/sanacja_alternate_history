@@ -65,6 +65,18 @@ on-arrival: {!
         seat_allocation[party] = 0;
     }
 
+    // Step 1.1: Calculate the vote percentage for each party based on total_votes
+    if (total_votes > 0) {  // Avoid division by zero
+        for (var party of Q.parties) {
+            Q[party + '_vote_percentage'] = (Q[party + '_national_votes'] / total_votes) * 100;
+        }
+    } else {
+        // If total_votes is zero, set each party's vote percentage to zero
+        for (var party of Q.parties) {
+            Q[party + '_vote_percentage'] = 0;
+        }
+    }
+
     // Calculate the actual vote threshold based on total votes
     var vote_threshold = total_votes * representation_threshold;
 
@@ -112,9 +124,12 @@ on-arrival: {!
         Q['str_change_' + party] = sign + Q['change_' + party + '_r'];  // Store the string change for display
 
         // Step 7: Calculate and store the percentage of seats for each party
-        Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
+        if (total_seats > 0) {  // Ensure we are not dividing by zero
+            Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
+        } else {
+            Q[party + '_seat_percentage'] = 0;  // Set to zero if total_seats is zero to avoid NaN
+        }
     }
-
 
 // get change arrows and signs
 
