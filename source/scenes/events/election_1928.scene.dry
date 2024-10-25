@@ -45,6 +45,10 @@ on-arrival: {!
     // Initialize total votes
     var total_votes = 0;
 
+    // Define Jewish parties and set the percentage threshold for representation
+    var jewish_parties = ['jewish_nationalists', 'jewish_left', 'jewish_conservatives'];
+    var representation_threshold = 0.05;  // 5% of total votes required to receive seats
+
     // Step 1: Calculate total national votes for each party
     for (var party of Q.parties) {
         Q[party + '_national_votes'] = 0;  // Initialize national vote count for each party
@@ -61,33 +65,28 @@ on-arrival: {!
         seat_allocation[party] = 0;
     }
 
-    // Step 1.5: Apply election fraud to move votes from specific minority parties to BBWR
-    var fraud_votes = 0;  // Total fraud votes to transfer to BBWR
+    // Calculate the actual vote threshold based on total votes
+    var vote_threshold = total_votes * representation_threshold;
 
-    // Ensure Q.election_fraud is defined and set its default if not
-    Q.election_fraud = Q.election_fraud;  // Default fraud level to 10% if undefined
-
-    // Explicitly define minority parties by name
-    var minority_parties = ['undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 'solrad', 'selrob'];
-
-    // Calculate fraud adjustment by summing votes from each minority party
-    for (var party of minority_parties) {
-        var party_votes = Q[party + '_national_votes'];
-        fraud_votes += party_votes * Q.election_fraud;  // Use Q.election_fraud as the fraud level
-        Q[party + '_national_votes'] -= party_votes * Q.election_fraud;  // Reduce minority party votes
+    // Step 1.5: Apply the 5% threshold rule for Jewish parties
+    for (var party of jewish_parties) {
+        if (Q[party + '_national_votes'] < vote_threshold) {
+            seat_allocation[party] = 0;  // Set seats to 0 if below the 5% threshold
+            Q[party + '_threshold_failed'] = true;  // Flag for display if needed
+        }
     }
 
-    // Increase BBWR's vote count by the fraud adjustment
-    Q["bbwr_national_votes"] += fraud_votes;
-
-    // Step 2: Apply d'Hondt method to calculate quotients for each party
+    // Step 2: Apply d'Hondt method to calculate quotients for each party that passes the threshold
     for (var party of Q.parties) {
         var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
 
-        // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
-        for (var i = 1; i <= total_seats; i++) {
-            var quotient = party_votes / i;  // Calculate quotient
-            party_quotients.push({ party: party, quotient: quotient });  // Store party and quotient
+        // Only include parties that pass the threshold in seat allocation calculations
+        if (!jewish_parties.includes(party) || party_votes >= vote_threshold) {
+            // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
+            for (var i = 1; i <= total_seats; i++) {
+                var quotient = party_votes / i;  // Calculate quotient
+                party_quotients.push({ party: party, quotient: quotient });  // Store party and quotient
+            }
         }
     }
 
@@ -114,10 +113,8 @@ on-arrival: {!
 
         // Step 7: Calculate and store the percentage of seats for each party
         Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
-       
-        // Step 8: Calculate and store the percentage of votes for each party
-        Q[party + '_vote_percentage'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;  // Rounded to 1 decimal
     }
+
 
 // get change arrows and signs
 
