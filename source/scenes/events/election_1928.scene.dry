@@ -68,7 +68,7 @@ on-arrival: {!
     // Step 1.1: Calculate the vote percentage for each party based on total_votes
     if (total_votes > 0) {  // Avoid division by zero
         for (var party of Q.parties) {
-            Q[party + '_vote_percentage'] = (Q[party + '_national_votes'] / total_votes) * 100;
+            Q[party + '_vote_percentage'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;
         }
     } else {
         // If total_votes is zero, set each party's vote percentage to zero
