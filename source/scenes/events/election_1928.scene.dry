@@ -92,6 +92,9 @@ for (var party of Q.parties) {
     Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];  // Calculate seat change
     var sign = Q['change_' + party + '_r'] > 0 ? '+' : '';
     Q['str_change_' + party] = sign + Q['change_' + party + '_r'];  // Store the string change for display
+
+    // Step 7: Calculate and store the percentage of seats for each party
+    Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
 }
 
 // get change arrows and signs
@@ -306,25 +309,29 @@ go-to: coalition_menu
 <table style="width: 100%; text-align: center;">
     <!-- Government Section -->
     <tr>
-        <td colspan="3"><strong>Government</strong></td>
+        <td colspan="5"><strong>Government</strong></td>
     </tr>
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>Vote Share</strong></td>
+        <td><strong>Seats (Reichstag)</strong></td>
+        <td><strong>% of Seats</strong></td>
+        <td><strong>% of Votes</strong></td>
         <td><strong>Change</strong></td>
     </tr>
 
+    <!-- Total Government Votes and Vote Share -->
     <tr>
         <td><strong>Total Government Votes:</strong></td>
-        <td>[+ government_votes +]%</td>
-        <td>Vote share</td>
+        <td colspan="4">[+ government_votes +]%</td>
     </tr>
 
     <!-- KPP -->
     [? if kpp_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> KPP:</td>
-        <td> [+ kpp_r +]% </td>
+        <td> [+ kpp_r +] </td>
+        <td> [+ kpp_seat_percentage +]% </td>
+        <td> [+ kpp_vote_percentage +]% </td>
         <td> [+ str_change_kpp +] </td>
     </tr>
     ?]
@@ -333,34 +340,52 @@ go-to: coalition_menu
     [? if pps_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> PPS:</td>
-        <td> [+ pps_r +]% </td>
+        <td> [+ pps_r +] </td>
+        <td> [+ pps_seat_percentage +]% </td>
+        <td> [+ pps_vote_percentage +]% </td>
         <td> [+ str_change_pps +] </td>
     </tr>
     ?]
 
     <!-- SCh -->
-    [? if sch_in_government :
+    [? if (not sl_formed or sl_sch_split) and sch_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
-        <td> [+ sch_r +]% </td>
+        <td> [+ sch_r +] </td>
+        <td> [+ sch_seat_percentage +]% </td>
+        <td> [+ sch_vote_percentage +]% </td>
         <td> [+ str_change_sch +] </td>
     </tr>
     ?]
 
     <!-- PSL-W -->
-    [? if pslw_in_government :
+    [? if (not sl_formed or sl_pslw_split) and pslsw_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
-        <td> [+ pslw_r +]% </td>
+        <td> [+ pslw_r +] </td>
+        <td> [+ pslw_seat_percentage +]% </td>
+        <td> [+ pslw_vote_percentage +]% </td>
         <td> [+ str_change_pslw +] </td>
     </tr>
     ?]
 
+    <!-- SL -->
+    [? if sl_formed and sl_in_government :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> SL:</td>
+        <td> [+ sl_r +] </td>
+        <td> [+ sl_seat_percentage +]% </td>
+        <td> [+ sl_vote_percentage +]% </td>
+        <td> [+ str_change_sl +] </td>
+    </tr>
+
     <!-- BBWR -->
     [? if bbwr_in_government :
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'></div> <strong>BBWR:</strong></td>
-        <td><strong>[+ bbwr_r +]%</strong></td>
+        <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px solid;'></div> <strong>BBWR:</strong></td>
+        <td><strong>[+ bbwr_r +]</strong></td>
+        <td><strong>[+ bbwr_seat_percentage +]%</strong></td>
+        <td><strong>[+ bbwr_vote_percentage +]%</strong></td>
         <td><strong>[+ str_change_bbwr +]</strong></td>
     </tr>
     ?]
@@ -369,7 +394,9 @@ go-to: coalition_menu
     [? if npr_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#841839'></div> NPR:</td>
-        <td> [+ npr_r +]% </td>
+        <td> [+ npr_r +] </td>
+        <td> [+ npr_seat_percentage +]% </td>
+        <td> [+ npr_vote_percentage +]% </td>
         <td> [+ str_change_npr +] </td>
     </tr>
     ?]
@@ -378,25 +405,42 @@ go-to: coalition_menu
     [? if pschd_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> PSCHD:</td>
-        <td> [+ pschd_r +]% </td>
+        <td> [+ pschd_r +] </td>
+        <td> [+ pschd_seat_percentage +]% </td>
+        <td> [+ pschd_vote_percentage +]% </td>
         <td> [+ str_change_pschd +] </td>
     </tr>
     ?]
 
-    <!-- SN -->
-    [? if sn_in_government :
+    <!-- PSL-P -->
+    [? if (not sl_formed or sl_pslp_split) and pslp_in_government :
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
-        <td> [+ sn_r +]% </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-W:</td>
+        <td> [+ pslp_r +] </td>
+        <td> [+ pslp_seat_percentage +]% </td>
+        <td> [+ pslp_vote_percentage +]% </td>
+        <td> [+ str_change_pslw +] </td>
+    </tr>
+    ?]
+
+    <!-- SN -->
+    [? if sn_in_government sn_r > 0 :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> SN:</td>
+        <td> [+ sn_r +] </td>
+        <td> [+ sn_seat_percentage +]% </td>
+        <td> [+ sn_vote_percentage +]% </td>
         <td> [+ str_change_sn +] </td>
     </tr>
     ?]
 
     <!-- OWP -->
-    [? if owp_in_government :
+    [? if owp_in_government and owp_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
-        <td> [+ owp_r +]% </td>
+        <td> [+ owp_r +] </td>
+        <td> [+ owp_seat_percentage +]% </td>
+        <td> [+ owp_vote_percentage +]% </td>
         <td> [+ str_change_owp +] </td>
     </tr>
     ?]
@@ -407,15 +451,19 @@ go-to: coalition_menu
     </tr>
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>[+ minorities_r_sum +]%</strong></td>
-        <td><strong>[+ str_change_minorities_sum +]%</strong></td>
+        <td><strong>Seats (Reichstag)</strong></td>
+        <td><strong>% of Seats</strong></td>
+        <td><strong>% of Votes</strong></td>
+        <td><strong>Change</strong></td>
     </tr>
 
     <!-- SelRob -->
     [? if selrob_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> SelRob:</td>
-        <td> [+ selrob_r +]% </td>
+        <td> [+ selrob_r +] </td>
+        <td> [+ selrob_seat_percentage +]% </td>
+        <td> [+ selrob_vote_percentage +]% </td>
         <td> [+ str_change_selrob +] </td>
     </tr>
     ?]
@@ -424,7 +472,9 @@ go-to: coalition_menu
     [? if solrad_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> SolRad:</td>
-        <td> [+ solrad_r +]% </td>
+        <td> [+ solrad_r +] </td>
+        <td> [+ solrad_seat_percentage +]% </td>
+        <td> [+ solrad_vote_percentage +]% </td>
         <td> [+ str_change_solrad +] </td>
     </tr>
     ?]
@@ -433,7 +483,9 @@ go-to: coalition_menu
     [? if undo_sum > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#4682B4'></div> UNDO:</td>
-        <td> [+ undo_sum +]% </td>
+        <td> [+ undo_sum +] </td>
+        <td> [+ undo_seat_percentage +]% </td>
+        <td> [+ undo_vote_percentage +]% </td>
         <td> [+ str_change_undo_sum +] </td>
     </tr>
     ?]
@@ -442,7 +494,9 @@ go-to: coalition_menu
     [? if jewish_party_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Party:</td>
-        <td> [+ jewish_party_r +]% </td>
+        <td> [+ jewish_party_r +] </td>
+        <td> [+ jewish_party_seat_percentage +]% </td>
+        <td> [+ jewish_party_vote_percentage +]% </td>
         <td> [+ str_change_jewish_party +] </td>
     </tr>
     ?]
@@ -451,7 +505,9 @@ go-to: coalition_menu
     [? if belarusians_sum > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> Belarusians:</td>
-        <td> [+ belarusians_sum +]% </td>
+        <td> [+ belarusians_sum +] </td>
+        <td> [+ belarusians_seat_percentage +]% </td>
+        <td> [+ belarusians_vote_percentage +]% </td>
         <td> [+ str_change_belarusian_sum +] </td>
     </tr>
     ?]
@@ -460,7 +516,9 @@ go-to: coalition_menu
     [? if german_left_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> German Left:</td>
-        <td> [+ german_left_r +]% </td>
+        <td> [+ german_left_r +] </td>
+        <td> [+ german_left_seat_percentage +]% </td>
+        <td> [+ german_left_vote_percentage +]% </td>
         <td> [+ str_change_german_left +] </td>
     </tr>
     ?]
@@ -469,126 +527,153 @@ go-to: coalition_menu
     [? if german_right_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> German Right:</td>
-        <td> [+ german_right_r +]% </td>
+        <td> [+ german_right_r +] </td>
+        <td> [+ german_right_seat_percentage +]% </td>
+        <td> [+ german_right_vote_percentage +]% </td>
         <td> [+ str_change_german_right +] </td>
     </tr>
     ?]
 
     <!-- Opposition Section -->
     <tr>
-        <td colspan="3"><strong>Opposition</strong></td>
+        <td colspan="5"><strong>Opposition</strong></td>
     </tr>
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>Vote Share</strong></td>
+        <td><strong>Seats (Reichstag)</strong></td>
+        <td><strong>% of Seats</strong></td>
+        <td><strong>% of Votes</strong></td>
         <td><strong>Change</strong></td>
     </tr>
 
+    <!-- Total Opposition Votes and Vote Share -->
     <tr>
         <td><strong>Total Opposition Votes:</strong></td>
-        <td>[+ opposition_votes +]%</td>
-        <td>Vote share</td>
+        <td colspan="4">[+ opposition_votes +]%</td>
     </tr>
 
-    <!-- KPP -->
+    <!-- KPP (Opposition) -->
     [? if not kpp_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> KPP:</td>
-        <td> [+ kpp_r +]% </td>
+        <td> [+ kpp_r +] </td>
+        <td> [+ kpp_seat_percentage +]% </td>
+        <td> [+ kpp_vote_percentage +]% </td>
         <td> [+ str_change_kpp +] </td>
     </tr>
     ?]
 
-    <!-- PPS -->
+    <!-- PPS (Opposition) -->
     [? if not pps_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> PPS:</td>
-        <td> [+ pps_r +]% </td>
+        <td> [+ pps_r +] </td>
+        <td> [+ pps_seat_percentage +]% </td>
+        <td> [+ pps_vote_percentage +]% </td>
         <td> [+ str_change_pps +] </td>
     </tr>
     ?]
 
-    <!-- SCh -->
+    <!-- SCh (Opposition) -->
     [? if (not sl_formed or sl_sch_split) and not sch_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#556B2F'></div> SCh:</td>
-        <td> [+ sch_r +]% </td>
+        <td> [+ sch_r +] </td>
+        <td> [+ sch_seat_percentage +]% </td>
+        <td> [+ sch_vote_percentage +]% </td>
         <td> [+ str_change_sch +] </td>
     </tr>
     ?]
 
-    <!-- PSL-W -->
-    [? if (not sl_formed or sl_pslw_split) and not pslsw_in_government :
+    <!-- PSL-W (Opposition) -->
+    [? if (not sl_formed or sl_pslw_split) and not pslw_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> PSL-W:</td>
-        <td> [+ pslw_r +]% </td>
+        <td> [+ pslw_r +] </td>
+        <td> [+ pslw_seat_percentage +]% </td>
+        <td> [+ pslw_vote_percentage +]% </td>
         <td> [+ str_change_pslw +] </td>
     </tr>
     ?]
 
-    <!-- PSL-P -->
-    [? if not pslp_in_government :
-    <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-P:</td>
-        <td> [+ pslp_r +]% </td>
-        <td> [+ str_change_pslp +] </td>
-    </tr>
-    ?]
-
-    <!-- SL -->
+    <!-- SL (Opposition) -->
     [? if sl_formed and not sl_in_government :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> SL:</td>
-        <td> [+ sl_r +]% </td>
+        <td> [+ sl_r +] </td>
+        <td> [+ sl_seat_percentage +]% </td>
+        <td> [+ sl_vote_percentage +]% </td>
         <td> [+ str_change_sl +] </td>
     </tr>
-    ?]
 
-    <!-- BBWR -->
-    [? if not bbwr_in_government :
+    <!-- BBWR (Opposition) -->
+    [? if not bbwr_in_government and bbwr_r > 0 :
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px; outline-style: solid;'></div> <strong>BBWR:</strong></td>
-        <td> <strong>[+ bbwr_r +]%</strong> </td>
-        <td> <strong>[+ str_change_bbwr +]</strong> </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#808080; outline: 2px solid;'></div> <strong>BBWR:</strong></td>
+        <td><strong>[+ bbwr_r +]</strong></td>
+        <td><strong>[+ bbwr_seat_percentage +]%</strong></td>
+        <td><strong>[+ bbwr_vote_percentage +]%</strong></td>
+        <td><strong>[+ str_change_bbwr +]</strong></td>
     </tr>
     ?]
 
-    <!-- NPR -->
-    [? if not npr_in_government :
+    <!-- NPR (Opposition) -->
+    [? if not npr_in_government and npr_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#841839'></div> NPR:</td>
-        <td> [+ npr_r +]% </td>
+        <td> [+ npr_r +] </td>
+        <td> [+ npr_seat_percentage +]% </td>
+        <td> [+ npr_vote_percentage +]% </td>
         <td> [+ str_change_npr +] </td>
     </tr>
     ?]
 
-    <!-- PSCHD -->
-    [? if not pschd_in_government :
+    <!-- PSCHD (Opposition) -->
+    [? if not pschd_in_government and pschd_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> PSCHD:</td>
-        <td> [+ pschd_r +]% </td>
+        <td> [+ pschd_r +] </td>
+        <td> [+ pschd_seat_percentage +]% </td>
+        <td> [+ pschd_vote_percentage +]% </td>
         <td> [+ str_change_pschd +] </td>
     </tr>
     ?]
 
-    <!-- SN -->
-    [? if not sn_in_government :
+    <!-- PSL-P (Opposition) -->
+    [? if (not sl_formed or sl_pslp_split) and not pslp_in_government :
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
-        <td> [+ sn_r +]% </td>
+        <td style="text-align: left;"><div class="box" style='background-color:#3A6538'></div> PSL-W:</td>
+        <td> [+ pslp_r +] </td>
+        <td> [+ pslp_seat_percentage +]% </td>
+        <td> [+ pslp_vote_percentage +]% </td>
+        <td> [+ str_change_pslw +] </td>
+    </tr>
+    ?]
+
+    <!-- SN (Opposition) -->
+    [? if not sn_in_government and sn_r > 0 :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> SN:</td>
+        <td> [+ sn_r +] </td>
+        <td> [+ sn_seat_percentage +]% </td>
+        <td> [+ sn_vote_percentage +]% </td>
         <td> [+ str_change_sn +] </td>
     </tr>
     ?]
 
-    <!-- OWP -->
-    [? if not owp_in_government :
+    <!-- OWP (Opposition) -->
+    [? if not owp_in_government and owp_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#954B00'></div> OWP:</td>
-        <td> [+ owp_r +]% </td>
+        <td> [+ owp_r +] </td>
+        <td> [+ owp_seat_percentage +]% </td>
+        <td> [+ owp_vote_percentage +]% </td>
         <td> [+ str_change_owp +] </td>
     </tr>
     ?]
+
 </table>
+
 
 
 
