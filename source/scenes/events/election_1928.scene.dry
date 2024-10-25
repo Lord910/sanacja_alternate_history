@@ -425,7 +425,7 @@ go-to: coalition_menu
     ?]
 
     <!-- SN -->
-    [? if sn_in_government sn_r > 0 :
+    [? if sn_in_government and sn_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> SN:</td>
         <td> [+ sn_r +] </td>
