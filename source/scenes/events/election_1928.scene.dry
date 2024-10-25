@@ -80,15 +80,7 @@ on-arrival: {!
     // Calculate the actual vote threshold based on total votes
     var vote_threshold = total_votes * representation_threshold;
 
-    // Step 1.5: Apply the 5% threshold rule for Jewish parties
-    for (var party of jewish_parties) {
-        if (Q[party + '_national_votes'] < vote_threshold) {
-            seat_allocation[party] = 0;  // Set seats to 0 if below the 5% threshold
-            Q[party + '_threshold_failed'] = true;  // Flag for display if needed
-        }
-    }
-
-    // Step 1.6: Apply election fraud to move votes from specific minority parties to BBWR
+    // Step 1.5: Apply election fraud to move votes from specific minority parties to BBWR
     var fraud_votes = 0;  // Total fraud votes to transfer to BBWR
 
     // Ensure Q.election_fraud is defined and set its default if not
@@ -109,12 +101,20 @@ on-arrival: {!
     // Increase BBWR's vote count by the fraud adjustment
     Q["bbwr_national_votes"] += fraud_votes;
 
-    // Step 2: Apply d'Hondt method to calculate quotients for each party that passes the threshold
+    // Step 1.6: Reapply the threshold check after the fraud adjustment
+    for (var party of jewish_parties) {
+        if (Q[party + '_national_votes'] < vote_threshold) {
+            seat_allocation[party] = 0;  // Set seats to 0 if below the 5% threshold
+            Q[party + '_threshold_failed'] = true;  // Flag for display if needed
+        }
+    }
+
+    // Step 2: Apply D'Hondt method to calculate quotients for each party that passes the adjusted threshold
     for (var party of Q.parties) {
         var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
 
         // Only include parties that pass the threshold in seat allocation calculations
-        if (!jewish_parties.includes(party) || party_votes >= vote_threshold) {
+        if ((!jewish_parties.includes(party) || party_votes >= vote_threshold) && party_votes > 0) {
             // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
             for (var i = 1; i <= total_seats; i++) {
                 var quotient = party_votes / i;  // Calculate quotient
@@ -151,6 +151,7 @@ on-arrival: {!
             Q[party + '_seat_percentage'] = 0;  // Set to zero if total_seats is zero to avoid NaN
         }
     }
+
 
 // get change arrows and signs
 
