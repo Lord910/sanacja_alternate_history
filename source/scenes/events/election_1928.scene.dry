@@ -87,9 +87,7 @@ on-arrival: {!
     Q.election_fraud = Q.election_fraud || 0.1;  // Default fraud level to 10% if not set
 
     // Explicitly define minority parties by name
-    var minority_parties = ['undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 
-                            'jewish_nationalists', 'jewish_left', 'jewish_conservatives', 
-                            'german_left', 'german_right'];
+    var minority_parties = ['undo_center', 'undo_right', 'belarusian_left', 'belarusian_right'];
 
     // Calculate fraud adjustment by summing votes from each minority party
     for (var party of minority_parties) {
