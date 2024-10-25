@@ -103,8 +103,10 @@ on-arrival: {!
 
     // Step 1.6: Reapply the threshold check after the fraud adjustment
     for (var party of jewish_parties) {
-        if (Q[party + '_national_votes'] < vote_threshold) {
-            seat_allocation[party] = 0;  // Set seats to 0 if below the 5% threshold
+        // Check if the Jewish party still passes the threshold post-fraud
+        if (Q[party + '_national_votes'] >= vote_threshold) {
+            Q[party + '_threshold_passed'] = true;  // Ensure this party is eligible
+        } else {
             Q[party + '_threshold_failed'] = true;  // Flag for display if needed
         }
     }
@@ -114,7 +116,7 @@ on-arrival: {!
         var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
 
         // Only include parties that pass the threshold in seat allocation calculations
-        if ((!jewish_parties.includes(party) || party_votes >= vote_threshold) && party_votes > 0) {
+        if ((Q[party + '_threshold_passed'] || !jewish_parties.includes(party)) && party_votes > 0) {
             // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
             for (var i = 1; i <= total_seats; i++) {
                 var quotient = party_votes / i;  // Calculate quotient
@@ -151,7 +153,6 @@ on-arrival: {!
             Q[party + '_seat_percentage'] = 0;  // Set to zero if total_seats is zero to avoid NaN
         }
     }
-
 
 // get change arrows and signs
 
