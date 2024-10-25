@@ -432,9 +432,9 @@ Q.ukrainians_jewish_left = 0;
 Q.ukrainians_german_left = 0;
 Q.ukrainians_german_right = 0;
 
-Q.jews_jewish_nationalists = 60;
-Q.jews_jewish_conservatives = 20;
-Q.jews_jewish_left = 20;
+Q.jews_jewish_nationalists = 70;
+Q.jews_jewish_conservatives = 10;
+Q.jews_jewish_left = 10;
 Q.jews_bbwr = 0;
 Q.jews_kpp = 0;
 Q.jews_pschd = 0;
