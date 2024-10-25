@@ -274,7 +274,7 @@ Q.election_fraud = 0.5; // election fraud
 
 
 Q.classes = ['robotnicy', 'chlopi', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'ukrainians', 'jews', 'belarusians', 'germans', 'inteligencja'];
-Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'selrob', 'solrad', 'undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 'jewish_party', 'german_left', 'german_right'];
+Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'selrob', 'solrad', 'undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 'jewish_nationalists', 'jewish_left', 'jewish_conservatives', 'german_left', 'german_right'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -294,7 +294,9 @@ Q.robotnicy_undo_center = 0;
 Q.robotnicy_undo_right = 0;
 Q.robotnicy_belarusian_left = 0;
 Q.robotnicy_belarusian_right = 0;
-Q.robotnicy_jewish_party = 0;
+Q.robotnicy_jewish_nationalists = 0;
+Q.robotnicy_jewish_conservatives = 0;
+Q.robotnicy_jewish_left = 0;
 Q.robotnicy_german_left = 0;
 Q.robotnicy_german_right = 0;
 
@@ -314,7 +316,9 @@ Q.chlopi_undo_center = 0;
 Q.chlopi_undo_right = 0;
 Q.chlopi_belarusian_left = 0;
 Q.chlopi_belarusian_right = 0;
-Q.chlopi_jewish_party = 0;
+Q.chlopi_jewish_nationalists = 0;
+Q.chlopi_jewish_conservatives = 0;
+Q.chlopi_jewish_left = 0;
 Q.chlopi_german_left = 0;
 Q.chlopi_german_right = 0;
 
@@ -334,7 +338,9 @@ Q.inteligencja_undo_center = 0;
 Q.inteligencja_undo_right = 0;
 Q.inteligencja_belarusian_left = 0;
 Q.inteligencja_belarusian_right = 0;
-Q.inteligencja_jewish_party = 0;
+Q.inteligencja_jewish_nationalists = 0;
+Q.inteligencja_jewish_conservatives = 0;
+Q.inteligencja_jewish_left = 0;
 Q.inteligencja_german_left = 0;
 Q.inteligencja_german_right = 0;
 
@@ -354,7 +360,9 @@ Q.klasa_wyzsza_undo_center = 0;
 Q.klasa_wyzsza_undo_right = 0;
 Q.klasa_wyzsza_belarusian_left = 0;
 Q.klasa_wyzsza_belarusian_right = 0;
-Q.klasa_wyzsza_jewish_party = 0;
+Q.klasa_wyzsza_jewish_nationalists = 0;
+Q.klasa_wyzsza_jewish_conservatives = 0;
+Q.klasa_wyzsza_jewish_left = 0;
 Q.klasa_wyzsza_german_left = 0;
 Q.klasa_wyzsza_german_right = 0;
 
@@ -374,7 +382,9 @@ Q.klasa_srednia_undo_center = 0;
 Q.klasa_srednia_undo_right = 0;
 Q.klasa_srednia_belarusian_left = 0;
 Q.klasa_srednia_belarusian_right = 0;
-Q.klasa_srednia_jewish_party = 0;
+Q.klasa_srednia_jewish_nationalists = 0;
+Q.klasa_srednia_jewish_conservatives = 0;
+Q.klasa_srednia_jewish_left = 0;
 Q.klasa_srednia_german_left = 0;
 Q.klasa_srednia_german_right = 0;
 
@@ -394,7 +404,9 @@ Q.bezrobotni_undo_center = 0;
 Q.bezrobotni_undo_right = 0;
 Q.bezrobotni_belarusian_left = 0;
 Q.bezrobotni_belarusian_right = 0;
-Q.bezrobotni_jewish_party = 0;
+Q.bezrobotni_jewish_nationalists = 0;
+Q.bezrobotni_jewish_conservatives = 0;
+Q.bezrobotni_jewish_left = 0;
 Q.bezrobotni_german_left = 0;
 Q.bezrobotni_german_right = 0;
 
@@ -414,11 +426,15 @@ Q.ukrainians_npr = 0;
 Q.ukrainians_sch = 0;
 Q.ukrainians_belarusian_left = 0;
 Q.ukrainians_belarusian_right = 0;
-Q.ukrainians_jewish_party = 0;
+Q.ukrainians_jewish_nationalists = 0;
+Q.ukrainians_jewish_conservatives = 0;
+Q.ukrainians_jewish_left = 0;
 Q.ukrainians_german_left = 0;
 Q.ukrainians_german_right = 0;
 
-Q.jews_jewish_party = 100;
+Q.jews_jewish_nationalists = 75;
+Q.jews_jewish_conservatives = 5;
+Q.jews_jewish_left = 20;
 Q.jews_bbwr = 0;
 Q.jews_kpp = 0;
 Q.jews_pschd = 0;
@@ -454,7 +470,9 @@ Q.belarusians_pslw = 0;
 Q.belarusians_pslp = 0;
 Q.belarusians_sn = 0;
 Q.belarusians_owp = 0;
-Q.belarusians_jewish_party = 0;
+Q.belarusians_jewish_nationalists = 0;
+Q.belarusians_jewish_conservatives = 0;
+Q.belarusians_jewish_left = 0;
 Q.belarusians_german_left = 0;
 Q.belarusians_german_right = 0;
 
@@ -474,9 +492,12 @@ Q.germans_pslw = 0;
 Q.germans_pslp = 0;
 Q.germans_sn = 0;
 Q.germans_owp = 0;
-Q.germans_jewish_party = 0;
+Q.germans_jewish_nationalists = 0;
+Q.germans_jewish_conservatives = 0;
+Q.germans_jewish_left = 0;
 Q.germans_belarusian_left = 0;
 Q.germans_belarusian_right = 0;
+
 
 // Current Sejm composition
 // % of Sejm in Jan 1927
