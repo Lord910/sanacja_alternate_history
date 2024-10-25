@@ -99,7 +99,7 @@ on-arrival: {!
     // Calculate the actual vote threshold based on total votes
     var vote_threshold = total_votes * representation_threshold;
 
-    // Step 1.7: Apply the 5% threshold rule for Jewish parties
+    // Step 1.7: Apply the 4% threshold rule for Jewish parties
     for (var party of jewish_parties) {
         if (Q[party + '_national_votes'] < vote_threshold) {
             seat_allocation[party] = 0;  // Set seats to 0 if below the 4% threshold
