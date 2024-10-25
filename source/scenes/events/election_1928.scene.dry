@@ -47,7 +47,7 @@ on-arrival: {!
 
     // Define Jewish parties and set the percentage threshold for representation
     var jewish_parties = ['jewish_nationalists', 'jewish_left', 'jewish_conservatives'];
-    var representation_threshold = 0.05;  // 5% of total votes required to receive seats
+    var representation_threshold = 0.04;  // 4% of total votes required to receive seats
 
     // Step 1: Calculate total national votes for each party
     for (var party of Q.parties) {
@@ -102,7 +102,7 @@ on-arrival: {!
     // Step 1.7: Apply the 5% threshold rule for Jewish parties
     for (var party of jewish_parties) {
         if (Q[party + '_national_votes'] < vote_threshold) {
-            seat_allocation[party] = 0;  // Set seats to 0 if below the 5% threshold
+            seat_allocation[party] = 0;  // Set seats to 0 if below the 4% threshold
             Q[party + '_threshold_failed'] = true;  // Flag for display if needed
         }
     }
