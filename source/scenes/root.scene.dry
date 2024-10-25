@@ -410,8 +410,8 @@ Q.bezrobotni_jewish_left = 0;
 Q.bezrobotni_german_left = 0;
 Q.bezrobotni_german_right = 0;
 
-Q.ukrainians_selrob = 25;
-Q.ukrainians_solrad = 25;
+Q.ukrainians_selrob = 12.5;
+Q.ukrainians_solrad = 12.5;
 Q.ukrainians_undo_center = 25;
 Q.ukrainians_undo_right = 25;
 Q.ukrainians_bbwr = 0;
@@ -476,8 +476,8 @@ Q.belarusians_jewish_left = 0;
 Q.belarusians_german_left = 0;
 Q.belarusians_german_right = 0;
 
-Q.germans_german_left = 50;
-Q.germans_german_right = 50;
+Q.germans_german_left = 20;
+Q.germans_german_right = 80;
 Q.germans_selrob = 0;
 Q.germans_solrad = 0;
 Q.germans_undo_center = 0;
