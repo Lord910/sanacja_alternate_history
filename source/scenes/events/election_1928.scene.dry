@@ -378,6 +378,7 @@ go-to: coalition_menu
         <td> [+ sl_vote_percentage +]% </td>
         <td> [+ str_change_sl +] </td>
     </tr>
+    ?]
 
     <!-- BBWR -->
     [? if bbwr_in_government :
@@ -595,7 +596,6 @@ go-to: coalition_menu
         <td> [+ str_change_pslw +] </td>
     </tr>
     ?]
-
     <!-- SL (Opposition) -->
     [? if sl_formed and not sl_in_government :
     <tr>
@@ -604,6 +604,8 @@ go-to: coalition_menu
         <td> [+ sl_seat_percentage +]% </td>
         <td> [+ sl_vote_percentage +]% </td>
         <td> [+ str_change_sl +] </td>
+    </tr>
+    ?]
     </tr>
 
     <!-- BBWR (Opposition) -->
