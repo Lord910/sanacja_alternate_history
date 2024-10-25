@@ -542,7 +542,7 @@ go-to: coalition_menu
     ?]
 
     <!-- Jewish Left -->
-    [? if jewish_left_r > 0 :
+    [? if not jewish_left_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Left:</td>
         <td> [+ jewish_left_r +] </td>
@@ -553,7 +553,7 @@ go-to: coalition_menu
     ?]
 
     <!-- Jewish Nationalists -->
-    [? if jewish_nationalists_r > 0 :
+    [? if not jewish_nationalists_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Nationalists:</td>
         <td> [+ jewish_nationalists_r +] </td>
@@ -564,7 +564,7 @@ go-to: coalition_menu
     ?]
 
     <!-- Jewish Conservatives -->
-    [? if jewish_conservatives_r > 0 :
+    [? if not jewish_conservatives_r > 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Conservatives:</td>
         <td> [+ jewish_conservatives_r +] </td>
