@@ -270,6 +270,8 @@ Q.ukrainians = 15.0;
 Q.jews = 10.5;
 Q.belarusians = 5.0; // and Russians and other minorities (Lithuenians)
 Q.germans = 3.5;
+Q.election_fraud = 0.5; // election fraud
+
 
 Q.classes = ['robotnicy', 'chlopi', 'klasa_wyzsza', 'klasa_srednia', 'bezrobotni', 'ukrainians', 'jews', 'belarusians', 'germans', 'inteligencja'];
 Q.parties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'selrob', 'solrad', 'undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 'jewish_party', 'german_left', 'german_right'];

@@ -65,7 +65,7 @@ on-arrival: {!
     var fraud_votes = 0;  // Total fraud votes to transfer to BBWR
 
     // Ensure Q.election_fraud is defined and set its default if not
-    Q.election_fraud = Q.election_fraud || 0.5;  // Default fraud level to 10% if undefined
+    Q.election_fraud = Q.election_fraud;  // Default fraud level to 10% if undefined
 
     // Explicitly define minority parties by name
     var minority_parties = ['undo_center', 'undo_right', 'belarusian_left', 'belarusian_right', 
