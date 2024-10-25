@@ -410,8 +410,8 @@ Q.bezrobotni_jewish_left = 0;
 Q.bezrobotni_german_left = 0;
 Q.bezrobotni_german_right = 0;
 
-Q.ukrainians_selrob = 12.5;
-Q.ukrainians_solrad = 12.5;
+Q.ukrainians_selrob = 10;
+Q.ukrainians_solrad = 10;
 Q.ukrainians_undo_center = 25;
 Q.ukrainians_undo_right = 25;
 Q.ukrainians_bbwr = 0;
@@ -432,8 +432,8 @@ Q.ukrainians_jewish_left = 0;
 Q.ukrainians_german_left = 0;
 Q.ukrainians_german_right = 0;
 
-Q.jews_jewish_nationalists = 75;
-Q.jews_jewish_conservatives = 5;
+Q.jews_jewish_nationalists = 60;
+Q.jews_jewish_conservatives = 20;
 Q.jews_jewish_left = 20;
 Q.jews_bbwr = 0;
 Q.jews_kpp = 0;
