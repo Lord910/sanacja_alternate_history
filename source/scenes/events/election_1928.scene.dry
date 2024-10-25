@@ -95,6 +95,9 @@ for (var party of Q.parties) {
 
     // Step 7: Calculate and store the percentage of seats for each party
     Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
+
+    // Step 8: Calculate and store the percentage of votes for each party
+    Q[party + '_vote_percentage'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;  // Rounded to 1 decimal
 }
 
 // get change arrows and signs
@@ -319,12 +322,6 @@ go-to: coalition_menu
         <td><strong>Change</strong></td>
     </tr>
 
-    <!-- Total Government Votes and Vote Share -->
-    <tr>
-        <td><strong>Total Government Votes:</strong></td>
-        <td colspan="4">[+ government_votes +]%</td>
-    </tr>
-
     <!-- KPP -->
     [? if kpp_in_government :
     <tr>
@@ -448,7 +445,7 @@ go-to: coalition_menu
 
     <!-- National Minorities Section -->
     <tr>
-        <td colspan="3"><strong>National Minorities</strong></td>
+        <td colspan="5"><strong>National Minorities</strong></td>
     </tr>
     <tr>
         <td><strong>Party</strong></td>
@@ -539,18 +536,13 @@ go-to: coalition_menu
     <tr>
         <td colspan="5"><strong>Opposition</strong></td>
     </tr>
+    
     <tr>
         <td><strong>Party</strong></td>
         <td><strong>Seats (Reichstag)</strong></td>
         <td><strong>% of Seats</strong></td>
         <td><strong>% of Votes</strong></td>
         <td><strong>Change</strong></td>
-    </tr>
-
-    <!-- Total Opposition Votes and Vote Share -->
-    <tr>
-        <td><strong>Total Opposition Votes:</strong></td>
-        <td colspan="4">[+ opposition_votes +]%</td>
     </tr>
 
     <!-- KPP (Opposition) -->
