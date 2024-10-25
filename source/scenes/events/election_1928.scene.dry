@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Sejm Elections
 new-page: true
 tags: event
 priority: -1
@@ -35,7 +35,7 @@ Let us hope this does not backfire.
 
 @post_election_1928
 on-arrival: {!
-// Set the total number of seats in the Reichstag (example: 444 total seats)
+// Set the total number of seats in the Sejm (example: 444 total seats)
 var total_seats = 444; 
 
 // Initialize storage for party quotients and seat allocation
@@ -83,7 +83,7 @@ for (var i = 0; i < total_seats; i++) {
     seat_allocation[winning_party] += 1;  // Assign a seat to this party
 }
 
-// Step 5: Assign final seat counts to the _r variable for each party (Reichstag seats)
+// Step 5: Assign final seat counts to the _r variable for each party (Sejm seats)
 for (var party of Q.parties) {
     Q['old_' + party + '_r'] = Q[party + '_r'] || 0;  // Save old seat allocation for comparison
     Q[party + '_r'] = seat_allocation[party];  // Store the final seat allocation in _r
@@ -316,7 +316,7 @@ go-to: coalition_menu
     </tr>
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>Seats (Reichstag)</strong></td>
+        <td><strong>Seats (Sejm)</strong></td>
         <td><strong>% of Seats</strong></td>
         <td><strong>% of Votes</strong></td>
         <td><strong>Change</strong></td>
@@ -449,7 +449,7 @@ go-to: coalition_menu
     </tr>
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>Seats (Reichstag)</strong></td>
+        <td><strong>Seats (Sejm)</strong></td>
         <td><strong>% of Seats</strong></td>
         <td><strong>% of Votes</strong></td>
         <td><strong>Change</strong></td>
@@ -536,10 +536,10 @@ go-to: coalition_menu
     <tr>
         <td colspan="5"><strong>Opposition</strong></td>
     </tr>
-    
+
     <tr>
         <td><strong>Party</strong></td>
-        <td><strong>Seats (Reichstag)</strong></td>
+        <td><strong>Seats (Sejm)</strong></td>
         <td><strong>% of Seats</strong></td>
         <td><strong>% of Votes</strong></td>
         <td><strong>Change</strong></td>
