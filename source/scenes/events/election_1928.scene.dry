@@ -92,6 +92,9 @@ for (var party of Q.parties) {
     Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];  // Calculate seat change
     var sign = Q['change_' + party + '_r'] > 0 ? '+' : '';
     Q['str_change_' + party] = sign + Q['change_' + party + '_r'];  // Store the string change for display
+
+    // Step 7: Calculate and store the percentage of seats for each party
+    Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
 }
 
 // get change arrows and signs
