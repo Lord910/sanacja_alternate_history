@@ -168,7 +168,6 @@ on-arrival: {!
             Q[party + '_seat_percentage'] = 0;  // Set to zero if total_seats is zero to avoid NaN
         }
     }
-}
 
 // get change arrows and signs
 
