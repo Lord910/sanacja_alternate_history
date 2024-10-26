@@ -121,48 +121,32 @@ on-arrival: {!
         }
     }
 
-    // Step 2: Apply modified D'Hondt method to calculate quotients for each party that passes the adjusted threshold
+    // Step 2: Calculate the total number of seats each party should receive proportionally
     for (var party of Q.parties) {
         var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
 
         // Only include parties that pass the threshold in seat allocation calculations
         if ((Q[party + '_threshold_passed'] || !jewish_parties.includes(party)) && party_votes > 0) {
-            // Boost BBWR quotient by 20% to reflect state-backed influence
-            var quotient_boost = (party === 'bbwr') ? 1.2 : 1.0;
-
-            // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
-            for (var i = 1; i <= total_seats; i++) {
-                var quotient = (party_votes / i) * quotient_boost;  // Calculate boosted quotient
-                party_quotients.push({ party: party, quotient: quotient });  // Store party and quotient
-            }
+            // Calculate the proportion of total seats for each party
+            var proportion = party_votes / total_votes;
+            var seats = Math.round(proportion * total_seats);
+            seat_allocation[party] = seats;
+        } else {
+            seat_allocation[party] = 0;  // Parties that do not pass the threshold get zero seats
         }
     }
 
-    // Step 3: Sort quotients in descending order (highest quotients first)
-    party_quotients.sort(function(a, b) {
-        if (b.quotient === a.quotient) {
-            return a.party === 'bbwr' ? -1 : 1;  // Favor BBWR in case of ties
-        }
-        return b.quotient - a.quotient;  // Sort from highest to lowest
-    });
-
-    // Step 4: Allocate seats based on the highest quotients
-    for (var i = 0; i < total_seats; i++) {
-        var winning_party = party_quotients[i].party;  // Find the party with the highest remaining quotient
-        seat_allocation[winning_party] += 1;  // Assign a seat to this party
-    }
-
-    // Step 5: Assign final seat counts to the _r variable for each party (Sejm seats)
+    // Step 3: Assign final seat counts to the _r variable for each party (Sejm seats)
     for (var party of Q.parties) {
         Q['old_' + party + '_r'] = Q[party + '_r'] || 0;  // Save old seat allocation for comparison
         Q[party + '_r'] = seat_allocation[party];  // Store the final seat allocation in _r
 
-        // Step 6: Calculate the change in seats (compared to old results)
+        // Step 4: Calculate the change in seats (compared to old results)
         Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];  // Calculate seat change
         var sign = Q['change_' + party + '_r'] > 0 ? '+' : '';
         Q['str_change_' + party] = sign + Q['change_' + party + '_r'];  // Store the string change for display
 
-        // Step 7: Calculate and store the percentage of seats for each party
+        // Step 5: Calculate and store the percentage of seats for each party
         if (total_seats > 0) {  // Ensure we are not dividing by zero
             Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
         } else {
