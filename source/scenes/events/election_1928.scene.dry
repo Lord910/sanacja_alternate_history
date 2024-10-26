@@ -130,6 +130,9 @@ on-arrival: {!
             // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
             for (var i = 1; i <= total_seats; i++) {
                 var quotient = party_votes / i;  // Calculate quotient
+                if (jewish_parties.includes(party)) {
+                    quotient /= 2;  // Jewish parties get half of the quotients they would normally get
+                }
                 party_quotients.push({ party: party, quotient: quotient });  // Store party and quotient
             }
         }
