@@ -35,7 +35,7 @@ Let us hope this does not backfire.
 
 @post_election_1928
 on-arrival: {!
-    // Set the total number of seats in the Sejm (example: 444 total seats)
+    // Set the total number of seats in the Reichstag (example: 444 total seats)
     var total_seats = 444; 
 
     // Initialize storage for party quotients and seat allocation
@@ -65,15 +65,15 @@ on-arrival: {!
         seat_allocation[party] = 0;
     }
 
-    // Step 1.1: Calculate the vote percentage for each party based on total_votes (before fraud)
+    // Step 1.1: Calculate the vote percentage for each party based on total_votes
     if (total_votes > 0) {  // Avoid division by zero
         for (var party of Q.parties) {
-            Q[party + '_vote_percentage_before_fraud'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;
+            Q[party + '_vote_percentage'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;
         }
     } else {
         // If total_votes is zero, set each party's vote percentage to zero
         for (var party of Q.parties) {
-            Q[party + '_vote_percentage_before_fraud'] = 0;
+            Q[party + '_vote_percentage'] = 0;
         }
     }
 
@@ -84,10 +84,10 @@ on-arrival: {!
     var fraud_votes = 0;  // Total fraud votes to transfer to BBWR
 
     // Ensure Q.election_fraud is defined and set its default if not
-    Q.election_fraud = Q.election_fraud || 0.2;  // Default fraud level to 20% if not set
+    Q.election_fraud = Q.election_fraud || 0.1;  // Default fraud level to 10% if not set
 
     // Explicitly define minority parties by name
-    var minority_parties = ['undo_center', 'undo_right', 'belarusians', 'german_right'];
+    var minority_parties = ['undo_center', 'undo_right', 'belarusian_left', 'belarusian_right'];
 
     // Calculate fraud adjustment by summing votes from each minority party
     for (var party of minority_parties) {
@@ -109,30 +109,15 @@ on-arrival: {!
         }
     }
 
-    // Step 1.7: Calculate the vote percentage for each party based on total_votes (after fraud)
-    if (total_votes > 0) {  // Avoid division by zero
-        for (var party of Q.parties) {
-            Q[party + '_vote_percentage'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;
-        }
-    } else {
-        // If total_votes is zero, set each party's vote percentage to zero
-        for (var party of Q.parties) {
-            Q[party + '_vote_percentage'] = 0;
-        }
-    }
-
-    // Step 2: Apply modified D'Hondt method to calculate quotients for each party that passes the adjusted threshold
+    // Step 2: Apply D'Hondt method to calculate quotients for each party that passes the adjusted threshold
     for (var party of Q.parties) {
         var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
 
         // Only include parties that pass the threshold in seat allocation calculations
         if ((Q[party + '_threshold_passed'] || !jewish_parties.includes(party)) && party_votes > 0) {
-            // Boost BBWR quotient by 20% to reflect state-backed influence
-            var quotient_boost = (party === 'bbwr') ? 1.2 : 1.0;
-
             // Calculate quotients for each divisor (1, 2, 3, ..., total seats)
             for (var i = 1; i <= total_seats; i++) {
-                var quotient = (party_votes / i) * quotient_boost;  // Calculate boosted quotient
+                var quotient = party_votes / i;  // Calculate quotient
                 party_quotients.push({ party: party, quotient: quotient });  // Store party and quotient
             }
         }
@@ -140,9 +125,6 @@ on-arrival: {!
 
     // Step 3: Sort quotients in descending order (highest quotients first)
     party_quotients.sort(function(a, b) {
-        if (b.quotient === a.quotient) {
-            return a.party === 'bbwr' ? -1 : 1;  // Favor BBWR in case of ties
-        }
         return b.quotient - a.quotient;  // Sort from highest to lowest
     });
 
@@ -152,7 +134,7 @@ on-arrival: {!
         seat_allocation[winning_party] += 1;  // Assign a seat to this party
     }
 
-    // Step 5: Assign final seat counts to the _r variable for each party (Sejm seats)
+    // Step 5: Assign final seat counts to the _r variable for each party (Reichstag seats)
     for (var party of Q.parties) {
         Q['old_' + party + '_r'] = Q[party + '_r'] || 0;  // Save old seat allocation for comparison
         Q[party + '_r'] = seat_allocation[party];  // Store the final seat allocation in _r
