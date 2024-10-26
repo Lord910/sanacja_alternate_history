@@ -109,6 +109,18 @@ on-arrival: {!
         }
     }
 
+    // Step 1.7: Recalculate the vote percentage for each party after fraud adjustment
+    if (total_votes > 0) {  // Avoid division by zero
+        for (var party of Q.parties) {
+            Q[party + '_vote_percentage'] = Math.round((Q[party + '_national_votes'] / total_votes) * 1000) / 10;
+        }
+    } else {
+        // If total_votes is zero, set each party's vote percentage to zero
+        for (var party of Q.parties) {
+            Q[party + '_vote_percentage'] = 0;
+        }
+    }
+
     // Step 2: Apply D'Hondt method to calculate quotients for each party that passes the adjusted threshold
     for (var party of Q.parties) {
         var party_votes = Q[party + '_national_votes'];  // Get national votes for this party
@@ -481,7 +493,7 @@ go-to: coalition_menu
     <!-- SN -->
     [? if sn_in_government and sn_r > 0 :
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> SN:</td>
+        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
         <td> [+ sn_r +] </td>
         <td> [+ sn_seat_percentage +]% </td>
         <td> [+ sn_vote_percentage +]% </td>
@@ -726,7 +738,7 @@ go-to: coalition_menu
     <!-- SN (Opposition) -->
     [? if not sn_in_government and sn_r > 0 :
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> SN:</td>
+        <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> [+ sn_party_name +]:</td>
         <td> [+ sn_r +] </td>
         <td> [+ sn_seat_percentage +]% </td>
         <td> [+ sn_vote_percentage +]% </td>
