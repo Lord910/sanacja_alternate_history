@@ -146,23 +146,29 @@ on-arrival: {!
         seat_allocation[winning_party] += 1;  // Assign a seat to this party
     }
 
-    // Step 5: Assign final seat counts to the _r variable for each party (Reichstag seats)
+    // Step 5: Adjust seat allocation for Jewish parties to half of what they would normally get
+    for (var party of jewish_parties) {
+        seat_allocation[party] = Math.floor(seat_allocation[party] / 2);  // Halve the seat allocation
+    }
+
+    // Step 6: Assign final seat counts to the _r variable for each party (Reichstag seats)
     for (var party of Q.parties) {
         Q['old_' + party + '_r'] = Q[party + '_r'] || 0;  // Save old seat allocation for comparison
         Q[party + '_r'] = seat_allocation[party];  // Store the final seat allocation in _r
 
-        // Step 6: Calculate the change in seats (compared to old results)
+        // Step 7: Calculate the change in seats (compared to old results)
         Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];  // Calculate seat change
         var sign = Q['change_' + party + '_r'] > 0 ? '+' : '';
         Q['str_change_' + party] = sign + Q['change_' + party + '_r'];  // Store the string change for display
 
-        // Step 7: Calculate and store the percentage of seats for each party
+        // Step 8: Calculate and store the percentage of seats for each party
         if (total_seats > 0) {  // Ensure we are not dividing by zero
             Q[party + '_seat_percentage'] = Math.round((Q[party + '_r'] / total_seats) * 1000) / 10;  // Rounded to 1 decimal
         } else {
             Q[party + '_seat_percentage'] = 0;  // Set to zero if total_seats is zero to avoid NaN
         }
     }
+}
 
 // get change arrows and signs
 
