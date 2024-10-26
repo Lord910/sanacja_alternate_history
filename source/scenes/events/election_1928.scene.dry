@@ -532,7 +532,7 @@ go-to: coalition_menu
 
     <!-- Total -->
     <tr>
-        <td style="text-align: left;"><div class="box" style='background-color:##FFD700'></div> Total :</td>
+        <td style="text-align: left;"><div class="box" style='background-color:#FFD700'></div> Total :</td>
         <td> [+ minorities_r_sum  +] </td>
         <td> [+ minorities_seat_percentage +]% </td>
         <td> [+ minorities_vote_percentage +]% </td>
