@@ -715,6 +715,7 @@ if (d3 && window) {
         record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
     });
 
+    // Combine party support records for minorities
     Q.party_support_records.forEach(record => {
         record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
     });
@@ -732,7 +733,7 @@ if (d3 && window) {
 
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
-        var lines_2 = d3.linegraph(true, false,
+        var lines_2 = d3.linegraph(true, true,
             combinedParties,
             combinedPartyColors,
             combinedPartyNames
