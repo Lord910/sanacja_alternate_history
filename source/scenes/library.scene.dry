@@ -715,12 +715,10 @@ if (d3 && window) {
         record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
     });
 
-    // Combine party support records for minorities with mock data for testing
-    var mockData = [
-        { date: '2020-01-01', minorities: 5 },
-        { date: '2020-02-01', minorities: 10 },
-        { date: '2020-03-01', minorities: 15 }
-    ];
+    // Combine party support records for minorities
+    Q.party_support_records.forEach(record => {
+        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
+    });
 
     // Filter out parties with election records equal to 0
     var filteredParties = combinedParties.filter(party => Q.election_records.some(record => record[party] !== 0));
@@ -736,7 +734,7 @@ if (d3 && window) {
     // Ensure 'minorities' is included in the filtered support parties
     var filteredSupportParties = ['minorities'];
 
-    // Use mockData instead of Q.party_support_records to test the line visibility for "minorities"
+    // party support records should not have so many ticks
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             filteredSupportParties,
@@ -744,7 +742,7 @@ if (d3 && window) {
             combinedPartyNames
         );
         lines_2.width(width).height(400);
-        d3.select("#party_support_history").datum(mockData).call(lines_2);  // Use mockData here
+        d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
 
     // economic stats
