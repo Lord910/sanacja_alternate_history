@@ -776,9 +776,9 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-BBWR Majority (BBWR): [+ bbwr_majority +]%
+[? if bbwr_seat_percentage >= 50 : BBWR Majority (BBWR): [+ bbwr_seat_percentage +]% ?]
 
-BBWR Minority (BBWR): [+ bbwr_minority +]%
+[? if not bbwr_seat_percentage >= 50 : BBWR Minority (BBWR): [+ bbwr_seat_percentage +]% ?]
 
 [? if patriotic_left_coalition >= 50 : Patriotic Left Coalition (BBWR + PPS + SCh + PSL-W): [+ patriotic_left_coalition +]% ?]
 
