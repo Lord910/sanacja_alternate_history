@@ -717,9 +717,9 @@ if (d3 && window) {
 
     // Combine party support records for minorities with mock data for testing
     var mockData = [
-        { date: '2020-01-01', minorities: 5 },
-        { date: '2020-02-01', minorities: 10 },
-        { date: '2020-03-01', minorities: 15 }
+        { date: new Date('2020-01-01'), minorities: 5 },
+        { date: new Date('2020-02-01'), minorities: 10 },
+        { date: new Date('2020-03-01'), minorities: 15 }
     ];
 
     // Filter out parties with election records equal to 0
