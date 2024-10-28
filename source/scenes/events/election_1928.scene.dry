@@ -180,16 +180,16 @@ if (Q.kpp_r >= Q.bbwr_r && Q.kpp_r >= Q.owp_r) {
 }
 
 // coalitions
-Q.bbwr_majority = Q.bbwr_r;
-Q.bbwr_minority = Q.bbwr_r;
-Q.patriotic_left_coalition = Q.bbwr_r + Q.pps_r + Q.sch_r + Q.pslw_r;
-Q.democratic_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r;
-Q.centre_left_coalition = Q.pps_r + Q.sch_r + Q.pslw_r + Q.npr_r + Q.pschd_r + Q.pslp_r;
-Q.centre_right_coalition = Q.npr_r + Q.pschd_r + Q.pslp_r + Q.sn_r;
-Q.right_coalition =  Q.pschd_r + Q.pslp_r + Q.sn_r + Q.owp_r;
-Q.far_right_coalition = Q.sn_r + Q.owp_r;
-Q.left_coalition = Q.pps_r + Q.sch_r + Q.kpp_r;
-Q.popular_front_coalition = Q.pps_r + Q.sch_r + Q.pslw_r + Q.kpp_r;
+Q.bbwr_majority = Q.bbwr_seat_percentage;
+Q.bbwr_minority = Q.bbwr_seat_percentage;
+Q.patriotic_left_coalition = Q.bbwr_seat_percentage + Q.pps_seat_percentage + Q.sch_seat_percentage + Q.pslw_seat_percentage;
+Q.democratic_left_coalition = Q.pps_seat_percentage + Q.sch_seat_percentage + Q.pslw_seat_percentage;
+Q.centre_left_coalition = Q.pps_seat_percentage + Q.sch_seat_percentage + Q.pslw_seat_percentage + Q.npr_seat_percentage + Q.pschd_seat_percentage + Q.pslp_seat_percentage;
+Q.centre_seat_percentageight_coalition = Q.npr_seat_percentage + Q.pschd_seat_percentage + Q.pslp_seat_percentage + Q.sn_seat_percentage;
+Q.right_coalition =  Q.pschd_seat_percentage + Q.pslp_seat_percentage + Q.sn_seat_percentage + Q.owp_seat_percentage;
+Q.far_seat_percentageight_coalition = Q.sn_seat_percentage + Q.owp_seat_percentage;
+Q.left_coalition = Q.pps_seat_percentage + Q.sch_seat_percentage + Q.kpp_seat_percentage;
+Q.popular_front_coalition = Q.pps_seat_percentage + Q.sch_seat_percentage + Q.pslw_seat_percentage + Q.kpp_seat_percentage;
 
 // this is an absurd concept lol
 Q.anti_democratic_coalition = Q.sn_r + Q.owp_r + Q.kpp_r;
