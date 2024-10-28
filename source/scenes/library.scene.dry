@@ -694,7 +694,7 @@ if (d3 && window) {
     // Combine parties into one for both Q.election_records and Q.party_support_records
     var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
     var combinedPartyNames = {
-        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'minorities': 'Minorities'
+        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': Q.sn_party_name, 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'minorities': 'Minorities'
     };
     var combinedPartyColors = {
         'bbwr': '#808080', // gray
@@ -709,6 +709,15 @@ if (d3 && window) {
         'sch': '#556B2F', // dark olive green
         'minorities': '#FFD700' // gold
     };
+
+    // Combine election records and party support records for minorities
+    Q.election_records.forEach(record => {
+        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
+    });
+
+    Q.party_support_records.forEach(record => {
+        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
+    });
 
     // Filter out parties with election records equal to 0
     var filteredParties = combinedParties.filter(party => Q.election_records.some(record => record[party] !== 0));
