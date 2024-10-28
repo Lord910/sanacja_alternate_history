@@ -351,67 +351,67 @@ Q.kpp_speaker_votes = 0;
 Q.empty_speaker_votes = 0;
 
 // initial phase:
-Q.pps_speaker_votes += Q.pps_r;
-Q.sn_speaker_votes += Q.sn_r;
-Q.sn_speaker_votes += Q.owp_r;
-Q.kpp_speaker_votes += Q.kpp_r;
-Q.minorities_speaker_votes += Q.other_r;
+Q.pps_speaker_votes += Q.pps_seat_percentage;
+Q.sn_speaker_votes += Q.sn_seat_percentage;
+Q.sn_speaker_votes += Q.owp_seat_percentage;
+Q.kpp_speaker_votes += Q.kpp_seat_percentage;
+Q.minorities_speaker_votes += Q.other_seat_percentage;
 
 if (Q.bbwr_speaker_campaign) {
-    Q.bbwr_speaker_votes += Q.bbwr_r;
+    Q.bbwr_speaker_votes += Q.bbwr_seat_percentage;
     if (Q.bbwr_support_pps) {
-        Q.bbwr_speaker_votes -= Q.bbwr_r;
-        Q.pps_speaker_votes += Q.bbwr_r;
-        Q.pps_speaker_votes += Q.pslw_r;
-        Q.pps_speaker_votes += Q.sch_r;
-        Q.minorities_speaker_votes -= Q.other_r;
-        Q.pps_speaker_votes += Q.other_r;
-        Q.sn_speaker_votes += Q.pschd_r;
-        Q.sn_speaker_votes += Q.npr_r;
-        Q.sn_speaker_votes += Q.pslp_r;
+        Q.bbwr_speaker_votes -= Q.bbwr_seat_percentage;
+        Q.pps_speaker_votes += Q.bbwr_seat_percentage;
+        Q.pps_speaker_votes += Q.pslw_seat_percentage;
+        Q.pps_speaker_votes += Q.sch_seat_percentage;
+        Q.minorities_speaker_votes -= Q.other_seat_percentage;
+        Q.pps_speaker_votes += Q.other_seat_percentage;
+        Q.sn_speaker_votes += Q.pschd_seat_percentage;
+        Q.sn_speaker_votes += Q.npr_seat_percentage;
+        Q.sn_speaker_votes += Q.pslp_seat_percentage;
     } else if (Q.pps_support_bbwr) {
-        Q.pps_speaker_votes -= Q.pps_r;
-        Q.bbwr_speaker_votes += Q.pps_r;
-        Q.bbwr_speaker_votes += Q.pslw_r;
-        Q.bbwr_speaker_votes += Q.sch_r;
-        Q.minorities_speaker_votes -= Q.other_r;
-        Q.bbwr_speaker_votes += Q.other_r;
-        Q.sn_speaker_votes += Q.pschd_r;
-        Q.sn_speaker_votes += Q.npr_r;
-        Q.sn_speaker_votes += Q.pslp_r;
+        Q.pps_speaker_votes -= Q.pps_seat_percentage;
+        Q.bbwr_speaker_votes += Q.pps_seat_percentage;
+        Q.bbwr_speaker_votes += Q.pslw_seat_percentage;
+        Q.bbwr_speaker_votes += Q.sch_seat_percentage;
+        Q.minorities_speaker_votes -= Q.other_seat_percentage;
+        Q.bbwr_speaker_votes += Q.other_seat_percentage;
+        Q.sn_speaker_votes += Q.pschd_seat_percentage;
+        Q.sn_speaker_votes += Q.npr_seat_percentage;
+        Q.sn_speaker_votes += Q.pslp_seat_percentage;
     } else {
         if (Q.sch_support_bbwr) {
-            Q.bbwr_speaker_votes += Q.sch_r;
+            Q.bbwr_speaker_votes += Q.sch_seat_percentage;
         } else {
-            Q.pps_speaker_votes += Q.sch_r;
+            Q.pps_speaker_votes += Q.sch_seat_percentage;
         }
         if (Q.pslw_support_bbwr) {
-            Q.bbwr_speaker_votes += Q.pslw_r;
+            Q.bbwr_speaker_votes += Q.pslw_seat_percentage;
         } else {
-            Q.pps_speaker_votes += Q.pslw_r;
+            Q.pps_speaker_votes += Q.pslw_seat_percentage;
         }
         if (Q.other_support_bbwr) {
-            Q.minorities_speaker_votes -= Q.other_r;
-            Q.bbwr_speaker_votes += Q.other_r;
+            Q.minorities_speaker_votes -= Q.other_seat_percentage;
+            Q.bbwr_speaker_votes += Q.other_seat_percentage;
         } else if (Q.other_support_pps) {
-            Q.minorities_speaker_votes -= Q.other_r;
-            Q.pps_speaker_votes += Q.other_r;
+            Q.minorities_speaker_votes -= Q.other_seat_percentage;
+            Q.pps_speaker_votes += Q.other_seat_percentage;
         } else {
         }
         if (Q.npr_support_bbwr) {
-            Q.bbwr_speaker_votes += Q.npr_r;
+            Q.bbwr_speaker_votes += Q.npr_seat_percentage;
         } else {
-            Q.empty_speaker_votes += Q.npr_r;
+            Q.empty_speaker_votes += Q.npr_seat_percentage;
         }
         if (Q.pschd_support_bbwr) {
-            Q.bbwr_speaker_votes += Q.pschd_r;
+            Q.bbwr_speaker_votes += Q.pschd_seat_percentage;
         } else {
-            Q.empty_speaker_votes += Q.pschd_r;
+            Q.empty_speaker_votes += Q.pschd_seat_percentage;
         }
         if (Q.pslp_support_bbwr) {
-            Q.bbwr_speaker_votes += Q.pslp_r;
+            Q.bbwr_speaker_votes += Q.pslp_seat_percentage;
         } else {
-            Q.empty_speaker_votes += Q.pslp_r;
+            Q.empty_speaker_votes += Q.pslp_seat_percentage;
         }
     }
 }
