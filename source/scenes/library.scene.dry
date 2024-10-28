@@ -691,27 +691,32 @@ if (d3 && window) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
 
+    // Combine parties into one for both Q.election_records and Q.party_support_records
+    var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
+    var combinedPartyNames = {
+        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'minorities': 'Minorities'
+    };
+    var combinedPartyColors = {
+        'bbwr': '#808080', // gray
+        'kpp': '#AF0000', // dark red
+        'pslw': '#179900', // bright green
+        'pschd': '#1E90FF', // dodger blue
+        'pslp': '#3A6538', // dark green
+        'sn': '#0000CD', // dark blue
+        'owp': '#954B00', // brown
+        'pps': '#CC0000', // red
+        'npr': '#841839', // reddish
+        'sch': '#556B2F', // dark olive green
+        'minorities': '#FFD700' // gold
+    };
+
     // Filter out parties with election records equal to 0
-    var filteredParties = Q.parties.filter(party => Q.election_records.some(record => record[party] !== 0));
+    var filteredParties = combinedParties.filter(party => Q.election_records.some(record => record[party] !== 0));
 
     var lines = d3.linegraph(false, false,
             filteredParties,
-            {
-                'kpp': '#AF0000', // dark red
-                'pps': '#CC0000', // red
-                'sch': '#556B2F', // dark olive green
-                'pslw': '#179900', // bright green
-                'other': '#FFD700', // gold
-                'bbwr': '#808080', // gray
-                'npr': '#841839', // redish
-                'pschd': '#1E90FF', // dodger blue
-                'pslp': '#3A6538', // dark green
-                'sn': '#0000CD', // dark blue
-                'owp': '#954B00' // brown
-            },
-            {
-                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
-            }
+            combinedPartyColors,
+            combinedPartyNames
     );
     lines.width(width).height(400);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -719,23 +724,9 @@ if (d3 && window) {
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
-            Q.parties,
-            {
-                'kpp': '#AF0000', // dark red
-                'pps': '#CC0000', // red
-                'sch': '#556B2F', // dark olive green
-                'pslw': '#179900', // bright green
-                'other': '#FFD700', // gold
-                'bbwr': '#808080', // gray
-                'npr': '#841839', // redish
-                'pschd': '#1E90FF', // dodger blue
-                'pslp': '#3A6538', // dark green
-                'sn': '#0000CD', // dark blue
-                'owp': '#954B00' // brown
-            },
-            {
-                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': '[+ sn_party_name +]', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
-            }
+            combinedParties,
+            combinedPartyColors,
+            combinedPartyNames
         );
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
