@@ -260,7 +260,7 @@ Q.minorities_vote_percentage = Q.undo_vote_percentage + Q.belarusians_vote_perce
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
-    election_result[party] = Q[party + '_r'];
+    election_result[party] = Q[party + '_seat_percentage'];
 }
 Q.election_records.push(election_result);
 
