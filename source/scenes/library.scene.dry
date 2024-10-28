@@ -691,8 +691,11 @@ if (d3 && window) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
 
+    // Filter out parties with election records equal to 0
+    var filteredParties = Q.parties.filter(party => Q.election_records.some(record => record[party] !== 0));
+
     var lines = d3.linegraph(false, false,
-            Q.parties,
+            filteredParties,
             {
                 'kpp': '#AF0000', // dark red
                 'pps': '#CC0000', // red
@@ -707,7 +710,7 @@ if (d3 && window) {
                 'owp': '#954B00' // brown
             },
             {
-                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD + NPR', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
+                'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': 'sn_party_name', 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'sl': 'SL'
             }
     );
     lines.width(width).height(400);
