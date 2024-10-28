@@ -732,7 +732,7 @@ if (d3 && window) {
 
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
-        var lines_2 = d3.linegraph(true, true,
+        var lines_2 = d3.linegraph(true, false,
             combinedParties,
             combinedPartyColors,
             combinedPartyNames
