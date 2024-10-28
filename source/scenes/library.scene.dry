@@ -731,8 +731,8 @@ if (d3 && window) {
     lines.width(width).height(400);
     d3.select("#election_history").datum(Q.election_records).call(lines);
 
-    // Ensure 'minorities' is included in the filtered support parties
-    var filteredSupportParties = combinedParties.filter(party => party === 'minorities' || Q.party_support_records.some(record => record[party] !== 0));
+    // Filter out parties with party support records equal to 0
+    var filteredSupportParties = combinedParties.filter(party => Q.party_support_records.some(record => record[party] !== 0));
 
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
