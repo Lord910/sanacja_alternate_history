@@ -813,8 +813,8 @@ if (d3 && window) {
             .names(electionNames)
             .fields(['votes'])  // Specify the 'votes' field for parties
         );
-
-
+    }
+!}
 
 = Sejm composition
 
