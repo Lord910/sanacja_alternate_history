@@ -498,6 +498,22 @@ Q.germans_jewish_left = 0;
 Q.germans_belarusian_left = 0;
 Q.germans_belarusian_right = 0;
 
+
+Q.undo_sum = Q.undo_center_r + Q.undo_right_r;
+Q.str_change_undo_sum = parseFloat(Q.str_change_undo_center) + parseFloat(Q.str_change_undo_right);
+Q.undo_vote_percentage = Q.undo_center_vote_percentage + Q.undo_right_vote_percentage;
+Q.undo_seat_percentage = Q.undo_center_seat_percentage + Q.undo_right_seat_percentage;
+
+Q.belarusians_sum = Q.belarusian_left_r + Q.belarusian_right_r;
+Q.str_change_belarusian_sum = parseFloat(Q.str_change_belarusian_left) + parseFloat(Q.str_change_belarusian_right);
+Q.belarusians_vote_percentage = Q.belarusian_left_vote_percentage + Q.belarusian_right_vote_percentage;
+Q.belarusians_seat_percentage = Q.belarusian_left_seat_percentage + Q.belarusian_right_seat_percentage;
+
+Q.minorities_r_sum = Q.undo_center_r + Q.undo_right_r + Q.belarusian_left_r + Q.belarusian_right_r + Q.jewish_nationalists_r + Q.jewish_conservatives_r + Q.jewish_left_r + Q.german_left_r + Q.german_right_r + Q.solrad_r + Q.selrob_r;
+Q.str_change_minorities_sum = parseFloat(Q.str_change_undo_center) + parseFloat(Q.str_change_undo_right) + parseFloat(Q.str_change_belarusian_left_r) + parseFloat(Q.str_change_belarusian_right_r) + parseFloat(Q.str_change_jewish_nationalists_r) + parseFloat(Q.str_change_jewish_conservatives_r) + parseFloat(Q.str_change_jewish_left_r) + parseFloat(Q.str_change_german_left_r) + parseFloat(Q.str_change_german_right_r) + parseFloat(Q.str_change_solrad_r) + parseFloat(Q.str_change_selrob_r);
+Q.minorities_seat_percentage = Q.undo_seat_percentage + Q.belarusians_seat_percentage + Q.jewish_nationalists_seat_percentage + Q.jewish_conservatives_seat_percentage + Q.jewish_left_seat_percentage + Q.german_left_seat_percentage + Q.german_right_seat_percentage + Q.solrad_seat_percentage + Q.selrob_seat_percentage;
+Q.minorities_vote_percentage = Q.undo_vote_percentage + Q.belarusians_vote_percentage + Q.jewish_nationalists_vote_percentage + Q.jewish_conservatives_vote_percentage + Q.jewish_left_vote_percentage + Q.german_left_vote_percentage + Q.german_right_vote_percentage + Q.solrad_vote_percentage + Q.selrob_vote_percentage;
+
 // Current Sejm composition
 // % of Sejm in Jan 1927
 Q.kpp_r = 6;
@@ -850,21 +866,6 @@ Q.skladkowski_advisor = 0; // Felicjan Sławoj Składkowski
 
 Q.czechowicz_advisor = 1; // Gabriel Czechowicz
 Q.stpiczynski_advisor = 0; // Wojciech Stpiczyński
-
-Q.undo_sum = Q.undo_center_r + Q.undo_right_r;
-Q.str_change_undo_sum = parseFloat(Q.str_change_undo_center) + parseFloat(Q.str_change_undo_right);
-Q.undo_vote_percentage = Q.undo_center_vote_percentage + Q.undo_right_vote_percentage;
-Q.undo_seat_percentage = Q.undo_center_seat_percentage + Q.undo_right_seat_percentage;
-
-Q.belarusians_sum = Q.belarusian_left_r + Q.belarusian_right_r;
-Q.str_change_belarusian_sum = parseFloat(Q.str_change_belarusian_left) + parseFloat(Q.str_change_belarusian_right);
-Q.belarusians_vote_percentage = Q.belarusian_left_vote_percentage + Q.belarusian_right_vote_percentage;
-Q.belarusians_seat_percentage = Q.belarusian_left_seat_percentage + Q.belarusian_right_seat_percentage;
-
-Q.minorities_r_sum = Q.undo_center_r + Q.undo_right_r + Q.belarusian_left_r + Q.belarusian_right_r + Q.jewish_nationalists_r + Q.jewish_conservatives_r + Q.jewish_left_r + Q.german_left_r + Q.german_right_r + Q.solrad_r + Q.selrob_r;
-Q.str_change_minorities_sum = parseFloat(Q.str_change_undo_center) + parseFloat(Q.str_change_undo_right) + parseFloat(Q.str_change_belarusian_left_r) + parseFloat(Q.str_change_belarusian_right_r) + parseFloat(Q.str_change_jewish_nationalists_r) + parseFloat(Q.str_change_jewish_conservatives_r) + parseFloat(Q.str_change_jewish_left_r) + parseFloat(Q.str_change_german_left_r) + parseFloat(Q.str_change_german_right_r) + parseFloat(Q.str_change_solrad_r) + parseFloat(Q.str_change_selrob_r);
-Q.minorities_seat_percentage = Q.undo_seat_percentage + Q.belarusians_seat_percentage + Q.jewish_nationalists_seat_percentage + Q.jewish_conservatives_seat_percentage + Q.jewish_left_seat_percentage + Q.german_left_seat_percentage + Q.german_right_seat_percentage + Q.solrad_seat_percentage + Q.selrob_seat_percentage;
-Q.minorities_vote_percentage = Q.undo_vote_percentage + Q.belarusians_vote_percentage + Q.jewish_nationalists_vote_percentage + Q.jewish_conservatives_vote_percentage + Q.jewish_left_vote_percentage + Q.german_left_vote_percentage + Q.german_right_vote_percentage + Q.solrad_vote_percentage + Q.selrob_vote_percentage;
 
 !}
 set-bg: img/map_2.jpg
