@@ -37,7 +37,6 @@ on-arrival: {!
             .names(electionNames)
             .fields(['votes'])  // Specify the 'votes' field for parties
         );
-    }
 !}
 
 = Status
