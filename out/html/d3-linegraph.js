@@ -69,14 +69,15 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         .scale(xScale);
       }
 
-      // Declare the y (vertical position) scale.
-      if (!dataMax) {
-          const maxBBWR = d3.max(data, d => d.bbwr);
-          const maxOWP = d3.max(data, d => d.owp);
-          dataMax = maxBBWR >= maxOWP ? maxBBWR + 10 : maxOWP + 10;
-          dataMin = 0;
-      }
-      const yScale = d3.scaleLinear([dataMin, dataMax], [height - marginBottom, marginTop]);
+    // Declare the y (vertical position) scale.
+    if (!dataMax) {
+        // Find the maximum value across all parties in the dataset
+        dataMax = d3.max(data, d =>
+            d3.max(parties.map(party => d[party] || 0)) // Get the max value for each party in each record
+        ) + 10; // Add a buffer to ensure some space above the highest value
+        dataMin = 0;
+    }
+    const yScale = d3.scaleLinear([dataMin, dataMax], [height - marginBottom, marginTop]);
 
       //Create the SVG container.
       //const svg = d3.create("svg")

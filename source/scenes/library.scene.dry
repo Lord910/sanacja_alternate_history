@@ -600,7 +600,7 @@ data = [
         "legend": "PPS",
         "name": "PPS",
         "seats": Math.round(Q.pps_r),
-    }
+    },
 ];
 
 if (Q.sl_formed && Q.sl_r) {
@@ -619,7 +619,7 @@ if (!Q.sl_formed || Q.sl_sch_split) {
             "seats": Math.round(Q.sch_r),
         });
 }
-    if (!Q.sl_formed || Q.sl_pslw_split) {
+if (!Q.sl_formed || Q.sl_pslw_split) {
     data.push({
             "id": "pslw",
             "legend": "PSL-W",
@@ -641,7 +641,7 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r),
+        "seats": Math.round(Q.minorities_r_sum),
     },
     {
         "id": "bbwr",
@@ -672,7 +672,7 @@ data = data.concat([
         "legend": "OWP",
         "name": "OWP",
         "seats": Math.round(Q.owp_r),
-    }
+    },
 ]);
 
 if (d3 && window) {
