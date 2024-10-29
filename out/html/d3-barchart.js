@@ -83,11 +83,7 @@ d3.simpleBarchart = function(groups, groupColors, groupNames, dataFields = ['val
                  .attr("y", d => y(d.value))
                  .attr("width", x1.bandwidth())
                  .attr("height", d => chartHeight - y(d.value))
-                // Adjust color assignment in the rect element
-                .attr("fill", d => {
-                    // Use field if it's present in groupColors, otherwise use group
-                    return groupColors[d.field] || groupColors[d.group] || '#000'; // Default to black if no match
-                })
+                 .attr("fill", d => groupColors[d.group] || '#000')  // Use the group key to find the color
                  .on("mouseover", function(event, d) {
                      tooltip.style("visibility", "visible")
                             .text(`${groupNames[d.group]} (${d.field}): ${d.value}`);
