@@ -774,7 +774,7 @@ if (d3 && window) {
     };
 
     // Render factions chart
-    d3.select("#factions_chart")  // Use unique ID for factions chart
+    d3.select("#internal_factions")  // Corrected ID for factions chart
         .datum(factionData)
         .call(d3.simpleBarchart()
             .width(500)
@@ -804,7 +804,7 @@ if (d3 && window) {
     };
 
     // Render election results chart
-    d3.select("#election_chart")  // Use unique ID for election results chart
+    d3.select("#election_chart")  // Corrected ID for election results chart
         .datum(electionData)
         .call(d3.simpleBarchart()
             .width(500)
@@ -813,8 +813,6 @@ if (d3 && window) {
             .names(electionNames)
             .fields(['votes'])  // Specify the 'votes' field for parties
         );
-    }
-!}
 
 
 
