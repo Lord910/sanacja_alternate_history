@@ -9,6 +9,16 @@ if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
 
+// Add the election chart container dynamically
+var qualitiesDiv = document.getElementById('qualities');
+if (qualitiesDiv) {
+    var electionChartDiv = document.createElement('div');
+    electionChartDiv.id = 'election_chart';
+    electionChartDiv.style.width = '500px';
+    electionChartDiv.style.height = '300px';
+    qualitiesDiv.appendChild(electionChartDiv);
+}
+
 // Data setup for election results
 var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
 var electionColors = {
