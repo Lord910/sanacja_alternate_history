@@ -1,8 +1,6 @@
 title: Status
 new-page: true
 is-special: true
-
-// Script to format values on arrival
 on-arrival: {!
     if (Q.bezrobotni) {
         Q.bezrobotni_2 = Q.bezrobotni.toFixed(1);
@@ -11,7 +9,6 @@ on-arrival: {!
         Q.inflation_2 = Q.inflation.toFixed(1);
     }
 !}
-
 on-display: {!
 if (d3 && window) {
     // Set default dimensions for the chart
