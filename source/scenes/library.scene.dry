@@ -752,37 +752,67 @@ if (d3 && window) {
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 
-// bar chart data
-var barData = Q.factions.map(faction => ({
-    group: faction,
-    strength: Q[faction + '_strength'],
-    dissent: Q[faction + '_dissent']
-}));
+    // Data setup for factions
+    var factionData = Q.factions.map(faction => ({
+        group: faction,
+        strength: Q[faction + '_strength'],
+        dissent: Q[faction + '_dissent']
+    }));
 
-var groupColors = {
-    'strength': '#00FF00', // green
-    'dissent': '#FF0000'   // red
-};
+    var factionColors = {
+        'strength': '#00FF00', // green
+        'dissent': '#FF0000'   // red
+    };
 
-var groupNames = {
-    'repairers': 'Repairers',
-    'liberals': 'Liberals',
-    'sanacja_left': 'Sanacja Left',
-    'colonels': 'Colonels',
-    'conservatives': 'Conservatives',
-    'fourth_brigade': 'Fourth Brigade'
-};
+    var factionNames = {
+        'repairers': 'Repairers',
+        'liberals': 'Liberals',
+        'sanacja_left': 'Sanacja Left',
+        'colonels': 'Colonels',
+        'conservatives': 'Conservatives',
+        'fourth_brigade': 'Fourth Brigade'
+    };
 
-d3.select("#internal_factions").datum(barData).call(d3.simpleBarchart().width(500).height(300).colors(groupColors).names(groupNames));
+    // Render factions chart
+    d3.select("#factions_chart")  // Use unique ID for factions chart
+        .datum(factionData)
+        .call(d3.simpleBarchart()
+            .width(500)
+            .height(300)
+            .colors(factionColors)
+            .names(factionNames)
+            .fields(['strength', 'dissent'])  // Specify fields to display as bars
+        );
 
-}
+    // Data setup for election results
+    var lastElectionRecord = Q.election_records[Q.election_records.length - 1];
+    var electionData = combinedParties.map(party => ({
+        group: party,
+        votes: lastElectionRecord[party] || 0
+    }));
 
-Q.government_changed = true;
+    var electionColors = {
+        'bbwr': '#808080', 'kpp': '#AF0000', 'pslw': '#179900', 'pschd': '#1E90FF',
+        'pslp': '#3A6538', 'sn': '#0000CD', 'owp': '#954B00', 'pps': '#CC0000',
+        'npr': '#841839', 'sch': '#556B2F', 'minorities': '#FFD700'
+    };
 
-if (Q.government_changed) {
-    updateVotes();
-    Q.government_changed = false; // Reset the flag
-}
+    var electionNames = {
+        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P',
+        'sn': Q.sn_party_name, 'owp': 'OWP', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh',
+        'minorities': 'Minorities'
+    };
+
+    // Render election results chart
+    d3.select("#election_chart")  // Use unique ID for election results chart
+        .datum(electionData)
+        .call(d3.simpleBarchart()
+            .width(500)
+            .height(300)
+            .colors(electionColors)
+            .names(electionNames)
+            .fields(['votes'])  // Specify the 'votes' field for parties
+        );
 !}
 
 
@@ -1195,5 +1225,9 @@ if (Q.government_changed) {
 
 = Factions 
 
-{!<svg id="internal_factions" style="width: 500px; height: 300px;"> </svg>!}
+<svg id="internal_factions" style="width: 500px; height: 300px;"></svg>
+
+= Election Results
+
+<svg id="election_chart" style="width: 500px; height: 300px;"></svg>
 
