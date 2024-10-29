@@ -600,7 +600,7 @@ data = [
         "legend": "PPS",
         "name": "PPS",
         "seats": Math.round(Q.pps_r),
-    }
+    },
 ];
 
 if (Q.sl_formed && Q.sl_r) {
@@ -619,7 +619,7 @@ if (!Q.sl_formed || Q.sl_sch_split) {
             "seats": Math.round(Q.sch_r),
         });
 }
-    if (!Q.sl_formed || Q.sl_pslw_split) {
+if (!Q.sl_formed || Q.sl_pslw_split) {
     data.push({
             "id": "pslw",
             "legend": "PSL-W",
@@ -641,7 +641,7 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r),
+        "seats": Math.round(Q.minorities_r_sum),
     },
     {
         "id": "bbwr",
@@ -672,7 +672,7 @@ data = data.concat([
         "legend": "OWP",
         "name": "OWP",
         "seats": Math.round(Q.owp_r),
-    }
+    },
 ]);
 
 if (d3 && window) {
@@ -694,7 +694,8 @@ if (d3 && window) {
     // Combine parties into one for both Q.election_records and Q.party_support_records
     var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
     var combinedPartyNames = {
-        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': Q.sn_party_name, 'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'minorities': 'Minorities'
+        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P', 'sn': Q.sn_party_name, 
+        'owp': 'OWP', 'other': 'Others', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh', 'minorities': 'Minorities'
     };
     var combinedPartyColors = {
         'bbwr': '#808080', // gray
@@ -710,14 +711,25 @@ if (d3 && window) {
         'minorities': '#FFD700' // gold
     };
 
+    // Calculate the y-axis max value (globalDataMax) across all parties in `party_support_records`
+    var globalDataMax = d3.max(Q.party_support_records, record =>
+        d3.max(combinedParties.map(party => record[party] || 0))
+    );
+
+    // Add a small padding to the max value for better visualization
+    globalDataMax *= 1.1;
+
     // Combine election records and party support records for minorities
     Q.election_records.forEach(record => {
-        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
+        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right +
+                            record.belarusian_left + record.belarusian_right + record.jewish_nationalists + 
+                            record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
     });
 
-    // Combine party support records for minorities
     Q.party_support_records.forEach(record => {
-        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right + record.belarusian_left + record.belarusian_right + record.jewish_nationalists + record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
+        record.minorities = record.selrob + record.solrad + record.undo_center + record.undo_right +
+                            record.belarusian_left + record.belarusian_right + record.jewish_nationalists + 
+                            record.jewish_left + record.jewish_conservatives + record.german_left + record.german_right;
     });
 
     // Filter out parties with election records equal to 0
@@ -731,17 +743,18 @@ if (d3 && window) {
     lines.width(width).height(400);
     d3.select("#election_history").datum(Q.election_records).call(lines);
 
-    // party support records should not have so many ticks
+    // Ensure 'minorities' is included in the filtered support parties
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             combinedParties,
             combinedPartyColors,
-            combinedPartyNames
+            combinedPartyNames,
+            globalDataMax // Pass globalDataMax to adjust y-axis scale
         );
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
-
+    
     // economic stats
     var minInflation = d3.min(Q.economic_records, d => d.inflation);
     var maxUnemployment = d3.max(Q.economic_records, d => d.unemployment);
