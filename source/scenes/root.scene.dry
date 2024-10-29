@@ -661,11 +661,11 @@ Q.sanacja_left_dominance = 0;
 Q.colonels_dominance = 0;
 Q.conservatives_dominance = 0;
 // is any of the faction sidelined from the government?
-Q.repairers_sidelined = 0
-Q.liberals_sidelined = 0
-Q.sanacja_left_sidelined = 0
-Q.colonels_sidelined = 0
-Q.conservatives_sidelined = 0
+Q.repairers_sidelined = 0;
+Q.liberals_sidelined = 0;
+Q.sanacja_left_sidelined = 0;
+Q.colonels_sidelined = 0;
+Q.conservatives_sidelined = 0;
 
 
 
@@ -676,8 +676,8 @@ Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
 Q.unemployment_insurance_seen = 0;
 Q.blutmai = 0;
-speaker_election_1928_seen = 0
-speaker_election_1928_time = 0
+speaker_election_1928_seen = 0;
+speaker_election_1928_time = 0;
 
 
 // have we reformed these institutions to be more democratic?
