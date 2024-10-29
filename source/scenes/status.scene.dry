@@ -1,29 +1,37 @@
 title: Status
 new-page: true
 is-special: true
+
+// Script to format values on arrival
 on-arrival: {!
-if (d3 && window) {
-    // Set default dimensions
-    var width = 500;
-    var height = 300;
-
-    // Responsive width adjustment based on screen width
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50;
-    }
-
-    // Format inflation and unemployment values if they exist
     if (Q.bezrobotni) {
         Q.bezrobotni_2 = Q.bezrobotni.toFixed(1);
     }
     if (Q.inflation) {
         Q.inflation_2 = Q.inflation.toFixed(1);
     }
+!}
 
-    // Prepare election data
+on-display: {!
+if (d3 && window) {
+    // Set default dimensions for the chart
+    var width = 500;
+    var height = 300;
+
+    // Adjust width based on screen size for responsiveness
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50;
+    }
+
+    // Prepare the election data
     var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
-    var lastElectionRecord = Q.election_records[Q.election_records.length - 1];
+    var lastElectionRecord = Q.election_records ? Q.election_records[Q.election_records.length - 1] : null;
+    if (!lastElectionRecord) {
+        console.error("No election records found.");
+        return; // Exit if no data to display
+    }
+
     var electionData = combinedParties.map(party => ({
         group: party,
         votes: lastElectionRecord[party] || 0
@@ -41,23 +49,23 @@ if (d3 && window) {
     console.log("Width:", width);
     console.log("Height:", height);
 
-    // Render a basic bar chart with D3
+    // Select the SVG element, set its width and height
     var svg = d3.select("#election_chart")
         .attr("width", width)
         .attr("height", height);
 
-    // Remove any previous bars if re-rendering
+    // Clear any previous chart elements if re-rendering
     svg.selectAll("*").remove();
 
-    // Add rectangles for each party's votes
+    // Draw rectangles for each party's votes
     svg.selectAll("rect")
         .data(electionData)
         .enter()
         .append("rect")
         .attr("x", (d, i) => i * (width / electionData.length))
-        .attr("y", d => height - (d.votes * 3))  // Adjust multiplier for scaling
+        .attr("y", d => height - (d.votes * 5))  // Adjust multiplier for better scaling
         .attr("width", width / electionData.length - 2)
-        .attr("height", d => d.votes * 3)  // Adjust multiplier for scaling
+        .attr("height", d => d.votes * 5)  // Adjust multiplier for scaling
         .attr("fill", d => electionColors[d.group]);
 
     // Add party labels below each bar
