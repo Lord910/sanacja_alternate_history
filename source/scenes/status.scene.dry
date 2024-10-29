@@ -1,70 +1,44 @@
-on-display: {!
-if (d3 && window) {
-    // Set default dimensions for the chart
-    var width = 500;
-    var height = 300;
-
-    // Adjust width based on screen size for responsiveness
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50;
-    }
-
-    // Prepare the election data
-    var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
-    var lastElectionRecord = Q.election_records ? Q.election_records[Q.election_records.length - 1] : null;
-    if (!lastElectionRecord) {
-        console.error("No election records found.");
-        return; // Exit if no data to display
-    }
-
-    var electionData = combinedParties.map(party => ({
-        group: party,
-        votes: lastElectionRecord[party] || 0
-    }));
-
-    // Define colors for each party
-    var electionColors = {
-        'bbwr': '#808080', 'kpp': '#AF0000', 'pslw': '#179900', 'pschd': '#1E90FF',
-        'pslp': '#3A6538', 'sn': '#0000CD', 'owp': '#954B00', 'pps': '#CC0000',
-        'npr': '#841839', 'sch': '#556B2F', 'minorities': '#FFD700'
-    };
-
-    // Log data for debugging
-    console.log("Election Data:", electionData);
-    console.log("Width:", width);
-    console.log("Height:", height);
-
-    // Select the SVG element, set its width and height
-    var svg = d3.select("#election_chart")
-        .attr("width", width)
-        .attr("height", height);
-
-    // Clear any previous chart elements if re-rendering
-    svg.selectAll("*").remove();
-
-    // Draw rectangles for each party's votes
-    svg.selectAll("rect")
-        .data(electionData)
-        .enter()
-        .append("rect")
-        .attr("x", (d, i) => i * (width / electionData.length))
-        .attr("y", d => height - (d.votes * 5))  // Adjust multiplier for better scaling
-        .attr("width", width / electionData.length - 2)
-        .attr("height", d => d.votes * 5)  // Adjust multiplier for scaling
-        .attr("fill", d => electionColors[d.group]);
-
-    // Add party labels below each bar
-    svg.selectAll("text")
-        .data(electionData)
-        .enter()
-        .append("text")
-        .attr("x", (d, i) => i * (width / electionData.length) + (width / electionData.length) / 2)
-        .attr("y", height - 5)
-        .attr("text-anchor", "middle")
-        .text(d => d.group);
+title: Status
+new-page: true
+is-special: true
+on-arrival: {!
+if (Q.bezrobotni) {
+    Q.bezrobotni_2 = Q.bezrobotni.toFixed(1);
 }
+if (Q.inflation) {
+    Q.inflation_2 = Q.inflation.toFixed(1);
+}
+
+// Data setup for election results
+var combinedParties = ['bbwr', 'kpp', 'pschd', 'pslw', 'pslp', 'sn', 'owp', 'pps', 'npr', 'sch', 'minorities'];
+var electionColors = {
+    'bbwr': '#808080', 'kpp': '#AF0000', 'pslw': '#179900', 'pschd': '#1E90FF',
+    'pslp': '#3A6538', 'sn': '#0000CD', 'owp': '#954B00', 'pps': '#CC0000',
+    'npr': '#841839', 'sch': '#556B2F', 'minorities': '#FFD700'
+};
+var electionNames = {
+    'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P',
+    'sn': Q.sn_party_name, 'owp': 'OWP', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh',
+    'minorities': 'Minorities'
+};
+var lastElectionRecord = Q.election_records[Q.election_records.length - 1];
+var electionData = combinedParties.map(party => ({
+    group: party,
+    votes: lastElectionRecord[party] || 0
+}));
+
+// Render election results chart
+d3.select("#election_chart")  // Corrected ID for election results chart
+    .datum(electionData)
+    .call(d3.simpleBarchart()
+        .width(500)
+        .height(300)
+        .colors(electionColors)
+        .names(electionNames)
+        .fields(['votes'])  // Specify the 'votes' field for parties
+    );
 !}
+
 
 = Status
 
