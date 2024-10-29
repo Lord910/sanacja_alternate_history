@@ -638,9 +638,9 @@ if (!Q.sl_formed || Q.sl_pslp_split) {
 
 data = data.concat([
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
+        "id": "minorities",
+        "legend": "Minorities",
+        "name": "Minorities",
         "seats": Math.round(Q.minorities_r_sum),
     },
     {
@@ -648,6 +648,12 @@ data = data.concat([
         "legend": "BBWR",
         "name": "BBWR",
         "seats": Math.round(Q.bbwr_r),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r),
     },
     {
         "id": "npr",
@@ -1150,6 +1156,17 @@ if (d3 && window) {
         <td><strong>[+ bbwr_seat_percentage +]%</strong></td>
         <td><strong>[+ bbwr_vote_percentage +]%</strong></td>
         <td><strong>[+ str_change_bbwr +]</strong></td>
+    </tr>
+    ?]
+
+    <!-- Other (Opposition) -->
+    [? if other_r > 0 :
+    <tr>
+        <td style="text-align: left;"><div class="box" style='background-color:#4e4c3f'></div> Other:</td>
+        <td> [+ other_r +] </td>
+        <td>1%</td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
     ?]
 

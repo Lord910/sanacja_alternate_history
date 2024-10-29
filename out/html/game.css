@@ -553,8 +553,11 @@ table {
 .seat.sl {
   fill: #3A6538; /* dark green */
 }
-.seat.other {
+.seat.minorities {
   fill: #FFD700; /* gold */
+}
+.seat.other {
+  fill: #4e4c3f; /* dark */
 }
 .seat.bbwr {
   fill: #808080; /* gray */
