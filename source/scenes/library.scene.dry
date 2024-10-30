@@ -992,7 +992,7 @@ if (d3 && window) {
     </tr>
 
     <!-- SelRob -->
-    [? if selrob_r > 0 :
+    [? if selrob_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#AF0000'></div> SelRob:</td>
         <td> [+ selrob_r +] </td>
@@ -1003,7 +1003,7 @@ if (d3 && window) {
     ?]
 
     <!-- SolRad -->
-    [? if solrad_r > 0 :
+    [? if solrad_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> SolRad:</td>
         <td> [+ solrad_r +] </td>
@@ -1014,7 +1014,7 @@ if (d3 && window) {
     ?]
 
     <!-- UNDO -->
-    [? if undo_sum > 0 :
+    [? if undo_sum >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#4682B4'></div> UNDO:</td>
         <td> [+ undo_sum +] </td>
@@ -1025,7 +1025,7 @@ if (d3 && window) {
     ?]
 
     <!-- Jewish Left -->
-    [? if jewish_left_r > 0 :
+    [? if jewish_left_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Left:</td>
         <td> [+ jewish_left_r +] </td>
@@ -1036,7 +1036,7 @@ if (d3 && window) {
     ?]
 
     <!-- Jewish Nationalists -->
-    [? if jewish_nationalists_r > 0 :
+    [? if jewish_nationalists_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Nationalists:</td>
         <td> [+ jewish_nationalists_r +] </td>
@@ -1047,7 +1047,7 @@ if (d3 && window) {
     ?]
 
     <!-- Jewish Conservatives -->
-    [? if jewish_conservatives_r > 0 :
+    [? if jewish_conservatives_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#1E90FF'></div> Jewish Conservatives:</td>
         <td> [+ jewish_conservatives_r +] </td>
@@ -1058,7 +1058,7 @@ if (d3 && window) {
     ?]    
 
     <!-- Belarusians -->
-    [? if belarusians_sum > 0 :
+    [? if belarusians_sum >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#179900'></div> Belarusians:</td>
         <td> [+ belarusians_sum +] </td>
@@ -1069,7 +1069,7 @@ if (d3 && window) {
     ?]
 
     <!-- German Left -->
-    [? if german_left_r > 0 :
+    [? if german_left_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#CC0000'></div> German Left:</td>
         <td> [+ german_left_r +] </td>
@@ -1080,7 +1080,7 @@ if (d3 && window) {
     ?]
 
     <!-- German Right -->
-    [? if german_right_r > 0 :
+    [? if german_right_r >= 0 :
     <tr>
         <td style="text-align: left;"><div class="box" style='background-color:#0000CD'></div> German Right:</td>
         <td> [+ german_right_r +] </td>
