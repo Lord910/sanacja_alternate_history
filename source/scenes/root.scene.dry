@@ -501,52 +501,48 @@ Q.germans_belarusian_right = 0;
 
 // Current Sejm composition
 // % of Sejm in Jan 1927
-Q.kpp_r = 6;
-Q.pps_r = 41;
-Q.sch_r = 39;
-Q.pslw_r = 25;
-Q.bbwr_r = 14;
-Q.npr_r = 16;
-Q.pschd_r = 41;
-Q.pslp_r = 53;
-Q.sn_r = 119;
+Q.kpp_r = 3;
+Q.pps_r = 9;
+Q.sch_r = 8;
+Q.pslw_r = 6;
+Q.other_r = 18; //Block of National Minorities
+Q.bbwr_r = 3;
+Q.npr_r = 4;
+Q.pschd_r = 9;
+Q.pslp_r = 12;
+Q.sn_r = 28;
 Q.owp_r = 0;
 Q.selrob_r = 0;
 Q.solrad_r = 0;
-Q.undo_center_r = 20;
+Q.undo_center_r = 0;
 Q.undo_right_r = 0;
 Q.belarusian_left_r = 0;
-Q.belarusian_right_r = 11;
-Q.jewish_left_r = 0;
-Q.jewish_nationalists_r = 34;
-Q.jewish_conservatives_r = 1;
+Q.belarusian_right_r = 0;
+Q.jewish_party_r = 0;
 Q.german_left_r = 0;
 Q.german_right_r = 0;
-Q.other_r = 5;
 
 // diff from prev
-Q.old_kpp_r = 4;
-Q.old_pps_r = 41;
-Q.old_sch_r = 6;
-Q.old_pslw_r = 48;
+Q.old_kpp_r = 1;
+Q.old_pps_r = 9;
+Q.old_sch_r = 1;
+Q.old_pslw_r = 11;
+Q.old_other_r = 20;
 Q.old_bbwr_r = 0;
-Q.old_npr_r = 18;
-Q.old_pschd_r = 44;
-Q.old_pslp_r = 70;
-Q.old_sn_r = 125;
+Q.old_npr_r = 4;
+Q.old_pschd_r = 0;
+Q.old_pslp_r = 16;
+Q.old_sn_r = 38;
 Q.old_owp_r = 0;
 Q.old_selrob_r = 0;
 Q.old_solrad_r = 0;
-Q.old_undo_center_r = 20;
+Q.old_undo_center_r = 0;
 Q.old_undo_right_r = 0;
 Q.old_belarusian_left_r = 0;
-Q.old_belarusian_right_r = 11;
-Q.old_jewish_left_r = 0;
-Q.old_jewish_nationalists_r = 34;
-Q.old_jewish_conservatives_r = 1;
+Q.old_belarusian_right_r = 0;
+Q.old_jewish_party_r = 0;
 Q.old_german_left_r = 0;
-Q.old_german_right_r = 17;
-Q.old.other_r = 5;
+Q.old_german_right_r = 0;
 
 
 // array of objects of the form {date: Date(), bbwr: 10, kpp: 12, ...} for each election
