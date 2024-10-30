@@ -833,7 +833,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Colonels advisors
 Q.slawek_advisor = 1; // Walery Sławek
-prystor_advisor = 0; // Aleksander Prystor
+Q.prystor_advisor = 0; // Aleksander Prystor
 
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacpschd_advisor = 0; // Marie Juchacz
