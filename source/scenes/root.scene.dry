@@ -672,8 +672,8 @@ Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
 Q.unemployment_insurance_seen = 0;
 Q.blutmai = 0;
-speaker_election_1928_seen = 0
-speaker_election_1928_time = 0
+Q.speaker_election_1928_seen = 0
+Q.speaker_election_1928_time = 0
 
 
 // have we reformed these institutions to be more democratic?
@@ -829,7 +829,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Colonels advisors
 Q.slawek_advisor = 1; // Walery Sławek
-prystor_advisor = 0; // Aleksander Prystor
+Q.prystor_advisor = 0; // Aleksander Prystor
 
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacpschd_advisor = 0; // Marie Juchacz
