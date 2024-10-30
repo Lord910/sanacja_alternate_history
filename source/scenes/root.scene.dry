@@ -500,15 +500,15 @@ Q.germans_belarusian_right = 0;
 
 // Current Sejm composition
 // % of Sejm in Jan 1927
-Q.kpp_r = 3;
-Q.pps_r = 9;
-Q.sch_r = 8;
-Q.pslw_r = 6;
-Q.bbwr_r = 3;
-Q.npr_r = 4;
-Q.pschd_r = 9;
-Q.pslp_r = 12;
-Q.sn_r = 28;
+Q.kpp_r = 444;
+Q.pps_r = 0;
+Q.sch_r = 0;
+Q.pslw_r = 0;
+Q.bbwr_r = 0;
+Q.npr_r = 0;
+Q.pschd_r = 0;
+Q.pslp_r = 0;
+Q.sn_r = 0;
 Q.owp_r = 0;
 Q.selrob_r = 0;
 Q.solrad_r = 0;
@@ -521,15 +521,15 @@ Q.german_left_r = 0;
 Q.german_right_r = 0;
 
 // diff from prev
-Q.old_kpp_r = 1;
-Q.old_pps_r = 9;
-Q.old_sch_r = 1;
-Q.old_pslw_r = 11;
+Q.old_kpp_r = 444;
+Q.old_pps_r = 0;
+Q.old_sch_r = 0;
+Q.old_pslw_r = 0;
 Q.old_bbwr_r = 0;
-Q.old_npr_r = 4;
+Q.old_npr_r = 0;
 Q.old_pschd_r = 0;
-Q.old_pslp_r = 16;
-Q.old_sn_r = 38;
+Q.old_pslp_r = 0;
+Q.old_sn_r = 0;
 Q.old_owp_r = 0;
 Q.old_selrob_r = 0;
 Q.old_solrad_r = 0;
