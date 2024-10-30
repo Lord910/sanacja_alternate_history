@@ -516,7 +516,9 @@ Q.undo_center_r = 0;
 Q.undo_right_r = 0;
 Q.belarusian_left_r = 0;
 Q.belarusian_right_r = 0;
-Q.jewish_party_r = 0;
+Q.jewish_nationalists_r = 0;
+Q.jewish_left_r = 0;
+Q.jewish_conservatives_r = 0;
 Q.german_left_r = 0;
 Q.german_right_r = 0;
 
@@ -537,7 +539,9 @@ Q.old_undo_center_r = 0;
 Q.old_undo_right_r = 0;
 Q.old_belarusian_left_r = 0;
 Q.old_belarusian_right_r = 0;
-Q.old_jewish_party_r = 0;
+Q.old_jewish_nationalists_r = 0;
+Q.old_jewish_left_r = 0;
+Q.old_jewish_conservatives_r = 0;
 Q.old_german_left_r = 0;
 Q.old_german_right_r = 0;
 
