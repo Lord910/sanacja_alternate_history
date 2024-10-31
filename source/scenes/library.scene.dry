@@ -1226,7 +1226,3 @@ if (d3 && window) {
 
 <svg id="internal_factions" style="width: 500px; height: 300px;"></svg>
 
-= Election Results
-
-<svg id="election_chart" style="width: 500px; height: 300px;"></svg>
-
