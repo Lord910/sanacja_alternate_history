@@ -2,7 +2,7 @@ title: The Birth of Centrolew
 subtitle: Opposition Unites Against Authoritarianism
 new-page: true
 tags: event
-view-if: political_crisis_level > 1
+view-if: political_crisis_level >= 1
 max-visits: 1
 
 = The Birth of Centrolew

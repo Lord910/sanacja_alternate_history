@@ -2,7 +2,7 @@ title: Boiling Point
 subtitle: Crisis Pushes the Government to the Brink
 new-page: true
 tags: event
-view-if: political_crisis_level > 5 and centrolew_formed
+view-if: political_crisis_level >= 3 and centrolew_formed
 max-visits: 1
 
 = Boiling Point

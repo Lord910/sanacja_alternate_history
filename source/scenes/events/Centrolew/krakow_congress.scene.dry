@@ -2,7 +2,7 @@ title: The Kraków Congress
 subtitle: A Bold Challenge to Our Authority
 new-page: true
 tags: event
-view-if: political_crisis_level > 3 and centrolew_formed
+view-if: political_crisis_level >= 2 and centrolew_formed
 max-visits: 1
 
 = The Kraków Congress
