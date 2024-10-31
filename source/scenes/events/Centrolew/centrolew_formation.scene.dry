@@ -14,5 +14,5 @@ Their goal is simple yet dangerous for us: to protect democratic institutions an
 - @centrolew_formed: We should keep an eye on them.
 
 @centrolew_formed
-on-arrival: political_crisis_level += 1 and centrolew_formed = 1
+on-arrival: political_crisis_level += 1; centrolew_formed = 1
 
