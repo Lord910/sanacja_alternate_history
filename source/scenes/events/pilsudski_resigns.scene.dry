@@ -8,5 +8,6 @@ on-arrival: chancellor_party = "None"; chancellor = "Vacancy"; leverage += 15;
 Józef Piłsudski has resigned from his role as Prime Minister, marking a significant moment in the political landscape of Poland. His unexpected resignation has thrown the country into uncertainty, with both his supporters and political opponents left speculating on the future direction of the government.
 
 - @pilsudski_dismissed_gov: A new Prime Minister must now be appointed to fill the leadership void.
+
 @pilsudski_dismissed_gov
 go-to: election_1928.ministries

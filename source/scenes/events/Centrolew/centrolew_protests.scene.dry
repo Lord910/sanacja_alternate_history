@@ -14,5 +14,5 @@ The situation is escalating quickly, and our response could determine the fate o
 
 - @wait_and_watch: Monitor the protests and hope they lose steam without direct interference.
 
-@wait_and_watch: 
+@wait_and_watch
 on-arrival: political_crisis_level += 1
