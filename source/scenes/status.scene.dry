@@ -8,39 +8,6 @@ if (Q.bezrobotni) {
 if (Q.inflation) {
     Q.inflation_2 = Q.inflation.toFixed(1);
 }
-
-if (d3 && window) {
-    // Data setup for election results
-    var lastElectionRecord = Q.election_records[Q.election_records.length - 1];
-    var electionData = combinedParties.map(party => ({
-        group: party,
-        votes: lastElectionRecord[party] || 0
-    }));
-
-    var electionColors = {
-        'bbwr': '#808080', 'kpp': '#AF0000', 'pslw': '#179900', 'pschd': '#1E90FF',
-        'pslp': '#3A6538', 'sn': '#0000CD', 'owp': '#954B00', 'pps': '#CC0000',
-        'npr': '#841839', 'sch': '#556B2F', 'minorities': '#FFD700'
-    };
-
-    var electionNames = {
-        'bbwr': 'BBWR', 'kpp': 'KPP', 'pslw': 'PSL-W', 'pschd': 'PSCHD', 'pslp': 'PSL-P',
-        'sn': Q.sn_party_name, 'owp': 'OWP', 'pps': 'PPS', 'npr': 'NPR', 'sch': 'SCh',
-        'minorities': 'Minorities'
-    };
-
-    // Render election results chart
-    d3.select("#election_chart")  // Corrected ID for election results chart
-        .datum(electionData)
-        .call(d3.simpleBarchart()
-            .width(500)
-            .height(300)
-            .colors(electionColors)
-            .names(electionNames)
-            .fields(['votes'])  // Specify the 'votes' field for parties
-        );
-}
-
 !}
 
 = Status
@@ -83,7 +50,7 @@ Opposition: [+ opposition_votes +]
 
 [+ speaker +] ([+ speaker_party +])
 
-= ** Sejm composition:** 
+** Sejm composition:** 
 
 <svg id="election_chart" style="width: 500px; height: 300px;"></svg>
 
