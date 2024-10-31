@@ -52,8 +52,6 @@ Opposition: [+ opposition_votes +]
 
 ** Sejm composition:** 
 
-<svg id="election_chart" style="width: 500px; height: 300px;"></svg>
-
 KPP: [+ kpp_r +]%
 
 PPS: [+ pps_r +]%
