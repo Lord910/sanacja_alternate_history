@@ -3,7 +3,7 @@ subtitle: The opposition forces unite against the Sanation government.
 new-page: true
 on-arrival: centrolew_seen = 1; robotnicy_bbwr -= 5; bezrobotni_bbwr -= 5; chlopi_bbwr -= 5; centrolew_urgency += 1
 tags: event
-view-if: (year = 1929 and month >= 5 and ruling_party = "BBWR") and (political_crisis_level >= 6) and (pps_relation < 5 and pslw_relation < 5 and sch_relation < 5 and pslp_relation < 5 and pschd_relation < 5)
+view-if: year = 1929 and month >= 5 and ruling_party = "BBWR"
 max-visits: 1
 
 = The Formation of Centrolew
