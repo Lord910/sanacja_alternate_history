@@ -1,0 +1,18 @@
+title: Mass Demonstrations Announced
+subtitle: Centrolew Mobilizes Nationwide Protests
+new-page: true
+on-arrival: centrolew_demonstrations = 1
+tags: event
+view-if: political_crisis_level > 4 and centrolew_formed
+max-visits: 1
+
+= Mass Demonstrations Announced
+
+Centrolew has announced over 20 anti-government demonstrations across the nation. These protests are drawing tens of thousands of citizens into the streets, demanding an end to our regime's authoritarian measures and calling for the restoration of democratic governance. The country is on edge, and our leadership is being tested like never before.
+
+The situation is escalating quickly, and our response could determine the fate of the government.
+
+- @wait_and_watch: Monitor the protests and hope they lose steam without direct interference.
+
+@wait_and_watch: 
+on-arrival: political_crisis_level += 1

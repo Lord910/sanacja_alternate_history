@@ -1,0 +1,19 @@
+title: The Kraków Congress
+subtitle: A Bold Challenge to Our Authority
+new-page: true
+tags: event
+view-if: political_crisis_level > 3 and centrolew_formed
+max-visits: 1
+
+= The Kraków Congress
+
+Today, reports flood in of a massive gathering of opposition forces. Leaders from various leftist and agrarian parties have united, presenting a powerful front against our government. The streets are filled with banners and chants, and the energy is palpable, as if the entire city has come alive with calls for change and democracy.
+
+Inside the congress hall, impassioned speeches denounce our policies and paint our administration as a threat to freedom. It’s clear that the opposition is growing more organized and resolute, rallying people from all walks of life to their cause. This show of unity sends a strong message: they are determined, and they are not afraid. The challenge they pose to our authority has never been more apparent, and the stability of our government feels increasingly fragile.
+
+- @monitor_congress: Hold off for now, but closely monitor the opposition’s activities, gathering intelligence for the right moment.
+
+@monitor_congress
+on-arrival: political_crisis_level += 1
+
+For now, we choose patience. Agents are deployed to infiltrate and observe, collecting valuable information on the opposition’s plans. The streets may be restless, but we remain vigilant, waiting for the right moment to act.

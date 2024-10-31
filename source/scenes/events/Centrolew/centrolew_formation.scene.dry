@@ -1,0 +1,18 @@
+title: The Birth of Centrolew
+subtitle: Opposition Unites Against Authoritarianism
+new-page: true
+tags: event
+view-if: political_crisis_level > 1
+max-visits: 1
+
+= The Birth of Centrolew
+
+A significant threat has emerged to our authority: the formation of Centrolew, a coalition of center-left and left-wing parties united in their opposition to our regime. Representatives from socialist, agrarian, and democratic groups have come together, setting aside their differences to push back against what they see as creeping authoritarianism.
+
+Their goal is simple yet dangerous for us: to protect democratic institutions and curtail our influence. Centrolew’s message is resonating with a public increasingly concerned about the erosion of their rights, and this new alliance has injected fresh energy into the opposition movement. The unity they display is troubling, hinting at greater challenges to come as they rally their forces and prepare to contest our rule.
+
+- @centrolew_formed: We should keep an eye on them.
+
+@centrolew_formed
+on-arrival: political_crisis_level += 1 and centrolew_formed = 1
+

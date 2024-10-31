@@ -96,6 +96,10 @@ Q.colonels_resigned = 0;
 Q.conservatives_resigned = 0;
 Q.colonels_press_created = 0;
 
+// Centrolew
+Q.krakow_congress_seen = 0;
+Q.centrolew_formed = 0;
+
 // have we discovered sanacja_nationalists?
 Q.sanacja_nationalists = 0;
 
