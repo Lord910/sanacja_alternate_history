@@ -4,7 +4,8 @@
   "description": "A Sanacja-themed alternate history mod for Social Democracy: Red Autumn, powered by DendryNexus.",
   "main": "out/html/index.html",
   "scripts": {
-    "start": "dendrynexus make-html"
+    "start": "dendrynexus make-html",
+    "dendrynexus": "dendrynexus"
   },
   "repository": {
     "type": "git",
