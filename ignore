@@ -1,0 +1,35 @@
+# Node modules and lock file
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dendry build output
+out/
+*.html
+*.js
+*.css
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Environment files
+.env
+.env.*.local
+
+# VSCode/IDE settings (optional)
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac/Linux-specific
+*.swp
+*~
