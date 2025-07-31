@@ -1,22 +1,22 @@
 {
-  "name": " social_democracy_alternate_history",
-  "version": "0.11.1",
-  "description": "Building the game:",
+  "name": "sanacja_alternate_history",
+  "version": "0.1.0",
+  "description": "A Sanacja-themed alternate history mod for Social Democracy: Red Autumn, powered by DendryNexus.",
   "main": "out/html/index.html",
   "scripts": {
-    "dendrynexus": "dendrynexus"
+    "start": "dendrynexus make-html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://aucchen@github.com/aucchen/social_democracy_alternate_history.git"
+    "url": "https://github.com/Lord910/sanacja_alternate_history.git"
   },
-  "keywords": [],
-  "author": "Autumn Chen",
+  "keywords": ["interactive fiction", "dendry", "alternate history", "Sanacja", "Poland"],
+  "author": "Lord910",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aucchen/social_democracy_alternate_history/issues"
+    "url": "https://github.com/Lord910/sanacja_alternate_history/issues"
   },
-  "homepage": "https://github.com/aucchen/social_democracy_alternate_history",
+  "homepage": "https://github.com/Lord910/sanacja_alternate_history",
   "dependencies": {
     "dendrynexus": "github:aucchen/dendrynexus",
     "parliament-svg": "^3.0.0"
